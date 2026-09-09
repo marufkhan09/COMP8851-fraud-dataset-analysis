@@ -1,0 +1,20 @@
+{
+  "dataset": "Amazon",
+  "model": "PC-GNN",
+  "phase": "TR40 validation tuning",
+  "split_file": "shared/splits/amazon/amazon_TR40_seed2.npz",
+  "split_seed": 2,
+  "training_seed": 72,
+  "selection_metric": "validation AUROC",
+  "test_used_for_selection": false,
+  "rho_values": [
+    0.2,
+    0.4,
+    0.5,
+    0.6,
+    0.8
+  ],
+  "epochs_per_trial": 51,
+  "validation_interval": 5,
+  "hardware": "Tesla T4, GPU 0"
+}

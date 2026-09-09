@@ -1,0 +1,101 @@
+{
+  "best_validation_auroc": 0.9514754462426782,
+  "best_validation_epoch": 40,
+  "best_validation_macro_f1": 0.8725948861849585,
+  "configuration": {
+    "alpha": 2,
+    "author_repository_commit": "9d7d7fae491081178b6e12e193fb89cfc330f2be",
+    "batch_size": 256,
+    "cuda_id": "0",
+    "data_dir": "./data/",
+    "data_name": "amazon",
+    "emb_size": 64,
+    "lr": 0.005,
+    "model": "PCGNN",
+    "multi_relation": "GNN",
+    "no_cuda": false,
+    "num_epochs": 51,
+    "optimizer": "adam",
+    "resolved_cuda": true,
+    "resolved_run_id": "20260909T092239238829Z_amazon_PCGNN_author_reproduction_seed72",
+    "resolved_split_source": "author_random_stratified_random_state_2",
+    "rho": 0.5,
+    "save_dir": "./pytorch_models/",
+    "seed": 72,
+    "test_ratio": 0.67,
+    "thres": 0.4,
+    "train_ratio": 0.4,
+    "valid_epochs": 5,
+    "weight_decay": 0.0005
+  },
+  "dataset": "amazon",
+  "environment": {
+    "cuda_available": true,
+    "cuda_used": true,
+    "cuda_version": "12.8",
+    "gpu_name": "Tesla T4",
+    "gpu_total_memory_bytes": 15636037632,
+    "numpy_version": "2.0.2",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python_executable": "/usr/bin/python3",
+    "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "torch_version": "2.10.0+cu128"
+  },
+  "model": "PCGNN",
+  "run_finished_utc": "2026-09-09T09:25:03.870199+00:00",
+  "run_id": "20260909T092239238829Z_amazon_PCGNN_author_reproduction_seed72",
+  "run_mode": "author_reproduction",
+  "run_started_utc": "2026-09-09T09:22:37.302882+00:00",
+  "schema_version": "1.0",
+  "seed": 72,
+  "split": {
+    "source": "author_random_stratified_random_state_2",
+    "test": {
+      "fraud_nodes": 330,
+      "nodes": 3474,
+      "normal_nodes": 3144
+    },
+    "train": {
+      "fraud_nodes": 328,
+      "nodes": 3455,
+      "normal_nodes": 3127
+    },
+    "unused_nodes": 0,
+    "validation": {
+      "fraud_nodes": 163,
+      "nodes": 1710,
+      "normal_nodes": 1547
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.9573978123200921,
+    "auprc": 0.8512911833362822,
+    "auroc": 0.9642937003624027,
+    "fn": 51,
+    "fp": 97,
+    "fraud_f1": 0.7903682719546742,
+    "fraud_precision": 0.7420212765957447,
+    "fraud_recall": 0.8454545454545455,
+    "gmean": 0.905190714163393,
+    "inference_seconds": 6.528199291001329,
+    "macro_f1": 0.883328961353819,
+    "normal_f1": 0.9762896507529638,
+    "tn": 3047,
+    "tp": 279
+  },
+  "timing": {
+    "data_load_seconds": 3.0728836729999784,
+    "fit_wall_seconds_including_validation": 137.99529236599983,
+    "mean_train_epoch_seconds": 1.990909956843124,
+    "median_train_epoch_seconds": 1.9475497350003934,
+    "peak_gpu_memory_mb": 45.34423828125,
+    "std_train_epoch_seconds": 0.16955720286240128,
+    "test_evaluation_seconds_including_metrics": 6.622720365999612,
+    "test_inference_seconds": 6.528199291001329,
+    "total_run_seconds": 146.5675370439999,
+    "total_train_epoch_seconds": 101.53640779899933,
+    "total_validation_seconds": 36.396073673999126,
+    "training_epochs": 51
+  }
+}

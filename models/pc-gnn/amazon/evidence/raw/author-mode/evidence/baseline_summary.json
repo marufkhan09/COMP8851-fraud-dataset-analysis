@@ -1,0 +1,24 @@
+{
+  "epochs": 51,
+  "legacy_timing": {
+    "boundary": "sum of author-code minibatch durations; excludes sampling and validation",
+    "max_seconds": 1.8508567810058594,
+    "mean_seconds": 1.7548818074020684,
+    "median_seconds": 1.7358322143554688,
+    "min_seconds": 1.6853063106536865,
+    "population_std_seconds": 0.04703428533008704,
+    "total_seconds": 89.4989721775055
+  },
+  "limitations": [
+    "32-dimensional YelpChi features rather than the paper's 100-dimensional features",
+    "51 epochs rather than the paper's 100 epochs",
+    "one run rather than the paper's 10-run mean and standard deviation",
+    "local CPU environment rather than the final common benchmark hardware"
+  ],
+  "status": "successful_local_reproduction",
+  "test_metrics": {
+    "auroc": 0.8178096056758367,
+    "gmean": 0.740788412123424,
+    "macro_f1": 0.6530340633086701
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "verified_utc_date": "2026-09-09",
+  "dataset": "Amazon",
+  "final_runs_expected": 12,
+  "final_runs_found": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "split_seed": 2,
+  "epochs_per_run": 51,
+  "total_epoch_rows": 612,
+  "selected_rho": 0.2,
+  "selection_metric": "validation AUROC",
+  "test_used_for_selection": false,
+  "fixed_validation_ids": true,
+  "fixed_test_ids": true,
+  "nested_training_sets": true,
+  "hardware": "NVIDIA Tesla T4, GPU 0 only",
+  "source_commit": "9d7d7fae491081178b6e12e193fb89cfc330f2be",
+  "final_archive_sha256": "2953bc26b6c6dc00099ec927497f5d3ef8a4f916fd8b33220b64a2b234e51b60",
+  "archive_audit": [
+    {
+      "archive": "pcgnn_amazon_final_three_seed_results.zip",
+      "entries": 109,
+      "crc": "PASS",
+      "sha256": "2953bc26b6c6dc00099ec927497f5d3ef8a4f916fd8b33220b64a2b234e51b60",
+      "bytes": 486671
+    },
+    {
+      "archive": "pcgnn_amazon_tr40_rho_tuning.zip",
+      "entries": 48,
+      "crc": "PASS",
+      "sha256": "fb046e705bb3e6b58cf9ee1b017f8961aef3d6d62f4206dc3fd42772f2479d86",
+      "bytes": 2577020
+    },
+    {
+      "archive": "amazon_shared_splits.zip",
+      "entries": 5,
+      "crc": "PASS",
+      "sha256": "517304b22ede42b9815b8a81fff55aa7cfe1834ce6191ca3523dfc0bd6b6899d",
+      "bytes": 85427
+    },
+    {
+      "archive": "pcgnn_kaggle_t4_amazon_final_results.zip",
+      "entries": 50,
+      "crc": "PASS",
+      "sha256": "c9967450fc47184eb5bcd20d8de34c397ac1e095c9f0ecb03c123197f31b0dd7",
+      "bytes": 2573796
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,144 @@
+**************** MODEL CONFIGURATION ****************
+alpha                    -->   2
+batch_size               -->   256
+cuda_id                  -->   0
+data_dir                 -->   ./data/
+data_name                -->   amazon
+emb_size                 -->   64
+lr                       -->   0.005
+model                    -->   PCGNN
+multi_relation           -->   GNN
+no_cuda                  -->   False
+num_epochs               -->   51
+optimizer                -->   adam
+results_dir              -->   ./results/unified/amazon/pcgnn/final/tr40/seed2
+rho                      -->   0.2
+run_mode                 -->   unified_final_amazon_tr40_kaggle_t4_seed2_rho0p2
+save_dir                 -->   ./pytorch_models/
+seed                     -->   2
+split_path               -->   ./shared/splits/amazon/amazon_TR40_seed2.npz
+test_ratio               -->   0.6666666666666666
+thres                    -->   0.4
+train_ratio              -->   0.4
+valid_epochs             -->   5
+weight_decay             -->   0.0005
+**************** MODEL CONFIGURATION ****************
+Run on amazon, postive/total num: 821.0/11944, train num 3455,valid num 1728, test num 3456, test positive num 329.0
+Classification threshold: 0.4
+Feature dimension: 25
+Model: PCGNN, multi-relation aggregator: GNN, emb_size: 64.
+/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/src/model_handler.py:258: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_loss = gnn_model.loss(batch_nodes, Variable(torch.cuda.LongTensor(batch_label)))
+Epoch: 0, loss: 1.8231271902720134, time: 2.518709994001256s
+Valid at epoch 0
+   GNN F1-binary-1: 0.4690	F1-binary-0: 0.9032	F1-macro: 0.6861	G-Mean: 0.8021	AUC: 0.8478
+   GNN TP: 125	TN: 1320	FN: 39	FP: 244
+Label1 F1: 0.4753	Accuracy: 0.9059	Recall: 0.5000	AUC: 0.7284	AP: 0.2297
+  Saving model ...
+Epoch: 1, loss: 1.6582827965418498, time: 1.9787852350000321s
+Epoch: 2, loss: 1.6100225448608398, time: 1.9767593699998542s
+Epoch: 3, loss: 1.625165303548177, time: 2.011199188000319s
+Epoch: 4, loss: 1.4557089408238728, time: 2.763316163000127s
+Epoch: 5, loss: 1.4948891401290894, time: 1.983029033001003s
+Valid at epoch 5
+   GNN F1-binary-1: 0.7961	F1-binary-0: 0.9800	F1-macro: 0.8880	G-Mean: 0.8599	AUC: 0.9226
+   GNN TP: 123	TN: 1542	FN: 41	FP: 22
+Label1 F1: 0.4753	Accuracy: 0.9059	Recall: 0.5000	AUC: 0.8312	AP: 0.7164
+  Saving model ...
+Epoch: 6, loss: 1.4545966386795044, time: 2.0247755579985096s
+Epoch: 7, loss: 1.4236607154210408, time: 1.9624381920002634s
+Epoch: 8, loss: 1.3830572366714478, time: 1.9966433179997694s
+Epoch: 9, loss: 1.3951917092005413, time: 1.9755940310005826s
+Epoch: 10, loss: 1.3720831871032715, time: 1.952580740000485s
+Valid at epoch 10
+   GNN F1-binary-1: 0.7422	F1-binary-0: 0.9707	F1-macro: 0.8564	G-Mean: 0.8770	AUC: 0.9254
+   GNN TP: 131	TN: 1506	FN: 33	FP: 58
+Label1 F1: 0.4753	Accuracy: 0.9059	Recall: 0.5000	AUC: 0.8369	AP: 0.7518
+  Saving model ...
+Epoch: 11, loss: 1.3513691027959187, time: 1.9876888979997602s
+Epoch: 12, loss: 1.343838095664978, time: 2.020164780000414s
+Epoch: 13, loss: 1.310294270515442, time: 1.9927624890005973s
+Epoch: 14, loss: 1.2010328372319539, time: 1.9839783999996143s
+Epoch: 15, loss: 1.2483516931533813, time: 1.9941548820006574s
+Valid at epoch 15
+   GNN F1-binary-1: 0.7107	F1-binary-0: 0.9661	F1-macro: 0.8384	G-Mean: 0.8668	AUC: 0.9181
+   GNN TP: 129	TN: 1494	FN: 35	FP: 70
+Label1 F1: 0.4753	Accuracy: 0.9059	Recall: 0.5000	AUC: 0.8382	AP: 0.7560
+Epoch: 16, loss: 1.2461407979329426, time: 1.953695180000068s
+Epoch: 17, loss: 1.2535503307978313, time: 2.0426961079992907s
+Epoch: 18, loss: 1.271825949350993, time: 2.079156433999742s
+Epoch: 19, loss: 1.2152800559997559, time: 2.0047000399990793s
+Epoch: 20, loss: 1.2352171738942463, time: 1.9899599109994597s
+Valid at epoch 20
+   GNN F1-binary-1: 0.7062	F1-binary-0: 0.9647	F1-macro: 0.8354	G-Mean: 0.8718	AUC: 0.9299
+   GNN TP: 131	TN: 1488	FN: 33	FP: 76
+Label1 F1: 0.4901	Accuracy: 0.9072	Recall: 0.5077	AUC: 0.8388	AP: 0.7566
+  Saving model ...
+Epoch: 21, loss: 1.208678166071574, time: 1.9290532180002629s
+Epoch: 22, loss: 1.1636226177215576, time: 1.9210369669999636s
+Epoch: 23, loss: 1.21923828125, time: 1.9203852840000764s
+Epoch: 24, loss: 1.2162127494812012, time: 2.016893482001251s
+Epoch: 25, loss: 1.1306434472401936, time: 2.655557071999283s
+Valid at epoch 25
+   GNN F1-binary-1: 0.7143	F1-binary-0: 0.9664	F1-macro: 0.8403	G-Mean: 0.8702	AUC: 0.9234
+   GNN TP: 130	TN: 1494	FN: 34	FP: 70
+Label1 F1: 0.5196	Accuracy: 0.9102	Recall: 0.5236	AUC: 0.8389	AP: 0.7556
+Epoch: 26, loss: 1.1089191834131877, time: 1.9638476780000929s
+Epoch: 27, loss: 1.2217228809992473, time: 1.9808318880004663s
+Epoch: 28, loss: 1.1635570526123047, time: 2.044545824001034s
+Epoch: 29, loss: 1.1254901885986328, time: 1.9075778930000524s
+Epoch: 30, loss: 1.1132542689641316, time: 2.0297126909990766s
+Valid at epoch 30
+   GNN F1-binary-1: 0.7429	F1-binary-0: 0.9710	F1-macro: 0.8569	G-Mean: 0.8742	AUC: 0.9473
+   GNN TP: 130	TN: 1508	FN: 34	FP: 56
+Label1 F1: 0.5245	Accuracy: 0.9107	Recall: 0.5262	AUC: 0.8387	AP: 0.7539
+  Saving model ...
+Epoch: 31, loss: 1.117053747177124, time: 1.976134741000351s
+Epoch: 32, loss: 1.165320873260498, time: 1.917266272001143s
+Epoch: 33, loss: 1.2375841935475667, time: 1.9857511520003754s
+Epoch: 34, loss: 1.1230498949686687, time: 1.9219425650007906s
+Epoch: 35, loss: 1.1885565916697185, time: 1.9445834699999978s
+Valid at epoch 35
+   GNN F1-binary-1: 0.6364	F1-binary-0: 0.9469	F1-macro: 0.7917	G-Mean: 0.8829	AUC: 0.9532
+   GNN TP: 140	TN: 1428	FN: 24	FP: 136
+Label1 F1: 0.5498	Accuracy: 0.9135	Recall: 0.5404	AUC: 0.8384	AP: 0.7520
+  Saving model ...
+Epoch: 36, loss: 1.103140155474345, time: 1.9995853820000775s
+Epoch: 37, loss: 1.046169400215149, time: 1.9393779460006044s
+Epoch: 38, loss: 1.1113264163335164, time: 1.991721389000304s
+Epoch: 39, loss: 1.1836902300516765, time: 2.000252936000834s
+Epoch: 40, loss: 1.037009318669637, time: 1.9361894670000765s
+Valid at epoch 40
+   GNN F1-binary-1: 0.6247	F1-binary-0: 0.9422	F1-macro: 0.7835	G-Mean: 0.8900	AUC: 0.9527
+   GNN TP: 144	TN: 1411	FN: 20	FP: 153
+Label1 F1: 0.6096	Accuracy: 0.9204	Recall: 0.5766	AUC: 0.8380	AP: 0.7495
+Epoch: 41, loss: 1.0458221236864726, time: 1.9745193180006027s
+Epoch: 42, loss: 1.2124619483947754, time: 2.022924423999939s
+Epoch: 43, loss: 1.0209486087163289, time: 1.957527898999615s
+Epoch: 44, loss: 1.0141100486119587, time: 2.83542322699941s
+Epoch: 45, loss: 1.1220175822575886, time: 1.9232582970016665s
+Valid at epoch 45
+   GNN F1-binary-1: 0.6825	F1-binary-0: 0.9558	F1-macro: 0.8191	G-Mean: 0.9022	AUC: 0.9550
+   GNN TP: 144	TN: 1450	FN: 20	FP: 114
+Label1 F1: 0.6344	Accuracy: 0.9228	Recall: 0.5937	AUC: 0.8382	AP: 0.7494
+  Saving model ...
+Epoch: 46, loss: 1.1396822929382324, time: 1.9959279949998745s
+Epoch: 47, loss: 1.1502041816711426, time: 2.0228127999998833s
+Epoch: 48, loss: 1.169002850850423, time: 2.1026123659994482s
+Epoch: 49, loss: 1.0246806939442952, time: 2.0547543199991196s
+Epoch: 50, loss: 0.9888644218444824, time: 2.0217879730007553s
+Valid at epoch 50
+   GNN F1-binary-1: 0.6843	F1-binary-0: 0.9569	F1-macro: 0.8206	G-Mean: 0.8975	AUC: 0.9594
+   GNN TP: 142	TN: 1455	FN: 22	FP: 109
+Label1 F1: 0.7061	Accuracy: 0.9328	Recall: 0.6458	AUC: 0.8379	AP: 0.7472
+  Saving model ...
+Restore model from epoch 50
+Model path: ./results/unified/amazon/pcgnn/final/tr40/seed2/20260909T114819071506Z_amazon_PCGNN_unified_final_amazon_tr40_kaggle_t4_seed2_rho0p2_seed2/checkpoints/amazon_PCGNN.pkl
+   GNN F1-binary-1: 0.7028	F1-binary-0: 0.9573	F1-macro: 0.8300	G-Mean: 0.9261	AUC: 0.9694
+   GNN TP: 305	TN: 2893	FN: 24	FP: 234
+Label1 F1: 0.7761	Accuracy: 0.9436	Recall: 0.7103	AUC: 0.8871	AP: 0.8039
+Structured run artifacts: ./results/unified/amazon/pcgnn/final/tr40/seed2/20260909T114819071506Z_amazon_PCGNN_unified_final_amazon_tr40_kaggle_t4_seed2_rho0p2_seed2
+Average training epoch time: 2.040913s
+F1-Macro: 0.8300390073409436
+AUC: 0.9694075426985088
+G-Mean: 0.9261093031713865

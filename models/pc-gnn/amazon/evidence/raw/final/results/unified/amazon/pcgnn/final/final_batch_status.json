@@ -1,0 +1,28 @@
+{
+  "expected_runs": 12,
+  "recorded_runs": 12,
+  "completed_now": [
+    "TR40_seed2",
+    "TR40_seed42",
+    "TR30_seed2",
+    "TR30_seed42",
+    "TR30_seed72",
+    "TR20_seed2",
+    "TR20_seed42",
+    "TR20_seed72",
+    "TR10_seed2",
+    "TR10_seed42",
+    "TR10_seed72"
+  ],
+  "skipped_existing": [],
+  "reused_from_tuning": [
+    "TR40_seed72"
+  ],
+  "failed": [],
+  "batch_minutes": 21.30755389846666,
+  "selected_rho": 0.2,
+  "selection_metric": "validation AUROC",
+  "test_used_for_selection": false,
+  "epochs_per_run": 51,
+  "total_epoch_rows": 612
+}
