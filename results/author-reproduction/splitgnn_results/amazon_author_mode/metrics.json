@@ -1,0 +1,20 @@
+{
+  "dataset": "amazon",
+  "model": "SplitGNN",
+  "mode": "author-reproduction",
+  "epochs_run": "~370 (early stopped, best epoch 179, patience 200)",
+  "early_stop_triggered": true,
+  "total_training_time_seconds": 4526.82,
+  "test_best_auc_model": {
+    "recall": 0.906060606060606,
+    "f1_macro": 0.6875307543295488,
+    "auc": 0.9250057830210503,
+    "g_mean": 0.8559041431307544
+  },
+  "test_best_gmean_model": {
+    "recall": 0.9,
+    "f1_macro": 0.7049398148086388,
+    "auc": 0.9216930757961292,
+    "g_mean": 0.8633770018527505
+  }
+}

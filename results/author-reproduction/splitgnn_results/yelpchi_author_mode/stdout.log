@@ -1,0 +1,22 @@
+----------------------------------
+              args
+----------------------------------
+dataset:	yelp
+seed:	30
+epoch:	1000
+early_stop:	100
+lr:	0.01
+weigth_decay:5e-05
+gamma:	1
+C:	1
+K:	0
+intra_dim:	8
+dropout:	0.1
+cuda:	0
+----------------------------------
+Start training model...
+[training progress logged every 10 epochs from 0 to 990]
+End training
+Test model...
+Test: Recall:0.8621460506706409, F1-macro:0.7410015325367649, AUC:0.9188747452829567, G-Mean:0.8413997239361735
+Test: Recall:0.8446348733233979, F1-macro:0.7330423648273034, AUC:0.9126063818240336, G-Mean:0.8311071428611487

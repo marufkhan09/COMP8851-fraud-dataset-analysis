@@ -1,0 +1,20 @@
+{
+  "dataset": "comp",
+  "model": "SplitGNN",
+  "mode": "author-reproduction",
+  "epochs_run": "~160+ (early stopped, best epoch 62, patience 100)",
+  "early_stop_triggered": true,
+  "total_training_time_seconds": 548.58,
+  "test_best_auc_model": {
+    "recall": 0.9866071428571429,
+    "f1_macro": 0.1200570784928371,
+    "auc": 0.5367977030153754,
+    "g_mean": 0.15729748529595097
+  },
+  "test_best_gmean_model": {
+    "recall": 0.48214285714285715,
+    "f1_macro": 0.426286510350515,
+    "auc": 0.5340570887445888,
+    "g_mean": 0.510113788312394
+  }
+}
