@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260909T152732977273Z_tfinance_BWGNN_final_tfinance_tr10_seed42_seed42",
+  "run_mode": "final_tfinance_tr10_seed42",
+  "model": "BWGNN",
+  "dataset": "tfinance",
+  "seed": 42,
+  "run_started_utc": "2026-09-09T15:27:32.977249+00:00",
+  "run_finished_utc": "2026-09-09T15:28:06.775514+00:00",
+  "configuration": {
+    "dataset": "tfinance",
+    "data_path": "/kaggle/input/datasets/marufdkhan/tfinance/tfinance",
+    "split_path": "/kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr10_split_seed2.npz",
+    "train_ratio": 0.4,
+    "split_seed": 2,
+    "seed": 42,
+    "hid_dim": 32,
+    "order": 2,
+    "lr": 0.01,
+    "weight_decay": 0.0,
+    "epochs": 100,
+    "valid_every": 5,
+    "patience": 20,
+    "selection_metric": "auroc",
+    "skip_test": false,
+    "run_mode": "final_tfinance_tr10_seed42",
+    "results_dir": "/kaggle/working/bwgnn_tfinance/source/results/final/tr10/seed42",
+    "no_cuda": false,
+    "resolved_device": "cuda:0",
+    "resolved_run_id": "20260909T152732977273Z_tfinance_BWGNN_final_tfinance_tr10_seed42_seed42",
+    "resolved_split_source": "/kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr10_split_seed2.npz",
+    "optimizer": "adam",
+    "architecture": "BWGNN homogeneous Beta wavelet graph neural network"
+  },
+  "environment": {
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python_version": "3.11.16",
+    "torch_version": "2.2.2+cu121",
+    "dgl_version": "1.1.3+cu121",
+    "numpy_version": "1.26.4",
+    "cuda_available": true,
+    "cuda_used": true,
+    "cuda_version": "12.1",
+    "gpu_name": "Tesla T4",
+    "gpu_total_memory_bytes": 15636037632
+  },
+  "split": {
+    "source": "/kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr10_split_seed2.npz",
+    "train": {
+      "nodes": 3935,
+      "fraud_nodes": 181,
+      "normal_nodes": 3754
+    },
+    "validation": {
+      "nodes": 7871,
+      "fraud_nodes": 361,
+      "normal_nodes": 7510
+    },
+    "test": {
+      "nodes": 15744,
+      "fraud_nodes": 721,
+      "normal_nodes": 15023
+    },
+    "unused_nodes": 11807
+  },
+  "best_validation_epoch": 99,
+  "selection_metric": "auroc",
+  "best_selection_value": 0.9700041680344951,
+  "best_validation_auroc": 0.9700041680344951,
+  "best_validation_macro_f1": 0.8972543444511647,
+  "selected_threshold": 0.85,
+  "test_metrics": {
+    "auroc": 0.9597252774594442,
+    "auprc": 0.8481708039709779,
+    "macro_f1": 0.8910154173312068,
+    "fraud_f1": 0.7916666666666666,
+    "fraud_precision": 0.8211624441132638,
+    "fraud_recall": 0.7642163661581137,
+    "gmean": 0.8706962703860741,
+    "accuracy": 0.9815802845528455,
+    "threshold": 0.85,
+    "tp": 551,
+    "tn": 14903,
+    "fp": 120,
+    "fn": 170,
+    "inference_seconds": 0.12497265100000732
+  },
+  "timing": {
+    "data_load_seconds": 0.44351080899991757,
+    "training_epochs": 100,
+    "total_train_epoch_seconds": 27.14517313399972,
+    "mean_train_epoch_seconds": 0.27145173133999717,
+    "median_train_epoch_seconds": 0.26820167849996324,
+    "std_train_epoch_seconds": 0.04791687418727717,
+    "fit_wall_seconds_including_validation": 32.344695165000076,
+    "total_validation_seconds": 2.8181445730003816,
+    "test_inference_seconds": 0.12497265100000732,
+    "peak_gpu_memory_mb": 64.25634765625
+  }
+}

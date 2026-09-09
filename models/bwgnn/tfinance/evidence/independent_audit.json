@@ -1,0 +1,36 @@
+{
+  "status": "PASS_WITH_REQUIRED_DATA_VERSION_ACTION",
+  "technical_run_integrity": "PASS",
+  "benchmark_comparison_readiness": "CONDITIONAL",
+  "checks": {
+    "manifest_entries_verified": 132,
+    "zip_manifest_hashes_match": true,
+    "fixed_validation_ids": true,
+    "fixed_test_ids": true,
+    "nested_training_ids": true,
+    "split_leakage_absent": true,
+    "tuning_test_isolation": true,
+    "selected_hidden_dimension": 32,
+    "final_runs_verified": 12,
+    "final_epoch_rows_verified": 1135,
+    "single_environment_across_final_runs": true,
+    "aggregate_table_recomputed": true
+  },
+  "dataset_version": {
+    "current_executed_file": {
+      "sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+      "fraud_nodes": 1804,
+      "normal_nodes": 37553
+    },
+    "earlier_dataset_audit": {
+      "sha256": "bd8fa6bb279bea1bda0e4891976edd41d67d041821c9f3d2c484c1b19e3a1b8d",
+      "fraud_nodes": 1803,
+      "normal_nodes": 37554
+    },
+    "required_action": "Adopt the current executed file and update the dataset report, or rerun using the previously audited file. All models compared on T-Finance must use the same raw-file hash and these same split IDs."
+  },
+  "errors": [],
+  "warnings": [
+    "The executed Kaggle dataset differs from the earlier T-Finance audit: current SHA256 b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700 with 1804 fraud nodes; earlier SHA256 bd8fa6bb279bea1bda0e4891976edd41d67d041821c9f3d2c484c1b19e3a1b8d with 1803 fraud nodes. Freeze one version before cross-model comparison."
+  ]
+}

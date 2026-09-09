@@ -1,0 +1,32 @@
+{
+  "dataset": "T-Finance",
+  "model": "BWGNN",
+  "tuning_seed": 72,
+  "split_seed": 2,
+  "ratio": "TR40",
+  "selection_metric": "validation AUROC",
+  "test_metrics_used_for_selection": false,
+  "trials": [
+    {
+      "hidden_dimension": 32,
+      "best_validation_auroc": 0.960692115037752,
+      "best_validation_macro_f1": 0.8494160649756777,
+      "best_validation_epoch": 29,
+      "epochs_completed": 45,
+      "test_evaluated": false,
+      "summary_path": "results/tuning/hidden_32/20260909T152056051829Z_tfinance_BWGNN_tuning_tfinance_tr40_hidden32_seed72_seed72/summary.json"
+    },
+    {
+      "hidden_dimension": 64,
+      "best_validation_auroc": 0.9488976839744606,
+      "best_validation_macro_f1": 0.8727059319508826,
+      "best_validation_epoch": 24,
+      "epochs_completed": 40,
+      "test_evaluated": false,
+      "summary_path": "results/tuning/hidden_64/20260909T152115358711Z_tfinance_BWGNN_tuning_tfinance_tr40_hidden64_seed72_seed72/summary.json"
+    }
+  ],
+  "selected_hidden_dimension": 32,
+  "selected_validation_auroc": 0.960692115037752,
+  "tie_break": "smaller hidden dimension only if validation AUROC is exactly equal"
+}

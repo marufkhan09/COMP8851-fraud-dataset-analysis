@@ -1,0 +1,20 @@
+==============================================================================
+CREATING PERSISTENT T-FINANCE SPLITS
+==============================================================================
+Dataset: /kaggle/input/datasets/marufdkhan/tfinance/tfinance
+Dataset SHA256: b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700
+Nodes: 39,357
+Stored directed edge entries: 42,445,086
+Features: 10
+Fraud nodes: 1,804
+Normal nodes: 37,553
+TR40: train=15,742 (fraud=722), validation=7,871, test=15,744, unused=0
+TR30: train=11,806 (fraud=541), validation=7,871, test=15,744, unused=3,936
+TR20: train=7,870 (fraud=361), validation=7,871, test=15,744, unused=7,872
+TR10: train=3,935 (fraud=181), validation=7,871, test=15,744, unused=11,807
+Fixed validation IDs: PASS
+Fixed test IDs: PASS
+TR10 contained in TR20 contained in TR30 contained in TR40: PASS
+No split leakage: PASS
+Manifest: /kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_split_manifest_seed2.json
+T-FINANCE SPLITS READY: TRUE

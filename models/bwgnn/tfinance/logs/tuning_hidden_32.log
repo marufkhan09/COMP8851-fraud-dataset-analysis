@@ -1,0 +1,77 @@
+==============================================================================
+BWGNN T-FINANCE RUN
+==============================================================================
+Run ID: 20260909T152056051829Z_tfinance_BWGNN_tuning_tfinance_tr40_hidden32_seed72_seed72
+Mode: tuning_tfinance_tr40_hidden32_seed72
+Device: cuda:0
+GPU: Tesla T4
+Seed: 72
+Hidden dimension: 32
+Order: 2
+Maximum epochs: 50
+Patience: 15
+Nodes: 39,357
+Stored directed edge entries: 42,445,086
+Features: 10
+Split source: /kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr40_split_seed2.npz
+Train/validation/test: 15,742/7,871/15,744
+Training fraud/normal: 722/15,020
+Cross-entropy fraud weight: 20.803324
+Epoch   1/50 | loss 8.202044 | train 0.763s | val AUROC 0.552431 | val AUPRC 0.047821 | threshold 0.95 | best epoch 1
+Epoch   2/50 | loss 104.173531 | train 0.243s
+Epoch   3/50 | loss 64.297768 | train 0.254s
+Epoch   4/50 | loss 27.595812 | train 0.250s
+Epoch   5/50 | loss 4.542764 | train 0.254s | val AUROC 0.680381 | val AUPRC 0.069149 | threshold 0.95 | best epoch 5
+Epoch   6/50 | loss 7.730028 | train 0.246s
+Epoch   7/50 | loss 7.033806 | train 0.251s
+Epoch   8/50 | loss 3.162900 | train 0.255s
+Epoch   9/50 | loss 1.152564 | train 0.254s
+Epoch  10/50 | loss 1.443447 | train 0.252s | val AUROC 0.910645 | val AUPRC 0.543529 | threshold 0.30 | best epoch 10
+Epoch  11/50 | loss 1.546155 | train 0.243s
+Epoch  12/50 | loss 1.148032 | train 0.255s
+Epoch  13/50 | loss 0.722516 | train 0.252s
+Epoch  14/50 | loss 0.480554 | train 0.255s
+Epoch  15/50 | loss 0.391694 | train 0.255s | val AUROC 0.916863 | val AUPRC 0.273179 | threshold 0.65 | best epoch 15
+Epoch  16/50 | loss 0.439523 | train 0.245s
+Epoch  17/50 | loss 0.482794 | train 0.254s
+Epoch  18/50 | loss 0.504086 | train 0.253s
+Epoch  19/50 | loss 0.510960 | train 0.254s
+Epoch  20/50 | loss 0.483837 | train 0.256s | val AUROC 0.926698 | val AUPRC 0.391209 | threshold 0.80 | best epoch 20
+Epoch  21/50 | loss 0.447784 | train 0.248s
+Epoch  22/50 | loss 0.419156 | train 0.256s
+Epoch  23/50 | loss 0.398554 | train 0.254s
+Epoch  24/50 | loss 0.388080 | train 0.257s
+Epoch  25/50 | loss 0.382729 | train 0.257s | val AUROC 0.960156 | val AUPRC 0.765827 | threshold 0.70 | best epoch 25
+Epoch  26/50 | loss 0.377146 | train 0.245s
+Epoch  27/50 | loss 0.368185 | train 0.258s
+Epoch  28/50 | loss 0.356368 | train 0.257s
+Epoch  29/50 | loss 0.344629 | train 0.254s
+Epoch  30/50 | loss 0.335960 | train 0.256s | val AUROC 0.960692 | val AUPRC 0.717474 | threshold 0.70 | best epoch 30
+Epoch  31/50 | loss 0.330186 | train 0.248s
+Epoch  32/50 | loss 0.324862 | train 0.258s
+Epoch  33/50 | loss 0.317388 | train 0.258s
+Epoch  34/50 | loss 0.308871 | train 0.259s
+Epoch  35/50 | loss 0.299926 | train 0.258s | val AUROC 0.959207 | val AUPRC 0.804717 | threshold 0.85 | best epoch 30
+Epoch  36/50 | loss 0.290958 | train 0.249s
+Epoch  37/50 | loss 0.282313 | train 0.258s
+Epoch  38/50 | loss 0.274738 | train 0.259s
+Epoch  39/50 | loss 0.288762 | train 0.258s
+Epoch  40/50 | loss 0.278022 | train 0.258s | val AUROC 0.957348 | val AUPRC 0.836396 | threshold 0.85 | best epoch 30
+Epoch  41/50 | loss 0.268297 | train 0.250s
+Epoch  42/50 | loss 0.267695 | train 0.259s
+Epoch  43/50 | loss 0.266896 | train 0.258s
+Epoch  44/50 | loss 0.266078 | train 0.259s
+Epoch  45/50 | loss 0.265000 | train 0.260s | val AUROC 0.958454 | val AUPRC 0.828889 | threshold 0.90 | best epoch 30
+Early stopping at epoch 45; validation AUROC has not improved for 15 epochs.
+==============================================================================
+FINAL RUN RESULTS
+==============================================================================
+Best validation epoch: 30
+Best validation AUROC: 0.960692
+Test evaluation: SKIPPED (validation-only tuning trial)
+Epochs completed: 45
+Mean epoch time: 0.265213s
+Inference time: not measured
+Peak GPU memory: 64.35 MB
+Artifacts: /kaggle/working/bwgnn_tfinance/source/results/tuning/hidden_32/20260909T152056051829Z_tfinance_BWGNN_tuning_tfinance_tr40_hidden32_seed72_seed72
+RUN COMPLETED: TRUE

@@ -1,0 +1,40 @@
+==============================================================================
+BWGNN T-FINANCE RUN
+==============================================================================
+Run ID: 20260909T152008115455Z_tfinance_BWGNN_smoke_tfinance_tr10_seed72_seed72
+Mode: smoke_tfinance_tr10_seed72
+Device: cuda:0
+GPU: Tesla T4
+Seed: 72
+Hidden dimension: 64
+Order: 2
+Maximum epochs: 2
+Patience: disabled
+Nodes: 39,357
+Stored directed edge entries: 42,445,086
+Features: 10
+Split source: /kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr10_split_seed2.npz
+Train/validation/test: 3,935/7,871/15,744
+Training fraud/normal: 181/3,754
+Cross-entropy fraud weight: 20.740331
+Epoch   1/2 | loss 2.609703 | train 0.821s | val AUROC 0.492573 | val AUPRC 0.044723 | threshold 0.95 | best epoch 1
+Epoch   2/2 | loss 265.127991 | train 0.279s | val AUROC 0.684020 | val AUPRC 0.156172 | threshold 0.10 | best epoch 2
+==============================================================================
+FINAL RUN RESULTS
+==============================================================================
+Best validation epoch: 2
+Best validation AUROC: 0.684020
+auroc: 0.717410
+auprc: 0.195609
+macro_f1: 0.540218
+fraud_f1: 0.102632
+fraud_precision: 1.000000
+fraud_recall: 0.054092
+gmean: 0.232576
+accuracy: 0.956682
+Epochs completed: 2
+Mean epoch time: 0.549964s
+Inference time: 0.136044s
+Peak GPU memory: 112.71 MB
+Artifacts: /kaggle/working/bwgnn_tfinance/source/results/smoke/20260909T152008115455Z_tfinance_BWGNN_smoke_tfinance_tr10_seed72_seed72
+RUN COMPLETED: TRUE

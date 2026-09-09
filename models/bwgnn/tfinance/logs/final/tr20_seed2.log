@@ -1,0 +1,138 @@
+==============================================================================
+BWGNN T-FINANCE RUN
+==============================================================================
+Run ID: 20260909T152507097113Z_tfinance_BWGNN_final_tfinance_tr20_seed2_seed2
+Mode: final_tfinance_tr20_seed2
+Device: cuda:0
+GPU: Tesla T4
+Seed: 2
+Hidden dimension: 32
+Order: 2
+Maximum epochs: 100
+Patience: 20
+Nodes: 39,357
+Stored directed edge entries: 42,445,086
+Features: 10
+Split source: /kaggle/working/bwgnn_tfinance/source/shared/splits/tfinance/tfinance_tr20_split_seed2.npz
+Train/validation/test: 7,870/7,871/15,744
+Training fraud/normal: 361/7,509
+Cross-entropy fraud weight: 20.800554
+Epoch   1/100 | loss 28.266052 | train 0.769s | val AUROC 0.537330 | val AUPRC 0.049346 | threshold 0.95 | best epoch 1
+Epoch   2/100 | loss 241.570618 | train 0.261s
+Epoch   3/100 | loss 88.423973 | train 0.270s
+Epoch   4/100 | loss 22.060358 | train 0.268s
+Epoch   5/100 | loss 38.388493 | train 0.268s | val AUROC 0.836770 | val AUPRC 0.292454 | threshold 0.05 | best epoch 5
+Epoch   6/100 | loss 31.377159 | train 0.259s
+Epoch   7/100 | loss 19.852629 | train 0.269s
+Epoch   8/100 | loss 10.073336 | train 0.267s
+Epoch   9/100 | loss 2.824472 | train 0.267s
+Epoch  10/100 | loss 4.553110 | train 0.269s | val AUROC 0.677778 | val AUPRC 0.064788 | threshold 0.95 | best epoch 5
+Epoch  11/100 | loss 3.073845 | train 0.260s
+Epoch  12/100 | loss 1.677279 | train 0.269s
+Epoch  13/100 | loss 2.456096 | train 0.266s
+Epoch  14/100 | loss 1.820216 | train 0.267s
+Epoch  15/100 | loss 0.958839 | train 0.269s | val AUROC 0.769545 | val AUPRC 0.102163 | threshold 0.90 | best epoch 5
+Epoch  16/100 | loss 1.009080 | train 0.259s
+Epoch  17/100 | loss 1.167611 | train 0.268s
+Epoch  18/100 | loss 1.049565 | train 0.266s
+Epoch  19/100 | loss 0.808618 | train 0.267s
+Epoch  20/100 | loss 0.630313 | train 0.269s | val AUROC 0.876191 | val AUPRC 0.214039 | threshold 0.75 | best epoch 20
+Epoch  21/100 | loss 0.568989 | train 0.256s
+Epoch  22/100 | loss 0.577718 | train 0.266s
+Epoch  23/100 | loss 0.584171 | train 0.269s
+Epoch  24/100 | loss 0.567902 | train 0.268s
+Epoch  25/100 | loss 0.536069 | train 0.268s | val AUROC 0.896526 | val AUPRC 0.286029 | threshold 0.85 | best epoch 25
+Epoch  26/100 | loss 0.505665 | train 0.263s
+Epoch  27/100 | loss 0.479468 | train 0.268s
+Epoch  28/100 | loss 0.459808 | train 0.267s
+Epoch  29/100 | loss 0.445892 | train 0.269s
+Epoch  30/100 | loss 0.430063 | train 0.268s | val AUROC 0.932952 | val AUPRC 0.472222 | threshold 0.85 | best epoch 30
+Epoch  31/100 | loss 0.414798 | train 0.259s
+Epoch  32/100 | loss 0.406156 | train 0.268s
+Epoch  33/100 | loss 0.397484 | train 0.267s
+Epoch  34/100 | loss 0.383898 | train 0.271s
+Epoch  35/100 | loss 0.369465 | train 0.268s | val AUROC 0.950129 | val AUPRC 0.661614 | threshold 0.80 | best epoch 35
+Epoch  36/100 | loss 0.358267 | train 0.260s
+Epoch  37/100 | loss 0.349086 | train 0.267s
+Epoch  38/100 | loss 0.338717 | train 0.268s
+Epoch  39/100 | loss 0.326349 | train 0.270s
+Epoch  40/100 | loss 0.317758 | train 0.269s | val AUROC 0.951499 | val AUPRC 0.774699 | threshold 0.80 | best epoch 40
+Epoch  41/100 | loss 0.311975 | train 0.259s
+Epoch  42/100 | loss 0.305704 | train 0.268s
+Epoch  43/100 | loss 0.299446 | train 0.268s
+Epoch  44/100 | loss 0.295763 | train 0.270s
+Epoch  45/100 | loss 0.293298 | train 0.268s | val AUROC 0.950994 | val AUPRC 0.723648 | threshold 0.85 | best epoch 40
+Epoch  46/100 | loss 0.290555 | train 0.259s
+Epoch  47/100 | loss 0.287471 | train 0.268s
+Epoch  48/100 | loss 0.285520 | train 0.268s
+Epoch  49/100 | loss 0.283441 | train 0.271s
+Epoch  50/100 | loss 0.281646 | train 0.268s | val AUROC 0.949875 | val AUPRC 0.731409 | threshold 0.85 | best epoch 40
+Epoch  51/100 | loss 0.279819 | train 0.259s
+Epoch  52/100 | loss 0.277630 | train 0.268s
+Epoch  53/100 | loss 0.275861 | train 0.272s
+Epoch  54/100 | loss 0.273610 | train 0.268s
+Epoch  55/100 | loss 0.271997 | train 0.270s | val AUROC 0.950364 | val AUPRC 0.746479 | threshold 0.90 | best epoch 40
+Epoch  56/100 | loss 0.270560 | train 0.260s
+Epoch  57/100 | loss 0.269406 | train 0.270s
+Epoch  58/100 | loss 0.268839 | train 0.268s
+Epoch  59/100 | loss 0.267896 | train 0.272s
+Epoch  60/100 | loss 0.266586 | train 0.269s | val AUROC 0.953035 | val AUPRC 0.759959 | threshold 0.90 | best epoch 60
+Epoch  61/100 | loss 0.265858 | train 0.257s
+Epoch  62/100 | loss 0.264048 | train 0.270s
+Epoch  63/100 | loss 0.262924 | train 0.270s
+Epoch  64/100 | loss 0.267616 | train 0.268s
+Epoch  65/100 | loss 0.260168 | train 0.271s | val AUROC 0.954688 | val AUPRC 0.775978 | threshold 0.90 | best epoch 65
+Epoch  66/100 | loss 0.258733 | train 0.261s
+Epoch  67/100 | loss 0.257428 | train 0.269s
+Epoch  68/100 | loss 0.256062 | train 0.272s
+Epoch  69/100 | loss 0.257014 | train 0.269s
+Epoch  70/100 | loss 0.254253 | train 0.270s | val AUROC 0.955932 | val AUPRC 0.787687 | threshold 0.90 | best epoch 70
+Epoch  71/100 | loss 0.253923 | train 0.259s
+Epoch  72/100 | loss 0.253611 | train 0.270s
+Epoch  73/100 | loss 0.253166 | train 0.269s
+Epoch  74/100 | loss 0.252247 | train 0.272s
+Epoch  75/100 | loss 0.250978 | train 0.269s | val AUROC 0.957568 | val AUPRC 0.795507 | threshold 0.90 | best epoch 75
+Epoch  76/100 | loss 0.249835 | train 0.258s
+Epoch  77/100 | loss 0.248741 | train 0.270s
+Epoch  78/100 | loss 0.247758 | train 0.271s
+Epoch  79/100 | loss 0.246680 | train 0.268s
+Epoch  80/100 | loss 0.245417 | train 0.272s | val AUROC 0.958954 | val AUPRC 0.799145 | threshold 0.90 | best epoch 80
+Epoch  81/100 | loss 0.244703 | train 0.260s
+Epoch  82/100 | loss 0.243282 | train 0.270s
+Epoch  83/100 | loss 0.242572 | train 0.272s
+Epoch  84/100 | loss 0.241896 | train 0.269s
+Epoch  85/100 | loss 0.241134 | train 0.270s | val AUROC 0.959309 | val AUPRC 0.801894 | threshold 0.95 | best epoch 85
+Epoch  86/100 | loss 0.240215 | train 0.263s
+Epoch  87/100 | loss 0.239178 | train 0.270s
+Epoch  88/100 | loss 0.238144 | train 0.272s
+Epoch  89/100 | loss 0.237172 | train 0.270s
+Epoch  90/100 | loss 0.236619 | train 0.270s | val AUROC 0.959565 | val AUPRC 0.803829 | threshold 0.95 | best epoch 90
+Epoch  91/100 | loss 0.235602 | train 0.266s
+Epoch  92/100 | loss 0.234752 | train 0.269s
+Epoch  93/100 | loss 0.233894 | train 0.271s
+Epoch  94/100 | loss 0.233420 | train 0.271s
+Epoch  95/100 | loss 0.232256 | train 0.271s | val AUROC 0.960064 | val AUPRC 0.803985 | threshold 0.90 | best epoch 95
+Epoch  96/100 | loss 0.231585 | train 0.262s
+Epoch  97/100 | loss 0.230644 | train 0.269s
+Epoch  98/100 | loss 0.229598 | train 0.272s
+Epoch  99/100 | loss 0.228876 | train 0.271s
+Epoch 100/100 | loss 0.228111 | train 0.270s | val AUROC 0.960338 | val AUPRC 0.801821 | threshold 0.95 | best epoch 100
+==============================================================================
+FINAL RUN RESULTS
+==============================================================================
+Best validation epoch: 100
+Best validation AUROC: 0.960338
+auroc: 0.953250
+auprc: 0.787314
+macro_f1: 0.859931
+fraud_f1: 0.731250
+fraud_precision: 0.837209
+fraud_recall: 0.649098
+gmean: 0.803223
+accuracy: 0.978150
+Epochs completed: 100
+Mean epoch time: 0.272297s
+Inference time: 0.124092s
+Peak GPU memory: 64.29 MB
+Artifacts: /kaggle/working/bwgnn_tfinance/source/results/final/tr20/seed2/20260909T152507097113Z_tfinance_BWGNN_final_tfinance_tr20_seed2_seed2
+RUN COMPLETED: TRUE

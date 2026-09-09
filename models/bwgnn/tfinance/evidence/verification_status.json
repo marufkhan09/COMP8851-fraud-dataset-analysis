@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "final_runs_expected": 12,
+  "final_runs_found": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "split_seed": 2,
+  "selected_hidden_dimension": 32,
+  "order": 2,
+  "optimizer": "Adam",
+  "learning_rate": 0.01,
+  "maximum_epochs": 100,
+  "early_stopping_patience_epochs": 20,
+  "selection_metric": "validation AUROC",
+  "test_used_for_tuning": false,
+  "fixed_validation_ids": true,
+  "fixed_test_ids": true,
+  "nested_training_sets": true,
+  "final_epoch_rows": 1135,
+  "hardware_requirement": "one NVIDIA Tesla T4, GPU 0",
+  "elapsed_minutes_this_execution": 8.85054220755895
+}
