@@ -1,0 +1,53 @@
+{
+  "model": "PC-GNN",
+  "dataset": "YelpChi",
+  "split_condition": "TR40",
+  "split_seed": 2,
+  "training_seed": 72,
+  "selection_metric": "validation AUROC",
+  "test_metrics_used_for_selection": false,
+  "trials": [
+    {
+      "rho": 0.5,
+      "best_validation_auroc": 0.8351915156936052,
+      "best_validation_macro_f1": 0.6249996230485222,
+      "best_validation_epoch": 95,
+      "source": "verified_unified_tr40_baseline"
+    },
+    {
+      "rho": 0.2,
+      "best_validation_auroc": 0.8328421290367636,
+      "best_validation_macro_f1": 0.6404686223576304,
+      "best_validation_epoch": 95,
+      "source": "/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/results/unified/yelpchi/pcgnn/tuning_tr40/rho_0p2/20260909T050146221815Z_yelp_PCGNN_unified_tuning_yelpchi_tr40_rho0p2_kaggle_t4_seed72_seed72/summary.json"
+    },
+    {
+      "rho": 0.4,
+      "best_validation_auroc": 0.8403868266662413,
+      "best_validation_macro_f1": 0.6415647448970277,
+      "best_validation_epoch": 95,
+      "source": "/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/results/unified/yelpchi/pcgnn/tuning_tr40/rho_0p4/20260909T052713997720Z_yelp_PCGNN_unified_tuning_yelpchi_tr40_rho0p4_kaggle_t4_seed72_seed72/summary.json"
+    },
+    {
+      "rho": 0.6,
+      "best_validation_auroc": 0.8267177430948195,
+      "best_validation_macro_f1": 0.6542672500882069,
+      "best_validation_epoch": 95,
+      "source": "/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/results/unified/yelpchi/pcgnn/tuning_tr40/rho_0p6/20260909T055228236817Z_yelp_PCGNN_unified_tuning_yelpchi_tr40_rho0p6_kaggle_t4_seed72_seed72/summary.json"
+    },
+    {
+      "rho": 0.8,
+      "best_validation_auroc": 0.8130119906306602,
+      "best_validation_macro_f1": 0.65174830430453,
+      "best_validation_epoch": 95,
+      "source": "/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/results/unified/yelpchi/pcgnn/tuning_tr40/rho_0p8/20260909T061743383609Z_yelp_PCGNN_unified_tuning_yelpchi_tr40_rho0p8_kaggle_t4_seed72_seed72/summary.json"
+    }
+  ],
+  "selected_configuration": {
+    "rho": 0.4,
+    "best_validation_auroc": 0.8403868266662413,
+    "best_validation_macro_f1": 0.6415647448970277,
+    "best_validation_epoch": 95,
+    "source": "/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/results/unified/yelpchi/pcgnn/tuning_tr40/rho_0p4/20260909T052713997720Z_yelp_PCGNN_unified_tuning_yelpchi_tr40_rho0p4_kaggle_t4_seed72_seed72/summary.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dataset": "YelpChi",
+  "model": "PC-GNN",
+  "phase": "TR40 validation tuning",
+  "split_seed": 2,
+  "training_seed": 72,
+  "selection_metric": "validation AUROC",
+  "test_used_for_selection": false,
+  "fixed_parameters": {
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay": 0.001,
+    "embedding_dimension": 64,
+    "batch_size": 1024,
+    "alpha": 2,
+    "epochs": 100,
+    "validation_interval": 5,
+    "classification_threshold": 0.5
+  },
+  "baseline_rho": 0.5,
+  "additional_rho_trials": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ]
+}

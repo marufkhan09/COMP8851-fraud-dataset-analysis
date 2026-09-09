@@ -1,0 +1,289 @@
+**************** MODEL CONFIGURATION ****************
+alpha                    -->   2
+batch_size               -->   1024
+cuda_id                  -->   0
+data_dir                 -->   ./data/
+data_name                -->   yelp
+emb_size                 -->   64
+lr                       -->   0.01
+model                    -->   PCGNN
+multi_relation           -->   GNN
+no_cuda                  -->   False
+num_epochs               -->   100
+optimizer                -->   adam
+results_dir              -->   ./results/unified-final/yelpchi/pcgnn/tr20/seed42
+rho                      -->   0.4
+run_mode                 -->   unified_final_yelpchi_tr20_kaggle_t4_seed42_rho0p4
+save_dir                 -->   ./pytorch_models/
+seed                     -->   42
+split_path               -->   ./shared/splits/yelpchi/yelpchi_tr20_split_seed2.npz
+test_ratio               -->   0.67
+thres                    -->   0.5
+train_ratio              -->   0.2
+valid_epochs             -->   5
+weight_decay             -->   0.001
+**************** MODEL CONFIGURATION ****************
+Run on yelp, postive/total num: 6677/45954, train num 9191,valid num 9099, test num 18474, test positive num 2684
+Classification threshold: 0.5
+Feature dimension: 32
+Model: PCGNN, multi-relation aggregator: GNN, emb_size: 64.
+/kaggle/working/pcgnn_clean_restart/PC-GNN-COMP8851-Instrumented/src/model_handler.py:258: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_loss = gnn_model.loss(batch_nodes, Variable(torch.cuda.LongTensor(batch_label)))
+Epoch: 0, loss: 2.0733741919199624, time: 5.797282814000937s
+Valid at epoch 0
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.2537	F1-binary-0: 0.0000	F1-macro: 0.1269	G-Mean: 0.0000	AUC: 0.7143
+   GNN TP: 1322	TN: 0	FN: 0	FP: 7777
+Label1 F1: 0.0937	Accuracy: 0.1559	Recall: 0.4444	AUC: 0.6107	AP: 0.2139
+  Saving model ...
+Epoch: 1, loss: 2.066250483194987, time: 5.424450320999313s
+Epoch: 2, loss: 2.0644025007883706, time: 5.963852932996815s
+Epoch: 3, loss: 2.0383150577545166, time: 5.470450279000943s
+Epoch: 4, loss: 2.0330066680908203, time: 5.253691345002153s
+Epoch: 5, loss: 1.9864086707433064, time: 5.308606196002074s
+Valid at epoch 5
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3467	F1-binary-0: 0.6689	F1-macro: 0.5078	G-Mean: 0.6456	AUC: 0.7333
+   GNN TP: 1061	TN: 4039	FN: 261	FP: 3738
+Label1 F1: 0.0947	Accuracy: 0.1567	Recall: 0.4449	AUC: 0.6820	AP: 0.2673
+  Saving model ...
+Epoch: 6, loss: 1.965640942255656, time: 5.388334180999664s
+Epoch: 7, loss: 1.9333914518356323, time: 5.892307849997451s
+Epoch: 8, loss: 1.9211814006169636, time: 5.357789407000382s
+Epoch: 9, loss: 1.949913740158081, time: 5.336243368998112s
+Epoch: 10, loss: 1.934572418530782, time: 5.329242201998568s
+Valid at epoch 10
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4175	F1-binary-0: 0.8572	F1-macro: 0.6374	G-Mean: 0.6751	AUC: 0.7530
+   GNN TP: 748	TN: 6264	FN: 574	FP: 1513
+Label1 F1: 0.0937	Accuracy: 0.1559	Recall: 0.4444	AUC: 0.6982	AP: 0.2859
+  Saving model ...
+Epoch: 11, loss: 1.896406849225362, time: 5.4158557709997694s
+Epoch: 12, loss: 1.8953609069188435, time: 5.849696122000751s
+Epoch: 13, loss: 1.9017759561538696, time: 5.407463663003s
+Epoch: 14, loss: 1.8983678817749023, time: 5.371643104997929s
+Epoch: 15, loss: 1.8815360864003499, time: 5.394477224999719s
+Valid at epoch 15
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4020	F1-binary-0: 0.7896	F1-macro: 0.5958	G-Mean: 0.7015	AUC: 0.7592
+   GNN TP: 952	TN: 5315	FN: 370	FP: 2462
+Label1 F1: 0.1563	Accuracy: 0.2069	Recall: 0.4666	AUC: 0.7026	AP: 0.2891
+  Saving model ...
+Epoch: 16, loss: 1.8818926413853962, time: 5.475979286999063s
+Epoch: 17, loss: 1.8843027750651042, time: 5.862677982000605s
+Epoch: 18, loss: 1.8824977080027263, time: 5.4740440389978176s
+Epoch: 19, loss: 1.9066812594731648, time: 5.2978873399988515s
+Epoch: 20, loss: 1.8640330235163372, time: 5.420765735001623s
+Valid at epoch 20
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3737	F1-binary-0: 0.7202	F1-macro: 0.5470	G-Mean: 0.6802	AUC: 0.7607
+   GNN TP: 1050	TN: 4530	FN: 272	FP: 3247
+Label1 F1: 0.1499	Accuracy: 0.2002	Recall: 0.4633	AUC: 0.7055	AP: 0.2923
+  Saving model ...
+Epoch: 21, loss: 1.9071728785832722, time: 5.369847636997292s
+Epoch: 22, loss: 1.8852814435958862, time: 5.898982519000128s
+Epoch: 23, loss: 1.887021541595459, time: 5.4673463750004885s
+Epoch: 24, loss: 1.8761319319407146, time: 5.349585993000801s
+Epoch: 25, loss: 1.85854971408844, time: 5.476803467998252s
+Valid at epoch 25
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4032	F1-binary-0: 0.7932	F1-macro: 0.5982	G-Mean: 0.7015	AUC: 0.7638
+   GNN TP: 944	TN: 5360	FN: 378	FP: 2417
+Label1 F1: 0.1815	Accuracy: 0.2346	Recall: 0.4803	AUC: 0.7080	AP: 0.2952
+  Saving model ...
+Epoch: 26, loss: 1.8641252915064495, time: 5.334902632999729s
+Epoch: 27, loss: 1.8526086807250977, time: 5.913050235998526s
+Epoch: 28, loss: 1.8337777058283489, time: 5.382398777997878s
+Epoch: 29, loss: 1.8509241739908855, time: 5.449556219002261s
+Epoch: 30, loss: 1.84994371732076, time: 5.3598583249986405s
+Valid at epoch 30
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4064	F1-binary-0: 0.7916	F1-macro: 0.5990	G-Mean: 0.7059	AUC: 0.7658
+   GNN TP: 961	TN: 5331	FN: 361	FP: 2446
+Label1 F1: 0.2693	Accuracy: 0.3388	Recall: 0.5403	AUC: 0.7103	AP: 0.2996
+  Saving model ...
+Epoch: 31, loss: 1.8313610553741455, time: 5.419043062000128s
+Epoch: 32, loss: 1.8634248971939087, time: 5.871341918998951s
+Epoch: 33, loss: 1.8580061197280884, time: 5.390851849999308s
+Epoch: 34, loss: 1.8538234233856201, time: 5.485550122000859s
+Epoch: 35, loss: 1.8799749215443928, time: 5.379587253999489s
+Valid at epoch 35
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4195	F1-binary-0: 0.8101	F1-macro: 0.6148	G-Mean: 0.7130	AUC: 0.7717
+   GNN TP: 941	TN: 5554	FN: 381	FP: 2223
+Label1 F1: 0.2507	Accuracy: 0.3154	Recall: 0.5252	AUC: 0.7123	AP: 0.3028
+  Saving model ...
+Epoch: 36, loss: 1.851194699605306, time: 5.47656253400055s
+Epoch: 37, loss: 1.8511547644933064, time: 5.936531271003332s
+Epoch: 38, loss: 1.8465407689412434, time: 5.414435982998839s
+Epoch: 39, loss: 1.8510862588882446, time: 5.4414444849971915s
+Epoch: 40, loss: 1.835010290145874, time: 5.442378256000666s
+Valid at epoch 40
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3671	F1-binary-0: 0.6959	F1-macro: 0.5315	G-Mean: 0.6715	AUC: 0.7718
+   GNN TP: 1084	TN: 4277	FN: 238	FP: 3500
+Label1 F1: 0.2156	Accuracy: 0.2675	Recall: 0.5028	AUC: 0.7143	AP: 0.3055
+  Saving model ...
+Epoch: 41, loss: 1.8415494759877522, time: 5.503991863999545s
+Epoch: 42, loss: 1.8569674889246623, time: 5.945217102002061s
+Epoch: 43, loss: 1.8338088989257812, time: 5.463365779000014s
+Epoch: 44, loss: 1.807367245356242, time: 5.4359188720009115s
+Epoch: 45, loss: 1.8427351315816243, time: 5.342304038000293s
+Valid at epoch 45
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4434	F1-binary-0: 0.8479	F1-macro: 0.6457	G-Mean: 0.7144	AUC: 0.7786
+   GNN TP: 866	TN: 6059	FN: 456	FP: 1718
+Label1 F1: 0.3499	Accuracy: 0.4653	Recall: 0.5279	AUC: 0.7154	AP: 0.3062
+  Saving model ...
+Epoch: 46, loss: 1.8182589213053386, time: 5.480710269002884s
+Epoch: 47, loss: 1.8415412108103435, time: 5.881066469999496s
+Epoch: 48, loss: 1.8298725684483845, time: 5.382923653000034s
+Epoch: 49, loss: 1.8290202617645264, time: 5.415224197997304s
+Epoch: 50, loss: 1.8301332394282024, time: 5.4465421570021135s
+Valid at epoch 50
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3885	F1-binary-0: 0.7462	F1-macro: 0.5674	G-Mean: 0.6957	AUC: 0.7798
+   GNN TP: 1037	TN: 4798	FN: 285	FP: 2979
+Label1 F1: 0.2728	Accuracy: 0.3437	Recall: 0.5419	AUC: 0.7168	AP: 0.3080
+  Saving model ...
+Epoch: 51, loss: 1.816316803296407, time: 5.424388044000807s
+Epoch: 52, loss: 1.835269808769226, time: 5.877711889999773s
+Epoch: 53, loss: 1.8088968992233276, time: 5.417777497001225s
+Epoch: 54, loss: 1.8065342903137207, time: 5.417836198001169s
+Epoch: 55, loss: 1.805841286977132, time: 5.441373798999848s
+Valid at epoch 55
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4089	F1-binary-0: 0.7895	F1-macro: 0.5992	G-Mean: 0.7095	AUC: 0.7832
+   GNN TP: 977	TN: 5297	FN: 345	FP: 2480
+Label1 F1: 0.3471	Accuracy: 0.4603	Recall: 0.5366	AUC: 0.7185	AP: 0.3093
+  Saving model ...
+Epoch: 56, loss: 1.8077078660329182, time: 5.399640186002216s
+Epoch: 57, loss: 1.7899198134740193, time: 5.884984914999222s
+Epoch: 58, loss: 1.7950498660405476, time: 5.2927170250004565s
+Epoch: 59, loss: 1.7997568845748901, time: 5.294346299000608s
+Epoch: 60, loss: 1.7963438034057617, time: 5.459457230001135s
+Valid at epoch 60
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4057	F1-binary-0: 0.7813	F1-macro: 0.5935	G-Mean: 0.7085	AUC: 0.7865
+   GNN TP: 993	TN: 5197	FN: 329	FP: 2580
+Label1 F1: 0.2979	Accuracy: 0.3793	Recall: 0.5625	AUC: 0.7201	AP: 0.3116
+  Saving model ...
+Epoch: 61, loss: 1.796700080235799, time: 5.483224802999757s
+Epoch: 62, loss: 1.7862733999888103, time: 5.989772311997513s
+Epoch: 63, loss: 1.812071959177653, time: 5.390418322000187s
+Epoch: 64, loss: 1.784132440884908, time: 5.328654438999365s
+Epoch: 65, loss: 1.7862095435460408, time: 5.4690371270007745s
+Valid at epoch 65
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4233	F1-binary-0: 0.8062	F1-macro: 0.6147	G-Mean: 0.7193	AUC: 0.7887
+   GNN TP: 969	TN: 5490	FN: 353	FP: 2287
+Label1 F1: 0.3669	Accuracy: 0.4957	Recall: 0.5409	AUC: 0.7210	AP: 0.3137
+  Saving model ...
+Epoch: 66, loss: 1.7966856559117634, time: 5.377547709002101s
+Epoch: 67, loss: 1.8064650297164917, time: 5.920738428001641s
+Epoch: 68, loss: 1.795161286989848, time: 5.39133590700294s
+Epoch: 69, loss: 1.7917580604553223, time: 5.327093035997677s
+Epoch: 70, loss: 1.8005337715148926, time: 5.395820246001676s
+Valid at epoch 70
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4015	F1-binary-0: 0.7678	F1-macro: 0.5847	G-Mean: 0.7070	AUC: 0.7901
+   GNN TP: 1021	TN: 5034	FN: 301	FP: 2743
+Label1 F1: 0.3590	Accuracy: 0.4798	Recall: 0.5455	AUC: 0.7224	AP: 0.3166
+  Saving model ...
+Epoch: 71, loss: 1.7796456416447957, time: 5.41549862300235s
+Epoch: 72, loss: 1.7993228038152058, time: 5.919188665000547s
+Epoch: 73, loss: 1.7909313837687175, time: 5.3992827300025965s
+Epoch: 74, loss: 1.7892910639444988, time: 5.337787237000157s
+Epoch: 75, loss: 1.7850155433019002, time: 5.27786598700186s
+Valid at epoch 75
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4715	F1-binary-0: 0.8801	F1-macro: 0.6758	G-Mean: 0.7096	AUC: 0.7976
+   GNN TP: 793	TN: 6528	FN: 529	FP: 1249
+Label1 F1: 0.3935	Accuracy: 0.5488	Recall: 0.5655	AUC: 0.7235	AP: 0.3189
+  Saving model ...
+Epoch: 76, loss: 1.8014876047770183, time: 5.412667109998438s
+Epoch: 77, loss: 1.7866496642430623, time: 5.946797626998887s
+Epoch: 78, loss: 1.7722557385762532, time: 5.344428315998812s
+Epoch: 79, loss: 1.7697068850199382, time: 5.500136825001391s
+Epoch: 80, loss: 1.8026033242543538, time: 5.39197973300179s
+Valid at epoch 80
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3879	F1-binary-0: 0.7258	F1-macro: 0.5569	G-Mean: 0.6960	AUC: 0.7951
+   GNN TP: 1092	TN: 4561	FN: 230	FP: 3216
+Label1 F1: 0.2854	Accuracy: 0.3580	Recall: 0.5521	AUC: 0.7251	AP: 0.3213
+Epoch: 81, loss: 1.785989761352539, time: 5.453943700998934s
+Epoch: 82, loss: 1.7905792792638142, time: 6.0536622230029025s
+Epoch: 83, loss: 1.8145551284154255, time: 5.383701046001079s
+Epoch: 84, loss: 1.7642085552215576, time: 5.53151422800147s
+Epoch: 85, loss: 1.795652151107788, time: 5.3893341360017075s
+Valid at epoch 85
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4313	F1-binary-0: 0.8145	F1-macro: 0.6229	G-Mean: 0.7243	AUC: 0.7966
+   GNN TP: 965	TN: 5589	FN: 357	FP: 2188
+Label1 F1: 0.3888	Accuracy: 0.5384	Recall: 0.5616	AUC: 0.7259	AP: 0.3225
+Epoch: 86, loss: 1.7848507165908813, time: 5.44615698099733s
+Epoch: 87, loss: 1.786935528119405, time: 5.868817250000575s
+Epoch: 88, loss: 1.7766608794530232, time: 5.454627046001406s
+Epoch: 89, loss: 1.7557059526443481, time: 5.422845083998254s
+Epoch: 90, loss: 1.7827058633168538, time: 5.387683732998994s
+Valid at epoch 90
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.4555	F1-binary-0: 0.8517	F1-macro: 0.6536	G-Mean: 0.7249	AUC: 0.8011
+   GNN TP: 887	TN: 6091	FN: 435	FP: 1686
+Label1 F1: 0.3465	Accuracy: 0.4581	Recall: 0.5350	AUC: 0.7274	AP: 0.3252
+  Saving model ...
+Epoch: 91, loss: 1.7857139905293782, time: 5.4343234750012925s
+Epoch: 92, loss: 1.7665647665659587, time: 5.935630062002019s
+Epoch: 93, loss: 1.765798568725586, time: 5.449732278000738s
+Epoch: 94, loss: 1.7557086944580078, time: 5.4408226739979s
+Epoch: 95, loss: 1.7714447975158691, time: 5.405088380997768s
+Valid at epoch 95
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3914	F1-binary-0: 0.7295	F1-macro: 0.5605	G-Mean: 0.6999	AUC: 0.8023
+   GNN TP: 1096	TN: 4595	FN: 226	FP: 3182
+Label1 F1: 0.3627	Accuracy: 0.4879	Recall: 0.5470	AUC: 0.7291	AP: 0.3272
+  Saving model ...
+Epoch: 96, loss: 1.7852750221888225, time: 5.433221458999469s
+Epoch: 97, loss: 1.7718636989593506, time: 5.945720689000154s
+Epoch: 98, loss: 1.7620816230773926, time: 5.425174042000435s
+Epoch: 99, loss: 1.7551326751708984, time: 5.356294001001515s
+Restore model from epoch 95
+Model path: ./results/unified-final/yelpchi/pcgnn/tr20/seed42/20260909T090955938606Z_yelp_PCGNN_unified_final_yelpchi_tr20_kaggle_t4_seed42_rho0p4_seed42/checkpoints/yelp_PCGNN.pkl
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_classification.py:1565: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+   GNN F1-binary-1: 0.3946	F1-binary-0: 0.7332	F1-macro: 0.5639	G-Mean: 0.7033	AUC: 0.8067
+   GNN TP: 2230	TN: 9401	FN: 454	FP: 6389
+Label1 F1: 0.3541	Accuracy: 0.4983	Recall: 0.4830	AUC: 0.7446	AP: 0.3348
+Structured run artifacts: ./results/unified-final/yelpchi/pcgnn/tr20/seed42/20260909T090955938606Z_yelp_PCGNN_unified_final_yelpchi_tr20_kaggle_t4_seed42_rho0p4_seed42
+Average training epoch time: 5.511979s
+F1-Macro: 0.563874933898207
+AUC: 0.8067060308123857
+G-Mean: 0.7033267526439758

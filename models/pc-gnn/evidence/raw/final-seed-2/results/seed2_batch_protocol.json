@@ -1,0 +1,25 @@
+{
+  "model": "PC-GNN",
+  "dataset": "YelpChi",
+  "batch": "final controlled seed 2",
+  "training_seed": 2,
+  "split_seed": 2,
+  "selected_rho": 0.4,
+  "rho_selection_metric": "validation AUROC",
+  "optimizer": "Adam",
+  "learning_rate": 0.01,
+  "weight_decay": 0.001,
+  "batch_size": 1024,
+  "embedding_dimension": 64,
+  "alpha": 2,
+  "epochs": 100,
+  "validation_interval": 5,
+  "classification_threshold": 0.5,
+  "hardware": "Tesla T4, GPU 0 only",
+  "ratios": [
+    "tr40",
+    "tr30",
+    "tr20",
+    "tr10"
+  ]
+}

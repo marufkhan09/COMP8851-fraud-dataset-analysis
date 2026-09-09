@@ -1,0 +1,53 @@
+/kaggle/working/PC-GNN-COMP8851-Instrumented/src/model_handler.py:258: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_loss = gnn_model.loss(batch_nodes, Variable(torch.cuda.LongTensor(batch_label)))
+**************** MODEL CONFIGURATION ****************
+alpha                    -->   2
+batch_size               -->   1024
+cuda_id                  -->   0
+data_dir                 -->   ./data/
+data_name                -->   yelp
+emb_size                 -->   64
+lr                       -->   0.01
+model                    -->   PCGNN
+multi_relation           -->   GNN
+no_cuda                  -->   False
+num_epochs               -->   2
+optimizer                -->   adam
+results_dir              -->   ./results/smoke-test-kaggle-t4
+rho                      -->   0.5
+run_mode                 -->   smoke_test_kaggle_t4
+save_dir                 -->   ./pytorch_models/
+seed                     -->   72
+split_path               -->   None
+test_ratio               -->   0.67
+thres                    -->   0.5
+train_ratio              -->   0.4
+valid_epochs             -->   1
+weight_decay             -->   0.001
+**************** MODEL CONFIGURATION ****************
+Run on yelp, postive/total num: 6677/45954, train num 18381,valid num 9099, test num 18474, test positive num 2684
+Classification threshold: 0.5
+Feature dimension: 32
+Model: PCGNN, multi-relation aggregator: GNN, emb_size: 64.
+Epoch: 0, loss: 2.0630404551823935, time: 12.86841622199995s
+Valid at epoch 0
+   GNN F1-binary-1: 0.2537	F1-binary-0: 0.0003	F1-macro: 0.1270	G-Mean: 0.0113	AUC: 0.7312
+   GNN TP: 1322	TN: 1	FN: 0	FP: 7776
+Label1 F1: 0.1268	Accuracy: 0.1453	Recall: 0.5000	AUC: 0.5801	AP: 0.1863
+  Saving model ...
+Epoch: 1, loss: 2.0499256451924643, time: 11.861960256999964s
+Valid at epoch 1
+   GNN F1-binary-1: 0.3587	F1-binary-0: 0.7276	F1-macro: 0.5432	G-Mean: 0.6632	AUC: 0.7347
+   GNN TP: 973	TN: 4647	FN: 349	FP: 3130
+Label1 F1: 0.1268	Accuracy: 0.1453	Recall: 0.5000	AUC: 0.6278	AP: 0.2116
+  Saving model ...
+Restore model from epoch 1
+Model path: ./results/smoke-test-kaggle-t4/20260908T093358087932Z_yelp_PCGNN_smoke_test_kaggle_t4_seed72/checkpoints/yelp_PCGNN.pkl
+   GNN F1-binary-1: 0.3765	F1-binary-0: 0.7400	F1-macro: 0.5582	G-Mean: 0.6826	AUC: 0.7505
+   GNN TP: 2047	TN: 9647	FN: 637	FP: 6143
+Label1 F1: 0.1293	Accuracy: 0.1488	Recall: 0.5000	AUC: 0.6389	AP: 0.2266
+Structured run artifacts: ./results/smoke-test-kaggle-t4/20260908T093358087932Z_yelp_PCGNN_smoke_test_kaggle_t4_seed72
+Average training epoch time: 12.365188s
+F1-Macro: 0.5582326212393416
+AUC: 0.7504866287119788
+G-Mean: 0.6826101470983609

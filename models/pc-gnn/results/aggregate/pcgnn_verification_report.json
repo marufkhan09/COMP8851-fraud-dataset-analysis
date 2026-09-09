@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "verified_utc_date": "2026-09-09",
+  "final_runs_expected": 12,
+  "final_runs_found": 12,
+  "epochs_per_run": 100,
+  "total_epoch_rows": 1200,
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "fixed_split_seed": 2,
+  "selected_rho": 0.4,
+  "selection_metric": "validation AUROC",
+  "test_used_for_tuning": false,
+  "fixed_validation_ids": true,
+  "fixed_test_ids": true,
+  "nested_training_sets": true,
+  "hardware": "NVIDIA Tesla T4, GPU 0 only",
+  "source_commit": "9d7d7fae491081178b6e12e193fb89cfc330f2be",
+  "errors": [],
+  "archives": [
+    {
+      "archive": "pcgnn_yelpchi_final_seed2_batch.zip",
+      "training_seed": 2,
+      "bytes": 19549067,
+      "entries": 48,
+      "sha256": "ab0a9ba2da13371d51185d1da0e125ec810b1a2dbd3cb23ff8dc914f91bd9146",
+      "crc": "PASS"
+    },
+    {
+      "archive": "pcgnn_yelpchi_final_seed42_batch.zip",
+      "training_seed": 42,
+      "bytes": 19548606,
+      "entries": 48,
+      "sha256": "cffa141332b4bcad477ca4c7b8dad3e7961c98b639e012e81957a1bda77f3746",
+      "crc": "PASS"
+    },
+    {
+      "archive": "pcgnn_yelpchi_final_seed72_batch.zip",
+      "training_seed": 72,
+      "bytes": 19547137,
+      "entries": 48,
+      "sha256": "945c7ee865c547da313accb6de6f75dfe097f7dd6ef6beca1d769a5fc6c7f7f9",
+      "crc": "PASS"
+    },
+    {
+      "archive": "pcgnn_tr40_rho_tuning_complete.zip",
+      "sha256": "f4fe6106449abe4e59ee03039b7ab57398625b5ed219f46c762253e92886e5eb",
+      "bytes": 19323595,
+      "entries": 56,
+      "crc": "PASS"
+    }
+  ]
+}
