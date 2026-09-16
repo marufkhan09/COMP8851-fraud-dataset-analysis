@@ -1,0 +1,11 @@
+Using backend: pytorch
+{'dataset': 'amazon', 'train_size': 0.4, 'val_size': 0.1, 'seed': 717, 'norm_feat': False, 'grp_norm': False, 'force_reload': False, 'add_self_loop': False, 'fanouts': [-1], 'base_dir': '~/.dgl', 'save_dir': 'seq_data'}
+Done loading data from cached files.
+[Global] Dataset <amazon> Overview
+	Entire (postive/total)    821 / 11944 
+	Train  (postive/total)    344 / 3455  
+	Valid  (postive/total)     65 / 863   
+	Test   (postive/total)    412 / 4321  
+
+Saving infos to seq_data/amazon/amazon_infos_0.4_0.1_717.npz
+Elapsed time=0.10(s)
