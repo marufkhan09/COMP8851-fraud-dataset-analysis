@@ -1,0 +1,78 @@
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+========================================
+数据名称 yelpchi
+总样本数: 45954
+欺诈样本数: 6677
+非欺诈样本数: 39277
+欺诈样本占比: 14.53%
+特征个数: 32
+
+net_rsr边关系下的统计信息:
+边的个数: 6805486
+平均出度: 148.09
+net_rtr边关系下的统计信息:
+边的个数: 1147232
+平均出度: 24.96
+net_rur边关系下的统计信息:
+边的个数: 98630
+平均出度: 2.15
+
+数据划分情况:
+训练集: 18381 验证集: 9099 测试集: 18474
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: yelpchi
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 32
+p: 0.3
+k: 32
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0001
+max_epochs: 2
+patience: 2
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (45954, 742)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 49620
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 49.6 K
+------------------------------
+49.6 K    Trainable params
+0         Non-trainable params
+49.6 K    Total params
+0.198     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.08571615093354223, "g0": 0.08571615093354223, "g1": 0.9142838490664578, "pmean": 0.09026366472244263, "val_aps": 0.1360492047885472, "val_auc": 0.4815287504544705, "val_loss": 0.48146387934684753}
+Epoch 0: {'val_loss': '0.48146', 'val_auc': '0.48153', 'val_aps': '0.13605', 'g0': '0.08572', 'g1': '0.91428', 'flip_r': '0.08572', 'pmean': '0.09026', 'trn_loss0': '0.56048'}
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.0846281063672368, "g0": 0.03599251425338382, "g1": 0.9640074857466162, "pmean": 0.09351567924022675, "val_aps": 0.1287444693243098, "val_auc": 0.4547014189207985, "val_loss": 0.4752296805381775}
+Epoch 1: {'val_loss': '0.47523', 'val_auc': '0.45470', 'val_aps': '0.12874', 'g0': '0.03599', 'g1': '0.96401', 'flip_r': '0.08463', 'pmean': '0.09352', 'trn_loss0': '0.47639'}
+`Trainer.fit` stopped: `max_epochs=2` reached.
+training time elapsed 12.84s
+Evaluating best checkpoint on validation labels only: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/tuning_adapter_gate/checkpoints/yelpchi-seed2-best-epoch=0000-val_aps=0.136049.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 19.85it/s]100%|██████████| 2/2 [00:00<00:00, 19.77it/s]
+Validation-only tuning metrics: {"final_val/aps": 0.14429063548283397, "final_val/auc": 0.4870024823964999, "final_val/fraud_f1": 0.1635176915149433, "final_val/mf1": 0.5021160119771355, "final_val/threshold": 0.30848848819732666}
+structured_tuning_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/tuning_adapter_gate/result.json
+==============================
+==============================

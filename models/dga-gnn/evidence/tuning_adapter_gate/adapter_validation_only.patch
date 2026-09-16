@@ -1,0 +1,167 @@
+--- /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py	2026-09-16 05:22:11.000000000 +0000
++++ /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_tuning.py	2026-09-16 07:01:10.541636925 +0000
+@@ -673,53 +673,125 @@
+     training_seconds = float(timer.time_elapsed("train"))
+     print(f'training time elapsed {training_seconds:.2f}s')
+ 
+-    # 读取最优checkpoint 并且进行推理
+-    print("Evaluating model in", trainer.checkpoint_callback.best_model_path)
+-    best_checkpoint = torch.load(trainer.checkpoint_callback.best_model_path, map_location='cpu')
+-    model.load_state_dict(best_checkpoint['state_dict'])
++    # Validation-only post-training evaluation for hyperparameter tuning.
++    # Test labels and test metrics are deliberately not accessed here.
++    print(
++        "Evaluating best checkpoint on validation labels only:",
++        trainer.checkpoint_callback.best_model_path,
++    )
++    best_checkpoint = torch.load(
++        trainer.checkpoint_callback.best_model_path,
++        map_location="cpu",
++    )
++    model.load_state_dict(best_checkpoint["state_dict"])
+     model = model.to(device)
+-    if device.type == 'cuda':
++
++    if device.type == "cuda":
+         torch.cuda.synchronize(device)
++
+     inference_start = time.perf_counter()
++
+     with torch.no_grad():
+         model.eval()
+         y_hat = model.inference(graph, device, 5120, 0, "cpu")
+-    if device.type == 'cuda':
++
++    if device.type == "cuda":
+         torch.cuda.synchronize(device)
++
+     inference_seconds = time.perf_counter() - inference_start
+-    prob = y_hat.softmax(-1).cpu().numpy()[:, 1]
+-    dic = cal_metrics(prob, y, trn_idx, val_idx, tst_idx, verbose=True)
++    probability = y_hat.softmax(-1).cpu().numpy()[:, 1]
+     validation_index = val_idx.detach().cpu().numpy()
+-    test_index = tst_idx.detach().cpu().numpy()
++
++    if isinstance(y, torch.Tensor):
++        label_array = y.detach().cpu().numpy()
++    else:
++        label_array = np.asarray(y)
++
++    validation_labels = label_array[validation_index]
++    validation_probability = probability[validation_index]
++
++    final_validation_ap = average_precision_score(
++        validation_labels,
++        validation_probability,
++    )
++    final_validation_auc = roc_auc_score(
++        validation_labels,
++        validation_probability,
++    )
++
+     _, validation_threshold, _, _ = get_max_macrof1_gmean(
+-        y[validation_index], prob[validation_index]
++        validation_labels,
++        validation_probability,
+     )
+-    test_prediction = np.where(prob[test_index] > validation_threshold, 1, 0)
+-    dic['final_tst/fraud_f1'] = float(f1_score(y[test_index], test_prediction, average='binary'))
+-    print({'final_tst/fraud_f1': f"{dic['final_tst/fraud_f1']:.5f}"})
+-    wandb.log(dic)
++
++    validation_prediction = np.where(
++        validation_probability > validation_threshold,
++        1,
++        0,
++    )
++
++    final_validation_macro_f1 = f1_score(
++        validation_labels,
++        validation_prediction,
++        average="macro",
++    )
++    final_validation_fraud_f1 = f1_score(
++        validation_labels,
++        validation_prediction,
++        average="binary",
++    )
++
++    validation_metrics = {
++        "final_val/aps": float(final_validation_ap),
++        "final_val/auc": float(final_validation_auc),
++        "final_val/mf1": float(final_validation_macro_f1),
++        "final_val/fraud_f1": float(final_validation_fraud_f1),
++        "final_val/threshold": float(validation_threshold),
++    }
++
++    print(
++        "Validation-only tuning metrics:",
++        json.dumps(validation_metrics, sort_keys=True),
++    )
++    wandb.log(validation_metrics)
+     wandb.finish()
+ 
+     result_path = os.environ.get("DGA_RESULT_JSON")
++
+     if result_path:
+         completed_epochs = len(model.epoch_history)
++
+         result = {
+             "model": "DGA-GNN",
+             "dataset": str(args.dname),
+             "seed": int(args.seed),
++            "run_type": "validation_only_hyperparameter_tuning",
+             "status": "PASS",
+             "protocol_safe": True,
++            "tuning_mode": True,
++            "selection_partition": "validation",
++            "selection_metric": "val_aps",
+             "test_labels_used_for_training_or_selection": False,
++            "test_labels_evaluated_after_training": False,
++            "test_metrics_generated": False,
+             "checkpoint_monitor": "val_aps",
+-            "best_checkpoint": str(trainer.checkpoint_callback.best_model_path),
+-            "best_epoch": int(best_checkpoint['epoch']),
+-            "best_validation_ap": float(trainer.checkpoint_callback.best_model_score.cpu()),
++            "best_checkpoint": str(
++                trainer.checkpoint_callback.best_model_path
++            ),
++            "best_epoch": int(best_checkpoint["epoch"]),
++            "best_validation_ap": float(
++                trainer.checkpoint_callback.best_model_score.cpu()
++            ),
+             "epochs_completed": completed_epochs,
+             "training_seconds": training_seconds,
+-            "mean_seconds_per_epoch": training_seconds / completed_epochs if completed_epochs else None,
++            "mean_seconds_per_epoch": (
++                training_seconds / completed_epochs
++                if completed_epochs
++                else None
++            ),
+             "inference_seconds": inference_seconds,
+             "trainable_parameters": int(parameter_count),
+-            "efficiency_reportable": os.environ.get("DGA_EFFICIENCY_REPORTABLE", "0") == "1",
++            "efficiency_reportable": False,
+             "split_counts": {
+                 "train": int(len(trn_idx)),
+                 "validation": int(len(val_idx)),
+@@ -727,12 +799,16 @@
+             },
+             "config": OmegaConf.to_container(args, resolve=True),
+             "epoch_history": model.epoch_history,
+-            "final_metrics": {key: float(value) for key, value in dic.items()},
++            "final_validation_metrics": validation_metrics,
+         }
++
+         result_file = Path(result_path)
+         result_file.parent.mkdir(parents=True, exist_ok=True)
+-        result_file.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+-        print("structured_result", result_file)
++        result_file.write_text(
++            json.dumps(result, indent=2, sort_keys=True) + "\n"
++        )
++        print("structured_tuning_result", result_file)
++
+     print("===" * 10)
+     print("===" * 10)
+ 

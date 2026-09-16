@@ -1,0 +1,78 @@
+{
+  "best_checkpoint": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/tuning_adapter_gate/checkpoints/yelpchi-seed2-best-epoch=0000-val_aps=0.136049.ckpt",
+  "best_epoch": 0,
+  "best_validation_ap": 0.1360492047885472,
+  "checkpoint_monitor": "val_aps",
+  "config": {
+    "bin_encoding": true,
+    "bs": 256,
+    "dname": "yelpchi",
+    "gpuid": 0,
+    "k": 32,
+    "lr": 0.001,
+    "max_epochs": 2,
+    "model": "dga_bin",
+    "n_head": 2,
+    "n_hidden": 32,
+    "nowandb": true,
+    "p": 0.3,
+    "patience": 2,
+    "project": "dga_reproduction",
+    "seed": 2,
+    "usegpu": true,
+    "weight_decay": 0.0001,
+    "z": 0.025
+  },
+  "dataset": "yelpchi",
+  "efficiency_reportable": false,
+  "epoch_history": [
+    {
+      "epoch": 0,
+      "flip_r": 0.08571615093354223,
+      "g0": 0.08571615093354223,
+      "g1": 0.9142838490664578,
+      "pmean": 0.09026366472244263,
+      "val_aps": 0.1360492047885472,
+      "val_auc": 0.4815287504544705,
+      "val_loss": 0.48146387934684753
+    },
+    {
+      "epoch": 1,
+      "flip_r": 0.0846281063672368,
+      "g0": 0.03599251425338382,
+      "g1": 0.9640074857466162,
+      "pmean": 0.09351567924022675,
+      "val_aps": 0.1287444693243098,
+      "val_auc": 0.4547014189207985,
+      "val_loss": 0.4752296805381775
+    }
+  ],
+  "epochs_completed": 2,
+  "final_validation_metrics": {
+    "final_val/aps": 0.14429063548283397,
+    "final_val/auc": 0.4870024823964999,
+    "final_val/fraud_f1": 0.1635176915149433,
+    "final_val/mf1": 0.5021160119771355,
+    "final_val/threshold": 0.30848848819732666
+  },
+  "inference_seconds": 0.10387738607823849,
+  "mean_seconds_per_epoch": 6.422416984976735,
+  "model": "DGA-GNN",
+  "protocol_safe": true,
+  "run_type": "validation_only_hyperparameter_tuning",
+  "seed": 2,
+  "selection_metric": "val_aps",
+  "selection_partition": "validation",
+  "split_counts": {
+    "test": 18474,
+    "train": 18381,
+    "validation": 9099
+  },
+  "status": "PASS",
+  "test_labels_evaluated_after_training": false,
+  "test_labels_used_for_training_or_selection": false,
+  "test_metrics_generated": false,
+  "trainable_parameters": 49620,
+  "training_seconds": 12.84483396995347,
+  "tuning_mode": true
+}
