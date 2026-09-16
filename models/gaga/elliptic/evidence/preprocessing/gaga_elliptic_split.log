@@ -1,0 +1,10 @@
+Using backend: pytorch
+{'dataset': 'elliptic', 'train_size': 0.4, 'val_size': 0.198, 'seed': 717, 'norm_feat': False, 'grp_norm': False, 'force_reload': False, 'add_self_loop': False, 'fanouts': [-1], 'base_dir': '~/.dgl', 'save_dir': 'seq_data'}
+[Global] Dataset <elliptic> Overview
+	Entire (postive/total)   4545 / 46564 
+	Train  (postive/total)   2030 / 21353 
+	Valid  (postive/total)   1432 / 8541  
+	Test   (postive/total)   1083 / 16670 
+
+Saving infos to seq_data/elliptic/elliptic_infos_0.4_0.198_717.npz
+Elapsed time=0.03(s)

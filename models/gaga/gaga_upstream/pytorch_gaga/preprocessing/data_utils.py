@@ -228,10 +228,15 @@ def prepare_data(args, add_self_loop=False):
 
 def load_graph(dataset_name='amazon', raw_dir='~/.dgl/', train_size=0.4, val_size=0.1,
                seed=717, norm=True, force_reload=False, verbose=True) -> dict:
-    if dataset_name == 'tfinance':
+    if dataset_name in ('tfinance', 'elliptic', 'fdcompcn'):
         import dgl, torch
 
-        dgl_path = '/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/tfinance.dgldata'
+        _dgldata_paths = {
+            'tfinance': '/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/tfinance.dgldata',
+            'elliptic': '/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/elliptic_of_amnet.dgldata',
+            'fdcompcn': '/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/fdcompcn.dgldata',
+        }
+        dgl_path = _dgldata_paths[dataset_name]
 
         graphs, _ = dgl.load_graphs(dgl_path)
         g = graphs[0]
@@ -253,9 +258,9 @@ def load_graph(dataset_name='amazon', raw_dir='~/.dgl/', train_size=0.4, val_siz
         n_nodes = g.num_nodes()
 
         for m_name, alt_names in [
-            ('train_mask', ['train_mask', 'train_masks']),
-            ('val_mask', ['val_mask', 'val_masks']),
-            ('test_mask', ['test_mask', 'test_masks'])
+            ('train_mask', ['train_mask', 'train_masks', 'trn_msk']),
+            ('val_mask', ['val_mask', 'val_masks', 'val_msk']),
+            ('test_mask', ['test_mask', 'test_masks', 'tst_msk'])
         ]:
             if m_name not in g.ndata:
                 found = False
