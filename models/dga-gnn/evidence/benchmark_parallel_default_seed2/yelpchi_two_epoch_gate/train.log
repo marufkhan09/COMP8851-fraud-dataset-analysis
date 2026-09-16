@@ -1,0 +1,81 @@
+/workspace/COMP8851-fraud-dataset-analysis
+========================================
+数据名称 yelpchi
+总样本数: 45954
+欺诈样本数: 6677
+非欺诈样本数: 39277
+欺诈样本占比: 14.53%
+特征个数: 32
+
+net_rsr边关系下的统计信息:
+边的个数: 6805486
+平均出度: 148.09
+net_rtr边关系下的统计信息:
+边的个数: 1147232
+平均出度: 24.96
+net_rur边关系下的统计信息:
+边的个数: 98630
+平均出度: 2.15
+
+数据划分情况:
+训练集: 18381 验证集: 9099 测试集: 18474
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: yelpchi
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 32
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 2
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (45954, 742)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 148388
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 148 K 
+------------------------------
+148 K     Trainable params
+0         Non-trainable params
+148 K     Total params
+0.594     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.007616311964138051, "g0": 0.005353179266222745, "g1": 0.9946468207337773, "pmean": 0.2803427278995514, "val_aps": 0.13113895607704446, "val_auc": 0.44676780731887755, "val_loss": 0.5441667437553406}
+Epoch 0: {'val_loss': '0.54417', 'val_auc': '0.44677', 'val_aps': '0.13114', 'g0': '0.00535', 'g1': '0.99465', 'flip_r': '0.00762', 'pmean': '0.28034', 'trn_loss0': '1.23657'}
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.01625538582060321, "g0": 0.015559037298167733, "g1": 0.9844409627018322, "pmean": 0.163748100399971, "val_aps": 0.13245841353971677, "val_auc": 0.4516800772361654, "val_loss": 0.495230108499527}
+Epoch 1: {'val_loss': '0.49523', 'val_auc': '0.45168', 'val_aps': '0.13246', 'g0': '0.01556', 'g1': '0.98444', 'flip_r': '0.01626', 'pmean': '0.16375', 'trn_loss0': '0.51945'}
+`Trainer.fit` stopped: `max_epochs=2` reached.
+training time elapsed 13.20s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/checkpoints/yelpchi-seed2-best-epoch=0001-val_aps=0.132458.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 18.07it/s]100%|██████████| 2/2 [00:00<00:00, 17.97it/s]
+{'final_trn/auc': '0.42234', 'final_trn/aps': '0.11772', 'final_trn/mf1': '0.46341', 'final_trn/th1': '0.26971', 'final_trn/gme': '0.44773', 'final_trn/th2': '0.11310', 'final_trn/rec': '0.07076', 'final_trn/pre': '0.07872'}
+{'final_val/auc': '0.41473', 'final_val/aps': '0.11624', 'final_val/mf1': '0.47080', 'final_val/th1': '0.30087', 'final_val/gme': '0.43979', 'final_val/th2': '0.09736', 'final_val/rec': '0.06354', 'final_val/pre': '0.08741'}
+{'final_tst/auc': '0.43288', 'final_tst/aps': '0.12051', 'final_tst/mf1': '0.46946', 'final_tst/th1': '0.30087', 'final_tst/gme': '0.22850', 'final_tst/th2': '0.09736', 'final_tst/rec': '0.05849', 'final_tst/pre': '0.08473'}
+{'final_tst/fraud_f1': '0.06921'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/result.json
+==============================
+==============================
