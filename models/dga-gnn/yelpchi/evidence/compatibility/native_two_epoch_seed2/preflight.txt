@@ -1,0 +1,17 @@
+Wed Sep 16 03:55:05 UTC 2026
+34efa49791a9
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+cuda_available: True
+dgl_gpu_device: cuda:0
+CUDA PREFLIGHT: PASS
+NVIDIA RTX A6000, GPU-13ce6c2d-d164-3ea0-42b3-b19d732363f9, 49140 MiB, 580.173.02
+Upstream commit:
+0907392f6060e18230339ca30eaca0c917414820
+Input hashes:
+d86e610867cde2fd16c181497fbce10c80758b8cd054147006a3fa6544902b1a  train.py
+f21b19d702001b6a7991c28702929edb1c45aae48782e5fff3027da2ea61b89c  configs/yelpchi.yaml
+4d8b4a1097fd6daaefc17a87a33877b47ee1163629a821c2edf539895c77569b  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/yelpchi.dgldata
+65040a0444e9aa650b0ce49dd7dd00ac518bb12adb274c00320f5677e105d3b4  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/yelpchi_test_idx.npy
+f27ccca10c3b44732e7713eaf67cce3aa7d0f5ca23397f7d82000cb5e8f0f8b2  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/yelpchi_train_idx.npy
+3a53d5da914aadb0ac1d4e70947055432125fa60e974270aae781ff981191bfd  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/yelpchi_validation_idx.npy

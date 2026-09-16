@@ -1,0 +1,83 @@
+{
+  "model": "DGA-GNN",
+  "dataset": "YelpChi",
+  "run_type": "native compatibility smoke",
+  "status": "PASS",
+  "benchmark_reportable": false,
+  "non_reportable_reasons": [
+    "Only two epochs were run.",
+    "Native validation loader evaluates every graph node.",
+    "Checkpoint val_loss includes train, validation and test nodes.",
+    "Native code observes test ROC-AUC and AP after every epoch."
+  ],
+  "seed": 2,
+  "epochs_requested": 2,
+  "epochs_completed": 2,
+  "training_time_seconds": 13.2,
+  "wall_time_seconds": 27,
+  "peak_gpu_memory_mib": 1476,
+  "trainable_parameters_reported": "148 K",
+  "checkpoint": "models/dga-gnn/yelpchi/evidence/compatibility/native_two_epoch_seed2/checkpoints/yelpchi_native_seed2_epoch2_best.ckpt",
+  "epoch_metrics": [
+    {
+      "epoch": 0,
+      "metrics": {
+        "val_loss": 0.54015,
+        "g0": 0.00264,
+        "g1": 0.4569,
+        "flip_r": 0.00825,
+        "pmean": 0.27416,
+        "trn_auc": 0.4569,
+        "val_auc": 0.44119,
+        "tst_auc": 0.45637,
+        "trn_aps": 0.13765,
+        "val_aps": 0.12984,
+        "tst_aps": 0.13421,
+        "trn_loss0": 1.23727
+      }
+    },
+    {
+      "epoch": 1,
+      "metrics": {
+        "val_loss": 0.50699,
+        "g0": 0.00784,
+        "g1": 0.4517,
+        "flip_r": 0.01737,
+        "pmean": 0.16298,
+        "trn_auc": 0.4448,
+        "val_auc": 0.43687,
+        "tst_auc": 0.44718,
+        "trn_aps": 0.13318,
+        "val_aps": 0.12916,
+        "tst_aps": 0.13257,
+        "trn_loss0": 0.52152
+      }
+    }
+  ],
+  "final_metrics": {
+    "final_trn/auc": 0.41132,
+    "final_trn/aps": 0.11606,
+    "final_trn/mf1": 0.46379,
+    "final_trn/th1": 0.3127,
+    "final_trn/gme": 0.43943,
+    "final_trn/th2": 0.11379,
+    "final_trn/rec": 0.05466,
+    "final_trn/pre": 0.07381,
+    "final_val/auc": 0.40118,
+    "final_val/aps": 0.11469,
+    "final_val/mf1": 0.47027,
+    "final_val/th1": 0.37931,
+    "final_val/gme": 0.42323,
+    "final_val/th2": 0.09749,
+    "final_val/rec": 0.04085,
+    "final_val/pre": 0.08257,
+    "final_tst/auc": 0.42042,
+    "final_tst/aps": 0.11853,
+    "final_tst/mf1": 0.467,
+    "final_tst/th1": 0.37931,
+    "final_tst/gme": 0.17652,
+    "final_tst/th2": 0.09749,
+    "final_tst/rec": 0.03353,
+    "final_tst/pre": 0.07457
+  }
+}
