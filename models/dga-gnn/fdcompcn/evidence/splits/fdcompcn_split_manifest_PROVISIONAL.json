@@ -1,0 +1,66 @@
+{
+  "dataset": "FDCompCN",
+  "status": "PROVISIONAL \u2014 not the frozen COMP8851 split registry",
+  "reason": "No frozen COMP8851 split registry exists yet for FDCompCN on this instance as of 2026-09-16. Generated locally following the same convention as YelpChi/Amazon/T-Finance splits (stratified train_test_split, seed=2, test_size=0.67 of remainder) so DGA-GNN work is not blocked. MUST be replaced with the official frozen split once Pathik's registry publishes it.",
+  "source_file": "comp.dgl",
+  "source_sha256": "8cf86d2f733a9283dd706a5919cb3637270f21b761158cc7f31950b616b302ce",
+  "splitgnn_commit": "32fbdb836781d5c02523844a7079425f89be8831",
+  "num_nodes": 5317,
+  "num_fraud": 559,
+  "num_normal": 4758,
+  "seed": 2,
+  "splits": {
+    "TR40": {
+      "train_count": 2126,
+      "valid_count": 1053,
+      "test_count": 2138,
+      "train_pct": 39.985,
+      "valid_pct": 19.8044,
+      "test_pct": 40.2106,
+      "train_fraud": 224,
+      "valid_fraud": 111,
+      "test_fraud": 224,
+      "file": "../../splits/fdcompcn_tr40_split_seed2.npz",
+      "sha256": "c102c5b13222f7ece62e94cc26ef4c0e04e02b57ef91a08933c5dedaef78f3cb"
+    },
+    "TR30": {
+      "train_count": 1595,
+      "valid_count": 1228,
+      "test_count": 2494,
+      "train_pct": 29.9981,
+      "valid_pct": 23.0957,
+      "test_pct": 46.9062,
+      "train_fraud": 168,
+      "valid_fraud": 129,
+      "test_fraud": 262,
+      "file": "../../splits/fdcompcn_tr30_split_seed2.npz",
+      "sha256": "a2a75f525c5f0373e8832717ec7085b7d7f863668f986057cfc9b2e2795d29a7"
+    },
+    "TR20": {
+      "train_count": 1063,
+      "valid_count": 1403,
+      "test_count": 2851,
+      "train_pct": 19.9925,
+      "valid_pct": 26.3871,
+      "test_pct": 53.6205,
+      "train_fraud": 112,
+      "valid_fraud": 147,
+      "test_fraud": 300,
+      "file": "../../splits/fdcompcn_tr20_split_seed2.npz",
+      "sha256": "96caa08d506b2421c4b6c594c8744be6f5bc15381d2af2712a070cc7fb076b14"
+    },
+    "TR10": {
+      "train_count": 531,
+      "valid_count": 1579,
+      "test_count": 3207,
+      "train_pct": 9.9868,
+      "valid_pct": 29.6972,
+      "test_pct": 60.316,
+      "train_fraud": 56,
+      "valid_fraud": 166,
+      "test_fraud": 337,
+      "file": "../../splits/fdcompcn_tr10_split_seed2.npz",
+      "sha256": "01cf07e834805dd1e76d0e53850fb65797b0e74b66499e2c8d5994d15ee746b1"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+dname: fdcompcn
+project: dga_reproduction
+model: dga
+
+# Model hyperparameters — k=4 matches Amazon/Elliptic/T-Finance (all <40K nodes); k=32 is only used for YelpChi/T-Social (>45K nodes). FDCompCN (5,317 nodes) is smaller than all of these, so k=4 is the appropriate tier. Originally set k=32, saw severe overfitting (trn_auc 0.989 vs tst_auc 0.690) — see fdcompcn_train_k32_overfit.log.
+bin_encoding: True
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 4
+z: 0.025
+seed: 2
+
+# Training hyperparameters — matches team protocol seed (2), same as tfinance/yelpchi benchmark runs
+bs: 256
+lr: 1e-3
+weight_decay: 5e-4
+max_epochs: 10000
+patience: 25
+usegpu: True
+gpuid: 0
+nowandb: True
