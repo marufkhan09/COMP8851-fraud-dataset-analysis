@@ -1,0 +1,1352 @@
+=== DGA-GNN PROTOCOL-SAFE PARALLEL DEFAULT RUNS ===
+Wed Sep 16 04:44:01 UTC 2026
+34efa49791a9
+2026-09-16T04:44:01Z | RUNNING: activating dga-gnn environment
+2026-09-16T04:44:02Z | RUNNING: repository, source, graph and capacity preflight
+Local head:  9e78521012a843859cebbec2ca2909c029981882
+Remote head: 9e78521012a843859cebbec2ca2909c029981882
+models/dga-gnn/dga_gnn_upstream/code/train.py: OK
+Compatibility peak sum MiB: 10342
+Required with 50% headroom MiB: 15513
+GPU total MiB: 49140
+Available workspace GiB: 143
+Adapter syntax check: PASS
+0d5dfb26d2cef7c6e523577a02a0f0a50a04d0516a46ebaf79ef93aef3edb787  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py
+240e9996aa49e8034f5f6ca333c5d313e1b0bdc55e9862471ebe6b5db0ae3f78  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/PROTOCOL.md
+4cecd787cb7ac4a03571f70b49128efcc1ab4d3e07a824689c1a655e86874415  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/parallel_default_driver.executed.sh
+Validation section contains no test-index or test-metric reference.
+Validation-mask, validation-AP and final-audit controls are present.
+STATIC LEAKAGE AUDIT: PASS
+2026-09-16T04:44:02Z | RUNNING: two-epoch protocol-adapter gate on YelpChi
+/workspace/COMP8851-fraud-dataset-analysis
+========================================
+数据名称 yelpchi
+总样本数: 45954
+欺诈样本数: 6677
+非欺诈样本数: 39277
+欺诈样本占比: 14.53%
+特征个数: 32
+
+net_rsr边关系下的统计信息:
+边的个数: 6805486
+平均出度: 148.09
+net_rtr边关系下的统计信息:
+边的个数: 1147232
+平均出度: 24.96
+net_rur边关系下的统计信息:
+边的个数: 98630
+平均出度: 2.15
+
+数据划分情况:
+训练集: 18381 验证集: 9099 测试集: 18474
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: yelpchi
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 32
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 2
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (45954, 742)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 148388
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 148 K 
+------------------------------
+148 K     Trainable params
+0         Non-trainable params
+148 K     Total params
+0.594     Total estimated model params size (MB)
+Error executing job with overrides: ['seed=2', 'max_epochs=2', 'patience=2', 'nowandb=True', 'usegpu=True', 'gpuid=0']
+Traceback (most recent call last):
+  File "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py", line 739, in <module>
+    run()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/main.py", line 99, in decorated_main
+    config_name=config_name,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 401, in _run_hydra
+    overrides=overrides,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 458, in _run_app
+    lambda: hydra.run(
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 461, in <lambda>
+    overrides=overrides,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py", line 670, in run
+    trainer.fit(model, datamodule.train_dataloader(), datamodule.val_dataloader())
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 609, in fit
+    self, self._fit_impl, model, train_dataloaders, val_dataloaders, datamodule, ckpt_path
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/call.py", line 38, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 650, in _fit_impl
+    self._run(model, ckpt_path=self.ckpt_path)
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 1112, in _run
+    results = self._run_stage()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 1191, in _run_stage
+    self._run_train()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 1204, in _run_train
+    self._run_sanity_check()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 1276, in _run_sanity_check
+    val_loop.run()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/loops/loop.py", line 206, in run
+    output = self.on_run_end()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 180, in on_run_end
+    self._evaluation_epoch_end(self._outputs)
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 288, in _evaluation_epoch_end
+    self.trainer._call_lightning_module_hook(hook_name, output_or_outputs)
+  File "/venv/dga-gnn/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 1356, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py", line 479, in validation_epoch_end
+    raise RuntimeError("All-node feedback loader did not return every node exactly once")
+RuntimeError: All-node feedback loader did not return every node exactly once
+2026-09-16T04:44:15Z | FAILED at stage adapter_gate (exit 1)
+=== DGA-GNN PROTOCOL-SAFE PARALLEL DEFAULT RUNS ===
+Wed Sep 16 05:24:28 UTC 2026
+34efa49791a9
+2026-09-16T05:24:28Z | RUNNING: activating dga-gnn environment
+2026-09-16T05:24:30Z | RUNNING: repository, source, graph and capacity preflight
+Local head:  9e78521012a843859cebbec2ca2909c029981882
+Remote head: 9e78521012a843859cebbec2ca2909c029981882
+models/dga-gnn/dga_gnn_upstream/code/train.py: OK
+Compatibility peak sum MiB: 10342
+Required with 50% headroom MiB: 15513
+GPU total MiB: 49140
+Available workspace GiB: 143
+Adapter syntax check: PASS
+e94d53eda691225de9b529f0c0637fff55896d9577de327106208d12af7740eb  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/train_benchmark.py
+240e9996aa49e8034f5f6ca333c5d313e1b0bdc55e9862471ebe6b5db0ae3f78  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/PROTOCOL.md
+4cecd787cb7ac4a03571f70b49128efcc1ab4d3e07a824689c1a655e86874415  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/benchmark_adapter/parallel_default_driver.executed.sh
+Validation section contains no test-index or test-metric reference.
+Validation-mask, validation-AP and final-audit controls are present.
+STATIC LEAKAGE AUDIT: PASS
+2026-09-16T05:24:30Z | RUNNING: two-epoch protocol-adapter gate on YelpChi
+/workspace/COMP8851-fraud-dataset-analysis
+========================================
+数据名称 yelpchi
+总样本数: 45954
+欺诈样本数: 6677
+非欺诈样本数: 39277
+欺诈样本占比: 14.53%
+特征个数: 32
+
+net_rsr边关系下的统计信息:
+边的个数: 6805486
+平均出度: 148.09
+net_rtr边关系下的统计信息:
+边的个数: 1147232
+平均出度: 24.96
+net_rur边关系下的统计信息:
+边的个数: 98630
+平均出度: 2.15
+
+数据划分情况:
+训练集: 18381 验证集: 9099 测试集: 18474
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: yelpchi
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 32
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 2
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (45954, 742)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 148388
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 148 K 
+------------------------------
+148 K     Trainable params
+0         Non-trainable params
+148 K     Total params
+0.594     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.007616311964138051, "g0": 0.005353179266222745, "g1": 0.9946468207337773, "pmean": 0.2803427278995514, "val_aps": 0.13113895607704446, "val_auc": 0.44676780731887755, "val_loss": 0.5441667437553406}
+Epoch 0: {'val_loss': '0.54417', 'val_auc': '0.44677', 'val_aps': '0.13114', 'g0': '0.00535', 'g1': '0.99465', 'flip_r': '0.00762', 'pmean': '0.28034', 'trn_loss0': '1.23657'}
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.01625538582060321, "g0": 0.015559037298167733, "g1": 0.9844409627018322, "pmean": 0.163748100399971, "val_aps": 0.13245841353971677, "val_auc": 0.4516800772361654, "val_loss": 0.495230108499527}
+Epoch 1: {'val_loss': '0.49523', 'val_auc': '0.45168', 'val_aps': '0.13246', 'g0': '0.01556', 'g1': '0.98444', 'flip_r': '0.01626', 'pmean': '0.16375', 'trn_loss0': '0.51945'}
+`Trainer.fit` stopped: `max_epochs=2` reached.
+training time elapsed 13.20s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/checkpoints/yelpchi-seed2-best-epoch=0001-val_aps=0.132458.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 18.07it/s]100%|██████████| 2/2 [00:00<00:00, 17.97it/s]
+{'final_trn/auc': '0.42234', 'final_trn/aps': '0.11772', 'final_trn/mf1': '0.46341', 'final_trn/th1': '0.26971', 'final_trn/gme': '0.44773', 'final_trn/th2': '0.11310', 'final_trn/rec': '0.07076', 'final_trn/pre': '0.07872'}
+{'final_val/auc': '0.41473', 'final_val/aps': '0.11624', 'final_val/mf1': '0.47080', 'final_val/th1': '0.30087', 'final_val/gme': '0.43979', 'final_val/th2': '0.09736', 'final_val/rec': '0.06354', 'final_val/pre': '0.08741'}
+{'final_tst/auc': '0.43288', 'final_tst/aps': '0.12051', 'final_tst/mf1': '0.46946', 'final_tst/th1': '0.30087', 'final_tst/gme': '0.22850', 'final_tst/th2': '0.09736', 'final_tst/rec': '0.05849', 'final_tst/pre': '0.08473'}
+{'final_tst/fraud_f1': '0.06921'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/result.json
+==============================
+==============================
+Two validation epochs contain no test metric.
+Test metrics appear only after best-checkpoint loading.
+PROTOCOL ADAPTER GATE: PASS
+2026-09-16T05:24:57Z | RUNNING: four parallel protocol-safe default seed-2 accuracy runs
+Started tfinance with driver PID 8000
+/workspace/COMP8851-fraud-dataset-analysis
+Started yelpchi with driver PID 8077
+========================================
+数据名称 tfinance
+总样本数: 39357
+欺诈样本数: 1804
+非欺诈样本数: 37553
+欺诈样本占比: 4.58%
+特征个数: 10
+
+_E边关系下的统计信息:
+边的个数: 42445086
+平均出度: 1078.46
+
+数据划分情况:
+训练集: 15742 验证集: 7792 测试集: 15823
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: tfinance
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 1
+n_hidden: 64
+p: 0.3
+k: 4
+z: 0.025
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 1
+n_classes 2
+========================================
+after bin_encoding： (39357, 50)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 43428
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 43.4 K
+------------------------------
+43.4 K    Trainable params
+0         Non-trainable params
+43.4 K    Total params
+0.174     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+/workspace/COMP8851-fraud-dataset-analysis
+Started amazon with driver PID 8163
+========================================
+数据名称 yelpchi
+总样本数: 45954
+欺诈样本数: 6677
+非欺诈样本数: 39277
+欺诈样本占比: 14.53%
+特征个数: 32
+
+net_rsr边关系下的统计信息:
+边的个数: 6805486
+平均出度: 148.09
+net_rtr边关系下的统计信息:
+边的个数: 1147232
+平均出度: 24.96
+net_rur边关系下的统计信息:
+边的个数: 98630
+平均出度: 2.15
+
+数据划分情况:
+训练集: 18381 验证集: 9099 测试集: 18474
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: yelpchi
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 32
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (45954, 742)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+trainable_parameters 148388
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 148 K 
+------------------------------
+148 K     Trainable params
+0         Non-trainable params
+148 K     Total params
+0.594     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.6659298218868308, "g0": 0.648652082221714, "g1": 0.35134791777828595, "pmean": 0.059649836272001266, "val_aps": 0.7963226359927745, "val_auc": 0.9319222241687528, "val_loss": 0.08215980976819992}
+Epoch 0: {'val_loss': '0.08216', 'val_auc': '0.93192', 'val_aps': '0.79632', 'g0': '0.64865', 'g1': '0.35135', 'flip_r': '0.66593', 'pmean': '0.05965', 'trn_loss0': '0.12941'}
+/workspace/COMP8851-fraud-dataset-analysis
+Started elliptic with driver PID 8246
+========================================
+数据名称 amazon
+总样本数: 11944
+欺诈样本数: 821
+非欺诈样本数: 11123
+欺诈样本占比: 6.87%
+特征个数: 25
+
+net_upu边关系下的统计信息:
+边的个数: 351216
+平均出度: 29.41
+net_usu边关系下的统计信息:
+边的个数: 7132958
+平均出度: 597.20
+net_uvu边关系下的统计信息:
+边的个数: 2073474
+平均出度: 173.60
+
+数据划分情况:
+训练集: 3432 验证集: 1717 测试集: 3490
+训练集: 28.73% 验证集: 14.38% 测试集: 29.22%
+========================================
+超参数设定：
+dname: amazon
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 1
+n_hidden: 128
+p: 0.3
+k: 4
+z: 0.05
+seed: 2
+bs: 32
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (11944, 120)
+========================================
+{'unclear_up': 0.05, 'unclear_down': 0.05}
+trainable_parameters 372548
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 372 K 
+------------------------------
+372 K     Trainable params
+0         Non-trainable params
+372 K     Total params
+1.490     Total estimated model params size (MB)
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.0077468773120947035, "g0": 0.005396701048874962, "g1": 0.9946032989511251, "pmean": 0.29427242279052734, "val_aps": 0.13315528541755411, "val_auc": 0.4545006153954493, "val_loss": 0.551392674446106}
+Epoch 0: {'val_loss': '0.55139', 'val_auc': '0.45450', 'val_aps': '0.13316', 'g0': '0.00540', 'g1': '0.99460', 'flip_r': '0.00775', 'pmean': '0.29427', 'trn_loss0': '1.23694'}
+/workspace/COMP8851-fraud-dataset-analysis
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.29265441979825696, "g0": 0.9034987422821862, "g1": 0.09650125771781386, "pmean": 0.03493862971663475, "val_aps": 0.7782368323698271, "val_auc": 0.9484993190282166, "val_loss": 0.07294437289237976}
+Epoch 1: {'val_loss': '0.07294', 'val_auc': '0.94850', 'val_aps': '0.77824', 'g0': '0.90350', 'g1': '0.09650', 'flip_r': '0.29265', 'pmean': '0.03494', 'trn_loss0': '0.08657'}
+========================================
+数据名称 elliptic_of_amnet
+总样本数: 46564
+欺诈样本数: 4545
+非欺诈样本数: 42019
+欺诈样本占比: 9.76%
+特征个数: 93
+
+_E边关系下的统计信息:
+边的个数: 73248
+平均出度: 1.57
+
+数据划分情况:
+训练集: 21353 验证集: 8541 测试集: 16670
+训练集: 45.86% 验证集: 18.34% 测试集: 35.80%
+========================================
+超参数设定：
+dname: elliptic_of_amnet
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 128
+p: 0.3
+k: 4
+z: 0.1
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 1
+n_classes 2
+========================================
+after bin_encoding： (46564, 458)
+========================================
+{'unclear_up': 0.1, 'unclear_down': 0.1}
+trainable_parameters 258116
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 258 K 
+------------------------------
+258 K     Trainable params
+0         Non-trainable params
+258 K     Total params
+1.032     Total estimated model params size (MB)
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.016429472951212082, "g0": 0.01564608086347217, "g1": 0.9843539191365278, "pmean": 0.16146504878997803, "val_aps": 0.13204304388629887, "val_auc": 0.45708241669206906, "val_loss": 0.5029817819595337}
+Epoch 1: {'val_loss': '0.50298', 'val_auc': '0.45708', 'val_aps': '0.13204', 'g0': '0.01565', 'g1': '0.98435', 'flip_r': '0.01643', 'pmean': '0.16147', 'trn_loss0': '0.51999'}
+Protocol-safe validation sanity check: partial loader accepted
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.7648191560616209, "g0": 0.7621399866041527, "g1": 0.23786001339584728, "pmean": 0.06496838480234146, "val_aps": 0.5613584720291487, "val_auc": 0.8985400825891623, "val_loss": 0.2185431867837906}
+Epoch 0: {'val_loss': '0.21854', 'val_auc': '0.89854', 'val_aps': '0.56136', 'g0': '0.76214', 'g1': '0.23786', 'flip_r': '0.76482', 'pmean': '0.06497', 'trn_loss0': '0.39956'}
+Protocol-safe validation: {"epoch": 2, "flip_r": 0.015363189276232755, "g0": 0.007942725334029682, "g1": 0.9920572746659703, "pmean": 0.16057486832141876, "val_aps": 0.1317306229019727, "val_auc": 0.46079536092792334, "val_loss": 0.48235464096069336}
+Epoch 2: {'val_loss': '0.48235', 'val_auc': '0.46080', 'val_aps': '0.13173', 'g0': '0.00794', 'g1': '0.99206', 'flip_r': '0.01536', 'pmean': '0.16057', 'trn_loss0': '0.47338'}
+Protocol-safe validation: {"epoch": 2, "flip_r": 0.04339761668826384, "g0": 0.9281449297456615, "g1": 0.07185507025433849, "pmean": 0.03898928686976433, "val_aps": 0.8642964680831745, "val_auc": 0.9482864564790274, "val_loss": 0.058668214827775955}
+Epoch 2: {'val_loss': '0.05867', 'val_auc': '0.94829', 'val_aps': '0.86430', 'g0': '0.92814', 'g1': '0.07186', 'flip_r': '0.04340', 'pmean': '0.03899', 'trn_loss0': '0.07573'}
+Protocol-safe validation: {"epoch": 3, "flip_r": 0.010728119423771597, "g0": 0.010445227836532185, "g1": 0.9895547721634678, "pmean": 0.14707206189632416, "val_aps": 0.14314317549744976, "val_auc": 0.4928663927555496, "val_loss": 0.44693273305892944}
+Epoch 3: {'val_loss': '0.44693', 'val_auc': '0.49287', 'val_aps': '0.14314', 'g0': '0.01045', 'g1': '0.98955', 'flip_r': '0.01073', 'pmean': '0.14707', 'trn_loss0': '0.44476'}
+Protocol-safe validation: {"epoch": 0, "flip_r": 0.8834507344729834, "g0": 0.8834507344729834, "g1": 0.11654926552701658, "pmean": 0.05816573277115822, "val_aps": 0.7067492656942845, "val_auc": 0.8084360370951607, "val_loss": 0.419983446598053}
+Epoch 0: {'val_loss': '0.41998', 'val_auc': '0.80844', 'val_aps': '0.70675', 'g0': '0.88345', 'g1': '0.11655', 'flip_r': '0.88345', 'pmean': '0.05817', 'trn_loss0': '0.26052'}
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.14442397856664435, "g0": 0.8739115874079035, "g1": 0.12608841259209644, "pmean": 0.058762047439813614, "val_aps": 0.6962737837387072, "val_auc": 0.9158672256831766, "val_loss": 0.20057518780231476}
+Epoch 1: {'val_loss': '0.20058', 'val_auc': '0.91587', 'val_aps': '0.69627', 'g0': '0.87391', 'g1': '0.12609', 'flip_r': '0.14442', 'pmean': '0.05876', 'trn_loss0': '0.27366'}
+Protocol-safe validation: {"epoch": 3, "flip_r": 0.034453845567497525, "g0": 0.9153390756409279, "g1": 0.08466092435907209, "pmean": 0.040876392275094986, "val_aps": 0.8704224824134605, "val_auc": 0.9591609071335326, "val_loss": 0.05557408183813095}
+Epoch 3: {'val_loss': '0.05557', 'val_auc': '0.95916', 'val_aps': '0.87042', 'g0': '0.91534', 'g1': '0.08466', 'flip_r': '0.03445', 'pmean': '0.04088', 'trn_loss0': '0.06792'}
+Protocol-safe validation: {"epoch": 4, "flip_r": 0.013622317970144057, "g0": 0.012360186273229752, "g1": 0.9876398137267702, "pmean": 0.15829505026340485, "val_aps": 0.16866135268528465, "val_auc": 0.5703558361023049, "val_loss": 0.42638108134269714}
+Epoch 4: {'val_loss': '0.42638', 'val_auc': '0.57036', 'val_aps': '0.16866', 'g0': '0.01236', 'g1': '0.98764', 'flip_r': '0.01362', 'pmean': '0.15830', 'trn_loss0': '0.42670'}
+Protocol-safe validation: {"epoch": 5, "flip_r": 0.021456238847543194, "g0": 0.02511206859032946, "g1": 0.9748879314096706, "pmean": 0.178517684340477, "val_aps": 0.23643768811048835, "val_auc": 0.6773115068152591, "val_loss": 0.39954644441604614}
+Epoch 5: {'val_loss': '0.39955', 'val_auc': '0.67731', 'val_aps': '0.23644', 'g0': '0.02511', 'g1': '0.97489', 'flip_r': '0.02146', 'pmean': '0.17852', 'trn_loss0': '0.40173'}
+Protocol-safe validation: {"epoch": 1, "flip_r": 0.05912292758354093, "g0": 0.9011253328751826, "g1": 0.09887466712481746, "pmean": 0.08125153928995132, "val_aps": 0.669496214602723, "val_auc": 0.7350897163167942, "val_loss": 0.47970297932624817}
+Epoch 1: {'val_loss': '0.47970', 'val_auc': '0.73509', 'val_aps': '0.66950', 'g0': '0.90113', 'g1': '0.09887', 'flip_r': '0.05912', 'pmean': '0.08125', 'trn_loss0': '0.15006'}
+Protocol-safe validation: {"epoch": 4, "flip_r": 0.024595370582107375, "g0": 0.9144751886576721, "g1": 0.08552481134232792, "pmean": 0.039578430354595184, "val_aps": 0.8698956167150831, "val_auc": 0.9591936841986288, "val_loss": 0.05738643929362297}
+Epoch 4: {'val_loss': '0.05739', 'val_auc': '0.95919', 'val_aps': '0.86990', 'g0': '0.91448', 'g1': '0.08552', 'flip_r': '0.02460', 'pmean': '0.03958', 'trn_loss0': '0.06179'}
+Protocol-safe validation: {"epoch": 2, "flip_r": 0.09226389819156061, "g0": 0.8325519089082385, "g1": 0.16744809109176156, "pmean": 0.052222009748220444, "val_aps": 0.6984498490686425, "val_auc": 0.9413980150176469, "val_loss": 0.1872681826353073}
+Epoch 2: {'val_loss': '0.18727', 'val_auc': '0.94140', 'val_aps': '0.69845', 'g0': '0.83255', 'g1': '0.16745', 'flip_r': '0.09226', 'pmean': '0.05222', 'trn_loss0': '0.23215'}
+Protocol-safe validation: {"epoch": 6, "flip_r": 0.026918222570396482, "g0": 0.038233886059973014, "g1": 0.961766113940027, "pmean": 0.17869915068149567, "val_aps": 0.26624802393480695, "val_auc": 0.7120628693515558, "val_loss": 0.38857483863830566}
+Epoch 6: {'val_loss': '0.38857', 'val_auc': '0.71206', 'val_aps': '0.26625', 'g0': '0.03823', 'g1': '0.96177', 'flip_r': '0.02692', 'pmean': '0.17870', 'trn_loss0': '0.38432'}
+Protocol-safe validation: {"epoch": 5, "flip_r": 0.023528216073379578, "g0": 0.9236222273039103, "g1": 0.07637777269608964, "pmean": 0.03788886219263077, "val_aps": 0.8543233727183563, "val_auc": 0.9598040157555962, "val_loss": 0.05861833319067955}
+Epoch 5: {'val_loss': '0.05862', 'val_auc': '0.95980', 'val_aps': '0.85432', 'g0': '0.92362', 'g1': '0.07638', 'flip_r': '0.02353', 'pmean': '0.03789', 'trn_loss0': '0.05930'}
+Protocol-safe validation: {"epoch": 7, "flip_r": 0.035078556817687255, "g0": 0.06334595465030247, "g1": 0.9366540453496975, "pmean": 0.16801105439662933, "val_aps": 0.3382807768174394, "val_auc": 0.761226760238159, "val_loss": 0.368063747882843}
+Protocol-safe validation: {"epoch": 2, "flip_r": 0.043230822094321796, "g0": 0.9040245683360536, "g1": 0.0959754316639464, "pmean": 0.08150197565555573, "val_aps": 0.6754445723457717, "val_auc": 0.7347784714631151, "val_loss": 0.4901174008846283}
+Epoch 2: {'val_loss': '0.49012', 'val_auc': '0.73478', 'val_aps': '0.67544', 'g0': '0.90402', 'g1': '0.09598', 'flip_r': '0.04323', 'pmean': '0.08150', 'trn_loss0': '0.10241'}
+Epoch 7: {'val_loss': '0.36806', 'val_auc': '0.76123', 'val_aps': '0.33828', 'g0': '0.06335', 'g1': '0.93665', 'flip_r': '0.03508', 'pmean': '0.16801', 'trn_loss0': '0.37125'}
+Protocol-safe validation: {"epoch": 3, "flip_r": 0.06547220361687876, "g0": 0.8154722036168788, "g1": 0.18452779638312122, "pmean": 0.09581674635410309, "val_aps": 0.7247287838189164, "val_auc": 0.9490134306085226, "val_loss": 0.15632455050945282}
+Epoch 3: {'val_loss': '0.15632', 'val_auc': '0.94901', 'val_aps': '0.72473', 'g0': '0.81547', 'g1': '0.18453', 'flip_r': '0.06547', 'pmean': '0.09582', 'trn_loss0': '0.21534'}
+Protocol-safe validation: {"epoch": 8, "flip_r": 0.03172737955346651, "g0": 0.05829742786264525, "g1": 0.9417025721373548, "pmean": 0.13183580338954926, "val_aps": 0.39947984658777147, "val_auc": 0.7726469804966232, "val_loss": 0.35370635986328125}
+Epoch 8: {'val_loss': '0.35371', 'val_auc': '0.77265', 'val_aps': '0.39948', 'g0': '0.05830', 'g1': '0.94170', 'flip_r': '0.03173', 'pmean': '0.13184', 'trn_loss0': '0.35736'}
+Protocol-safe validation: {"epoch": 6, "flip_r": 0.030617171024214244, "g0": 0.9119089361485886, "g1": 0.08809106385141144, "pmean": 0.044248949736356735, "val_aps": 0.8728268513965337, "val_auc": 0.9555659789134215, "val_loss": 0.05372738838195801}
+Epoch 6: {'val_loss': '0.05373', 'val_auc': '0.95557', 'val_aps': '0.87283', 'g0': '0.91191', 'g1': '0.08809', 'flip_r': '0.03062', 'pmean': '0.04425', 'trn_loss0': '0.05540'}
+Protocol-safe validation: {"epoch": 9, "flip_r": 0.037232885058972015, "g0": 0.07842625233929582, "g1": 0.9215737476607042, "pmean": 0.19000479578971863, "val_aps": 0.43455790726624705, "val_auc": 0.805985326217947, "val_loss": 0.3485828638076782}
+Epoch 9: {'val_loss': '0.34858', 'val_auc': '0.80599', 'val_aps': '0.43456', 'g0': '0.07843', 'g1': '0.92157', 'flip_r': '0.03723', 'pmean': '0.19000', 'trn_loss0': '0.34554'}
+Protocol-safe validation: {"epoch": 3, "flip_r": 0.036594794261661366, "g0": 0.9063869083412078, "g1": 0.0936130916587922, "pmean": 0.08847157657146454, "val_aps": 0.6990813925330034, "val_auc": 0.7406100025854394, "val_loss": 0.5114731192588806}
+Epoch 3: {'val_loss': '0.51147', 'val_auc': '0.74061', 'val_aps': '0.69908', 'g0': '0.90639', 'g1': '0.09361', 'flip_r': '0.03659', 'pmean': '0.08847', 'trn_loss0': '0.08457'}
+Protocol-safe validation: {"epoch": 4, "flip_r": 0.04429002009377093, "g0": 0.8262726054922974, "g1": 0.1737273945077026, "pmean": 0.060097143054008484, "val_aps": 0.8386236554814444, "val_auc": 0.9664669051172119, "val_loss": 0.13614705204963684}
+Epoch 4: {'val_loss': '0.13615', 'val_auc': '0.96647', 'val_aps': '0.83862', 'g0': '0.82627', 'g1': '0.17373', 'flip_r': '0.04429', 'pmean': '0.06010', 'trn_loss0': '0.19966'}
+Protocol-safe validation: {"epoch": 10, "flip_r": 0.04060582321451887, "g0": 0.10937023980502242, "g1": 0.8906297601949776, "pmean": 0.15128356218338013, "val_aps": 0.4373244233093242, "val_auc": 0.8285437955941692, "val_loss": 0.3322664797306061}
+Epoch 10: {'val_loss': '0.33227', 'val_auc': '0.82854', 'val_aps': '0.43732', 'g0': '0.10937', 'g1': '0.89063', 'flip_r': '0.04061', 'pmean': '0.15128', 'trn_loss0': '0.33644'}
+Protocol-safe validation: {"epoch": 7, "flip_r": 0.03399649363518561, "g0": 0.9434154025967426, "g1": 0.056584597403257365, "pmean": 0.04070882871747017, "val_aps": 0.8694060829540713, "val_auc": 0.9555987559785177, "val_loss": 0.05561951920390129}
+Epoch 7: {'val_loss': '0.05562', 'val_auc': '0.95560', 'val_aps': '0.86941', 'g0': '0.94342', 'g1': '0.05658', 'flip_r': '0.03400', 'pmean': '0.04071', 'trn_loss0': '0.05735'}
+Protocol-safe validation: {"epoch": 5, "flip_r": 0.05366711319490958, "g0": 0.8395847287340924, "g1": 0.16041527126590757, "pmean": 0.07311160117387772, "val_aps": 0.8264234544353914, "val_auc": 0.9577579332180559, "val_loss": 0.13495270907878876}
+Epoch 5: {'val_loss': '0.13495', 'val_auc': '0.95776', 'val_aps': '0.82642', 'g0': '0.83958', 'g1': '0.16042', 'flip_r': '0.05367', 'pmean': '0.07311', 'trn_loss0': '0.19341'}
+Protocol-safe validation: {"epoch": 4, "flip_r": 0.03126879134095009, "g0": 0.8986126621424276, "g1": 0.10138733785757237, "pmean": 0.08723138272762299, "val_aps": 0.7094598226863071, "val_auc": 0.7528061643474988, "val_loss": 0.4816790223121643}
+Epoch 4: {'val_loss': '0.48168', 'val_auc': '0.75281', 'val_aps': '0.70946', 'g0': '0.89861', 'g1': '0.10139', 'flip_r': '0.03127', 'pmean': '0.08723', 'trn_loss0': '0.07873'}
+Protocol-safe validation: {"epoch": 11, "flip_r": 0.03553553553553553, "g0": 0.09729294511903208, "g1": 0.9027070548809679, "pmean": 0.1584666222333908, "val_aps": 0.4669690402144361, "val_auc": 0.8477352922238409, "val_loss": 0.3207511901855469}
+Epoch 11: {'val_loss': '0.32075', 'val_auc': '0.84774', 'val_aps': '0.46697', 'g0': '0.09729', 'g1': '0.90271', 'flip_r': '0.03554', 'pmean': '0.15847', 'trn_loss0': '0.33227'}
+Protocol-safe validation: {"epoch": 8, "flip_r": 0.03709632339863302, "g0": 0.9182102294382194, "g1": 0.08178977056178062, "pmean": 0.03864794597029686, "val_aps": 0.8651198103853733, "val_auc": 0.9528839107936383, "val_loss": 0.057777803391218185}
+Epoch 8: {'val_loss': '0.05778', 'val_auc': '0.95288', 'val_aps': '0.86512', 'g0': '0.91821', 'g1': '0.08179', 'flip_r': '0.03710', 'pmean': '0.03865', 'trn_loss0': '0.05534'}
+Protocol-safe validation: {"epoch": 12, "flip_r": 0.038625582103842974, "g0": 0.11172041606824215, "g1": 0.8882795839317579, "pmean": 0.16583527624607086, "val_aps": 0.4874691303064458, "val_auc": 0.8591888257336648, "val_loss": 0.31275543570518494}
+Epoch 12: {'val_loss': '0.31276', 'val_auc': '0.85919', 'val_aps': '0.48747', 'g0': '0.11172', 'g1': '0.88828', 'flip_r': '0.03863', 'pmean': '0.16584', 'trn_loss0': '0.32669'}
+Protocol-safe validation: {"epoch": 6, "flip_r": 0.06346282652377763, "g0": 0.8424313462826524, "g1": 0.15756865371734763, "pmean": 0.06198118254542351, "val_aps": 0.8390405069765076, "val_auc": 0.9491989798738265, "val_loss": 0.1344715654850006}
+Epoch 6: {'val_loss': '0.13447', 'val_auc': '0.94920', 'val_aps': '0.83904', 'g0': '0.84243', 'g1': '0.15757', 'flip_r': '0.06346', 'pmean': '0.06198', 'trn_loss0': '0.17113'}
+Protocol-safe validation: {"epoch": 5, "flip_r": 0.021024826045872348, "g0": 0.9117343870801478, "g1": 0.08826561291985224, "pmean": 0.08443477749824524, "val_aps": 0.7222727799277526, "val_auc": 0.7576996878612445, "val_loss": 0.4508706331253052}
+Epoch 5: {'val_loss': '0.45087', 'val_auc': '0.75770', 'val_aps': '0.72227', 'g0': '0.91173', 'g1': '0.08827', 'flip_r': '0.02102', 'pmean': '0.08443', 'trn_loss0': '0.06755'}
+Protocol-safe validation: {"epoch": 13, "flip_r": 0.07581494538016277, "g0": 0.1642512077294686, "g1": 0.8357487922705314, "pmean": 0.1649738848209381, "val_aps": 0.5629179235846441, "val_auc": 0.8653183667188851, "val_loss": 0.29587727785110474}
+Epoch 13: {'val_loss': '0.29588', 'val_auc': '0.86532', 'val_aps': '0.56292', 'g0': '0.16425', 'g1': '0.83575', 'flip_r': '0.07581', 'pmean': '0.16497', 'trn_loss0': '0.31417'}
+Protocol-safe validation: {"epoch": 9, "flip_r": 0.03285311380440582, "g0": 0.9295678024239652, "g1": 0.07043219757603476, "pmean": 0.042648352682590485, "val_aps": 0.8851485752949588, "val_auc": 0.959904984186008, "val_loss": 0.05033773556351662}
+Epoch 9: {'val_loss': '0.05034', 'val_auc': '0.95990', 'val_aps': '0.88515', 'g0': '0.92957', 'g1': '0.07043', 'flip_r': '0.03285', 'pmean': '0.04265', 'trn_loss0': '0.05442'}
+Protocol-safe validation: {"epoch": 14, "flip_r": 0.06774165469817643, "g0": 0.17306436871654263, "g1": 0.8269356312834574, "pmean": 0.14274193346500397, "val_aps": 0.5717902204884701, "val_auc": 0.8659396466986227, "val_loss": 0.29286083579063416}
+Epoch 14: {'val_loss': '0.29286', 'val_auc': '0.86594', 'val_aps': '0.57179', 'g0': '0.17306', 'g1': '0.82694', 'flip_r': '0.06774', 'pmean': '0.14274', 'trn_loss0': '0.30402'}
+Protocol-safe validation: {"epoch": 7, "flip_r": 0.058439383791024785, "g0": 0.8164768921634293, "g1": 0.18352310783657066, "pmean": 0.0741138905286789, "val_aps": 0.8546757804170201, "val_auc": 0.9578684732058965, "val_loss": 0.11890272051095963}
+Epoch 7: {'val_loss': '0.11890', 'val_auc': '0.95787', 'val_aps': '0.85468', 'g0': '0.81648', 'g1': '0.18352', 'flip_r': '0.05844', 'pmean': '0.07411', 'trn_loss0': '0.16677'}
+Protocol-safe validation: {"epoch": 10, "flip_r": 0.016820387732804837, "g0": 0.9365805320527479, "g1": 0.06341946794725208, "pmean": 0.04069089516997337, "val_aps": 0.8917788711003435, "val_auc": 0.9681135668793408, "val_loss": 0.048165809363126755}
+Epoch 10: {'val_loss': '0.04817', 'val_auc': '0.96811', 'val_aps': '0.89178', 'g0': '0.93658', 'g1': '0.06342', 'flip_r': '0.01682', 'pmean': '0.04069', 'trn_loss0': '0.05580'}
+Protocol-safe validation: {"epoch": 6, "flip_r": 0.015441113306416974, "g0": 0.90716003779744, "g1": 0.09283996220255991, "pmean": 0.08433906733989716, "val_aps": 0.7308348170693778, "val_auc": 0.7654555638418843, "val_loss": 0.4539504647254944}
+Epoch 6: {'val_loss': '0.45395', 'val_auc': '0.76546', 'val_aps': '0.73083', 'g0': '0.90716', 'g1': '0.09284', 'flip_r': '0.01544', 'pmean': '0.08434', 'trn_loss0': '0.05968'}
+Epoch 00007: reducing learning rate of group 0 to 5.0000e-04.
+Protocol-safe validation: {"epoch": 15, "flip_r": 0.06173564869217043, "g0": 0.180745963354659, "g1": 0.819254036645341, "pmean": 0.16321375966072083, "val_aps": 0.6062595175581862, "val_auc": 0.882303845253771, "val_loss": 0.27935871481895447}
+Epoch 15: {'val_loss': '0.27936', 'val_auc': '0.88230', 'val_aps': '0.60626', 'g0': '0.18075', 'g1': '0.81925', 'flip_r': '0.06174', 'pmean': '0.16321', 'trn_loss0': '0.29294'}
+Protocol-safe validation: {"epoch": 16, "flip_r": 0.0816251033642338, "g0": 0.23168820994907952, "g1": 0.7683117900509205, "pmean": 0.15300416946411133, "val_aps": 0.6465359807770326, "val_auc": 0.9034300879839443, "val_loss": 0.25743567943573}
+Epoch 16: {'val_loss': '0.25744', 'val_auc': '0.90343', 'val_aps': '0.64654', 'g0': '0.23169', 'g1': '0.76831', 'flip_r': '0.08163', 'pmean': '0.15300', 'trn_loss0': '0.28067'}
+Protocol-safe validation: {"epoch": 11, "flip_r": 0.010773178850013975, "g0": 0.9335315191706685, "g1": 0.0664684808293315, "pmean": 0.04267830401659012, "val_aps": 0.8920342920266, "val_auc": 0.9681410694741919, "val_loss": 0.04733170196413994}
+Epoch 11: {'val_loss': '0.04733', 'val_auc': '0.96814', 'val_aps': '0.89203', 'g0': '0.93353', 'g1': '0.06647', 'flip_r': '0.01077', 'pmean': '0.04268', 'trn_loss0': '0.05226'}
+Protocol-safe validation: {"epoch": 8, "flip_r": 0.050987943737441394, "g0": 0.817397856664434, "g1": 0.182602143335566, "pmean": 0.08554060012102127, "val_aps": 0.8736252816058229, "val_auc": 0.9627203891007572, "val_loss": 0.10818107426166534}
+Epoch 8: {'val_loss': '0.10818', 'val_auc': '0.96272', 'val_aps': '0.87363', 'g0': '0.81740', 'g1': '0.18260', 'flip_r': '0.05099', 'pmean': '0.08554', 'trn_loss0': '0.14987'}
+Protocol-safe validation: {"epoch": 7, "flip_r": 0.01612833948973456, "g0": 0.8965295077742462, "g1": 0.1034704922257538, "pmean": 0.09257319569587708, "val_aps": 0.726860314120931, "val_auc": 0.763563340513363, "val_loss": 0.44885367155075073}
+Epoch 7: {'val_loss': '0.44885', 'val_auc': '0.76356', 'val_aps': '0.72686', 'g0': '0.89653', 'g1': '0.10347', 'flip_r': '0.01613', 'pmean': '0.09257', 'trn_loss0': '0.05014'}
+Protocol-safe validation: {"epoch": 17, "flip_r": 0.08678243460852156, "g0": 0.2890063977020499, "g1": 0.7109936022979502, "pmean": 0.14368461072444916, "val_aps": 0.6311777777173759, "val_auc": 0.9029533923783561, "val_loss": 0.25513243675231934}
+Epoch 17: {'val_loss': '0.25513', 'val_auc': '0.90295', 'val_aps': '0.63118', 'g0': '0.28901', 'g1': '0.71099', 'flip_r': '0.08678', 'pmean': '0.14368', 'trn_loss0': '0.26961'}
+Protocol-safe validation: {"epoch": 12, "flip_r": 0.009960108748126128, "g0": 0.9345478567980283, "g1": 0.0654521432019717, "pmean": 0.042638324201107025, "val_aps": 0.8919205875438518, "val_auc": 0.9663262749619014, "val_loss": 0.04796149581670761}
+Epoch 12: {'val_loss': '0.04796', 'val_auc': '0.96633', 'val_aps': '0.89192', 'g0': '0.93455', 'g1': '0.06545', 'flip_r': '0.00996', 'pmean': '0.04264', 'trn_loss0': '0.05368'}
+Protocol-safe validation: {"epoch": 18, "flip_r": 0.10412586499543021, "g0": 0.3408190799495147, "g1": 0.6591809200504852, "pmean": 0.1276676058769226, "val_aps": 0.6403253557078977, "val_auc": 0.9055918018860455, "val_loss": 0.2524403929710388}
+Epoch 18: {'val_loss': '0.25244', 'val_auc': '0.90559', 'val_aps': '0.64033', 'g0': '0.34082', 'g1': '0.65918', 'flip_r': '0.10413', 'pmean': '0.12767', 'trn_loss0': '0.26084'}
+Protocol-safe validation: {"epoch": 9, "flip_r": 0.05132283991962491, "g0": 0.8536503683858004, "g1": 0.1463496316141996, "pmean": 0.06135396659374237, "val_aps": 0.8986740989752571, "val_auc": 0.9776117046055697, "val_loss": 0.09910527616739273}
+Epoch 9: {'val_loss': '0.09911', 'val_auc': '0.97761', 'val_aps': '0.89867', 'g0': '0.85365', 'g1': '0.14635', 'flip_r': '0.05132', 'pmean': '0.06135', 'trn_loss0': '0.15216'}
+Protocol-safe validation: {"epoch": 8, "flip_r": 0.0332016149815308, "g0": 0.8812816768318873, "g1": 0.1187183231681127, "pmean": 0.09215300530195236, "val_aps": 0.7283634704745493, "val_auc": 0.7646384785671794, "val_loss": 0.44203662872314453}
+Epoch 8: {'val_loss': '0.44204', 'val_auc': '0.76464', 'val_aps': '0.72836', 'g0': '0.88128', 'g1': '0.11872', 'flip_r': '0.03320', 'pmean': '0.09215', 'trn_loss0': '0.05119'}
+Protocol-safe validation: {"epoch": 19, "flip_r": 0.10403882143012577, "g0": 0.3924576750663707, "g1": 0.6075423249336293, "pmean": 0.13361848890781403, "val_aps": 0.6718942271716486, "val_auc": 0.9151585895568161, "val_loss": 0.23971818387508392}
+Epoch 19: {'val_loss': '0.23972', 'val_auc': '0.91516', 'val_aps': '0.67189', 'g0': '0.39246', 'g1': '0.60754', 'flip_r': '0.10404', 'pmean': '0.13362', 'trn_loss0': '0.25166'}
+Protocol-safe validation: {"epoch": 13, "flip_r": 0.020733287598140103, "g0": 0.9268745077114617, "g1": 0.07312549228853825, "pmean": 0.04196204990148544, "val_aps": 0.8802760530290437, "val_auc": 0.962366278051234, "val_loss": 0.05174540355801582}
+Epoch 13: {'val_loss': '0.05175', 'val_auc': '0.96237', 'val_aps': '0.88028', 'g0': '0.92687', 'g1': '0.07313', 'flip_r': '0.02073', 'pmean': '0.04196', 'trn_loss0': '0.05179'}
+Protocol-safe validation: {"epoch": 20, "flip_r": 0.07994951473212343, "g0": 0.3913261087174131, "g1": 0.608673891282587, "pmean": 0.15503305196762085, "val_aps": 0.7197369739572019, "val_auc": 0.9262298717444686, "val_loss": 0.22214947640895844}
+Epoch 20: {'val_loss': '0.22215', 'val_auc': '0.92623', 'val_aps': '0.71974', 'g0': '0.39133', 'g1': '0.60867', 'flip_r': '0.07995', 'pmean': '0.15503', 'trn_loss0': '0.23971'}
+Protocol-safe validation: {"epoch": 10, "flip_r": 0.031731413261888816, "g0": 0.8527294038847957, "g1": 0.1472705961152043, "pmean": 0.07413341850042343, "val_aps": 0.8855486651765597, "val_auc": 0.9774932689043118, "val_loss": 0.103536456823349}
+Epoch 10: {'val_loss': '0.10354', 'val_auc': '0.97749', 'val_aps': '0.88555', 'g0': '0.85273', 'g1': '0.14727', 'flip_r': '0.03173', 'pmean': '0.07413', 'trn_loss0': '0.15174'}
+Protocol-safe validation: {"epoch": 9, "flip_r": 0.02411734387080148, "g0": 0.8922987715831974, "g1": 0.10770122841680269, "pmean": 0.0886610597372055, "val_aps": 0.72988882465241, "val_auc": 0.7613493125010314, "val_loss": 0.4365193247795105}
+Epoch 9: {'val_loss': '0.43652', 'val_auc': '0.76135', 'val_aps': '0.72989', 'g0': '0.89230', 'g1': '0.10770', 'flip_r': '0.02412', 'pmean': '0.08866', 'trn_loss0': '0.04767'}
+Protocol-safe validation: {"epoch": 21, "flip_r": 0.10116638377507943, "g0": 0.4480132306219263, "g1": 0.5519867693780737, "pmean": 0.14427806437015533, "val_aps": 0.7620064209184083, "val_auc": 0.9327179313997965, "val_loss": 0.2102022022008896}
+Epoch 21: {'val_loss': '0.21020', 'val_auc': '0.93272', 'val_aps': '0.76201', 'g0': '0.44801', 'g1': '0.55199', 'flip_r': '0.10117', 'pmean': '0.14428', 'trn_loss0': '0.23458'}
+Protocol-safe validation: {"epoch": 14, "flip_r": 0.0239347511243235, "g0": 0.9290596336102853, "g1": 0.07094036638971467, "pmean": 0.042248472571372986, "val_aps": 0.8877955693503171, "val_auc": 0.9624563207932804, "val_loss": 0.04950955510139465}
+Epoch 14: {'val_loss': '0.04951', 'val_auc': '0.96246', 'val_aps': '0.88780', 'g0': '0.92906', 'g1': '0.07094', 'flip_r': '0.02393', 'pmean': '0.04225', 'trn_loss0': '0.05167'}
+Protocol-safe validation: {"epoch": 22, "flip_r": 0.1035818427122775, "g0": 0.4326500413456935, "g1": 0.5673499586543065, "pmean": 0.15268799662590027, "val_aps": 0.756720543220671, "val_auc": 0.9330868574214239, "val_loss": 0.21028506755828857}
+Epoch 22: {'val_loss': '0.21029', 'val_auc': '0.93309', 'val_aps': '0.75672', 'g0': '0.43265', 'g1': '0.56735', 'flip_r': '0.10358', 'pmean': '0.15269', 'trn_loss0': '0.23137'}
+Protocol-safe validation: {"epoch": 11, "flip_r": 0.048978566644340256, "g0": 0.8819490957803081, "g1": 0.1180509042196919, "pmean": 0.06495719403028488, "val_aps": 0.920894460423105, "val_auc": 0.9813147941982298, "val_loss": 0.08447983860969543}
+Epoch 11: {'val_loss': '0.08448', 'val_auc': '0.98131', 'val_aps': '0.92089', 'g0': '0.88195', 'g1': '0.11805', 'flip_r': '0.04898', 'pmean': '0.06496', 'trn_loss0': '0.12667'}
+Protocol-safe validation: {"epoch": 10, "flip_r": 0.017223606219396958, "g0": 0.8980542908684821, "g1": 0.10194570913151792, "pmean": 0.08748167753219604, "val_aps": 0.733875955802729, "val_auc": 0.7779658191559837, "val_loss": 0.42370694875717163}
+Epoch 10: {'val_loss': '0.42371', 'val_auc': '0.77797', 'val_aps': '0.73388', 'g0': '0.89805', 'g1': '0.10195', 'flip_r': '0.01722', 'pmean': '0.08748', 'trn_loss0': '0.04176'}
+Protocol-safe validation: {"epoch": 15, "flip_r": 0.02101278044566405, "g0": 0.9261884798129939, "g1": 0.07381152018700612, "pmean": 0.04251373931765556, "val_aps": 0.8901271348857378, "val_auc": 0.9627938868889857, "val_loss": 0.04849722981452942}
+Epoch 15: {'val_loss': '0.04850', 'val_auc': '0.96279', 'val_aps': '0.89013', 'g0': '0.92619', 'g1': '0.07381', 'flip_r': '0.02101', 'pmean': '0.04251', 'trn_loss0': '0.05067'}
+Protocol-safe validation: {"epoch": 23, "flip_r": 0.1272794533664099, "g0": 0.5382991687339513, "g1": 0.46170083126604866, "pmean": 0.13808830082416534, "val_aps": 0.7747040820973699, "val_auc": 0.9367871085790231, "val_loss": 0.20272046327590942}
+Epoch 23: {'val_loss': '0.20272', 'val_auc': '0.93679', 'val_aps': '0.77470', 'g0': '0.53830', 'g1': '0.46170', 'flip_r': '0.12728', 'pmean': '0.13809', 'trn_loss0': '0.22184'}
+Protocol-safe validation: {"epoch": 24, "flip_r": 0.09492100796448623, "g0": 0.4955607781694738, "g1": 0.5044392218305261, "pmean": 0.1423254758119583, "val_aps": 0.7898802385849739, "val_auc": 0.9377428341494188, "val_loss": 0.20006461441516876}
+Epoch 24: {'val_loss': '0.20006', 'val_auc': '0.93774', 'val_aps': '0.78988', 'g0': '0.49556', 'g1': '0.50444', 'flip_r': '0.09492', 'pmean': '0.14233', 'trn_loss0': '0.21111'}
+Protocol-safe validation: {"epoch": 12, "flip_r": 0.033824514400535834, "g0": 0.8779303415941059, "g1": 0.12206965840589418, "pmean": 0.06431750953197479, "val_aps": 0.9067918094854961, "val_auc": 0.9758391169434114, "val_loss": 0.09169360250234604}
+Epoch 12: {'val_loss': '0.09169', 'val_auc': '0.97584', 'val_aps': '0.90679', 'g0': '0.87793', 'g1': '0.12207', 'flip_r': '0.03382', 'pmean': '0.06432', 'trn_loss0': '0.13018'}
+Protocol-safe validation: {"epoch": 16, "flip_r": 0.01643926112254491, "g0": 0.9281957466270295, "g1": 0.0718042533729705, "pmean": 0.0418538972735405, "val_aps": 0.896144853322137, "val_auc": 0.9630455544692659, "val_loss": 0.04717186465859413}
+Epoch 16: {'val_loss': '0.04717', 'val_auc': '0.96305', 'val_aps': '0.89614', 'g0': '0.92820', 'g1': '0.07180', 'flip_r': '0.01644', 'pmean': '0.04185', 'trn_loss0': '0.05148'}
+Protocol-safe validation: {"epoch": 11, "flip_r": 0.015398161669959625, "g0": 0.9070526587062967, "g1": 0.09294734129370329, "pmean": 0.08282211422920227, "val_aps": 0.7273651632100078, "val_auc": 0.7676916447087687, "val_loss": 0.44963425397872925}
+Epoch 11: {'val_loss': '0.44963', 'val_auc': '0.76769', 'val_aps': '0.72737', 'g0': '0.90705', 'g1': '0.09295', 'flip_r': '0.01540', 'pmean': '0.08282', 'trn_loss0': '0.03988'}
+Protocol-safe validation: {"epoch": 25, "flip_r": 0.14364364364364365, "g0": 0.5649127388257823, "g1": 0.4350872611742177, "pmean": 0.13394108414649963, "val_aps": 0.7816715687442162, "val_auc": 0.9344134543127967, "val_loss": 0.20481379330158234}
+Epoch 25: {'val_loss': '0.20481', 'val_auc': '0.93441', 'val_aps': '0.78167', 'g0': '0.56491', 'g1': '0.43509', 'flip_r': '0.14364', 'pmean': '0.13394', 'trn_loss0': '0.20837'}
+Protocol-safe validation: {"epoch": 13, "flip_r": 0.03859678499665104, "g0": 0.8818653717347622, "g1": 0.11813462826523778, "pmean": 0.06420063227415085, "val_aps": 0.9206673638475117, "val_auc": 0.9818122241435124, "val_loss": 0.0828280821442604}
+Epoch 13: {'val_loss': '0.08283', 'val_auc': '0.98181', 'val_aps': '0.92067', 'g0': '0.88187', 'g1': '0.11813', 'flip_r': '0.03860', 'pmean': '0.06420', 'trn_loss0': '0.12979'}
+Protocol-safe validation: {"epoch": 26, "flip_r": 0.10743352047699874, "g0": 0.5789920355137746, "g1": 0.42100796448622535, "pmean": 0.13554874062538147, "val_aps": 0.7947664469768636, "val_auc": 0.9446513702591354, "val_loss": 0.19223737716674805}
+Epoch 26: {'val_loss': '0.19224', 'val_auc': '0.94465', 'val_aps': '0.79477', 'g0': '0.57899', 'g1': '0.42101', 'flip_r': '0.10743', 'pmean': '0.13555', 'trn_loss0': '0.20290'}
+Protocol-safe validation: {"epoch": 17, "flip_r": 0.015194247529029143, "g0": 0.9263155220164139, "g1": 0.07368447798358614, "pmean": 0.045268625020980835, "val_aps": 0.8958051869626416, "val_auc": 0.9657543716881507, "val_loss": 0.04693978652358055}
+Epoch 17: {'val_loss': '0.04694', 'val_auc': '0.96575', 'val_aps': '0.89581', 'g0': '0.92632', 'g1': '0.07368', 'flip_r': '0.01519', 'pmean': '0.04527', 'trn_loss0': '0.05072'}
+Protocol-safe validation: {"epoch": 12, "flip_r": 0.013980757666867108, "g0": 0.8983979039601409, "g1": 0.10160209603985912, "pmean": 0.08748818933963776, "val_aps": 0.7390625364059703, "val_auc": 0.794899415407804, "val_loss": 0.44652214646339417}
+Epoch 12: {'val_loss': '0.44652', 'val_auc': '0.79490', 'val_aps': '0.73906', 'g0': '0.89840', 'g1': '0.10160', 'flip_r': '0.01398', 'pmean': '0.08749', 'trn_loss0': '0.04010'}
+Epoch 00013: reducing learning rate of group 0 to 2.5000e-04.
+Protocol-safe validation: {"epoch": 27, "flip_r": 0.07394350872611742, "g0": 0.5643251947599773, "g1": 0.4356748052400226, "pmean": 0.14425617456436157, "val_aps": 0.8248558227817425, "val_auc": 0.94751577491875, "val_loss": 0.1833638846874237}
+Epoch 27: {'val_loss': '0.18336', 'val_auc': '0.94752', 'val_aps': '0.82486', 'g0': '0.56433', 'g1': '0.43567', 'flip_r': '0.07394', 'pmean': '0.14426', 'trn_loss0': '0.19819'}
+Protocol-safe validation: {"epoch": 18, "flip_r": 0.05943034275986483, "g0": 0.8693752064435806, "g1": 0.13062479355641946, "pmean": 0.04973287135362625, "val_aps": 0.8945706604729882, "val_auc": 0.9639437214024819, "val_loss": 0.0476379320025444}
+Epoch 18: {'val_loss': '0.04764', 'val_auc': '0.96394', 'val_aps': '0.89457', 'g0': '0.86938', 'g1': '0.13062', 'flip_r': '0.05943', 'pmean': '0.04973', 'trn_loss0': '0.04975'}
+Protocol-safe validation: {"epoch": 14, "flip_r": 0.04068988613529806, "g0": 0.8626088412592097, "g1": 0.13739115874079036, "pmean": 0.07208873331546783, "val_aps": 0.917577598321458, "val_auc": 0.9790013501669943, "val_loss": 0.08212731033563614}
+Epoch 14: {'val_loss': '0.08213', 'val_auc': '0.97900', 'val_aps': '0.91758', 'g0': '0.86261', 'g1': '0.13739', 'flip_r': '0.04069', 'pmean': '0.07209', 'trn_loss0': '0.12556'}
+Protocol-safe validation: {"epoch": 28, "flip_r": 0.08197327762545153, "g0": 0.6177917047482265, "g1": 0.3822082952517735, "pmean": 0.13249732553958893, "val_aps": 0.8198101118529904, "val_auc": 0.9475412097077439, "val_loss": 0.18664021790027618}
+Epoch 28: {'val_loss': '0.18664', 'val_auc': '0.94754', 'val_aps': '0.81981', 'g0': '0.61779', 'g1': '0.38221', 'flip_r': '0.08197', 'pmean': '0.13250', 'trn_loss0': '0.19197'}
+Protocol-safe validation: {"epoch": 13, "flip_r": 0.01385190275749506, "g0": 0.8915041663087364, "g1": 0.10849583369126364, "pmean": 0.08934710174798965, "val_aps": 0.738659781508329, "val_auc": 0.7953164059092613, "val_loss": 0.4185655415058136}
+Epoch 13: {'val_loss': '0.41857', 'val_auc': '0.79532', 'val_aps': '0.73866', 'g0': '0.89150', 'g1': '0.10850', 'flip_r': '0.01385', 'pmean': '0.08935', 'trn_loss0': '0.03530'}
+Protocol-safe validation: {"epoch": 29, "flip_r": 0.0878487182835009, "g0": 0.5623231927579754, "g1": 0.4376768072420246, "pmean": 0.1327757090330124, "val_aps": 0.8180598287977718, "val_auc": 0.9468357468986579, "val_loss": 0.18702255189418793}
+Epoch 29: {'val_loss': '0.18702', 'val_auc': '0.94684', 'val_aps': '0.81806', 'g0': '0.56232', 'g1': '0.43768', 'flip_r': '0.08785', 'pmean': '0.13278', 'trn_loss0': '0.18792'}
+Protocol-safe validation: {"epoch": 19, "flip_r": 0.04835226262164291, "g0": 0.904362629265442, "g1": 0.09563737073455802, "pmean": 0.050452280789613724, "val_aps": 0.8968455020922369, "val_auc": 0.9651828451622747, "val_loss": 0.048411816358566284}
+Epoch 19: {'val_loss': '0.04841', 'val_auc': '0.96518', 'val_aps': '0.89685', 'g0': '0.90436', 'g1': '0.09564', 'flip_r': '0.04835', 'pmean': '0.05045', 'trn_loss0': '0.04801'}
+Protocol-safe validation: {"epoch": 15, "flip_r": 0.05056932350971199, "g0": 0.8500502344273275, "g1": 0.14994976557267248, "pmean": 0.07395205646753311, "val_aps": 0.9234955626013671, "val_auc": 0.9805212749998026, "val_loss": 0.07648709416389465}
+Epoch 15: {'val_loss': '0.07649', 'val_auc': '0.98052', 'val_aps': '0.92350', 'g0': '0.85005', 'g1': '0.14995', 'flip_r': '0.05057', 'pmean': '0.07395', 'trn_loss0': '0.13118'}
+Protocol-safe validation: {"epoch": 30, "flip_r": 0.09903381642512077, "g0": 0.5919397658528094, "g1": 0.40806023414719067, "pmean": 0.13172851502895355, "val_aps": 0.8282802259536286, "val_auc": 0.949831605161813, "val_loss": 0.18194840848445892}
+Epoch 30: {'val_loss': '0.18195', 'val_auc': '0.94983', 'val_aps': '0.82828', 'g0': '0.59194', 'g1': '0.40806', 'flip_r': '0.09903', 'pmean': '0.13173', 'trn_loss0': '0.18713'}
+Protocol-safe validation: {"epoch": 14, "flip_r": 0.017481316038141053, "g0": 0.8969590241388197, "g1": 0.10304097586118031, "pmean": 0.08899693191051483, "val_aps": 0.7427852073481083, "val_auc": 0.8028094649083584, "val_loss": 0.4179110527038574}
+Epoch 14: {'val_loss': '0.41791', 'val_auc': '0.80281', 'val_aps': '0.74279', 'g0': '0.89696', 'g1': '0.10304', 'flip_r': '0.01748', 'pmean': '0.08900', 'trn_loss0': '0.03414'}
+Protocol-safe validation: {"epoch": 20, "flip_r": 0.025179764717839268, "g0": 0.9188708488960032, "g1": 0.08112915110399675, "pmean": 0.046162474900484085, "val_aps": 0.8987750637701262, "val_auc": 0.9662271902708628, "val_loss": 0.04624984413385391}
+Epoch 20: {'val_loss': '0.04625', 'val_auc': '0.96623', 'val_aps': '0.89878', 'g0': '0.91887', 'g1': '0.08113', 'flip_r': '0.02518', 'pmean': '0.04616', 'trn_loss0': '0.04950'}
+Protocol-safe validation: {"epoch": 31, "flip_r": 0.08021064542803673, "g0": 0.6315881098489794, "g1": 0.3684118901510206, "pmean": 0.14287616312503815, "val_aps": 0.8216459044106739, "val_auc": 0.9514659484102721, "val_loss": 0.177210733294487}
+Epoch 31: {'val_loss': '0.17721', 'val_auc': '0.95147', 'val_aps': '0.82165', 'g0': '0.63159', 'g1': '0.36841', 'flip_r': '0.08021', 'pmean': '0.14288', 'trn_loss0': '0.18102'}
+Protocol-safe validation: {"epoch": 16, "flip_r": 0.04688546550569324, "g0": 0.8646182183523108, "g1": 0.13538178164768921, "pmean": 0.07045736163854599, "val_aps": 0.9225966219278503, "val_auc": 0.9738178143086119, "val_loss": 0.09156070649623871}
+Epoch 16: {'val_loss': '0.09156', 'val_auc': '0.97382', 'val_aps': '0.92260', 'g0': '0.86462', 'g1': '0.13538', 'flip_r': '0.04689', 'pmean': '0.07046', 'trn_loss0': '0.12454'}
+Protocol-safe validation: {"epoch": 32, "flip_r": 0.04852678765722244, "g0": 0.6518257387822605, "g1": 0.3481742612177395, "pmean": 0.12823453545570374, "val_aps": 0.8366151021617143, "val_auc": 0.95502341459562, "val_loss": 0.17541922628879547}
+Epoch 32: {'val_loss': '0.17542', 'val_auc': '0.95502', 'val_aps': '0.83662', 'g0': '0.65183', 'g1': '0.34817', 'flip_r': '0.04853', 'pmean': '0.12823', 'trn_loss0': '0.17534'}
+Protocol-safe validation: {"epoch": 15, "flip_r": 0.012649256936689288, "g0": 0.8980113392320247, "g1": 0.10198866076797526, "pmean": 0.0890677347779274, "val_aps": 0.7489880439625214, "val_auc": 0.819496010250599, "val_loss": 0.3972872495651245}
+Epoch 15: {'val_loss': '0.39729', 'val_auc': '0.81950', 'val_aps': '0.74899', 'g0': '0.89801', 'g1': '0.10199', 'flip_r': '0.01265', 'pmean': '0.08907', 'trn_loss0': '0.03257'}
+Protocol-safe validation: {"epoch": 21, "flip_r": 0.026729679599562975, "g0": 0.9046421221129659, "g1": 0.09535787788703408, "pmean": 0.05130309984087944, "val_aps": 0.8950350117965697, "val_auc": 0.9616900156161995, "val_loss": 0.05037037283182144}
+Epoch 21: {'val_loss': '0.05037', 'val_auc': '0.96169', 'val_aps': '0.89504', 'g0': '0.90464', 'g1': '0.09536', 'flip_r': '0.02673', 'pmean': '0.05130', 'trn_loss0': '0.05004'}
+Protocol-safe validation: {"epoch": 33, "flip_r": 0.04613308961135048, "g0": 0.6729773251512382, "g1": 0.3270226748487618, "pmean": 0.12401533871889114, "val_aps": 0.8315652069105979, "val_auc": 0.9551499563183031, "val_loss": 0.1773686408996582}
+Epoch 33: {'val_loss': '0.17737', 'val_auc': '0.95515', 'val_aps': '0.83157', 'g0': '0.67298', 'g1': '0.32702', 'flip_r': '0.04613', 'pmean': '0.12402', 'trn_loss0': '0.17147'}
+Protocol-safe validation: {"epoch": 17, "flip_r": 0.0361687876758205, "g0": 0.8806932350971199, "g1": 0.11930676490288011, "pmean": 0.06735629588365555, "val_aps": 0.9205176308846527, "val_auc": 0.976541835437541, "val_loss": 0.08191757649183273}
+Epoch 17: {'val_loss': '0.08192', 'val_auc': '0.97654', 'val_aps': '0.92052', 'g0': '0.88069', 'g1': '0.11931', 'flip_r': '0.03617', 'pmean': '0.06736', 'trn_loss0': '0.11754'}
+Protocol-safe validation: {"epoch": 22, "flip_r": 0.029346748990014482, "g0": 0.9266204233046218, "g1": 0.0733795766953782, "pmean": 0.04414217919111252, "val_aps": 0.9011253019422252, "val_auc": 0.9658854799485362, "val_loss": 0.04568631201982498}
+Epoch 22: {'val_loss': '0.04569', 'val_auc': '0.96589', 'val_aps': '0.90113', 'g0': '0.92662', 'g1': '0.07338', 'flip_r': '0.02935', 'pmean': '0.04414', 'trn_loss0': '0.04888'}
+Protocol-safe validation: {"epoch": 34, "flip_r": 0.08271314793053923, "g0": 0.6018409714061888, "g1": 0.3981590285938112, "pmean": 0.14664870500564575, "val_aps": 0.8453406210161055, "val_auc": 0.9581348236401336, "val_loss": 0.1651606410741806}
+Epoch 34: {'val_loss': '0.16516', 'val_auc': '0.95813', 'val_aps': '0.84534', 'g0': '0.60184', 'g1': '0.39816', 'flip_r': '0.08271', 'pmean': '0.14665', 'trn_loss0': '0.16920'}
+Protocol-safe validation: {"epoch": 16, "flip_r": 0.011511038570569539, "g0": 0.8996864530538613, "g1": 0.10031354694613864, "pmean": 0.08795864880084991, "val_aps": 0.7363195446875355, "val_auc": 0.7859163398194593, "val_loss": 0.4441591501235962}
+Epoch 16: {'val_loss': '0.44416', 'val_auc': '0.78592', 'val_aps': '0.73632', 'g0': '0.89969', 'g1': '0.10031', 'flip_r': '0.01151', 'pmean': '0.08796', 'trn_loss0': '0.03259'}
+Protocol-safe validation: {"epoch": 35, "flip_r": 0.060277668973321145, "g0": 0.6488444966705836, "g1": 0.35115550332941636, "pmean": 0.1327723115682602, "val_aps": 0.8512553877813633, "val_auc": 0.9564505834633603, "val_loss": 0.1689714938402176}
+Epoch 35: {'val_loss': '0.16897', 'val_auc': '0.95645', 'val_aps': '0.85126', 'g0': '0.64884', 'g1': '0.35116', 'flip_r': '0.06028', 'pmean': '0.13277', 'trn_loss0': '0.16529'}
+Protocol-safe validation: {"epoch": 18, "flip_r": 0.025619557937039517, "g0": 0.8806932350971199, "g1": 0.11930676490288011, "pmean": 0.06710491329431534, "val_aps": 0.9122591615440763, "val_auc": 0.9695975554871261, "val_loss": 0.08705019950866699}
+Epoch 18: {'val_loss': '0.08705', 'val_auc': '0.96960', 'val_aps': '0.91226', 'g0': '0.88069', 'g1': '0.11931', 'flip_r': '0.02562', 'pmean': '0.06710', 'trn_loss0': '0.11538'}
+Protocol-safe validation: {"epoch": 23, "flip_r": 0.016718753970068858, "g0": 0.9323119140178368, "g1": 0.06768808598216328, "pmean": 0.04311194643378258, "val_aps": 0.8982702053795871, "val_auc": 0.9603985239018269, "val_loss": 0.04615114629268646}
+Epoch 23: {'val_loss': '0.04615', 'val_auc': '0.96040', 'val_aps': '0.89827', 'g0': '0.93231', 'g1': '0.06769', 'flip_r': '0.01672', 'pmean': '0.04311', 'trn_loss0': '0.04717'}
+Protocol-safe validation: {"epoch": 36, "flip_r": 0.05131218174696436, "g0": 0.6742612177394786, "g1": 0.3257387822605214, "pmean": 0.12769095599651337, "val_aps": 0.8439460531748524, "val_auc": 0.9546127619029462, "val_loss": 0.17346155643463135}
+Epoch 36: {'val_loss': '0.17346', 'val_auc': '0.95461', 'val_aps': '0.84395', 'g0': '0.67426', 'g1': '0.32574', 'flip_r': '0.05131', 'pmean': '0.12769', 'trn_loss0': '0.16339'}
+Protocol-safe validation: {"epoch": 17, "flip_r": 0.010050682931019671, "g0": 0.8974529679580792, "g1": 0.1025470320419208, "pmean": 0.08812222629785538, "val_aps": 0.7416573181326049, "val_auc": 0.7973781267902595, "val_loss": 0.44402191042900085}
+Epoch 17: {'val_loss': '0.44402', 'val_auc': '0.79738', 'val_aps': '0.74166', 'g0': '0.89745', 'g1': '0.10255', 'flip_r': '0.01005', 'pmean': '0.08812', 'trn_loss0': '0.03042'}
+Protocol-safe validation: {"epoch": 37, "flip_r": 0.04648126387256822, "g0": 0.6527614571092832, "g1": 0.3472385428907168, "pmean": 0.13725091516971588, "val_aps": 0.8545967900840087, "val_auc": 0.9563636285824391, "val_loss": 0.16436372697353363}
+Epoch 37: {'val_loss': '0.16436', 'val_auc': '0.95636', 'val_aps': '0.85460', 'g0': '0.65276', 'g1': '0.34724', 'flip_r': '0.04648', 'pmean': '0.13725', 'trn_loss0': '0.16295'}
+Protocol-safe validation: {"epoch": 24, "flip_r": 0.020352160987880175, "g0": 0.9242066214396423, "g1": 0.07579337856035775, "pmean": 0.047499895095825195, "val_aps": 0.8998884054419921, "val_auc": 0.9645186386592297, "val_loss": 0.046419061720371246}
+Epoch 24: {'val_loss': '0.04642', 'val_auc': '0.96452', 'val_aps': '0.89989', 'g0': '0.92421', 'g1': '0.07579', 'flip_r': '0.02035', 'pmean': '0.04750', 'trn_loss0': '0.04749'}
+Protocol-safe validation: {"epoch": 19, "flip_r": 0.02704286671131949, "g0": 0.8958472873409243, "g1": 0.10415271265907569, "pmean": 0.06277719140052795, "val_aps": 0.9060109574604382, "val_auc": 0.962799346234929, "val_loss": 0.09371129423379898}
+Epoch 19: {'val_loss': '0.09371', 'val_auc': '0.96280', 'val_aps': '0.90601', 'g0': '0.89585', 'g1': '0.10415', 'flip_r': '0.02704', 'pmean': '0.06278', 'trn_loss0': '0.11196'}
+Protocol-safe validation: {"epoch": 38, "flip_r": 0.04735169952561257, "g0": 0.6823997910954432, "g1": 0.31760020890455676, "pmean": 0.13761289417743683, "val_aps": 0.8401272353292513, "val_auc": 0.9571148059262377, "val_loss": 0.16770677268505096}
+Epoch 38: {'val_loss': '0.16771', 'val_auc': '0.95711', 'val_aps': '0.84013', 'g0': '0.68240', 'g1': '0.31760', 'flip_r': '0.04735', 'pmean': '0.13761', 'trn_loss0': '0.15595'}
+Protocol-safe validation: {"epoch": 18, "flip_r": 0.012971394210119405, "g0": 0.8954771926810412, "g1": 0.10452280731895885, "pmean": 0.09032966941595078, "val_aps": 0.7441579797148654, "val_auc": 0.8028714486554537, "val_loss": 0.42424696683883667}
+Epoch 18: {'val_loss': '0.42425', 'val_auc': '0.80287', 'val_aps': '0.74416', 'g0': '0.89548', 'g1': '0.10452', 'flip_r': '0.01297', 'pmean': '0.09033', 'trn_loss0': '0.02960'}
+Protocol-safe validation: {"epoch": 25, "flip_r": 0.04154280051833219, "g0": 0.8839342429555098, "g1": 0.11606575704449018, "pmean": 0.050240688025951385, "val_aps": 0.901776889407885, "val_auc": 0.9675744406706867, "val_loss": 0.046100858598947525}
+Epoch 25: {'val_loss': '0.04610', 'val_auc': '0.96757', 'val_aps': '0.90178', 'g0': '0.88393', 'g1': '0.11607', 'flip_r': '0.04154', 'pmean': '0.05024', 'trn_loss0': '0.04838'}
+Protocol-safe validation: {"epoch": 39, "flip_r": 0.043130086608347475, "g0": 0.7041606824215519, "g1": 0.295839317578448, "pmean": 0.12680327892303467, "val_aps": 0.8532413641483632, "val_auc": 0.9590131262964203, "val_loss": 0.1652873307466507}
+Epoch 39: {'val_loss': '0.16529', 'val_auc': '0.95901', 'val_aps': '0.85324', 'g0': '0.70416', 'g1': '0.29584', 'flip_r': '0.04313', 'pmean': '0.12680', 'trn_loss0': '0.15209'}
+Protocol-safe validation: {"epoch": 20, "flip_r": 0.03859678499665104, "g0": 0.8647856664434025, "g1": 0.13521433355659745, "pmean": 0.07299228012561798, "val_aps": 0.9146888128576008, "val_auc": 0.9731585222382769, "val_loss": 0.08348207175731659}
+Epoch 20: {'val_loss': '0.08348', 'val_auc': '0.97316', 'val_aps': '0.91469', 'g0': '0.86479', 'g1': '0.13521', 'flip_r': '0.03860', 'pmean': '0.07299', 'trn_loss0': '0.10548'}
+Protocol-safe validation: {"epoch": 40, "flip_r": 0.059994777386081735, "g0": 0.6577447012229621, "g1": 0.3422552987770379, "pmean": 0.13702541589736938, "val_aps": 0.8663182373284288, "val_auc": 0.9597529722715085, "val_loss": 0.15857933461666107}
+Epoch 40: {'val_loss': '0.15858', 'val_auc': '0.95975', 'val_aps': '0.86632', 'g0': '0.65774', 'g1': '0.34226', 'flip_r': '0.05999', 'pmean': '0.13703', 'trn_loss0': '0.15193'}
+Protocol-safe validation: {"epoch": 19, "flip_r": 0.01499012112361481, "g0": 0.8918263035821665, "g1": 0.10817369641783352, "pmean": 0.09244143217802048, "val_aps": 0.7423127464792859, "val_auc": 0.8040112226927705, "val_loss": 0.4182855784893036}
+Epoch 19: {'val_loss': '0.41829', 'val_auc': '0.80401', 'val_aps': '0.74231', 'g0': '0.89183', 'g1': '0.10817', 'flip_r': '0.01499', 'pmean': '0.09244', 'trn_loss0': '0.02869'}
+Protocol-safe validation: {"epoch": 26, "flip_r": 0.03628325329674518, "g0": 0.9170668496074396, "g1": 0.08293315039256041, "pmean": 0.046919822692871094, "val_aps": 0.8996759884371863, "val_auc": 0.9605209669610951, "val_loss": 0.04627859219908714}
+Epoch 26: {'val_loss': '0.04628', 'val_auc': '0.96052', 'val_aps': '0.89968', 'g0': '0.91707', 'g1': '0.08293', 'flip_r': '0.03628', 'pmean': '0.04692', 'trn_loss0': '0.04842'}
+Protocol-safe validation: {"epoch": 41, "flip_r": 0.043957000478739607, "g0": 0.6345475910693302, "g1": 0.3654524089306698, "pmean": 0.14604176580905914, "val_aps": 0.8555442077829204, "val_auc": 0.9585873975337883, "val_loss": 0.1599898785352707}
+Epoch 41: {'val_loss': '0.15999', 'val_auc': '0.95859', 'val_aps': '0.85554', 'g0': '0.63455', 'g1': '0.36545', 'flip_r': '0.04396', 'pmean': '0.14604', 'trn_loss0': '0.14843'}
+Protocol-safe validation: {"epoch": 21, "flip_r": 0.034912926992632286, "g0": 0.8591761553918286, "g1": 0.14082384460817146, "pmean": 0.07224935293197632, "val_aps": 0.9195117197523591, "val_auc": 0.9708016517832471, "val_loss": 0.08057724684476852}
+Epoch 21: {'val_loss': '0.08058', 'val_auc': '0.97080', 'val_aps': '0.91951', 'g0': '0.85918', 'g1': '0.14082', 'flip_r': '0.03491', 'pmean': '0.07225', 'trn_loss0': '0.11744'}
+Epoch 00022: reducing learning rate of group 0 to 5.0000e-04.
+Protocol-safe validation: {"epoch": 42, "flip_r": 0.0629107368237803, "g0": 0.6898420159289724, "g1": 0.31015798407102757, "pmean": 0.1275414675474167, "val_aps": 0.8658591462786196, "val_auc": 0.9602044276180374, "val_loss": 0.1612054407596588}
+Epoch 42: {'val_loss': '0.16121', 'val_auc': '0.96020', 'val_aps': '0.86586', 'g0': '0.68984', 'g1': '0.31016', 'flip_r': '0.06291', 'pmean': '0.12754', 'trn_loss0': '0.14531'}
+Protocol-safe validation: {"epoch": 20, "flip_r": 0.014023709303324456, "g0": 0.9018984623314148, "g1": 0.09810153766858518, "pmean": 0.08671601116657257, "val_aps": 0.7476900719201647, "val_auc": 0.8125420428585686, "val_loss": 0.424073725938797}
+Epoch 20: {'val_loss': '0.42407', 'val_auc': '0.81254', 'val_aps': '0.74769', 'g0': '0.90190', 'g1': '0.09810', 'flip_r': '0.01402', 'pmean': '0.08672', 'trn_loss0': '0.02766'}
+Protocol-safe validation: {"epoch": 27, "flip_r": 0.02111441420840003, "g0": 0.9223263968290266, "g1": 0.0776736031709734, "pmean": 0.041097115725278854, "val_aps": 0.8934715083774688, "val_auc": 0.9676595856903621, "val_loss": 0.04858829081058502}
+Epoch 27: {'val_loss': '0.04859', 'val_auc': '0.96766', 'val_aps': '0.89347', 'g0': '0.92233', 'g1': '0.07767', 'flip_r': '0.02111', 'pmean': '0.04110', 'trn_loss0': '0.04929'}
+Protocol-safe validation: {"epoch": 43, "flip_r": 0.041323932628280456, "g0": 0.6602254428341385, "g1": 0.3397745571658615, "pmean": 0.14241479337215424, "val_aps": 0.8613931193755948, "val_auc": 0.960030420591227, "val_loss": 0.15818774700164795}
+Epoch 43: {'val_loss': '0.15819', 'val_auc': '0.96003', 'val_aps': '0.86139', 'g0': '0.66023', 'g1': '0.33977', 'flip_r': '0.04132', 'pmean': '0.14241', 'trn_loss0': '0.14027'}
+Protocol-safe validation: {"epoch": 22, "flip_r": 0.025368385800401877, "g0": 0.864450770261219, "g1": 0.13554922973878097, "pmean": 0.07551233470439911, "val_aps": 0.9202022408279081, "val_auc": 0.980090958618566, "val_loss": 0.07948071509599686}
+Epoch 22: {'val_loss': '0.07948', 'val_auc': '0.98009', 'val_aps': '0.92020', 'g0': '0.86445', 'g1': '0.13555', 'flip_r': '0.02537', 'pmean': '0.07551', 'trn_loss0': '0.11197'}
+Protocol-safe validation: {"epoch": 28, "flip_r": 0.02894021393907056, "g0": 0.925807353202734, "g1": 0.07419264679726605, "pmean": 0.0461142435669899, "val_aps": 0.895030416470926, "val_auc": 0.9589781844143171, "val_loss": 0.04816664010286331}
+Epoch 28: {'val_loss': '0.04817', 'val_auc': '0.95898', 'val_aps': '0.89503', 'g0': '0.92581', 'g1': '0.07419', 'flip_r': '0.02894', 'pmean': '0.04611', 'trn_loss0': '0.04833'}
+Epoch 00029: reducing learning rate of group 0 to 5.0000e-04.
+Protocol-safe validation: {"epoch": 21, "flip_r": 0.010007731294562323, "g0": 0.8975603470492226, "g1": 0.10243965295077742, "pmean": 0.08941798657178879, "val_aps": 0.7511178039559618, "val_auc": 0.8293064853663348, "val_loss": 0.4110679626464844}
+Epoch 21: {'val_loss': '0.41107', 'val_auc': '0.82931', 'val_aps': '0.75112', 'g0': '0.89756', 'g1': '0.10244', 'flip_r': '0.01001', 'pmean': '0.08942', 'trn_loss0': '0.02835'}
+Epoch 00022: reducing learning rate of group 0 to 1.2500e-04.
+Protocol-safe validation: {"epoch": 44, "flip_r": 0.046111328720024373, "g0": 0.6651216433825129, "g1": 0.33487835661748705, "pmean": 0.1370973289012909, "val_aps": 0.8753951783200248, "val_auc": 0.9614626472372763, "val_loss": 0.15460637211799622}
+Epoch 44: {'val_loss': '0.15461', 'val_auc': '0.96146', 'val_aps': '0.87540', 'g0': '0.66512', 'g1': '0.33488', 'flip_r': '0.04611', 'pmean': '0.13710', 'trn_loss0': '0.13876'}
+Protocol-safe validation: {"epoch": 23, "flip_r": 0.03290354989953115, "g0": 0.8919959812458138, "g1": 0.1080040187541862, "pmean": 0.06483408063650131, "val_aps": 0.92144114441513, "val_auc": 0.9796724858074551, "val_loss": 0.08101261407136917}
+Epoch 23: {'val_loss': '0.08101', 'val_auc': '0.97967', 'val_aps': '0.92144', 'g0': '0.89200', 'g1': '0.10800', 'flip_r': '0.03290', 'pmean': '0.06483', 'trn_loss0': '0.10307'}
+Protocol-safe validation: {"epoch": 45, "flip_r": 0.053161857509683594, "g0": 0.6823345084214649, "g1": 0.3176654915785351, "pmean": 0.13288450241088867, "val_aps": 0.8787924972758494, "val_auc": 0.9594082165942982, "val_loss": 0.15502971410751343}
+Epoch 45: {'val_loss': '0.15503', 'val_auc': '0.95941', 'val_aps': '0.87879', 'g0': '0.68233', 'g1': '0.31767', 'flip_r': '0.05316', 'pmean': '0.13288', 'trn_loss0': '0.13462'}
+Protocol-safe validation: {"epoch": 29, "flip_r": 0.011027263256853928, "g0": 0.9242828467616943, "g1": 0.07571715323830576, "pmean": 0.046444885432720184, "val_aps": 0.9004955391067292, "val_auc": 0.9644545915205356, "val_loss": 0.0456341877579689}
+Epoch 29: {'val_loss': '0.04563', 'val_auc': '0.96445', 'val_aps': '0.90050', 'g0': '0.92428', 'g1': '0.07572', 'flip_r': '0.01103', 'pmean': '0.04644', 'trn_loss0': '0.04864'}
+Protocol-safe validation: {"epoch": 22, "flip_r": 0.0061206081951722365, "g0": 0.8954771926810412, "g1": 0.10452280731895885, "pmean": 0.09080039709806442, "val_aps": 0.7548374257692502, "val_auc": 0.8388574833537785, "val_loss": 0.409488707780838}
+Epoch 22: {'val_loss': '0.40949', 'val_auc': '0.83886', 'val_aps': '0.75484', 'g0': '0.89548', 'g1': '0.10452', 'flip_r': '0.00612', 'pmean': '0.09080', 'trn_loss0': '0.02528'}
+Protocol-safe validation: {"epoch": 46, "flip_r": 0.05424990207598903, "g0": 0.6693867780824303, "g1": 0.33061322191756976, "pmean": 0.1370006650686264, "val_aps": 0.8787092563357028, "val_auc": 0.961653189308557, "val_loss": 0.15263493359088898}
+Epoch 46: {'val_loss': '0.15263', 'val_auc': '0.96165', 'val_aps': '0.87871', 'g0': '0.66939', 'g1': '0.33061', 'flip_r': '0.05425', 'pmean': '0.13700', 'trn_loss0': '0.13188'}
+Protocol-safe validation: {"epoch": 24, "flip_r": 0.020847287340924312, "g0": 0.8875586068318821, "g1": 0.11244139316811788, "pmean": 0.0668407455086708, "val_aps": 0.9248174560985871, "val_auc": 0.9782236223954015, "val_loss": 0.07614807039499283}
+Epoch 24: {'val_loss': '0.07615', 'val_auc': '0.97822', 'val_aps': '0.92482', 'g0': '0.88756', 'g1': '0.11244', 'flip_r': '0.02085', 'pmean': '0.06684', 'trn_loss0': '0.09789'}
+Protocol-safe validation: {"epoch": 30, "flip_r": 0.013542698884569455, "g0": 0.9151612165561399, "g1": 0.08483878344386005, "pmean": 0.04896595701575279, "val_aps": 0.8991428463324597, "val_auc": 0.9669237970911296, "val_loss": 0.04670112207531929}
+Epoch 30: {'val_loss': '0.04670', 'val_auc': '0.96692', 'val_aps': '0.89914', 'g0': '0.91516', 'g1': '0.08484', 'flip_r': '0.01354', 'pmean': '0.04897', 'trn_loss0': '0.04552'}
+Protocol-safe validation: {"epoch": 47, "flip_r": 0.04970187578883231, "g0": 0.6849675762719241, "g1": 0.3150324237280759, "pmean": 0.13980701565742493, "val_aps": 0.8828079088395602, "val_auc": 0.9640523269962612, "val_loss": 0.14887407422065735}
+Epoch 47: {'val_loss': '0.14887', 'val_auc': '0.96405', 'val_aps': '0.88281', 'g0': '0.68497', 'g1': '0.31503', 'flip_r': '0.04970', 'pmean': '0.13981', 'trn_loss0': '0.13385'}
+Protocol-safe validation: {"epoch": 23, "flip_r": 0.011145949660682072, "g0": 0.9049480285198866, "g1": 0.09505197148011339, "pmean": 0.08525997400283813, "val_aps": 0.7575296469159042, "val_auc": 0.842961770075072, "val_loss": 0.41658806800842285}
+Epoch 23: {'val_loss': '0.41659', 'val_auc': '0.84296', 'val_aps': '0.75753', 'g0': '0.90495', 'g1': '0.09505', 'flip_r': '0.01115', 'pmean': '0.08526', 'trn_loss0': '0.02423'}
+Protocol-safe validation: {"epoch": 48, "flip_r": 0.048809679244461855, "g0": 0.6978282630456544, "g1": 0.3021717369543456, "pmean": 0.14106471836566925, "val_aps": 0.8786229592855985, "val_auc": 0.9615193527133131, "val_loss": 0.15338656306266785}
+Epoch 48: {'val_loss': '0.15339', 'val_auc': '0.96152', 'val_aps': '0.87862', 'g0': '0.69783', 'g1': '0.30217', 'flip_r': '0.04881', 'pmean': '0.14106', 'trn_loss0': '0.12574'}
+Protocol-safe validation: {"epoch": 31, "flip_r": 0.01819244352974058, "g0": 0.9282719719490815, "g1": 0.07172802805091852, "pmean": 0.04227408021688461, "val_aps": 0.8999747307811738, "val_auc": 0.9666936041397056, "val_loss": 0.04545443132519722}
+Epoch 31: {'val_loss': '0.04545', 'val_auc': '0.96669', 'val_aps': '0.89997', 'g0': '0.92827', 'g1': '0.07173', 'flip_r': '0.01819', 'pmean': '0.04227', 'trn_loss0': '0.04659'}
+Protocol-safe validation: {"epoch": 25, "flip_r": 0.03039182853315472, "g0": 0.8645344943067649, "g1": 0.1354655056932351, "pmean": 0.07253879308700562, "val_aps": 0.9292064783754589, "val_auc": 0.9779591159959258, "val_loss": 0.07397309690713882}
+Epoch 25: {'val_loss': '0.07397', 'val_auc': '0.97796', 'val_aps': '0.92921', 'g0': '0.86453', 'g1': '0.13547', 'flip_r': '0.03039', 'pmean': '0.07254', 'trn_loss0': '0.10722'}
+Protocol-safe validation: {"epoch": 49, "flip_r": 0.05357531444487966, "g0": 0.7126256691474083, "g1": 0.28737433085259173, "pmean": 0.13496212661266327, "val_aps": 0.8833743015853008, "val_auc": 0.9623558314335864, "val_loss": 0.14985239505767822}
+Epoch 49: {'val_loss': '0.14985', 'val_auc': '0.96236', 'val_aps': '0.88337', 'g0': '0.71263', 'g1': '0.28737', 'flip_r': '0.05358', 'pmean': '0.13496', 'trn_loss0': '0.12525'}
+Protocol-safe validation: {"epoch": 32, "flip_r": 0.012424727494473663, "g0": 0.9185913560484793, "g1": 0.0814086439515207, "pmean": 0.04724588990211487, "val_aps": 0.9004251574233546, "val_auc": 0.9661897038573332, "val_loss": 0.045305535197257996}
+Epoch 32: {'val_loss': '0.04531', 'val_auc': '0.96619', 'val_aps': '0.90043', 'g0': '0.91859', 'g1': '0.08141', 'flip_r': '0.01242', 'pmean': '0.04725', 'trn_loss0': '0.04615'}
+Protocol-safe validation: {"epoch": 24, "flip_r": 0.00485353491968044, "g0": 0.9033588179709647, "g1": 0.09664118202903531, "pmean": 0.08663150668144226, "val_aps": 0.761221409821754, "val_auc": 0.85265151931889, "val_loss": 0.41183069348335266}
+Epoch 24: {'val_loss': '0.41183', 'val_auc': '0.85265', 'val_aps': '0.76122', 'g0': '0.90336', 'g1': '0.09664', 'flip_r': '0.00485', 'pmean': '0.08663', 'trn_loss0': '0.02179'}
+Protocol-safe validation: {"epoch": 50, "flip_r": 0.050093571832702265, "g0": 0.7091004047525786, "g1": 0.2908995952474213, "pmean": 0.1400766670703888, "val_aps": 0.8827969398052442, "val_auc": 0.9630077012455946, "val_loss": 0.15073162317276}
+Epoch 50: {'val_loss': '0.15073', 'val_auc': '0.96301', 'val_aps': '0.88280', 'g0': '0.70910', 'g1': '0.29090', 'flip_r': '0.05009', 'pmean': '0.14008', 'trn_loss0': '0.12120'}
+Protocol-safe validation: {"epoch": 26, "flip_r": 0.02494976557267247, "g0": 0.8717347622237106, "g1": 0.12826523777628934, "pmean": 0.07028118520975113, "val_aps": 0.9273726655501252, "val_auc": 0.9792066387158411, "val_loss": 0.07516802847385406}
+Epoch 26: {'val_loss': '0.07517', 'val_auc': '0.97921', 'val_aps': '0.92737', 'g0': '0.87173', 'g1': '0.12827', 'flip_r': '0.02495', 'pmean': '0.07028', 'trn_loss0': '0.10216'}
+Protocol-safe validation: {"epoch": 51, "flip_r": 0.04484919702311007, "g0": 0.705161683422553, "g1": 0.294838316577447, "pmean": 0.13471075892448425, "val_aps": 0.8823040274132505, "val_auc": 0.9623876370779504, "val_loss": 0.1506182700395584}
+Epoch 51: {'val_loss': '0.15062', 'val_auc': '0.96239', 'val_aps': '0.88230', 'g0': '0.70516', 'g1': '0.29484', 'flip_r': '0.04485', 'pmean': '0.13471', 'trn_loss0': '0.12065'}
+Protocol-safe validation: {"epoch": 33, "flip_r": 0.010900221053433952, "g0": 0.9248672408974261, "g1": 0.07513275910257387, "pmean": 0.044539351016283035, "val_aps": 0.898571293894594, "val_auc": 0.9640842483597339, "val_loss": 0.04553819075226784}
+Epoch 33: {'val_loss': '0.04554', 'val_auc': '0.96408', 'val_aps': '0.89857', 'g0': '0.92487', 'g1': '0.07513', 'flip_r': '0.01090', 'pmean': '0.04454', 'trn_loss0': '0.04369'}
+Protocol-safe validation: {"epoch": 25, "flip_r": 0.007559488016493429, "g0": 0.8976462503221373, "g1": 0.10235374967786273, "pmean": 0.0907028466463089, "val_aps": 0.7650538583824504, "val_auc": 0.8638113933789178, "val_loss": 0.38529178500175476}
+Epoch 25: {'val_loss': '0.38529', 'val_auc': '0.86381', 'val_aps': '0.76505', 'g0': '0.89765', 'g1': '0.10235', 'flip_r': '0.00756', 'pmean': '0.09070', 'trn_loss0': '0.02179'}
+Protocol-safe validation: {"epoch": 52, "flip_r": 0.05394524959742351, "g0": 0.7414370892631762, "g1": 0.2585629107368238, "pmean": 0.11891525983810425, "val_aps": 0.8829928657565307, "val_auc": 0.9620433190930937, "val_loss": 0.1595889925956726}
+Epoch 52: {'val_loss': '0.15959', 'val_auc': '0.96204', 'val_aps': '0.88299', 'g0': '0.74144', 'g1': '0.25856', 'flip_r': '0.05395', 'pmean': '0.11892', 'trn_loss0': '0.12323'}
+Protocol-safe validation: {"epoch": 27, "flip_r": 0.024196249162759545, "g0": 0.864450770261219, "g1": 0.13554922973878097, "pmean": 0.07126770168542862, "val_aps": 0.9264340197549492, "val_auc": 0.9825662647748536, "val_loss": 0.07639677822589874}
+Epoch 27: {'val_loss': '0.07640', 'val_auc': '0.98257', 'val_aps': '0.92643', 'g0': '0.86445', 'g1': '0.13555', 'flip_r': '0.02420', 'pmean': '0.07127', 'trn_loss0': '0.11033'}
+Protocol-safe validation: {"epoch": 34, "flip_r": 0.01669334552938486, "g0": 0.9234189597784384, "g1": 0.0765810402215616, "pmean": 0.04576713219285011, "val_aps": 0.8979103312673921, "val_auc": 0.9624845768838806, "val_loss": 0.046226195991039276}
+Epoch 34: {'val_loss': '0.04623', 'val_auc': '0.96248', 'val_aps': '0.89791', 'g0': '0.92342', 'g1': '0.07658', 'flip_r': '0.01669', 'pmean': '0.04577', 'trn_loss0': '0.04546'}
+Protocol-safe validation: {"epoch": 53, "flip_r": 0.03803803803803804, "g0": 0.7304696000348174, "g1": 0.2695303999651826, "pmean": 0.13397878408432007, "val_aps": 0.8900262653948865, "val_auc": 0.963293465720032, "val_loss": 0.14737409353256226}
+Epoch 53: {'val_loss': '0.14737', 'val_auc': '0.96329', 'val_aps': '0.89003', 'g0': '0.73047', 'g1': '0.26953', 'flip_r': '0.03804', 'pmean': '0.13398', 'trn_loss0': '0.11842'}
+Protocol-safe validation: {"epoch": 26, "flip_r": 0.006979640924319216, "g0": 0.8990851301434585, "g1": 0.10091486985654154, "pmean": 0.08923349529504776, "val_aps": 0.7540514951493773, "val_auc": 0.8372367704483498, "val_loss": 0.40903720259666443}
+Epoch 26: {'val_loss': '0.40904', 'val_auc': '0.83724', 'val_aps': '0.75405', 'g0': '0.89909', 'g1': '0.10091', 'flip_r': '0.00698', 'pmean': '0.08923', 'trn_loss0': '0.02189'}
+Protocol-safe validation: {"epoch": 54, "flip_r": 0.049092570831701265, "g0": 0.707968838403621, "g1": 0.292031161596379, "pmean": 0.14189082384109497, "val_aps": 0.8917868263061253, "val_auc": 0.9662890321882849, "val_loss": 0.14253884553909302}
+Epoch 54: {'val_loss': '0.14254', 'val_auc': '0.96629', 'val_aps': '0.89179', 'g0': '0.70797', 'g1': '0.29203', 'flip_r': '0.04909', 'pmean': '0.14189', 'trn_loss0': '0.11334'}
+Protocol-safe validation: {"epoch": 28, "flip_r": 0.027712659075686537, "g0": 0.8831212324179505, "g1": 0.11687876758204957, "pmean": 0.06949949264526367, "val_aps": 0.9305608390249898, "val_auc": 0.978606564496135, "val_loss": 0.07341796159744263}
+Epoch 28: {'val_loss': '0.07342', 'val_auc': '0.97861', 'val_aps': '0.93056', 'g0': '0.88312', 'g1': '0.11688', 'flip_r': '0.02771', 'pmean': '0.06950', 'trn_loss0': '0.09405'}
+Protocol-safe validation: {"epoch": 35, "flip_r": 0.010417460680438041, "g0": 0.9197601443199431, "g1": 0.08023985568005691, "pmean": 0.046637482941150665, "val_aps": 0.8978478229462836, "val_auc": 0.9611158518552008, "val_loss": 0.04628720507025719}
+Epoch 35: {'val_loss': '0.04629', 'val_auc': '0.96112', 'val_aps': '0.89785', 'g0': '0.91976', 'g1': '0.08024', 'flip_r': '0.01042', 'pmean': '0.04664', 'trn_loss0': '0.04553'}
+Protocol-safe validation: {"epoch": 55, "flip_r": 0.06687121904513209, "g0": 0.7643513078295687, "g1": 0.2356486921704313, "pmean": 0.11878001689910889, "val_aps": 0.8825826171939444, "val_auc": 0.963183361776852, "val_loss": 0.16322962939739227}
+Epoch 55: {'val_loss': '0.16323', 'val_auc': '0.96318', 'val_aps': '0.88258', 'g0': '0.76435', 'g1': '0.23565', 'flip_r': '0.06687', 'pmean': '0.11878', 'trn_loss0': '0.11157'}
+Protocol-safe validation: {"epoch": 27, "flip_r": 0.0072158749248346366, "g0": 0.8971523065028778, "g1": 0.10284769349712224, "pmean": 0.09068282693624496, "val_aps": 0.750147368390381, "val_auc": 0.8250526419810909, "val_loss": 0.4339585602283478}
+Epoch 27: {'val_loss': '0.43396', 'val_auc': '0.82505', 'val_aps': '0.75015', 'g0': '0.89715', 'g1': '0.10285', 'flip_r': '0.00722', 'pmean': '0.09068', 'trn_loss0': '0.02079'}
+Protocol-safe validation: {"epoch": 56, "flip_r": 0.03701527614571093, "g0": 0.7423510466988728, "g1": 0.2576489533011272, "pmean": 0.13687941431999207, "val_aps": 0.8817186285452132, "val_auc": 0.9636018442994072, "val_loss": 0.1530318260192871}
+Epoch 56: {'val_loss': '0.15303', 'val_auc': '0.96360', 'val_aps': '0.88172', 'g0': '0.74235', 'g1': '0.25765', 'flip_r': '0.03702', 'pmean': '0.13688', 'trn_loss0': '0.11005'}
+Protocol-safe validation: {"epoch": 29, "flip_r": 0.029554588077695915, "g0": 0.8711486939048895, "g1": 0.12885130609511053, "pmean": 0.0727970153093338, "val_aps": 0.9228644461404467, "val_auc": 0.9793132308469731, "val_loss": 0.07942499965429306}
+Epoch 29: {'val_loss': '0.07942', 'val_auc': '0.97931', 'val_aps': '0.92286', 'g0': '0.87115', 'g1': '0.12885', 'flip_r': '0.02955', 'pmean': '0.07280', 'trn_loss0': '0.10726'}
+Protocol-safe validation: {"epoch": 36, "flip_r": 0.00802906725614249, "g0": 0.9218944533373987, "g1": 0.07810554666260132, "pmean": 0.045919470489025116, "val_aps": 0.8999468764073917, "val_auc": 0.9618286588340784, "val_loss": 0.04530356824398041}
+Epoch 36: {'val_loss': '0.04530', 'val_auc': '0.96183', 'val_aps': '0.89995', 'g0': '0.92189', 'g1': '0.07811', 'flip_r': '0.00803', 'pmean': '0.04592', 'trn_loss0': '0.04554'}
+Protocol-safe validation: {"epoch": 57, "flip_r": 0.035078556817687255, "g0": 0.7492274883579232, "g1": 0.25077251164207687, "pmean": 0.13255956768989563, "val_aps": 0.893131019559476, "val_auc": 0.9661829161087709, "val_loss": 0.14713242650032043}
+Epoch 57: {'val_loss': '0.14713', 'val_auc': '0.96618', 'val_aps': '0.89313', 'g0': '0.74923', 'g1': '0.25077', 'flip_r': '0.03508', 'pmean': '0.13256', 'trn_loss0': '0.10563'}
+Protocol-safe validation: {"epoch": 37, "flip_r": 0.012221459969001702, "g0": 0.9130777244200523, "g1": 0.08692227557994765, "pmean": 0.047369085252285004, "val_aps": 0.9015529035024434, "val_auc": 0.9628063195688497, "val_loss": 0.04506971314549446}
+Epoch 37: {'val_loss': '0.04507', 'val_auc': '0.96281', 'val_aps': '0.90155', 'g0': '0.91308', 'g1': '0.08692', 'flip_r': '0.01222', 'pmean': '0.04737', 'trn_loss0': '0.04598'}
+Protocol-safe validation: {"epoch": 28, "flip_r": 0.0076453912894081264, "g0": 0.8983120006872262, "g1": 0.10168799931277382, "pmean": 0.08970384299755096, "val_aps": 0.7564774948928591, "val_auc": 0.8398139583862143, "val_loss": 0.4129678010940552}
+Epoch 28: {'val_loss': '0.41297', 'val_auc': '0.83981', 'val_aps': '0.75648', 'g0': '0.89831', 'g1': '0.10169', 'flip_r': '0.00765', 'pmean': '0.08970', 'trn_loss0': '0.02064'}
+Protocol-safe validation: {"epoch": 30, "flip_r": 0.01850301406563965, "g0": 0.8730743469524448, "g1": 0.12692565304755526, "pmean": 0.071750208735466, "val_aps": 0.9250204389357374, "val_auc": 0.98083710353649, "val_loss": 0.07853412628173828}
+Epoch 30: {'val_loss': '0.07853', 'val_auc': '0.98084', 'val_aps': '0.92502', 'g0': '0.87307', 'g1': '0.12693', 'flip_r': '0.01850', 'pmean': '0.07175', 'trn_loss0': '0.09988'}
+Protocol-safe validation: {"epoch": 58, "flip_r": 0.04130217173695434, "g0": 0.72737955346651, "g1": 0.27262044653349, "pmean": 0.1396445333957672, "val_aps": 0.8959632037718167, "val_auc": 0.9662838771450085, "val_loss": 0.14276611804962158}
+Epoch 58: {'val_loss': '0.14277', 'val_auc': '0.96628', 'val_aps': '0.89596', 'g0': '0.72738', 'g1': '0.27262', 'flip_r': '0.04130', 'pmean': '0.13964', 'trn_loss0': '0.10677'}
+Protocol-safe validation: {"epoch": 59, "flip_r": 0.03853853853853854, "g0": 0.7449405927666797, "g1": 0.25505940723332027, "pmean": 0.13515816628932953, "val_aps": 0.8965242931603282, "val_auc": 0.9685288498592672, "val_loss": 0.14321842789649963}
+Epoch 59: {'val_loss': '0.14322', 'val_auc': '0.96853', 'val_aps': '0.89652', 'g0': '0.74494', 'g1': '0.25506', 'flip_r': '0.03854', 'pmean': '0.13516', 'trn_loss0': '0.10715'}
+Protocol-safe validation: {"epoch": 38, "flip_r": 0.033742409228345656, "g0": 0.9012882079426786, "g1": 0.09871179205732145, "pmean": 0.04583039879798889, "val_aps": 0.9018706490747566, "val_auc": 0.9656240169235146, "val_loss": 0.04539281502366066}
+Epoch 38: {'val_loss': '0.04539', 'val_auc': '0.96562', 'val_aps': '0.90187', 'g0': '0.90129', 'g1': '0.09871', 'flip_r': '0.03374', 'pmean': '0.04583', 'trn_loss0': '0.04560'}
+Protocol-safe validation: {"epoch": 31, "flip_r": 0.019089082384460818, "g0": 0.8846282652377763, "g1": 0.1153717347622237, "pmean": 0.06921271979808807, "val_aps": 0.9281845858170643, "val_auc": 0.9815319263172024, "val_loss": 0.07702639698982239}
+Epoch 31: {'val_loss': '0.07703', 'val_auc': '0.98153', 'val_aps': '0.92818', 'g0': '0.88463', 'g1': '0.11537', 'flip_r': '0.01909', 'pmean': '0.06921', 'trn_loss0': '0.09492'}
+Protocol-safe validation: {"epoch": 60, "flip_r": 0.03936545240893067, "g0": 0.7370413892153023, "g1": 0.26295861078469773, "pmean": 0.1313507854938507, "val_aps": 0.898545592449935, "val_auc": 0.9672456331433879, "val_loss": 0.1437213271856308}
+Epoch 60: {'val_loss': '0.14372', 'val_auc': '0.96725', 'val_aps': '0.89855', 'g0': '0.73704', 'g1': '0.26296', 'flip_r': '0.03937', 'pmean': '0.13135', 'trn_loss0': '0.10494'}
+Epoch 00061: reducing learning rate of group 0 to 5.0000e-04.
+Protocol-safe validation: {"epoch": 29, "flip_r": 0.008525899836783781, "g0": 0.9029722532428486, "g1": 0.09702774675715145, "pmean": 0.08750937134027481, "val_aps": 0.7605582494621432, "val_auc": 0.8521175848381664, "val_loss": 0.4139087498188019}
+Epoch 29: {'val_loss': '0.41391', 'val_auc': '0.85212', 'val_aps': '0.76056', 'g0': '0.90297', 'g1': '0.09703', 'flip_r': '0.00853', 'pmean': '0.08751', 'trn_loss0': '0.01970'}
+Protocol-safe validation: {"epoch": 39, "flip_r": 0.021038188886348046, "g0": 0.9094697258429251, "g1": 0.09053027415707499, "pmean": 0.044916730374097824, "val_aps": 0.8994517234689581, "val_auc": 0.9642756362800669, "val_loss": 0.044924359768629074}
+Epoch 39: {'val_loss': '0.04492', 'val_auc': '0.96428', 'val_aps': '0.89945', 'g0': '0.90947', 'g1': '0.09053', 'flip_r': '0.02104', 'pmean': '0.04492', 'trn_loss0': '0.04573'}
+Protocol-safe validation: {"epoch": 61, "flip_r": 0.0339469904687296, "g0": 0.7182399791095443, "g1": 0.28176002089045565, "pmean": 0.14846116304397583, "val_aps": 0.8973986637702396, "val_auc": 0.9679509986875066, "val_loss": 0.14101769030094147}
+Epoch 61: {'val_loss': '0.14102', 'val_auc': '0.96795', 'val_aps': '0.89740', 'g0': '0.71824', 'g1': '0.28176', 'flip_r': '0.03395', 'pmean': '0.14846', 'trn_loss0': '0.09976'}
+Protocol-safe validation: {"epoch": 32, "flip_r": 0.026121902210314803, "g0": 0.8861352980576022, "g1": 0.11386470194239785, "pmean": 0.06844495236873627, "val_aps": 0.9302504405893312, "val_auc": 0.981555613457454, "val_loss": 0.07289237529039383}
+Epoch 32: {'val_loss': '0.07289', 'val_auc': '0.98156', 'val_aps': '0.93025', 'g0': '0.88614', 'g1': '0.11386', 'flip_r': '0.02612', 'pmean': '0.06844', 'trn_loss0': '0.09798'}
+Protocol-safe validation: {"epoch": 62, "flip_r": 0.030443486965226096, "g0": 0.7163032597815207, "g1": 0.28369674021847935, "pmean": 0.14988745748996735, "val_aps": 0.8981273265405059, "val_auc": 0.9686504310686093, "val_loss": 0.14063042402267456}
+Epoch 62: {'val_loss': '0.14063', 'val_auc': '0.96865', 'val_aps': '0.89813', 'g0': '0.71630', 'g1': '0.28370', 'flip_r': '0.03044', 'pmean': '0.14989', 'trn_loss0': '0.09447'}
+Protocol-safe validation: {"epoch": 30, "flip_r": 0.006270938922772958, "g0": 0.9036594794261661, "g1": 0.09634052057383387, "pmean": 0.08770466595888138, "val_aps": 0.7552317224994187, "val_auc": 0.8305572604087508, "val_loss": 0.41814959049224854}
+Epoch 30: {'val_loss': '0.41815', 'val_auc': '0.83056', 'val_aps': '0.75523', 'g0': '0.90366', 'g1': '0.09634', 'flip_r': '0.00627', 'pmean': '0.08770', 'trn_loss0': '0.02119'}
+Protocol-safe validation: {"epoch": 40, "flip_r": 0.033335874177401734, "g0": 0.9270015499148817, "g1": 0.07299845008511828, "pmean": 0.04277915507555008, "val_aps": 0.8996578807545238, "val_auc": 0.9668510847513182, "val_loss": 0.04504993185400963}
+Epoch 40: {'val_loss': '0.04505', 'val_auc': '0.96685', 'val_aps': '0.89966', 'g0': '0.92700', 'g1': '0.07300', 'flip_r': '0.03334', 'pmean': '0.04278', 'trn_loss0': '0.04511'}
+Protocol-safe validation: {"epoch": 63, "flip_r": 0.050485267876572225, "g0": 0.7621752186969578, "g1": 0.23782478130304216, "pmean": 0.13448910415172577, "val_aps": 0.8970127663930663, "val_auc": 0.9675727352290017, "val_loss": 0.14610348641872406}
+Epoch 63: {'val_loss': '0.14610', 'val_auc': '0.96757', 'val_aps': '0.89701', 'g0': '0.76218', 'g1': '0.23782', 'flip_r': '0.05049', 'pmean': '0.13449', 'trn_loss0': '0.08896'}
+Protocol-safe validation: {"epoch": 33, "flip_r": 0.04010381781647689, "g0": 0.8569156061620897, "g1": 0.14308439383791025, "pmean": 0.07653035968542099, "val_aps": 0.9243785739972976, "val_auc": 0.9796172158135348, "val_loss": 0.07556300610303879}
+Epoch 33: {'val_loss': '0.07556', 'val_auc': '0.97962', 'val_aps': '0.92438', 'g0': '0.85692', 'g1': '0.14308', 'flip_r': '0.04010', 'pmean': '0.07653', 'trn_loss0': '0.09425'}
+Protocol-safe validation: {"epoch": 64, "flip_r": 0.02461156808982896, "g0": 0.7652870261565914, "g1": 0.2347129738434086, "pmean": 0.13910020887851715, "val_aps": 0.9016049874911259, "val_auc": 0.9687040240656872, "val_loss": 0.14498014748096466}
+Epoch 64: {'val_loss': '0.14498', 'val_auc': '0.96870', 'val_aps': '0.90160', 'g0': '0.76529', 'g1': '0.23471', 'flip_r': '0.02461', 'pmean': '0.13910', 'trn_loss0': '0.08603'}
+Protocol-safe validation: {"epoch": 31, "flip_r": 0.005734043467056095, "g0": 0.9054419723391461, "g1": 0.09455802766085387, "pmean": 0.08608502894639969, "val_aps": 0.75281124540504, "val_auc": 0.836132310447611, "val_loss": 0.45027676224708557}
+Epoch 31: {'val_loss': '0.45028', 'val_auc': '0.83613', 'val_aps': '0.75281', 'g0': '0.90544', 'g1': '0.09456', 'flip_r': '0.00573', 'pmean': '0.08609', 'trn_loss0': '0.01677'}
+Epoch 00032: reducing learning rate of group 0 to 6.2500e-05.
+Protocol-safe validation: {"epoch": 41, "flip_r": 0.018497344817948524, "g0": 0.91465304774246, "g1": 0.08534695225753995, "pmean": 0.04561376944184303, "val_aps": 0.9034988286277643, "val_auc": 0.9686775584477234, "val_loss": 0.044063691049814224}
+Epoch 41: {'val_loss': '0.04406', 'val_auc': '0.96868', 'val_aps': '0.90350', 'g0': '0.91465', 'g1': '0.08535', 'flip_r': '0.01850', 'pmean': '0.04561', 'trn_loss0': '0.04382'}
+Protocol-safe validation: {"epoch": 65, "flip_r": 0.029464246855551202, "g0": 0.7542324933629282, "g1": 0.24576750663707186, "pmean": 0.14270558953285217, "val_aps": 0.905877198683855, "val_auc": 0.9705930069989925, "val_loss": 0.13849902153015137}
+Epoch 65: {'val_loss': '0.13850', 'val_auc': '0.97059', 'val_aps': '0.90588', 'g0': '0.75423', 'g1': '0.24577', 'flip_r': '0.02946', 'pmean': '0.14271', 'trn_loss0': '0.08640'}
+Protocol-safe validation: {"epoch": 34, "flip_r": 0.024531145344943068, "g0": 0.8685532484929672, "g1": 0.13144675150703283, "pmean": 0.07290103286504745, "val_aps": 0.9232018207608332, "val_auc": 0.9771813882243331, "val_loss": 0.07864683121442795}
+Epoch 34: {'val_loss': '0.07865', 'val_auc': '0.97718', 'val_aps': '0.92320', 'g0': '0.86855', 'g1': '0.13145', 'flip_r': '0.02453', 'pmean': '0.07290', 'trn_loss0': '0.09925'}
+Protocol-safe validation: {"epoch": 42, "flip_r": 0.009985517188810123, "g0": 0.9132555835048403, "g1": 0.0867444164951597, "pmean": 0.04675786569714546, "val_aps": 0.9011740322712658, "val_auc": 0.9643472183762543, "val_loss": 0.0449690967798233}
+Epoch 42: {'val_loss': '0.04497', 'val_auc': '0.96435', 'val_aps': '0.90117', 'g0': '0.91326', 'g1': '0.08674', 'flip_r': '0.00999', 'pmean': '0.04676', 'trn_loss0': '0.04487'}
+Protocol-safe validation: {"epoch": 66, "flip_r": 0.022500761631196412, "g0": 0.7497932715324019, "g1": 0.250206728467598, "pmean": 0.14443016052246094, "val_aps": 0.9077673842154232, "val_auc": 0.9713860082788051, "val_loss": 0.1359771192073822}
+Epoch 66: {'val_loss': '0.13598', 'val_auc': '0.97139', 'val_aps': '0.90777', 'g0': '0.74979', 'g1': '0.25021', 'flip_r': '0.02250', 'pmean': '0.14443', 'trn_loss0': '0.08349'}
+Protocol-safe validation: {"epoch": 32, "flip_r": 0.004767631646765742, "g0": 0.9030796323339919, "g1": 0.09692036766600808, "pmean": 0.08839896321296692, "val_aps": 0.7563227152741357, "val_auc": 0.8373155516926769, "val_loss": 0.4337662160396576}
+Epoch 32: {'val_loss': '0.43377', 'val_auc': '0.83732', 'val_aps': '0.75632', 'g0': '0.90308', 'g1': '0.09692', 'flip_r': '0.00477', 'pmean': '0.08840', 'trn_loss0': '0.01638'}
+Protocol-safe validation: {"epoch": 67, "flip_r": 0.025851938895417155, "g0": 0.7585846716281499, "g1": 0.24141532837185012, "pmean": 0.14095669984817505, "val_aps": 0.9029632833260672, "val_auc": 0.9702123119163008, "val_loss": 0.1398853361606598}
+Epoch 67: {'val_loss': '0.13989', 'val_auc': '0.97021', 'val_aps': '0.90296', 'g0': '0.75858', 'g1': '0.24142', 'flip_r': '0.02585', 'pmean': '0.14096', 'trn_loss0': '0.08155'}
+Protocol-safe validation: {"epoch": 43, "flip_r": 0.015448331935869095, "g0": 0.9186421729298473, "g1": 0.08135782707015271, "pmean": 0.04609404876828194, "val_aps": 0.9033306491813535, "val_auc": 0.9661601291491715, "val_loss": 0.044165775179862976}
+Epoch 43: {'val_loss': '0.04417', 'val_auc': '0.96616', 'val_aps': '0.90333', 'g0': '0.91864', 'g1': '0.08136', 'flip_r': '0.01545', 'pmean': '0.04609', 'trn_loss0': '0.04331'}
+Protocol-safe validation: {"epoch": 35, "flip_r": 0.02595445411922304, "g0": 0.8687206965840589, "g1": 0.13127930341594105, "pmean": 0.07577783614397049, "val_aps": 0.9269220741778368, "val_auc": 0.981070027082297, "val_loss": 0.07841022312641144}
+Epoch 35: {'val_loss': '0.07841', 'val_auc': '0.98107', 'val_aps': '0.92692', 'g0': '0.86872', 'g1': '0.13128', 'flip_r': '0.02595', 'pmean': '0.07578', 'trn_loss0': '0.09865'}
+Protocol-safe validation: {"epoch": 68, "flip_r": 0.02833268050659355, "g0": 0.7803455629542586, "g1": 0.2196544370457414, "pmean": 0.135674849152565, "val_aps": 0.9052320210113217, "val_auc": 0.9695665697972432, "val_loss": 0.14366364479064941}
+Epoch 68: {'val_loss': '0.14366', 'val_auc': '0.96957', 'val_aps': '0.90523', 'g0': '0.78035', 'g1': '0.21965', 'flip_r': '0.02833', 'pmean': '0.13567', 'trn_loss0': '0.07520'}
+Protocol-safe validation: {"epoch": 33, "flip_r": 0.004166308736362856, "g0": 0.904454084700627, "g1": 0.09554591529937291, "pmean": 0.08734428137540817, "val_aps": 0.7717506590034879, "val_auc": 0.8702808364721405, "val_loss": 0.4033776819705963}
+Epoch 33: {'val_loss': '0.40338', 'val_auc': '0.87028', 'val_aps': '0.77175', 'g0': '0.90445', 'g1': '0.09555', 'flip_r': '0.00417', 'pmean': '0.08734', 'trn_loss0': '0.01841'}
+Protocol-safe validation: {"epoch": 44, "flip_r": 0.021902075869603882, "g0": 0.8991793073659069, "g1": 0.10082069263409305, "pmean": 0.04952491447329521, "val_aps": 0.9006410688866043, "val_auc": 0.9648633629645537, "val_loss": 0.04631508141756058}
+Epoch 44: {'val_loss': '0.04632', 'val_auc': '0.96486', 'val_aps': '0.90064', 'g0': '0.89918', 'g1': '0.10082', 'flip_r': '0.02190', 'pmean': '0.04952', 'trn_loss0': '0.04454'}
+Protocol-safe validation: {"epoch": 69, "flip_r": 0.036558297427862645, "g0": 0.7588458023240632, "g1": 0.2411541976759368, "pmean": 0.14548221230506897, "val_aps": 0.9060419785360858, "val_auc": 0.9704040211671913, "val_loss": 0.13818693161010742}
+Epoch 69: {'val_loss': '0.13819', 'val_auc': '0.97040', 'val_aps': '0.90604', 'g0': '0.75885', 'g1': '0.24115', 'flip_r': '0.03656', 'pmean': '0.14548', 'trn_loss0': '0.07890'}
+Protocol-safe validation: {"epoch": 36, "flip_r": 0.031898861352980576, "g0": 0.8646182183523108, "g1": 0.13538178164768921, "pmean": 0.07399049401283264, "val_aps": 0.9296142116111271, "val_auc": 0.9803120385942471, "val_loss": 0.07420129328966141}
+Epoch 36: {'val_loss': '0.07420', 'val_auc': '0.98031', 'val_aps': '0.92961', 'g0': '0.86462', 'g1': '0.13538', 'flip_r': '0.03190', 'pmean': '0.07399', 'trn_loss0': '0.09453'}
+Protocol-safe validation: {"epoch": 70, "flip_r": 0.028767898333115726, "g0": 0.751795273534404, "g1": 0.24820472646559602, "pmean": 0.14757505059242249, "val_aps": 0.9035286226109149, "val_auc": 0.970255497561859, "val_loss": 0.13981838524341583}
+Epoch 70: {'val_loss': '0.13982', 'val_auc': '0.97026', 'val_aps': '0.90353', 'g0': '0.75180', 'g1': '0.24820', 'flip_r': '0.02877', 'pmean': '0.14758', 'trn_loss0': '0.08084'}
+Protocol-safe validation: {"epoch": 34, "flip_r": 0.003973026372304784, "g0": 0.9028433983334765, "g1": 0.0971566016665235, "pmean": 0.08846130967140198, "val_aps": 0.7573754526006442, "val_auc": 0.8387650480035143, "val_loss": 0.4330679774284363}
+Epoch 34: {'val_loss': '0.43307', 'val_auc': '0.83877', 'val_aps': '0.75738', 'g0': '0.90284', 'g1': '0.09716', 'flip_r': '0.00397', 'pmean': '0.08846', 'trn_loss0': '0.01657'}
+Protocol-safe validation: {"epoch": 45, "flip_r": 0.02106359732703204, "g0": 0.9151612165561399, "g1": 0.08483878344386005, "pmean": 0.04505877569317818, "val_aps": 0.9008792379884148, "val_auc": 0.9632041653245023, "val_loss": 0.04529517889022827}
+Epoch 45: {'val_loss': '0.04530', 'val_auc': '0.96320', 'val_aps': '0.90088', 'g0': '0.91516', 'g1': '0.08484', 'flip_r': '0.02106', 'pmean': '0.04506', 'trn_loss0': '0.04484'}
+Protocol-safe validation: {"epoch": 71, "flip_r": 0.03462157809983897, "g0": 0.7466814640727685, "g1": 0.2533185359272316, "pmean": 0.14694397151470184, "val_aps": 0.9083213880065344, "val_auc": 0.9702870114113205, "val_loss": 0.1347113400697708}
+Epoch 71: {'val_loss': '0.13471', 'val_auc': '0.97029', 'val_aps': '0.90832', 'g0': '0.74668', 'g1': '0.25332', 'flip_r': '0.03462', 'pmean': '0.14694', 'trn_loss0': '0.07710'}
+Protocol-safe validation: {"epoch": 37, "flip_r": 0.024028801071667782, "g0": 0.8777628935030141, "g1": 0.12223710649698594, "pmean": 0.0695825070142746, "val_aps": 0.9342541728399951, "val_auc": 0.9822346448113318, "val_loss": 0.07201653718948364}
+Epoch 37: {'val_loss': '0.07202', 'val_auc': '0.98223', 'val_aps': '0.93425', 'g0': '0.87776', 'g1': '0.12224', 'flip_r': '0.02403', 'pmean': '0.06958', 'trn_loss0': '0.09939'}
+Protocol-safe validation: {"epoch": 72, "flip_r": 0.051877964921443184, "g0": 0.7918570744657701, "g1": 0.2081429255342299, "pmean": 0.13140541315078735, "val_aps": 0.8987167159067762, "val_auc": 0.9679965186922841, "val_loss": 0.1521964967250824}
+Epoch 72: {'val_loss': '0.15220', 'val_auc': '0.96800', 'val_aps': '0.89872', 'g0': '0.79186', 'g1': '0.20814', 'flip_r': '0.05188', 'pmean': '0.13141', 'trn_loss0': '0.07249'}
+Protocol-safe validation: {"epoch": 46, "flip_r": 0.02329954010722362, "g0": 0.9206240313031989, "g1": 0.07937596869680108, "pmean": 0.04565803334116936, "val_aps": 0.8997930154815118, "val_auc": 0.9645391714183993, "val_loss": 0.04507371410727501}
+Epoch 46: {'val_loss': '0.04507', 'val_auc': '0.96454', 'val_aps': '0.89979', 'g0': '0.92062', 'g1': '0.07938', 'flip_r': '0.02330', 'pmean': '0.04566', 'trn_loss0': '0.04293'}
+Protocol-safe validation: {"epoch": 35, "flip_r": 0.004445494373335624, "g0": 0.9024353577871317, "g1": 0.09756464221286831, "pmean": 0.08900465071201324, "val_aps": 0.7556675078978973, "val_auc": 0.8331184366972073, "val_loss": 0.43084198236465454}
+Epoch 35: {'val_loss': '0.43084', 'val_auc': '0.83312', 'val_aps': '0.75567', 'g0': '0.90244', 'g1': '0.09756', 'flip_r': '0.00445', 'pmean': '0.08900', 'trn_loss0': '0.01705'}
+Protocol-safe validation: {"epoch": 73, "flip_r": 0.03325064194629412, "g0": 0.7725334029681856, "g1": 0.22746659703181443, "pmean": 0.1442292481660843, "val_aps": 0.9049119095842375, "val_auc": 0.9688659702365308, "val_loss": 0.14507243037223816}
+Epoch 73: {'val_loss': '0.14507', 'val_auc': '0.96887', 'val_aps': '0.90491', 'g0': '0.77253', 'g1': '0.22747', 'flip_r': '0.03325', 'pmean': '0.14423', 'trn_loss0': '0.07102'}
+Protocol-safe validation: {"epoch": 38, "flip_r": 0.023024112525117213, "g0": 0.8701440053583389, "g1": 0.1298559946416611, "pmean": 0.07589258998632431, "val_aps": 0.9386211497267892, "val_auc": 0.983746673930723, "val_loss": 0.0694085955619812}
+Epoch 38: {'val_loss': '0.06941', 'val_auc': '0.98375', 'val_aps': '0.93862', 'g0': '0.87014', 'g1': '0.12986', 'flip_r': '0.02302', 'pmean': '0.07589', 'trn_loss0': '0.08368'}
+Protocol-safe validation: {"epoch": 47, "flip_r": 0.018649795462052494, "g0": 0.9141194704880962, "g1": 0.08588052951190385, "pmean": 0.046515170484781265, "val_aps": 0.9034935359428219, "val_auc": 0.9663032933415465, "val_loss": 0.04444136843085289}
+Epoch 47: {'val_loss': '0.04444', 'val_auc': '0.96630', 'val_aps': '0.90349', 'g0': '0.91412', 'g1': '0.08588', 'flip_r': '0.01865', 'pmean': '0.04652', 'trn_loss0': '0.04446'}
+Epoch 00048: reducing learning rate of group 0 to 2.5000e-04.
+Protocol-safe validation: {"epoch": 74, "flip_r": 0.02393698045871959, "g0": 0.7734908821865344, "g1": 0.22650911781346564, "pmean": 0.1390194594860077, "val_aps": 0.9123117901965174, "val_auc": 0.9706457246113633, "val_loss": 0.13449692726135254}
+Epoch 74: {'val_loss': '0.13450', 'val_auc': '0.97065', 'val_aps': '0.91231', 'g0': '0.77349', 'g1': '0.22651', 'flip_r': '0.02394', 'pmean': '0.13902', 'trn_loss0': '0.07776'}
+Protocol-safe validation: {"epoch": 36, "flip_r": 0.0050253414655098355, "g0": 0.9056137788849755, "g1": 0.09438622111502448, "pmean": 0.0870848149061203, "val_aps": 0.7679704876154398, "val_auc": 0.860333034449211, "val_loss": 0.4265100955963135}
+Epoch 36: {'val_loss': '0.42651', 'val_auc': '0.86033', 'val_aps': '0.76797', 'g0': '0.90561', 'g1': '0.09439', 'flip_r': '0.00503', 'pmean': '0.08708', 'trn_loss0': '0.01756'}
+Protocol-safe validation: {"epoch": 75, "flip_r": 0.020128824476650563, "g0": 0.7706402054228141, "g1": 0.2293597945771859, "pmean": 0.14041554927825928, "val_aps": 0.9090729868249963, "val_auc": 0.9702259290117471, "val_loss": 0.13469181954860687}
+Epoch 75: {'val_loss': '0.13469', 'val_auc': '0.97023', 'val_aps': '0.90907', 'g0': '0.77064', 'g1': '0.22936', 'flip_r': '0.02013', 'pmean': '0.14042', 'trn_loss0': '0.07311'}
+Protocol-safe validation: {"epoch": 39, "flip_r": 0.03868050904219692, "g0": 0.8604320160750167, "g1": 0.13956798392498326, "pmean": 0.0802563726902008, "val_aps": 0.9299741430051793, "val_auc": 0.982049095546028, "val_loss": 0.07563024014234543}
+Epoch 39: {'val_loss': '0.07563', 'val_auc': '0.98205', 'val_aps': '0.92997', 'g0': '0.86043', 'g1': '0.13957', 'flip_r': '0.03868', 'pmean': '0.08026', 'trn_loss0': '0.09938'}
+Protocol-safe validation: {"epoch": 48, "flip_r": 0.011510023629849837, "g0": 0.9175496099804356, "g1": 0.0824503900195645, "pmean": 0.047042012214660645, "val_aps": 0.9034580166503823, "val_auc": 0.9662803117211917, "val_loss": 0.04474254325032234}
+Epoch 48: {'val_loss': '0.04474', 'val_auc': '0.96628', 'val_aps': '0.90346', 'g0': '0.91755', 'g1': '0.08245', 'flip_r': '0.01151', 'pmean': '0.04704', 'trn_loss0': '0.04130'}
+Protocol-safe validation: {"epoch": 37, "flip_r": 0.003693840735332016, "g0": 0.9039816166995962, "g1": 0.09601838330040374, "pmean": 0.08782163262367249, "val_aps": 0.7668635338187698, "val_auc": 0.8584609975866614, "val_loss": 0.4381259083747864}
+Epoch 37: {'val_loss': '0.43813', 'val_auc': '0.85846', 'val_aps': '0.76686', 'g0': '0.90398', 'g1': '0.09602', 'flip_r': '0.00369', 'pmean': '0.08782', 'trn_loss0': '0.01770'}
+Epoch 00038: reducing learning rate of group 0 to 3.1250e-05.
+Protocol-safe validation: {"epoch": 76, "flip_r": 0.028920224572398484, "g0": 0.7898550724637681, "g1": 0.21014492753623187, "pmean": 0.13436482846736908, "val_aps": 0.9005330682862657, "val_auc": 0.9679351444978083, "val_loss": 0.14997372031211853}
+Epoch 76: {'val_loss': '0.14997', 'val_auc': '0.96794', 'val_aps': '0.90053', 'g0': '0.78986', 'g1': '0.21014', 'flip_r': '0.02892', 'pmean': '0.13436', 'trn_loss0': '0.07256'}
+Protocol-safe validation: {"epoch": 49, "flip_r": 0.011560840511217826, "g0": 0.9189470742180552, "g1": 0.08105292578194476, "pmean": 0.04691363871097565, "val_aps": 0.9015078954516745, "val_auc": 0.9643136878154087, "val_loss": 0.045692913234233856}
+Epoch 49: {'val_loss': '0.04569', 'val_auc': '0.96431', 'val_aps': '0.90151', 'g0': '0.91895', 'g1': '0.08105', 'flip_r': '0.01156', 'pmean': '0.04691', 'trn_loss0': '0.04226'}
+Protocol-safe validation: {"epoch": 40, "flip_r": 0.033824514400535834, "g0": 0.8773442732752846, "g1": 0.12265572672471534, "pmean": 0.07156749069690704, "val_aps": 0.9329541658075959, "val_auc": 0.9810660792255884, "val_loss": 0.0740063339471817}
+Epoch 40: {'val_loss': '0.07401', 'val_auc': '0.98107', 'val_aps': '0.93295', 'g0': '0.87734', 'g1': '0.12266', 'flip_r': '0.03382', 'pmean': '0.07157', 'trn_loss0': '0.09620'}
+Protocol-safe validation: {"epoch": 77, "flip_r": 0.028397963180571875, "g0": 0.7797797797797797, "g1": 0.22022022022022023, "pmean": 0.1447822004556656, "val_aps": 0.9049177505088959, "val_auc": 0.968815489718412, "val_loss": 0.14763596653938293}
+Epoch 77: {'val_loss': '0.14764', 'val_auc': '0.96882', 'val_aps': '0.90492', 'g0': '0.77978', 'g1': '0.22022', 'flip_r': '0.02840', 'pmean': '0.14478', 'trn_loss0': '0.06982'}
+Protocol-safe validation: {"epoch": 38, "flip_r": 0.0035435100077312945, "g0": 0.9043037539730264, "g1": 0.09569624602697363, "pmean": 0.0881829783320427, "val_aps": 0.7756299911934089, "val_auc": 0.8745686677757598, "val_loss": 0.42705342173576355}
+Epoch 38: {'val_loss': '0.42705', 'val_auc': '0.87457', 'val_aps': '0.77563', 'g0': '0.90430', 'g1': '0.09570', 'flip_r': '0.00354', 'pmean': '0.08818', 'trn_loss0': '0.01563'}
+Protocol-safe validation: {"epoch": 50, "flip_r": 0.009223263968290266, "g0": 0.9142465126915161, "g1": 0.08575348730848388, "pmean": 0.04640753194689751, "val_aps": 0.9011799377890735, "val_auc": 0.9639904381389409, "val_loss": 0.044922493398189545}
+Epoch 50: {'val_loss': '0.04492', 'val_auc': '0.96399', 'val_aps': '0.90118', 'g0': '0.91425', 'g1': '0.08575', 'flip_r': '0.00922', 'pmean': '0.04641', 'trn_loss0': '0.04195'}
+Protocol-safe validation: {"epoch": 78, "flip_r": 0.0274622448535492, "g0": 0.786612699656178, "g1": 0.21338730034382208, "pmean": 0.13733389973640442, "val_aps": 0.9073473992201393, "val_auc": 0.9683283867613041, "val_loss": 0.14385826885700226}
+Epoch 78: {'val_loss': '0.14386', 'val_auc': '0.96833', 'val_aps': '0.90735', 'g0': '0.78661', 'g1': '0.21339', 'flip_r': '0.02746', 'pmean': '0.13733', 'trn_loss0': '0.06907'}
+Protocol-safe validation: {"epoch": 41, "flip_r": 0.02051239115874079, "g0": 0.8673811118553248, "g1": 0.13261888814467515, "pmean": 0.07413866370916367, "val_aps": 0.9368835258895043, "val_auc": 0.983087381860388, "val_loss": 0.0709688737988472}
+Epoch 41: {'val_loss': '0.07097', 'val_auc': '0.98309', 'val_aps': '0.93688', 'g0': '0.86738', 'g1': '0.13262', 'flip_r': '0.02051', 'pmean': '0.07414', 'trn_loss0': '0.09325'}
+Protocol-safe validation: {"epoch": 79, "flip_r": 0.023523523523523524, "g0": 0.80225878051965, "g1": 0.19774121948034992, "pmean": 0.13310113549232483, "val_aps": 0.9064427974697935, "val_auc": 0.969029083586984, "val_loss": 0.15038053691387177}
+Epoch 79: {'val_loss': '0.15038', 'val_auc': '0.96903', 'val_aps': '0.90644', 'g0': '0.80226', 'g1': '0.19774', 'flip_r': '0.02352', 'pmean': '0.13310', 'trn_loss0': '0.06914'}
+Protocol-safe validation: {"epoch": 51, "flip_r": 0.01255176969789364, "g0": 0.9039306857738141, "g1": 0.09606931422618593, "pmean": 0.048024751245975494, "val_aps": 0.9033852351050167, "val_auc": 0.9658176653310955, "val_loss": 0.044824063777923584}
+Epoch 51: {'val_loss': '0.04482', 'val_auc': '0.96582', 'val_aps': '0.90339', 'g0': '0.90393', 'g1': '0.09607', 'flip_r': '0.01255', 'pmean': '0.04802', 'trn_loss0': '0.04172'}
+Protocol-safe validation: {"epoch": 39, "flip_r": 0.0026200498238982905, "g0": 0.9062365776136071, "g1": 0.09376342238639292, "pmean": 0.08667699247598648, "val_aps": 0.7657637252999114, "val_auc": 0.8549691318974846, "val_loss": 0.4365200698375702}
+Epoch 39: {'val_loss': '0.43652', 'val_auc': '0.85497', 'val_aps': '0.76576', 'g0': '0.90624', 'g1': '0.09376', 'flip_r': '0.00262', 'pmean': '0.08668', 'trn_loss0': '0.01669'}
+Protocol-safe validation: {"epoch": 80, "flip_r": 0.025917221569395483, "g0": 0.7807807807807807, "g1": 0.21921921921921922, "pmean": 0.13959382474422455, "val_aps": 0.9111610906679395, "val_auc": 0.9704115105696868, "val_loss": 0.13872255384922028}
+Epoch 80: {'val_loss': '0.13872', 'val_auc': '0.97041', 'val_aps': '0.91116', 'g0': '0.78078', 'g1': '0.21922', 'flip_r': '0.02592', 'pmean': '0.13959', 'trn_loss0': '0.06903'}
+Epoch 00081: reducing learning rate of group 0 to 2.5000e-04.
+Protocol-safe validation: {"epoch": 42, "flip_r": 0.03474547890154052, "g0": 0.8664601473543202, "g1": 0.13353985264567983, "pmean": 0.07178658246994019, "val_aps": 0.9307706890062031, "val_auc": 0.9816464141617516, "val_loss": 0.07445042580366135}
+Epoch 42: {'val_loss': '0.07445', 'val_auc': '0.98165', 'val_aps': '0.93077', 'g0': '0.86646', 'g1': '0.13354', 'flip_r': '0.03475', 'pmean': '0.07179', 'trn_loss0': '0.09870'}
+Protocol-safe validation: {"epoch": 81, "flip_r": 0.017169343256299777, "g0": 0.7863298080689385, "g1": 0.2136701919310615, "pmean": 0.13978727161884308, "val_aps": 0.9109078114826153, "val_auc": 0.970697664103994, "val_loss": 0.1401970386505127}
+Epoch 81: {'val_loss': '0.14020', 'val_auc': '0.97070', 'val_aps': '0.91091', 'g0': '0.78633', 'g1': '0.21367', 'flip_r': '0.01717', 'pmean': '0.13979', 'trn_loss0': '0.06604'}
+Protocol-safe validation: {"epoch": 52, "flip_r": 0.028559087328810632, "g0": 0.8835022994638819, "g1": 0.1164977005361181, "pmean": 0.04896356165409088, "val_aps": 0.9020657486428634, "val_auc": 0.9643163250505312, "val_loss": 0.0455232709646225}
+Epoch 52: {'val_loss': '0.04552', 'val_auc': '0.96432', 'val_aps': '0.90207', 'g0': '0.88350', 'g1': '0.11650', 'flip_r': '0.02856', 'pmean': '0.04896', 'trn_loss0': '0.04224'}
+Protocol-safe validation: {"epoch": 40, "flip_r": 0.005197148011339232, "g0": 0.9011682845116399, "g1": 0.0988317154883601, "pmean": 0.090032659471035, "val_aps": 0.7666731058004703, "val_auc": 0.8586393359271551, "val_loss": 0.437529981136322}
+Epoch 40: {'val_loss': '0.43753', 'val_auc': '0.85864', 'val_aps': '0.76667', 'g0': '0.90117', 'g1': '0.09883', 'flip_r': '0.00520', 'pmean': '0.09003', 'trn_loss0': '0.01613'}
+Protocol-safe validation: {"epoch": 82, "flip_r": 0.015145580362971667, "g0": 0.7818470644557601, "g1": 0.2181529355442399, "pmean": 0.14276131987571716, "val_aps": 0.9095797131491822, "val_auc": 0.9704779425424712, "val_loss": 0.14118997752666473}
+Epoch 82: {'val_loss': '0.14119', 'val_auc': '0.97048', 'val_aps': '0.90958', 'g0': '0.78185', 'g1': '0.21815', 'flip_r': '0.01515', 'pmean': '0.14276', 'trn_loss0': '0.05978'}
+Protocol-safe validation: {"epoch": 43, "flip_r": 0.033573342263898194, "g0": 0.8559946416610851, "g1": 0.14400535833891492, "pmean": 0.07805150002241135, "val_aps": 0.9273828806547624, "val_auc": 0.9780736038404749, "val_loss": 0.07731572538614273}
+Epoch 43: {'val_loss': '0.07732', 'val_auc': '0.97807', 'val_aps': '0.92738', 'g0': '0.85599', 'g1': '0.14401', 'flip_r': '0.03357', 'pmean': '0.07805', 'trn_loss0': '0.10559'}
+Protocol-safe validation: {"epoch": 53, "flip_r": 0.029499199634118452, "g0": 0.9076149096729934, "g1": 0.09238509032700663, "pmean": 0.04776868596673012, "val_aps": 0.9035899230678026, "val_auc": 0.9656338123682559, "val_loss": 0.0450894758105278}
+Epoch 53: {'val_loss': '0.04509', 'val_auc': '0.96563', 'val_aps': '0.90359', 'g0': '0.90761', 'g1': '0.09239', 'flip_r': '0.02950', 'pmean': '0.04777', 'trn_loss0': '0.04112'}
+Epoch 00054: reducing learning rate of group 0 to 1.2500e-04.
+Protocol-safe validation: {"epoch": 83, "flip_r": 0.013796405100752926, "g0": 0.7829786308047177, "g1": 0.21702136919528223, "pmean": 0.14557892084121704, "val_aps": 0.9106935203094131, "val_auc": 0.9703996442436551, "val_loss": 0.1436648815870285}
+Epoch 83: {'val_loss': '0.14366', 'val_auc': '0.97040', 'val_aps': '0.91069', 'g0': '0.78298', 'g1': '0.21702', 'flip_r': '0.01380', 'pmean': '0.14558', 'trn_loss0': '0.05850'}
+Protocol-safe validation: {"epoch": 41, "flip_r": 0.0043810669186496, "g0": 0.9052916416115454, "g1": 0.0947083583884546, "pmean": 0.0874900221824646, "val_aps": 0.7653468365086398, "val_auc": 0.8510247160928275, "val_loss": 0.45703136920928955}
+Epoch 41: {'val_loss': '0.45703', 'val_auc': '0.85102', 'val_aps': '0.76535', 'g0': '0.90529', 'g1': '0.09471', 'flip_r': '0.00438', 'pmean': '0.08749', 'trn_loss0': '0.01607'}
+Protocol-safe validation: {"epoch": 84, "flip_r": 0.013274143708926317, "g0": 0.7876789833311573, "g1": 0.21232101666884276, "pmean": 0.1428602784872055, "val_aps": 0.9128493165146878, "val_auc": 0.9714957231621153, "val_loss": 0.1399403214454651}
+Epoch 84: {'val_loss': '0.13994', 'val_auc': '0.97150', 'val_aps': '0.91285', 'g0': '0.78768', 'g1': '0.21232', 'flip_r': '0.01327', 'pmean': '0.14286', 'trn_loss0': '0.05621'}
+Protocol-safe validation: {"epoch": 44, "flip_r": 0.0391828533154722, "g0": 0.8784326858673811, "g1": 0.12156731413261888, "pmean": 0.07131877541542053, "val_aps": 0.9293104303842304, "val_auc": 0.9810858185091315, "val_loss": 0.07496258616447449}
+Epoch 44: {'val_loss': '0.07496', 'val_auc': '0.98109', 'val_aps': '0.92931', 'g0': '0.87843', 'g1': '0.12157', 'flip_r': '0.03918', 'pmean': '0.07132', 'trn_loss0': '0.09286'}
+Epoch 00045: reducing learning rate of group 0 to 2.5000e-04.
+Protocol-safe validation: {"epoch": 54, "flip_r": 0.009655207459918184, "g0": 0.9143735548949361, "g1": 0.0856264451050639, "pmean": 0.046164799481630325, "val_aps": 0.9020880615459461, "val_auc": 0.9641298348525693, "val_loss": 0.04510131850838661}
+Epoch 54: {'val_loss': '0.04510', 'val_auc': '0.96413', 'val_aps': '0.90209', 'g0': '0.91437', 'g1': '0.08563', 'flip_r': '0.00966', 'pmean': '0.04616', 'trn_loss0': '0.04219'}
+Protocol-safe validation: {"epoch": 85, "flip_r": 0.011642076859468165, "g0": 0.7856987422204813, "g1": 0.21430125777951864, "pmean": 0.14549914002418518, "val_aps": 0.9168658696565241, "val_auc": 0.9723989256500752, "val_loss": 0.1372753083705902}
+Epoch 85: {'val_loss': '0.13728', 'val_auc': '0.97240', 'val_aps': '0.91687', 'g0': '0.78570', 'g1': '0.21430', 'flip_r': '0.01164', 'pmean': '0.14550', 'trn_loss0': '0.05772'}
+Protocol-safe validation: {"epoch": 42, "flip_r": 0.004123357099905506, "g0": 0.9013830426939267, "g1": 0.09861695730607337, "pmean": 0.089981310069561, "val_aps": 0.758038882505912, "val_auc": 0.8363305405611425, "val_loss": 0.45135876536369324}
+Epoch 42: {'val_loss': '0.45136', 'val_auc': '0.83633', 'val_aps': '0.75804', 'g0': '0.90138', 'g1': '0.09862', 'flip_r': '0.00412', 'pmean': '0.08998', 'trn_loss0': '0.01577'}
+Protocol-safe validation: {"epoch": 55, "flip_r": 0.008511827629138399, "g0": 0.9102319790634449, "g1": 0.08976802093655513, "pmean": 0.04662881791591644, "val_aps": 0.9020778629163608, "val_auc": 0.9649176146585062, "val_loss": 0.044857654720544815}
+Epoch 55: {'val_loss': '0.04486', 'val_auc': '0.96492', 'val_aps': '0.90208', 'g0': '0.91023', 'g1': '0.08977', 'flip_r': '0.00851', 'pmean': '0.04663', 'trn_loss0': '0.03970'}
+Protocol-safe validation: {"epoch": 45, "flip_r": 0.02168452779638312, "g0": 0.8723208305425318, "g1": 0.12767916945746818, "pmean": 0.07356797903776169, "val_aps": 0.9303120558303807, "val_auc": 0.9803554650180417, "val_loss": 0.07584594190120697}
+Epoch 45: {'val_loss': '0.07585', 'val_auc': '0.98036', 'val_aps': '0.93031', 'g0': '0.87232', 'g1': '0.12768', 'flip_r': '0.02168', 'pmean': '0.07357', 'trn_loss0': '0.09168'}
+Protocol-safe validation: {"epoch": 86, "flip_r": 0.015232623928276103, "g0": 0.7943595769682726, "g1": 0.2056404230317274, "pmean": 0.14153368771076202, "val_aps": 0.9142635137788068, "val_auc": 0.9715401732522506, "val_loss": 0.1404493898153305}
+Epoch 86: {'val_loss': '0.14045', 'val_auc': '0.97154', 'val_aps': '0.91426', 'g0': '0.79436', 'g1': '0.20564', 'flip_r': '0.01523', 'pmean': '0.14153', 'trn_loss0': '0.05710'}
+Epoch 00087: reducing learning rate of group 0 to 1.2500e-04.
+Protocol-safe validation: {"epoch": 87, "flip_r": 0.008399704051877965, "g0": 0.793837315576446, "g1": 0.20616268442355398, "pmean": 0.14350903034210205, "val_aps": 0.914793601999613, "val_auc": 0.972069489205242, "val_loss": 0.1413951963186264}
+Epoch 87: {'val_loss': '0.14140', 'val_auc': '0.97207', 'val_aps': '0.91479', 'g0': '0.79384', 'g1': '0.20616', 'flip_r': '0.00840', 'pmean': '0.14351', 'trn_loss0': '0.05336'}
+Protocol-safe validation: {"epoch": 56, "flip_r": 0.012983713189521559, "g0": 0.9002972787560027, "g1": 0.09970272124399726, "pmean": 0.04778952896595001, "val_aps": 0.9020678337318022, "val_auc": 0.9645355923135899, "val_loss": 0.04505375400185585}
+Epoch 56: {'val_loss': '0.04505', 'val_auc': '0.96454', 'val_aps': '0.90207', 'g0': '0.90030', 'g1': '0.09970', 'flip_r': '0.01298', 'pmean': '0.04779', 'trn_loss0': '0.04157'}
+Protocol-safe validation: {"epoch": 43, "flip_r": 0.0027918563697276865, "g0": 0.9035306245167941, "g1": 0.09646937548320592, "pmean": 0.08899535983800888, "val_aps": 0.7636849399157132, "val_auc": 0.8509343927085896, "val_loss": 0.4478733539581299}
+Epoch 43: {'val_loss': '0.44787', 'val_auc': '0.85093', 'val_aps': '0.76368', 'g0': '0.90353', 'g1': '0.09647', 'flip_r': '0.00279', 'pmean': '0.08900', 'trn_loss0': '0.01453'}
+Epoch 00044: reducing learning rate of group 0 to 1.5625e-05.
+Protocol-safe validation: {"epoch": 46, "flip_r": 0.02478231748158071, "g0": 0.8676322839919625, "g1": 0.1323677160080375, "pmean": 0.07427588105201721, "val_aps": 0.9330271798252424, "val_auc": 0.9826689090492772, "val_loss": 0.0728437677025795}
+Epoch 46: {'val_loss': '0.07284', 'val_auc': '0.98267', 'val_aps': '0.93303', 'g0': '0.86763', 'g1': '0.13237', 'flip_r': '0.02478', 'pmean': '0.07428', 'trn_loss0': '0.08940'}
+Protocol-safe validation: {"epoch": 88, "flip_r": 0.011228619924272099, "g0": 0.8036297166731949, "g1": 0.19637028332680506, "pmean": 0.13787904381752014, "val_aps": 0.9127353040235079, "val_auc": 0.9717485148125791, "val_loss": 0.14403900504112244}
+Epoch 88: {'val_loss': '0.14404', 'val_auc': '0.97175', 'val_aps': '0.91274', 'g0': '0.80363', 'g1': '0.19637', 'flip_r': '0.01123', 'pmean': '0.13788', 'trn_loss0': '0.05540'}
+Protocol-safe validation: {"epoch": 89, "flip_r": 0.006832919876398137, "g0": 0.8009313661487575, "g1": 0.19906863385124254, "pmean": 0.1405562311410904, "val_aps": 0.9138516640275673, "val_auc": 0.9719306920966572, "val_loss": 0.14375801384449005}
+Epoch 89: {'val_loss': '0.14376', 'val_auc': '0.97193', 'val_aps': '0.91385', 'g0': '0.80093', 'g1': '0.19907', 'flip_r': '0.00683', 'pmean': '0.14056', 'trn_loss0': '0.05476'}
+Protocol-safe validation: {"epoch": 57, "flip_r": 0.010544502883858017, "g0": 0.8961557029245115, "g1": 0.10384429707548848, "pmean": 0.04967483878135681, "val_aps": 0.9036614327339295, "val_auc": 0.9646150861151453, "val_loss": 0.04546996206045151}
+Epoch 57: {'val_loss': '0.04547', 'val_auc': '0.96462', 'val_aps': '0.90366', 'g0': '0.89616', 'g1': '0.10384', 'flip_r': '0.01054', 'pmean': '0.04967', 'trn_loss0': '0.04009'}
+Protocol-safe validation: {"epoch": 44, "flip_r": 0.0015247830942358904, "g0": 0.904196374881883, "g1": 0.095803625118117, "pmean": 0.0885663703083992, "val_aps": 0.7645439920015775, "val_auc": 0.8546562662326691, "val_loss": 0.45081770420074463}
+Epoch 44: {'val_loss': '0.45082', 'val_auc': '0.85466', 'val_aps': '0.76454', 'g0': '0.90420', 'g1': '0.09580', 'flip_r': '0.00152', 'pmean': '0.08857', 'trn_loss0': '0.01406'}
+Protocol-safe validation: {"epoch": 47, "flip_r": 0.021517079705291358, "g0": 0.8688881446751507, "g1": 0.13111185532484929, "pmean": 0.07106117904186249, "val_aps": 0.9311676583109431, "val_auc": 0.9813661163354415, "val_loss": 0.07333111763000488}
+Epoch 47: {'val_loss': '0.07333', 'val_auc': '0.98137', 'val_aps': '0.93117', 'g0': '0.86889', 'g1': '0.13111', 'flip_r': '0.02152', 'pmean': '0.07106', 'trn_loss0': '0.09924'}
+Protocol-safe validation: {"epoch": 90, "flip_r": 0.009422465944205075, "g0": 0.7941637289463377, "g1": 0.20583627105366237, "pmean": 0.1439966857433319, "val_aps": 0.9133839967231832, "val_auc": 0.9721221095526454, "val_loss": 0.14245004951953888}
+Epoch 90: {'val_loss': '0.14245', 'val_auc': '0.97212', 'val_aps': '0.91338', 'g0': '0.79416', 'g1': '0.20584', 'flip_r': '0.00942', 'pmean': '0.14400', 'trn_loss0': '0.05499'}
+Protocol-safe validation: {"epoch": 58, "flip_r": 0.013974642376197373, "g0": 0.9048453896384379, "g1": 0.09515461036156211, "pmean": 0.04927946999669075, "val_aps": 0.9040326410238577, "val_auc": 0.9644512007896636, "val_loss": 0.04551462456583977}
+Epoch 58: {'val_loss': '0.04551', 'val_auc': '0.96445', 'val_aps': '0.90403', 'g0': '0.90485', 'g1': '0.09515', 'flip_r': '0.01397', 'pmean': '0.04928', 'trn_loss0': '0.04024'}
+Protocol-safe validation: {"epoch": 91, "flip_r": 0.007442224833529181, "g0": 0.7978195586891239, "g1": 0.2021804413108761, "pmean": 0.14170174300670624, "val_aps": 0.9147622335883192, "val_auc": 0.9720858297197776, "val_loss": 0.14098334312438965}
+Epoch 91: {'val_loss': '0.14098', 'val_auc': '0.97209', 'val_aps': '0.91476', 'g0': '0.79782', 'g1': '0.20218', 'flip_r': '0.00744', 'pmean': '0.14170', 'trn_loss0': '0.05674'}
+Protocol-safe validation: {"epoch": 45, "flip_r": 0.0018254445494373336, "g0": 0.9054204965209175, "g1": 0.09457950347908255, "pmean": 0.08763902634382248, "val_aps": 0.7634401803427591, "val_auc": 0.8519938138059318, "val_loss": 0.4463792145252228}
+Epoch 45: {'val_loss': '0.44638', 'val_auc': '0.85199', 'val_aps': '0.76344', 'g0': '0.90542', 'g1': '0.09458', 'flip_r': '0.00183', 'pmean': '0.08764', 'trn_loss0': '0.01533'}
+Protocol-safe validation: {"epoch": 48, "flip_r": 0.03784326858673811, "g0": 0.8429336905559277, "g1": 0.15706630944407235, "pmean": 0.07868162542581558, "val_aps": 0.9269290406476199, "val_auc": 0.9803396735912073, "val_loss": 0.07332620769739151}
+Epoch 48: {'val_loss': '0.07333', 'val_auc': '0.98034', 'val_aps': '0.92693', 'g0': '0.84293', 'g1': '0.15707', 'flip_r': '0.03784', 'pmean': '0.07868', 'trn_loss0': '0.09298'}
+Protocol-safe validation: {"epoch": 92, "flip_r": 0.007616311964138051, "g0": 0.797253775514645, "g1": 0.20274622448535493, "pmean": 0.14185576140880585, "val_aps": 0.9135291660398808, "val_auc": 0.9715707144520372, "val_loss": 0.1418370008468628}
+Epoch 92: {'val_loss': '0.14184', 'val_auc': '0.97157', 'val_aps': '0.91353', 'g0': '0.79725', 'g1': '0.20275', 'flip_r': '0.00762', 'pmean': '0.14186', 'trn_loss0': '0.05430'}
+Epoch 00093: reducing learning rate of group 0 to 6.2500e-05.
+Protocol-safe validation: {"epoch": 59, "flip_r": 0.009833066544706151, "g0": 0.9014660670274666, "g1": 0.09853393297253348, "pmean": 0.047946345061063766, "val_aps": 0.9036807968014906, "val_auc": 0.9652540505105877, "val_loss": 0.044810377061367035}
+Epoch 59: {'val_loss': '0.04481', 'val_auc': '0.96525', 'val_aps': '0.90368', 'g0': '0.90147', 'g1': '0.09853', 'flip_r': '0.00983', 'pmean': '0.04795', 'trn_loss0': '0.04057'}
+Epoch 00060: reducing learning rate of group 0 to 6.2500e-05.
+Protocol-safe validation: {"epoch": 93, "flip_r": 0.004830917874396135, "g0": 0.7951647299473387, "g1": 0.20483527005266136, "pmean": 0.143337219953537, "val_aps": 0.9146033675916451, "val_auc": 0.9718139741356889, "val_loss": 0.14124459028244019}
+Epoch 93: {'val_loss': '0.14124', 'val_auc': '0.97181', 'val_aps': '0.91460', 'g0': '0.79516', 'g1': '0.20484', 'flip_r': '0.00483', 'pmean': '0.14334', 'trn_loss0': '0.05420'}
+Protocol-safe validation: {"epoch": 46, "flip_r": 0.0022764367322394984, "g0": 0.9043896572459411, "g1": 0.09561034275405893, "pmean": 0.08822896331548691, "val_aps": 0.7613885458030523, "val_auc": 0.8481011657266617, "val_loss": 0.4390788972377777}
+Epoch 46: {'val_loss': '0.43908', 'val_auc': '0.84810', 'val_aps': '0.76139', 'g0': '0.90439', 'g1': '0.09561', 'flip_r': '0.00228', 'pmean': '0.08823', 'trn_loss0': '0.01379'}
+Protocol-safe validation: {"epoch": 49, "flip_r": 0.03558271935699933, "g0": 0.8589249832551908, "g1": 0.1410750167448091, "pmean": 0.07275167107582092, "val_aps": 0.929242536472502, "val_auc": 0.9811055577926743, "val_loss": 0.07252128422260284}
+Epoch 49: {'val_loss': '0.07252', 'val_auc': '0.98111', 'val_aps': '0.92924', 'g0': '0.85892', 'g1': '0.14108', 'flip_r': '0.03558', 'pmean': '0.07275', 'trn_loss0': '0.08343'}
+Protocol-safe validation: {"epoch": 60, "flip_r": 0.013314022918413496, "g0": 0.8963335620092995, "g1": 0.10366643799070051, "pmean": 0.048494163900613785, "val_aps": 0.9029360588625368, "val_auc": 0.9646094348970253, "val_loss": 0.04517035931348801}
+Epoch 60: {'val_loss': '0.04517', 'val_auc': '0.96461', 'val_aps': '0.90294', 'g0': '0.89633', 'g1': '0.10367', 'flip_r': '0.01331', 'pmean': '0.04849', 'trn_loss0': '0.04134'}
+Protocol-safe validation: {"epoch": 94, "flip_r": 0.0060930495713104405, "g0": 0.7952952952952953, "g1": 0.2047047047047047, "pmean": 0.1441696435213089, "val_aps": 0.9149648687148734, "val_auc": 0.9719916772312631, "val_loss": 0.14198312163352966}
+Epoch 94: {'val_loss': '0.14198', 'val_auc': '0.97199', 'val_aps': '0.91496', 'g0': '0.79530', 'g1': '0.20470', 'flip_r': '0.00609', 'pmean': '0.14417', 'trn_loss0': '0.05214'}
+Protocol-safe validation: {"epoch": 95, "flip_r": 0.004482743613178396, "g0": 0.7975584279932106, "g1": 0.2024415720067894, "pmean": 0.1440363973379135, "val_aps": 0.9156040278489663, "val_auc": 0.9721237144246088, "val_loss": 0.1423780471086502}
+Epoch 95: {'val_loss': '0.14238', 'val_auc': '0.97212', 'val_aps': '0.91560', 'g0': '0.79756', 'g1': '0.20244', 'flip_r': '0.00448', 'pmean': '0.14404', 'trn_loss0': '0.05134'}
+Protocol-safe validation: {"epoch": 50, "flip_r": 0.021098459477561955, "g0": 0.8647856664434025, "g1": 0.13521433355659745, "pmean": 0.07298293709754944, "val_aps": 0.9273685141523264, "val_auc": 0.9796053722434092, "val_loss": 0.0743572786450386}
+Epoch 50: {'val_loss': '0.07436', 'val_auc': '0.97961', 'val_aps': '0.92737', 'g0': '0.86479', 'g1': '0.13521', 'flip_r': '0.02110', 'pmean': '0.07298', 'trn_loss0': '0.08940'}
+Epoch 00051: reducing learning rate of group 0 to 1.2500e-04.
+Protocol-safe validation: {"epoch": 61, "flip_r": 0.00866427827324237, "g0": 0.898696546992911, "g1": 0.10130345300708896, "pmean": 0.04966418445110321, "val_aps": 0.9037606861528834, "val_auc": 0.964610941888524, "val_loss": 0.04575789347290993}
+Epoch 61: {'val_loss': '0.04576', 'val_auc': '0.96461', 'val_aps': '0.90376', 'g0': '0.89870', 'g1': '0.10130', 'flip_r': '0.00866', 'pmean': '0.04966', 'trn_loss0': '0.03830'}
+Protocol-safe validation: {"epoch": 47, "flip_r": 0.001846920367666008, "g0": 0.9056782063396616, "g1": 0.09432179366033847, "pmean": 0.08732336014509201, "val_aps": 0.7638371933842436, "val_auc": 0.8525551056140183, "val_loss": 0.44993335008621216}
+Epoch 47: {'val_loss': '0.44993', 'val_auc': '0.85256', 'val_aps': '0.76384', 'g0': '0.90568', 'g1': '0.09432', 'flip_r': '0.00185', 'pmean': '0.08732', 'trn_loss0': '0.01405'}
+Protocol-safe validation: {"epoch": 96, "flip_r": 0.004526265395830613, "g0": 0.8000826913870392, "g1": 0.19991730861296078, "pmean": 0.14241646230220795, "val_aps": 0.9144508844072041, "val_auc": 0.9719979021891815, "val_loss": 0.14273382723331451}
+Epoch 96: {'val_loss': '0.14273', 'val_auc': '0.97200', 'val_aps': '0.91445', 'g0': '0.80008', 'g1': '0.19992', 'flip_r': '0.00453', 'pmean': '0.14242', 'trn_loss0': '0.05353'}
+Protocol-safe validation: {"epoch": 62, "flip_r": 0.00802906725614249, "g0": 0.8969179561450313, "g1": 0.10308204385496862, "pmean": 0.049237191677093506, "val_aps": 0.9028241170354863, "val_auc": 0.964545764506206, "val_loss": 0.04552550986409187}
+Epoch 62: {'val_loss': '0.04553', 'val_auc': '0.96455', 'val_aps': '0.90282', 'g0': '0.89692', 'g1': '0.10308', 'flip_r': '0.00803', 'pmean': '0.04924', 'trn_loss0': '0.03928'}
+Protocol-safe validation: {"epoch": 97, "flip_r": 0.0038299168733951345, "g0": 0.8023023023023023, "g1": 0.1976976976976977, "pmean": 0.14154110848903656, "val_aps": 0.913895708431067, "val_auc": 0.9719956650949297, "val_loss": 0.14322108030319214}
+Epoch 97: {'val_loss': '0.14322', 'val_auc': '0.97200', 'val_aps': '0.91390', 'g0': '0.80230', 'g1': '0.19770', 'flip_r': '0.00383', 'pmean': '0.14154', 'trn_loss0': '0.05139'}
+Protocol-safe validation: {"epoch": 51, "flip_r": 0.020596115204286673, "g0": 0.8810281312793035, "g1": 0.11897186872069658, "pmean": 0.07001429796218872, "val_aps": 0.9352667455726102, "val_auc": 0.9814569170397391, "val_loss": 0.07200149446725845}
+Epoch 51: {'val_loss': '0.07200', 'val_auc': '0.98146', 'val_aps': '0.93527', 'g0': '0.88103', 'g1': '0.11897', 'flip_r': '0.02060', 'pmean': '0.07001', 'trn_loss0': '0.07753'}
+Protocol-safe validation: {"epoch": 48, "flip_r": 0.002469719096297569, "g0": 0.9035521003350228, "g1": 0.09644789966497723, "pmean": 0.08912039548158646, "val_aps": 0.7652058542846658, "val_auc": 0.8560636214539599, "val_loss": 0.4426787197589874}
+Epoch 48: {'val_loss': '0.44268', 'val_auc': '0.85606', 'val_aps': '0.76521', 'g0': '0.90355', 'g1': '0.09645', 'flip_r': '0.00247', 'pmean': '0.08912', 'trn_loss0': '0.01425'}
+Protocol-safe validation: {"epoch": 98, "flip_r": 0.003960482221351786, "g0": 0.802041171606389, "g1": 0.197958828393611, "pmean": 0.1418456733226776, "val_aps": 0.9124154134999667, "val_auc": 0.9712733754464704, "val_loss": 0.1452261507511139}
+Epoch 98: {'val_loss': '0.14523', 'val_auc': '0.97127', 'val_aps': '0.91242', 'g0': '0.80204', 'g1': '0.19796', 'flip_r': '0.00396', 'pmean': '0.14185', 'trn_loss0': '0.04750'}
+Epoch 00099: reducing learning rate of group 0 to 3.1250e-05.
+Protocol-safe validation: {"epoch": 63, "flip_r": 0.011255939223009884, "g0": 0.9077673603170974, "g1": 0.09223263968290266, "pmean": 0.047385916113853455, "val_aps": 0.9027384329033747, "val_auc": 0.9640718156798698, "val_loss": 0.04497378692030907}
+Epoch 63: {'val_loss': '0.04497', 'val_auc': '0.96407', 'val_aps': '0.90274', 'g0': '0.90777', 'g1': '0.09223', 'flip_r': '0.01126', 'pmean': '0.04739', 'trn_loss0': '0.03895'}
+Protocol-safe validation: {"epoch": 99, "flip_r": 0.0039169604386995694, "g0": 0.8003873438656047, "g1": 0.19961265613439527, "pmean": 0.14265546202659607, "val_aps": 0.914791011453442, "val_auc": 0.9716487209559512, "val_loss": 0.14280277490615845}
+Epoch 99: {'val_loss': '0.14280', 'val_auc': '0.97165', 'val_aps': '0.91479', 'g0': '0.80039', 'g1': '0.19961', 'flip_r': '0.00392', 'pmean': '0.14266', 'trn_loss0': '0.05101'}
+Protocol-safe validation: {"epoch": 52, "flip_r": 0.0235264567983925, "g0": 0.8621902210314802, "g1": 0.13780977896851976, "pmean": 0.07496294379234314, "val_aps": 0.9292714339157353, "val_auc": 0.9803752043015846, "val_loss": 0.07429180294275284}
+Epoch 52: {'val_loss': '0.07429', 'val_auc': '0.98038', 'val_aps': '0.92927', 'g0': '0.86219', 'g1': '0.13781', 'flip_r': '0.02353', 'pmean': '0.07496', 'trn_loss0': '0.07608'}
+Protocol-safe validation: {"epoch": 49, "flip_r": 0.002061678549952753, "g0": 0.9041534232454257, "g1": 0.09584657675457435, "pmean": 0.08851949870586395, "val_aps": 0.7634118958186086, "val_auc": 0.8503151446235042, "val_loss": 0.4454149007797241}
+Epoch 49: {'val_loss': '0.44541', 'val_auc': '0.85032', 'val_aps': '0.76341', 'g0': '0.90415', 'g1': '0.09585', 'flip_r': '0.00206', 'pmean': '0.08852', 'trn_loss0': '0.01537'}
+Epoch 00050: reducing learning rate of group 0 to 7.8125e-06.
+Protocol-safe validation: {"epoch": 100, "flip_r": 0.003960482221351786, "g0": 0.8038255646951299, "g1": 0.19617443530487008, "pmean": 0.14127236604690552, "val_aps": 0.9144361167375357, "val_auc": 0.9715787874443378, "val_loss": 0.14380720257759094}
+Epoch 100: {'val_loss': '0.14381', 'val_auc': '0.97158', 'val_aps': '0.91444', 'g0': '0.80383', 'g1': '0.19617', 'flip_r': '0.00396', 'pmean': '0.14127', 'trn_loss0': '0.04673'}
+Protocol-safe validation: {"epoch": 64, "flip_r": 0.004853012170643088, "g0": 0.9066747973676855, "g1": 0.09332520263231446, "pmean": 0.047937601804733276, "val_aps": 0.9023232608154758, "val_auc": 0.9635714945023067, "val_loss": 0.0451446995139122}
+Epoch 64: {'val_loss': '0.04514', 'val_auc': '0.96357', 'val_aps': '0.90232', 'g0': '0.90667', 'g1': '0.09333', 'flip_r': '0.00485', 'pmean': '0.04794', 'trn_loss0': '0.03920'}
+Protocol-safe validation: {"epoch": 101, "flip_r": 0.005396701048874962, "g0": 0.7990816903860382, "g1": 0.2009183096139618, "pmean": 0.14366212487220764, "val_aps": 0.9148254155093218, "val_auc": 0.9716060216352304, "val_loss": 0.14272785186767578}
+Epoch 101: {'val_loss': '0.14273', 'val_auc': '0.97161', 'val_aps': '0.91483', 'g0': '0.79908', 'g1': '0.20092', 'flip_r': '0.00540', 'pmean': '0.14366', 'trn_loss0': '0.05107'}
+Protocol-safe validation: {"epoch": 53, "flip_r": 0.01942397856664434, "g0": 0.8459477561955794, "g1": 0.15405224380442062, "pmean": 0.07886668294668198, "val_aps": 0.9279965867162961, "val_auc": 0.980458109292465, "val_loss": 0.0753822848200798}
+Epoch 53: {'val_loss': '0.07538', 'val_auc': '0.98046', 'val_aps': '0.92800', 'g0': '0.84595', 'g1': '0.15405', 'flip_r': '0.01942', 'pmean': '0.07887', 'trn_loss0': '0.09082'}
+Protocol-safe validation: {"epoch": 50, "flip_r": 0.0014818314577785413, "g0": 0.9051627867021733, "g1": 0.09483721329782664, "pmean": 0.08769530057907104, "val_aps": 0.764507293106702, "val_auc": 0.8519326650221491, "val_loss": 0.44189053773880005}
+Epoch 50: {'val_loss': '0.44189', 'val_auc': '0.85193', 'val_aps': '0.76451', 'g0': '0.90516', 'g1': '0.09484', 'flip_r': '0.00148', 'pmean': '0.08770', 'trn_loss0': '0.01384'}
+Protocol-safe validation: {"epoch": 65, "flip_r": 0.008206926340930457, "g0": 0.8996366592982189, "g1": 0.10036334070178113, "pmean": 0.04836779087781906, "val_aps": 0.9013685959606327, "val_auc": 0.9631872116701421, "val_loss": 0.04519941285252571}
+Epoch 65: {'val_loss': '0.04520', 'val_auc': '0.96319', 'val_aps': '0.90137', 'g0': '0.89964', 'g1': '0.10036', 'flip_r': '0.00821', 'pmean': '0.04837', 'trn_loss0': '0.03934'}
+Epoch 00066: reducing learning rate of group 0 to 3.1250e-05.
+Protocol-safe validation: {"epoch": 102, "flip_r": 0.0037428733080906995, "g0": 0.80225878051965, "g1": 0.19774121948034992, "pmean": 0.1424785703420639, "val_aps": 0.9141081134698283, "val_auc": 0.9715141062409678, "val_loss": 0.14407846331596375}
+Epoch 102: {'val_loss': '0.14408', 'val_auc': '0.97151', 'val_aps': '0.91411', 'g0': '0.80226', 'g1': '0.19774', 'flip_r': '0.00374', 'pmean': '0.14248', 'trn_loss0': '0.04994'}
+Protocol-safe validation: {"epoch": 103, "flip_r": 0.0018061539800670236, "g0": 0.8020629324977151, "g1": 0.1979370675022849, "pmean": 0.14247892796993256, "val_aps": 0.9139900724202852, "val_auc": 0.9714162576836892, "val_loss": 0.14403238892555237}
+Epoch 103: {'val_loss': '0.14403', 'val_auc': '0.97142', 'val_aps': '0.91399', 'g0': '0.80206', 'g1': '0.19794', 'flip_r': '0.00181', 'pmean': '0.14248', 'trn_loss0': '0.04783'}
+Protocol-safe validation: {"epoch": 54, "flip_r": 0.018670462156731415, "g0": 0.8321332886805091, "g1": 0.16786671131949096, "pmean": 0.08431776612997055, "val_aps": 0.926206095627756, "val_auc": 0.9783539016667852, "val_loss": 0.07684764266014099}
+Epoch 54: {'val_loss': '0.07685', 'val_auc': '0.97835', 'val_aps': '0.92621', 'g0': '0.83213', 'g1': '0.16787', 'flip_r': '0.01867', 'pmean': '0.08432', 'trn_loss0': '0.09077'}
+Protocol-safe validation: {"epoch": 51, "flip_r": 0.0017395412765226356, "g0": 0.9036809552443948, "g1": 0.09631904475560518, "pmean": 0.08911294490098953, "val_aps": 0.7623278681600094, "val_auc": 0.8488639292705525, "val_loss": 0.44223716855049133}
+Epoch 51: {'val_loss': '0.44224', 'val_auc': '0.84886', 'val_aps': '0.76233', 'g0': '0.90368', 'g1': '0.09632', 'flip_r': '0.00174', 'pmean': '0.08911', 'trn_loss0': '0.01369'}
+Protocol-safe validation: {"epoch": 66, "flip_r": 0.0038366745432832786, "g0": 0.898544096348807, "g1": 0.10145590365119293, "pmean": 0.04884636402130127, "val_aps": 0.9010749743632399, "val_auc": 0.9629962004976839, "val_loss": 0.045715585350990295}
+Epoch 66: {'val_loss': '0.04572', 'val_auc': '0.96300', 'val_aps': '0.90107', 'g0': '0.89854', 'g1': '0.10146', 'flip_r': '0.00384', 'pmean': '0.04885', 'trn_loss0': '0.03845'}
+Protocol-safe validation: {"epoch": 104, "flip_r": 0.0045045045045045045, "g0": 0.7982112547329938, "g1": 0.20178874526700613, "pmean": 0.14409339427947998, "val_aps": 0.9151173844331599, "val_auc": 0.9718015728523359, "val_loss": 0.14239364862442017}
+Epoch 104: {'val_loss': '0.14239', 'val_auc': '0.97180', 'val_aps': '0.91512', 'g0': '0.79821', 'g1': '0.20179', 'flip_r': '0.00450', 'pmean': '0.14409', 'trn_loss0': '0.04994'}
+Epoch 00105: reducing learning rate of group 0 to 1.5625e-05.
+Protocol-safe validation: {"epoch": 67, "flip_r": 0.0034809563737073458, "g0": 0.898569504789491, "g1": 0.10143049521050893, "pmean": 0.04884405434131622, "val_aps": 0.9017638635956995, "val_auc": 0.9630971689280959, "val_loss": 0.04549688845872879}
+Epoch 67: {'val_loss': '0.04550', 'val_auc': '0.96310', 'val_aps': '0.90176', 'g0': '0.89857', 'g1': '0.10143', 'flip_r': '0.00348', 'pmean': '0.04884', 'trn_loss0': '0.03977'}
+Protocol-safe validation: {"epoch": 55, "flip_r": 0.04018754186202277, "g0": 0.8667950435365037, "g1": 0.1332049564634963, "pmean": 0.07421393692493439, "val_aps": 0.9320975985280057, "val_auc": 0.9811845149268462, "val_loss": 0.0726904422044754}
+Epoch 55: {'val_loss': '0.07269', 'val_auc': '0.98118', 'val_aps': '0.93210', 'g0': '0.86680', 'g1': '0.13320', 'flip_r': '0.04019', 'pmean': '0.07421', 'trn_loss0': '0.08496'}
+Protocol-safe validation: {"epoch": 105, "flip_r": 0.003003003003003003, "g0": 0.8004743874309092, "g1": 0.19952561256909082, "pmean": 0.14314451813697815, "val_aps": 0.9145019191440498, "val_auc": 0.9717183626726624, "val_loss": 0.14318527281284332}
+Epoch 105: {'val_loss': '0.14319', 'val_auc': '0.97172', 'val_aps': '0.91450', 'g0': '0.80047', 'g1': '0.19953', 'flip_r': '0.00300', 'pmean': '0.14314', 'trn_loss0': '0.04797'}
+Protocol-safe validation: {"epoch": 52, "flip_r": 0.001718065458293961, "g0": 0.9049265527016579, "g1": 0.09507344729834206, "pmean": 0.0879187285900116, "val_aps": 0.7602388567085607, "val_auc": 0.8429025859108488, "val_loss": 0.44911453127861023}
+Epoch 52: {'val_loss': '0.44911', 'val_auc': '0.84290', 'val_aps': '0.76024', 'g0': '0.90493', 'g1': '0.09507', 'flip_r': '0.00172', 'pmean': '0.08792', 'trn_loss0': '0.01435'}
+Protocol-safe validation: {"epoch": 106, "flip_r": 0.0024154589371980675, "g0": 0.7996692344518431, "g1": 0.20033076554815685, "pmean": 0.14357103407382965, "val_aps": 0.9144400058871394, "val_auc": 0.9718005515701778, "val_loss": 0.14341484010219574}
+Epoch 106: {'val_loss': '0.14341', 'val_auc': '0.97180', 'val_aps': '0.91444', 'g0': '0.79967', 'g1': '0.20033', 'flip_r': '0.00242', 'pmean': '0.14357', 'trn_loss0': '0.04964'}
+Protocol-safe validation: {"epoch": 68, "flip_r": 0.004166984272175217, "g0": 0.8969433645857153, "g1": 0.10305663541428463, "pmean": 0.048647429794073105, "val_aps": 0.901306433146829, "val_auc": 0.9631069643728374, "val_loss": 0.04535287618637085}
+Epoch 68: {'val_loss': '0.04535', 'val_auc': '0.96311', 'val_aps': '0.90131', 'g0': '0.89694', 'g1': '0.10306', 'flip_r': '0.00417', 'pmean': '0.04865', 'trn_loss0': '0.03925'}
+Protocol-safe validation: {"epoch": 56, "flip_r": 0.015488948425987943, "g0": 0.8623576691225721, "g1": 0.137642330877428, "pmean": 0.07449578493833542, "val_aps": 0.9329755695539663, "val_auc": 0.9815674570275797, "val_loss": 0.0723486989736557}
+Epoch 56: {'val_loss': '0.07235', 'val_auc': '0.98157', 'val_aps': '0.93298', 'g0': '0.86236', 'g1': '0.13764', 'flip_r': '0.01549', 'pmean': '0.07450', 'trn_loss0': '0.08485'}
+Epoch 00057: reducing learning rate of group 0 to 6.2500e-05.
+Protocol-safe validation: {"epoch": 107, "flip_r": 0.0040910475693084385, "g0": 0.8031944988466727, "g1": 0.19680550115332723, "pmean": 0.14221012592315674, "val_aps": 0.9148578475827485, "val_auc": 0.9716823746346971, "val_loss": 0.14359702169895172}
+Epoch 107: {'val_loss': '0.14360', 'val_auc': '0.97168', 'val_aps': '0.91486', 'g0': '0.80319', 'g1': '0.19681', 'flip_r': '0.00409', 'pmean': '0.14221', 'trn_loss0': '0.04662'}
+Protocol-safe validation: {"epoch": 53, "flip_r": 0.0015677347306932395, "g0": 0.905119835065716, "g1": 0.094880164934284, "pmean": 0.08805938810110092, "val_aps": 0.7643373554187227, "val_auc": 0.8525842310989846, "val_loss": 0.45176807045936584}
+Epoch 53: {'val_loss': '0.45177', 'val_auc': '0.85258', 'val_aps': '0.76434', 'g0': '0.90512', 'g1': '0.09488', 'flip_r': '0.00157', 'pmean': '0.08806', 'trn_loss0': '0.01420'}
+Protocol-safe validation: {"epoch": 69, "flip_r": 0.004192392712859211, "g0": 0.8942754783138959, "g1": 0.10572452168610412, "pmean": 0.04957611858844757, "val_aps": 0.9015794738004829, "val_auc": 0.9629830143220703, "val_loss": 0.04577285423874855}
+Epoch 69: {'val_loss': '0.04577', 'val_auc': '0.96298', 'val_aps': '0.90158', 'g0': '0.89428', 'g1': '0.10572', 'flip_r': '0.00419', 'pmean': '0.04958', 'trn_loss0': '0.03826'}
+Protocol-safe validation: {"epoch": 108, "flip_r": 0.0023501762632197414, "g0": 0.8018018018018018, "g1": 0.1981981981981982, "pmean": 0.1429663747549057, "val_aps": 0.9153560403432495, "val_auc": 0.971803080459332, "val_loss": 0.14333702623844147}
+Epoch 108: {'val_loss': '0.14334', 'val_auc': '0.97180', 'val_aps': '0.91536', 'g0': '0.80180', 'g1': '0.19820', 'flip_r': '0.00235', 'pmean': '0.14297', 'trn_loss0': '0.04938'}
+Protocol-safe validation: {"epoch": 57, "flip_r": 0.016995981245813797, "g0": 0.8542364367046216, "g1": 0.14576356329537843, "pmean": 0.0781080573797226, "val_aps": 0.9292458978785754, "val_auc": 0.9802251857466582, "val_loss": 0.07512476295232773}
+Epoch 57: {'val_loss': '0.07512', 'val_auc': '0.98023', 'val_aps': '0.92925', 'g0': '0.85424', 'g1': '0.14576', 'flip_r': '0.01700', 'pmean': '0.07811', 'trn_loss0': '0.08753'}
+Protocol-safe validation: {"epoch": 54, "flip_r": 0.0021690576410961257, "g0": 0.9033802937891934, "g1": 0.09661970621080664, "pmean": 0.08928114175796509, "val_aps": 0.7602479393868625, "val_auc": 0.8438738447054681, "val_loss": 0.44909432530403137}
+Epoch 54: {'val_loss': '0.44909', 'val_auc': '0.84387', 'val_aps': '0.76025', 'g0': '0.90338', 'g1': '0.09662', 'flip_r': '0.00217', 'pmean': '0.08928', 'trn_loss0': '0.01398'}
+Protocol-safe validation: {"epoch": 109, "flip_r": 0.0017408713060886973, "g0": 0.8027157592374984, "g1": 0.19728424076250164, "pmean": 0.1426585614681244, "val_aps": 0.915153544104911, "val_auc": 0.9717916031931699, "val_loss": 0.14349354803562164}
+Epoch 109: {'val_loss': '0.14349', 'val_auc': '0.97179', 'val_aps': '0.91515', 'g0': '0.80272', 'g1': '0.19728', 'flip_r': '0.00174', 'pmean': '0.14266', 'trn_loss0': '0.05021'}
+Protocol-safe validation: {"epoch": 70, "flip_r": 0.00398912518738725, "g0": 0.8961302944838275, "g1": 0.10386970551617247, "pmean": 0.04912533983588219, "val_aps": 0.9011619322321125, "val_auc": 0.9626819927702083, "val_loss": 0.045592986047267914}
+Epoch 70: {'val_loss': '0.04559', 'val_auc': '0.96268', 'val_aps': '0.90116', 'g0': '0.89613', 'g1': '0.10387', 'flip_r': '0.00399', 'pmean': '0.04913', 'trn_loss0': '0.03752'}
+Protocol-safe validation: {"epoch": 110, "flip_r": 0.0025460242851547197, "g0": 0.8003873438656047, "g1": 0.19961265613439527, "pmean": 0.1436111330986023, "val_aps": 0.9147958553644665, "val_auc": 0.9718060956733234, "val_loss": 0.14357924461364746}
+Epoch 110: {'val_loss': '0.14358', 'val_auc': '0.97181', 'val_aps': '0.91480', 'g0': '0.80039', 'g1': '0.19961', 'flip_r': '0.00255', 'pmean': '0.14361', 'trn_loss0': '0.04931'}
+Epoch 00111: reducing learning rate of group 0 to 7.8125e-06.
+training time elapsed 944.30s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/yelpchi-seed2-best-epoch=0085-val_aps=0.916866.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.28it/s]100%|██████████| 2/2 [00:00<00:00, 13.23it/s]
+{'final_trn/auc': '0.99997', 'final_trn/aps': '0.99986', 'final_trn/mf1': '0.99770', 'final_trn/th1': '0.57488', 'final_trn/gme': '0.99861', 'final_trn/th2': '0.29951', 'final_trn/rec': '0.99401', 'final_trn/pre': '0.99775'}
+{'final_val/auc': '0.97156', 'final_val/aps': '0.91515', 'final_val/mf1': '0.91161', 'final_val/th1': '0.57425', 'final_val/gme': '0.92665', 'final_val/th2': '0.08317', 'final_val/rec': '0.81543', 'final_val/pre': '0.88216'}
+{'final_tst/auc': '0.97701', 'final_tst/aps': '0.92164', 'final_tst/mf1': '0.91185', 'final_tst/th1': '0.57425', 'final_tst/gme': '0.89666', 'final_tst/th2': '0.08317', 'final_tst/rec': '0.81967', 'final_tst/pre': '0.87930'}
+{'final_tst/fraud_f1': '0.84844'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+==============================
+==============================
+Protocol-safe validation: {"epoch": 58, "flip_r": 0.008707300736771601, "g0": 0.8579202947086403, "g1": 0.1420797052913597, "pmean": 0.07719399034976959, "val_aps": 0.9287970571535451, "val_auc": 0.9809200085273705, "val_loss": 0.07517427206039429}
+Epoch 58: {'val_loss': '0.07517', 'val_auc': '0.98092', 'val_aps': '0.92880', 'g0': '0.85792', 'g1': '0.14208', 'flip_r': '0.00871', 'pmean': '0.07719', 'trn_loss0': '0.08516'}
+Protocol-safe validation: {"epoch": 55, "flip_r": 0.0024911949145262433, "g0": 0.9017051799673568, "g1": 0.09829482003264324, "pmean": 0.090438112616539, "val_aps": 0.7623832072256043, "val_auc": 0.849982043377228, "val_loss": 0.4311937987804413}
+Epoch 55: {'val_loss': '0.43119', 'val_auc': '0.84998', 'val_aps': '0.76238', 'g0': '0.90171', 'g1': '0.09829', 'flip_r': '0.00249', 'pmean': '0.09044', 'trn_loss0': '0.01421'}
+Epoch 00056: reducing learning rate of group 0 to 3.9063e-06.
+Protocol-safe validation: {"epoch": 71, "flip_r": 0.00973143278197017, "g0": 0.9054043753334858, "g1": 0.09459562466651422, "pmean": 0.048121340572834015, "val_aps": 0.902024685926608, "val_auc": 0.9635485128819516, "val_loss": 0.04511057585477829}
+Epoch 71: {'val_loss': '0.04511', 'val_auc': '0.96355', 'val_aps': '0.90202', 'g0': '0.90540', 'g1': '0.09460', 'flip_r': '0.00973', 'pmean': '0.04812', 'trn_loss0': '0.03855'}
+Epoch 00072: reducing learning rate of group 0 to 1.5625e-05.
+Protocol-safe validation: {"epoch": 59, "flip_r": 0.01640991292699263, "g0": 0.8736604152712659, "g1": 0.1263395847287341, "pmean": 0.07237934321165085, "val_aps": 0.931854214142858, "val_auc": 0.9818517027105984, "val_loss": 0.073229119181633}
+Epoch 59: {'val_loss': '0.07323', 'val_auc': '0.98185', 'val_aps': '0.93185', 'g0': '0.87366', 'g1': '0.12634', 'flip_r': '0.01641', 'pmean': '0.07238', 'trn_loss0': '0.08110'}
+Protocol-safe validation: {"epoch": 72, "flip_r": 0.0079782503747745, "g0": 0.8975277587214473, "g1": 0.10247224127855274, "pmean": 0.049339693039655685, "val_aps": 0.902577130967679, "val_auc": 0.9642119658892474, "val_loss": 0.04544627666473389}
+Epoch 72: {'val_loss': '0.04545', 'val_auc': '0.96421', 'val_aps': '0.90258', 'g0': '0.89753', 'g1': '0.10247', 'flip_r': '0.00798', 'pmean': '0.04934', 'trn_loss0': '0.03926'}
+Protocol-safe validation: {"epoch": 56, "flip_r": 0.0023408641869255217, "g0": 0.9036594794261661, "g1": 0.09634052057383387, "pmean": 0.08888569474220276, "val_aps": 0.7611450463916326, "val_auc": 0.8460034431922396, "val_loss": 0.4461110830307007}
+Epoch 56: {'val_loss': '0.44611', 'val_auc': '0.84600', 'val_aps': '0.76115', 'g0': '0.90366', 'g1': '0.09634', 'flip_r': '0.00234', 'pmean': '0.08889', 'trn_loss0': '0.01355'}
+Protocol-safe validation: {"epoch": 73, "flip_r": 0.005310364102955002, "g0": 0.9018217851970425, "g1": 0.09817821480295755, "pmean": 0.04855057969689369, "val_aps": 0.9023866025444294, "val_auc": 0.9641923749997645, "val_loss": 0.04502995312213898}
+Epoch 73: {'val_loss': '0.04503', 'val_auc': '0.96419', 'val_aps': '0.90239', 'g0': '0.90182', 'g1': '0.09818', 'flip_r': '0.00531', 'pmean': '0.04855', 'trn_loss0': '0.03687'}
+Protocol-safe validation: {"epoch": 60, "flip_r": 0.011386470194239785, "g0": 0.8667950435365037, "g1": 0.1332049564634963, "pmean": 0.07566352933645248, "val_aps": 0.9316356900230415, "val_auc": 0.9822030619576632, "val_loss": 0.07358764857053757}
+Epoch 60: {'val_loss': '0.07359', 'val_auc': '0.98220', 'val_aps': '0.93164', 'g0': '0.86680', 'g1': '0.13320', 'flip_r': '0.01139', 'pmean': '0.07566', 'trn_loss0': '0.07762'}
+Protocol-safe validation: {"epoch": 57, "flip_r": 0.00176101709475131, "g0": 0.9050339317928013, "g1": 0.09496606820719869, "pmean": 0.08799269795417786, "val_aps": 0.7600037642939087, "val_auc": 0.8429408959922546, "val_loss": 0.45167192816734314}
+Epoch 57: {'val_loss': '0.45167', 'val_auc': '0.84294', 'val_aps': '0.76000', 'g0': '0.90503', 'g1': '0.09497', 'flip_r': '0.00176', 'pmean': '0.08799', 'trn_loss0': '0.01332'}
+Protocol-safe validation: {"epoch": 74, "flip_r": 0.006402927052366796, "g0": 0.8955204919074117, "g1": 0.10447950809258835, "pmean": 0.04921800270676613, "val_aps": 0.9021006411788158, "val_auc": 0.9641784353284015, "val_loss": 0.0452713780105114}
+Epoch 74: {'val_loss': '0.04527', 'val_auc': '0.96418', 'val_aps': '0.90210', 'g0': '0.89552', 'g1': '0.10448', 'flip_r': '0.00640', 'pmean': '0.04922', 'trn_loss0': '0.03851'}
+Protocol-safe validation: {"epoch": 61, "flip_r": 0.013228399196249163, "g0": 0.8614367046215673, "g1": 0.13856329537843268, "pmean": 0.07619797438383102, "val_aps": 0.9332192267764731, "val_auc": 0.9824044026498014, "val_loss": 0.07299236953258514}
+Epoch 61: {'val_loss': '0.07299', 'val_auc': '0.98240', 'val_aps': '0.93322', 'g0': '0.86144', 'g1': '0.13856', 'flip_r': '0.01323', 'pmean': '0.07620', 'trn_loss0': '0.08465'}
+Protocol-safe validation: {"epoch": 58, "flip_r": 0.0014388798213211924, "g0": 0.9036809552443948, "g1": 0.09631904475560518, "pmean": 0.08909516781568527, "val_aps": 0.7645028930779202, "val_auc": 0.8544149618353004, "val_loss": 0.43831130862236023}
+Epoch 58: {'val_loss': '0.43831', 'val_auc': '0.85441', 'val_aps': '0.76450', 'g0': '0.90368', 'g1': '0.09632', 'flip_r': '0.00144', 'pmean': '0.08910', 'trn_loss0': '0.01483'}
+Protocol-safe validation: {"epoch": 75, "flip_r": 0.012983713189521559, "g0": 0.9083517544528292, "g1": 0.09164824554717077, "pmean": 0.04719819873571396, "val_aps": 0.9020014321501841, "val_auc": 0.9632697194546951, "val_loss": 0.04458220675587654}
+Epoch 75: {'val_loss': '0.04458', 'val_auc': '0.96327', 'val_aps': '0.90200', 'g0': '0.90835', 'g1': '0.09165', 'flip_r': '0.01298', 'pmean': '0.04720', 'trn_loss0': '0.03816'}
+Protocol-safe validation: {"epoch": 62, "flip_r": 0.01624246483590087, "g0": 0.87215338245144, "g1": 0.12784661754855994, "pmean": 0.07285472005605698, "val_aps": 0.9312531389602904, "val_auc": 0.9814134906159446, "val_loss": 0.07344553619623184}
+Epoch 62: {'val_loss': '0.07345', 'val_auc': '0.98141', 'val_aps': '0.93125', 'g0': '0.87215', 'g1': '0.12785', 'flip_r': '0.01624', 'pmean': '0.07285', 'trn_loss0': '0.07511'}
+Epoch 00063: reducing learning rate of group 0 to 3.1250e-05.
+Protocol-safe validation: {"epoch": 59, "flip_r": 0.0023408641869255217, "g0": 0.9042178507001116, "g1": 0.09578214929988832, "pmean": 0.08853729814291, "val_aps": 0.762998556467664, "val_auc": 0.8507285005787769, "val_loss": 0.45544373989105225}
+Epoch 59: {'val_loss': '0.45544', 'val_auc': '0.85073', 'val_aps': '0.76300', 'g0': '0.90422', 'g1': '0.09578', 'flip_r': '0.00234', 'pmean': '0.08854', 'trn_loss0': '0.01313'}
+Protocol-safe validation: {"epoch": 76, "flip_r": 0.016947429936224813, "g0": 0.8915059582793404, "g1": 0.1084940417206596, "pmean": 0.04996832087635994, "val_aps": 0.9028959580673448, "val_auc": 0.9644625032259037, "val_loss": 0.04561315476894379}
+Epoch 76: {'val_loss': '0.04561', 'val_auc': '0.96446', 'val_aps': '0.90290', 'g0': '0.89151', 'g1': '0.10849', 'flip_r': '0.01695', 'pmean': '0.04997', 'trn_loss0': '0.03813'}
+Protocol-safe validation: {"epoch": 63, "flip_r": 0.014735432016075016, "g0": 0.8636135298057602, "g1": 0.13638647019423977, "pmean": 0.07586062699556351, "val_aps": 0.9348090720499995, "val_auc": 0.981768797719718, "val_loss": 0.0717429369688034}
+Epoch 63: {'val_loss': '0.07174', 'val_auc': '0.98177', 'val_aps': '0.93481', 'g0': '0.86361', 'g1': '0.13639', 'flip_r': '0.01474', 'pmean': '0.07586', 'trn_loss0': '0.07449'}
+training time elapsed 1004.55s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/amazon-seed2-best-epoch=0038-val_aps=0.938621.ckpt
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 16.65it/s]
+{'final_trn/auc': '0.99229', 'final_trn/aps': '0.95368', 'final_trn/mf1': '0.94145', 'final_trn/th1': '0.23588', 'final_trn/gme': '0.95318', 'final_trn/th2': '0.03595', 'final_trn/rec': '0.88415', 'final_trn/pre': '0.90062'}
+{'final_val/auc': '0.98363', 'final_val/aps': '0.93813', 'final_val/mf1': '0.94132', 'final_val/th1': '0.54026', 'final_val/gme': '0.95221', 'final_val/th2': '0.10985', 'final_val/rec': '0.84049', 'final_val/pre': '0.94483'}
+{'final_tst/auc': '0.98214', 'final_tst/aps': '0.92734', 'final_tst/mf1': '0.92940', 'final_tst/th1': '0.54026', 'final_tst/gme': '0.90319', 'final_tst/th2': '0.10985', 'final_tst/rec': '0.82121', 'final_tst/pre': '0.92808'}
+{'final_tst/fraud_f1': '0.87138'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+==============================
+==============================
+Protocol-safe validation: {"epoch": 60, "flip_r": 0.0021261060046387768, "g0": 0.9039816166995962, "g1": 0.09601838330040374, "pmean": 0.08883684873580933, "val_aps": 0.765716306848915, "val_auc": 0.855755077952175, "val_loss": 0.43555471301078796}
+Epoch 60: {'val_loss': '0.43555', 'val_auc': '0.85576', 'val_aps': '0.76572', 'g0': '0.90398', 'g1': '0.09602', 'flip_r': '0.00213', 'pmean': '0.08884', 'trn_loss0': '0.01321'}
+Protocol-safe validation: {"epoch": 77, "flip_r": 0.007749574408618543, "g0": 0.898899814518383, "g1": 0.10110018548161699, "pmean": 0.04871094599366188, "val_aps": 0.9024261850779602, "val_auc": 0.9639256375044976, "val_loss": 0.04503118246793747}
+Epoch 77: {'val_loss': '0.04503', 'val_auc': '0.96393', 'val_aps': '0.90243', 'g0': '0.89890', 'g1': '0.10110', 'flip_r': '0.00775', 'pmean': '0.04871', 'trn_loss0': '0.03777'}
+Epoch 00078: reducing learning rate of group 0 to 7.8125e-06.
+Protocol-safe validation: {"epoch": 61, "flip_r": 0.003693840735332016, "g0": 0.9075466025255562, "g1": 0.09245339747444378, "pmean": 0.08656229078769684, "val_aps": 0.760758359391164, "val_auc": 0.8438017431676426, "val_loss": 0.4597931504249573}
+Epoch 61: {'val_loss': '0.45979', 'val_auc': '0.84380', 'val_aps': '0.76076', 'g0': '0.90755', 'g1': '0.09245', 'flip_r': '0.00369', 'pmean': '0.08656', 'trn_loss0': '0.01425'}
+Epoch 00062: reducing learning rate of group 0 to 1.9531e-06.
+Protocol-safe validation: {"epoch": 78, "flip_r": 0.007165180272886653, "g0": 0.8918362680082323, "g1": 0.10816373199176767, "pmean": 0.049494341015815735, "val_aps": 0.9022215525648163, "val_auc": 0.9638502879295634, "val_loss": 0.04542948305606842}
+Epoch 78: {'val_loss': '0.04543', 'val_auc': '0.96385', 'val_aps': '0.90222', 'g0': '0.89184', 'g1': '0.10816', 'flip_r': '0.00717', 'pmean': '0.04949', 'trn_loss0': '0.03793'}
+Protocol-safe validation: {"epoch": 79, "flip_r": 0.005818532916634906, "g0": 0.8972482658739234, "g1": 0.10275173412607669, "pmean": 0.048967473208904266, "val_aps": 0.9020575643774533, "val_auc": 0.96358468067792, "val_loss": 0.04533574357628822}
+Epoch 79: {'val_loss': '0.04534', 'val_auc': '0.96358', 'val_aps': '0.90206', 'g0': '0.89725', 'g1': '0.10275', 'flip_r': '0.00582', 'pmean': '0.04897', 'trn_loss0': '0.03808'}
+Protocol-safe validation: {"epoch": 62, "flip_r": 0.003049566188471781, "g0": 0.9045399879735417, "g1": 0.09546001202645821, "pmean": 0.08833499252796173, "val_aps": 0.7642821674192387, "val_auc": 0.8528993560762933, "val_loss": 0.44305023550987244}
+Epoch 62: {'val_loss': '0.44305', 'val_auc': '0.85290', 'val_aps': '0.76428', 'g0': '0.90454', 'g1': '0.09546', 'flip_r': '0.00305', 'pmean': '0.08833', 'trn_loss0': '0.01505'}
+Protocol-safe validation: {"epoch": 80, "flip_r": 0.004649744645171126, "g0": 0.9012373910613106, "g1": 0.09876260893868943, "pmean": 0.04829990863800049, "val_aps": 0.9020718463274403, "val_auc": 0.9635963598620351, "val_loss": 0.0450238361954689}
+Epoch 80: {'val_loss': '0.04502', 'val_auc': '0.96360', 'val_aps': '0.90207', 'g0': '0.90124', 'g1': '0.09876', 'flip_r': '0.00465', 'pmean': '0.04830', 'trn_loss0': '0.03890'}
+Protocol-safe validation: {"epoch": 63, "flip_r": 0.0012670732754917963, "g0": 0.9049480285198866, "g1": 0.09505197148011339, "pmean": 0.0884276032447815, "val_aps": 0.7668730096527753, "val_auc": 0.8574108593167367, "val_loss": 0.4440095126628876}
+Epoch 63: {'val_loss': '0.44401', 'val_auc': '0.85741', 'val_aps': '0.76687', 'g0': '0.90495', 'g1': '0.09505', 'flip_r': '0.00127', 'pmean': '0.08843', 'trn_loss0': '0.01320'}
+training time elapsed 1033.47s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/elliptic_of_amnet-seed2-best-epoch=0038-val_aps=0.775630.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 47.66it/s]
+{'final_trn/auc': '0.99980', 'final_trn/aps': '0.99864', 'final_trn/mf1': '0.99550', 'final_trn/th1': '0.40424', 'final_trn/gme': '0.99569', 'final_trn/th2': '0.17799', 'final_trn/rec': '0.99015', 'final_trn/pre': '0.99308'}
+{'final_val/auc': '0.87239', 'final_val/aps': '0.77489', 'final_val/mf1': '0.86106', 'final_val/th1': '0.77214', 'final_val/gme': '0.80309', 'final_val/th2': '0.02343', 'final_val/rec': '0.62709', 'final_val/pre': '0.96455'}
+{'final_tst/auc': '0.94159', 'final_tst/aps': '0.81302', 'final_tst/mf1': '0.87979', 'final_tst/th1': '0.77214', 'final_tst/gme': '0.84150', 'final_tst/th2': '0.02343', 'final_tst/rec': '0.71468', 'final_tst/pre': '0.84406'}
+{'final_tst/fraud_f1': '0.77400'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+==============================
+==============================
+Protocol-safe validation: {"epoch": 81, "flip_r": 0.0027949284752394744, "g0": 0.8996620677389029, "g1": 0.10033793226109713, "pmean": 0.04871022701263428, "val_aps": 0.901695387679075, "val_auc": 0.9632761241685646, "val_loss": 0.04529470205307007}
+Epoch 81: {'val_loss': '0.04529', 'val_auc': '0.96328', 'val_aps': '0.90170', 'g0': '0.89966', 'g1': '0.10034', 'flip_r': '0.00279', 'pmean': '0.04871', 'trn_loss0': '0.03765'}
+Protocol-safe validation: {"epoch": 82, "flip_r": 0.00345554793302335, "g0": 0.8973244911959753, "g1": 0.10267550880402469, "pmean": 0.04917636886239052, "val_aps": 0.9025887800655567, "val_auc": 0.9635496431255757, "val_loss": 0.04529006779193878}
+Epoch 82: {'val_loss': '0.04529', 'val_auc': '0.96355', 'val_aps': '0.90259', 'g0': '0.89732', 'g1': '0.10268', 'flip_r': '0.00346', 'pmean': '0.04918', 'trn_loss0': '0.03901'}
+Protocol-safe validation: {"epoch": 83, "flip_r": 0.007266814035622634, "g0": 0.8909215641436085, "g1": 0.10907843585639149, "pmean": 0.04972173273563385, "val_aps": 0.9022540244267542, "val_auc": 0.9640175639859171, "val_loss": 0.045562777668237686}
+Epoch 83: {'val_loss': '0.04556', 'val_auc': '0.96402', 'val_aps': '0.90225', 'g0': '0.89092', 'g1': '0.10908', 'flip_r': '0.00727', 'pmean': '0.04972', 'trn_loss0': '0.03866'}
+Epoch 00084: reducing learning rate of group 0 to 3.9063e-06.
+training time elapsed 1089.55s
+Evaluating model in /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/tfinance-seed2-best-epoch=0058-val_aps=0.904033.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 14.63it/s]100%|██████████| 2/2 [00:00<00:00, 14.59it/s]
+{'final_trn/auc': '0.98939', 'final_trn/aps': '0.94098', 'final_trn/mf1': '0.94257', 'final_trn/th1': '0.71098', 'final_trn/gme': '0.95868', 'final_trn/th2': '0.04747', 'final_trn/rec': '0.82825', 'final_trn/pre': '0.95987'}
+{'final_val/auc': '0.96453', 'final_val/aps': '0.90392', 'final_val/mf1': '0.93569', 'final_val/th1': '0.76243', 'final_val/gme': '0.93573', 'final_val/th2': '0.03911', 'final_val/rec': '0.81513', 'final_val/pre': '0.94481'}
+{'final_tst/auc': '0.97645', 'final_tst/aps': '0.90406', 'final_tst/mf1': '0.91982', 'final_tst/th1': '0.76243', 'final_tst/gme': '0.87701', 'final_tst/th2': '0.03911', 'final_tst/rec': '0.77103', 'final_tst/pre': '0.93792'}
+{'final_tst/fraud_f1': '0.84633'}
+structured_result /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+==============================
+==============================
+tfinance: PASS
+yelpchi: PASS
+amazon: PASS
+elliptic: PASS
+2026-09-16T05:43:27Z | RUNNING: aggregating parallel accuracy results
+[
+  {
+    "dataset": "tfinance",
+    "seed": 2,
+    "epochs_completed": 84,
+    "best_epoch": 58,
+    "best_validation_ap": 0.9040326410238577,
+    "test_ap": 0.90406,
+    "test_roc_auc": 0.97645,
+    "test_macro_f1": 0.91982,
+    "test_fraud_f1": 0.8463285389856171,
+    "efficiency_reportable": false
+  },
+  {
+    "dataset": "yelpchi",
+    "seed": 2,
+    "epochs_completed": 111,
+    "best_epoch": 85,
+    "best_validation_ap": 0.9168658696565241,
+    "test_ap": 0.92164,
+    "test_roc_auc": 0.97701,
+    "test_macro_f1": 0.91185,
+    "test_fraud_f1": 0.8484381025838797,
+    "efficiency_reportable": false
+  },
+  {
+    "dataset": "amazon",
+    "seed": 2,
+    "epochs_completed": 64,
+    "best_epoch": 38,
+    "best_validation_ap": 0.9386211497267892,
+    "test_ap": 0.92734,
+    "test_roc_auc": 0.98214,
+    "test_macro_f1": 0.9294,
+    "test_fraud_f1": 0.8713826366559486,
+    "efficiency_reportable": false
+  },
+  {
+    "dataset": "elliptic",
+    "seed": 2,
+    "epochs_completed": 64,
+    "best_epoch": 38,
+    "best_validation_ap": 0.7756299911934089,
+    "test_ap": 0.81302,
+    "test_roc_auc": 0.94159,
+    "test_macro_f1": 0.87979,
+    "test_fraud_f1": 0.7739999999999999,
+    "efficiency_reportable": false
+  }
+]
+2026-09-16T05:43:27Z | RUNNING: staging, committing and pushing adapter and parallel accuracy evidence
+[main 5e01f9d] Add DGA-GNN protocol-safe parallel default runs
+ 73 files changed, 7526 insertions(+)
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/amazon-seed2-best-epoch=0038-val_aps=0.938621.ckpt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/end_utc.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/exit_status.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/generated_files.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/train_benchmark.log
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/protocol_validation.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.sha256
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/start_utc.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/train.log
+ create mode 100644 models/dga-gnn/benchmark_adapter/PROTOCOL.md
+ create mode 100755 models/dga-gnn/benchmark_adapter/parallel_default_driver.executed.sh
+ create mode 100644 models/dga-gnn/benchmark_adapter/train_benchmark.py
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/elliptic_of_amnet-seed2-best-epoch=0038-val_aps=0.775630.ckpt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/end_utc.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/exit_status.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/generated_files.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/train_benchmark.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/protocol_validation.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/start_utc.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/train.log
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/accuracy_summary.csv
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/accuracy_summary.json
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/adapter_files.sha256
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/shared_gpu_trace.csv
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/static_leakage_audit.txt
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/checkpoints/yelpchi-seed2-best-epoch=0001-val_aps=0.132458.ckpt
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/exit_status.txt
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/hydra/train_benchmark.log
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/protocol_validation.txt
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/result.json
+ create mode 100644 models/dga-gnn/evidence/benchmark_parallel_default_seed2/yelpchi_two_epoch_gate/train.log
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/tfinance-seed2-best-epoch=0058-val_aps=0.904033.ckpt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/end_utc.txt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/exit_status.txt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/generated_files.txt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/train_benchmark.log
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/protocol_validation.txt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.sha256
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.yaml
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/start_utc.txt
+ create mode 100644 models/dga-gnn/tfinance/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/train.log
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/checkpoints/yelpchi-seed2-best-epoch=0085-val_aps=0.916866.ckpt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/end_utc.txt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/exit_status.txt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/generated_files.txt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/hydra/train_benchmark.log
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/protocol_validation.txt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.sha256
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/resolved_config.yaml
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/result.json
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/start_utc.txt
+ create mode 100644 models/dga-gnn/yelpchi/evidence/benchmark/protocol_safe_default_seed2_parallel_accuracy/train.log
+To github.com:marufkhan09/COMP8851-fraud-dataset-analysis.git
+   9e78521..5e01f9d  main -> main
+From github.com:marufkhan09/COMP8851-fraud-dataset-analysis
+ * branch            main       -> FETCH_HEAD
+DGA-GNN protocol-safe parallel default runs: COMPLETE
+Wed Sep 16 05:43:30 UTC 2026
+Commit: 5e01f9d4c058609c831d1f218147b0c8e3e8a05c
+Summary: models/dga-gnn/evidence/benchmark_parallel_default_seed2/accuracy_summary.csv
+Efficiency figures from these concurrent runs are NOT reportable.
+2026-09-16T05:43:30Z | COMPLETE: four protocol-safe default seed-2 accuracy runs committed and pushed
