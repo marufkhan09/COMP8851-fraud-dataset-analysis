@@ -1,0 +1,130 @@
+============================================================================
+DATASET: tfinance
+----------------------------------------------------------------------------
+FILE: tfinance.dgldata
+nodes: 39357
+edges: 42445086
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: ['trn_idx', 'trn_msk', 'tst_idx', 'tst_msk', 'val_idx', 'val_msk']
+features: shape=(39357, 10), dtype=torch.float32
+all_labels: {0: 37553, 1: 1804}
+train: nodes=15742, labels={0: 15020, 1: 722}
+validation: nodes=7792, labels={0: 7435, 1: 357}
+test: nodes=15823, labels={0: 15098, 1: 725}
+overlapping_nodes: 0
+covered_nodes: 39357
+unassigned_nodes: 0
+trn_idx: present, count=15742, matches_mask=True
+val_idx: present, count=7792, matches_mask=True
+tst_idx: present, count=15823, matches_mask=True
+exported: tfinance_train_idx.npy, count=15742
+exported: tfinance_validation_idx.npy, count=7792
+exported: tfinance_test_idx.npy, count=15823
+============================================================================
+DATASET: yelpchi
+----------------------------------------------------------------------------
+FILE: yelpchi.dgldata
+nodes: 45954
+edges: 8051348
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: []
+features: shape=(45954, 32), dtype=torch.float32
+all_labels: {0: 39277, 1: 6677}
+train: nodes=18381, labels={0: 15710, 1: 2671}
+validation: nodes=9099, labels={0: 7777, 1: 1322}
+test: nodes=18474, labels={0: 15790, 1: 2684}
+overlapping_nodes: 0
+covered_nodes: 45954
+unassigned_nodes: 0
+trn_idx: absent; embedded mask is authoritative
+val_idx: absent; embedded mask is authoritative
+tst_idx: absent; embedded mask is authoritative
+exported: yelpchi_train_idx.npy, count=18381
+exported: yelpchi_validation_idx.npy, count=9099
+exported: yelpchi_test_idx.npy, count=18474
+----------------------------------------------------------------------------
+FILE: yelpchi_homo.dgldata
+nodes: 45954
+edges: 7693958
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: []
+features: shape=(45954, 32), dtype=torch.float32
+all_labels: {0: 39277, 1: 6677}
+train: nodes=18381, labels={0: 15710, 1: 2671}
+validation: nodes=9099, labels={0: 7777, 1: 1322}
+test: nodes=18474, labels={0: 15790, 1: 2684}
+overlapping_nodes: 0
+covered_nodes: 45954
+unassigned_nodes: 0
+trn_idx: absent; embedded mask is authoritative
+val_idx: absent; embedded mask is authoritative
+tst_idx: absent; embedded mask is authoritative
+features_match_reference: True
+labels_match_reference: True
+masks_match_reference: True
+----------------------------------------------------------------------------
+FILE: yelpchi_rur.dgldata
+nodes: 45954
+edges: 98630
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: ['trn_idx', 'trn_msk', 'tst_idx', 'tst_msk', 'val_idx', 'val_msk']
+features: shape=(45954, 32), dtype=torch.float32
+all_labels: {0: 39277, 1: 6677}
+train: nodes=18381, labels={0: 15710, 1: 2671}
+validation: nodes=9099, labels={0: 7777, 1: 1322}
+test: nodes=18474, labels={0: 15790, 1: 2684}
+overlapping_nodes: 0
+covered_nodes: 45954
+unassigned_nodes: 0
+trn_idx: present, count=18381, matches_mask=True
+val_idx: present, count=9099, matches_mask=True
+tst_idx: present, count=18474, matches_mask=True
+features_match_reference: True
+labels_match_reference: True
+masks_match_reference: True
+============================================================================
+DATASET: amazon
+----------------------------------------------------------------------------
+FILE: amazon.dgldata
+nodes: 11944
+edges: 9557648
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: []
+features: shape=(11944, 25), dtype=torch.float32
+all_labels: {0: 11123, 1: 821}
+train: nodes=3432, labels={0: 3104, 1: 328}
+validation: nodes=1717, labels={0: 1554, 1: 163}
+test: nodes=3490, labels={0: 3160, 1: 330}
+overlapping_nodes: 0
+covered_nodes: 8639
+unassigned_nodes: 3305
+unassigned_label_distribution: {0: 3305}
+trn_idx: absent; embedded mask is authoritative
+val_idx: absent; embedded mask is authoritative
+tst_idx: absent; embedded mask is authoritative
+exported: amazon_train_idx.npy, count=3432
+exported: amazon_validation_idx.npy, count=1717
+exported: amazon_test_idx.npy, count=3490
+----------------------------------------------------------------------------
+FILE: amazon_homo.dgldata
+nodes: 11944
+edges: 8796784
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+metadata_keys: []
+features: shape=(11944, 25), dtype=torch.float32
+all_labels: {0: 11123, 1: 821}
+train: nodes=3432, labels={0: 3104, 1: 328}
+validation: nodes=1717, labels={0: 1554, 1: 163}
+test: nodes=3490, labels={0: 3160, 1: 330}
+overlapping_nodes: 0
+covered_nodes: 8639
+unassigned_nodes: 3305
+unassigned_label_distribution: {0: 3305}
+trn_idx: absent; embedded mask is authoritative
+val_idx: absent; embedded mask is authoritative
+tst_idx: absent; embedded mask is authoritative
+features_match_reference: True
+labels_match_reference: True
+masks_match_reference: True
+============================================================================
+GRAPH INTEGRITY CHECK: PASS

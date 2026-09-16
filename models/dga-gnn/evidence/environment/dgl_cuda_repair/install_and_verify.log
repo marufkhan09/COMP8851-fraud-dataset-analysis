@@ -1,0 +1,60 @@
+=== DGL CUDA REPAIR START ===
+Wed Sep 16 03:37:39 UTC 2026
+
+=== CURRENT INSTALLATION ===
+Name: dgl
+Version: 1.1.2
+Summary: Deep Graph Library
+Home-page: https://github.com/dmlc/dgl
+Author: 
+Author-email: 
+License: APACHE
+Location: /venv/dga-gnn/lib/python3.7/site-packages
+Requires: networkx, numpy, psutil, requests, scipy, tqdm
+Required-by: 
+dgl_version_before: 1.1.2
+dgl_location_before: /venv/dga-gnn/lib/python3.7/site-packages/dgl/__init__.py
+torch_version: 1.13.1+cu117
+torch_cuda_runtime: 11.7
+torch_cuda_available: True
+
+=== DOWNLOAD OFFICIAL DGL 1.1.2 CUDA 11.7 WHEEL ===
+Looking in links: https://data.dgl.ai/wheels/cu117/repo.html
+Collecting dgl==1.1.2+cu117
+  Downloading https://data.dgl.ai/wheels/cu117/dgl-1.1.2%2Bcu117-cp37-cp37m-manylinux1_x86_64.whl (91.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 MB 64.5 MB/s eta 0:00:00
+Saved /workspace/dga_gnn_wheel_cache/cu117/dgl-1.1.2+cu117-cp37-cp37m-manylinux1_x86_64.whl
+Successfully downloaded dgl
+
+=== DOWNLOADED WHEEL ===
+total 88M
+-rw-rw-r-- 1 root root 88M Sep 16 03:37 dgl-1.1.2+cu117-cp37-cp37m-manylinux1_x86_64.whl
+Selected wheel: /workspace/dga_gnn_wheel_cache/cu117/dgl-1.1.2+cu117-cp37-cp37m-manylinux1_x86_64.whl
+f76b7d8d61b30f0d1e3031bbce4b68a7d1dad5499750257edbab593a2c9d962e  /workspace/dga_gnn_wheel_cache/cu117/dgl-1.1.2+cu117-cp37-cp37m-manylinux1_x86_64.whl
+
+=== INSTALL CUDA-ENABLED DGL ===
+Processing /workspace/dga_gnn_wheel_cache/cu117/dgl-1.1.2+cu117-cp37-cp37m-manylinux1_x86_64.whl
+Installing collected packages: dgl
+  Attempting uninstall: dgl
+    Found existing installation: dgl 1.1.2
+    Uninstalling dgl-1.1.2:
+      Successfully uninstalled dgl-1.1.2
+Successfully installed dgl-1.1.2+cu117
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+=== CUDA AND UVA VERIFICATION ===
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/__init__.py", line 14, in <module>
+    from .backend import backend_name, load_backend  # usort: skip
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/backend/__init__.py", line 122, in <module>
+    load_backend(get_preferred_backend())
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/backend/__init__.py", line 51, in load_backend
+    from .._ffi.base import load_tensor_adapter  # imports DGL C library
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/_ffi/base.py", line 50, in <module>
+    _LIB, _LIB_NAME, _DIR_NAME = _load_lib()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/_ffi/base.py", line 39, in _load_lib
+    lib = ctypes.CDLL(lib_path[0])
+  File "/venv/dga-gnn/lib/python3.7/ctypes/__init__.py", line 364, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libcusparse.so.11: cannot open shared object file: No such file or directory

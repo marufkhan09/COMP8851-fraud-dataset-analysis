@@ -1,0 +1,118 @@
+=== AUDIT START ===
+Wed Sep 16 03:31:07 UTC 2026
+
+=== UPSTREAM COMMIT ===
+0907392f6060e18230339ca30eaca0c917414820
+
+=== TARGET CONFIG FILES ===
+
+=== TARGET CONFIG CONTENTS ===
+
+=== TRAIN.PY RELEVANT LINES ===
+6:import hydra
+13:import wandb
+19:from pytorch_lightning import (LightningDataModule, LightningModule, Trainer)
+20:from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, Timer
+21:from pytorch_lightning.loggers.wandb import WandbLogger
+22:from sklearn.metrics import (roc_auc_score, average_precision_score)
+26:from myutils import describe, mask_to_index, set_all_seed, cal_metrics, bin_encoding2
+445:        self.log("trn_loss0", loss, prog_bar=True, on_step=False, on_epoch=True, batch_size=len(output_nodes))
+457:        self.log("val_loss", loss, prog_bar=True, on_step=False, on_epoch=True, batch_size=len(output_nodes))
+460:    def validation_epoch_end(self, outs):
+461:        """Calculate validation AUC at the end of the epoch."""
+463:        if self.trainer.sanity_checking:
+472:            # if self.trainer.current_epoch > 50:
+478:            trn_aps = average_precision_score(y[self.trn_idx], prob[self.trn_idx])
+479:            val_aps = average_precision_score(y[self.val_idx], prob[self.val_idx])
+480:            tst_aps = average_precision_score(y[self.tst_idx], prob[self.tst_idx])
+481:            self.log('g0', int((prob <= self.unclear_down).sum()) / 100000, prog_bar=True, on_step=False, on_epoch=True)
+482:            self.log('g1', int((prob > self.unclear_up).sum()) / 100000, prog_bar=True, on_step=False, on_epoch=True)
+484:                     prog_bar=True, on_step=False, on_epoch=True)
+485:            self.log("pmean", prob.mean(), prog_bar=True, on_step=False, on_epoch=True)
+486:            self.log("trn_auc", trn_auc, prog_bar=True, on_step=False, on_epoch=True)
+487:            self.log("val_auc", val_auc, prog_bar=True, on_step=False, on_epoch=True)
+488:            self.log("tst_auc", tst_auc, prog_bar=True, on_step=False, on_epoch=True)
+489:            self.log("trn_aps", trn_aps, prog_bar=True, on_step=False, on_epoch=True)
+490:            self.log("val_aps", val_aps, prog_bar=True, on_step=False, on_epoch=True)
+491:            self.log("tst_aps", tst_aps, prog_bar=True, on_step=False, on_epoch=True)
+507:    def on_train_epoch_end(self):
+508:        if self.trainer.sanity_checking:
+510:        epoch = self.trainer.current_epoch
+511:        metrics = {k: v.item() if isinstance(v, torch.Tensor) else v for k, v in self.trainer.logged_metrics.items()}
+513:        print(f"Epoch {epoch}: {formatted_metrics}")
+545:@hydra.main(config_path="configs", config_name="amazon", version_base=None)
+549:    accelerator = 'gpu' if torch.cuda.is_available() and args.usegpu else 'cpu'
+550:    set_all_seed(args.seed)
+555:    # logger设置在读取数据之前，可以保存describe的信息
+556:    mode = 'offline' if args.nowandb else 'online'
+557:    wandb_run = wandb.init(project=args.project, config=OmegaConf.to_container(args), mode=mode)
+595:    wandb.log({
+600:    # 构建 datamodule 和 modelaccelerator
+608:    # 进行训练前的设置，timer，checkpoint，early_stopping，logger
+610:    checkpoint_callback = ModelCheckpoint(monitor="val_loss", mode='min', save_top_k=1, verbose=False)
+612:    logger = WandbLogger(wandb=wandb_run)
+614:    trainer = Trainer(
+615:        accelerator=accelerator, devices=[args.gpuid],
+616:        max_epochs=args.max_epochs,
+617:        logger=logger,
+619:        callbacks=[checkpoint_callback, early_stopping, timer],
+621:    trainer.fit(model, datamodule.train_dataloader(), datamodule.val_dataloader())
+624:    # 读取最优checkpoint 并且进行推理
+625:    print("Evaluating model in", trainer.checkpoint_callback.best_model_path)
+626:    model.load_state_dict(torch.load(trainer.checkpoint_callback.best_model_path)['state_dict'])
+633:    wandb.log(dic)
+634:    wandb.finish()
+
+=== OTHER RELEVANT SOURCE LINES ===
+./configs/amazon.yaml:18:max_epochs: 10000
+./configs/amazon.yaml:22:nowandb: False
+./configs/elliptic_of_amnet.yaml:18:max_epochs: 10000
+./configs/elliptic_of_amnet.yaml:22:nowandb: False
+./configs/tfinance.yaml:18:max_epochs: 10000
+./configs/tfinance.yaml:22:nowandb: False
+./configs/tsocial.yaml:18:max_epochs: 10000
+./configs/tsocial.yaml:22:nowandb: False
+./configs/yelpchi.yaml:18:max_epochs: 10000
+./configs/yelpchi.yaml:22:nowandb: False
+./myutils.py:84:        f"训练集: {graph.ndata['trn_msk'].sum()} 验证集: {graph.ndata['val_msk'].sum()} 测试集: {graph.ndata['tst_msk'].sum()}")
+./myutils.py:86:        f"训练集: {graph.ndata['trn_msk'].sum() / num_nodes:.2%} 验证集: {graph.ndata['val_msk'].sum() / num_nodes:.2%} 测试集: {graph.ndata['tst_msk'].sum() / num_nodes:.2%}")
+./train.py:13:import wandb
+./train.py:20:from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint, Timer
+./train.py:21:from pytorch_lightning.loggers.wandb import WandbLogger
+./train.py:260:            graph.ndata['val_msk']), mask_to_index(graph.ndata['tst_msk'])
+./train.py:556:    mode = 'offline' if args.nowandb else 'online'
+./train.py:557:    wandb_run = wandb.init(project=args.project, config=OmegaConf.to_container(args), mode=mode)
+./train.py:571:        graph.ndata['val_msk']), mask_to_index(graph.ndata['tst_msk'])
+./train.py:595:    wandb.log({
+./train.py:610:    checkpoint_callback = ModelCheckpoint(monitor="val_loss", mode='min', save_top_k=1, verbose=False)
+./train.py:611:    early_stopping = EarlyStopping('val_loss', verbose=False, mode='min', patience=args.patience)
+./train.py:612:    logger = WandbLogger(wandb=wandb_run)
+./train.py:616:        max_epochs=args.max_epochs,
+./train.py:621:    trainer.fit(model, datamodule.train_dataloader(), datamodule.val_dataloader())
+./train.py:633:    wandb.log(dic)
+./train.py:634:    wandb.finish()
+
+=== RESOLVED T-FINANCE CONFIG ===
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+Cannot find primary config 'tfinancet'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code/configs
+	provider=schema, path=structured://
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+
+=== RESOLVED YELPCHI CONFIG ===
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+Cannot find primary config 'yelpchit'. Check that it's in your config search path.
+
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code/configs
+	provider=schema, path=structured://
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+
+=== AUDIT END ===
+Wed Sep 16 03:31:13 UTC 2026

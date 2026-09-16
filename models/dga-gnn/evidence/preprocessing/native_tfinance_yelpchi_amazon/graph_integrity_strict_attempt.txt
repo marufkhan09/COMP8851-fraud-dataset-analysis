@@ -1,0 +1,33 @@
+========================================================================
+FILE: tfinance.dgldata
+graphs_saved: 1
+nodes: 39357
+edges: 42445086
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+split_dict_keys: ['trn_idx', 'trn_msk', 'tst_idx', 'tst_msk', 'val_idx', 'val_msk']
+features: shape=(39357, 10), dtype=torch.float32
+labels: {0: 37553, 1: 1804}
+trn_msk: 15742
+val_msk: 7792
+tst_msk: 15823
+overlapping_nodes: 0
+covered_nodes: 39357
+unassigned_nodes: 0
+trn_idx: count=15742, matches_mask=True
+val_idx: count=7792, matches_mask=True
+tst_idx: count=15823, matches_mask=True
+========================================================================
+FILE: yelpchi.dgldata
+graphs_saved: 1
+nodes: 45954
+edges: 8051348
+ndata_keys: ['feat', 'label', 'trn_msk', 'tst_msk', 'val_msk']
+split_dict_keys: []
+features: shape=(45954, 32), dtype=torch.float32
+labels: {0: 39277, 1: 6677}
+trn_msk: 18381
+val_msk: 9099
+tst_msk: 18474
+overlapping_nodes: 0
+covered_nodes: 45954
+unassigned_nodes: 0

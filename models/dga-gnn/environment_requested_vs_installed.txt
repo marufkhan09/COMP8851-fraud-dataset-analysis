@@ -1,0 +1,20 @@
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1785888127/work
+
+## CUDA-enabled DGL correction
+
+The initial `dgl==1.1.2` installation was the CPU-only wheel and failed
+during UVA graph pinning. It was replaced with:
+
+- dgl==1.1.2+cu117
+- nvidia-cusparse-cu11==11.7.5.86
+- torch==1.13.1+cu117
+- CUDA runtime used by Torch/DGL: 11.7
+
+DGL CUDA graph transfer and UVA neighbour sampling both passed.
+
+Wheel SHA-256:
+- DGL CUDA wheel: f76b7d8d61b30f0d1e3031bbce4b68a7d1dad5499750257edbab593a2c9d962e
+- NVIDIA cuSPARSE wheel: 8d7cf1628fd8d462b5d2ba6678fae34733a48ecb80495b9c68672ec6a6dde5ef
+
+Conda activation script SHA-256:
+- 08e114a974214f941a75f5b0b5b2165daca48b9c8f03f9ddf3f9907aab7f560a

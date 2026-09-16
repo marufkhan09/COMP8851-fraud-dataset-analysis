@@ -1,0 +1,101 @@
+            logits, emb_logits = self(blocks, x)
+            y[output_nodes] = logits.to(buffer_device)
+        return y
+
+
+@hydra.main(config_path="configs", config_name="amazon", version_base=None)
+def run(args: DictConfig):
+    # 设置GPU, 设置随机种子，修改模型名称
+    device = torch.device(f'cuda:{args.gpuid}' if torch.cuda.is_available() and args.usegpu else 'cpu')
+    accelerator = 'gpu' if torch.cuda.is_available() and args.usegpu else 'cpu'
+    set_all_seed(args.seed)
+    args.model = f'{args.model}'
+    suffix = '_bin' if args.bin_encoding else ''
+    args.model = args.model + suffix
+
+    # logger设置在读取数据之前，可以保存describe的信息
+    mode = 'offline' if args.nowandb else 'online'
+    wandb_run = wandb.init(project=args.project, config=OmegaConf.to_container(args), mode=mode)
+
+    # 读取数据，输出图的统计信息
+    DATA_PATH = '../data/processed/'
+    graph, split_dict = load_graphs(DATA_PATH + args.dname + '.dgldata')
+    graph = graph[0]
+    y = graph.ndata['label'].cpu().numpy()
+    graph.ndata['aux_label'] = graph.ndata['label']
+    w = [1, 1]
+    n_classes = 2
+
+    n_etypes = len(graph.etypes)
+
+    trn_idx, val_idx, tst_idx = mask_to_index(graph.ndata['trn_msk']), mask_to_index(
+        graph.ndata['val_msk']), mask_to_index(graph.ndata['tst_msk'])
+    # 信息打印
+    print("==" * 20)
+    print("数据名称", args.dname)
+    describe(graph)
+    print("==" * 20)
+    print("超参数设定：")
+    print(OmegaConf.to_yaml(args))
+    print("n_etypes", n_etypes)
+    print("n_classes", n_classes)
+    print("==" * 20)
+
+    if args.bin_encoding:
+        feature = bin_encoding2(graph, trn_idx, n_bins=args.k)
+        graph.ndata['feat'] = torch.FloatTensor(feature.values).contiguous()
+        print("after bin_encoding：", feature.shape)
+        print("==" * 20)
+    else:
+        feature = graph.ndata['feat']
+        graph.ndata['feat'] = feature.contiguous()
+        print("after bin_encoding：", feature.shape)
+
+    in_feats = [graph.ndata['feat'].shape[1]]
+    unclear_up = unclear_down = args.z
+    wandb.log({
+        'unclear_up': unclear_up,
+        'unclear_down': unclear_down
+    })
+    print({'unclear_up': unclear_up, 'unclear_down': unclear_down})
+    # 构建 datamodule 和 modelaccelerator
+    datamodule = DataModule(graph, args.bs, n_classes)
+    model = pl_DGA(in_feats, args.n_hidden, graph.num_nodes(), n_classes=n_classes,
+                   n_etypes=n_etypes, lr=args.lr, weight_decay=args.weight_decay, p=args.p,
+                   n_head=args.n_head, w=w,
+                   unclear_up=unclear_up, unclear_down=unclear_down,
+                   trn_idx=trn_idx, val_idx=val_idx, tst_idx=tst_idx)
+
+    # 进行训练前的设置，timer，checkpoint，early_stopping，logger
+    timer = Timer()
+    checkpoint_callback = ModelCheckpoint(monitor="val_loss", mode='min', save_top_k=1, verbose=False)
+    early_stopping = EarlyStopping('val_loss', verbose=False, mode='min', patience=args.patience)
+    logger = WandbLogger(wandb=wandb_run)
+
+    trainer = Trainer(
+        accelerator=accelerator, devices=[args.gpuid],
+        max_epochs=args.max_epochs,
+        logger=logger,
+        enable_progress_bar=False,
+        callbacks=[checkpoint_callback, early_stopping, timer],
+    )
+    trainer.fit(model, datamodule.train_dataloader(), datamodule.val_dataloader())
+    print(f'training time elapsed {timer.time_elapsed("train"):.2f}s')
+
+    # 读取最优checkpoint 并且进行推理
+    print("Evaluating model in", trainer.checkpoint_callback.best_model_path)
+    model.load_state_dict(torch.load(trainer.checkpoint_callback.best_model_path)['state_dict'])
+    model = model.to(device)
+    with torch.no_grad():
+        model.eval()
+        y_hat = model.inference(graph, device, 5120, 0, "cpu")
+    prob = y_hat.softmax(-1).cpu().numpy()[:, 1]
+    dic = cal_metrics(prob, y, trn_idx, val_idx, tst_idx, verbose=True)
+    wandb.log(dic)
+    wandb.finish()
+    print("===" * 10)
+    print("===" * 10)
+
+
+if __name__ == "__main__":
+    run()

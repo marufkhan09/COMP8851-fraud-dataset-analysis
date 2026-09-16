@@ -1,0 +1,47 @@
+----- configs/tfinance.yaml -----
+     1	dname: tfinance
+     2	project: dga_reproduction
+     3	model: dga
+     4	
+     5	# 模型超参数
+     6	bin_encoding: True
+     7	n_head: 1
+     8	n_hidden: 64
+     9	p: 0.3
+    10	k: 4
+    11	z: 0.025
+    12	seed: 321
+    13	
+    14	# 训练超参数
+    15	bs: 64
+    16	lr: 1e-3
+    17	weight_decay: 5e-4
+    18	max_epochs: 10000
+    19	patience: 25
+    20	usegpu: True
+    21	gpuid: 0
+    22	nowandb: False
+
+----- configs/yelpchi.yaml -----
+     1	dname: yelpchi
+     2	project: dga_reproduction
+     3	model: dga
+     4	
+     5	# 模型超参数
+     6	bin_encoding: True
+     7	n_head: 2
+     8	n_hidden: 64
+     9	p: 0.3
+    10	k: 32
+    11	z: 0.025
+    12	seed: 321
+    13	
+    14	# 训练超参数
+    15	bs: 256
+    16	lr: 1e-3
+    17	weight_decay: 5e-4
+    18	max_epochs: 10000
+    19	patience: 25
+    20	usegpu: True
+    21	gpuid: 0
+    22	nowandb: False

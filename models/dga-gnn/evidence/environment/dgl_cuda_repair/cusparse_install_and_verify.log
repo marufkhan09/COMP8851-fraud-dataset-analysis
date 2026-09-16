@@ -1,0 +1,56 @@
+=== CUSPARSE INSTALLATION START ===
+Wed Sep 16 03:43:45 UTC 2026
+
+=== DOWNLOAD NVIDIA CUSPARSE CUDA 11 ===
+Collecting nvidia-cusparse-cu11==11.7.5.86
+  Downloading nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Downloading nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl (204.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.1/204.1 MB 37.2 MB/s eta 0:00:00
+Saved /workspace/dga_gnn_wheel_cache/cusparse/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl
+Successfully downloaded nvidia-cusparse-cu11
+
+Selected wheel: /workspace/dga_gnn_wheel_cache/cusparse/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl
+-rw-rw-r-- 1 root root 195M Sep 16 03:43 /workspace/dga_gnn_wheel_cache/cusparse/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl
+8d7cf1628fd8d462b5d2ba6678fae34733a48ecb80495b9c68672ec6a6dde5ef  /workspace/dga_gnn_wheel_cache/cusparse/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl
+
+=== INSTALL CUSPARSE WITHOUT CHANGING OTHER PACKAGES ===
+Processing /workspace/dga_gnn_wheel_cache/cusparse/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl
+Installing collected packages: nvidia-cusparse-cu11
+Successfully installed nvidia-cusparse-cu11-11.7.5.86
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+=== CONFIRM CUSPARSE FILES ===
+/venv/dga-gnn/lib/python3.7/site-packages/nvidia/cusparse/lib/libcusparse.so.11
+
+=== DGL LINKER CHECK ===
+	linux-vdso.so.1 (0x00007ffd115a2000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ff19aa52000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007ff19aa4d000)
+	libcudart.so.11.0 => /venv/dga-gnn/lib/python3.7/site-packages/nvidia/cuda_runtime/lib/libcudart.so.11.0 (0x00007ff186400000)
+	libcublas.so.11 => /venv/dga-gnn/lib/python3.7/site-packages/nvidia/cublas/lib/libcublas.so.11 (0x00007ff17d000000)
+	libcusparse.so.11 => /venv/dga-gnn/lib/python3.7/site-packages/nvidia/cusparse/lib/libcusparse.so.11 (0x00007ff16c200000)
+	libgomp.so.1 => /venv/dga-gnn/lib/libgomp.so.1 (0x00007ff19a9f0000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007ff19a9eb000)
+	libstdc++.so.6 => /venv/dga-gnn/lib/libstdc++.so.6 (0x00007ff16bf4b000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007ff19a902000)
+	libgcc_s.so.1 => /venv/dga-gnn/lib/libgcc_s.so.1 (0x00007ff1867d2000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff16bd38000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007ff19aa63000)
+	libcublasLt.so.11 => /venv/dga-gnn/lib/python3.7/site-packages/nvidia/cublas/lib/libcublasLt.so.11 (0x00007ff157c00000)
+
+=== DGL CUDA AND UVA TEST ===
+dgl_version: 1.1.2+cu117
+torch_version: 1.13.1+cu117
+torch_cuda_runtime: 11.7
+torch_cuda_available: True
+direct_dgl_cuda_device: cuda:0
+uva_input_nodes_device: cuda:0
+uva_output_nodes_device: cuda:0
+uva_block_device: cuda:0
+DGL CUDA/UVA TEST: PASS
+
+=== MAKE CUDA PATH AUTOMATIC ON CONDA ACTIVATION ===
+08e114a974214f941a75f5b0b5b2165daca48b9c8f03f9ddf3f9907aab7f560a  /venv/dga-gnn/etc/conda/activate.d/dga_cuda11_paths.sh
+
+=== CUSPARSE INSTALLATION END ===
+Wed Sep 16 03:43:55 UTC 2026

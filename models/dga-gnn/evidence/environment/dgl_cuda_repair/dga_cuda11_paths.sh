@@ -1,0 +1,2 @@
+# CUDA 11 runtime locations required by DGL 1.1.2+cu117
+export LD_LIBRARY_PATH="${CONDA_PREFIX}/lib/python3.7/site-packages/nvidia/cublas/lib:${CONDA_PREFIX}/lib/python3.7/site-packages/nvidia/cuda_nvrtc/lib:${CONDA_PREFIX}/lib/python3.7/site-packages/nvidia/cuda_runtime/lib:${CONDA_PREFIX}/lib/python3.7/site-packages/nvidia/cudnn/lib:${CONDA_PREFIX}/lib/python3.7/site-packages/nvidia/cusparse/lib:${CONDA_PREFIX}/lib/python3.7/site-packages/torch/lib:${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH:-}"

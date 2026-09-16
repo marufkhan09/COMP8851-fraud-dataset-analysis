@@ -1,0 +1,56 @@
+            if self.add_self:
+                rst = h_self + h_neigh
+            else:
+                rst = h_neigh
+            # rst = torch.concat([rst,graph.dstdata['degree']],-1)
+            # bias term
+            if self.bias is not None:
+                rst = rst + self.bias
+            # activation
+            if self.activation is not None:
+                rst = self.activation(rst)
+            # normalization
+            if self.norm is not None:
+                rst = self.norm(rst)
+            return rst  # , h_self
+
+
+# 构建dataloader
+class DataModule(LightningDataModule):
+    def __init__(self, graph, batch_size, n_classes):
+        super().__init__()
+
+        trn_sampler = dgl.dataloading.NeighborSampler(
+            [-1]  # , prefetch_node_feats=["feat"], prefetch_labels=["label"]
+        )
+        val_sampler = dgl.dataloading.NeighborSampler(
+            [-1]  # , prefetch_node_feats=["feat"], prefetch_labels=["label"]
+        )
+        self.g = graph
+        self.trn_idx, self.val_idx, self.tst_idx = mask_to_index(graph.ndata['trn_msk']), mask_to_index(
+            graph.ndata['val_msk']), mask_to_index(graph.ndata['tst_msk'])
+        self.trn_sampler = trn_sampler
+        self.val_sampler = val_sampler
+        self.batch_size = batch_size
+        self.n_classes = n_classes
+
+    def train_dataloader(self):
+        loader = dgl.dataloading.DataLoader(
+            self.g,
+            self.trn_idx.to('cuda'),
+            self.trn_sampler,
+            device="cuda",
+            batch_size=self.batch_size,
+            shuffle=True,
+            drop_last=False,
+            use_uva=True,
+            num_workers=0,
+        )
+        return loader
+
+    def val_dataloader(self):
+        loader = dgl.dataloading.DataLoader(
+            self.g,
+            torch.arange(self.g.num_nodes()).to('cuda'),
+            self.val_sampler,
+            device="cuda",

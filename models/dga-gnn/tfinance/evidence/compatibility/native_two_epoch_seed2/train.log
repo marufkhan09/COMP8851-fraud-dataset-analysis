@@ -1,0 +1,95 @@
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+========================================
+数据名称 tfinance
+总样本数: 39357
+欺诈样本数: 1804
+非欺诈样本数: 37553
+欺诈样本占比: 4.58%
+特征个数: 10
+
+_E边关系下的统计信息:
+边的个数: 42445086
+平均出度: 1078.46
+
+数据划分情况:
+训练集: 15742 验证集: 7792 测试集: 15823
+训练集: 40.00% 验证集: 19.80% 测试集: 40.20%
+========================================
+超参数设定：
+dname: tfinance
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 1
+n_hidden: 64
+p: 0.3
+k: 4
+z: 0.025
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 1
+n_classes 2
+========================================
+after bin_encoding： (39357, 50)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Error executing job with overrides: ['max_epochs=2', 'nowandb=True', 'seed=2', 'gpuid=0']
+Traceback (most recent call last):
+  File "train.py", line 640, in <module>
+    run()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/main.py", line 99, in decorated_main
+    config_name=config_name,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 401, in _run_hydra
+    overrides=overrides,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 458, in _run_app
+    lambda: hydra.run(
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/utils.py", line 461, in <lambda>
+    overrides=overrides,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/venv/dga-gnn/lib/python3.7/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "train.py", line 621, in run
+    trainer.fit(model, datamodule.train_dataloader(), datamodule.val_dataloader())
+  File "train.py", line 276, in train_dataloader
+    num_workers=0,
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/dataloading/dataloader.py", line 1041, in __init__
+    self.graph.pin_memory_()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/heterograph.py", line 5818, in pin_memory_
+    self._graph.pin_memory_()
+  File "/venv/dga-gnn/lib/python3.7/site-packages/dgl/heterograph_index.py", line 289, in pin_memory_
+    return _CAPI_DGLHeteroPinMemory_(self)
+  File "dgl/_ffi/_cython/./function.pxi", line 295, in dgl._ffi._cy3.core.FunctionBase.__call__
+  File "dgl/_ffi/_cython/./function.pxi", line 227, in dgl._ffi._cy3.core.FuncCall
+  File "dgl/_ffi/_cython/./function.pxi", line 217, in dgl._ffi._cy3.core.FuncCall3
+dgl._ffi.base.DGLError: [03:34:58] /opt/dgl/src/runtime/c_runtime_api.cc:82: Check failed: allow_missing: Device API cuda is not enabled. Please install the cuda version of dgl.
+Stack trace:
+  [bt] (0) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dmlc::LogMessageFatal::~LogMessageFatal()+0x75) [0x7fe67d53e8f5]
+  [bt] (1) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dgl::runtime::DeviceAPIManager::GetAPI(std::string, bool)+0x202) [0x7fe67d8add82]
+  [bt] (2) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dgl::runtime::DeviceAPI::Get(DGLDeviceType, bool)+0x1e1) [0x7fe67d8aa061]
+  [bt] (3) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dgl::runtime::NDArray::PinContainer(dgl::runtime::NDArray::Container*)+0x2b) [0x7fe67d8c3f3b]
+  [bt] (4) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dgl::UnitGraph::PinMemory_()+0x123) [0x7fe67da08123]
+  [bt] (5) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(dgl::HeteroGraph::PinMemory_()+0x2e) [0x7fe67d9075ce]
+  [bt] (6) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(+0x51b9fe) [0x7fe67d91b9fe]
+  [bt] (7) /venv/dga-gnn/lib/python3.7/site-packages/dgl/libdgl.so(DGLFuncCall+0x48) [0x7fe67d8a9598]
+  [bt] (8) /venv/dga-gnn/lib/python3.7/site-packages/dgl/_ffi/_cy3/core.cpython-37m-x86_64-linux-gnu.so(+0x16967) [0x7fe67c016967]
+
+
