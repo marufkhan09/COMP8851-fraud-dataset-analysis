@@ -1,0 +1,20 @@
+Wed Sep 16 03:59:21 UTC 2026
+34efa49791a9
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+cuda_available: True
+dgl_gpu_device: cuda:0
+CUDA PREFLIGHT: PASS
+NVIDIA RTX A6000, GPU-13ce6c2d-d164-3ea0-42b3-b19d732363f9, 49140 MiB, 580.173.02
+Upstream commit:
+0907392f6060e18230339ca30eaca0c917414820
+Parent repository heads:
+Local:  8d3f943d1c8239f7fcab3f337452f4fd01fca78a
+Remote: 8d3f943d1c8239f7fcab3f337452f4fd01fca78a
+Input hashes:
+d86e610867cde2fd16c181497fbce10c80758b8cd054147006a3fa6544902b1a  train.py
+4294691c33864da2cc81e4cf58c14f11ddd360bb918557945e3fe838c30c09a9  configs/amazon.yaml
+222fa41436ad7785dbd34182113c31bfdd7bba5ec4666fe0967b9ffae42b7541  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/amazon.dgldata
+79169c403d70b74d65686445032b95863e8376dd1e66afd70d513dd95df9d313  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/amazon_test_idx.npy
+db7990af0d3d16e430426ce98f5446a10972060bf2dcf79d0a383ef5c6ec153d  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/amazon_train_idx.npy
+b272e6766c441d585f2cc1446d1c7a74ce9249f888ff59a9928c40611021b29a  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/evidence/preprocessing/native_tfinance_yelpchi_amazon/native_split_ids/amazon_validation_idx.npy
