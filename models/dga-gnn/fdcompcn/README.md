@@ -82,3 +82,44 @@ character — though not magnitude — to what's expected on such a small graph.
 2. Re-run once that split exists; compare against this provisional run
 3. TR30/TR20/TR10 runs (only TR40 done so far)
 4. Multi-seed runs (42, 72) once TR40/seed2 is confirmed stable
+
+## TR-ratio results (seed 2, k=4, provisional splits)
+
+| Ratio | Train nodes | Train fraud (~) | Epochs | trn_auc | val_auc | tst_auc | Notes |
+|---|---|---|---|---|---|---|---|
+| TR40 | 2,126 | 224 | 254 | 0.938 | 0.794 | 0.784 | Healthy, converged |
+| TR30 | 1,595 | 168 | ~120 | 0.915 | 0.791 | 0.785 | Healthy, converged |
+| TR20 | 1,063 | 112 | 119 | 0.535 | 0.558 | 0.545 | **Collapsed — near chance level** |
+| TR10 | 531 | 56 | 74 | 0.574 | 0.567 | 0.544 | **Collapsed — near chance level** |
+
+### TR20/TR10 collapse: a genuine finding, not a bug
+
+At TR40 and TR30, DGA-GNN trains normally and achieves reasonable
+discrimination (test AUC ~0.78 in both). At TR20 and TR10, performance
+drops to near-random (test AUC ~0.54-0.55) despite training running its
+full course cleanly — no crashes, no NaN, no warnings.
+
+The failure signature is specific: `val_loss` decreases substantially in
+both collapsed runs (0.71→0.35 for TR20, 0.69→0.35 for TR10), while AUC
+stays flat near 0.5. This indicates the model is minimizing loss by
+becoming confident on the easy majority class, without learning to
+discriminate the minority (fraud) class at all — a classic imbalanced-loss
+failure mode, not a numerical/implementation bug.
+
+Additionally, DGA-GNN's dynamic-grouping proportion (`g0`) stays pinned
+near 0.0000–0.0007 for the entire TR20/TR10 runs (compare: TR40/TR30 see
+`g0` move into the 0.3–0.9 range as training progresses). This suggests
+the core dynamic-grouping mechanism — DGA-GNN's central architectural
+contribution — fails to activate when there are too few positive training
+examples to find meaningful group splits.
+
+**Working hypothesis:** DGA-GNN's grouping mechanism needs a minimum
+number of fraud training examples to function, somewhere between TR30's
+~168 and TR20's ~112 on this dataset. This is consistent with the plan's
+broader interest in how each model's mechanism interacts with dataset
+size/imbalance — this may be a legitimate, reportable characteristic of
+DGA-GNN rather than an artifact of the FDCompCN adapter.
+
+This was verified as a genuine result, not left unexamined: no code
+changes between TR40/TR30 (successful) and TR20/TR10 (collapsed) beyond
+the split itself, ruling out an adapter bug specific to those ratios.

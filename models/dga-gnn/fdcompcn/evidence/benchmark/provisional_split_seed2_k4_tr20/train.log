@@ -1,0 +1,284 @@
+nohup: ignoring input
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+wandb: Tracking run with wandb version 0.13.10
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+========================================
+数据名称 fdcompcn
+总样本数: 5317
+欺诈样本数: 559
+非欺诈样本数: 4758
+欺诈样本占比: 10.51%
+特征个数: 57
+
+invest_bc2bc边关系下的统计信息:
+边的个数: 10865
+平均出度: 2.04
+provide_bc2bc边关系下的统计信息:
+边的个数: 6077
+平均出度: 1.14
+sale_bc2bc边关系下的统计信息:
+边的个数: 6359
+平均出度: 1.20
+
+数据划分情况:
+训练集: 1063 验证集: 1403 测试集: 2851
+训练集: 19.99% 验证集: 26.39% 测试集: 53.62%
+========================================
+超参数设定：
+dname: fdcompcn
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 4
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (5317, 265)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 117 K 
+------------------------------
+117 K     Trainable params
+0         Non-trainable params
+117 K     Total params
+0.471     Total estimated model params size (MB)
+Epoch 0: {'val_loss': '0.71202', 'g0': '0.00000', 'g1': '0.05317', 'flip_r': '0.00019', 'pmean': '0.50260', 'trn_auc': '0.52941', 'val_auc': '0.50464', 'tst_auc': '0.52264', 'trn_aps': '0.12278', 'val_aps': '0.11226', 'tst_aps': '0.11657', 'trn_loss0': '1.45515'}
+Epoch 1: {'val_loss': '0.68091', 'g0': '0.00000', 'g1': '0.05317', 'flip_r': '0.00000', 'pmean': '0.48790', 'trn_auc': '0.51445', 'val_auc': '0.51771', 'tst_auc': '0.52084', 'trn_aps': '0.10998', 'val_aps': '0.11259', 'tst_aps': '0.11952', 'trn_loss0': '1.21796'}
+Epoch 2: {'val_loss': '0.67896', 'g0': '0.00002', 'g1': '0.05315', 'flip_r': '0.00038', 'pmean': '0.48618', 'trn_auc': '0.50822', 'val_auc': '0.48117', 'tst_auc': '0.51934', 'trn_aps': '0.10811', 'val_aps': '0.10295', 'tst_aps': '0.11744', 'trn_loss0': '1.03727'}
+Epoch 3: {'val_loss': '0.65033', 'g0': '0.00002', 'g1': '0.05315', 'flip_r': '0.00000', 'pmean': '0.46630', 'trn_auc': '0.50732', 'val_auc': '0.47634', 'tst_auc': '0.51191', 'trn_aps': '0.10801', 'val_aps': '0.10257', 'tst_aps': '0.11064', 'trn_loss0': '0.90421'}
+Epoch 4: {'val_loss': '0.61154', 'g0': '0.00003', 'g1': '0.05314', 'flip_r': '0.00019', 'pmean': '0.43973', 'trn_auc': '0.51164', 'val_auc': '0.48763', 'tst_auc': '0.51217', 'trn_aps': '0.10810', 'val_aps': '0.10656', 'tst_aps': '0.10958', 'trn_loss0': '0.78385'}
+Epoch 5: {'val_loss': '0.56444', 'g0': '0.00005', 'g1': '0.05312', 'flip_r': '0.00038', 'pmean': '0.40332', 'trn_auc': '0.51652', 'val_auc': '0.48165', 'tst_auc': '0.50381', 'trn_aps': '0.10809', 'val_aps': '0.10487', 'tst_aps': '0.10818', 'trn_loss0': '0.68156'}
+Epoch 6: {'val_loss': '0.51985', 'g0': '0.00006', 'g1': '0.05311', 'flip_r': '0.00019', 'pmean': '0.36555', 'trn_auc': '0.52462', 'val_auc': '0.49168', 'tst_auc': '0.50361', 'trn_aps': '0.10949', 'val_aps': '0.10600', 'tst_aps': '0.10703', 'trn_loss0': '0.62839'}
+Epoch 7: {'val_loss': '0.47720', 'g0': '0.00009', 'g1': '0.05308', 'flip_r': '0.00056', 'pmean': '0.32627', 'trn_auc': '0.52947', 'val_auc': '0.49689', 'tst_auc': '0.50738', 'trn_aps': '0.11265', 'val_aps': '0.10747', 'tst_aps': '0.10676', 'trn_loss0': '0.57524'}
+Epoch 8: {'val_loss': '0.44667', 'g0': '0.00013', 'g1': '0.05304', 'flip_r': '0.00075', 'pmean': '0.29513', 'trn_auc': '0.53248', 'val_auc': '0.50267', 'tst_auc': '0.51230', 'trn_aps': '0.11334', 'val_aps': '0.10869', 'tst_aps': '0.10649', 'trn_loss0': '0.54008'}
+Epoch 9: {'val_loss': '0.42011', 'g0': '0.00016', 'g1': '0.05301', 'flip_r': '0.00094', 'pmean': '0.26401', 'trn_auc': '0.53789', 'val_auc': '0.50996', 'tst_auc': '0.51116', 'trn_aps': '0.11543', 'val_aps': '0.11106', 'tst_aps': '0.10477', 'trn_loss0': '0.48983'}
+Epoch 10: {'val_loss': '0.39534', 'g0': '0.00016', 'g1': '0.05301', 'flip_r': '0.00038', 'pmean': '0.23178', 'trn_auc': '0.53827', 'val_auc': '0.50217', 'tst_auc': '0.50833', 'trn_aps': '0.11738', 'val_aps': '0.10853', 'tst_aps': '0.10363', 'trn_loss0': '0.46644'}
+Epoch 11: {'val_loss': '0.37932', 'g0': '0.00019', 'g1': '0.05298', 'flip_r': '0.00169', 'pmean': '0.20820', 'trn_auc': '0.54211', 'val_auc': '0.50334', 'tst_auc': '0.51882', 'trn_aps': '0.11904', 'val_aps': '0.11156', 'tst_aps': '0.11050', 'trn_loss0': '0.43915'}
+Epoch 12: {'val_loss': '0.36663', 'g0': '0.00024', 'g1': '0.05293', 'flip_r': '0.00094', 'pmean': '0.18625', 'trn_auc': '0.53783', 'val_auc': '0.50389', 'tst_auc': '0.52116', 'trn_aps': '0.11715', 'val_aps': '0.11103', 'tst_aps': '0.11086', 'trn_loss0': '0.42082'}
+Epoch 13: {'val_loss': '0.35511', 'g0': '0.00030', 'g1': '0.05287', 'flip_r': '0.00339', 'pmean': '0.16003', 'trn_auc': '0.53441', 'val_auc': '0.51313', 'tst_auc': '0.53329', 'trn_aps': '0.11567', 'val_aps': '0.11550', 'tst_aps': '0.11500', 'trn_loss0': '0.40683'}
+Epoch 14: {'val_loss': '0.35056', 'g0': '0.00031', 'g1': '0.05286', 'flip_r': '0.00094', 'pmean': '0.14466', 'trn_auc': '0.52600', 'val_auc': '0.52169', 'tst_auc': '0.53098', 'trn_aps': '0.11411', 'val_aps': '0.12020', 'tst_aps': '0.11512', 'trn_loss0': '0.38744'}
+Epoch 15: {'val_loss': '0.34701', 'g0': '0.00029', 'g1': '0.05288', 'flip_r': '0.00226', 'pmean': '0.12763', 'trn_auc': '0.53140', 'val_auc': '0.52077', 'tst_auc': '0.52174', 'trn_aps': '0.11440', 'val_aps': '0.11507', 'tst_aps': '0.10979', 'trn_loss0': '0.40247'}
+Epoch 16: {'val_loss': '0.34754', 'g0': '0.00031', 'g1': '0.05286', 'flip_r': '0.00150', 'pmean': '0.12632', 'trn_auc': '0.54136', 'val_auc': '0.51294', 'tst_auc': '0.53043', 'trn_aps': '0.11800', 'val_aps': '0.11312', 'tst_aps': '0.11473', 'trn_loss0': '0.38848'}
+Epoch 17: {'val_loss': '0.34737', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00320', 'pmean': '0.11166', 'trn_auc': '0.52892', 'val_auc': '0.52351', 'tst_auc': '0.52688', 'trn_aps': '0.11154', 'val_aps': '0.11347', 'tst_aps': '0.11150', 'trn_loss0': '0.38398'}
+Epoch 18: {'val_loss': '0.34971', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00433', 'pmean': '0.10503', 'trn_auc': '0.52677', 'val_auc': '0.51361', 'tst_auc': '0.52720', 'trn_aps': '0.11067', 'val_aps': '0.11069', 'tst_aps': '0.11226', 'trn_loss0': '0.36589'}
+Epoch 19: {'val_loss': '0.34847', 'g0': '0.00051', 'g1': '0.05266', 'flip_r': '0.00339', 'pmean': '0.09997', 'trn_auc': '0.52635', 'val_auc': '0.51508', 'tst_auc': '0.53375', 'trn_aps': '0.11160', 'val_aps': '0.10761', 'tst_aps': '0.11348', 'trn_loss0': '0.37676'}
+Epoch 20: {'val_loss': '0.34934', 'g0': '0.00055', 'g1': '0.05262', 'flip_r': '0.00339', 'pmean': '0.09570', 'trn_auc': '0.53303', 'val_auc': '0.52142', 'tst_auc': '0.52999', 'trn_aps': '0.11502', 'val_aps': '0.10760', 'tst_aps': '0.11140', 'trn_loss0': '0.36342'}
+Epoch 21: {'val_loss': '0.34948', 'g0': '0.00061', 'g1': '0.05256', 'flip_r': '0.00339', 'pmean': '0.09604', 'trn_auc': '0.52766', 'val_auc': '0.51287', 'tst_auc': '0.52543', 'trn_aps': '0.11472', 'val_aps': '0.10542', 'tst_aps': '0.11095', 'trn_loss0': '0.37487'}
+Epoch 00022: reducing learning rate of group 0 to 5.0000e-04.
+Epoch 22: {'val_loss': '0.34641', 'g0': '0.00063', 'g1': '0.05254', 'flip_r': '0.00339', 'pmean': '0.09298', 'trn_auc': '0.53261', 'val_auc': '0.52155', 'tst_auc': '0.53386', 'trn_aps': '0.11317', 'val_aps': '0.10771', 'tst_aps': '0.11407', 'trn_loss0': '0.37177'}
+Epoch 23: {'val_loss': '0.34781', 'g0': '0.00065', 'g1': '0.05252', 'flip_r': '0.00451', 'pmean': '0.08931', 'trn_auc': '0.54062', 'val_auc': '0.53955', 'tst_auc': '0.53514', 'trn_aps': '0.11748', 'val_aps': '0.10971', 'tst_aps': '0.11315', 'trn_loss0': '0.37150'}
+Epoch 24: {'val_loss': '0.34731', 'g0': '0.00070', 'g1': '0.05247', 'flip_r': '0.00282', 'pmean': '0.08926', 'trn_auc': '0.52813', 'val_auc': '0.54235', 'tst_auc': '0.53394', 'trn_aps': '0.11207', 'val_aps': '0.11657', 'tst_aps': '0.11312', 'trn_loss0': '0.36985'}
+Epoch 25: {'val_loss': '0.34876', 'g0': '0.00057', 'g1': '0.05260', 'flip_r': '0.00433', 'pmean': '0.08914', 'trn_auc': '0.52992', 'val_auc': '0.53361', 'tst_auc': '0.52944', 'trn_aps': '0.11207', 'val_aps': '0.11444', 'tst_aps': '0.11329', 'trn_loss0': '0.36635'}
+Epoch 26: {'val_loss': '0.35412', 'g0': '0.00067', 'g1': '0.05250', 'flip_r': '0.00715', 'pmean': '0.08793', 'trn_auc': '0.53763', 'val_auc': '0.52806', 'tst_auc': '0.53317', 'trn_aps': '0.11658', 'val_aps': '0.11017', 'tst_aps': '0.11651', 'trn_loss0': '0.37247'}
+Epoch 27: {'val_loss': '0.35584', 'g0': '0.00055', 'g1': '0.05262', 'flip_r': '0.00451', 'pmean': '0.09115', 'trn_auc': '0.54073', 'val_auc': '0.52183', 'tst_auc': '0.52857', 'trn_aps': '0.12038', 'val_aps': '0.10864', 'tst_aps': '0.11472', 'trn_loss0': '0.38743'}
+Epoch 28: {'val_loss': '0.34556', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00376', 'pmean': '0.09305', 'trn_auc': '0.54129', 'val_auc': '0.53946', 'tst_auc': '0.52984', 'trn_aps': '0.11353', 'val_aps': '0.10966', 'tst_aps': '0.11407', 'trn_loss0': '0.36806'}
+Epoch 29: {'val_loss': '0.34677', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00263', 'pmean': '0.09070', 'trn_auc': '0.53482', 'val_auc': '0.54128', 'tst_auc': '0.53103', 'trn_aps': '0.11133', 'val_aps': '0.11203', 'tst_aps': '0.11445', 'trn_loss0': '0.36360'}
+Epoch 30: {'val_loss': '0.34665', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00244', 'pmean': '0.08766', 'trn_auc': '0.53858', 'val_auc': '0.54408', 'tst_auc': '0.53496', 'trn_aps': '0.11274', 'val_aps': '0.11603', 'tst_aps': '0.11516', 'trn_loss0': '0.35530'}
+Epoch 31: {'val_loss': '0.34663', 'g0': '0.00045', 'g1': '0.05272', 'flip_r': '0.00282', 'pmean': '0.08790', 'trn_auc': '0.52981', 'val_auc': '0.54364', 'tst_auc': '0.53800', 'trn_aps': '0.11088', 'val_aps': '0.11687', 'tst_aps': '0.11587', 'trn_loss0': '0.36342'}
+Epoch 32: {'val_loss': '0.34693', 'g0': '0.00036', 'g1': '0.05281', 'flip_r': '0.00357', 'pmean': '0.08782', 'trn_auc': '0.53261', 'val_auc': '0.54195', 'tst_auc': '0.53349', 'trn_aps': '0.11233', 'val_aps': '0.11723', 'tst_aps': '0.11425', 'trn_loss0': '0.35239'}
+Epoch 33: {'val_loss': '0.34615', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00282', 'pmean': '0.08852', 'trn_auc': '0.53261', 'val_auc': '0.55301', 'tst_auc': '0.52968', 'trn_aps': '0.11043', 'val_aps': '0.11879', 'tst_aps': '0.11290', 'trn_loss0': '0.38111'}
+Epoch 34: {'val_loss': '0.34584', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00263', 'pmean': '0.08905', 'trn_auc': '0.52579', 'val_auc': '0.54764', 'tst_auc': '0.53117', 'trn_aps': '0.10928', 'val_aps': '0.11718', 'tst_aps': '0.11591', 'trn_loss0': '0.36190'}
+Epoch 00035: reducing learning rate of group 0 to 2.5000e-04.
+Epoch 35: {'val_loss': '0.34662', 'g0': '0.00037', 'g1': '0.05280', 'flip_r': '0.00414', 'pmean': '0.09117', 'trn_auc': '0.53953', 'val_auc': '0.55058', 'tst_auc': '0.53059', 'trn_aps': '0.11201', 'val_aps': '0.11863', 'tst_aps': '0.11559', 'trn_loss0': '0.35240'}
+Epoch 36: {'val_loss': '0.34492', 'g0': '0.00035', 'g1': '0.05282', 'flip_r': '0.00226', 'pmean': '0.09007', 'trn_auc': '0.53817', 'val_auc': '0.55886', 'tst_auc': '0.53209', 'trn_aps': '0.11165', 'val_aps': '0.11444', 'tst_aps': '0.11314', 'trn_loss0': '0.35877'}
+Epoch 37: {'val_loss': '0.34495', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00207', 'pmean': '0.08823', 'trn_auc': '0.54244', 'val_auc': '0.55878', 'tst_auc': '0.53704', 'trn_aps': '0.11234', 'val_aps': '0.11589', 'tst_aps': '0.11329', 'trn_loss0': '0.37334'}
+Epoch 38: {'val_loss': '0.34568', 'g0': '0.00036', 'g1': '0.05281', 'flip_r': '0.00263', 'pmean': '0.08832', 'trn_auc': '0.54333', 'val_auc': '0.55851', 'tst_auc': '0.53513', 'trn_aps': '0.11307', 'val_aps': '0.11613', 'tst_aps': '0.11302', 'trn_loss0': '0.35770'}
+Epoch 39: {'val_loss': '0.34551', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00244', 'pmean': '0.08928', 'trn_auc': '0.55345', 'val_auc': '0.55741', 'tst_auc': '0.53629', 'trn_aps': '0.11689', 'val_aps': '0.11563', 'tst_aps': '0.11391', 'trn_loss0': '0.35164'}
+Epoch 40: {'val_loss': '0.34449', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00244', 'pmean': '0.09073', 'trn_auc': '0.55078', 'val_auc': '0.55630', 'tst_auc': '0.53738', 'trn_aps': '0.11673', 'val_aps': '0.11481', 'tst_aps': '0.11456', 'trn_loss0': '0.36322'}
+Epoch 41: {'val_loss': '0.34681', 'g0': '0.00057', 'g1': '0.05260', 'flip_r': '0.00621', 'pmean': '0.08995', 'trn_auc': '0.55039', 'val_auc': '0.55092', 'tst_auc': '0.53815', 'trn_aps': '0.11630', 'val_aps': '0.11333', 'tst_aps': '0.11654', 'trn_loss0': '0.36499'}
+Epoch 42: {'val_loss': '0.34699', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00451', 'pmean': '0.08915', 'trn_auc': '0.54736', 'val_auc': '0.54881', 'tst_auc': '0.53345', 'trn_aps': '0.11497', 'val_aps': '0.11270', 'tst_aps': '0.11339', 'trn_loss0': '0.35570'}
+Epoch 43: {'val_loss': '0.34693', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00244', 'pmean': '0.08817', 'trn_auc': '0.55447', 'val_auc': '0.55232', 'tst_auc': '0.53182', 'trn_aps': '0.11777', 'val_aps': '0.11404', 'tst_aps': '0.11334', 'trn_loss0': '0.38174'}
+Epoch 44: {'val_loss': '0.34515', 'g0': '0.00034', 'g1': '0.05283', 'flip_r': '0.00339', 'pmean': '0.08854', 'trn_auc': '0.54591', 'val_auc': '0.55625', 'tst_auc': '0.53721', 'trn_aps': '0.11456', 'val_aps': '0.11417', 'tst_aps': '0.11377', 'trn_loss0': '0.36016'}
+Epoch 45: {'val_loss': '0.34608', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00320', 'pmean': '0.08842', 'trn_auc': '0.54022', 'val_auc': '0.55006', 'tst_auc': '0.53811', 'trn_aps': '0.11445', 'val_aps': '0.11309', 'tst_aps': '0.11500', 'trn_loss0': '0.37031'}
+Epoch 46: {'val_loss': '0.34513', 'g0': '0.00034', 'g1': '0.05283', 'flip_r': '0.00433', 'pmean': '0.08684', 'trn_auc': '0.53845', 'val_auc': '0.55526', 'tst_auc': '0.54065', 'trn_aps': '0.11443', 'val_aps': '0.12010', 'tst_aps': '0.11620', 'trn_loss0': '0.35430'}
+Epoch 00047: reducing learning rate of group 0 to 1.2500e-04.
+Epoch 47: {'val_loss': '0.34390', 'g0': '0.00032', 'g1': '0.05285', 'flip_r': '0.00339', 'pmean': '0.08764', 'trn_auc': '0.53003', 'val_auc': '0.55335', 'tst_auc': '0.54769', 'trn_aps': '0.11043', 'val_aps': '0.11419', 'tst_aps': '0.12066', 'trn_loss0': '0.35664'}
+Epoch 48: {'val_loss': '0.34465', 'g0': '0.00036', 'g1': '0.05281', 'flip_r': '0.00339', 'pmean': '0.08801', 'trn_auc': '0.53981', 'val_auc': '0.54844', 'tst_auc': '0.54324', 'trn_aps': '0.11330', 'val_aps': '0.11229', 'tst_aps': '0.11724', 'trn_loss0': '0.35766'}
+Epoch 49: {'val_loss': '0.34366', 'g0': '0.00036', 'g1': '0.05281', 'flip_r': '0.00226', 'pmean': '0.08792', 'trn_auc': '0.53793', 'val_auc': '0.54911', 'tst_auc': '0.54500', 'trn_aps': '0.11245', 'val_aps': '0.11186', 'tst_aps': '0.12009', 'trn_loss0': '0.36324'}
+Epoch 50: {'val_loss': '0.34328', 'g0': '0.00033', 'g1': '0.05284', 'flip_r': '0.00320', 'pmean': '0.08797', 'trn_auc': '0.53557', 'val_auc': '0.54992', 'tst_auc': '0.54703', 'trn_aps': '0.11234', 'val_aps': '0.11144', 'tst_aps': '0.12125', 'trn_loss0': '0.36222'}
+Epoch 51: {'val_loss': '0.34383', 'g0': '0.00030', 'g1': '0.05287', 'flip_r': '0.00357', 'pmean': '0.08639', 'trn_auc': '0.53101', 'val_auc': '0.54136', 'tst_auc': '0.54316', 'trn_aps': '0.11055', 'val_aps': '0.10993', 'tst_aps': '0.11567', 'trn_loss0': '0.35208'}
+Epoch 52: {'val_loss': '0.34487', 'g0': '0.00029', 'g1': '0.05288', 'flip_r': '0.00395', 'pmean': '0.08634', 'trn_auc': '0.54028', 'val_auc': '0.54476', 'tst_auc': '0.53896', 'trn_aps': '0.11184', 'val_aps': '0.11025', 'tst_aps': '0.11607', 'trn_loss0': '0.35536'}
+Epoch 53: {'val_loss': '0.34589', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00395', 'pmean': '0.08569', 'trn_auc': '0.53798', 'val_auc': '0.55159', 'tst_auc': '0.54203', 'trn_aps': '0.11253', 'val_aps': '0.11073', 'tst_aps': '0.11530', 'trn_loss0': '0.35127'}
+Epoch 54: {'val_loss': '0.34564', 'g0': '0.00044', 'g1': '0.05273', 'flip_r': '0.00414', 'pmean': '0.08619', 'trn_auc': '0.53505', 'val_auc': '0.54720', 'tst_auc': '0.53540', 'trn_aps': '0.11185', 'val_aps': '0.10961', 'tst_aps': '0.11335', 'trn_loss0': '0.36469'}
+Epoch 55: {'val_loss': '0.34493', 'g0': '0.00035', 'g1': '0.05282', 'flip_r': '0.00320', 'pmean': '0.08899', 'trn_auc': '0.54171', 'val_auc': '0.54786', 'tst_auc': '0.53757', 'trn_aps': '0.11480', 'val_aps': '0.10989', 'tst_aps': '0.11421', 'trn_loss0': '0.37036'}
+Epoch 56: {'val_loss': '0.34456', 'g0': '0.00042', 'g1': '0.05275', 'flip_r': '0.00244', 'pmean': '0.08885', 'trn_auc': '0.54860', 'val_auc': '0.54991', 'tst_auc': '0.54038', 'trn_aps': '0.11489', 'val_aps': '0.11101', 'tst_aps': '0.11705', 'trn_loss0': '0.34479'}
+Epoch 00057: reducing learning rate of group 0 to 6.2500e-05.
+Epoch 57: {'val_loss': '0.34660', 'g0': '0.00033', 'g1': '0.05284', 'flip_r': '0.00433', 'pmean': '0.08676', 'trn_auc': '0.54297', 'val_auc': '0.54368', 'tst_auc': '0.53248', 'trn_aps': '0.11351', 'val_aps': '0.10881', 'tst_aps': '0.11359', 'trn_loss0': '0.35346'}
+Epoch 58: {'val_loss': '0.34864', 'g0': '0.00037', 'g1': '0.05280', 'flip_r': '0.00301', 'pmean': '0.08543', 'trn_auc': '0.55086', 'val_auc': '0.54688', 'tst_auc': '0.53404', 'trn_aps': '0.11433', 'val_aps': '0.11025', 'tst_aps': '0.11314', 'trn_loss0': '0.36476'}
+Epoch 59: {'val_loss': '0.34518', 'g0': '0.00035', 'g1': '0.05282', 'flip_r': '0.00301', 'pmean': '0.08638', 'trn_auc': '0.55444', 'val_auc': '0.54870', 'tst_auc': '0.53264', 'trn_aps': '0.11533', 'val_aps': '0.11661', 'tst_aps': '0.11626', 'trn_loss0': '0.35157'}
+Epoch 60: {'val_loss': '0.34466', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00244', 'pmean': '0.08740', 'trn_auc': '0.55712', 'val_auc': '0.54718', 'tst_auc': '0.53224', 'trn_aps': '0.11795', 'val_aps': '0.11162', 'tst_aps': '0.11372', 'trn_loss0': '0.35562'}
+Epoch 61: {'val_loss': '0.34549', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00395', 'pmean': '0.08549', 'trn_auc': '0.55858', 'val_auc': '0.54760', 'tst_auc': '0.53416', 'trn_aps': '0.11638', 'val_aps': '0.11279', 'tst_aps': '0.11402', 'trn_loss0': '0.35727'}
+Epoch 62: {'val_loss': '0.34402', 'g0': '0.00033', 'g1': '0.05284', 'flip_r': '0.00489', 'pmean': '0.08746', 'trn_auc': '0.55235', 'val_auc': '0.54350', 'tst_auc': '0.53707', 'trn_aps': '0.11540', 'val_aps': '0.11037', 'tst_aps': '0.11560', 'trn_loss0': '0.35350'}
+Epoch 00063: reducing learning rate of group 0 to 3.1250e-05.
+Epoch 63: {'val_loss': '0.34306', 'g0': '0.00028', 'g1': '0.05289', 'flip_r': '0.00545', 'pmean': '0.08973', 'trn_auc': '0.55698', 'val_auc': '0.54808', 'tst_auc': '0.54081', 'trn_aps': '0.11719', 'val_aps': '0.11143', 'tst_aps': '0.11797', 'trn_loss0': '0.35929'}
+Epoch 64: {'val_loss': '0.34335', 'g0': '0.00032', 'g1': '0.05285', 'flip_r': '0.00376', 'pmean': '0.08944', 'trn_auc': '0.55731', 'val_auc': '0.54715', 'tst_auc': '0.53966', 'trn_aps': '0.11643', 'val_aps': '0.11068', 'tst_aps': '0.11791', 'trn_loss0': '0.36751'}
+Epoch 65: {'val_loss': '0.34643', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00433', 'pmean': '0.08658', 'trn_auc': '0.55031', 'val_auc': '0.55144', 'tst_auc': '0.53738', 'trn_aps': '0.11538', 'val_aps': '0.11169', 'tst_aps': '0.11682', 'trn_loss0': '0.36580'}
+Epoch 66: {'val_loss': '0.34695', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00376', 'pmean': '0.08566', 'trn_auc': '0.55551', 'val_auc': '0.55097', 'tst_auc': '0.53654', 'trn_aps': '0.11674', 'val_aps': '0.11277', 'tst_aps': '0.11562', 'trn_loss0': '0.35473'}
+Epoch 67: {'val_loss': '0.34591', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00320', 'pmean': '0.08834', 'trn_auc': '0.54998', 'val_auc': '0.54356', 'tst_auc': '0.54301', 'trn_aps': '0.11490', 'val_aps': '0.11137', 'tst_aps': '0.11785', 'trn_loss0': '0.35197'}
+Epoch 68: {'val_loss': '0.34723', 'g0': '0.00034', 'g1': '0.05283', 'flip_r': '0.00489', 'pmean': '0.08790', 'trn_auc': '0.54852', 'val_auc': '0.54413', 'tst_auc': '0.54000', 'trn_aps': '0.11349', 'val_aps': '0.11136', 'tst_aps': '0.11712', 'trn_loss0': '0.35026'}
+Epoch 69: {'val_loss': '0.34795', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00357', 'pmean': '0.08769', 'trn_auc': '0.55069', 'val_auc': '0.53935', 'tst_auc': '0.54153', 'trn_aps': '0.11496', 'val_aps': '0.11028', 'tst_aps': '0.11725', 'trn_loss0': '0.35232'}
+Epoch 00070: reducing learning rate of group 0 to 1.5625e-05.
+Epoch 70: {'val_loss': '0.34563', 'g0': '0.00037', 'g1': '0.05280', 'flip_r': '0.00451', 'pmean': '0.08912', 'trn_auc': '0.55138', 'val_auc': '0.54524', 'tst_auc': '0.55528', 'trn_aps': '0.11607', 'val_aps': '0.11712', 'tst_aps': '0.12432', 'trn_loss0': '0.37284'}
+Epoch 71: {'val_loss': '0.34927', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00527', 'pmean': '0.09119', 'trn_auc': '0.55480', 'val_auc': '0.54113', 'tst_auc': '0.54483', 'trn_aps': '0.11562', 'val_aps': '0.11064', 'tst_aps': '0.11820', 'trn_loss0': '0.35059'}
+Epoch 72: {'val_loss': '0.34547', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00414', 'pmean': '0.08829', 'trn_auc': '0.54669', 'val_auc': '0.53942', 'tst_auc': '0.53634', 'trn_aps': '0.11347', 'val_aps': '0.10877', 'tst_aps': '0.11751', 'trn_loss0': '0.36343'}
+Epoch 73: {'val_loss': '0.34570', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00282', 'pmean': '0.08904', 'trn_auc': '0.53863', 'val_auc': '0.54100', 'tst_auc': '0.54222', 'trn_aps': '0.11193', 'val_aps': '0.10881', 'tst_aps': '0.11678', 'trn_loss0': '0.34799'}
+Epoch 74: {'val_loss': '0.34792', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00357', 'pmean': '0.08605', 'trn_auc': '0.53739', 'val_auc': '0.54134', 'tst_auc': '0.54101', 'trn_aps': '0.11251', 'val_aps': '0.10975', 'tst_aps': '0.11615', 'trn_loss0': '0.35209'}
+Epoch 75: {'val_loss': '0.34640', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00339', 'pmean': '0.08792', 'trn_auc': '0.54337', 'val_auc': '0.54714', 'tst_auc': '0.53786', 'trn_aps': '0.11462', 'val_aps': '0.11226', 'tst_aps': '0.11668', 'trn_loss0': '0.35674'}
+Epoch 00076: reducing learning rate of group 0 to 7.8125e-06.
+Epoch 76: {'val_loss': '0.34587', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00339', 'pmean': '0.08797', 'trn_auc': '0.54676', 'val_auc': '0.54732', 'tst_auc': '0.53620', 'trn_aps': '0.11558', 'val_aps': '0.11288', 'tst_aps': '0.11842', 'trn_loss0': '0.35322'}
+Epoch 77: {'val_loss': '0.34620', 'g0': '0.00050', 'g1': '0.05267', 'flip_r': '0.00320', 'pmean': '0.08673', 'trn_auc': '0.55173', 'val_auc': '0.55142', 'tst_auc': '0.53528', 'trn_aps': '0.11699', 'val_aps': '0.11320', 'tst_aps': '0.11731', 'trn_loss0': '0.37194'}
+Epoch 78: {'val_loss': '0.34535', 'g0': '0.00058', 'g1': '0.05259', 'flip_r': '0.00414', 'pmean': '0.08774', 'trn_auc': '0.55475', 'val_auc': '0.54828', 'tst_auc': '0.54063', 'trn_aps': '0.11756', 'val_aps': '0.11238', 'tst_aps': '0.11951', 'trn_loss0': '0.34797'}
+Epoch 79: {'val_loss': '0.34587', 'g0': '0.00049', 'g1': '0.05268', 'flip_r': '0.00545', 'pmean': '0.08778', 'trn_auc': '0.54851', 'val_auc': '0.54916', 'tst_auc': '0.54253', 'trn_aps': '0.11674', 'val_aps': '0.11139', 'tst_aps': '0.11838', 'trn_loss0': '0.36762'}
+Epoch 80: {'val_loss': '0.34712', 'g0': '0.00036', 'g1': '0.05281', 'flip_r': '0.00395', 'pmean': '0.08840', 'trn_auc': '0.54562', 'val_auc': '0.55639', 'tst_auc': '0.54332', 'trn_aps': '0.11331', 'val_aps': '0.11310', 'tst_aps': '0.12042', 'trn_loss0': '0.35637'}
+Epoch 81: {'val_loss': '0.34304', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00395', 'pmean': '0.09084', 'trn_auc': '0.53923', 'val_auc': '0.54935', 'tst_auc': '0.55243', 'trn_aps': '0.11294', 'val_aps': '0.12023', 'tst_aps': '0.12501', 'trn_loss0': '0.35805'}
+Epoch 00082: reducing learning rate of group 0 to 3.9063e-06.
+Epoch 82: {'val_loss': '0.34328', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00169', 'pmean': '0.09051', 'trn_auc': '0.53950', 'val_auc': '0.54688', 'tst_auc': '0.54664', 'trn_aps': '0.11214', 'val_aps': '0.11977', 'tst_aps': '0.12086', 'trn_loss0': '0.35263'}
+Epoch 83: {'val_loss': '0.34509', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00320', 'pmean': '0.08893', 'trn_auc': '0.53517', 'val_auc': '0.54446', 'tst_auc': '0.54323', 'trn_aps': '0.11112', 'val_aps': '0.11791', 'tst_aps': '0.12168', 'trn_loss0': '0.34763'}
+Epoch 84: {'val_loss': '0.34414', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00301', 'pmean': '0.08915', 'trn_auc': '0.53050', 'val_auc': '0.55253', 'tst_auc': '0.54683', 'trn_aps': '0.10837', 'val_aps': '0.12044', 'tst_aps': '0.12575', 'trn_loss0': '0.34809'}
+Epoch 85: {'val_loss': '0.34456', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00282', 'pmean': '0.08889', 'trn_auc': '0.54290', 'val_auc': '0.55489', 'tst_auc': '0.54389', 'trn_aps': '0.11195', 'val_aps': '0.12099', 'tst_aps': '0.11925', 'trn_loss0': '0.34948'}
+Epoch 86: {'val_loss': '0.34607', 'g0': '0.00045', 'g1': '0.05272', 'flip_r': '0.00244', 'pmean': '0.09036', 'trn_auc': '0.54201', 'val_auc': '0.55601', 'tst_auc': '0.54032', 'trn_aps': '0.11252', 'val_aps': '0.11308', 'tst_aps': '0.11623', 'trn_loss0': '0.33868'}
+Epoch 87: {'val_loss': '0.34645', 'g0': '0.00041', 'g1': '0.05276', 'flip_r': '0.00301', 'pmean': '0.09090', 'trn_auc': '0.54099', 'val_auc': '0.55569', 'tst_auc': '0.54846', 'trn_aps': '0.11322', 'val_aps': '0.11383', 'tst_aps': '0.11977', 'trn_loss0': '0.35078'}
+Epoch 00088: reducing learning rate of group 0 to 1.9531e-06.
+Epoch 88: {'val_loss': '0.34891', 'g0': '0.00046', 'g1': '0.05271', 'flip_r': '0.00433', 'pmean': '0.08812', 'trn_auc': '0.53918', 'val_auc': '0.55085', 'tst_auc': '0.54360', 'trn_aps': '0.11292', 'val_aps': '0.11279', 'tst_aps': '0.11658', 'trn_loss0': '0.34882'}
+Epoch 89: {'val_loss': '0.34726', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00301', 'pmean': '0.08767', 'trn_auc': '0.54499', 'val_auc': '0.55705', 'tst_auc': '0.54243', 'trn_aps': '0.11374', 'val_aps': '0.11441', 'tst_aps': '0.11721', 'trn_loss0': '0.35930'}
+Epoch 90: {'val_loss': '0.34746', 'g0': '0.00048', 'g1': '0.05269', 'flip_r': '0.00263', 'pmean': '0.08623', 'trn_auc': '0.54296', 'val_auc': '0.54970', 'tst_auc': '0.54312', 'trn_aps': '0.11447', 'val_aps': '0.11261', 'tst_aps': '0.11653', 'trn_loss0': '0.37156'}
+Epoch 91: {'val_loss': '0.34647', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00301', 'pmean': '0.08832', 'trn_auc': '0.54164', 'val_auc': '0.54299', 'tst_auc': '0.54064', 'trn_aps': '0.11403', 'val_aps': '0.11003', 'tst_aps': '0.11424', 'trn_loss0': '0.35745'}
+Epoch 92: {'val_loss': '0.34475', 'g0': '0.00039', 'g1': '0.05278', 'flip_r': '0.00207', 'pmean': '0.08761', 'trn_auc': '0.54365', 'val_auc': '0.54114', 'tst_auc': '0.54124', 'trn_aps': '0.11397', 'val_aps': '0.11562', 'tst_aps': '0.12044', 'trn_loss0': '0.35677'}
+Epoch 93: {'val_loss': '0.34479', 'g0': '0.00042', 'g1': '0.05275', 'flip_r': '0.00282', 'pmean': '0.08763', 'trn_auc': '0.54181', 'val_auc': '0.54667', 'tst_auc': '0.54954', 'trn_aps': '0.11388', 'val_aps': '0.11005', 'tst_aps': '0.11908', 'trn_loss0': '0.36134'}
+Epoch 00094: reducing learning rate of group 0 to 9.7656e-07.
+Epoch 94: {'val_loss': '0.34538', 'g0': '0.00033', 'g1': '0.05284', 'flip_r': '0.00395', 'pmean': '0.08479', 'trn_auc': '0.53545', 'val_auc': '0.55018', 'tst_auc': '0.53961', 'trn_aps': '0.11220', 'val_aps': '0.11098', 'tst_aps': '0.11560', 'trn_loss0': '0.37781'}
+Epoch 95: {'val_loss': '0.34656', 'g0': '0.00035', 'g1': '0.05282', 'flip_r': '0.00376', 'pmean': '0.08501', 'trn_auc': '0.54419', 'val_auc': '0.55392', 'tst_auc': '0.54240', 'trn_aps': '0.11467', 'val_aps': '0.11223', 'tst_aps': '0.11644', 'trn_loss0': '0.35121'}
+Epoch 96: {'val_loss': '0.34919', 'g0': '0.00033', 'g1': '0.05284', 'flip_r': '0.00263', 'pmean': '0.08599', 'trn_auc': '0.54375', 'val_auc': '0.55925', 'tst_auc': '0.54367', 'trn_aps': '0.11444', 'val_aps': '0.11819', 'tst_aps': '0.12061', 'trn_loss0': '0.35770'}
+Epoch 97: {'val_loss': '0.34650', 'g0': '0.00046', 'g1': '0.05271', 'flip_r': '0.00320', 'pmean': '0.08694', 'trn_auc': '0.54510', 'val_auc': '0.55101', 'tst_auc': '0.54065', 'trn_aps': '0.11607', 'val_aps': '0.11190', 'tst_aps': '0.11635', 'trn_loss0': '0.35999'}
+Epoch 98: {'val_loss': '0.34763', 'g0': '0.00038', 'g1': '0.05279', 'flip_r': '0.00263', 'pmean': '0.08512', 'trn_auc': '0.54808', 'val_auc': '0.55061', 'tst_auc': '0.54128', 'trn_aps': '0.11516', 'val_aps': '0.11183', 'tst_aps': '0.11661', 'trn_loss0': '0.34984'}
+Epoch 99: {'val_loss': '0.34634', 'g0': '0.00043', 'g1': '0.05274', 'flip_r': '0.00207', 'pmean': '0.08550', 'trn_auc': '0.54530', 'val_auc': '0.55491', 'tst_auc': '0.53689', 'trn_aps': '0.11443', 'val_aps': '0.11301', 'tst_aps': '0.11743', 'trn_loss0': '0.35658'}
+Epoch 00100: reducing learning rate of group 0 to 4.8828e-07.
+Epoch 100: {'val_loss': '0.34526', 'g0': '0.00049', 'g1': '0.05268', 'flip_r': '0.00339', 'pmean': '0.08718', 'trn_auc': '0.54899', 'val_auc': '0.55382', 'tst_auc': '0.53579', 'trn_aps': '0.11641', 'val_aps': '0.11305', 'tst_aps': '0.11566', 'trn_loss0': '0.36950'}
+Epoch 101: {'val_loss': '0.34775', 'g0': '0.00046', 'g1': '0.05271', 'flip_r': '0.00282', 'pmean': '0.08719', 'trn_auc': '0.54566', 'val_auc': '0.55015', 'tst_auc': '0.53879', 'trn_aps': '0.11538', 'val_aps': '0.11178', 'tst_aps': '0.11575', 'trn_loss0': '0.35530'}
+Epoch 102: {'val_loss': '0.34847', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00320', 'pmean': '0.08653', 'trn_auc': '0.54016', 'val_auc': '0.54809', 'tst_auc': '0.53521', 'trn_aps': '0.11278', 'val_aps': '0.10994', 'tst_aps': '0.11348', 'trn_loss0': '0.34823'}
+Epoch 103: {'val_loss': '0.35132', 'g0': '0.00047', 'g1': '0.05270', 'flip_r': '0.00263', 'pmean': '0.08451', 'trn_auc': '0.54056', 'val_auc': '0.53775', 'tst_auc': '0.53217', 'trn_aps': '0.11317', 'val_aps': '0.10842', 'tst_aps': '0.11211', 'trn_loss0': '0.36156'}
+Epoch 104: {'val_loss': '0.34672', 'g0': '0.00052', 'g1': '0.05265', 'flip_r': '0.00395', 'pmean': '0.08395', 'trn_auc': '0.54130', 'val_auc': '0.55672', 'tst_auc': '0.53741', 'trn_aps': '0.11364', 'val_aps': '0.11433', 'tst_aps': '0.11355', 'trn_loss0': '0.35654'}
+Epoch 105: {'val_loss': '0.34980', 'g0': '0.00051', 'g1': '0.05266', 'flip_r': '0.00357', 'pmean': '0.08205', 'trn_auc': '0.53280', 'val_auc': '0.55372', 'tst_auc': '0.54347', 'trn_aps': '0.11200', 'val_aps': '0.11335', 'tst_aps': '0.11396', 'trn_loss0': '0.36107'}
+Epoch 00106: reducing learning rate of group 0 to 2.4414e-07.
+Epoch 106: {'val_loss': '0.34562', 'g0': '0.00046', 'g1': '0.05271', 'flip_r': '0.00282', 'pmean': '0.08351', 'trn_auc': '0.53534', 'val_auc': '0.55772', 'tst_auc': '0.54509', 'trn_aps': '0.11276', 'val_aps': '0.11531', 'tst_aps': '0.11591', 'trn_loss0': '0.36322'}
+training time elapsed 63.18s
+Evaluating model in ./lightning_logs/n1zwgdgu/checkpoints/epoch=81-step=410.ckpt
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 51.27it/s]
+{'final_trn/auc': '0.55652', 'final_trn/aps': '0.11816', 'final_trn/mf1': '0.51305', 'final_trn/th1': '0.14210', 'final_trn/gme': '0.55919', 'final_trn/th2': '0.07506', 'final_trn/rec': '0.12500', 'final_trn/pre': '0.12069'}
+{'final_val/auc': '0.52347', 'final_val/aps': '0.12366', 'final_val/mf1': '0.52764', 'final_val/th1': '0.12683', 'final_val/gme': '0.52950', 'final_val/th2': '0.07629', 'final_val/rec': '0.19048', 'final_val/pre': '0.14508'}
+{'final_tst/auc': '0.52807', 'final_tst/aps': '0.11823', 'final_tst/mf1': '0.50502', 'final_tst/th1': '0.12683', 'final_tst/gme': '0.38596', 'final_tst/th2': '0.07629', 'final_tst/rec': '0.17667', 'final_tst/pre': '0.11700'}
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:       final_trn/aps ▁
+wandb:       final_trn/auc ▁
+wandb:       final_trn/gme ▁
+wandb:       final_trn/mf1 ▁
+wandb:       final_trn/pre ▁
+wandb:       final_trn/rec ▁
+wandb:       final_trn/th1 ▁
+wandb:       final_trn/th2 ▁
+wandb:       final_tst/aps ▁
+wandb:       final_tst/auc ▁
+wandb:       final_tst/gme ▁
+wandb:       final_tst/mf1 ▁
+wandb:       final_tst/pre ▁
+wandb:       final_tst/rec ▁
+wandb:       final_tst/th1 ▁
+wandb:       final_tst/th2 ▁
+wandb:       final_val/aps ▁
+wandb:       final_val/auc ▁
+wandb:       final_val/gme ▁
+wandb:       final_val/mf1 ▁
+wandb:       final_val/pre ▁
+wandb:       final_val/rec ▁
+wandb:       final_val/th1 ▁
+wandb:       final_val/th2 ▁
+wandb:              flip_r ▁▁▁▂▁▆▃▆▆▅▇▅▆▇▅▄▄▇▆▆▇▇▅█▇▅▇▅▆▇▇▅▄▅▄▆▅▆▅▅
+wandb:                  g0 ▁▁▂▂▃▄▄▆▇█▇▅▅▅▅▅▅▄▅▄▅▄▅▄▅▅▅▅▅▇▅▅▆▅▅▅▆▆▆▆
+wandb:                  g1 ██▇▇▆▅▅▃▂▁▃▄▄▄▄▄▄▅▄▅▄▅▅▅▄▄▄▄▄▂▄▄▄▄▄▅▃▃▃▃
+wandb:               pmean ██▆▅▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: trainer/global_step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:             trn_aps █▁▁▄▅▅▆▃▄▃▇▃▃▃▃▅▆▄▃▂▃▄▄▄▄▄▅▃▅▆▃▁▃▄▄▄▅▅▃▃
+wandb:             trn_auc ▄▁▂▅▆▅▆▄▄▄▆▅▅▆▆▇█▆▆▄▅▆██▇▇▇▆▇█▆▄▆▇▆▆▇▇▆▅
+wandb:           trn_loss0 █▅▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:             tst_aps ▅▅▂▂▁▅▅▄▃▄▅▄▄▅▄▄▄▅▅▅▄▄▅▅▅▅█▅▆▆██▅▅▆▅▅▅▄▅
+wandb:             tst_auc ▄▃▁▂▂▅▅▅▄▅▄▅▅▅▅▆▅▆▆▆▅▅▅▆▆▆█▆▅▆█▇▆▆▆▆▆▅▅▇
+wandb:        unclear_down ▁
+wandb:          unclear_up ▁
+wandb:             val_aps ▅▁▂▃▃▆▅▃▂▆▃▅▇▇▆▆▅█▅▄▄▃▆▄▄▄▇▃▅▅██▅▆▆▅▅▅▃▆
+wandb:             val_auc ▃▁▁▃▃▄▄▄▄▇▅▆▇▇██▇█▇▆▇▇▇▇▇▇▇▆▇▇▇▇██▆█▇█▆█
+wandb:            val_loss █▇▅▃▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 106
+wandb:       final_trn/aps 0.11816
+wandb:       final_trn/auc 0.55652
+wandb:       final_trn/gme 0.55919
+wandb:       final_trn/mf1 0.51305
+wandb:       final_trn/pre 0.12069
+wandb:       final_trn/rec 0.125
+wandb:       final_trn/th1 0.1421
+wandb:       final_trn/th2 0.07506
+wandb:       final_tst/aps 0.11823
+wandb:       final_tst/auc 0.52807
+wandb:       final_tst/gme 0.38596
+wandb:       final_tst/mf1 0.50502
+wandb:       final_tst/pre 0.117
+wandb:       final_tst/rec 0.17667
+wandb:       final_tst/th1 0.12683
+wandb:       final_tst/th2 0.07629
+wandb:       final_val/aps 0.12366
+wandb:       final_val/auc 0.52347
+wandb:       final_val/gme 0.5295
+wandb:       final_val/mf1 0.52764
+wandb:       final_val/pre 0.14508
+wandb:       final_val/rec 0.19048
+wandb:       final_val/th1 0.12683
+wandb:       final_val/th2 0.07629
+wandb:              flip_r 0.00282
+wandb:                  g0 0.00046
+wandb:                  g1 0.05271
+wandb:               pmean 0.08351
+wandb: trainer/global_step 534
+wandb:             trn_aps 0.11276
+wandb:             trn_auc 0.53534
+wandb:           trn_loss0 0.36322
+wandb:             tst_aps 0.11591
+wandb:             tst_auc 0.54509
+wandb:        unclear_down 0.025
+wandb:          unclear_up 0.025
+wandb:             val_aps 0.11531
+wandb:             val_auc 0.55772
+wandb:            val_loss 0.34562
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code/wandb/offline-run-20260916_102415-n1zwgdgu
+wandb: Find logs at: ./wandb/offline-run-20260916_102415-n1zwgdgu/logs
+==============================
+==============================

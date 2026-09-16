@@ -1,0 +1,239 @@
+nohup: ignoring input
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+wandb: Tracking run with wandb version 0.13.10
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+========================================
+数据名称 fdcompcn
+总样本数: 5317
+欺诈样本数: 559
+非欺诈样本数: 4758
+欺诈样本占比: 10.51%
+特征个数: 57
+
+invest_bc2bc边关系下的统计信息:
+边的个数: 10865
+平均出度: 2.04
+provide_bc2bc边关系下的统计信息:
+边的个数: 6077
+平均出度: 1.14
+sale_bc2bc边关系下的统计信息:
+边的个数: 6359
+平均出度: 1.20
+
+数据划分情况:
+训练集: 531 验证集: 1579 测试集: 3207
+训练集: 9.99% 验证集: 29.70% 测试集: 60.32%
+========================================
+超参数设定：
+dname: fdcompcn
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 64
+p: 0.3
+k: 4
+z: 0.025
+seed: 2
+bs: 256
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 10000
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 3
+n_classes 2
+========================================
+after bin_encoding： (5317, 264)
+========================================
+{'unclear_up': 0.025, 'unclear_down': 0.025}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 117 K 
+------------------------------
+117 K     Trainable params
+0         Non-trainable params
+117 K     Total params
+0.471     Total estimated model params size (MB)
+Epoch 0: {'val_loss': '0.68799', 'g0': '0.00007', 'g1': '0.05310', 'flip_r': '0.00132', 'pmean': '0.48717', 'trn_auc': '0.45985', 'val_auc': '0.54860', 'tst_auc': '0.55515', 'trn_aps': '0.10179', 'val_aps': '0.12486', 'tst_aps': '0.12343', 'trn_loss0': '0.66425'}
+Epoch 1: {'val_loss': '0.65687', 'g0': '0.00004', 'g1': '0.05313', 'flip_r': '0.00056', 'pmean': '0.47267', 'trn_auc': '0.49609', 'val_auc': '0.52640', 'tst_auc': '0.55385', 'trn_aps': '0.10467', 'val_aps': '0.11587', 'tst_aps': '0.12394', 'trn_loss0': '0.60004'}
+Epoch 2: {'val_loss': '0.58766', 'g0': '0.00006', 'g1': '0.05311', 'flip_r': '0.00038', 'pmean': '0.42483', 'trn_auc': '0.48357', 'val_auc': '0.51127', 'tst_auc': '0.54523', 'trn_aps': '0.09735', 'val_aps': '0.11264', 'tst_aps': '0.12304', 'trn_loss0': '0.52793'}
+Epoch 3: {'val_loss': '0.54314', 'g0': '0.00006', 'g1': '0.05311', 'flip_r': '0.00000', 'pmean': '0.38958', 'trn_auc': '0.50632', 'val_auc': '0.51429', 'tst_auc': '0.54673', 'trn_aps': '0.10343', 'val_aps': '0.10946', 'tst_aps': '0.12368', 'trn_loss0': '0.54117'}
+Epoch 4: {'val_loss': '0.49876', 'g0': '0.00006', 'g1': '0.05311', 'flip_r': '0.00000', 'pmean': '0.35088', 'trn_auc': '0.52338', 'val_auc': '0.52917', 'tst_auc': '0.54899', 'trn_aps': '0.10777', 'val_aps': '0.11032', 'tst_aps': '0.12477', 'trn_loss0': '0.55160'}
+Epoch 5: {'val_loss': '0.46242', 'g0': '0.00008', 'g1': '0.05309', 'flip_r': '0.00038', 'pmean': '0.31593', 'trn_auc': '0.54756', 'val_auc': '0.53519', 'tst_auc': '0.54725', 'trn_aps': '0.11144', 'val_aps': '0.11098', 'tst_aps': '0.12512', 'trn_loss0': '0.47797'}
+Epoch 6: {'val_loss': '0.43627', 'g0': '0.00008', 'g1': '0.05309', 'flip_r': '0.00000', 'pmean': '0.28803', 'trn_auc': '0.56346', 'val_auc': '0.54471', 'tst_auc': '0.54857', 'trn_aps': '0.11828', 'val_aps': '0.11332', 'tst_aps': '0.12520', 'trn_loss0': '0.47009'}
+Epoch 7: {'val_loss': '0.41973', 'g0': '0.00011', 'g1': '0.05306', 'flip_r': '0.00056', 'pmean': '0.26838', 'trn_auc': '0.56000', 'val_auc': '0.54500', 'tst_auc': '0.54824', 'trn_aps': '0.12083', 'val_aps': '0.11389', 'tst_aps': '0.12232', 'trn_loss0': '0.45749'}
+Epoch 8: {'val_loss': '0.40629', 'g0': '0.00011', 'g1': '0.05306', 'flip_r': '0.00113', 'pmean': '0.25181', 'trn_auc': '0.57492', 'val_auc': '0.54777', 'tst_auc': '0.54903', 'trn_aps': '0.13095', 'val_aps': '0.11444', 'tst_aps': '0.12245', 'trn_loss0': '0.44777'}
+Epoch 9: {'val_loss': '0.39202', 'g0': '0.00013', 'g1': '0.05304', 'flip_r': '0.00038', 'pmean': '0.23321', 'trn_auc': '0.59639', 'val_auc': '0.54537', 'tst_auc': '0.54519', 'trn_aps': '0.14343', 'val_aps': '0.11605', 'tst_aps': '0.11765', 'trn_loss0': '0.42468'}
+Epoch 10: {'val_loss': '0.38295', 'g0': '0.00012', 'g1': '0.05305', 'flip_r': '0.00019', 'pmean': '0.21946', 'trn_auc': '0.58553', 'val_auc': '0.54643', 'tst_auc': '0.54385', 'trn_aps': '0.14086', 'val_aps': '0.11735', 'tst_aps': '0.11825', 'trn_loss0': '0.46391'}
+Epoch 11: {'val_loss': '0.37308', 'g0': '0.00017', 'g1': '0.05300', 'flip_r': '0.00094', 'pmean': '0.20346', 'trn_auc': '0.57929', 'val_auc': '0.53919', 'tst_auc': '0.53512', 'trn_aps': '0.14032', 'val_aps': '0.11366', 'tst_aps': '0.11553', 'trn_loss0': '0.41211'}
+Epoch 12: {'val_loss': '0.37138', 'g0': '0.00021', 'g1': '0.05296', 'flip_r': '0.00188', 'pmean': '0.19465', 'trn_auc': '0.54898', 'val_auc': '0.52806', 'tst_auc': '0.51382', 'trn_aps': '0.12151', 'val_aps': '0.11174', 'tst_aps': '0.10848', 'trn_loss0': '0.42175'}
+Epoch 13: {'val_loss': '0.36227', 'g0': '0.00020', 'g1': '0.05297', 'flip_r': '0.00207', 'pmean': '0.18282', 'trn_auc': '0.55921', 'val_auc': '0.53270', 'tst_auc': '0.52950', 'trn_aps': '0.13037', 'val_aps': '0.11254', 'tst_aps': '0.11281', 'trn_loss0': '0.38154'}
+Epoch 14: {'val_loss': '0.35992', 'g0': '0.00017', 'g1': '0.05300', 'flip_r': '0.00094', 'pmean': '0.17778', 'trn_auc': '0.55165', 'val_auc': '0.52216', 'tst_auc': '0.53024', 'trn_aps': '0.12292', 'val_aps': '0.10915', 'tst_aps': '0.11285', 'trn_loss0': '0.40279'}
+Epoch 15: {'val_loss': '0.35658', 'g0': '0.00019', 'g1': '0.05298', 'flip_r': '0.00075', 'pmean': '0.16927', 'trn_auc': '0.55865', 'val_auc': '0.52318', 'tst_auc': '0.52960', 'trn_aps': '0.12709', 'val_aps': '0.10917', 'tst_aps': '0.11358', 'trn_loss0': '0.39438'}
+Epoch 16: {'val_loss': '0.35388', 'g0': '0.00018', 'g1': '0.05299', 'flip_r': '0.00282', 'pmean': '0.15690', 'trn_auc': '0.53162', 'val_auc': '0.52445', 'tst_auc': '0.52617', 'trn_aps': '0.12243', 'val_aps': '0.11111', 'tst_aps': '0.11248', 'trn_loss0': '0.40615'}
+Epoch 17: {'val_loss': '0.34893', 'g0': '0.00017', 'g1': '0.05300', 'flip_r': '0.00207', 'pmean': '0.15001', 'trn_auc': '0.54925', 'val_auc': '0.52755', 'tst_auc': '0.53304', 'trn_aps': '0.12663', 'val_aps': '0.11140', 'tst_aps': '0.11353', 'trn_loss0': '0.39328'}
+Epoch 18: {'val_loss': '0.35531', 'g0': '0.00030', 'g1': '0.05287', 'flip_r': '0.00395', 'pmean': '0.13868', 'trn_auc': '0.54737', 'val_auc': '0.52473', 'tst_auc': '0.53885', 'trn_aps': '0.12379', 'val_aps': '0.11110', 'tst_aps': '0.11646', 'trn_loss0': '0.35508'}
+Epoch 19: {'val_loss': '0.35130', 'g0': '0.00040', 'g1': '0.05277', 'flip_r': '0.00339', 'pmean': '0.13052', 'trn_auc': '0.54940', 'val_auc': '0.52690', 'tst_auc': '0.54421', 'trn_aps': '0.12778', 'val_aps': '0.11128', 'tst_aps': '0.11719', 'trn_loss0': '0.39700'}
+Epoch 20: {'val_loss': '0.34961', 'g0': '0.00054', 'g1': '0.05263', 'flip_r': '0.00263', 'pmean': '0.12386', 'trn_auc': '0.55233', 'val_auc': '0.53126', 'tst_auc': '0.54489', 'trn_aps': '0.12681', 'val_aps': '0.11143', 'tst_aps': '0.11728', 'trn_loss0': '0.37435'}
+Epoch 21: {'val_loss': '0.34274', 'g0': '0.00061', 'g1': '0.05256', 'flip_r': '0.00922', 'pmean': '0.12209', 'trn_auc': '0.56451', 'val_auc': '0.53507', 'tst_auc': '0.55362', 'trn_aps': '0.12621', 'val_aps': '0.11144', 'tst_aps': '0.12235', 'trn_loss0': '0.37247'}
+Epoch 22: {'val_loss': '0.34159', 'g0': '0.00062', 'g1': '0.05255', 'flip_r': '0.00244', 'pmean': '0.11532', 'trn_auc': '0.55722', 'val_auc': '0.53993', 'tst_auc': '0.56101', 'trn_aps': '0.12727', 'val_aps': '0.11408', 'tst_aps': '0.12367', 'trn_loss0': '0.41553'}
+Epoch 23: {'val_loss': '0.34469', 'g0': '0.00071', 'g1': '0.05246', 'flip_r': '0.00583', 'pmean': '0.11550', 'trn_auc': '0.54447', 'val_auc': '0.54012', 'tst_auc': '0.54434', 'trn_aps': '0.11984', 'val_aps': '0.11610', 'tst_aps': '0.12137', 'trn_loss0': '0.39450'}
+Epoch 24: {'val_loss': '0.34472', 'g0': '0.00067', 'g1': '0.05250', 'flip_r': '0.00489', 'pmean': '0.10348', 'trn_auc': '0.54699', 'val_auc': '0.54997', 'tst_auc': '0.54357', 'trn_aps': '0.12187', 'val_aps': '0.11886', 'tst_aps': '0.11829', 'trn_loss0': '0.40797'}
+Epoch 25: {'val_loss': '0.34974', 'g0': '0.00090', 'g1': '0.05227', 'flip_r': '0.00696', 'pmean': '0.10111', 'trn_auc': '0.55150', 'val_auc': '0.54404', 'tst_auc': '0.54410', 'trn_aps': '0.12000', 'val_aps': '0.11467', 'tst_aps': '0.11800', 'trn_loss0': '0.38921'}
+Epoch 26: {'val_loss': '0.34484', 'g0': '0.00065', 'g1': '0.05252', 'flip_r': '0.00733', 'pmean': '0.10358', 'trn_auc': '0.57019', 'val_auc': '0.54286', 'tst_auc': '0.54480', 'trn_aps': '0.12408', 'val_aps': '0.11381', 'tst_aps': '0.11936', 'trn_loss0': '0.35806'}
+Epoch 27: {'val_loss': '0.34302', 'g0': '0.00062', 'g1': '0.05255', 'flip_r': '0.00696', 'pmean': '0.10208', 'trn_auc': '0.57921', 'val_auc': '0.54989', 'tst_auc': '0.55243', 'trn_aps': '0.13364', 'val_aps': '0.11821', 'tst_aps': '0.12158', 'trn_loss0': '0.36846'}
+Epoch 28: {'val_loss': '0.34210', 'g0': '0.00057', 'g1': '0.05260', 'flip_r': '0.00733', 'pmean': '0.09990', 'trn_auc': '0.58229', 'val_auc': '0.54613', 'tst_auc': '0.54888', 'trn_aps': '0.13424', 'val_aps': '0.11835', 'tst_aps': '0.12300', 'trn_loss0': '0.36606'}
+Epoch 00029: reducing learning rate of group 0 to 5.0000e-04.
+Epoch 29: {'val_loss': '0.34261', 'g0': '0.00053', 'g1': '0.05264', 'flip_r': '0.00301', 'pmean': '0.09751', 'trn_auc': '0.57853', 'val_auc': '0.54641', 'tst_auc': '0.54811', 'trn_aps': '0.12693', 'val_aps': '0.11890', 'tst_aps': '0.12004', 'trn_loss0': '0.38373'}
+Epoch 30: {'val_loss': '0.34294', 'g0': '0.00045', 'g1': '0.05272', 'flip_r': '0.00301', 'pmean': '0.09926', 'trn_auc': '0.56556', 'val_auc': '0.54686', 'tst_auc': '0.55020', 'trn_aps': '0.12139', 'val_aps': '0.11617', 'tst_aps': '0.11977', 'trn_loss0': '0.38016'}
+Epoch 31: {'val_loss': '0.34273', 'g0': '0.00058', 'g1': '0.05259', 'flip_r': '0.00357', 'pmean': '0.09971', 'trn_auc': '0.56977', 'val_auc': '0.54471', 'tst_auc': '0.55279', 'trn_aps': '0.12570', 'val_aps': '0.11479', 'tst_aps': '0.12170', 'trn_loss0': '0.36705'}
+Epoch 32: {'val_loss': '0.34796', 'g0': '0.00060', 'g1': '0.05257', 'flip_r': '0.00339', 'pmean': '0.09416', 'trn_auc': '0.56496', 'val_auc': '0.55073', 'tst_auc': '0.55328', 'trn_aps': '0.12071', 'val_aps': '0.11673', 'tst_aps': '0.12073', 'trn_loss0': '0.36588'}
+Epoch 33: {'val_loss': '0.34871', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00470', 'pmean': '0.09345', 'trn_auc': '0.57034', 'val_auc': '0.55380', 'tst_auc': '0.55043', 'trn_aps': '0.12206', 'val_aps': '0.11836', 'tst_aps': '0.11998', 'trn_loss0': '0.36443'}
+Epoch 34: {'val_loss': '0.34500', 'g0': '0.00056', 'g1': '0.05261', 'flip_r': '0.00583', 'pmean': '0.09494', 'trn_auc': '0.53515', 'val_auc': '0.55020', 'tst_auc': '0.53559', 'trn_aps': '0.10958', 'val_aps': '0.11675', 'tst_aps': '0.11489', 'trn_loss0': '0.33757'}
+Epoch 00035: reducing learning rate of group 0 to 2.5000e-04.
+Epoch 35: {'val_loss': '0.34441', 'g0': '0.00065', 'g1': '0.05252', 'flip_r': '0.00545', 'pmean': '0.09501', 'trn_auc': '0.54477', 'val_auc': '0.54762', 'tst_auc': '0.54471', 'trn_aps': '0.11221', 'val_aps': '0.11600', 'tst_aps': '0.11881', 'trn_loss0': '0.37246'}
+Epoch 36: {'val_loss': '0.34314', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00451', 'pmean': '0.09071', 'trn_auc': '0.56380', 'val_auc': '0.55046', 'tst_auc': '0.54699', 'trn_aps': '0.11801', 'val_aps': '0.11789', 'tst_aps': '0.12022', 'trn_loss0': '0.38548'}
+Epoch 37: {'val_loss': '0.34563', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00677', 'pmean': '0.08794', 'trn_auc': '0.55102', 'val_auc': '0.54059', 'tst_auc': '0.54967', 'trn_aps': '0.11612', 'val_aps': '0.11350', 'tst_aps': '0.12045', 'trn_loss0': '0.36381'}
+Epoch 38: {'val_loss': '0.34316', 'g0': '0.00060', 'g1': '0.05257', 'flip_r': '0.00433', 'pmean': '0.08642', 'trn_auc': '0.55117', 'val_auc': '0.54867', 'tst_auc': '0.54806', 'trn_aps': '0.11560', 'val_aps': '0.11510', 'tst_aps': '0.12111', 'trn_loss0': '0.35561'}
+Epoch 39: {'val_loss': '0.34240', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00583', 'pmean': '0.08830', 'trn_auc': '0.55586', 'val_auc': '0.55261', 'tst_auc': '0.54636', 'trn_aps': '0.12289', 'val_aps': '0.11756', 'tst_aps': '0.12054', 'trn_loss0': '0.34791'}
+Epoch 40: {'val_loss': '0.34511', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00564', 'pmean': '0.08937', 'trn_auc': '0.55538', 'val_auc': '0.54737', 'tst_auc': '0.54410', 'trn_aps': '0.11997', 'val_aps': '0.11466', 'tst_aps': '0.11842', 'trn_loss0': '0.34872'}
+Epoch 00041: reducing learning rate of group 0 to 1.2500e-04.
+Epoch 41: {'val_loss': '0.34132', 'g0': '0.00056', 'g1': '0.05261', 'flip_r': '0.00320', 'pmean': '0.09472', 'trn_auc': '0.55289', 'val_auc': '0.54946', 'tst_auc': '0.54175', 'trn_aps': '0.12220', 'val_aps': '0.11492', 'tst_aps': '0.11642', 'trn_loss0': '0.36010'}
+Epoch 42: {'val_loss': '0.34280', 'g0': '0.00051', 'g1': '0.05266', 'flip_r': '0.00621', 'pmean': '0.09326', 'trn_auc': '0.53895', 'val_auc': '0.54592', 'tst_auc': '0.53926', 'trn_aps': '0.11598', 'val_aps': '0.11273', 'tst_aps': '0.11621', 'trn_loss0': '0.35421'}
+Epoch 43: {'val_loss': '0.34198', 'g0': '0.00053', 'g1': '0.05264', 'flip_r': '0.00527', 'pmean': '0.09388', 'trn_auc': '0.55812', 'val_auc': '0.55024', 'tst_auc': '0.53991', 'trn_aps': '0.12392', 'val_aps': '0.11393', 'tst_aps': '0.11814', 'trn_loss0': '0.36386'}
+Epoch 44: {'val_loss': '0.34737', 'g0': '0.00072', 'g1': '0.05245', 'flip_r': '0.00433', 'pmean': '0.09451', 'trn_auc': '0.55289', 'val_auc': '0.55252', 'tst_auc': '0.54038', 'trn_aps': '0.12044', 'val_aps': '0.11409', 'tst_aps': '0.11781', 'trn_loss0': '0.35950'}
+Epoch 45: {'val_loss': '0.35150', 'g0': '0.00084', 'g1': '0.05233', 'flip_r': '0.00790', 'pmean': '0.09649', 'trn_auc': '0.53346', 'val_auc': '0.54244', 'tst_auc': '0.52940', 'trn_aps': '0.11264', 'val_aps': '0.11253', 'tst_aps': '0.11363', 'trn_loss0': '0.37208'}
+Epoch 46: {'val_loss': '0.35144', 'g0': '0.00080', 'g1': '0.05237', 'flip_r': '0.00715', 'pmean': '0.09318', 'trn_auc': '0.54218', 'val_auc': '0.55236', 'tst_auc': '0.53151', 'trn_aps': '0.11726', 'val_aps': '0.11788', 'tst_aps': '0.11381', 'trn_loss0': '0.37750'}
+Epoch 47: {'val_loss': '0.35323', 'g0': '0.00095', 'g1': '0.05222', 'flip_r': '0.00658', 'pmean': '0.09543', 'trn_auc': '0.53707', 'val_auc': '0.55293', 'tst_auc': '0.53304', 'trn_aps': '0.11686', 'val_aps': '0.11797', 'tst_aps': '0.11584', 'trn_loss0': '0.35506'}
+Epoch 00048: reducing learning rate of group 0 to 6.2500e-05.
+Epoch 48: {'val_loss': '0.34362', 'g0': '0.00063', 'g1': '0.05254', 'flip_r': '0.01241', 'pmean': '0.09814', 'trn_auc': '0.56383', 'val_auc': '0.53901', 'tst_auc': '0.54686', 'trn_aps': '0.12906', 'val_aps': '0.11176', 'tst_aps': '0.12005', 'trn_loss0': '0.34913'}
+Epoch 49: {'val_loss': '0.34471', 'g0': '0.00068', 'g1': '0.05249', 'flip_r': '0.00357', 'pmean': '0.09830', 'trn_auc': '0.55789', 'val_auc': '0.54015', 'tst_auc': '0.54080', 'trn_aps': '0.12128', 'val_aps': '0.11250', 'tst_aps': '0.11727', 'trn_loss0': '0.35353'}
+Epoch 50: {'val_loss': '0.34431', 'g0': '0.00063', 'g1': '0.05254', 'flip_r': '0.00508', 'pmean': '0.09662', 'trn_auc': '0.55594', 'val_auc': '0.54155', 'tst_auc': '0.53913', 'trn_aps': '0.12115', 'val_aps': '0.11451', 'tst_aps': '0.11687', 'trn_loss0': '0.35871'}
+Epoch 51: {'val_loss': '0.34218', 'g0': '0.00058', 'g1': '0.05259', 'flip_r': '0.00658', 'pmean': '0.09626', 'trn_auc': '0.55410', 'val_auc': '0.54310', 'tst_auc': '0.54061', 'trn_aps': '0.12097', 'val_aps': '0.11407', 'tst_aps': '0.11832', 'trn_loss0': '0.36807'}
+Epoch 52: {'val_loss': '0.34374', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00508', 'pmean': '0.09573', 'trn_auc': '0.55523', 'val_auc': '0.54287', 'tst_auc': '0.54210', 'trn_aps': '0.12021', 'val_aps': '0.11380', 'tst_aps': '0.11897', 'trn_loss0': '0.37213'}
+Epoch 53: {'val_loss': '0.34303', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00602', 'pmean': '0.09616', 'trn_auc': '0.54466', 'val_auc': '0.53973', 'tst_auc': '0.54576', 'trn_aps': '0.11613', 'val_aps': '0.11266', 'tst_aps': '0.12048', 'trn_loss0': '0.35850'}
+Epoch 00054: reducing learning rate of group 0 to 3.1250e-05.
+Epoch 54: {'val_loss': '0.34400', 'g0': '0.00056', 'g1': '0.05261', 'flip_r': '0.00545', 'pmean': '0.09236', 'trn_auc': '0.55579', 'val_auc': '0.54806', 'tst_auc': '0.54110', 'trn_aps': '0.11866', 'val_aps': '0.11419', 'tst_aps': '0.11699', 'trn_loss0': '0.37902'}
+Epoch 55: {'val_loss': '0.34664', 'g0': '0.00068', 'g1': '0.05249', 'flip_r': '0.00602', 'pmean': '0.09614', 'trn_auc': '0.55075', 'val_auc': '0.54720', 'tst_auc': '0.53860', 'trn_aps': '0.12006', 'val_aps': '0.11491', 'tst_aps': '0.11764', 'trn_loss0': '0.36994'}
+Epoch 56: {'val_loss': '0.34619', 'g0': '0.00066', 'g1': '0.05251', 'flip_r': '0.00715', 'pmean': '0.09761', 'trn_auc': '0.52865', 'val_auc': '0.54963', 'tst_auc': '0.53552', 'trn_aps': '0.11114', 'val_aps': '0.11825', 'tst_aps': '0.11478', 'trn_loss0': '0.37319'}
+Epoch 57: {'val_loss': '0.34686', 'g0': '0.00064', 'g1': '0.05253', 'flip_r': '0.00865', 'pmean': '0.09144', 'trn_auc': '0.55150', 'val_auc': '0.56382', 'tst_auc': '0.53140', 'trn_aps': '0.12183', 'val_aps': '0.12318', 'tst_aps': '0.11696', 'trn_loss0': '0.37101'}
+Epoch 58: {'val_loss': '0.34587', 'g0': '0.00059', 'g1': '0.05258', 'flip_r': '0.00545', 'pmean': '0.09148', 'trn_auc': '0.55944', 'val_auc': '0.56239', 'tst_auc': '0.53355', 'trn_aps': '0.12087', 'val_aps': '0.12251', 'tst_aps': '0.11664', 'trn_loss0': '0.37980'}
+Epoch 59: {'val_loss': '0.34716', 'g0': '0.00065', 'g1': '0.05252', 'flip_r': '0.00639', 'pmean': '0.09073', 'trn_auc': '0.55733', 'val_auc': '0.56410', 'tst_auc': '0.53143', 'trn_aps': '0.12178', 'val_aps': '0.12113', 'tst_aps': '0.11690', 'trn_loss0': '0.38093'}
+Epoch 00060: reducing learning rate of group 0 to 1.5625e-05.
+Epoch 60: {'val_loss': '0.34603', 'g0': '0.00054', 'g1': '0.05263', 'flip_r': '0.00583', 'pmean': '0.09321', 'trn_auc': '0.55632', 'val_auc': '0.56188', 'tst_auc': '0.53404', 'trn_aps': '0.12170', 'val_aps': '0.11843', 'tst_aps': '0.11723', 'trn_loss0': '0.35943'}
+Epoch 61: {'val_loss': '0.34598', 'g0': '0.00045', 'g1': '0.05272', 'flip_r': '0.00395', 'pmean': '0.09170', 'trn_auc': '0.56654', 'val_auc': '0.55690', 'tst_auc': '0.54662', 'trn_aps': '0.12264', 'val_aps': '0.11667', 'tst_aps': '0.11929', 'trn_loss0': '0.36570'}
+Epoch 62: {'val_loss': '0.34818', 'g0': '0.00054', 'g1': '0.05263', 'flip_r': '0.00470', 'pmean': '0.09375', 'trn_auc': '0.56244', 'val_auc': '0.54998', 'tst_auc': '0.53914', 'trn_aps': '0.12303', 'val_aps': '0.11501', 'tst_aps': '0.11725', 'trn_loss0': '0.35937'}
+Epoch 63: {'val_loss': '0.34424', 'g0': '0.00050', 'g1': '0.05267', 'flip_r': '0.00677', 'pmean': '0.08732', 'trn_auc': '0.57132', 'val_auc': '0.56156', 'tst_auc': '0.54584', 'trn_aps': '0.12300', 'val_aps': '0.11722', 'tst_aps': '0.11942', 'trn_loss0': '0.37006'}
+Epoch 64: {'val_loss': '0.34660', 'g0': '0.00063', 'g1': '0.05254', 'flip_r': '0.00433', 'pmean': '0.08989', 'trn_auc': '0.55023', 'val_auc': '0.55797', 'tst_auc': '0.54214', 'trn_aps': '0.11495', 'val_aps': '0.11525', 'tst_aps': '0.11809', 'trn_loss0': '0.37459'}
+Epoch 65: {'val_loss': '0.34591', 'g0': '0.00068', 'g1': '0.05249', 'flip_r': '0.00621', 'pmean': '0.08595', 'trn_auc': '0.55744', 'val_auc': '0.56396', 'tst_auc': '0.54490', 'trn_aps': '0.11781', 'val_aps': '0.11921', 'tst_aps': '0.11952', 'trn_loss0': '0.37164'}
+Epoch 00066: reducing learning rate of group 0 to 7.8125e-06.
+Epoch 66: {'val_loss': '0.34600', 'g0': '0.00067', 'g1': '0.05250', 'flip_r': '0.00846', 'pmean': '0.08594', 'trn_auc': '0.57432', 'val_auc': '0.56699', 'tst_auc': '0.54434', 'trn_aps': '0.14174', 'val_aps': '0.11927', 'tst_aps': '0.11919', 'trn_loss0': '0.37606'}
+training time elapsed 32.06s
+Evaluating model in ./lightning_logs/btnz0sns/checkpoints/epoch=41-step=126.ckpt
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 55.72it/s]
+{'final_trn/auc': '0.56271', 'final_trn/aps': '0.12351', 'final_trn/mf1': '0.53231', 'final_trn/th1': '0.13701', 'final_trn/gme': '0.57229', 'final_trn/th2': '0.09140', 'final_trn/rec': '0.21429', 'final_trn/pre': '0.14634'}
+{'final_val/auc': '0.54379', 'final_val/aps': '0.12909', 'final_val/mf1': '0.52660', 'final_val/th1': '0.13291', 'final_val/gme': '0.54302', 'final_val/th2': '0.09204', 'final_val/rec': '0.22892', 'final_val/pre': '0.14504'}
+{'final_tst/auc': '0.49832', 'final_tst/aps': '0.10811', 'final_tst/mf1': '0.48527', 'final_tst/th1': '0.13291', 'final_tst/gme': '0.32471', 'final_tst/th2': '0.09204', 'final_tst/rec': '0.12463', 'final_tst/pre': '0.08678'}
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:       final_trn/aps ▁
+wandb:       final_trn/auc ▁
+wandb:       final_trn/gme ▁
+wandb:       final_trn/mf1 ▁
+wandb:       final_trn/pre ▁
+wandb:       final_trn/rec ▁
+wandb:       final_trn/th1 ▁
+wandb:       final_trn/th2 ▁
+wandb:       final_tst/aps ▁
+wandb:       final_tst/auc ▁
+wandb:       final_tst/gme ▁
+wandb:       final_tst/mf1 ▁
+wandb:       final_tst/pre ▁
+wandb:       final_tst/rec ▁
+wandb:       final_tst/th1 ▁
+wandb:       final_tst/th2 ▁
+wandb:       final_val/aps ▁
+wandb:       final_val/auc ▁
+wandb:       final_val/gme ▁
+wandb:       final_val/mf1 ▁
+wandb:       final_val/pre ▁
+wandb:       final_val/rec ▁
+wandb:       final_val/th1 ▁
+wandb:       final_val/th2 ▁
+wandb:              flip_r ▂▁▁▁▁▂▁▂▃▂▃▄▃▃▆▇▇▇▃▄▅▅▆▅▆▆▅▇▆▄▅▅▅▆█▆▆▅▅█
+wandb:                  g0 ▁▁▁▁▁▂▂▂▂▂▂▃▅▅▆█▅▅▄▅▅▆▅▅▅▅▆▇█▆▆▅▅▆▆▆▅▅▆▆
+wandb:                  g1 █████▇▇▇▇▇▇▆▄▄▃▁▄▄▅▄▄▃▄▄▄▄▃▂▁▃▃▄▄▃▃▃▄▄▃▃
+wandb:               pmean ██▆▅▅▄▃▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: trainer/global_step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:             trn_aps ▁▂▁▃▄▆██▆▅▅▅▅▅▄▄▇▇▄▄▅▃▄▃▄▃▄▃▄▄▄▄▄▄▅▅▄▅▃█
+wandb:             trn_auc ▁▃▄▆▇▇██▇▇▅▆▆▆▆▆██▇▇▇▆▆▆▆▅▆▅▅▆▆▆▆▆▆▆▆▇▆▇
+wandb:           trn_loss0 █▇▅▄▄▃▄▂▂▂▂▁▂▂▂▂▁▁▂▁▁▂▁▁▁▁▁▂▁▁▁▂▂▁▁▂▁▁▂▂
+wandb:             tst_aps ▇▇▇██▆▄▃▁▂▁▃▄▇▆▄▆▇▅▆▅▄▅▆▄▃▄▂▃▄▃▅▃▄▃▃▄▄▄▅
+wandb:             tst_auc ▇▇▅▅▅▆▅▃▂▂▁▄▅█▅▅▆▆▆▆▆▅▆▅▅▄▄▂▂▄▄▄▄▃▂▂▃▄▄▅
+wandb:        unclear_down ▁
+wandb:          unclear_up ▁
+wandb:             val_aps █▄▁▂▃▃▅▃▃▁▂▂▂▃▄▃▅▅▄▄▅▄▃▄▃▃▃▃▅▂▃▃▃▄▇▆▅▄▄▆
+wandb:             val_auc ▆▃▁▄▅▅▅▄▃▂▂▂▃▄▄▅▆▅▅▆▆▅▄▆▅▅▆▅▆▄▅▅▅▅██▇▆▇█
+wandb:            val_loss █▇▅▃▃▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 66
+wandb:       final_trn/aps 0.12351
+wandb:       final_trn/auc 0.56271
+wandb:       final_trn/gme 0.57229
+wandb:       final_trn/mf1 0.53231
+wandb:       final_trn/pre 0.14634
+wandb:       final_trn/rec 0.21429
+wandb:       final_trn/th1 0.13701
+wandb:       final_trn/th2 0.0914
+wandb:       final_tst/aps 0.10811
+wandb:       final_tst/auc 0.49832
+wandb:       final_tst/gme 0.32471
+wandb:       final_tst/mf1 0.48527
+wandb:       final_tst/pre 0.08678
+wandb:       final_tst/rec 0.12463
+wandb:       final_tst/th1 0.13291
+wandb:       final_tst/th2 0.09204
+wandb:       final_val/aps 0.12909
+wandb:       final_val/auc 0.54379
+wandb:       final_val/gme 0.54302
+wandb:       final_val/mf1 0.5266
+wandb:       final_val/pre 0.14504
+wandb:       final_val/rec 0.22892
+wandb:       final_val/th1 0.13291
+wandb:       final_val/th2 0.09204
+wandb:              flip_r 0.00846
+wandb:                  g0 0.00067
+wandb:                  g1 0.0525
+wandb:               pmean 0.08594
+wandb: trainer/global_step 200
+wandb:             trn_aps 0.14174
+wandb:             trn_auc 0.57432
+wandb:           trn_loss0 0.37606
+wandb:             tst_aps 0.11919
+wandb:             tst_auc 0.54434
+wandb:        unclear_down 0.025
+wandb:          unclear_up 0.025
+wandb:             val_aps 0.11927
+wandb:             val_auc 0.56699
+wandb:            val_loss 0.346
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code/wandb/offline-run-20260916_102532-btnz0sns
+wandb: Find logs at: ./wandb/offline-run-20260916_102532-btnz0sns/logs
+==============================
+==============================
