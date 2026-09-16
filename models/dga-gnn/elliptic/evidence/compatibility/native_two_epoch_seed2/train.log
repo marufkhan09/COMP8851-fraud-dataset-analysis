@@ -1,0 +1,69 @@
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+========================================
+数据名称 elliptic_of_amnet
+总样本数: 46564
+欺诈样本数: 4545
+非欺诈样本数: 42019
+欺诈样本占比: 9.76%
+特征个数: 93
+
+_E边关系下的统计信息:
+边的个数: 73248
+平均出度: 1.57
+
+数据划分情况:
+训练集: 21353 验证集: 8541 测试集: 16670
+训练集: 45.86% 验证集: 18.34% 测试集: 35.80%
+========================================
+超参数设定：
+dname: elliptic_of_amnet
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 128
+p: 0.3
+k: 4
+z: 0.1
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 1
+n_classes 2
+========================================
+after bin_encoding： (46564, 458)
+========================================
+{'unclear_up': 0.1, 'unclear_down': 0.1}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 258 K 
+------------------------------
+258 K     Trainable params
+0         Non-trainable params
+258 K     Total params
+1.032     Total estimated model params size (MB)
+Epoch 0: {'val_loss': '0.18740', 'g0': '0.41137', 'g1': '0.05427', 'flip_r': '0.88345', 'pmean': '0.05817', 'trn_auc': '0.96355', 'val_auc': '0.80843', 'tst_auc': '0.86595', 'trn_aps': '0.90729', 'val_aps': '0.70676', 'tst_aps': '0.73835', 'trn_loss0': '0.26052'}
+Epoch 1: {'val_loss': '0.17889', 'g0': '0.41481', 'g1': '0.05083', 'flip_r': '0.05717', 'pmean': '0.08402', 'trn_auc': '0.96932', 'val_auc': '0.72453', 'tst_auc': '0.88163', 'trn_aps': '0.87309', 'val_aps': '0.65956', 'tst_aps': '0.65092', 'trn_loss0': '0.15581'}
+`Trainer.fit` stopped: `max_epochs=2` reached.
+training time elapsed 26.18s
+Evaluating model in ./lightning_logs/sjbiwyen/checkpoints/epoch=1-step=668.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 54.89it/s]
+{'final_trn/auc': '0.96851', 'final_trn/aps': '0.86261', 'final_trn/mf1': '0.94694', 'final_trn/th1': '0.56215', 'final_trn/gme': '0.93737', 'final_trn/th2': '0.46777', 'final_trn/rec': '0.88030', 'final_trn/pre': '0.92783'}
+{'final_val/auc': '0.72838', 'final_val/aps': '0.66233', 'final_val/mf1': '0.83633', 'final_val/th1': '0.56415', 'final_val/gme': '0.75958', 'final_val/th2': '0.56415', 'final_val/rec': '0.58101', 'final_val/pre': '0.93483'}
+{'final_tst/auc': '0.89098', 'final_tst/aps': '0.66133', 'final_tst/mf1': '0.86054', 'final_tst/th1': '0.56415', 'final_tst/gme': '0.82583', 'final_tst/th2': '0.56415', 'final_tst/rec': '0.69067', 'final_tst/pre': '0.79237'}
+==============================
+==============================

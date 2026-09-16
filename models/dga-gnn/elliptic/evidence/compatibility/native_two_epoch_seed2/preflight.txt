@@ -1,0 +1,14 @@
+Wed Sep 16 04:29:29 UTC 2026
+34efa49791a9
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+cuda_available: True
+dgl_gpu_device: cuda:0
+ELLIPTIC CUDA PREFLIGHT: PASS
+NVIDIA RTX A6000, GPU-13ce6c2d-d164-3ea0-42b3-b19d732363f9, 49140 MiB, 580.173.02
+Upstream commit:
+0907392f6060e18230339ca30eaca0c917414820
+Input hashes:
+d86e610867cde2fd16c181497fbce10c80758b8cd054147006a3fa6544902b1a  train.py
+9a27ebee290f0351bc5dad4506322af6680c03b7cc67476f004b41871885874f  configs/elliptic_of_amnet.yaml
+1401eec7c265b5bfbc16c96013cef7929bc0d584b5dbf48ddd864747443fc0bb  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/elliptic_of_amnet.dgldata

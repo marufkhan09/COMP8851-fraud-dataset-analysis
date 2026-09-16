@@ -1,0 +1,40 @@
+{
+  "all_labels": {
+    "0": 42019,
+    "1": 4545
+  },
+  "covered_nodes": 46564,
+  "dataset": "Elliptic",
+  "edges": 73248,
+  "feature_dtype": "torch.float32",
+  "features": [
+    46564,
+    93
+  ],
+  "native_masks_preserved": true,
+  "nodes": 46564,
+  "overlapping_nodes": 0,
+  "reload_validation": "PASS",
+  "source_object_type": "torch_geometric.data.data.Data",
+  "split_files": {
+    "test_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_test_idx.npy",
+    "train_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_train_idx.npy",
+    "validation_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_validation_idx.npy"
+  },
+  "test_labels": {
+    "0": 15587,
+    "1": 1083
+  },
+  "test_nodes": 16670,
+  "train_labels": {
+    "0": 19323,
+    "1": 2030
+  },
+  "train_nodes": 21353,
+  "unassigned_nodes": 0,
+  "validation_labels": {
+    "0": 7109,
+    "1": 1432
+  },
+  "validation_nodes": 8541
+}
