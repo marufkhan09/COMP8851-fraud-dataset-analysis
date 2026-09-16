@@ -1,0 +1,478 @@
+=== DGA-GNN PAIR 2 BACKGROUND QUEUE ===
+Wed Sep 16 04:28:57 UTC 2026
+34efa49791a9
+2026-09-16T04:28:57Z | RUNNING: activating dga-gnn environment
+2026-09-16T04:28:59Z | RUNNING: global preflight
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+cuda_available: True
+dgl_gpu_device: cuda:0
+GLOBAL CUDA PREFLIGHT: PASS
+NVIDIA RTX A6000, GPU-13ce6c2d-d164-3ea0-42b3-b19d732363f9, 49140 MiB, 580.173.02
+2026-09-16T04:29:01Z | RUNNING: preserving Amazon checkpoint and evidence
+checkpoint_path: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/checkpoints/amazon_native_seed2_epoch2_best.ckpt
+top_level_keys: ['callbacks', 'epoch', 'global_step', 'hparams_name', 'hyper_parameters', 'loops', 'lr_schedulers', 'optimizer_states', 'pytorch-lightning_version', 'state_dict']
+epoch: 1
+global_step: 216
+state_dict_entries: 98
+checkpoint_load: PASS
+{
+  "model": "DGA-GNN",
+  "dataset": "Amazon",
+  "run_type": "native compatibility smoke",
+  "status": "PASS",
+  "benchmark_reportable": false,
+  "non_reportable_reasons": [
+    "Only two epochs were run.",
+    "Native validation loader evaluates every graph node.",
+    "Checkpoint val_loss includes train, validation and test nodes.",
+    "Native code observes test ROC-AUC and AP after every epoch."
+  ],
+  "seed": 2,
+  "epochs_requested": 2,
+  "epochs_completed": 2,
+  "training_time_seconds": 27.1,
+  "wall_time_seconds": 41,
+  "peak_gpu_memory_mib": 2552,
+  "checkpoint": "models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/checkpoints/amazon_native_seed2_epoch2_best.ckpt",
+  "epoch_metrics": [
+    {
+      "epoch": 0,
+      "metrics": {
+        "val_loss": 0.20692,
+        "g0": 0.09236,
+        "g1": 0.02708,
+        "flip_r": 0.78634,
+        "pmean": 0.06026,
+        "trn_auc": 0.87959,
+        "val_auc": 0.89507,
+        "tst_auc": 0.91084,
+        "trn_aps": 0.46918,
+        "val_aps": 0.53511,
+        "tst_aps": 0.56657,
+        "trn_loss0": 0.39788
+      }
+    },
+    {
+      "epoch": 1,
+      "metrics": {
+        "val_loss": 0.17097,
+        "g0": 0.10199,
+        "g1": 0.01745,
+        "flip_r": 0.13672,
+        "pmean": 0.04388,
+        "trn_auc": 0.88291,
+        "val_auc": 0.89497,
+        "tst_auc": 0.89046,
+        "trn_aps": 0.63374,
+        "val_aps": 0.66778,
+        "tst_aps": 0.68775,
+        "trn_loss0": 0.28344
+      }
+    }
+  ],
+  "final_metrics": {
+    "final_trn/auc": 0.88135,
+    "final_trn/aps": 0.63183,
+    "final_trn/mf1": 0.78626,
+    "final_trn/th1": 0.19101,
+    "final_trn/gme": 0.81024,
+    "final_trn/th2": 0.03149,
+    "final_trn/rec": 0.52134,
+    "final_trn/pre": 0.72152,
+    "final_val/auc": 0.8868,
+    "final_val/aps": 0.66016,
+    "final_val/mf1": 0.81018,
+    "final_val/th1": 0.12707,
+    "final_val/gme": 0.83526,
+    "final_val/th2": 0.02664,
+    "final_val/rec": 0.58896,
+    "final_val/pre": 0.7218,
+    "final_tst/auc": 0.89419,
+    "final_tst/aps": 0.6812,
+    "final_tst/mf1": 0.8113,
+    "final_tst/th1": 0.12707,
+    "final_tst/gme": 0.78674,
+    "final_tst/th2": 0.02664,
+    "final_tst/rec": 0.63939,
+    "final_tst/pre": 0.67628
+  }
+}
+2026-09-16T04:29:03Z | RUNNING: committing and pushing Amazon evidence
+[main 609548c] Add DGA-GNN Amazon native compatibility evidence
+ 21 files changed, 505 insertions(+)
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/checkpoint.sha256
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/checkpoint_inspection.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/checkpoints/amazon_native_seed2_epoch2_best.ckpt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/end_utc.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/evidence_sha256.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/exit_status.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/generated_files.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/gpu_trace.csv
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/hydra/train.log
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/native_smoke_summary.json
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/peak_gpu_memory_mib.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/preflight.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/resolved_config.sha256
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/resolved_config.yaml
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/run_start.marker
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/start_utc.txt
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/train.log
+ create mode 100644 models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/wall_time_seconds.txt
+To github.com:marufkhan09/COMP8851-fraud-dataset-analysis.git
+   8d3f943..609548c  main -> main
+From github.com:marufkhan09/COMP8851-fraud-dataset-analysis
+ * branch            main       -> FETCH_HEAD
+Local head:  609548c372e91ec90692dbe34190c9ccdad5d5ac
+Remote head: 609548c372e91ec90692dbe34190c9ccdad5d5ac
+2026-09-16T04:29:05Z | RUNNING: installing minimal PyG support for Elliptic unpickling
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'torch_geometric'
+Collecting torch-geometric==2.3.1
+  Downloading torch_geometric-2.3.1.tar.gz (661 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 661.6/661.6 kB 29.7 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Saved /workspace/dga_gnn_wheel_cache/torch_geometric_2_3_1/torch_geometric-2.3.1.tar.gz
+Successfully downloaded torch-geometric
+/workspace/dga_gnn_wheel_cache/torch_geometric_2_3_1/torch_geometric-2.3.1.tar.gz: OK
+Processing /workspace/dga_gnn_wheel_cache/torch_geometric_2_3_1/torch_geometric-2.3.1.tar.gz
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: torch-geometric
+  Building wheel for torch-geometric (pyproject.toml): started
+  Building wheel for torch-geometric (pyproject.toml): finished with status 'done'
+  Created wheel for torch-geometric: filename=torch_geometric-2.3.1-py3-none-any.whl size=910453 sha256=3f3f80fb810b8065d88e5fe361c32d586149a1d5aa7bee1a00f7cc90cc0b35c3
+  Stored in directory: /root/.cache/pip/wheels/0c/7b/66/c94fc7e29582884f43e8266543e9673974c008804452a4cad2
+Successfully built torch-geometric
+Installing collected packages: torch-geometric
+Successfully installed torch-geometric-2.3.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+torch_geometric: 2.3.1
+object_type: torch_geometric.data.data.Data
+x_shape: (46564, 93)
+y_shape: (46564,)
+edge_index_shape: (2, 73248)
+train_mask_shape: (46564,)
+validation_mask_shape: (46564,)
+test_mask_shape: (46564,)
+PYG IMPORT AND ELLIPTIC UNPICKLE: PASS
+2026-09-16T04:29:26Z | RUNNING: preprocessing Elliptic with embedded native masks
+Wed Sep 16 04:29:26 UTC 2026
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+torch_geometric: 2.3.1
+raw_path: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/raw/elliptic.dat
+{
+  "all_labels": {
+    "0": 42019,
+    "1": 4545
+  },
+  "covered_nodes": 46564,
+  "dataset": "Elliptic",
+  "edges": 73248,
+  "feature_dtype": "torch.float32",
+  "features": [
+    46564,
+    93
+  ],
+  "native_masks_preserved": true,
+  "nodes": 46564,
+  "overlapping_nodes": 0,
+  "reload_validation": "PASS",
+  "source_object_type": "torch_geometric.data.data.Data",
+  "split_files": {
+    "test_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_test_idx.npy",
+    "train_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_train_idx.npy",
+    "validation_idx": "/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_validation_idx.npy"
+  },
+  "test_labels": {
+    "0": 15587,
+    "1": 1083
+  },
+  "test_nodes": 16670,
+  "train_labels": {
+    "0": 19323,
+    "1": 2030
+  },
+  "train_nodes": 21353,
+  "unassigned_nodes": 0,
+  "validation_labels": {
+    "0": 7109,
+    "1": 1432
+  },
+  "validation_nodes": 8541
+}
+ELLIPTIC PREPROCESSING AND RELOAD VALIDATION: PASS
+Wed Sep 16 04:29:29 UTC 2026
+2026-09-16T04:29:29Z | RUNNING: validating Elliptic CUDA path and resolved config
+Wed Sep 16 04:29:29 UTC 2026
+34efa49791a9
+torch: 1.13.1+cu117
+dgl: 1.1.2+cu117
+cuda_available: True
+dgl_gpu_device: cuda:0
+ELLIPTIC CUDA PREFLIGHT: PASS
+NVIDIA RTX A6000, GPU-13ce6c2d-d164-3ea0-42b3-b19d732363f9, 49140 MiB, 580.173.02
+Upstream commit:
+0907392f6060e18230339ca30eaca0c917414820
+Input hashes:
+d86e610867cde2fd16c181497fbce10c80758b8cd054147006a3fa6544902b1a  train.py
+9a27ebee290f0351bc5dad4506322af6680c03b7cc67476f004b41871885874f  configs/elliptic_of_amnet.yaml
+1401eec7c265b5bfbc16c96013cef7929bc0d584b5dbf48ddd864747443fc0bb  /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/data/processed/elliptic_of_amnet.dgldata
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+dname: elliptic_of_amnet
+project: dga_reproduction
+model: dga
+bin_encoding: true
+n_head: 2
+n_hidden: 128
+p: 0.3
+k: 4
+z: 0.1
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+2026-09-16T04:29:35Z | RUNNING: Elliptic native two-epoch compatibility smoke
+Wed Sep 16 04:29:35 UTC 2026
+/workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/dga_gnn_upstream/code
+========================================
+数据名称 elliptic_of_amnet
+总样本数: 46564
+欺诈样本数: 4545
+非欺诈样本数: 42019
+欺诈样本占比: 9.76%
+特征个数: 93
+
+_E边关系下的统计信息:
+边的个数: 73248
+平均出度: 1.57
+
+数据划分情况:
+训练集: 21353 验证集: 8541 测试集: 16670
+训练集: 45.86% 验证集: 18.34% 测试集: 35.80%
+========================================
+超参数设定：
+dname: elliptic_of_amnet
+project: dga_reproduction
+model: dga_bin
+bin_encoding: true
+n_head: 2
+n_hidden: 128
+p: 0.3
+k: 4
+z: 0.1
+seed: 2
+bs: 64
+lr: 0.001
+weight_decay: 0.0005
+max_epochs: 2
+patience: 25
+usegpu: true
+gpuid: 0
+nowandb: true
+
+n_etypes 1
+n_classes 2
+========================================
+after bin_encoding： (46564, 458)
+========================================
+{'unclear_up': 0.1, 'unclear_down': 0.1}
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+You are using a CUDA device ('NVIDIA RTX A6000') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name | Type | Params
+------------------------------
+0 | dga  | DGA  | 258 K 
+------------------------------
+258 K     Trainable params
+0         Non-trainable params
+258 K     Total params
+1.032     Total estimated model params size (MB)
+Epoch 0: {'val_loss': '0.18740', 'g0': '0.41137', 'g1': '0.05427', 'flip_r': '0.88345', 'pmean': '0.05817', 'trn_auc': '0.96355', 'val_auc': '0.80843', 'tst_auc': '0.86595', 'trn_aps': '0.90729', 'val_aps': '0.70676', 'tst_aps': '0.73835', 'trn_loss0': '0.26052'}
+Epoch 1: {'val_loss': '0.17889', 'g0': '0.41481', 'g1': '0.05083', 'flip_r': '0.05717', 'pmean': '0.08402', 'trn_auc': '0.96932', 'val_auc': '0.72453', 'tst_auc': '0.88163', 'trn_aps': '0.87309', 'val_aps': '0.65956', 'tst_aps': '0.65092', 'trn_loss0': '0.15581'}
+`Trainer.fit` stopped: `max_epochs=2` reached.
+training time elapsed 26.18s
+Evaluating model in ./lightning_logs/sjbiwyen/checkpoints/epoch=1-step=668.ckpt
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 54.89it/s]
+{'final_trn/auc': '0.96851', 'final_trn/aps': '0.86261', 'final_trn/mf1': '0.94694', 'final_trn/th1': '0.56215', 'final_trn/gme': '0.93737', 'final_trn/th2': '0.46777', 'final_trn/rec': '0.88030', 'final_trn/pre': '0.92783'}
+{'final_val/auc': '0.72838', 'final_val/aps': '0.66233', 'final_val/mf1': '0.83633', 'final_val/th1': '0.56415', 'final_val/gme': '0.75958', 'final_val/th2': '0.56415', 'final_val/rec': '0.58101', 'final_val/pre': '0.93483'}
+{'final_tst/auc': '0.89098', 'final_tst/aps': '0.66133', 'final_tst/mf1': '0.86054', 'final_tst/th1': '0.56415', 'final_tst/gme': '0.82583', 'final_tst/th2': '0.56415', 'final_tst/rec': '0.69067', 'final_tst/pre': '0.79237'}
+==============================
+==============================
+Wed Sep 16 04:30:16 UTC 2026
+2026-09-16T04:30:16Z | RUNNING: preserving Elliptic checkpoint and structured evidence
+checkpoint_path: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/checkpoints/elliptic_native_seed2_epoch2_best.ckpt
+top_level_keys: ['callbacks', 'epoch', 'global_step', 'hparams_name', 'hyper_parameters', 'loops', 'lr_schedulers', 'optimizer_states', 'pytorch-lightning_version', 'state_dict']
+epoch: 1
+global_step: 668
+state_dict_entries: 50
+checkpoint_load: PASS
+{
+  "model": "DGA-GNN",
+  "dataset": "Elliptic",
+  "run_type": "native compatibility smoke",
+  "status": "PASS",
+  "benchmark_reportable": false,
+  "non_reportable_reasons": [
+    "Only two epochs were run.",
+    "Native validation loader evaluates every graph node.",
+    "Checkpoint val_loss includes train, validation and test nodes.",
+    "Native code observes test ROC-AUC and AP after every epoch."
+  ],
+  "seed": 2,
+  "epochs_requested": 2,
+  "epochs_completed": 2,
+  "training_time_seconds": 26.18,
+  "wall_time_seconds": 41,
+  "peak_gpu_memory_mib": 886,
+  "checkpoint": "models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/checkpoints/elliptic_native_seed2_epoch2_best.ckpt",
+  "epoch_metrics": [
+    {
+      "epoch": 0,
+      "metrics": {
+        "val_loss": 0.1874,
+        "g0": 0.41137,
+        "g1": 0.05427,
+        "flip_r": 0.88345,
+        "pmean": 0.05817,
+        "trn_auc": 0.96355,
+        "val_auc": 0.80843,
+        "tst_auc": 0.86595,
+        "trn_aps": 0.90729,
+        "val_aps": 0.70676,
+        "tst_aps": 0.73835,
+        "trn_loss0": 0.26052
+      }
+    },
+    {
+      "epoch": 1,
+      "metrics": {
+        "val_loss": 0.17889,
+        "g0": 0.41481,
+        "g1": 0.05083,
+        "flip_r": 0.05717,
+        "pmean": 0.08402,
+        "trn_auc": 0.96932,
+        "val_auc": 0.72453,
+        "tst_auc": 0.88163,
+        "trn_aps": 0.87309,
+        "val_aps": 0.65956,
+        "tst_aps": 0.65092,
+        "trn_loss0": 0.15581
+      }
+    }
+  ],
+  "final_metrics": {
+    "final_trn/auc": 0.96851,
+    "final_trn/aps": 0.86261,
+    "final_trn/mf1": 0.94694,
+    "final_trn/th1": 0.56215,
+    "final_trn/gme": 0.93737,
+    "final_trn/th2": 0.46777,
+    "final_trn/rec": 0.8803,
+    "final_trn/pre": 0.92783,
+    "final_val/auc": 0.72838,
+    "final_val/aps": 0.66233,
+    "final_val/mf1": 0.83633,
+    "final_val/th1": 0.56415,
+    "final_val/gme": 0.75958,
+    "final_val/th2": 0.56415,
+    "final_val/rec": 0.58101,
+    "final_val/pre": 0.93483,
+    "final_tst/auc": 0.89098,
+    "final_tst/aps": 0.66133,
+    "final_tst/mf1": 0.86054,
+    "final_tst/th1": 0.56415,
+    "final_tst/gme": 0.82583,
+    "final_tst/th2": 0.56415,
+    "final_tst/rec": 0.69067,
+    "final_tst/pre": 0.79237
+  }
+}
+2026-09-16T04:30:18Z | RUNNING: committing and pushing Elliptic evidence
+[main 9e78521] Add DGA-GNN Elliptic native compatibility evidence
+ 42 files changed, 926 insertions(+)
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/checkpoint.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/checkpoint_inspection.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/checkpoints/elliptic_native_seed2_epoch2_best.ckpt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/end_utc.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/exit_status.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/generated_files.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/gpu_trace.csv
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/config.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/hydra.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/hydra/.hydra/overrides.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/hydra/train.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/key_training_output.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/native_smoke_summary.json
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/peak_gpu_memory_mib.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/preflight.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/resolved_config.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/resolved_config.yaml
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/start_utc.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/train.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/wall_time_seconds.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/download.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/import_and_pickle_test.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/install.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/pip_freeze_after.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/pip_freeze_before.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/source_archive.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/environment/pyg_unpickle_support/source_hash_verification.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/evidence_sha256.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/elapsed_seconds.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/elliptic_only_preprocess.executed.py
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/end_utc.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/exit_status.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/graph_integrity.json
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_test_idx.npy
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_train_idx.npy
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_ids/elliptic_validation_idx.npy
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/native_split_sha256.txt
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/preprocessing.log
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/preprocessing_script.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/processed_graph.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/raw_elliptic.sha256
+ create mode 100644 models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/start_utc.txt
+To github.com:marufkhan09/COMP8851-fraud-dataset-analysis.git
+   609548c..9e78521  main -> main
+From github.com:marufkhan09/COMP8851-fraud-dataset-analysis
+ * branch            main       -> FETCH_HEAD
+Local head:  9e78521012a843859cebbec2ca2909c029981882
+Remote head: 9e78521012a843859cebbec2ca2909c029981882
+DGA-GNN Pair 2 background queue: COMPLETE
+Wed Sep 16 04:30:20 UTC 2026
+Amazon summary: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/amazon/evidence/compatibility/native_two_epoch_seed2/native_smoke_summary.json
+Elliptic preprocessing: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/preprocessing/native_embedded_masks/graph_integrity.json
+Elliptic summary: /workspace/COMP8851-fraud-dataset-analysis/models/dga-gnn/elliptic/evidence/compatibility/native_two_epoch_seed2/native_smoke_summary.json
+Final parent commit: 9e78521012a843859cebbec2ca2909c029981882
+2026-09-16T04:30:20Z | COMPLETE: Amazon archived/pushed; Elliptic preprocessed, validated, smoke-tested, archived, and pushed
