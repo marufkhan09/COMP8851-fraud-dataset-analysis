@@ -1,0 +1,13 @@
+Using backend: pytorch
+{'dataset': 'yelp', 'train_size': 0.4, 'val_size': 0.1, 'seed': 717, 'norm_feat': False, 'grp_norm': False, 'force_reload': False, 'add_self_loop': False, 'fanouts': [-1], 'base_dir': '~/.dgl', 'save_dir': 'seq_data'}
+Downloading /root/.dgl/yelp.zip from https://data.dgl.ai/dataset/FraudYelp.zip...
+Extracting file to /root/.dgl/yelp
+Done saving data into cached files.
+[Global] Dataset <yelp> Overview
+	Entire (postive/total)   6677 / 45954 
+	Train  (postive/total)   2739 / 18381 
+	Valid  (postive/total)    651 / 4595  
+	Test   (postive/total)   3287 / 22978 
+
+Saving infos to seq_data/yelp/yelp_infos_0.4_0.1_717.npz
+Elapsed time=1.71(s)
