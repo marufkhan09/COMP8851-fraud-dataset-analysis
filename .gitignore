@@ -28,3 +28,17 @@ third_party/
 models/*/references/*.pdf
 # DGA-GNN upstream clone, raw data, processed graphs and native outputs
 models/dga-gnn/dga_gnn_upstream/
+
+# Python cache and logs
+__pycache__/
+*.pyc
+*.pth
+*.tfevents*
+
+# Heavy datasets and generated matrices
+*.npy
+*.npz
+**/logs/
+**/mp_output/
+**/seq_data/
+**/seq_data_test/
