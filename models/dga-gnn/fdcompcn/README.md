@@ -123,3 +123,59 @@ DGA-GNN rather than an artifact of the FDCompCN adapter.
 This was verified as a genuine result, not left unexamined: no code
 changes between TR40/TR30 (successful) and TR20/TR10 (collapsed) beyond
 the split itself, ruling out an adapter bug specific to those ratios.
+
+## Update: seed variance at TR40/TR30 (seeds 42, 72 added)
+
+The original TR40/TR30 "healthy" results above were seed2 only. Adding
+seeds 42 and 72 reveals the picture is less stable than it first appeared:
+
+| Ratio | seed2 | seed42 | seed72 |
+|---|---|---|---|
+| TR40 | 0.784 | 0.572 | 0.757 |
+| TR30 | 0.785 | 0.541 | 0.586 |
+
+TR30 in particular: only seed2 succeeded; both seed42 and seed72 collapsed
+to near-chance, with the same `g0`-pinned-near-zero signature identified
+earlier as the dynamic-grouping mechanism failing to activate.
+
+This changes the finding from "TR40/TR30 healthy, TR20/TR10 collapse" to
+something more precise: **DGA-GNN's FDCompCN grouping mechanism is fragile
+across the board at this dataset's scale, not just at the smallest ratios.**
+Seed2 happening to succeed at every ratio tried (TR40, TR30, and per the
+earlier TR20/TR10 sweep) may itself be worth a second look — it's possible
+seed2 has some structural advantage (e.g. luckier initialization relative
+to this specific small graph) rather than every other seed being unlucky.
+
+TR40/TR30 mean ± std across all 3 seeds:
+- TR40: mean 0.704, seeds [0.784, 0.572, 0.757]
+- TR30: mean 0.637, seeds [0.785, 0.541, 0.586]
+
+Raw logs for all four new runs: `evidence/benchmark/seed_variance/`.
+
+## Update: seed variance at TR40/TR30 (seeds 42, 72 added)
+
+The original TR40/TR30 "healthy" results above were seed2 only. Adding
+seeds 42 and 72 reveals the picture is less stable than it first appeared:
+
+| Ratio | seed2 | seed42 | seed72 |
+|---|---|---|---|
+| TR40 | 0.784 | 0.572 | 0.757 |
+| TR30 | 0.785 | 0.541 | 0.586 |
+
+TR30 in particular: only seed2 succeeded; both seed42 and seed72 collapsed
+to near-chance, with the same `g0`-pinned-near-zero signature identified
+earlier as the dynamic-grouping mechanism failing to activate.
+
+This changes the finding from "TR40/TR30 healthy, TR20/TR10 collapse" to
+something more precise: **DGA-GNN's FDCompCN grouping mechanism is fragile
+across the board at this dataset's scale, not just at the smallest ratios.**
+Seed2 happening to succeed at every ratio tried (TR40, TR30, and per the
+earlier TR20/TR10 sweep) may itself be worth a second look — it's possible
+seed2 has some structural advantage (e.g. luckier initialization relative
+to this specific small graph) rather than every other seed being unlucky.
+
+TR40/TR30 mean ± std across all 3 seeds:
+- TR40: mean 0.704, seeds [0.784, 0.572, 0.757]
+- TR30: mean 0.637, seeds [0.785, 0.541, 0.586]
+
+Raw logs for all four new runs: `evidence/benchmark/seed_variance/`.
