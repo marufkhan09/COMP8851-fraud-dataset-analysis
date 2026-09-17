@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/gaap_vast/scripts/01_gaap_yelp_unified_tr40_smoke.py", line 23, in <module>
+    from lightning import Trainer
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/__init__.py", line 19, in <module>
+    from lightning.fabric.fabric import Fabric  # noqa: E402
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/fabric/__init__.py", line 41, in <module>
+    __import__("pkg_resources").declare_namespace(__name__)
+ModuleNotFoundError: No module named 'pkg_resources'

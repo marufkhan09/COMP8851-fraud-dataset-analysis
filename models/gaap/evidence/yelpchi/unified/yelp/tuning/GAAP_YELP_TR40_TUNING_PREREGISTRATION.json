@@ -1,0 +1,119 @@
+{
+  "model": "GAAP",
+  "dataset": "YelpChi",
+  "mode": "unified",
+  "stage": "TR40_tuning",
+  "split": "TR40",
+  "split_seed": 2,
+  "training_seed": 2,
+  "selection_metric": "validation_AUPRC",
+  "max_trials": 12,
+  "max_epochs": 100,
+  "patience": 20,
+  "test_accessed": false,
+  "fixed": {
+    "gnn_n_layers": 3,
+    "gnn_dropout": 0.1,
+    "gnn_agg": "max_pool",
+    "use_dyple": true,
+    "use_mha": true,
+    "bs": 128,
+    "val_bs": 1280,
+    "weight_decay": 0,
+    "norm_type": "norm01",
+    "preprocess": null
+  },
+  "varied": {
+    "d_hidden": [
+      40,
+      64,
+      128
+    ],
+    "n_bins": [
+      16,
+      32
+    ],
+    "lr": [
+      0.001,
+      0.002
+    ]
+  },
+  "trials": [
+    {
+      "trial": 1,
+      "d_hidden": 64,
+      "n_bins": 32,
+      "lr": 0.001
+    },
+    {
+      "trial": 2,
+      "d_hidden": 64,
+      "n_bins": 32,
+      "lr": 0.002
+    },
+    {
+      "trial": 3,
+      "d_hidden": 40,
+      "n_bins": 32,
+      "lr": 0.001
+    },
+    {
+      "trial": 4,
+      "d_hidden": 40,
+      "n_bins": 32,
+      "lr": 0.002
+    },
+    {
+      "trial": 5,
+      "d_hidden": 128,
+      "n_bins": 32,
+      "lr": 0.001
+    },
+    {
+      "trial": 6,
+      "d_hidden": 128,
+      "n_bins": 32,
+      "lr": 0.002
+    },
+    {
+      "trial": 7,
+      "d_hidden": 64,
+      "n_bins": 16,
+      "lr": 0.001
+    },
+    {
+      "trial": 8,
+      "d_hidden": 64,
+      "n_bins": 16,
+      "lr": 0.002
+    },
+    {
+      "trial": 9,
+      "d_hidden": 40,
+      "n_bins": 16,
+      "lr": 0.001
+    },
+    {
+      "trial": 10,
+      "d_hidden": 40,
+      "n_bins": 16,
+      "lr": 0.002
+    },
+    {
+      "trial": 11,
+      "d_hidden": 128,
+      "n_bins": 16,
+      "lr": 0.001
+    },
+    {
+      "trial": 12,
+      "d_hidden": 128,
+      "n_bins": 16,
+      "lr": 0.002
+    }
+  ],
+  "repository_commit": "6a7dbb0447c4897504525de49e41a0526ee777f8",
+  "dataset_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "architecture_or_mechanism_replacement": false
+}

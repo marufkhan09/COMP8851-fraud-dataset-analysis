@@ -1,0 +1,133 @@
+TRIAL_CONFIG | trial=02/12 | hidden=64 | bins=32 | lr=0.002
+===== GAAP × YELPCHI — UNIFIED 2-EPOCH SMOKE =====
+RATIO=TR40 | TRAIN_SEED=2 | SPLIT_SEED=2
+AUTHOR_ARCHITECTURE_CHANGED=NO
+TEST_USED_FOR_SELECTION=NO
+MAX_EPOCHS=100 | PATIENCE=20
+CANONICAL_NODES=45954
+CANONICAL_FEATURES=32
+RELATION_EDGE_ENTRIES=8051348
+HOMOGENEOUS_WITH_SELF_LOOPS=8097302
+SHARED_YELP_VIEW_GATE=PASS
+EXACT_FROZEN_SPLIT_GATE=PASS
+The shape of bin-encoded feature is torch.Size([45954, 32])
+Processing dataset done!
+
+GAAP_NATIVE_NORM_TYPE=norm01
+GAAP_NATIVE_PREPROCESS=None
+GAAP_AUTHOR_DATALOADER_GATE=PASS
+TEST_LABELS_HIDDEN_DURING_FIT=PASS
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+trial=02/12 | TR40 seed=2 | epoch=001 | loss=0.378180 | valAUPRC=0.489549 | valAUROC=0.831164 | best=0.489549@1 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=002 | loss=0.369382 | valAUPRC=0.413077 | valAUROC=0.786880 | best=0.489549@1 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=003 | loss=4.359942 | valAUPRC=0.481908 | valAUROC=0.832246 | best=0.489549@1 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=004 | loss=0.354533 | valAUPRC=0.554922 | valAUROC=0.867040 | best=0.554922@4 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=005 | loss=1.273937 | valAUPRC=0.611256 | valAUROC=0.878552 | best=0.611256@5 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=006 | loss=0.367584 | valAUPRC=0.639747 | valAUROC=0.885741 | best=0.639747@6 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=007 | loss=0.283045 | valAUPRC=0.671213 | valAUROC=0.901819 | best=0.671213@7 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=008 | loss=0.963828 | valAUPRC=0.707494 | valAUROC=0.913039 | best=0.707494@8 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=009 | loss=0.495811 | valAUPRC=0.727805 | valAUROC=0.917773 | best=0.727805@9 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=010 | loss=0.243109 | valAUPRC=0.740216 | valAUROC=0.925533 | best=0.740216@10 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=011 | loss=0.224991 | valAUPRC=0.764050 | valAUROC=0.927192 | best=0.764050@11 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=012 | loss=0.211504 | valAUPRC=0.784065 | valAUROC=0.937652 | best=0.784065@12 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=013 | loss=0.850288 | valAUPRC=0.762742 | valAUROC=0.936665 | best=0.784065@12 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=014 | loss=0.195503 | valAUPRC=0.777132 | valAUROC=0.944414 | best=0.784065@12 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=015 | loss=0.193505 | valAUPRC=0.804393 | valAUROC=0.945929 | best=0.804393@15 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=016 | loss=0.227646 | valAUPRC=0.817292 | valAUROC=0.947825 | best=0.817292@16 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=017 | loss=0.581440 | valAUPRC=0.814378 | valAUROC=0.943882 | best=0.817292@16 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=018 | loss=0.173966 | valAUPRC=0.815911 | valAUROC=0.948957 | best=0.817292@16 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=019 | loss=1.614370 | valAUPRC=0.822683 | valAUROC=0.948741 | best=0.822683@19 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=020 | loss=0.168596 | valAUPRC=0.831224 | valAUROC=0.953658 | best=0.831224@20 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=021 | loss=0.162571 | valAUPRC=0.836434 | valAUROC=0.956077 | best=0.836434@21 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=022 | loss=2.441883 | valAUPRC=0.613628 | valAUROC=0.903402 | best=0.836434@21 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=023 | loss=0.420970 | valAUPRC=0.823794 | valAUROC=0.950915 | best=0.836434@21 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=024 | loss=0.179527 | valAUPRC=0.831509 | valAUROC=0.949691 | best=0.836434@21 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=025 | loss=0.145314 | valAUPRC=0.841908 | valAUROC=0.952690 | best=0.841908@25 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=026 | loss=0.143984 | valAUPRC=0.847581 | valAUROC=0.952940 | best=0.847581@26 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=027 | loss=0.136844 | valAUPRC=0.698581 | valAUROC=0.915221 | best=0.847581@26 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=028 | loss=0.164692 | valAUPRC=0.826892 | valAUROC=0.948849 | best=0.847581@26 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=029 | loss=0.376930 | valAUPRC=0.855242 | valAUROC=0.958271 | best=0.855242@29 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=030 | loss=0.157658 | valAUPRC=0.840980 | valAUROC=0.958026 | best=0.855242@29 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=031 | loss=0.145852 | valAUPRC=0.820096 | valAUROC=0.957589 | best=0.855242@29 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=032 | loss=0.142028 | valAUPRC=0.830463 | valAUROC=0.951379 | best=0.855242@29 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=033 | loss=0.146252 | valAUPRC=0.841684 | valAUROC=0.956064 | best=0.855242@29 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=034 | loss=0.137731 | valAUPRC=0.851323 | valAUROC=0.957922 | best=0.855242@29 | patience=5/20
+trial=02/12 | TR40 seed=2 | epoch=035 | loss=0.131770 | valAUPRC=0.870833 | valAUROC=0.962521 | best=0.870833@35 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=036 | loss=0.125740 | valAUPRC=0.848317 | valAUROC=0.961837 | best=0.870833@35 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=037 | loss=0.123080 | valAUPRC=0.853522 | valAUROC=0.958105 | best=0.870833@35 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=038 | loss=0.123931 | valAUPRC=0.874119 | valAUROC=0.965581 | best=0.874119@38 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=039 | loss=0.119430 | valAUPRC=0.874343 | valAUROC=0.961215 | best=0.874343@39 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=040 | loss=0.118414 | valAUPRC=0.875193 | valAUROC=0.964321 | best=0.875193@40 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=041 | loss=0.117096 | valAUPRC=0.863969 | valAUROC=0.963028 | best=0.875193@40 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=042 | loss=0.111323 | valAUPRC=0.877301 | valAUROC=0.963474 | best=0.877301@42 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=043 | loss=0.109140 | valAUPRC=0.877414 | valAUROC=0.963414 | best=0.877414@43 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=044 | loss=0.113445 | valAUPRC=0.875253 | valAUROC=0.962942 | best=0.877414@43 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=045 | loss=0.393117 | valAUPRC=0.848297 | valAUROC=0.955257 | best=0.877414@43 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=046 | loss=0.107970 | valAUPRC=0.876815 | valAUROC=0.966467 | best=0.877414@43 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=047 | loss=0.107387 | valAUPRC=0.886104 | valAUROC=0.967648 | best=0.886104@47 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=048 | loss=0.099453 | valAUPRC=0.887471 | valAUROC=0.968169 | best=0.887471@48 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=049 | loss=0.100764 | valAUPRC=0.869584 | valAUROC=0.960777 | best=0.887471@48 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=050 | loss=0.102367 | valAUPRC=0.886196 | valAUROC=0.969788 | best=0.887471@48 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=051 | loss=0.097769 | valAUPRC=0.882026 | valAUROC=0.967058 | best=0.887471@48 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=052 | loss=0.096436 | valAUPRC=0.870168 | valAUROC=0.963404 | best=0.887471@48 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=053 | loss=0.095603 | valAUPRC=0.879092 | valAUROC=0.965464 | best=0.887471@48 | patience=5/20
+trial=02/12 | TR40 seed=2 | epoch=054 | loss=0.099987 | valAUPRC=0.874886 | valAUROC=0.965648 | best=0.887471@48 | patience=6/20
+trial=02/12 | TR40 seed=2 | epoch=055 | loss=0.090947 | valAUPRC=0.882252 | valAUROC=0.965193 | best=0.887471@48 | patience=7/20
+trial=02/12 | TR40 seed=2 | epoch=056 | loss=0.089493 | valAUPRC=0.882470 | valAUROC=0.968995 | best=0.887471@48 | patience=8/20
+trial=02/12 | TR40 seed=2 | epoch=057 | loss=0.086634 | valAUPRC=0.877047 | valAUROC=0.964725 | best=0.887471@48 | patience=9/20
+trial=02/12 | TR40 seed=2 | epoch=058 | loss=0.100485 | valAUPRC=0.879591 | valAUROC=0.966213 | best=0.887471@48 | patience=10/20
+trial=02/12 | TR40 seed=2 | epoch=059 | loss=0.090462 | valAUPRC=0.880660 | valAUROC=0.967202 | best=0.887471@48 | patience=11/20
+trial=02/12 | TR40 seed=2 | epoch=060 | loss=0.083019 | valAUPRC=0.886239 | valAUROC=0.969280 | best=0.887471@48 | patience=12/20
+trial=02/12 | TR40 seed=2 | epoch=061 | loss=0.075720 | valAUPRC=0.893692 | valAUROC=0.969387 | best=0.893692@61 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=062 | loss=0.069912 | valAUPRC=0.888570 | valAUROC=0.971077 | best=0.893692@61 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=063 | loss=0.070624 | valAUPRC=0.879887 | valAUROC=0.969675 | best=0.893692@61 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=064 | loss=0.070759 | valAUPRC=0.873760 | valAUROC=0.966293 | best=0.893692@61 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=065 | loss=0.067352 | valAUPRC=0.879395 | valAUROC=0.965644 | best=0.893692@61 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=066 | loss=0.067917 | valAUPRC=0.888564 | valAUROC=0.967301 | best=0.893692@61 | patience=5/20
+trial=02/12 | TR40 seed=2 | epoch=067 | loss=0.064972 | valAUPRC=0.885763 | valAUROC=0.965653 | best=0.893692@61 | patience=6/20
+trial=02/12 | TR40 seed=2 | epoch=068 | loss=0.066563 | valAUPRC=0.886345 | valAUROC=0.968271 | best=0.893692@61 | patience=7/20
+trial=02/12 | TR40 seed=2 | epoch=069 | loss=0.067089 | valAUPRC=0.893310 | valAUROC=0.969425 | best=0.893692@61 | patience=8/20
+trial=02/12 | TR40 seed=2 | epoch=070 | loss=0.062691 | valAUPRC=0.889637 | valAUROC=0.966928 | best=0.893692@61 | patience=9/20
+trial=02/12 | TR40 seed=2 | epoch=071 | loss=0.058724 | valAUPRC=0.884120 | valAUROC=0.965870 | best=0.893692@61 | patience=10/20
+trial=02/12 | TR40 seed=2 | epoch=072 | loss=0.062144 | valAUPRC=0.887716 | valAUROC=0.966199 | best=0.893692@61 | patience=11/20
+trial=02/12 | TR40 seed=2 | epoch=073 | loss=0.058090 | valAUPRC=0.880450 | valAUROC=0.964901 | best=0.893692@61 | patience=12/20
+trial=02/12 | TR40 seed=2 | epoch=074 | loss=0.054173 | valAUPRC=0.891280 | valAUROC=0.969016 | best=0.893692@61 | patience=13/20
+trial=02/12 | TR40 seed=2 | epoch=075 | loss=0.050959 | valAUPRC=0.872641 | valAUROC=0.965151 | best=0.893692@61 | patience=14/20
+trial=02/12 | TR40 seed=2 | epoch=076 | loss=0.054574 | valAUPRC=0.889412 | valAUROC=0.967800 | best=0.893692@61 | patience=15/20
+trial=02/12 | TR40 seed=2 | epoch=077 | loss=0.048830 | valAUPRC=0.899831 | valAUROC=0.969836 | best=0.899831@77 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=078 | loss=0.049158 | valAUPRC=0.896167 | valAUROC=0.967251 | best=0.899831@77 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=079 | loss=0.049276 | valAUPRC=0.895031 | valAUROC=0.968472 | best=0.899831@77 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=080 | loss=0.047064 | valAUPRC=0.889013 | valAUROC=0.965935 | best=0.899831@77 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=081 | loss=0.046014 | valAUPRC=0.895359 | valAUROC=0.967183 | best=0.899831@77 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=082 | loss=0.043892 | valAUPRC=0.903376 | valAUROC=0.969648 | best=0.903376@82 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=083 | loss=0.045808 | valAUPRC=0.887607 | valAUROC=0.963702 | best=0.903376@82 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=084 | loss=0.042652 | valAUPRC=0.888524 | valAUROC=0.963784 | best=0.903376@82 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=085 | loss=0.046538 | valAUPRC=0.899102 | valAUROC=0.970321 | best=0.903376@82 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=086 | loss=0.046946 | valAUPRC=0.897229 | valAUROC=0.970971 | best=0.903376@82 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=087 | loss=0.041572 | valAUPRC=0.901751 | valAUROC=0.970476 | best=0.903376@82 | patience=5/20
+trial=02/12 | TR40 seed=2 | epoch=088 | loss=0.046497 | valAUPRC=0.899316 | valAUROC=0.967561 | best=0.903376@82 | patience=6/20
+trial=02/12 | TR40 seed=2 | epoch=089 | loss=0.039422 | valAUPRC=0.896052 | valAUROC=0.968439 | best=0.903376@82 | patience=7/20
+trial=02/12 | TR40 seed=2 | epoch=090 | loss=0.040835 | valAUPRC=0.902506 | valAUROC=0.969882 | best=0.903376@82 | patience=8/20
+trial=02/12 | TR40 seed=2 | epoch=091 | loss=0.038510 | valAUPRC=0.896430 | valAUROC=0.968603 | best=0.903376@82 | patience=9/20
+trial=02/12 | TR40 seed=2 | epoch=092 | loss=0.035887 | valAUPRC=0.904529 | valAUROC=0.970601 | best=0.904529@92 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=093 | loss=0.038684 | valAUPRC=0.897141 | valAUROC=0.966993 | best=0.904529@92 | patience=1/20
+trial=02/12 | TR40 seed=2 | epoch=094 | loss=0.037211 | valAUPRC=0.898656 | valAUROC=0.966851 | best=0.904529@92 | patience=2/20
+trial=02/12 | TR40 seed=2 | epoch=095 | loss=0.042477 | valAUPRC=0.901368 | valAUROC=0.968353 | best=0.904529@92 | patience=3/20
+trial=02/12 | TR40 seed=2 | epoch=096 | loss=0.039235 | valAUPRC=0.899761 | valAUROC=0.969113 | best=0.904529@92 | patience=4/20
+trial=02/12 | TR40 seed=2 | epoch=097 | loss=0.036252 | valAUPRC=0.896818 | valAUROC=0.970403 | best=0.904529@92 | patience=5/20
+trial=02/12 | TR40 seed=2 | epoch=098 | loss=0.035965 | valAUPRC=0.903362 | valAUROC=0.968805 | best=0.904529@92 | patience=6/20
+trial=02/12 | TR40 seed=2 | epoch=099 | loss=0.035425 | valAUPRC=0.905712 | valAUROC=0.970667 | best=0.905712@99 | patience=0/20
+trial=02/12 | TR40 seed=2 | epoch=100 | loss=0.032429 | valAUPRC=0.898199 | valAUROC=0.969712 | best=0.905712@99 | patience=1/20
+`Trainer.fit` stopped: `max_epochs=100` reached.
+
+===== TRIAL 02/12 FINAL GATE =====
+BEST_VAL_AUPRC=0.905712
+TRAINING_WALL_SECONDS=2578.359
+PEAK_GPU_MEMORY_MB=13229.45
+TEST_EVALUATED=NO
+TEST_LABEL_ISOLATION=PASS
+GAAP_AUTHOR_ARCHITECTURE_CHANGED=NO
+GAAP_YELP_TUNING_TRIAL_02=PASS

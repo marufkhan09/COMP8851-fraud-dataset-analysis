@@ -1,0 +1,4 @@
+The completed GAAP × YelpChi benchmark had already passed all 12 final runs before evidence packaging.
+During the later packaging-only environment probe, a direct `import dgl` attempted to load GraphBolt and returned `ImportError: Cannot load Graphbolt C++ library`.
+This packaging probe failure did not rerun training, modify results, or invalidate the already-generated final benchmark artefacts.
+The installed DGL distribution version is recorded using Python package metadata, which does not import DGL.
