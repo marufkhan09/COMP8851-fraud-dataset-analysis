@@ -1,0 +1,52 @@
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+alpha                            -->   1
+batch_size                       -->   256
+checkpoint_metric                -->   validation_auprc
+checkpoint_selection_note        -->   TR40 tuning trial; validation AUPRC checkpoint selection.
+compatibility_only               -->   False
+cuda_id                          -->   0
+data_dir                         -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+data_name                        -->   elliptic
+early_stopping_patience          -->   20
+emb_size                         -->   128
+evaluate_test                    -->   False
+final_benchmark_result           -->   False
+hardware_profile_id              -->   pcgnn-vast-a6000-instance-51121624-gpu0
+lr                               -->   0.000703
+mode                             -->   tune
+model                            -->   PCGNN
+multi_relation                   -->   GNN
+no_cuda                          -->   False
+num_epochs                       -->   100
+optimizer                        -->   adam
+results_dir                      -->   /workspace/comp8851_pcgnn/runs/pcgnn/elliptic/tuning_tr40
+rho                              -->   0.37
+run_mode                         -->   tune_tr40_trial_06
+save_dir                         -->   ./pytorch_models/
+seed                             -->   2
+select_threshold_on_validation   -->   False
+split_identity                   -->   team_frozen
+split_path                       -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/elliptic_TR40_seed2.npz
+split_seed                       -->   2
+test_ratio                       -->   0.4
+thres                            -->   0.5
+threshold_note                   -->   Not used during tuning (evaluate_test=False); placeholder only.
+track                            -->   unified
+train_ratio                      -->   0.4
+valid_epochs                     -->   1
+weight_decay                     -->   1e-05
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+Run on elliptic, positive/total: 4545/203769, train: 18889, validation: 10049, test IDs held out: 17626
+Feature dimension: 166
+Relations preserved: 3
+/workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/src/layers.py:84: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_features = self.features(torch.cuda.LongTensor(list(unique_nodes)))
+Epoch 0 loss=1.381408 train=6.289233s validation=13.520374s val_AUPRC=0.297006 best=0.297006@0 stale=0
+Epoch 1 loss=1.562633 train=6.053650s validation=8.176198s val_AUPRC=0.177616 best=0.297006@0 stale=1
+Epoch 2 loss=1.451420 train=5.830738s validation=8.903484s val_AUPRC=0.192845 best=0.297006@0 stale=2
+Epoch 3 loss=1.252307 train=6.371356s validation=8.390835s val_AUPRC=0.292677 best=0.297006@0 stale=3
+Epoch 4 loss=1.206660 train=6.301305s validation=9.212297s val_AUPRC=0.309776 best=0.309776@4 stale=0
+Epoch 5 loss=1.167382 train=9.303561s validation=8.768735s val_AUPRC=0.358648 best=0.358648@5 stale=0
+Epoch 6 loss=1.181877 train=5.408427s validation=8.296652s val_AUPRC=0.318852 best=0.358648@5 stale=1
+Epoch 7 loss=1.143333 train=5.548202s validation=7.120935s val_AUPRC=0.322879 best=0.358648@5 stale=2
+Epoch 8 loss=1.092922 train=5.223342s validation=7.046556s val_AUPRC=0.354678 best=0.358648@5 stale=3

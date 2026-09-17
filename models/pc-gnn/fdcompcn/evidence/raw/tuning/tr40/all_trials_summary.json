@@ -1,0 +1,218 @@
+[
+  {
+    "trial_num": 1,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.00094,
+      "weight_decay": 1e-05,
+      "emb_size": 64,
+      "rho": 0.63,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_01.yml",
+    "started_utc": "2026-09-16T04:13:42Z",
+    "exit_status": 0,
+    "duration_seconds": 153.5314610004425,
+    "status": "PASS",
+    "best_validation_auprc": 0.22910094579,
+    "finished_utc": "2026-09-16T04:16:16Z"
+  },
+  {
+    "trial_num": 2,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.005668,
+      "weight_decay": 0.0001,
+      "emb_size": 64,
+      "rho": 0.42,
+      "alpha": 2
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_02.yml",
+    "started_utc": "2026-09-16T04:16:16Z",
+    "exit_status": 0,
+    "duration_seconds": 123.79270052909851,
+    "status": "PASS",
+    "best_validation_auprc": 0.22972059334,
+    "finished_utc": "2026-09-16T04:18:20Z"
+  },
+  {
+    "trial_num": 3,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.00042,
+      "weight_decay": 1e-05,
+      "emb_size": 64,
+      "rho": 0.5,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_03.yml",
+    "started_utc": "2026-09-16T04:18:20Z",
+    "exit_status": 0,
+    "duration_seconds": 39.031407594680786,
+    "status": "PASS",
+    "best_validation_auprc": 0.121434031435,
+    "finished_utc": "2026-09-16T04:18:59Z"
+  },
+  {
+    "trial_num": 4,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.003703,
+      "weight_decay": 0.0001,
+      "emb_size": 128,
+      "rho": 0.3,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_04.yml",
+    "started_utc": "2026-09-16T04:18:59Z",
+    "exit_status": 0,
+    "duration_seconds": 121.43221688270569,
+    "status": "PASS",
+    "best_validation_auprc": 0.235966861184,
+    "finished_utc": "2026-09-16T04:21:00Z"
+  },
+  {
+    "trial_num": 5,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.009866,
+      "weight_decay": 0.0,
+      "emb_size": 32,
+      "rho": 0.53,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_05.yml",
+    "started_utc": "2026-09-16T04:21:00Z",
+    "exit_status": 0,
+    "duration_seconds": 92.69788002967834,
+    "status": "PASS",
+    "best_validation_auprc": 0.233597274232,
+    "finished_utc": "2026-09-16T04:22:33Z"
+  },
+  {
+    "trial_num": 6,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.000352,
+      "weight_decay": 1e-05,
+      "emb_size": 128,
+      "rho": 0.65,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_06.yml",
+    "started_utc": "2026-09-16T04:22:33Z",
+    "exit_status": 0,
+    "duration_seconds": 90.66910600662231,
+    "status": "PASS",
+    "best_validation_auprc": 0.156297442796,
+    "finished_utc": "2026-09-16T04:24:04Z"
+  },
+  {
+    "trial_num": 7,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.003227,
+      "weight_decay": 1e-05,
+      "emb_size": 64,
+      "rho": 0.4,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_07.yml",
+    "started_utc": "2026-09-16T04:24:04Z",
+    "exit_status": 0,
+    "duration_seconds": 172.40785002708435,
+    "status": "PASS",
+    "best_validation_auprc": 0.258923388237,
+    "finished_utc": "2026-09-16T04:26:56Z"
+  },
+  {
+    "trial_num": 8,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.007712,
+      "weight_decay": 0.0,
+      "emb_size": 64,
+      "rho": 0.66,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_08.yml",
+    "started_utc": "2026-09-16T04:26:56Z",
+    "exit_status": 0,
+    "duration_seconds": 125.36715984344482,
+    "status": "PASS",
+    "best_validation_auprc": 0.244307731904,
+    "finished_utc": "2026-09-16T04:29:01Z"
+  },
+  {
+    "trial_num": 9,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.00013,
+      "weight_decay": 0.0001,
+      "emb_size": 32,
+      "rho": 0.4,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_09.yml",
+    "started_utc": "2026-09-16T04:29:01Z",
+    "exit_status": 0,
+    "duration_seconds": 87.93387389183044,
+    "status": "PASS",
+    "best_validation_auprc": 0.106345360565,
+    "finished_utc": "2026-09-16T04:30:29Z"
+  },
+  {
+    "trial_num": 10,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.000146,
+      "weight_decay": 0.0,
+      "emb_size": 32,
+      "rho": 0.32,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_10.yml",
+    "started_utc": "2026-09-16T04:30:29Z",
+    "exit_status": 0,
+    "duration_seconds": 108.12501621246338,
+    "status": "PASS",
+    "best_validation_auprc": 0.108407060356,
+    "finished_utc": "2026-09-16T04:32:17Z"
+  },
+  {
+    "trial_num": 11,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.000557,
+      "weight_decay": 1e-05,
+      "emb_size": 32,
+      "rho": 0.59,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_11.yml",
+    "started_utc": "2026-09-16T04:32:18Z",
+    "exit_status": 0,
+    "duration_seconds": 66.11152362823486,
+    "status": "PASS",
+    "best_validation_auprc": 0.113269200107,
+    "finished_utc": "2026-09-16T04:33:24Z"
+  },
+  {
+    "trial_num": 12,
+    "dataset": "fdcompcn",
+    "hyperparams": {
+      "lr": 0.00059,
+      "weight_decay": 0.0,
+      "emb_size": 32,
+      "rho": 0.36,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_12.yml",
+    "started_utc": "2026-09-16T04:33:24Z",
+    "exit_status": 0,
+    "duration_seconds": 142.8055145740509,
+    "status": "PASS",
+    "best_validation_auprc": 0.171919333928,
+    "finished_utc": "2026-09-16T04:35:46Z"
+  }
+]

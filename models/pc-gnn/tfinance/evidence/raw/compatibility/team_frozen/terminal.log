@@ -1,0 +1,55 @@
+=== T-FINANCE TEAM-FROZEN SMOKE START (RETRY 2) ===
+Tue Sep 15 20:15:35 UTC 2026
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+alpha                            -->   2
+batch_size                       -->   256
+checkpoint_metric                -->   validation_auprc
+checkpoint_selection_note        -->   Validation AUPRC used for compatibility checkpoint selection
+compatibility_only               -->   True
+cuda_id                          -->   0
+data_dir                         -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+data_name                        -->   tfinance
+early_stopping_patience          -->   0
+emb_size                         -->   64
+evaluate_test                    -->   False
+final_benchmark_result           -->   False
+hardware_profile_id              -->   pcgnn-vast-a6000-instance-51121624-gpu0
+lr                               -->   0.005
+mode                             -->   smoke
+model                            -->   PCGNN
+multi_relation                   -->   GNN
+no_cuda                          -->   False
+num_epochs                       -->   2
+optimizer                        -->   adam
+results_dir                      -->   /workspace/comp8851_pcgnn/runs/pcgnn/tfinance/compatibility_team_frozen
+rho                              -->   0.5
+run_mode                         -->   compatibility_two_epoch_team_frozen
+save_dir                         -->   ./pytorch_models/
+seed                             -->   2
+select_threshold_on_validation   -->   False
+split_identity                   -->   team_frozen
+split_path                       -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/tfinance_TR40_seed2.npz
+split_seed                       -->   2
+test_ratio                       -->   0.4
+thres                            -->   0.5
+threshold_note                   -->   Default threshold 0.5; T-Finance is not a native PC-GNN dataset, so no paper-specified threshold exists.
+track                            -->   unified
+train_ratio                      -->   0.4
+valid_epochs                     -->   1
+weight_decay                     -->   0.0005
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+Run on tfinance, positive/total: 1804/39357, train: 18891, validation: 7872, test IDs held out: 12594
+Feature dimension: 10
+Relations preserved: 3
+/workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/src/layers.py:84: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_features = self.features(torch.cuda.LongTensor(list(unique_nodes)))
+Epoch 0 loss=1.923467 train=21.770043s validation=43.986714s val_AUPRC=0.719245 best=0.719245@0 stale=0
+Epoch 1 loss=1.752817 train=20.527648s validation=32.941950s val_AUPRC=0.730582 best=0.730582@1 stale=0
+Restored validation-AUPRC checkpoint from epoch 1
+Structured run artifacts: /workspace/comp8851_pcgnn/runs/pcgnn/tfinance/compatibility_team_frozen/20260915T201704710640Z_tfinance_PCGNN_compatibility_two_epoch_team_frozen_seed2
+UNIFIED_RUN_STATUS=PASS
+RUN_ID=20260915T201704710640Z_tfinance_PCGNN_compatibility_two_epoch_team_frozen_seed2
+TEST_ACCESSED=False
+BEST_VALIDATION_EPOCH=1
+BEST_VALIDATION_AUPRC=0.730581882803
+{"mode": "smoke", "run_id": "20260915T201704710640Z_tfinance_PCGNN_compatibility_two_epoch_team_frozen_seed2", "status": "PASS", "test_accessed": false}

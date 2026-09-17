@@ -1,0 +1,100 @@
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+alpha                            -->   2
+batch_size                       -->   256
+checkpoint_metric                -->   validation_auprc
+checkpoint_selection_note        -->   Final benchmark run; validation AUPRC checkpoint selection.
+compatibility_only               -->   False
+cuda_id                          -->   0
+data_dir                         -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+data_name                        -->   tfinance
+early_stopping_patience          -->   20
+emb_size                         -->   64
+evaluate_test                    -->   True
+final_benchmark_result           -->   True
+hardware_profile_id              -->   pcgnn-vast-a6000-instance-51121624-gpu0
+lr                               -->   0.005668
+mode                             -->   final
+model                            -->   PCGNN
+multi_relation                   -->   GNN
+no_cuda                          -->   False
+num_epochs                       -->   100
+optimizer                        -->   adam
+results_dir                      -->   /workspace/comp8851_pcgnn/runs/pcgnn/tfinance/final
+rho                              -->   0.42
+run_mode                         -->   final_tr10
+save_dir                         -->   ./pytorch_models/
+seed                             -->   42
+select_threshold_on_validation   -->   True
+split_identity                   -->   team_frozen
+split_path                       -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/tfinance_TR10_seed2.npz
+split_seed                       -->   2
+test_ratio                       -->   0.4
+thres                            -->   0.5
+threshold_note                   -->   Overridden by validation-selected threshold (select_threshold_on_validation=True).
+track                            -->   unified
+train_ratio                      -->   0.1
+valid_epochs                     -->   1
+weight_decay                     -->   0.0001
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+Run on tfinance, positive/total: 1804/39357, train: 4722, validation: 7872, test IDs held out: 12594
+Feature dimension: 10
+Relations preserved: 3
+/workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/src/layers.py:84: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_features = self.features(torch.cuda.LongTensor(list(unique_nodes)))
+Epoch 0 loss=2.070322 train=6.028459s validation=34.903938s val_AUPRC=0.714480 best=0.714480@0 stale=0
+Epoch 1 loss=1.892080 train=5.782525s validation=50.800815s val_AUPRC=0.721256 best=0.721256@1 stale=0
+Epoch 2 loss=1.849182 train=5.655103s validation=39.098637s val_AUPRC=0.726361 best=0.726361@2 stale=0
+Epoch 3 loss=1.860117 train=6.030549s validation=48.161979s val_AUPRC=0.731352 best=0.731352@3 stale=0
+Epoch 4 loss=1.756643 train=5.166751s validation=34.483867s val_AUPRC=0.735604 best=0.735604@4 stale=0
+Epoch 5 loss=1.795261 train=6.059259s validation=33.131469s val_AUPRC=0.742769 best=0.742769@5 stale=0
+Epoch 6 loss=1.706833 train=6.136354s validation=45.885245s val_AUPRC=0.752442 best=0.752442@6 stale=0
+Epoch 7 loss=1.730485 train=5.991289s validation=34.501274s val_AUPRC=0.755477 best=0.755477@7 stale=0
+Epoch 8 loss=1.734873 train=5.236825s validation=37.955349s val_AUPRC=0.754464 best=0.755477@7 stale=1
+Epoch 9 loss=1.723287 train=5.328813s validation=49.305943s val_AUPRC=0.752496 best=0.755477@7 stale=2
+Epoch 10 loss=1.712383 train=6.143105s validation=38.820052s val_AUPRC=0.751160 best=0.755477@7 stale=3
+Epoch 11 loss=1.706089 train=6.111703s validation=38.833204s val_AUPRC=0.750207 best=0.755477@7 stale=4
+Epoch 12 loss=1.684499 train=6.016568s validation=50.215814s val_AUPRC=0.748055 best=0.755477@7 stale=5
+Epoch 13 loss=1.691813 train=6.076582s validation=34.818863s val_AUPRC=0.748777 best=0.755477@7 stale=6
+Epoch 14 loss=1.678696 train=6.035335s validation=39.580638s val_AUPRC=0.750653 best=0.755477@7 stale=7
+Epoch 15 loss=1.626691 train=16.243196s validation=33.680608s val_AUPRC=0.752953 best=0.755477@7 stale=8
+Epoch 16 loss=1.624899 train=6.051209s validation=35.413147s val_AUPRC=0.755047 best=0.755477@7 stale=9
+Epoch 17 loss=1.624112 train=5.863086s validation=50.115960s val_AUPRC=0.754826 best=0.755477@7 stale=10
+Epoch 18 loss=1.629434 train=6.236972s validation=38.168827s val_AUPRC=0.754068 best=0.755477@7 stale=11
+Epoch 19 loss=1.641673 train=6.035167s validation=39.976753s val_AUPRC=0.754894 best=0.755477@7 stale=12
+Epoch 20 loss=1.501706 train=5.851380s validation=50.046427s val_AUPRC=0.757300 best=0.757300@20 stale=0
+Epoch 21 loss=1.528258 train=4.991786s validation=34.586147s val_AUPRC=0.757434 best=0.757434@21 stale=0
+Epoch 22 loss=1.559016 train=5.980259s validation=37.850573s val_AUPRC=0.756530 best=0.757434@21 stale=1
+Epoch 23 loss=1.629669 train=5.677253s validation=45.976799s val_AUPRC=0.757559 best=0.757559@23 stale=0
+Epoch 24 loss=1.584087 train=5.847477s validation=39.281722s val_AUPRC=0.758424 best=0.758424@24 stale=0
+Epoch 25 loss=1.566602 train=5.991276s validation=36.477110s val_AUPRC=0.757693 best=0.758424@24 stale=1
+Epoch 26 loss=1.567369 train=18.342625s validation=38.959449s val_AUPRC=0.755798 best=0.758424@24 stale=2
+Epoch 27 loss=1.580375 train=6.221397s validation=37.853908s val_AUPRC=0.756809 best=0.758424@24 stale=3
+Epoch 28 loss=1.504062 train=5.392343s validation=50.903666s val_AUPRC=0.756799 best=0.758424@24 stale=4
+Epoch 29 loss=1.449780 train=5.759712s validation=36.610573s val_AUPRC=0.756187 best=0.758424@24 stale=5
+Epoch 30 loss=1.496248 train=5.976076s validation=37.650141s val_AUPRC=0.755588 best=0.758424@24 stale=6
+Epoch 31 loss=1.450547 train=6.005051s validation=47.559714s val_AUPRC=0.752951 best=0.758424@24 stale=7
+Epoch 32 loss=1.600715 train=5.904784s validation=38.176792s val_AUPRC=0.751995 best=0.758424@24 stale=8
+Epoch 33 loss=1.492496 train=6.312728s validation=37.850787s val_AUPRC=0.743551 best=0.758424@24 stale=9
+Epoch 34 loss=1.500409 train=5.784782s validation=50.242317s val_AUPRC=0.744233 best=0.758424@24 stale=10
+Epoch 35 loss=1.440025 train=5.720902s validation=38.645215s val_AUPRC=0.752853 best=0.758424@24 stale=11
+Epoch 36 loss=1.416551 train=6.127814s validation=38.133255s val_AUPRC=0.751162 best=0.758424@24 stale=12
+Epoch 37 loss=1.382067 train=16.415029s validation=36.048147s val_AUPRC=0.748699 best=0.758424@24 stale=13
+Epoch 38 loss=1.461423 train=5.481249s validation=39.172494s val_AUPRC=0.749513 best=0.758424@24 stale=14
+Epoch 39 loss=1.413008 train=5.943186s validation=48.572774s val_AUPRC=0.748119 best=0.758424@24 stale=15
+Epoch 40 loss=1.405734 train=5.680335s validation=38.397359s val_AUPRC=0.747921 best=0.758424@24 stale=16
+Epoch 41 loss=1.451563 train=6.313772s validation=40.591037s val_AUPRC=0.749709 best=0.758424@24 stale=17
+Epoch 42 loss=1.324226 train=6.284588s validation=50.995957s val_AUPRC=0.747650 best=0.758424@24 stale=18
+Epoch 43 loss=1.377607 train=6.357957s validation=37.912640s val_AUPRC=0.746922 best=0.758424@24 stale=19
+Epoch 44 loss=1.354441 train=5.396195s validation=37.464821s val_AUPRC=0.749753 best=0.758424@24 stale=20
+EARLY_STOPPING_TRIGGERED epoch=44
+Restored validation-AUPRC checkpoint from epoch 24
+VALIDATION_SELECTED AUPRC=0.758424 AUROC=0.910465 Macro-F1=0.876283 Fraud-F1=0.762215 G-Mean=0.804089 threshold=0.90
+FINAL_TEST AUPRC=0.746871 AUROC=0.904120 Macro-F1=0.859420 Fraud-F1=0.729702 G-Mean=0.783040 threshold=0.90
+Structured run artifacts: /workspace/comp8851_pcgnn/runs/pcgnn/tfinance/final/20260917T182430697420Z_tfinance_PCGNN_final_tr10_seed42
+UNIFIED_RUN_STATUS=PASS
+RUN_ID=20260917T182430697420Z_tfinance_PCGNN_final_tr10_seed42
+TEST_ACCESSED=True
+BEST_VALIDATION_EPOCH=24
+BEST_VALIDATION_AUPRC=0.758423968551
+VALIDATION_SELECTED_THRESHOLD=0.90
+{"mode": "final", "run_id": "20260917T182430697420Z_tfinance_PCGNN_final_tr10_seed42", "status": "PASS", "test_accessed": true}

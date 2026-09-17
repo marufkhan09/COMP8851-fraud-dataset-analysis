@@ -1,0 +1,73 @@
+=== FDCOMPCN TEAM-FROZEN SMOKE START ===
+Wed Sep 16 00:47:15 UTC 2026
+=== CONFIGURATION ===
+d6a526f53afc342f2f84e9ea28aa59239fe2ca5c826e99cdcb218106d14ab062  /workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/compatibility_team_frozen_two_epoch.yml
+=== DATASET ===
+2703307af010728c98e536accf580966ea7ba2a19c8f1236986ac9dd2b1bc1ca  data/FDCompCN.mat
+=== TEAM-FROZEN SPLIT ===
+9576c61c3a53f0df6e4f58e3437784c99562d1044937d89f1bde1e862ba68ed5  splits/team_frozen/fdcompcn_TR40_seed2.npz
+=== GPU BEFORE RUN ===
+name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%]
+NVIDIA RTX A6000, GPU-0eb1d03b-13b6-428c-2907-38876f12a1f2, 49140 MiB, 454 MiB, 0 %
+=== COMMAND ===
+python run_pcgnn.py --config /workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/compatibility_team_frozen_two_epoch.yml
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+alpha                            -->   2
+batch_size                       -->   256
+checkpoint_metric                -->   validation_auprc
+checkpoint_selection_note        -->   Validation AUPRC used for compatibility checkpoint selection
+compatibility_only               -->   True
+cuda_id                          -->   0
+data_dir                         -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+data_name                        -->   fdcompcn
+early_stopping_patience          -->   0
+emb_size                         -->   64
+evaluate_test                    -->   False
+final_benchmark_result           -->   False
+hardware_profile_id              -->   pcgnn-vast-a6000-instance-51121624-gpu0
+lr                               -->   0.005
+mode                             -->   smoke
+model                            -->   PCGNN
+multi_relation                   -->   GNN
+no_cuda                          -->   False
+num_epochs                       -->   2
+optimizer                        -->   adam
+results_dir                      -->   /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/compatibility_team_frozen
+rho                              -->   0.5
+run_mode                         -->   compatibility_two_epoch_team_frozen
+save_dir                         -->   ./pytorch_models/
+seed                             -->   2
+select_threshold_on_validation   -->   False
+split_identity                   -->   team_frozen
+split_path                       -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR40_seed2.npz
+split_seed                       -->   2
+test_ratio                       -->   0.4
+thres                            -->   0.5
+threshold_note                   -->   Default threshold 0.5; FDCompCN is not a native PC-GNN dataset, so no paper-specified threshold exists.
+track                            -->   unified
+train_ratio                      -->   0.4
+valid_epochs                     -->   1
+weight_decay                     -->   0.0005
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+Run on fdcompcn, positive/total: 559/5317, train: 2552, validation: 1064, test IDs held out: 1701
+Feature dimension: 57
+Relations preserved: 3
+/workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/src/layers.py:84: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_features = self.features(torch.cuda.LongTensor(list(unique_nodes)))
+Epoch 0 loss=2.047933 train=2.226289s validation=0.698487s val_AUPRC=0.113765 best=0.113765@0 stale=0
+Epoch 1 loss=2.025490 train=0.688672s validation=0.912723s val_AUPRC=0.113741 best=0.113765@0 stale=1
+Restored validation-AUPRC checkpoint from epoch 0
+Structured run artifacts: /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/compatibility_team_frozen/20260916T004719793502Z_fdcompcn_PCGNN_compatibility_two_epoch_team_frozen_seed2
+UNIFIED_RUN_STATUS=PASS
+RUN_ID=20260916T004719793502Z_fdcompcn_PCGNN_compatibility_two_epoch_team_frozen_seed2
+TEST_ACCESSED=False
+BEST_VALIDATION_EPOCH=0
+BEST_VALIDATION_AUPRC=0.113765177063
+{"mode": "smoke", "run_id": "20260916T004719793502Z_fdcompcn_PCGNN_compatibility_two_epoch_team_frozen_seed2", "status": "PASS", "test_accessed": false}
+=== EXIT STATUS ===
+0
+=== FDCOMPCN SMOKE END ===
+Wed Sep 16 00:47:25 UTC 2026
+=== GPU AFTER RUN ===
+name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%]
+NVIDIA RTX A6000, GPU-0eb1d03b-13b6-428c-2907-38876f12a1f2, 49140 MiB, 454 MiB, 5 %

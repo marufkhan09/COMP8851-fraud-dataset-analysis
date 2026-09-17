@@ -1,0 +1,73 @@
+=== ELLIPTIC TEAM-FROZEN SMOKE START ===
+Wed Sep 16 00:22:20 UTC 2026
+=== CONFIGURATION ===
+ec87edda40a9a896fadd44c56be42416e2616eeb4502df07cf2d5c29d7666d00  /workspace/comp8851_pcgnn/configs/pcgnn/elliptic/compatibility_team_frozen_two_epoch.yml
+=== DATASET ===
+8afeaea1b6c667163dae54758957c84fae6dfaccc891360765480c921acb6d7b  data/Elliptic.mat
+=== TEAM-FROZEN SPLIT ===
+528512dfa3535f52d089edc7637d97cfdbf189ec1bd03e80577ca5a2a100a61e  splits/team_frozen/elliptic_TR40_seed2.npz
+=== GPU BEFORE RUN ===
+name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%]
+NVIDIA RTX A6000, GPU-0eb1d03b-13b6-428c-2907-38876f12a1f2, 49140 MiB, 454 MiB, 0 %
+=== COMMAND ===
+python run_pcgnn.py --config /workspace/comp8851_pcgnn/configs/pcgnn/elliptic/compatibility_team_frozen_two_epoch.yml
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+alpha                            -->   2
+batch_size                       -->   256
+checkpoint_metric                -->   validation_auprc
+checkpoint_selection_note        -->   Validation AUPRC used for compatibility checkpoint selection
+compatibility_only               -->   True
+cuda_id                          -->   0
+data_dir                         -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+data_name                        -->   elliptic
+early_stopping_patience          -->   0
+emb_size                         -->   64
+evaluate_test                    -->   False
+final_benchmark_result           -->   False
+hardware_profile_id              -->   pcgnn-vast-a6000-instance-51121624-gpu0
+lr                               -->   0.005
+mode                             -->   smoke
+model                            -->   PCGNN
+multi_relation                   -->   GNN
+no_cuda                          -->   False
+num_epochs                       -->   2
+optimizer                        -->   adam
+results_dir                      -->   /workspace/comp8851_pcgnn/runs/pcgnn/elliptic/compatibility_team_frozen
+rho                              -->   0.5
+run_mode                         -->   compatibility_two_epoch_team_frozen
+save_dir                         -->   ./pytorch_models/
+seed                             -->   2
+select_threshold_on_validation   -->   False
+split_identity                   -->   team_frozen
+split_path                       -->   /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/elliptic_TR40_seed2.npz
+split_seed                       -->   2
+test_ratio                       -->   0.4
+thres                            -->   0.5
+threshold_note                   -->   Default threshold 0.5; Elliptic is not a native PC-GNN dataset, so no paper-specified threshold exists.
+track                            -->   unified
+train_ratio                      -->   0.4
+valid_epochs                     -->   1
+weight_decay                     -->   0.0005
+**************** UNIFIED PC-GNN CONFIGURATION ****************
+Run on elliptic, positive/total: 4545/203769, train: 18889, validation: 10049, test IDs held out: 17626
+Feature dimension: 166
+Relations preserved: 3
+/workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/src/layers.py:84: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  batch_features = self.features(torch.cuda.LongTensor(list(unique_nodes)))
+Epoch 0 loss=1.942582 train=6.573430s validation=7.812536s val_AUPRC=0.440530 best=0.440530@0 stale=0
+Epoch 1 loss=2.096555 train=6.474731s validation=8.200361s val_AUPRC=0.225664 best=0.440530@0 stale=1
+Restored validation-AUPRC checkpoint from epoch 0
+Structured run artifacts: /workspace/comp8851_pcgnn/runs/pcgnn/elliptic/compatibility_team_frozen/20260916T002230061507Z_elliptic_PCGNN_compatibility_two_epoch_team_frozen_seed2
+UNIFIED_RUN_STATUS=PASS
+RUN_ID=20260916T002230061507Z_elliptic_PCGNN_compatibility_two_epoch_team_frozen_seed2
+TEST_ACCESSED=False
+BEST_VALIDATION_EPOCH=0
+BEST_VALIDATION_AUPRC=0.440529687232
+{"mode": "smoke", "run_id": "20260916T002230061507Z_elliptic_PCGNN_compatibility_two_epoch_team_frozen_seed2", "status": "PASS", "test_accessed": false}
+=== EXIT STATUS ===
+0
+=== ELLIPTIC SMOKE END ===
+Wed Sep 16 00:23:01 UTC 2026
+=== GPU AFTER RUN ===
+name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%]
+NVIDIA RTX A6000, GPU-0eb1d03b-13b6-428c-2907-38876f12a1f2, 49140 MiB, 454 MiB, 19 %

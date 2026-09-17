@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "dataset": "T-Finance",
+  "raw_filename": "tfinance",
+  "raw_file_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "raw_file_size_bytes": 682904644,
+  "num_nodes": 39357,
+  "num_edges": 42445086,
+  "fraud_count": 1804,
+  "normal_count": 37553,
+  "label_encoding": "one_hot_2_column",
+  "label_encoding_note": "Raw g.ndata['label'] is shape (N, 2), one-hot encoded: column 0 = normal indicator, column 1 = fraud indicator, each row sums to 1. Decoded via argmax(dim=1); cross-checked against direct column sums (column 0 sum == normal_count, column 1 sum == fraud_count).",
+  "discrepancy_resolution_note": "Empirical decoded label count from the canonical BWGNN tfinance file yields exactly 1804 fraud nodes (label 1) out of 39357 total nodes, verified via both argmax decoding and direct column-sum cross-check. This resolves the 1,803 vs 1,804 discrepancy in favor of 1,804, anchored directly to the raw canonical graph tensor."
+}

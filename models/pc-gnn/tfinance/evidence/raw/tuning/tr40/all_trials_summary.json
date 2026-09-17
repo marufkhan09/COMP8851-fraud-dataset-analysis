@@ -1,0 +1,110 @@
+[
+  {
+    "trial_num": 1,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.00094,
+      "weight_decay": 1e-05,
+      "emb_size": 64,
+      "rho": 0.63,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_01.yml",
+    "started_utc": "2026-09-15T22:23:08Z",
+    "status": "TIMEOUT",
+    "exit_status": null,
+    "best_validation_auprc": null,
+    "duration_seconds": 3601.9926052093506,
+    "finished_utc": "2026-09-15T23:23:10Z"
+  },
+  {
+    "trial_num": 2,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.005668,
+      "weight_decay": 0.0001,
+      "emb_size": 64,
+      "rho": 0.42,
+      "alpha": 2
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_02.yml",
+    "started_utc": "2026-09-15T23:23:10Z",
+    "exit_status": 0,
+    "duration_seconds": 2387.7624418735504,
+    "status": "PASS",
+    "best_validation_auprc": 0.768385539717,
+    "finished_utc": "2026-09-16T00:02:58Z"
+  },
+  {
+    "trial_num": 3,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.00042,
+      "weight_decay": 1e-05,
+      "emb_size": 64,
+      "rho": 0.5,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_03.yml",
+    "started_utc": "2026-09-16T00:02:58Z",
+    "status": "TIMEOUT",
+    "exit_status": null,
+    "best_validation_auprc": null,
+    "duration_seconds": 3601.878365278244,
+    "finished_utc": "2026-09-16T01:03:00Z"
+  },
+  {
+    "trial_num": 4,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.003861,
+      "weight_decay": 0.0,
+      "emb_size": 64,
+      "rho": 0.6,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_04.yml",
+    "started_utc": "2026-09-16T01:33:31Z",
+    "exit_status": 0,
+    "duration_seconds": 3437.1289649009705,
+    "status": "PASS",
+    "best_validation_auprc": 0.766904104144,
+    "finished_utc": "2026-09-16T02:30:48Z"
+  },
+  {
+    "trial_num": 5,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.0001,
+      "weight_decay": 0.001,
+      "emb_size": 128,
+      "rho": 0.45,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_05.yml",
+    "started_utc": "2026-09-16T02:30:48Z",
+    "exit_status": -15,
+    "duration_seconds": 39.63842511177063,
+    "status": "FAILED",
+    "best_validation_auprc": null,
+    "finished_utc": "2026-09-16T02:31:28Z"
+  },
+  {
+    "trial_num": 6,
+    "dataset": "tfinance",
+    "hyperparams": {
+      "lr": 0.000351,
+      "weight_decay": 1e-05,
+      "emb_size": 128,
+      "rho": 0.65,
+      "alpha": 1
+    },
+    "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_06.yml",
+    "started_utc": "2026-09-16T02:31:28Z",
+    "status": "TIMEOUT",
+    "exit_status": null,
+    "best_validation_auprc": null,
+    "duration_seconds": 4502.219846725464,
+    "finished_utc": "2026-09-16T03:46:30Z"
+  }
+]

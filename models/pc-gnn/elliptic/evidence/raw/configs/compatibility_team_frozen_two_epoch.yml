@@ -1,0 +1,39 @@
+model: PCGNN
+data_name: elliptic
+data_dir: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/elliptic_TR40_seed2.npz
+results_dir: /workspace/comp8851_pcgnn/runs/pcgnn/elliptic/compatibility_team_frozen
+save_dir: ./pytorch_models/
+track: unified
+run_mode: compatibility_two_epoch_team_frozen
+split_identity: team_frozen
+hardware_profile_id: pcgnn-vast-a6000-instance-51121624-gpu0
+mode: smoke
+compatibility_only: true
+final_benchmark_result: false
+
+num_epochs: 2
+valid_epochs: 1
+early_stopping_patience: 0
+batch_size: 256
+lr: 0.005
+weight_decay: 0.0005
+emb_size: 64
+rho: 0.5
+alpha: 2
+multi_relation: GNN
+
+cuda_id: 0
+no_cuda: false
+seed: 2
+split_seed: 2
+train_ratio: 0.4
+test_ratio: 0.4
+
+optimizer: adam
+checkpoint_metric: validation_auprc
+checkpoint_selection_note: "Validation AUPRC used for compatibility checkpoint selection"
+evaluate_test: false
+select_threshold_on_validation: false
+thres: 0.5
+threshold_note: "Default threshold 0.5; Elliptic is not a native PC-GNN dataset, so no paper-specified threshold exists."

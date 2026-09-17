@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-16T00:48:42.316398+00:00",
+  "model": "PC-GNN",
+  "dataset": "FDCompCN",
+  "track": "unified",
+  "test_type": "two_epoch_compatibility",
+  "classification": "PASS_WITH_SHARED_ADAPTER",
+  "reason": "PC-GNN completed two verified GPU training epochs on FDCompCN using its three genuinely distinct native relations (C-I-C investment, C-P-C customer/provide, C-S-C supplier/sale), the same structural shape as PC-GNN's native Amazon/YelpChi path -- unlike T-Finance and Elliptic, no relation repetition was needed. Registration required two source-code additions: (1) a load_data() branch reading FDCompCN.mat plus the three distinct relation adjacency pickles; (2) an eligible_index branch declaring all nodes eligible (no unlabeled nodes exist in this dataset). Topology, including native self-loops present in the official SplitGNN release, was preserved exactly as shipped with no modification. Neither change altered the PC-GNN architecture, loss, Pick-and-Choose sampling, or relation aggregators.",
+  "native_model_dataset_pair": false,
+  "shared_adapter_required": true,
+  "architecture_modified": false,
+  "fraud_mechanism_modified": false,
+  "labels_modified": false,
+  "topology_pruned": false,
+  "relation_meanings_modified": false,
+  "relations_preserved": [
+    "homo",
+    "C-I-C (invest)",
+    "C-P-C (provide)",
+    "C-S-C (sale)"
+  ],
+  "num_relations": 3,
+  "relation_structure_note": "FDCompCN has three genuinely distinct relations, unlike T-Finance/Elliptic's single relation repeated across four slots. This is structurally the same shape as PC-GNN's native Amazon/YelpChi path.",
+  "edge_count_discrepancy_reference": "Empirical edge counts loaded directly from the official comp.dgl file do not match the SplitGNN README's summary table. Every relation shows extensive self-loops, strongly suggesting the README table reports pre-self-loop-augmentation counts while the shipped .dgl file includes them. Labels (559/4758) and feature dimension (57) match the README exactly. Edge topology is used AS SHIPPED without modification.",
+  "fraud_count": 559,
+  "normal_count": 4758,
+  "readme_cross_check": "README states 559 fraud (10.51%), 4758 benign, 57 features \u2014 matches exactly.",
+  "code_changes": [
+    {
+      "file": "src/utils.py",
+      "change": "Added elif data == 'fdcompcn' branch to load_data()",
+      "reason": "Registers FDCompCN's file paths for its three distinct relations plus homo."
+    },
+    {
+      "file": "src/unified_model_handler.py",
+      "change": "Added elif args.data_name == 'fdcompcn' branch: eligible_index = list(range(len(labels)))",
+      "reason": "FDCompCN has no unlabeled nodes (559+4758=5317, full node count)."
+    }
+  ],
+  "completed_epochs": 2,
+  "training_seed": 2,
+  "split_seed": 2,
+  "checkpoint_metric": "validation_auprc",
+  "best_validation_epoch": 0,
+  "best_validation_auprc": 0.11376517706316143,
+  "mean_train_epoch_seconds": 1.4574807545013755,
+  "total_train_epoch_seconds": 2.914961509002751,
+  "test_accessed": false,
+  "test_metrics_status": "NOT_EVALUATED",
+  "final_benchmark_result": false,
+  "split_identity": "team_frozen",
+  "split_content_verification": {
+    "method": "set_equality_of_indices",
+    "train_match": true,
+    "val_match": true,
+    "test_match": true
+  },
+  "canonical_dataset_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "hardware_profile_id": "pcgnn-vast-a6000-instance-51121624-gpu0",
+  "run_directory": "/workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/compatibility_team_frozen/20260916T004719793502Z_fdcompcn_PCGNN_compatibility_two_epoch_team_frozen_seed2"
+}

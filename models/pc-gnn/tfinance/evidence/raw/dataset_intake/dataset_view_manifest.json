@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "dataset": "T-Finance",
+  "view_type": "single_relation_adapter",
+  "relations_preserved": [
+    "homo"
+  ],
+  "num_relations": 1,
+  "feature_dim": 10,
+  "unlabeled_nodes_present": false,
+  "label_decoding_note": "Source label was one-hot (N, 2); decoded via argmax(axis=1) to a flat 0/1 vector. Verified fraud_count and normal_count in the exported .mat match the frozen dataset_manifest.json exactly.",
+  "adapter_justification": "T-Finance is natively a homogeneous graph. Collapsing to a single-relation view ('homo') preserves the exact transaction topology without architectural or label modifications.",
+  "storage_format": "adjacency_list_pickle_defaultdict_set",
+  "relation1_relation2_relation3_note": "T-Finance has a single relation. relation1/relation2/relation3 pickles are copies of the homo adjacency list, not distinct relations, since PC-GNN's load_data() hardcodes exactly 4 pickle loads per dataset with no path for fewer.",
+  "self_loops_added": true
+}

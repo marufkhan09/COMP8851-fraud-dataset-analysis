@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-15T20:23:20.016544+00:00",
+  "model": "PC-GNN",
+  "dataset": "T-Finance",
+  "track": "unified",
+  "test_type": "two_epoch_compatibility",
+  "classification": "PASS_WITH_SHARED_ADAPTER",
+  "reason": "PC-GNN completed two verified GPU training epochs on T-Finance via a single-relation homogeneous adapter, using the team-frozen stratified split. Two source-code registrations were required: (1) a load_data() branch in utils.py to read TFinance.mat plus the single-relation adjacency-list pickles (repeated across the homo/relation1-3 slots since PC-GNN's original code always expects 4 relation structures), and (2) an eligible_index branch in unified_model_handler.py declaring all T-Finance nodes eligible for supervised splits, since T-Finance has no unlabeled-node structure unlike Amazon. Neither change altered the PC-GNN architecture, loss, Pick-and-Choose sampling, or relation aggregators themselves.",
+  "native_model_dataset_pair": false,
+  "shared_adapter_required": true,
+  "architecture_modified": false,
+  "fraud_mechanism_modified": false,
+  "labels_modified": false,
+  "topology_pruned": false,
+  "relation_meanings_modified": false,
+  "relations_preserved": [
+    "homo"
+  ],
+  "num_relations": 1,
+  "code_changes": [
+    {
+      "file": "src/utils.py",
+      "change": "Added elif data == 'tfinance' branch to load_data()",
+      "reason": "Registers T-Finance's file paths; mirrors existing Yelp/Amazon pattern exactly."
+    },
+    {
+      "file": "src/unified_model_handler.py",
+      "change": "Added elif args.data_name == 'tfinance' branch setting eligible_index = list(range(len(labels)))",
+      "reason": "T-Finance has no unlabeled nodes; all nodes are supervision-eligible, same as Yelp's branch."
+    }
+  ],
+  "discrepancy_resolution_reference": "Empirical decoded label count from the canonical BWGNN tfinance file yields exactly 1804 fraud nodes (label 1) out of 39357 total nodes, verified via both argmax decoding and direct column-sum cross-check. This resolves the 1,803 vs 1,804 discrepancy in favor of 1,804, anchored directly to the raw canonical graph tensor.",
+  "fraud_count": 1804,
+  "completed_epochs": 2,
+  "training_seed": 2,
+  "split_seed": 2,
+  "checkpoint_metric": "validation_auprc",
+  "best_validation_epoch": 1,
+  "best_validation_auprc": 0.7305818828027711,
+  "mean_train_epoch_seconds": 21.148845165500006,
+  "total_train_epoch_seconds": 42.29769033100001,
+  "test_accessed": false,
+  "test_metrics_status": "NOT_EVALUATED",
+  "final_benchmark_result": false,
+  "split_identity": "team_frozen",
+  "split_content_verification": {
+    "method": "set_equality_of_indices",
+    "train_match": true,
+    "val_match": true,
+    "test_match": true,
+    "note": "Byte-level SHA256 of run_dir/split_indices.npz legitimately differs from the source split file because run_pcgnn.py re-serializes the npz (adds an empty unused_idx key, different compression). Content equality of the actual index sets is the correct verification.",
+    "run_split_file_sha256": "d25a9b4f23a989c781fda52ed631d9d759f94b6fc26eff9ae7782efdd6253031",
+    "source_split_file_sha256": "d4e2a9f9c51de1aaf3e7501d787bdab1efe1be60a17553febc6017ce65cc7539"
+  },
+  "canonical_dataset_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "hardware_profile_id": "pcgnn-vast-a6000-instance-51121624-gpu0",
+  "run_directory": "/workspace/comp8851_pcgnn/runs/pcgnn/tfinance/compatibility_team_frozen/20260915T201704710640Z_tfinance_PCGNN_compatibility_two_epoch_team_frozen_seed2"
+}

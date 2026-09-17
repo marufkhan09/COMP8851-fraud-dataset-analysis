@@ -1,0 +1,43 @@
+{
+  "dataset": "T-Finance",
+  "split_seed": 2,
+  "stratified": true,
+  "splits": {
+    "TR40": {
+      "file": "tfinance_TR40_seed2.npz",
+      "sha256": "d4e2a9f9c51de1aaf3e7501d787bdab1efe1be60a17553febc6017ce65cc7539",
+      "train_size": 18891,
+      "train_fraud_count": 866,
+      "train_fraud_ratio": 0.0458,
+      "val_size": 7872,
+      "test_size": 12594
+    },
+    "TR30": {
+      "file": "tfinance_TR30_seed2.npz",
+      "sha256": "efffb08d636e19233328e8d199e1cfeb0208b84af7e6f98aab8bd1da7075216e",
+      "train_size": 14168,
+      "train_fraud_count": 649,
+      "train_fraud_ratio": 0.0458,
+      "val_size": 7872,
+      "test_size": 12594
+    },
+    "TR20": {
+      "file": "tfinance_TR20_seed2.npz",
+      "sha256": "d21770e87cd1796a4eecc8b6ef9f01bfd7ca2e5747ccc255b7e37e3908d9fd81",
+      "train_size": 9445,
+      "train_fraud_count": 433,
+      "train_fraud_ratio": 0.0458,
+      "val_size": 7872,
+      "test_size": 12594
+    },
+    "TR10": {
+      "file": "tfinance_TR10_seed2.npz",
+      "sha256": "01a3f6c71ad602c00bf6ad915ddfab4bf726925416704d2c823a5b9980774d5b",
+      "train_size": 4722,
+      "train_fraud_count": 216,
+      "train_fraud_ratio": 0.0457,
+      "val_size": 7872,
+      "test_size": 12594
+    }
+  }
+}

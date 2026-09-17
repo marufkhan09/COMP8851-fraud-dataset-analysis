@@ -1,0 +1,56 @@
+{
+  "dataset": "Elliptic",
+  "split_type": "chronological",
+  "split_seed": 2,
+  "train_region_timesteps": [
+    1,
+    20
+  ],
+  "validation_region_timesteps": [
+    21,
+    32
+  ],
+  "test_region_timesteps": [
+    33,
+    49
+  ],
+  "note": "Validation and test regions are fixed chronological blocks and are IDENTICAL across all four ratios. Only the training pool is subsampled (nested, seed 2) within the fixed early training region \u2014 no timestep boundaries change across TR40/TR30/TR20/TR10.",
+  "splits": {
+    "TR40": {
+      "file": "elliptic_TR40_seed2.npz",
+      "sha256": "528512dfa3535f52d089edc7637d97cfdbf189ec1bd03e80577ca5a2a100a61e",
+      "train_size": 18889,
+      "train_fraud_count": 1771,
+      "train_fraud_ratio": 0.0938,
+      "val_size": 10049,
+      "test_size": 17626
+    },
+    "TR30": {
+      "file": "elliptic_TR30_seed2.npz",
+      "sha256": "3afd2ee6e420ec16788fa71fde6c2af3957e24055e3b86c3a2c8093e363f2007",
+      "train_size": 14167,
+      "train_fraud_count": 1324,
+      "train_fraud_ratio": 0.0935,
+      "val_size": 10049,
+      "test_size": 17626
+    },
+    "TR20": {
+      "file": "elliptic_TR20_seed2.npz",
+      "sha256": "6717955b0bf404e3d81907d3ffcb8a142de602037be07a95f586105e277d1900",
+      "train_size": 9444,
+      "train_fraud_count": 884,
+      "train_fraud_ratio": 0.0936,
+      "val_size": 10049,
+      "test_size": 17626
+    },
+    "TR10": {
+      "file": "elliptic_TR10_seed2.npz",
+      "sha256": "2ee26ac5a939aff3984d43753e887c747444326d03415464c8e1c611da70a10d",
+      "train_size": 4722,
+      "train_fraud_count": 438,
+      "train_fraud_ratio": 0.0928,
+      "val_size": 10049,
+      "test_size": 17626
+    }
+  }
+}

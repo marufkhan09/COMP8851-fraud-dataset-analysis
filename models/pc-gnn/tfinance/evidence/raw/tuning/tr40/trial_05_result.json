@@ -1,0 +1,18 @@
+{
+  "trial_num": 5,
+  "dataset": "tfinance",
+  "hyperparams": {
+    "lr": 0.0001,
+    "weight_decay": 0.001,
+    "emb_size": 128,
+    "rho": 0.45,
+    "alpha": 1
+  },
+  "config_path": "/workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_05.yml",
+  "started_utc": "2026-09-16T02:30:48Z",
+  "exit_status": -15,
+  "duration_seconds": 39.63842511177063,
+  "status": "FAILED",
+  "best_validation_auprc": null,
+  "finished_utc": "2026-09-16T02:31:28Z"
+}

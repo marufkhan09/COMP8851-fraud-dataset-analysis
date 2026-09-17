@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Elliptic",
+  "license_note": "CC BY-NC-ND 4.0 (Attribution-NonCommercial-NoDerivatives) \u2014 Kaggle ellipticco/elliptic-data-set",
+  "raw_files": {
+    "elliptic_txs_features.csv": {
+      "sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+    },
+    "elliptic_txs_classes.csv": {
+      "sha256": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493"
+    },
+    "elliptic_txs_edgelist.csv": {
+      "sha256": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e"
+    }
+  },
+  "num_nodes": 203769,
+  "num_edges": 234355,
+  "feature_dim": 166,
+  "feature_dim_note": "166 = 1 timestep column + 165 transaction feature columns; txId column (raw col 0) dropped as a non-feature identifier.",
+  "fraud_count": 4545,
+  "normal_count": 42019,
+  "unknown_count": 157205,
+  "anomaly_rate_among_labeled": 0.0976,
+  "gadbench_cross_check": "GADBench reports 9.8% anomaly rate; empirical labeled-only rate here is 9.76% \u2014 consistent.",
+  "num_timesteps": 49,
+  "timestep_range": [
+    1,
+    49
+  ],
+  "label_encoding_note": "Raw class '1' (illicit) -> 1, '2' (licit) -> 0, 'unknown' -> -1 sentinel (retained structurally, excluded from supervision)."
+}

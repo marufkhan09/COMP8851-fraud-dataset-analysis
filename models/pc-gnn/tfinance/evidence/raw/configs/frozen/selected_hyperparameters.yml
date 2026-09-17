@@ -1,0 +1,34 @@
+artifact_type: pcgnn_selected_hyperparameters
+dataset: tfinance
+model: PCGNN
+selection_rule: Highest validation AUPRC among trials with status PASS; test metrics
+  were not used.
+selected_trial: 2
+selected_validation_auprc: 0.768385539717
+hyperparameters:
+  lr: 0.005668
+  weight_decay: 0.0001
+  emb_size: 64
+  rho: 0.42
+  alpha: 2
+tuning_protocol:
+  mode: tune
+  run_mode: tune_tr40_trial_02
+  split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/tfinance_TR40_seed2.npz
+  split_identity: team_frozen
+  split_seed: 2
+  training_seed: 2
+  train_ratio: 0.4
+  checkpoint_metric: validation_auprc
+  early_stopping_patience: 20
+  maximum_epochs: 100
+trial_status_counts:
+  TIMEOUT: 3
+  PASS: 2
+  FAILED: 1
+source_config_path: /workspace/comp8851_pcgnn/configs/pcgnn/tfinance/tuning/trial_02.yml
+source_config_sha256: 3e9e8425d9712168dc70babdd31bb2e5d58138b80f0c58de931ad88cc01c3a8a
+source_summary_path: /workspace/comp8851_pcgnn/evidence/tuning/tfinance/tr40/all_trials_summary.json
+source_summary_sha256: 5ce035a9a192d58d4b3bd6049f66e4a170f6e54744ed801a5e3e68e4f4232a62
+incomplete_trial_policy: TIMEOUT, FAILED, DRIVER_ERROR, and partial retry results
+  were excluded from hyperparameter selection.

@@ -1,0 +1,36 @@
+model: PCGNN
+data_name: fdcompcn
+data_dir: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR20_seed2.npz
+results_dir: /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/final
+save_dir: ./pytorch_models/
+track: unified
+run_mode: final_tr20
+split_identity: team_frozen
+hardware_profile_id: pcgnn-vast-a6000-instance-51121624-gpu0
+mode: final
+compatibility_only: false
+final_benchmark_result: true
+num_epochs: 100
+valid_epochs: 1
+early_stopping_patience: 20
+batch_size: 256
+lr: 0.003227
+weight_decay: 1.0e-05
+emb_size: 64
+rho: 0.4
+alpha: 1
+multi_relation: GNN
+cuda_id: 0
+no_cuda: false
+seed: 42
+split_seed: 2
+train_ratio: 0.2
+test_ratio: 0.4
+optimizer: adam
+checkpoint_metric: validation_auprc
+checkpoint_selection_note: Final benchmark run; validation AUPRC checkpoint selection.
+evaluate_test: true
+select_threshold_on_validation: true
+thres: 0.5
+threshold_note: Overridden by validation-selected threshold (select_threshold_on_validation=True).

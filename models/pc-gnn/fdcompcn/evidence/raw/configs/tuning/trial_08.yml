@@ -1,0 +1,36 @@
+model: PCGNN
+data_name: fdcompcn
+data_dir: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR40_seed2.npz
+results_dir: /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/tuning_tr40
+save_dir: ./pytorch_models/
+track: unified
+run_mode: tune_tr40_trial_08
+split_identity: team_frozen
+hardware_profile_id: pcgnn-vast-a6000-instance-51121624-gpu0
+mode: tune
+compatibility_only: false
+final_benchmark_result: false
+num_epochs: 100
+valid_epochs: 1
+early_stopping_patience: 20
+batch_size: 256
+lr: 0.007712
+weight_decay: 0.0
+emb_size: 64
+rho: 0.66
+alpha: 1
+multi_relation: GNN
+cuda_id: 0
+no_cuda: false
+seed: 2
+split_seed: 2
+train_ratio: 0.4
+test_ratio: 0.4
+optimizer: adam
+checkpoint_metric: validation_auprc
+checkpoint_selection_note: TR40 tuning trial; validation AUPRC checkpoint selection.
+evaluate_test: false
+select_threshold_on_validation: false
+thres: 0.5
+threshold_note: Not used during tuning (evaluate_test=False); placeholder only.

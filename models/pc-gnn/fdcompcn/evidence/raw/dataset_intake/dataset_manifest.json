@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "dataset": "FDCompCN",
+  "source_repo": "https://github.com/Split-GNN/SplitGNN",
+  "source_paper": "SplitGNN: Spectral Graph Neural Network for Fraud Detection against Heterophily (CIKM 2023)",
+  "raw_file": "comp.dgl (shipped directly inside the official SplitGNN repository, data/FDCompCN.zip)",
+  "raw_file_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "num_nodes": 5317,
+  "feature_dim": 57,
+  "fraud_count": 559,
+  "normal_count": 4758,
+  "fraud_rate": 0.1051,
+  "readme_cross_check": "README states 559 fraud (10.51%), 4758 benign, 57 features \u2014 matches exactly.",
+  "relations": {
+    "homo": {
+      "canonical_etype": "(company, homo, company)",
+      "readme_edges": 7407,
+      "empirical_edges": 10059
+    },
+    "relation1 (C-I-C, invest)": {
+      "canonical_etype": "(company, invest_bc2bc, company)",
+      "readme_edges": 5686,
+      "empirical_edges": 8505
+    },
+    "relation2 (C-P-C, provide)": {
+      "canonical_etype": "(company, provide_bc2bc, company)",
+      "readme_edges": 1043,
+      "empirical_edges": 5944
+    },
+    "relation3 (C-S-C, sale)": {
+      "canonical_etype": "(company, sale_bc2bc, company)",
+      "readme_edges": 760,
+      "empirical_edges": 6244
+    }
+  },
+  "edge_count_discrepancy_note": "Empirical edge counts loaded directly from the official comp.dgl file do not match the SplitGNN README's summary table. Every relation shows extensive self-loops, strongly suggesting the README table reports pre-self-loop-augmentation counts while the shipped .dgl file includes them. Labels (559/4758) and feature dimension (57) match the README exactly. Edge topology is used AS SHIPPED without modification.",
+  "native_splitgnn_masks_reference_only": {
+    "train_mask": 2126,
+    "valid_mask": 1053,
+    "test_mask": 2138
+  },
+  "native_masks_note": "SplitGNN ships its own native train/valid/test masks. NOT used for the unified (Track B) benchmark split \u2014 a team-frozen 40/20/40 split is generated independently, same as every other dataset.",
+  "relation_files": {
+    "homo": "fdcompcn_homo_adjlists.pickle",
+    "relation1_invest": "fdcompcn_relation1_adjlists.pickle",
+    "relation2_provide": "fdcompcn_relation2_adjlists.pickle",
+    "relation3_sale": "fdcompcn_relation3_adjlists.pickle"
+  }
+}

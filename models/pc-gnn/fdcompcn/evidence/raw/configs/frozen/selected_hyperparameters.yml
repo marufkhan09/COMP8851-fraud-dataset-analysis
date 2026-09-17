@@ -1,0 +1,32 @@
+artifact_type: pcgnn_selected_hyperparameters
+dataset: fdcompcn
+model: PCGNN
+selection_rule: Highest validation AUPRC among trials with status PASS; test metrics
+  were not used.
+selected_trial: 7
+selected_validation_auprc: 0.258923388237
+hyperparameters:
+  lr: 0.003227
+  weight_decay: 1.0e-05
+  emb_size: 64
+  rho: 0.4
+  alpha: 1
+tuning_protocol:
+  mode: tune
+  run_mode: tune_tr40_trial_07
+  split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR40_seed2.npz
+  split_identity: team_frozen
+  split_seed: 2
+  training_seed: 2
+  train_ratio: 0.4
+  checkpoint_metric: validation_auprc
+  early_stopping_patience: 20
+  maximum_epochs: 100
+trial_status_counts:
+  PASS: 12
+source_config_path: /workspace/comp8851_pcgnn/configs/pcgnn/fdcompcn/tuning/trial_07.yml
+source_config_sha256: 0d7ed4348658a5d70cb517da32a35d7184e7295ba77c700dc71dbc5e2128746c
+source_summary_path: /workspace/comp8851_pcgnn/evidence/tuning/fdcompcn/tr40/all_trials_summary.json
+source_summary_sha256: ab020bcfcfbffd35f20bc88f36e17e16af1bd0c83f2b31ad7648c68044f0e380
+incomplete_trial_policy: TIMEOUT, FAILED, DRIVER_ERROR, and partial retry results
+  were excluded from hyperparameter selection.
