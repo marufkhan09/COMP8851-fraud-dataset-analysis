@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "model": "PMP / LA-SAGE-S",
+  "dataset": "Elliptic",
+  "compatibility": "PASS_WITH_SHARED_ADAPTER",
+  "final_runs_complete": 12,
+  "expected_final_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "frozen_config": {
+    "status": "FROZEN",
+    "model": "PMP / LA-SAGE-S",
+    "dataset": "Elliptic",
+    "compatibility": "PASS_WITH_SHARED_ADAPTER",
+    "configuration_source": "PMP native T-Finance LA-SAGE-S base; hid_dim=256 from official PMP Amazon configuration as deterministic dimension-compatibility fallback",
+    "performance_specific_tuning": false,
+    "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+    "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+    "raw_hashes": {
+      "features": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+      "classes": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+      "edges": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e"
+    },
+    "hid_dim": 256,
+    "dropout": 0.4,
+    "lr": 0.005,
+    "weight_decay": 0.0,
+    "n_layer": 1,
+    "batch_size": 256,
+    "norm_feat": true,
+    "full_neighbors": true,
+    "add_self_loop": false,
+    "reverse_edges_added": false,
+    "model_features": 166,
+    "time_step_retained_as_feature": true,
+    "unknown_nodes_structural": 157205,
+    "max_epochs": 100,
+    "patience": 20,
+    "checkpoint_selection": "validation AUPRC",
+    "threshold_selection": "validation Macro-F1 over 0.01..0.99; tie fraud recall, then closeness to 0.5",
+    "test_selection": false,
+    "ratios": [
+      "TR40",
+      "TR30",
+      "TR20",
+      "TR10"
+    ],
+    "training_seeds": [
+      2,
+      42,
+      72
+    ]
+  },
+  "frozen_config_sha256": "0149e2f7cdba425e0f7dec445ca347a76219b02c73476f58d439c53130b83bf0",
+  "checkpoint_selection": "best validation AUPRC",
+  "threshold_selection": "validation Macro-F1 over 0.01..0.99; tie fraud recall, then closeness to 0.5",
+  "test_isolation": "test evaluated exactly once per final run after config, checkpoint and threshold frozen",
+  "ratio_summary": {
+    "TR40": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.45842107590842035,
+          "sd": 0.0727104325505471
+        },
+        "auroc": {
+          "mean": 0.8305860431566646,
+          "sd": 0.011355031584935834
+        },
+        "macro_f1": {
+          "mean": 0.734577104504664,
+          "sd": 0.06536161197296193
+        },
+        "fraud_precision": {
+          "mean": 0.5149383089207614,
+          "sd": 0.17007047057153418
+        },
+        "fraud_recall": {
+          "mean": 0.5560044893378226,
+          "sd": 0.1471135181047823
+        },
+        "fraud_f1": {
+          "mean": 0.515629750688011,
+          "sd": 0.11512360294471204
+        },
+        "gmean": {
+          "mean": 0.7196825535872304,
+          "sd": 0.0917796804569562
+        }
+      },
+      "total_train_seconds": {
+        "mean": 153.67523652767704,
+        "sd": 61.35279582783598
+      },
+      "test_inference_seconds": {
+        "mean": 0.3105926446684559,
+        "sd": 0.18196459672423898
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 193.0966796875,
+        "sd": 0.0
+      }
+    },
+    "TR30": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.22969914653266288,
+          "sd": 0.05571091857863353
+        },
+        "auroc": {
+          "mean": 0.7113883850465772,
+          "sd": 0.05470595054133796
+        },
+        "macro_f1": {
+          "mean": 0.6074132966305116,
+          "sd": 0.05062169646217008
+        },
+        "fraud_precision": {
+          "mean": 0.2844333367529501,
+          "sd": 0.08720839386996378
+        },
+        "fraud_recall": {
+          "mean": 0.3526374859708193,
+          "sd": 0.16544610831740791
+        },
+        "fraud_f1": {
+          "mean": 0.28937996551447265,
+          "sd": 0.09118363816087321
+        },
+        "gmean": {
+          "mean": 0.5505430790142446,
+          "sd": 0.1346792926685996
+        }
+      },
+      "total_train_seconds": {
+        "mean": 1482.40686732469,
+        "sd": 396.4764644010139
+      },
+      "test_inference_seconds": {
+        "mean": 2.4071281696669757,
+        "sd": 1.127904109490203
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 193.0966796875,
+        "sd": 0.0
+      }
+    },
+    "TR20": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.13375246751704226,
+          "sd": 0.1095974813587523
+        },
+        "auroc": {
+          "mean": 0.49525753925471444,
+          "sd": 0.19218737712843484
+        },
+        "macro_f1": {
+          "mean": 0.5196346825591789,
+          "sd": 0.05003584231120829
+        },
+        "fraud_precision": {
+          "mean": 0.11774171905069393,
+          "sd": 0.06390984422136363
+        },
+        "fraud_recall": {
+          "mean": 0.190347923681257,
+          "sd": 0.2941615270849926
+        },
+        "fraud_f1": {
+          "mean": 0.11471947243207892,
+          "sd": 0.1433465400306375
+        },
+        "gmean": {
+          "mean": 0.3119364595224097,
+          "sd": 0.2971732538055487
+        }
+      },
+      "total_train_seconds": {
+        "mean": 164.41814247698736,
+        "sd": 199.1312938512504
+      },
+      "test_inference_seconds": {
+        "mean": 0.13607610733015463,
+        "sd": 0.015769461848116714
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 193.0966796875,
+        "sd": 0.0
+      }
+    },
+    "TR10": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.07366880310389214,
+          "sd": 0.009943623365855386
+        },
+        "auroc": {
+          "mean": 0.4853953208472983,
+          "sd": 0.050597937134022976
+        },
+        "macro_f1": {
+          "mean": 0.479848785708985,
+          "sd": 0.0005272822985469132
+        },
+        "fraud_precision": {
+          "mean": 0.0102880658436214,
+          "sd": 0.017819452752766227
+        },
+        "fraud_recall": {
+          "mean": 0.0011223344556677889,
+          "sd": 0.0019439403003017703
+        },
+        "fraud_f1": {
+          "mean": 0.0020238818053025707,
+          "sd": 0.0035054661152982745
+        },
+        "gmean": {
+          "mean": 0.019254824125506425,
+          "sd": 0.03335033367618011
+        }
+      },
+      "total_train_seconds": {
+        "mean": 104.51490116399266,
+        "sd": 25.307069554569654
+      },
+      "test_inference_seconds": {
+        "mean": 1.428665069664324,
+        "sd": 1.9927687561300078
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 193.0966796875,
+        "sd": 0.0
+      }
+    }
+  },
+  "final_runs_csv": "/workspace/pmp_vast/unified/elliptic/final/PMP_ELLIPTIC_FINAL_12_RUNS.csv",
+  "ratio_summary_csv": "/workspace/pmp_vast/unified/elliptic/final/PMP_ELLIPTIC_FINAL_RATIO_SUMMARY.csv",
+  "gpu": "NVIDIA RTX A6000"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE",
+  "trial_id": 2,
+  "lr": 0.01,
+  "weight_decay": 1e-05,
+  "hid_dim": 256,
+  "dropout": 0.6,
+  "best_epoch": 27,
+  "best_val_auprc": 0.9284944462600302,
+  "completed_epochs": 47,
+  "training_wall_seconds": 531.0188996189972,
+  "total_train_seconds": 350.98730450299263,
+  "total_validation_seconds": 179.73722162300328,
+  "peak_gpu_memory_mb": 159.296875,
+  "checkpoint": "/workspace/pmp_vast/unified/amazon/tuning/trials/trial_02/best_validation_auprc.pth",
+  "checkpoint_sha256": "f632c1925c4cf304e85d1b0d56c14e2a07e08ede94115842c2a4a6c0ae85fd86",
+  "epoch_csv": "/workspace/pmp_vast/unified/amazon/tuning/trials/trial_02/epochs.csv",
+  "epoch_csv_sha256": "3a6a455d9175166d7fd442111b438d3e50bffd4566d8d42568781351a2a6faf7",
+  "test_evaluated": false,
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "dataset_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd"
+}

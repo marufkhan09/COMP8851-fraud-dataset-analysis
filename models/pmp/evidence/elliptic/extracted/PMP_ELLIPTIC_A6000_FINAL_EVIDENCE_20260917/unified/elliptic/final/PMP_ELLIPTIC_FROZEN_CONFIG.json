@@ -1,0 +1,44 @@
+{
+  "add_self_loop": false,
+  "batch_size": 256,
+  "checkpoint_selection": "validation AUPRC",
+  "compatibility": "PASS_WITH_SHARED_ADAPTER",
+  "configuration_source": "PMP native T-Finance LA-SAGE-S base; hid_dim=256 from official PMP Amazon configuration as deterministic dimension-compatibility fallback",
+  "dataset": "Elliptic",
+  "dropout": 0.4,
+  "full_neighbors": true,
+  "hid_dim": 256,
+  "lr": 0.005,
+  "max_epochs": 100,
+  "model": "PMP / LA-SAGE-S",
+  "model_features": 166,
+  "n_layer": 1,
+  "norm_feat": true,
+  "patience": 20,
+  "performance_specific_tuning": false,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "raw_hashes": {
+    "classes": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "edges": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "features": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "reverse_edges_added": false,
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "FROZEN",
+  "test_selection": false,
+  "threshold_selection": "validation Macro-F1 over 0.01..0.99; tie fraud recall, then closeness to 0.5",
+  "time_step_retained_as_feature": true,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "unknown_nodes_structural": 157205,
+  "weight_decay": 0.0
+}

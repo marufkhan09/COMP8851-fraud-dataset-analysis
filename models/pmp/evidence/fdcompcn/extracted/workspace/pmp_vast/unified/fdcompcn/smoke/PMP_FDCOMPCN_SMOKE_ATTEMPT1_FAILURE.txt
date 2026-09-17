@@ -1,0 +1,8 @@
+PMP × FDCompCN smoke attempt 1
+STATUS=FAIL_COMPATIBILITY_DIAGNOSTIC
+INPUT_FEATURES=57
+YELP_HID_DIM=48
+ERROR=RuntimeError size tensor a 48 must match tensor b 57
+AUTHOR_REPO_MODIFIED=NO
+DATASET_MODIFIED=NO
+NEXT_ACTION=retry exposed hid_dim 64
