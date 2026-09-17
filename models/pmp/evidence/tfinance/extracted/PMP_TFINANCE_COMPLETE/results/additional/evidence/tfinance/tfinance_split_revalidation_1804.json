@@ -1,0 +1,54 @@
+{
+  "dataset": "T-Finance",
+  "status": "PASS",
+  "canonical_path": "/workspace/dataset_audit/raw/tfinance/tfinance",
+  "canonical_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "canonical_nodes": 39357,
+  "canonical_normal": 37553,
+  "canonical_fraud": 1804,
+  "label_decoding": "argmax of canonical two-column label tensor",
+  "split_path": "/workspace/bwgnn_vast/splits/tfinance_seed2_nested_splits.npz",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "split_seed": 2,
+  "nested_training_sets": true,
+  "fixed_validation_test": true,
+  "tr40_val_test_full_coverage": true,
+  "split_summary": {
+    "TR40": {
+      "n": 15742,
+      "fraud": 721,
+      "normal": 15021,
+      "fraud_pct": 4.580104179900902
+    },
+    "TR30": {
+      "n": 11806,
+      "fraud": 541,
+      "normal": 11265,
+      "fraud_pct": 4.582415720819922
+    },
+    "TR20": {
+      "n": 7870,
+      "fraud": 361,
+      "normal": 7509,
+      "fraud_pct": 4.587039390088946
+    },
+    "TR10": {
+      "n": 3935,
+      "fraud": 181,
+      "normal": 3754,
+      "fraud_pct": 4.599745870393901
+    },
+    "val": {
+      "n": 7872,
+      "fraud": 361,
+      "normal": 7511,
+      "fraud_pct": 4.5858739837398375
+    },
+    "test": {
+      "n": 15743,
+      "fraud": 722,
+      "normal": 15021,
+      "fraud_pct": 4.586165279806898
+    }
+  }
+}
