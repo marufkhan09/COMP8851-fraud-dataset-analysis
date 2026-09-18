@@ -1,0 +1,22 @@
+{
+  "dataset": "Elliptic",
+  "nodes": 203769,
+  "directed_edges": 234355,
+  "features": 166,
+  "time_step_in_features": true,
+  "fraud": 4545,
+  "normal": 42019,
+  "unknown": 157205,
+  "unknown_used_for_supervision": false,
+  "reverse_edges_added": false,
+  "self_loops_added": false,
+  "chronology_preserved": true,
+  "split_sizes": {
+    "TR10": 4543,
+    "TR20": 9553,
+    "TR30": 13670,
+    "TR40": 18889,
+    "val": 8726,
+    "test": 18949
+  }
+}

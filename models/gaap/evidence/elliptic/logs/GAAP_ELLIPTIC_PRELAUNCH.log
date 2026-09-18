@@ -1,0 +1,164 @@
+============================================================
+ i2 — GAAP × ELLIPTIC PRELAUNCH
+============================================================
+
+===== GPU =====
+NVIDIA RTX A6000, 49140 MiB, 15 MiB
+GPU_IDLE=PASS
+
+===== GAAP SOURCE =====
+GAAP_COMMIT=6a7dbb0447c4897504525de49e41a0526ee777f8
+GAAP_AUTHOR_REPO_CLEAN=PASS
+
+===== GAAP ENV =====
+TORCH=2.2.0+cu118
+DGL=2.3.0+cu118
+NUMPY=1.26.4
+SKLEARN=1.5.0
+LIGHTNING=2.3.0
+CUDA_AVAILABLE=True
+GPU=NVIDIA RTX A6000
+GAAP_ENV_GATE=PASS
+
+===== OFFICIAL ELLIPTIC CONFIG =====
+model_name: SAGE
+loader_type: MiniF
+data_name: elliptic
+
+# preprocess params
+norm_type: norm01
+preprocess: None
+n_bins: 16
+
+# model params
+d_hidden: 128
+
+# dyple layer
+use_dyple: True
+dy_raw_bin_width: True
+init_bin_width: False
+d_feat_emb: 32
+
+# pre mlp
+pre_n_layers: 0  # [0,+inf]
+pre_use_bn: True
+pre_dropout: 0.3
+
+# gnn
+gnn_n_layers: 4  # [1,+inf]
+gnn_dropout: 0.1
+gnn_use_bn: True
+gnn_use_res: True
+gnn_agg: max_pool
+
+# mha
+use_mha: True
+mha_n_layers: 1  # [1,+inf]
+mha_n_heads: 4  # [1,+inf]
+mha_alpha: 0.2
+
+## post mlp
+# post_n_layers: 1  # [1,+inf]
+# post_use_bn: True
+# post_dropout: 0.1
+
+## pre sage
+# use_presage: False
+
+# dataloader params
+bs: 256
+val_bs: 1280 #11500
+#fanouts: [100,100]
+
+# optimization params
+lr: 0.001
+weight_decay: 0
+max_epochs: 22222
+patience: 31
+device: cuda
+device_id: 0
+seed: 42
+nowandb: True
+
+
+===== AUTHOR DATASET PRESENCE =====
+AUTHOR_ELLIPTIC_ASSET_PRESENT=NO
+EXPECTED_AND_ACCEPTED=YES
+
+===== SEARCH EXACT FROZEN ASSETS =====
+SPLIT=/workspace/pmp_vast/shared/elliptic/elliptic_chronological_nested_splits.npz
+SPLIT_SHA256=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+FEATURES=/workspace/pmp_vast/shared/elliptic/raw/elliptic_txs_features.csv
+FEATURES_SHA256=fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0
+CLASSES=/workspace/pmp_vast/shared/elliptic/raw/elliptic_txs_classes.csv
+CLASSES_SHA256=93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493
+EDGES=/workspace/pmp_vast/shared/elliptic/raw/elliptic_txs_edgelist.csv
+EDGES_SHA256=a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e
+SPLIT=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/elliptic/elliptic_chronological_nested_splits.npz
+SPLIT_SHA256=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+FEATURES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/elliptic/raw/elliptic_txs_features.csv
+FEATURES_SHA256=fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0
+CLASSES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/elliptic/raw/elliptic_txs_classes.csv
+CLASSES_SHA256=93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493
+EDGES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/elliptic/raw/elliptic_txs_edgelist.csv
+EDGES_SHA256=a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e
+SPLIT=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/extra/elliptic/elliptic_chronological_nested_splits.npz
+SPLIT_SHA256=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+FEATURES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/extra/elliptic/raw/elliptic_txs_features.csv
+FEATURES_SHA256=fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0
+CLASSES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/extra/elliptic/raw/elliptic_txs_classes.csv
+CLASSES_SHA256=93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493
+EDGES=/workspace/PMP_ELLIPTIC_A6000_FINAL_EVIDENCE_20260917/shared/extra/elliptic/raw/elliptic_txs_edgelist.csv
+EDGES_SHA256=a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e
+ELLIPTIC_EXACT_ASSET_DISCOVERY=PASS
+
+===== INSTALL VERIFIED ASSETS =====
+FEATURES=/workspace/gaap_vast/shared/elliptic/elliptic_txs_features.csv
+CLASSES=/workspace/gaap_vast/shared/elliptic/elliptic_txs_classes.csv
+EDGES=/workspace/gaap_vast/shared/elliptic/elliptic_txs_edgelist.csv
+SPLIT=/workspace/gaap_vast/shared/elliptic/elliptic_seed2_nested_splits.npz
+ELLIPTIC_VERIFIED_ASSETS_INSTALLED=PASS
+
+===== RAW + CHRONOLOGY AUDIT =====
+elliptic_txs_features.csv=fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0
+elliptic_txs_classes.csv=93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493
+elliptic_txs_edgelist.csv=a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e
+elliptic_seed2_nested_splits.npz=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+FEATURE_RAW_SHAPE=(203769, 167)
+CLASS_RAW_SHAPE=(203769, 2)
+EDGE_RAW_SHAPE=(234355, 2)
+GAAP_MODEL_FEATURES=166
+TIME_STEP_INCLUDED_AS_FEATURE=YES
+TIME_STEP_RANGE=1..49
+TR10=4543
+TR20=9553
+TR30=13670
+TR40=18889
+val=8726
+test=18949
+ELLIPTIC_CHRONOLOGY_GATE=PASS
+UNKNOWN_NODES_MUST_REMAIN_STRUCTURAL=YES
+REVERSE_EDGES_ALLOWED=NO
+EXTRA_TOPOLOGY_EDITING_ALLOWED=NO
+
+===== GAAP EXECUTION API AUDIT =====
+MINIF_INIT=(self, data_name, **kwargs)
+LITSAGE_INIT=(self, d_in, n_classes, lr, **kwargs)
+LITSAGE_FORWARD=(self, blocks, x)
+LITSAGE_VALIDATION_STEP=(self, batch, batch_idx)
+GAAP_API_AUDIT=PASS
+
+===== EXISTING SUCCESSFUL RUNNER CANDIDATES =====
+/workspace/gaap_vast/scripts/02_gaap_tfinance_unified_tr40_smoke.py
+/workspace/gaap_vast/scripts/03_gaap_tfinance_tr40_tuning.py
+/workspace/gaap_vast/scripts/04_gaap_tfinance_final_12_runs.py
+
+===== SAFETY SUMMARY =====
+GAAP_ELLIPTIC_REPO=PASS
+GAAP_ELLIPTIC_RAW_HASHES=PASS
+GAAP_ELLIPTIC_SPLIT_HASH=PASS
+GAAP_ELLIPTIC_166_FEATURE_VIEW=PASS
+GAAP_ELLIPTIC_CHRONOLOGY=PASS
+TEST_EVALUATED=NO
+TUNING_STARTED=NO
+GAAP_ELLIPTIC_PRELAUNCH=PASS

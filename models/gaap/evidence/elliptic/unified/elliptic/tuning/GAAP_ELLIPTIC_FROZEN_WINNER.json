@@ -1,0 +1,15 @@
+{
+  "dataset": "Elliptic",
+  "model": "GAAP",
+  "winner_trial": 5,
+  "winner_config": {
+    "d_hidden": 64,
+    "gnn_dropout": 0.2,
+    "lr": 0.002
+  },
+  "winner_val_auprc": 0.8533127903938293,
+  "winner_checkpoint": "/workspace/gaap_vast/unified/elliptic/tuning/trials/trial_05/checkpoints/best.ckpt",
+  "configuration_frozen": true,
+  "test_evaluated": false,
+  "test_predictions_generated": false
+}
