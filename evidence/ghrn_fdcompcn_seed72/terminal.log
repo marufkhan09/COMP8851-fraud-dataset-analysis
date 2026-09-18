@@ -1,0 +1,134 @@
+==============================================================================
+GHRN | fdcompcn | unified | TR40 | seed 72
+==============================================================================
+Run ID: ghrn_fdcompcn_unified_tr40_seed72_a6000_20260913T234121Z
+Device: cuda:0
+Protocol: vast-v4.4  selection=auprc
+Deletion ratio: 0.03 (post_aggregation)
+/venv/main/lib/python3.12/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Loaded fdcompcn: 5,317 nodes, 57 features, 4 relation(s)
+[compatibility] NOTE fdcompcn is multi-relational; GHRN is a homogeneous spectral method and receives the frozen union view. Record this pair as PASS_WITH_SHARED_ADAPTER (A1).
+Split: train 2,126 | valid 1,063 | test 2,128
+Graph: 5,317 nodes, 12,585 stored directed edges (backend: dgl)
+Training fraud/normal: 224/1,902 | fraud weight 8.4911
+Parameters: 73,474 trainable
+[protocol] WARNING unset identity fields: model_source_commit
+------------------------------------------------------------------------------
+STAGE 1: training on the unrefined graph (del_ratio = 0)
+[stage1_unrefined] epoch   1/100 | loss 0.693162 | train 0.393s | val AUPRC 0.146091 | val AUROC 0.583103 | thr 0.50 | best epoch 1
+[stage1_unrefined] epoch   2/100 | loss 0.692822 | train 0.011s | val AUPRC 0.149282 | val AUROC 0.583484 | thr 0.57 | best epoch 2
+[stage1_unrefined] epoch   3/100 | loss 0.692528 | train 0.009s | val AUPRC 0.156304 | val AUROC 0.583469 | thr 0.51 | best epoch 3
+[stage1_unrefined] epoch   4/100 | loss 0.692258 | train 0.009s | val AUPRC 0.157916 | val AUROC 0.595370 | thr 0.51 | best epoch 4
+[stage1_unrefined] epoch   5/100 | loss 0.692004 | train 0.009s | val AUPRC 0.158621 | val AUROC 0.598149 | thr 0.51 | best epoch 5
+[stage1_unrefined] epoch   6/100 | loss 0.691759 | train 0.009s | val AUPRC 0.157899 | val AUROC 0.595947 | thr 0.51 | best epoch 5
+[stage1_unrefined] epoch   7/100 | loss 0.691517 | train 0.009s | val AUPRC 0.157835 | val AUROC 0.595956 | thr 0.51 | best epoch 5
+[stage1_unrefined] epoch   8/100 | loss 0.691267 | train 0.009s | val AUPRC 0.156871 | val AUROC 0.594182 | thr 0.51 | best epoch 5
+[stage1_unrefined] epoch   9/100 | loss 0.691013 | train 0.009s | val AUPRC 0.155674 | val AUROC 0.593093 | thr 0.52 | best epoch 5
+[stage1_unrefined] epoch  10/100 | loss 0.690748 | train 0.009s | val AUPRC 0.156160 | val AUROC 0.592422 | thr 0.51 | best epoch 5
+[stage1_unrefined] epoch  11/100 | loss 0.690475 | train 0.009s | val AUPRC 0.155634 | val AUROC 0.591135 | thr 0.52 | best epoch 5
+[stage1_unrefined] epoch  12/100 | loss 0.690194 | train 0.009s | val AUPRC 0.155530 | val AUROC 0.590436 | thr 0.52 | best epoch 5
+[stage1_unrefined] epoch  13/100 | loss 0.689904 | train 0.009s | val AUPRC 0.154720 | val AUROC 0.588957 | thr 0.52 | best epoch 5
+[stage1_unrefined] epoch  14/100 | loss 0.689607 | train 0.009s | val AUPRC 0.155001 | val AUROC 0.588258 | thr 0.53 | best epoch 5
+[stage1_unrefined] epoch  15/100 | loss 0.689304 | train 0.009s | val AUPRC 0.154612 | val AUROC 0.587267 | thr 0.52 | best epoch 5
+[stage1_unrefined] epoch  16/100 | loss 0.688997 | train 0.009s | val AUPRC 0.154519 | val AUROC 0.586953 | thr 0.54 | best epoch 5
+[stage1_unrefined] epoch  17/100 | loss 0.688691 | train 0.009s | val AUPRC 0.154297 | val AUROC 0.586333 | thr 0.53 | best epoch 5
+[stage1_unrefined] epoch  18/100 | loss 0.688389 | train 0.009s | val AUPRC 0.153576 | val AUROC 0.585380 | thr 0.55 | best epoch 5
+[stage1_unrefined] epoch  19/100 | loss 0.688091 | train 0.009s | val AUPRC 0.153124 | val AUROC 0.584854 | thr 0.54 | best epoch 5
+[stage1_unrefined] epoch  20/100 | loss 0.687797 | train 0.009s | val AUPRC 0.152949 | val AUROC 0.584742 | thr 0.53 | best epoch 5
+[stage1_unrefined] epoch  21/100 | loss 0.687513 | train 0.009s | val AUPRC 0.157143 | val AUROC 0.584817 | thr 0.56 | best epoch 5
+[stage1_unrefined] epoch  22/100 | loss 0.687239 | train 0.010s | val AUPRC 0.160818 | val AUROC 0.584657 | thr 0.55 | best epoch 22
+[stage1_unrefined] epoch  23/100 | loss 0.686976 | train 0.009s | val AUPRC 0.168962 | val AUROC 0.585812 | thr 0.57 | best epoch 23
+[stage1_unrefined] epoch  24/100 | loss 0.686728 | train 0.009s | val AUPRC 0.173771 | val AUROC 0.586432 | thr 0.56 | best epoch 24
+[stage1_unrefined] epoch  25/100 | loss 0.686496 | train 0.010s | val AUPRC 0.161360 | val AUROC 0.582291 | thr 0.58 | best epoch 24
+[stage1_unrefined] epoch  26/100 | loss 0.686278 | train 0.009s | val AUPRC 0.162675 | val AUROC 0.582010 | thr 0.58 | best epoch 24
+[stage1_unrefined] epoch  27/100 | loss 0.686074 | train 0.009s | val AUPRC 0.166901 | val AUROC 0.581540 | thr 0.56 | best epoch 24
+[stage1_unrefined] epoch  28/100 | loss 0.685877 | train 0.012s | val AUPRC 0.167362 | val AUROC 0.581765 | thr 0.57 | best epoch 24
+[stage1_unrefined] epoch  29/100 | loss 0.685681 | train 0.009s | val AUPRC 0.168000 | val AUROC 0.582441 | thr 0.59 | best epoch 24
+[stage1_unrefined] epoch  30/100 | loss 0.685490 | train 0.009s | val AUPRC 0.162015 | val AUROC 0.582498 | thr 0.59 | best epoch 24
+[stage1_unrefined] epoch  31/100 | loss 0.685299 | train 0.010s | val AUPRC 0.162954 | val AUROC 0.583352 | thr 0.59 | best epoch 24
+[stage1_unrefined] epoch  32/100 | loss 0.685102 | train 0.009s | val AUPRC 0.164002 | val AUROC 0.584713 | thr 0.59 | best epoch 24
+[stage1_unrefined] epoch  33/100 | loss 0.684899 | train 0.009s | val AUPRC 0.164346 | val AUROC 0.585953 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  34/100 | loss 0.684691 | train 0.009s | val AUPRC 0.162381 | val AUROC 0.586220 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  35/100 | loss 0.684477 | train 0.009s | val AUPRC 0.161885 | val AUROC 0.587117 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  36/100 | loss 0.684259 | train 0.009s | val AUPRC 0.160742 | val AUROC 0.587859 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  37/100 | loss 0.684035 | train 0.009s | val AUPRC 0.160234 | val AUROC 0.588525 | thr 0.58 | best epoch 24
+[stage1_unrefined] epoch  38/100 | loss 0.683810 | train 0.009s | val AUPRC 0.160611 | val AUROC 0.590046 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  39/100 | loss 0.683582 | train 0.011s | val AUPRC 0.160031 | val AUROC 0.591065 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  40/100 | loss 0.683350 | train 0.009s | val AUPRC 0.161514 | val AUROC 0.591736 | thr 0.54 | best epoch 24
+[stage1_unrefined] epoch  41/100 | loss 0.683111 | train 0.009s | val AUPRC 0.161414 | val AUROC 0.591886 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  42/100 | loss 0.682870 | train 0.010s | val AUPRC 0.162034 | val AUROC 0.592093 | thr 0.55 | best epoch 24
+[stage1_unrefined] epoch  43/100 | loss 0.682625 | train 0.009s | val AUPRC 0.163163 | val AUROC 0.592816 | thr 0.54 | best epoch 24
+[stage1_unrefined] epoch  44/100 | loss 0.682369 | train 0.009s | val AUPRC 0.163041 | val AUROC 0.592675 | thr 0.54 | best epoch 24
+[stage1_unrefined] early stopping: no improvement for 20 epochs
+------------------------------------------------------------------------------
+STAGE 2: refining the graph (del_ratio = 0.03) and retraining
+/workspace/COMP8851-fraud-dataset-analysis-main/models/ghrn/scripts/run_one.py:398: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(stage1["checkpoint"], map_location=device))
+Edges 12,585 -> 12,208 (377 removed)
+Training-edge heterophily 0.115789 -> 0.115789
+[stage2_refined] epoch   1/100 | loss 0.693785 | train 0.010s | val AUPRC 0.161394 | val AUROC 0.531658 | thr 0.51 | best epoch 1
+[stage2_refined] epoch   2/100 | loss 0.691270 | train 0.010s | val AUPRC 0.164501 | val AUROC 0.540061 | thr 0.51 | best epoch 2
+[stage2_refined] epoch   3/100 | loss 0.691004 | train 0.009s | val AUPRC 0.178189 | val AUROC 0.559665 | thr 0.51 | best epoch 3
+[stage2_refined] epoch   4/100 | loss 0.689899 | train 0.010s | val AUPRC 0.172511 | val AUROC 0.570311 | thr 0.54 | best epoch 3
+[stage2_refined] epoch   5/100 | loss 0.688906 | train 0.010s | val AUPRC 0.166067 | val AUROC 0.581277 | thr 0.54 | best epoch 3
+[stage2_refined] epoch   6/100 | loss 0.688512 | train 0.009s | val AUPRC 0.159786 | val AUROC 0.586225 | thr 0.55 | best epoch 3
+[stage2_refined] epoch   7/100 | loss 0.688229 | train 0.010s | val AUPRC 0.161650 | val AUROC 0.591943 | thr 0.55 | best epoch 3
+[stage2_refined] epoch   8/100 | loss 0.687696 | train 0.009s | val AUPRC 0.165132 | val AUROC 0.595642 | thr 0.54 | best epoch 3
+[stage2_refined] epoch   9/100 | loss 0.686991 | train 0.010s | val AUPRC 0.166650 | val AUROC 0.596468 | thr 0.53 | best epoch 3
+[stage2_refined] epoch  10/100 | loss 0.686444 | train 0.009s | val AUPRC 0.168455 | val AUROC 0.599566 | thr 0.52 | best epoch 3
+[stage2_refined] epoch  11/100 | loss 0.686107 | train 0.010s | val AUPRC 0.171661 | val AUROC 0.603209 | thr 0.53 | best epoch 3
+[stage2_refined] epoch  12/100 | loss 0.685748 | train 0.009s | val AUPRC 0.169907 | val AUROC 0.601763 | thr 0.53 | best epoch 3
+[stage2_refined] epoch  13/100 | loss 0.685290 | train 0.009s | val AUPRC 0.170223 | val AUROC 0.601510 | thr 0.53 | best epoch 3
+[stage2_refined] epoch  14/100 | loss 0.684766 | train 0.009s | val AUPRC 0.170715 | val AUROC 0.602862 | thr 0.54 | best epoch 3
+[stage2_refined] epoch  15/100 | loss 0.684335 | train 0.009s | val AUPRC 0.172078 | val AUROC 0.606974 | thr 0.54 | best epoch 3
+[stage2_refined] epoch  16/100 | loss 0.684022 | train 0.009s | val AUPRC 0.173421 | val AUROC 0.609452 | thr 0.54 | best epoch 3
+[stage2_refined] epoch  17/100 | loss 0.683674 | train 0.009s | val AUPRC 0.176934 | val AUROC 0.609819 | thr 0.56 | best epoch 3
+[stage2_refined] epoch  18/100 | loss 0.683195 | train 0.009s | val AUPRC 0.180323 | val AUROC 0.608983 | thr 0.55 | best epoch 18
+[stage2_refined] epoch  19/100 | loss 0.682701 | train 0.010s | val AUPRC 0.192620 | val AUROC 0.608983 | thr 0.55 | best epoch 19
+[stage2_refined] epoch  20/100 | loss 0.682286 | train 0.009s | val AUPRC 0.207723 | val AUROC 0.609490 | thr 0.55 | best epoch 20
+[stage2_refined] epoch  21/100 | loss 0.681898 | train 0.009s | val AUPRC 0.212977 | val AUROC 0.611311 | thr 0.56 | best epoch 21
+[stage2_refined] epoch  22/100 | loss 0.681460 | train 0.009s | val AUPRC 0.213588 | val AUROC 0.611879 | thr 0.57 | best epoch 22
+[stage2_refined] epoch  23/100 | loss 0.680980 | train 0.009s | val AUPRC 0.216592 | val AUROC 0.613659 | thr 0.57 | best epoch 23
+[stage2_refined] epoch  24/100 | loss 0.680564 | train 0.009s | val AUPRC 0.220718 | val AUROC 0.614851 | thr 0.57 | best epoch 24
+[stage2_refined] epoch  25/100 | loss 0.680187 | train 0.009s | val AUPRC 0.221716 | val AUROC 0.615372 | thr 0.57 | best epoch 25
+[stage2_refined] epoch  26/100 | loss 0.679750 | train 0.009s | val AUPRC 0.223828 | val AUROC 0.614663 | thr 0.58 | best epoch 26
+[stage2_refined] epoch  27/100 | loss 0.679292 | train 0.009s | val AUPRC 0.223899 | val AUROC 0.612532 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  28/100 | loss 0.678893 | train 0.010s | val AUPRC 0.219398 | val AUROC 0.611922 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  29/100 | loss 0.678511 | train 0.009s | val AUPRC 0.217303 | val AUROC 0.612598 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  30/100 | loss 0.678081 | train 0.009s | val AUPRC 0.218038 | val AUROC 0.614381 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  31/100 | loss 0.677647 | train 0.009s | val AUPRC 0.218615 | val AUROC 0.615076 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  32/100 | loss 0.677251 | train 0.009s | val AUPRC 0.211457 | val AUROC 0.614297 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  33/100 | loss 0.676807 | train 0.009s | val AUPRC 0.194958 | val AUROC 0.610842 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  34/100 | loss 0.676369 | train 0.009s | val AUPRC 0.189721 | val AUROC 0.609387 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  35/100 | loss 0.675968 | train 0.009s | val AUPRC 0.189509 | val AUROC 0.609443 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  36/100 | loss 0.675545 | train 0.009s | val AUPRC 0.189905 | val AUROC 0.610814 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  37/100 | loss 0.675114 | train 0.009s | val AUPRC 0.189495 | val AUROC 0.611527 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  38/100 | loss 0.674708 | train 0.009s | val AUPRC 0.189884 | val AUROC 0.611311 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  39/100 | loss 0.674290 | train 0.009s | val AUPRC 0.190143 | val AUROC 0.611199 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  40/100 | loss 0.673869 | train 0.009s | val AUPRC 0.190033 | val AUROC 0.611518 | thr 0.58 | best epoch 27
+[stage2_refined] epoch  41/100 | loss 0.673463 | train 0.009s | val AUPRC 0.189320 | val AUROC 0.612485 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  42/100 | loss 0.673026 | train 0.010s | val AUPRC 0.189813 | val AUROC 0.613950 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  43/100 | loss 0.672625 | train 0.009s | val AUPRC 0.189726 | val AUROC 0.614353 | thr 0.57 | best epoch 27
+[stage2_refined] epoch  44/100 | loss 0.672192 | train 0.009s | val AUPRC 0.190217 | val AUROC 0.615057 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  45/100 | loss 0.671765 | train 0.009s | val AUPRC 0.190527 | val AUROC 0.615743 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  46/100 | loss 0.671344 | train 0.009s | val AUPRC 0.190793 | val AUROC 0.616832 | thr 0.59 | best epoch 27
+[stage2_refined] epoch  47/100 | loss 0.670913 | train 0.009s | val AUPRC 0.191623 | val AUROC 0.617114 | thr 0.59 | best epoch 27
+[stage2_refined] early stopping: no improvement for 20 epochs
+/workspace/COMP8851-fraud-dataset-analysis-main/models/ghrn/scripts/run_one.py:445: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(selected["checkpoint"], map_location=device))
+------------------------------------------------------------------------------
+test auroc: 0.556949
+test auprc: 0.121766
+test macro_f1: 0.500252
+test fraud_f1: 0.072131
+test fraud_precision: 0.134146
+test fraud_recall: 0.049327
+test gmean: 0.217919
+test accuracy: 0.867011
+threshold: 0.58 (chosen on validation Macro-F1)
+selected stage: stage2_refined, best epoch 27
+------------------------------------------------------------------------------
+Artefacts: results/results_ghrn/raw/ghrn/fdcompcn/unified/tr40/seed_72
+Artefact bundle complete: True
+RUN STATUS: COMPLETE

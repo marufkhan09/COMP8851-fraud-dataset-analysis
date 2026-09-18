@@ -1,0 +1,299 @@
+{
+  "artifact_verification": {
+    "advisory_missing": [],
+    "checkpoint_present": true,
+    "complete": true,
+    "epoch_rows": 100,
+    "missing_artifacts": [],
+    "validation_rows": 100
+  },
+  "best_selection_value": 0.5170089848639943,
+  "best_validation_epoch": 99,
+  "best_validation_metrics": {
+    "accuracy": 0.8587748884778588,
+    "auprc": 0.5170089848639943,
+    "auroc": 0.8364558304156464,
+    "evaluated_nodes": 9191,
+    "fn": 659,
+    "fp": 639,
+    "fraud_f1": 0.510188679245283,
+    "fraud_precision": 0.5140684410646388,
+    "fraud_recall": 0.5063670411985018,
+    "gmean": 0.6820407611266995,
+    "macro_f1": 0.7138408435636534,
+    "negatives": 7856,
+    "positives": 1335,
+    "threshold": 0.79,
+    "tn": 7217,
+    "tp": 676
+  },
+  "configuration": {
+    "allow_large": false,
+    "architecture": "CARE-GNN one-layer camouflage-resistant aggregator",
+    "batch_size": 1024,
+    "class_imbalance_handling": "per-epoch negative under-sampling (author procedure)",
+    "container_digest": null,
+    "data_path": "data/yelpchi",
+    "dataset": "yelpchi",
+    "emb_size": 32,
+    "epochs": 100,
+    "eval_batch_size": 1024,
+    "hardware_profile_id": null,
+    "inter": "GNN",
+    "lambda_1": 2.0,
+    "lambda_2": 1e-05,
+    "lr": 0.005,
+    "max_minutes": 90.0,
+    "max_nodes": 2000000,
+    "model": "CARE-GNN",
+    "no_cuda": false,
+    "no_rl": false,
+    "optimizer": "adam",
+    "optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "patience": 20,
+    "ratio": "TR40",
+    "require_cuda": false,
+    "resolved_device": "cuda:0",
+    "results_root": "results/results_care-gnn/raw",
+    "run_mode": "controlled",
+    "seed": 72,
+    "selection_metric": "auprc",
+    "skip_test": false,
+    "smoke": false,
+    "split_dir": "/workspace/COMP8851-fraud-dataset-analysis-main/shared/splits",
+    "split_path": null,
+    "step_size": 0.02,
+    "strict_stats": false,
+    "total_parameters": 1471842,
+    "track": "unified",
+    "trainable_parameters": 1314,
+    "under_sample": 1.0,
+    "upstream_repository": "https://github.com/YingtongDou/CARE-GNN",
+    "valid_every": 1
+  },
+  "data_load_seconds": 3.2295657750219107,
+  "dataset": "yelpchi",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MKL_NUM_THREADS": "88",
+    "OMP_NUM_THREADS": "88",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "dgl_version": "2.4.0+cu121",
+    "machine": "x86_64",
+    "numpy_version": "1.26.4",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python_executable": "/venv/main/bin/python",
+    "python_implementation": "CPython",
+    "python_version": "3.12.14",
+    "sklearn_version": "1.4.2",
+    "torch_version": "2.4.0+cu121"
+  },
+  "heterophily": {
+    "fraud_local_heterophily_mean": 0.805287599753901,
+    "fraud_local_heterophily_median": 0.839622641509434,
+    "fraud_local_heterophily_std": 0.14502358495045037,
+    "fraud_nodes_with_labelled_neighbours": 6674,
+    "global_heterophily": 0.22695522902516493,
+    "labelled_edges_considered": 7693958
+  },
+  "model": "CARE-GNN",
+  "protocol_identity": {
+    "adapter_sha256": null,
+    "adapter_version": "relation-view-v1",
+    "config_sha256": "4485a74f93bc2192c1e1a912e21d34e045287205b8e74f60836f95bdf35c0a31",
+    "container_digest": null,
+    "dataset_manifest_version": "comp8851-canonical-v1",
+    "dataset_view_id": "yelpchi_relation_v1",
+    "early_stopping_patience": 20,
+    "evaluator_commit": "shared.comp8851==1.0.0",
+    "hardware_profile_id": "a6000",
+    "max_epochs": 100,
+    "model_source_commit": null,
+    "notes": {},
+    "protocol_version": "vast-v4.4",
+    "selection_metric": "auprc",
+    "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+    "split_registry_version": "seed2",
+    "split_seed": 2,
+    "split_sha256": "e9fe555fa0e4f7e22e0bab846ff77d8fa6ac08eac2f753d41dcc866091dd8c96",
+    "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+    "view_sha256": "403ea176ea709f68aab34f1f36799527962dffcdbb6df39acc6a9fc000079b89"
+  },
+  "ratio": "TR40",
+  "rl_threshold_history": [
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.3199998736381531,
+      0.23999984562397003,
+      0.27999985218048096
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ],
+    [
+      0.33999988436698914,
+      0.2599998414516449,
+      0.299999862909317
+    ]
+  ],
+  "rl_thresholds_final": {
+    "relation_0": 0.33999988436698914,
+    "relation_1": 0.2599998414516449,
+    "relation_2": 0.299999862909317
+  },
+  "run_finished_utc": "2026-09-13T22:33:00.329142+00:00",
+  "run_id": "care-gnn_yelpchi_unified_tr40_seed72_a6000_20260913T215923Z",
+  "run_started_utc": "2026-09-13T21:59:33.147537+00:00",
+  "schema_version": "2.0",
+  "selected_threshold": 0.79,
+  "selection_metric": "auprc",
+  "split": {
+    "source": "/workspace/COMP8851-fraud-dataset-analysis-main/shared/splits/yelpchi/yelpchi_TR40_seed2.npz",
+    "test": {
+      "fraud_nodes": 2671,
+      "fraud_percentage": 14.53051898596453,
+      "nodes": 18382,
+      "normal_nodes": 15711
+    },
+    "train": {
+      "fraud_nodes": 2671,
+      "fraud_percentage": 14.531309504379522,
+      "nodes": 18381,
+      "normal_nodes": 15710
+    },
+    "unused_nodes": 0,
+    "validation": {
+      "fraud_nodes": 1335,
+      "fraud_percentage": 14.525078881514524,
+      "nodes": 9191,
+      "normal_nodes": 7856
+    }
+  },
+  "status": "COMPLETE",
+  "test_metrics": {
+    "accuracy": 0.856054836252856,
+    "auprc": 0.5229221421976737,
+    "auroc": 0.8436289001539197,
+    "evaluated_nodes": 18382,
+    "fn": 1350,
+    "fp": 1296,
+    "fraud_f1": 0.4996217851739788,
+    "fraud_precision": 0.5047764615972488,
+    "fraud_recall": 0.4945713216023961,
+    "gmean": 0.6736276015428275,
+    "inference_seconds": 22.792381477018353,
+    "macro_f1": 0.7077788681874468,
+    "negatives": 15711,
+    "positives": 2671,
+    "threshold": 0.79,
+    "tn": 14415,
+    "tp": 1321
+  },
+  "timing": {
+    "data_load_seconds": 3.2295657750219107,
+    "fit_wall_seconds_including_validation": 1982.5938576209592,
+    "mean_train_epoch_seconds": 7.55171731763694,
+    "median_train_epoch_seconds": 7.469393819977995,
+    "peak_gpu_memory_mb": 275.6171875,
+    "std_train_epoch_seconds": 0.38183273978034266,
+    "total_train_epoch_seconds": 755.171731763694,
+    "total_train_plus_validation_seconds": 1906.0361328392755,
+    "total_validation_seconds": 1150.8644010755816,
+    "training_epochs_completed": 100
+  },
+  "track": "unified",
+  "train_seed": 72
+}

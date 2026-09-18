@@ -1,0 +1,34 @@
+{
+  "dataset_id": "tsocial",
+  "notes": {
+    "label_decoding": "two-column label tensor decoded with argmax",
+    "loaded_from_cache": "data/tsocial/tsocial_canonical.npz",
+    "provenance": "BWGNN authors, Rethinking-Anomaly-Detection release",
+    "single_relation": "natively homogeneous; no relation split exists"
+  },
+  "source_files": {
+    "graph": "data/tsocial/tsocial"
+  },
+  "source_sha256": {
+    "graph": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0"
+  },
+  "statistics": {
+    "dataset": "tsocial",
+    "eligible_nodes": 5781065,
+    "feature_dimension": 10,
+    "fraud_nodes": 174280,
+    "fraud_percentage": 3.0146694423951295,
+    "imbalance_ratio_normal_to_fraud": 32.17113266008722,
+    "ineligible_nodes": 0,
+    "nodes": 5781065,
+    "normal_nodes": 5606785,
+    "relations": {
+      "homo": {
+        "stored_directed_edges": 146211016,
+        "undirected_edges": 73105508
+      }
+    },
+    "union_stored_directed_edges": 146211016,
+    "union_undirected_edges": 73105508
+  }
+}

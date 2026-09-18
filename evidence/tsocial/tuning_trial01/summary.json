@@ -1,0 +1,241 @@
+{
+  "artifact_verification": {
+    "advisory_missing": [],
+    "checkpoint_present": true,
+    "complete": true,
+    "epoch_rows": 10,
+    "missing_artifacts": [],
+    "validation_rows": 10
+  },
+  "best_selection_value": 0.05197708652394932,
+  "best_validation_epoch": 7,
+  "best_validation_metrics": {
+    "accuracy": 0.8806534782086,
+    "auprc": 0.05197708652394932,
+    "auroc": 0.7017606257254725,
+    "evaluated_nodes": 1156213,
+    "fn": 28986,
+    "fp": 109004,
+    "fraud_f1": 0.07840780070794096,
+    "fraud_precision": 0.051099465501331896,
+    "fraud_recall": 0.168407160890521,
+    "gmean": 0.38991892547204465,
+    "macro_f1": 0.5073015895345119,
+    "negatives": 1121357,
+    "positives": 34856,
+    "threshold": 0.99,
+    "tn": 1012353,
+    "tp": 5870
+  },
+  "configuration": {
+    "allow_large": true,
+    "architecture": "CARE-GNN one-layer camouflage-resistant aggregator",
+    "batch_size": 1024,
+    "class_imbalance_handling": "per-epoch negative under-sampling (author procedure)",
+    "container_digest": null,
+    "data_path": "data/tsocial",
+    "dataset": "tsocial",
+    "emb_size": 32,
+    "epochs": 10,
+    "eval_batch_size": 1024,
+    "hardware_profile_id": null,
+    "inter": "GNN",
+    "lambda_1": 2.0,
+    "lambda_2": 0.0,
+    "lr": 0.0005,
+    "max_minutes": 180.0,
+    "max_nodes": 2000000,
+    "model": "CARE-GNN",
+    "no_cuda": false,
+    "no_rl": false,
+    "optimizer": "adam",
+    "optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "patience": 5,
+    "ratio": "TR40",
+    "require_cuda": false,
+    "resolved_device": "cuda:0",
+    "results_root": "results/results_care-gnn/tuning/care-gnn_tsocial/trial_01",
+    "run_mode": "tuning-trial-01",
+    "seed": 2,
+    "selection_metric": "auprc",
+    "skip_test": true,
+    "smoke": false,
+    "split_dir": "/kaggle/working/comp8851/shared/splits",
+    "split_path": null,
+    "step_size": 0.02,
+    "strict_stats": false,
+    "total_parameters": 57811152,
+    "track": "unified",
+    "trainable_parameters": 502,
+    "under_sample": 1.0,
+    "upstream_repository": "https://github.com/YingtongDou/CARE-GNN",
+    "valid_every": 1
+  },
+  "data_load_seconds": 28.826047349000874,
+  "dataset": "tsocial",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MKL_NUM_THREADS": "8",
+    "OMP_NUM_THREADS": "8",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "dgl_version": "2.4.0+cu121",
+    "machine": "x86_64",
+    "numpy_version": "2.0.2",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "sklearn_version": "1.6.1",
+    "torch_version": "2.4.0+cu121"
+  },
+  "evidence_class": "tuning_trial",
+  "heterophily": {
+    "fraud_local_heterophily_mean": 0.8259855627536059,
+    "fraud_local_heterophily_median": 0.9204545454545454,
+    "fraud_local_heterophily_std": 0.24395468231524903,
+    "fraud_nodes_with_labelled_neighbours": 174280,
+    "global_heterophily": 0.376095095324418,
+    "labelled_edges_considered": 146211016
+  },
+  "model": "CARE-GNN",
+  "protocol_identity": {
+    "adapter_sha256": null,
+    "adapter_version": "relation-view-v1",
+    "config_sha256": "4f60e625a14f3b314df7e35a402724bd79a24077b6c22e54f19c54e346f97609",
+    "container_digest": null,
+    "dataset_manifest_version": "comp8851-canonical-v1",
+    "dataset_view_id": "tsocial_relation_v1",
+    "early_stopping_patience": 20,
+    "evaluator_commit": "shared.comp8851==1.0.0",
+    "hardware_profile_id": "t4",
+    "max_epochs": 100,
+    "model_source_commit": null,
+    "notes": {},
+    "protocol_version": "vast-v4.4",
+    "selection_metric": "auprc",
+    "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+    "split_registry_version": "seed2",
+    "split_seed": 2,
+    "split_sha256": "f8df68ca30fb387cdd88cbf3a8820f4ebcd3f78d9325a1b9293feca9cb8ac2b4",
+    "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+    "view_sha256": "36063bebb030ad7c92a1ac81152eaa023af97c70bf263ce2a88753003299c5ff"
+  },
+  "ratio": "TR40",
+  "rl_threshold_history": [
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ],
+    [
+      0.4999999701976776
+    ]
+  ],
+  "rl_thresholds_final": {
+    "relation_0": 0.4999999701976776
+  },
+  "run_finished_utc": "2026-09-17T02:25:29.851134+00:00",
+  "run_id": "care-gnn_tsocial_unified_tr40_seed2_t4_20260917T011428Z",
+  "run_started_utc": "2026-09-17T01:17:25.314394+00:00",
+  "schema_version": "2.0",
+  "selected_threshold": 0.99,
+  "selection_metric": "auprc",
+  "split": {
+    "source": "/kaggle/working/comp8851/shared/splits/tsocial/tsocial_TR40_seed2.npz",
+    "test": {
+      "fraud_nodes": 69712,
+      "fraud_percentage": 3.0146694423951295,
+      "nodes": 2312426,
+      "normal_nodes": 2242714
+    },
+    "train": {
+      "fraud_nodes": 69712,
+      "fraud_percentage": 3.0146694423951295,
+      "nodes": 2312426,
+      "normal_nodes": 2242714
+    },
+    "unused_nodes": 0,
+    "validation": {
+      "fraud_nodes": 34856,
+      "fraud_percentage": 3.0146694423951295,
+      "nodes": 1156213,
+      "normal_nodes": 1121357
+    }
+  },
+  "status": "COMPLETE",
+  "test_metrics": null,
+  "test_skipped": true,
+  "timing": {
+    "data_load_seconds": 28.826047349000874,
+    "fit_wall_seconds_including_validation": 4066.8472405919993,
+    "mean_train_epoch_seconds": 62.07390673260015,
+    "median_train_epoch_seconds": 62.006027587501194,
+    "peak_gpu_memory_mb": 668.26416015625,
+    "std_train_epoch_seconds": 0.4803637524145091,
+    "total_train_epoch_seconds": 620.7390673260015,
+    "total_train_plus_validation_seconds": 3945.799934677001,
+    "total_validation_seconds": 3325.0608673509996,
+    "training_epochs_completed": 10
+  },
+  "track": "unified",
+  "train_seed": 2
+}

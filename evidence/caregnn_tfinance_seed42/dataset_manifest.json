@@ -1,0 +1,34 @@
+{
+  "dataset_id": "tfinance",
+  "notes": {
+    "label_decoding": "two-column label tensor decoded with argmax",
+    "loaded_from_cache": "data/tfinance/tfinance_canonical.npz",
+    "provenance": "BWGNN authors, Rethinking-Anomaly-Detection release",
+    "single_relation": "natively homogeneous; no relation split exists"
+  },
+  "source_files": {
+    "graph": "data/tfinance/tfinance"
+  },
+  "source_sha256": {
+    "graph": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700"
+  },
+  "statistics": {
+    "dataset": "tfinance",
+    "eligible_nodes": 39357,
+    "feature_dimension": 10,
+    "fraud_nodes": 1804,
+    "fraud_percentage": 4.583682699392738,
+    "imbalance_ratio_normal_to_fraud": 20.816518847006652,
+    "ineligible_nodes": 0,
+    "nodes": 39357,
+    "normal_nodes": 37553,
+    "relations": {
+      "homo": {
+        "stored_directed_edges": 42445086,
+        "undirected_edges": 21222543
+      }
+    },
+    "union_stored_directed_edges": 42445086,
+    "union_undirected_edges": 21222543
+  }
+}

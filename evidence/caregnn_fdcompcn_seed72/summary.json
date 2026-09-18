@@ -1,0 +1,321 @@
+{
+  "artifact_verification": {
+    "advisory_missing": [],
+    "checkpoint_present": true,
+    "complete": true,
+    "epoch_rows": 33,
+    "missing_artifacts": [],
+    "validation_rows": 33
+  },
+  "best_selection_value": 0.19698305007118785,
+  "best_validation_epoch": 12,
+  "best_validation_metrics": {
+    "accuracy": 0.8476011288805269,
+    "auprc": 0.19698305007118785,
+    "auroc": 0.5922055730809674,
+    "evaluated_nodes": 1063,
+    "fn": 92,
+    "fp": 70,
+    "fraud_f1": 0.19801980198019803,
+    "fraud_precision": 0.2222222222222222,
+    "fraud_recall": 0.17857142857142858,
+    "gmean": 0.4067276357540077,
+    "macro_f1": 0.5569101088903069,
+    "negatives": 951,
+    "positives": 112,
+    "threshold": 0.56,
+    "tn": 881,
+    "tp": 20
+  },
+  "configuration": {
+    "allow_large": false,
+    "architecture": "CARE-GNN one-layer camouflage-resistant aggregator",
+    "batch_size": 1024,
+    "class_imbalance_handling": "per-epoch negative under-sampling (author procedure)",
+    "container_digest": null,
+    "data_path": "data/fdcompcn",
+    "dataset": "fdcompcn",
+    "emb_size": 64,
+    "epochs": 100,
+    "eval_batch_size": 1024,
+    "hardware_profile_id": null,
+    "inter": "GNN",
+    "lambda_1": 2.0,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "max_minutes": 90.0,
+    "max_nodes": 2000000,
+    "model": "CARE-GNN",
+    "no_cuda": false,
+    "no_rl": false,
+    "optimizer": "adam",
+    "optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "patience": 20,
+    "ratio": "TR40",
+    "require_cuda": false,
+    "resolved_device": "cuda:0",
+    "results_root": "results/results_care-gnn/raw",
+    "run_mode": "controlled",
+    "seed": 72,
+    "selection_metric": "auprc",
+    "skip_test": false,
+    "smoke": false,
+    "split_dir": "/workspace/COMP8851-fraud-dataset-analysis-main/shared/splits",
+    "split_path": null,
+    "step_size": 0.02,
+    "strict_stats": false,
+    "total_parameters": 307345,
+    "track": "unified",
+    "trainable_parameters": 4276,
+    "under_sample": 1.0,
+    "upstream_repository": "https://github.com/YingtongDou/CARE-GNN",
+    "valid_every": 1
+  },
+  "data_load_seconds": 0.28933610196691006,
+  "dataset": "fdcompcn",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MKL_NUM_THREADS": "88",
+    "OMP_NUM_THREADS": "88",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "dgl_version": "2.4.0+cu121",
+    "machine": "x86_64",
+    "numpy_version": "1.26.4",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python_executable": "/venv/main/bin/python",
+    "python_implementation": "CPython",
+    "python_version": "3.12.14",
+    "sklearn_version": "1.4.2",
+    "torch_version": "2.4.0+cu121"
+  },
+  "heterophily": {
+    "fraud_local_heterophily_mean": 0.8617227448859709,
+    "fraud_local_heterophily_median": 1.0,
+    "fraud_local_heterophily_std": 0.30939513014282577,
+    "fraud_nodes_with_labelled_neighbours": 234,
+    "global_heterophily": 0.1450192625206384,
+    "labelled_edges_considered": 7268
+  },
+  "model": "CARE-GNN",
+  "protocol_identity": {
+    "adapter_sha256": null,
+    "adapter_version": "relation-view-v1",
+    "config_sha256": "3b80458d1ca1a5066f39c9c050f43add0363d16c1670cf6eb547f5a35e65b483",
+    "container_digest": null,
+    "dataset_manifest_version": "comp8851-canonical-v1",
+    "dataset_view_id": "fdcompcn_relation_v1",
+    "early_stopping_patience": 20,
+    "evaluator_commit": "shared.comp8851==1.0.0",
+    "hardware_profile_id": "a6000",
+    "max_epochs": 100,
+    "model_source_commit": null,
+    "notes": {},
+    "protocol_version": "vast-v4.4",
+    "selection_metric": "auprc",
+    "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+    "split_registry_version": "seed2",
+    "split_seed": 2,
+    "split_sha256": "9b2d2a8c6c27fa01848461def4988d1c4da30911b62318b9e1ef413459f19166",
+    "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+    "view_sha256": "438889170ee3e9f809c4142f1f242ce50b77117914101e2ef88fd18345004a64"
+  },
+  "ratio": "TR40",
+  "rl_threshold_history": [
+    [
+      0.4199999272823334,
+      0.4199999272823334,
+      0.6999998092651367,
+      0.2999998927116394
+    ],
+    [
+      0.3999999165534973,
+      0.3999999165534973,
+      0.7199997901916504,
+      0.27999988198280334
+    ],
+    [
+      0.37999990582466125,
+      0.37999990582466125,
+      0.7399997711181641,
+      0.2599998712539673
+    ],
+    [
+      0.3599998950958252,
+      0.3599998950958252,
+      0.7599997520446777,
+      0.23999987542629242
+    ],
+    [
+      0.33999988436698914,
+      0.33999988436698914,
+      0.7799997329711914,
+      0.21999987959861755
+    ],
+    [
+      0.3199998736381531,
+      0.3199998736381531,
+      0.7999997138977051,
+      0.1999998837709427
+    ],
+    [
+      0.299999862909317,
+      0.299999862909317,
+      0.8199996948242188,
+      0.17999988794326782
+    ],
+    [
+      0.3199998736381531,
+      0.3199998736381531,
+      0.8399996757507324,
+      0.15999989211559296
+    ],
+    [
+      0.299999862909317,
+      0.299999862909317,
+      0.8599996566772461,
+      0.1399998962879181
+    ],
+    [
+      0.27999985218048096,
+      0.27999985218048096,
+      0.8799996376037598,
+      0.11999989300966263
+    ],
+    [
+      0.2599998414516449,
+      0.2599998414516449,
+      0.8599996566772461,
+      0.09999988973140717
+    ],
+    [
+      0.23999984562397003,
+      0.23999984562397003,
+      0.8399996757507324,
+      0.0799998864531517
+    ],
+    [
+      0.21999984979629517,
+      0.21999984979629517,
+      0.8199996948242188,
+      0.05999988690018654
+    ],
+    [
+      0.1999998539686203,
+      0.1999998539686203,
+      0.7999997138977051,
+      0.039999887347221375
+    ],
+    [
+      0.17999985814094543,
+      0.17999985814094543,
+      0.7799997329711914,
+      0.01999988779425621
+    ],
+    [
+      0.15999986231327057,
+      0.15999986231327057,
+      0.7599997520446777,
+      0.0010000000474974513
+    ],
+    [
+      0.1399998664855957,
+      0.1399998664855957,
+      0.7399997711181641,
+      0.0010000000474974513
+    ],
+    [
+      0.11999986320734024,
+      0.11999986320734024,
+      0.7199997901916504,
+      0.0010000000474974513
+    ],
+    [
+      0.09999985992908478,
+      0.09999985992908478,
+      0.6999998092651367,
+      0.0010000000474974513
+    ],
+    [
+      0.07999985665082932,
+      0.07999985665082932,
+      0.679999828338623,
+      0.0010000000474974513
+    ]
+  ],
+  "rl_thresholds_final": {
+    "relation_0": 0.07999985665082932,
+    "relation_1": 0.07999985665082932,
+    "relation_2": 0.679999828338623,
+    "relation_3": 0.0010000000474974513
+  },
+  "run_finished_utc": "2026-09-13T23:36:35.539751+00:00",
+  "run_id": "care-gnn_fdcompcn_unified_tr40_seed72_a6000_20260913T233508Z",
+  "run_started_utc": "2026-09-13T23:35:09.924041+00:00",
+  "schema_version": "2.0",
+  "selected_threshold": 0.56,
+  "selection_metric": "auprc",
+  "split": {
+    "source": "/workspace/COMP8851-fraud-dataset-analysis-main/shared/splits/fdcompcn/fdcompcn_TR40_seed2.npz",
+    "test": {
+      "fraud_nodes": 223,
+      "fraud_percentage": 10.479323308270677,
+      "nodes": 2128,
+      "normal_nodes": 1905
+    },
+    "train": {
+      "fraud_nodes": 224,
+      "fraud_percentage": 10.536218250235184,
+      "nodes": 2126,
+      "normal_nodes": 1902
+    },
+    "unused_nodes": 0,
+    "validation": {
+      "fraud_nodes": 112,
+      "fraud_percentage": 10.536218250235184,
+      "nodes": 1063,
+      "normal_nodes": 951
+    }
+  },
+  "status": "COMPLETE",
+  "stop_reason": "early stopping: no improvement for 20 epochs",
+  "test_metrics": {
+    "accuracy": 0.8336466165413534,
+    "auprc": 0.1487667009466308,
+    "auroc": 0.572112566646658,
+    "evaluated_nodes": 2128,
+    "fn": 194,
+    "fp": 160,
+    "fraud_f1": 0.1407766990291262,
+    "fraud_precision": 0.15343915343915343,
+    "fraud_recall": 0.13004484304932734,
+    "gmean": 0.3451411907225409,
+    "inference_seconds": 2.758464368991554,
+    "macro_f1": 0.5243425638746048,
+    "negatives": 1905,
+    "positives": 223,
+    "threshold": 0.56,
+    "tn": 1745,
+    "tp": 29
+  },
+  "timing": {
+    "data_load_seconds": 0.28933610196691006,
+    "fit_wall_seconds_including_validation": 82.20018085901393,
+    "mean_train_epoch_seconds": 0.6965168114525803,
+    "median_train_epoch_seconds": 0.6435976260108873,
+    "peak_gpu_memory_mb": 31.05126953125,
+    "std_train_epoch_seconds": 0.10529702988230849,
+    "total_train_epoch_seconds": 22.985054777935147,
+    "total_train_plus_validation_seconds": 70.40385307086399,
+    "total_validation_seconds": 47.41879829292884,
+    "training_epochs_completed": 33
+  },
+  "track": "unified",
+  "train_seed": 72
+}

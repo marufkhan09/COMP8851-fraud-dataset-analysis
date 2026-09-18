@@ -1,0 +1,45 @@
+allow_large: false
+architecture: CARE-GNN one-layer camouflage-resistant aggregator
+batch_size: 1024
+class_imbalance_handling: per-epoch negative under-sampling (author procedure)
+container_digest: null
+data_path: data/tfinance
+dataset: tfinance
+emb_size: 64
+epochs: 100
+eval_batch_size: 1024
+hardware_profile_id: null
+inter: GNN
+lambda_1: 2.0
+lambda_2: 0.001
+lr: 0.01
+max_minutes: 45.0
+max_nodes: 2000000
+model: CARE-GNN
+no_cuda: false
+no_rl: false
+optimizer: adam
+optimizer_betas:
+- 0.9
+- 0.999
+optimizer_eps: 1.0e-08
+patience: 20
+ratio: TR40
+require_cuda: false
+resolved_device: cuda:0
+results_root: results/results_care-gnn/raw
+run_mode: controlled
+seed: 72
+selection_metric: auprc
+skip_test: false
+smoke: false
+split_dir: /kaggle/working/comp8851/shared/splits
+split_path: null
+step_size: 0.02
+strict_stats: false
+total_parameters: 394552
+track: unified
+trainable_parameters: 982
+under_sample: 1.0
+upstream_repository: https://github.com/YingtongDou/CARE-GNN
+valid_every: 1

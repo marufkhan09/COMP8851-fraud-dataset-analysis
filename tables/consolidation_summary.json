@@ -1,0 +1,51 @@
+{
+  "models": [
+    "CARE-GNN",
+    "GHRN"
+  ],
+  "datasets": [
+    "YelpChi",
+    "Amazon",
+    "T-Finance",
+    "T-Social",
+    "Elliptic",
+    "FDCompCN"
+  ],
+  "required_cells": 12,
+  "matrix_counts": {
+    "COMPLETED": 10,
+    "FAILED": 2
+  },
+  "final_runs": 30,
+  "completed_cells": 10,
+  "shared_datasets": [
+    "YelpChi",
+    "Amazon",
+    "T-Finance",
+    "Elliptic",
+    "FDCompCN"
+  ],
+  "headline": {
+    "CARE-GNN": {
+      "auprc": 0.51108,
+      "auroc": 0.809114,
+      "macro_f1": 0.716187,
+      "fraud_recall": 0.466965
+    },
+    "GHRN": {
+      "auprc": 0.538962,
+      "auroc": 0.832577,
+      "macro_f1": 0.741624,
+      "fraud_recall": 0.561842
+    }
+  },
+  "collapse_flagged_runs": 3,
+  "highest_seed_variance": {
+    "model": "CARE-GNN",
+    "dataset": "Amazon",
+    "auprc_mean": 0.7152,
+    "auprc_sd": 0.232,
+    "auprc_cv": 0.3243
+  },
+  "efficiency_rows": 10
+}

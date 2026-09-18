@@ -1,0 +1,41 @@
+architecture: 'GHRN: beta-wavelet backbone with heterophily-aware graph refinement'
+class_imbalance_handling: weighted cross-entropy (normal/fraud ratio)
+container_digest: null
+data_path: data/tfinance
+dataset: tfinance
+del_ratio: 0.015
+dropout: 0.0
+epochs: 100
+graph_backend: dgl
+hardware_profile_id: null
+hid_dim: 64
+lr: 0.01
+max_minutes: 45.0
+model: GHRN
+no_cuda: false
+optimizer: adam
+optimizer_betas:
+- 0.9
+- 0.999
+optimizer_eps: 1.0e-08
+order: 2
+patience: 20
+ratio: TR40
+refine_mode: post_aggregation
+require_cuda: false
+resolved_device: cuda:0
+results_root: results/results_ghrn/raw
+run_mode: controlled
+seed: 72
+selection_metric: auprc
+skip_test: false
+smoke: false
+split_dir: /kaggle/working/comp8851/shared/splits
+split_path: null
+strict_stats: false
+total_parameters: 17346
+track: unified
+trainable_parameters: 17346
+upstream_repository: https://github.com/blacksingular/GHRN
+valid_every: 1
+weight_decay: 0.0

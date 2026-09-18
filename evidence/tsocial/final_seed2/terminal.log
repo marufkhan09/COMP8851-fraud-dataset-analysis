@@ -1,0 +1,106 @@
+==============================================================================
+CARE-GNN | tsocial | unified | TR40 | seed 2
+==============================================================================
+Run ID: care-gnn_tsocial_unified_tr40_seed2_t4_20260917T022539Z
+Device: cuda:0
+Protocol: vast-v4.4  selection=auprc
+Loaded tsocial: 5,781,065 nodes, 10 features, 1 relation(s)
+[compatibility] NOTE tsocial is single-relation; CARE-GNN's inter-relation aggregator degenerates to one channel. Record this pair as CONDITIONAL (A2 mechanism risk).
+Split: train 2,312,426 | valid 1,156,213 | test 2,312,426
+Training fraud nodes: 69,712
+Building per-relation adjacency lists (5,781,065 nodes x 1 relations)...
+  built in 63.5s
+Parameters: 982 trainable
+[protocol] WARNING unset identity fields: model_source_commit
+Epoch   1/100 | loss 83.772155 | train 61.533s | val AUPRC 0.036573 | val AUROC 0.587926 | thr 0.99 | best epoch 1
+Epoch   2/100 | loss 19.605524 | train 61.402s | val AUPRC 0.056341 | val AUROC 0.713074 | thr 0.01 | best epoch 2
+  [RL] epoch distances: [206.012943]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   3/100 | loss 17.506722 | train 62.369s | val AUPRC 0.055980 | val AUROC 0.712141 | thr 0.99 | best epoch 2
+  [RL] epoch distances: [214.249688]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   4/100 | loss 13.090321 | train 62.477s | val AUPRC 0.048474 | val AUROC 0.679860 | thr 0.99 | best epoch 2
+  [RL] epoch distances: [206.429186]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   5/100 | loss 12.556678 | train 62.031s | val AUPRC 0.072032 | val AUROC 0.741349 | thr 0.01 | best epoch 5
+  [RL] epoch distances: [214.291537]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   6/100 | loss 13.472112 | train 62.310s | val AUPRC 0.055747 | val AUROC 0.712365 | thr 0.99 | best epoch 5
+  [RL] epoch distances: [206.367958]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   7/100 | loss 11.099848 | train 61.982s | val AUPRC 0.085929 | val AUROC 0.766132 | thr 0.59 | best epoch 7
+  [RL] epoch distances: [215.050691]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   8/100 | loss 11.196467 | train 62.156s | val AUPRC 0.057842 | val AUROC 0.713590 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [206.149509]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   9/100 | loss 8.625264 | train 62.093s | val AUPRC 0.057334 | val AUROC 0.730350 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [214.639394]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch  10/100 | loss 9.990600 | train 61.995s | val AUPRC 0.068016 | val AUROC 0.750446 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [206.999954]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch  11/100 | loss 8.170012 | train 62.181s | val AUPRC 0.055627 | val AUROC 0.694587 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [214.149691]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch  12/100 | loss 8.200881 | train 61.420s | val AUPRC 0.079399 | val AUROC 0.760501 | thr 0.08 | best epoch 7
+  [RL] epoch distances: [206.250368]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch  13/100 | loss 9.000452 | train 62.771s | val AUPRC 0.054233 | val AUROC 0.703163 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [214.830545]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch  14/100 | loss 7.213237 | train 62.320s | val AUPRC 0.075247 | val AUROC 0.768765 | thr 0.95 | best epoch 7
+  [RL] epoch distances: [206.74274]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch  15/100 | loss 5.919842 | train 64.684s | val AUPRC 0.100605 | val AUROC 0.792693 | thr 0.37 | best epoch 15
+  [RL] epoch distances: [213.971971]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch  16/100 | loss 6.556748 | train 62.477s | val AUPRC 0.082091 | val AUROC 0.767296 | thr 0.46 | best epoch 15
+  [RL] epoch distances: [205.927267]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+RUN FAILED: KeyboardInterrupt: 
+Traceback (most recent call last):
+  File "/kaggle/working/comp8851/models/care-gnn/scripts/run_one.py", line 365, in _execute
+    probabilities, validation_seconds = predict(
+                                        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/comp8851/models/care-gnn/scripts/run_one.py", line 173, in predict
+    gnn_probabilities, _ = model.to_prob(batch, batch_labels, train_flag=False)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/comp8851/models/care-gnn/caregnn/model.py", line 42, in to_prob
+    gnn_logits, label_logits = self.forward(nodes, labels, train_flag)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/comp8851/models/care-gnn/caregnn/model.py", line 34, in forward
+    embeds, label_scores = self.inter1(nodes, labels, train_flag)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/comp8851/models/care-gnn/caregnn/layers.py", line 367, in forward
+    [batch_scores[itemgetter(*to_neigh)(id_mapping), :].view(-1, 2) for to_neigh in relation]
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+------------------------------------------------------------------------------
+Artefacts: results/results_care-gnn/raw/care-gnn/tsocial/unified/tr40/seed_2
+Artefact bundle complete: True
+RUN STATUS: FAILED

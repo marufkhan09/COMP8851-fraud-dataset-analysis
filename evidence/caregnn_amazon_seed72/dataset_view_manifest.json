@@ -1,0 +1,21 @@
+{
+  "builder": "shared/comp8851/datasets.py",
+  "builder_version": "1.0.0",
+  "dataset_view_id": "amazon_relation_v1",
+  "edge_convention": "symmetric, binarised, duplicates collapsed",
+  "feature_dimension": 25,
+  "nodes": 11944,
+  "relation_edges": {
+    "upu": 351216,
+    "usu": 7132958,
+    "uvu": 2073474
+  },
+  "relations": [
+    "upu",
+    "usu",
+    "uvu"
+  ],
+  "self_loop_policy": "added",
+  "view": "relation",
+  "view_sha256": "1bcfdb9592d2788b5644f7fddc922fd75ea6159db85ef80b10f373cbcb7b920f"
+}

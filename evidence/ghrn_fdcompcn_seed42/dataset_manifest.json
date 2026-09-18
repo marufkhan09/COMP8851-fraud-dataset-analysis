@@ -1,0 +1,46 @@
+{
+  "dataset_id": "fdcompcn",
+  "notes": {
+    "loaded_from_cache": "data/fdcompcn/fdcompcn_canonical.npz",
+    "provenance": "SplitGNN repository, data/FDCompCN.zip -> comp.dgl",
+    "relations": "C-I-C, C-P-C, C-S-C preserved as released",
+    "split_convention": "SplitGNN's own masks are not inherited; COMP8851 IDs are used"
+  },
+  "source_files": {
+    "graph": "data/fdcompcn/comp.dgl"
+  },
+  "source_sha256": {
+    "graph": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+  },
+  "statistics": {
+    "dataset": "fdcompcn",
+    "eligible_nodes": 5317,
+    "feature_dimension": 57,
+    "fraud_nodes": 559,
+    "fraud_percentage": 10.513447432762836,
+    "imbalance_ratio_normal_to_fraud": 8.511627906976743,
+    "ineligible_nodes": 0,
+    "nodes": 5317,
+    "normal_nodes": 4758,
+    "relations": {
+      "homo": {
+        "stored_directed_edges": 7268,
+        "undirected_edges": 3634
+      },
+      "invest_bc2bc": {
+        "stored_directed_edges": 5548,
+        "undirected_edges": 2774
+      },
+      "provide_bc2bc": {
+        "stored_directed_edges": 760,
+        "undirected_edges": 380
+      },
+      "sale_bc2bc": {
+        "stored_directed_edges": 1042,
+        "undirected_edges": 521
+      }
+    },
+    "union_stored_directed_edges": 7268,
+    "union_undirected_edges": 3634
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "convention": "40/20/40 base partition over eligible nodes with nested stratified TR30/TR20/TR10 training subsets; validation and test IDs fixed",
+  "dataset": "tsocial",
+  "source_files": {
+    "graph": "data/tsocial/tsocial"
+  },
+  "split_seed": 2,
+  "splits": {
+    "TR10": {
+      "file": "tsocial_TR10_seed2.npz",
+      "file_sha256": "77e47f27384bd62a8a8dada94e88a71fb0e1341665fce1f3ff66ec97c2511dfb",
+      "test": {
+        "fraud_nodes": 69712,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 2312426,
+        "normal_nodes": 2242714
+      },
+      "train": {
+        "fraud_nodes": 17428,
+        "fraud_percentage": 3.0146720497625004,
+        "nodes": 578106,
+        "normal_nodes": 560678
+      },
+      "unused_nodes": 1734320,
+      "validation": {
+        "fraud_nodes": 34856,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 1156213,
+        "normal_nodes": 1121357
+      }
+    },
+    "TR20": {
+      "file": "tsocial_TR20_seed2.npz",
+      "file_sha256": "6c30e770bc3faf071a0ba567ffb4a67eb81767411fd134144e396dfcc87a1112",
+      "test": {
+        "fraud_nodes": 69712,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 2312426,
+        "normal_nodes": 2242714
+      },
+      "train": {
+        "fraud_nodes": 34856,
+        "fraud_percentage": 3.0146720497625004,
+        "nodes": 1156212,
+        "normal_nodes": 1121356
+      },
+      "unused_nodes": 1156214,
+      "validation": {
+        "fraud_nodes": 34856,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 1156213,
+        "normal_nodes": 1121357
+      }
+    },
+    "TR30": {
+      "file": "tsocial_TR30_seed2.npz",
+      "file_sha256": "0d22ea981cce11e1bbafda61d11fdfc7f5c078d8ef232bf0b8415818e5b66fa4",
+      "test": {
+        "fraud_nodes": 69712,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 2312426,
+        "normal_nodes": 2242714
+      },
+      "train": {
+        "fraud_nodes": 52284,
+        "fraud_percentage": 3.014670311517085,
+        "nodes": 1734319,
+        "normal_nodes": 1682035
+      },
+      "unused_nodes": 578107,
+      "validation": {
+        "fraud_nodes": 34856,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 1156213,
+        "normal_nodes": 1121357
+      }
+    },
+    "TR40": {
+      "file": "tsocial_TR40_seed2.npz",
+      "file_sha256": "f8df68ca30fb387cdd88cbf3a8820f4ebcd3f78d9325a1b9293feca9cb8ac2b4",
+      "test": {
+        "fraud_nodes": 69712,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 2312426,
+        "normal_nodes": 2242714
+      },
+      "train": {
+        "fraud_nodes": 69712,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 2312426,
+        "normal_nodes": 2242714
+      },
+      "unused_nodes": 0,
+      "validation": {
+        "fraud_nodes": 34856,
+        "fraud_percentage": 3.0146694423951295,
+        "nodes": 1156213,
+        "normal_nodes": 1121357
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "artifact_verification": {
+    "advisory_missing": [],
+    "checkpoint_present": true,
+    "complete": true,
+    "epoch_rows": 22,
+    "missing_artifacts": [],
+    "validation_rows": 22
+  },
+  "best_selection_value": 0.7253273913050367,
+  "best_validation_epoch": 1,
+  "best_validation_metrics": {
+    "accuracy": 0.9747173167323084,
+    "auprc": 0.7253273913050367,
+    "auroc": 0.902115738572024,
+    "evaluated_nodes": 7871,
+    "fn": 190,
+    "fp": 9,
+    "fraud_f1": 0.6321626617375231,
+    "fraud_precision": 0.95,
+    "fraud_recall": 0.47368421052631576,
+    "gmean": 0.68783467952644,
+    "macro_f1": 0.8095357088702089,
+    "negatives": 7510,
+    "positives": 361,
+    "threshold": 0.02,
+    "tn": 7501,
+    "tp": 171
+  },
+  "configuration": {
+    "allow_large": false,
+    "architecture": "CARE-GNN one-layer camouflage-resistant aggregator",
+    "batch_size": 1024,
+    "class_imbalance_handling": "per-epoch negative under-sampling (author procedure)",
+    "container_digest": null,
+    "data_path": "data/tfinance",
+    "dataset": "tfinance",
+    "emb_size": 64,
+    "epochs": 100,
+    "eval_batch_size": 1024,
+    "hardware_profile_id": null,
+    "inter": "GNN",
+    "lambda_1": 2.0,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "max_minutes": 45.0,
+    "max_nodes": 2000000,
+    "model": "CARE-GNN",
+    "no_cuda": false,
+    "no_rl": false,
+    "optimizer": "adam",
+    "optimizer_betas": [
+      0.9,
+      0.999
+    ],
+    "optimizer_eps": 1e-08,
+    "patience": 20,
+    "ratio": "TR40",
+    "require_cuda": false,
+    "resolved_device": "cuda:0",
+    "results_root": "results/results_care-gnn/raw",
+    "run_mode": "controlled",
+    "seed": 72,
+    "selection_metric": "auprc",
+    "skip_test": false,
+    "smoke": false,
+    "split_dir": "/kaggle/working/comp8851/shared/splits",
+    "split_path": null,
+    "step_size": 0.02,
+    "strict_stats": false,
+    "total_parameters": 394552,
+    "track": "unified",
+    "trainable_parameters": 982,
+    "under_sample": 1.0,
+    "upstream_repository": "https://github.com/YingtongDou/CARE-GNN",
+    "valid_every": 1
+  },
+  "data_load_seconds": 7.447816191999664,
+  "dataset": "tfinance",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "MKL_NUM_THREADS": "8",
+    "OMP_NUM_THREADS": "8",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "cudnn_version": 90100,
+    "dgl_version": "2.4.0+cu121",
+    "machine": "x86_64",
+    "numpy_version": "2.0.2",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "processor": "x86_64",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.12.13",
+    "sklearn_version": "1.6.1",
+    "torch_version": "2.4.0+cu121"
+  },
+  "heterophily": {
+    "fraud_local_heterophily_mean": 0.4561719669489868,
+    "fraud_local_heterophily_median": 0.37147051619276017,
+    "fraud_local_heterophily_std": 0.29402964151913674,
+    "fraud_nodes_with_labelled_neighbours": 1804,
+    "global_heterophily": 0.029218694479733177,
+    "labelled_edges_considered": 42445086
+  },
+  "model": "CARE-GNN",
+  "protocol_identity": {
+    "adapter_sha256": null,
+    "adapter_version": "relation-view-v1",
+    "config_sha256": "0cbf827257a484790348f2b444530fe3d7099725899f82a91680f01000f2d803",
+    "container_digest": null,
+    "dataset_manifest_version": "comp8851-canonical-v1",
+    "dataset_view_id": "tfinance_relation_v1",
+    "early_stopping_patience": 20,
+    "evaluator_commit": "shared.comp8851==1.0.0",
+    "hardware_profile_id": "t4",
+    "max_epochs": 100,
+    "model_source_commit": null,
+    "notes": {},
+    "protocol_version": "vast-v4.4",
+    "selection_metric": "auprc",
+    "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+    "split_registry_version": "seed2",
+    "split_seed": 2,
+    "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+    "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+    "view_sha256": "5b0b970c6df39bf341e25481f5d799959646c88a7d5e257032f1d2b1d7d3617c"
+  },
+  "ratio": "TR40",
+  "rl_threshold_history": [
+    [
+      0.679999828338623
+    ],
+    [
+      0.679999828338623
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.679999828338623
+    ],
+    [
+      0.679999828338623
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.679999828338623
+    ],
+    [
+      0.679999828338623
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.6599998474121094
+    ],
+    [
+      0.6399998664855957
+    ],
+    [
+      0.6399998664855957
+    ],
+    [
+      0.619999885559082
+    ],
+    [
+      0.619999885559082
+    ],
+    [
+      0.6399998664855957
+    ],
+    [
+      0.6399998664855957
+    ],
+    [
+      0.619999885559082
+    ],
+    [
+      0.619999885559082
+    ]
+  ],
+  "rl_thresholds_final": {
+    "relation_0": 0.619999885559082
+  },
+  "run_finished_utc": "2026-09-16T23:48:47.272520+00:00",
+  "run_id": "care-gnn_tfinance_unified_tr40_seed72_t4_20260916T234314Z",
+  "run_started_utc": "2026-09-16T23:43:52.830301+00:00",
+  "schema_version": "2.0",
+  "selected_threshold": 0.02,
+  "selection_metric": "auprc",
+  "split": {
+    "source": "/kaggle/working/comp8851/shared/splits/tfinance/tfinance_TR40_seed2.npz",
+    "test": {
+      "fraud_nodes": 721,
+      "fraud_percentage": 4.579522357723577,
+      "nodes": 15744,
+      "normal_nodes": 15023
+    },
+    "train": {
+      "fraud_nodes": 722,
+      "fraud_percentage": 4.586456612882734,
+      "nodes": 15742,
+      "normal_nodes": 15020
+    },
+    "unused_nodes": 0,
+    "validation": {
+      "fraud_nodes": 361,
+      "fraud_percentage": 4.586456612882734,
+      "nodes": 7871,
+      "normal_nodes": 7510
+    }
+  },
+  "status": "COMPLETE",
+  "stop_reason": "early stopping: no improvement for 20 epochs",
+  "test_metrics": {
+    "accuracy": 0.9754827235772358,
+    "auprc": 0.7344796952792494,
+    "auroc": 0.8943832124999642,
+    "evaluated_nodes": 15744,
+    "fn": 374,
+    "fp": 12,
+    "fraud_f1": 0.6425925925925926,
+    "fraud_precision": 0.9665738161559888,
+    "fraud_recall": 0.4812760055478502,
+    "gmean": 0.6934634627756567,
+    "inference_seconds": 20.580887455000266,
+    "macro_f1": 0.8149492823525972,
+    "negatives": 15023,
+    "positives": 721,
+    "threshold": 0.02,
+    "tn": 15011,
+    "tp": 347
+  },
+  "timing": {
+    "data_load_seconds": 7.447816191999664,
+    "fit_wall_seconds_including_validation": 270.0125000009998,
+    "mean_train_epoch_seconds": 1.7635202634999958,
+    "median_train_epoch_seconds": 1.6764021635001427,
+    "peak_gpu_memory_mb": 303.03662109375,
+    "std_train_epoch_seconds": 0.4233055522609301,
+    "total_train_epoch_seconds": 38.79744579699991,
+    "total_train_plus_validation_seconds": 262.1427964819991,
+    "total_validation_seconds": 223.34535068499918,
+    "training_epochs_completed": 22
+  },
+  "track": "unified",
+  "train_seed": 72
+}

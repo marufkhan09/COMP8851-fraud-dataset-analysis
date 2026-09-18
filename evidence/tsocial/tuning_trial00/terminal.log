@@ -1,0 +1,61 @@
+==============================================================================
+CARE-GNN | tsocial | unified | TR40 | seed 2
+==============================================================================
+Run ID: care-gnn_tsocial_unified_tr40_seed2_t4_20260917T000328Z
+Device: cuda:0
+Protocol: vast-v4.4  selection=auprc
+Loaded tsocial: 5,781,065 nodes, 10 features, 1 relation(s)
+[compatibility] NOTE tsocial is single-relation; CARE-GNN's inter-relation aggregator degenerates to one channel. Record this pair as CONDITIONAL (A2 mechanism risk).
+[split] generating registry splits for tsocial into /kaggle/working/comp8851/shared/splits/tsocial
+Split: train 2,312,426 | valid 1,156,213 | test 2,312,426
+Training fraud nodes: 69,712
+Building per-relation adjacency lists (5,781,065 nodes x 1 relations)...
+  built in 62.6s
+Parameters: 982 trainable
+[protocol] WARNING unset identity fields: model_source_commit
+Epoch   1/10 | loss 83.772155 | train 61.241s | val AUPRC 0.036573 | val AUROC 0.587926 | thr 0.99 | best epoch 1
+Epoch   2/10 | loss 19.605524 | train 68.874s | val AUPRC 0.056341 | val AUROC 0.713074 | thr 0.01 | best epoch 2
+  [RL] epoch distances: [206.012943]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   3/10 | loss 17.506722 | train 61.910s | val AUPRC 0.055980 | val AUROC 0.712141 | thr 0.99 | best epoch 2
+  [RL] epoch distances: [214.249688]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   4/10 | loss 13.090321 | train 61.446s | val AUPRC 0.048474 | val AUROC 0.679860 | thr 0.99 | best epoch 2
+  [RL] epoch distances: [206.429186]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   5/10 | loss 12.556678 | train 61.734s | val AUPRC 0.072032 | val AUROC 0.741349 | thr 0.01 | best epoch 5
+  [RL] epoch distances: [214.291537]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   6/10 | loss 13.472112 | train 61.498s | val AUPRC 0.055747 | val AUROC 0.712365 | thr 0.99 | best epoch 5
+  [RL] epoch distances: [206.367958]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   7/10 | loss 11.099848 | train 61.004s | val AUPRC 0.085929 | val AUROC 0.766132 | thr 0.59 | best epoch 7
+  [RL] epoch distances: [215.050691]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch   8/10 | loss 11.196467 | train 61.050s | val AUPRC 0.057842 | val AUROC 0.713590 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [206.149509]
+  [RL] rewards: [1]
+  [RL] thresholds: [0.52]
+Epoch   9/10 | loss 8.625264 | train 62.210s | val AUPRC 0.057334 | val AUROC 0.730350 | thr 0.99 | best epoch 7
+  [RL] epoch distances: [214.639394]
+  [RL] rewards: [-1]
+  [RL] thresholds: [0.5]
+Epoch  10/10 | loss 9.990600 | train 62.445s | val AUPRC 0.068016 | val AUROC 0.750446 | thr 0.99 | best epoch 7
+--skip-test: the test set was not loaded, scored or written.
+This run is a tuning trial and reports validation metrics only.
+------------------------------------------------------------------------------
+validation auprc: 0.085929
+validation auroc: 0.766132
+validation macro_f1: 0.553821
+threshold: 0.59 (chosen on validation Macro-F1)
+best validation epoch: 7
+------------------------------------------------------------------------------
+Artefacts: results/results_care-gnn/tuning/care-gnn_tsocial/trial_00/care-gnn/tsocial/unified/tr40/seed_2
+Artefact bundle complete: True
+RUN STATUS: COMPLETE
