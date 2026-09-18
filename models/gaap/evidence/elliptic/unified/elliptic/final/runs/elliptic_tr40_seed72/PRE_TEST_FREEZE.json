@@ -1,0 +1,26 @@
+{
+  "ratio": "TR40",
+  "seed": 72,
+  "best_checkpoint": "/workspace/gaap_vast/unified/elliptic/final/runs/elliptic_tr40_seed72/checkpoints/best.ckpt",
+  "selected_threshold": 0.5712346434593201,
+  "threshold_selection": "validation macro-F1 only",
+  "validation_macro_f1": 0.8801810467775724,
+  "validation_metrics": {
+    "auprc": 0.8341446446357401,
+    "auroc": 0.9436300350928142,
+    "macro_f1": 0.8801810467775724,
+    "precision": 0.9344608879492601,
+    "recall": 0.6858029480217223,
+    "fraud_f1": 0.7910514541387025,
+    "specificity": 0.9916633050961409,
+    "gmean": 0.8246730370758449,
+    "tn": 7375,
+    "fp": 62,
+    "fn": 405,
+    "tp": 884
+  },
+  "test_used_for_checkpoint_selection": false,
+  "test_used_for_threshold_selection": false,
+  "test_predictions_generated": false,
+  "configuration_checkpoint_threshold_frozen": true
+}
