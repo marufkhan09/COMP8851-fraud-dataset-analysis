@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "model": "GAAP",
+  "dataset": "T-Finance",
+  "final_runs_complete": 12,
+  "expected_final_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "repository_commit": "6a7dbb0447c4897504525de49e41a0526ee777f8",
+  "canonical_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "adapter_sha256": "7db7e48617038b35dbac041a6b90426f25237886e157d2f54776bbbd756d69ae",
+  "winner_json": "/workspace/gaap_vast/unified/tfinance/tuning/GAAP_TFINANCE_FROZEN_WINNER.json",
+  "frozen_config": {
+    "winner_trial": 10,
+    "d_hidden": 64,
+    "n_bins": 32,
+    "lr": 0.002,
+    "weight_decay": 0.0,
+    "gnn_n_layers": 3,
+    "gnn_dropout": 0.0,
+    "gnn_agg": "max_pool",
+    "use_dyple": true,
+    "use_mha": true,
+    "bs": 64,
+    "val_bs": 1280,
+    "norm_type": "norm01",
+    "preprocess": "None"
+  },
+  "checkpoint_selection": "validation AUPRC only",
+  "threshold_selection": "validation Macro-F1 over 0.01..0.99; tie fraud recall then closeness to 0.5",
+  "test_isolation": "test evaluated once per final run only after config, checkpoint and threshold frozen",
+  "ratio_summary": {
+    "TR40": {
+      "auprc": {
+        "mean": 0.8873220445903458,
+        "sd": 0.01567103809362577
+      },
+      "auroc": {
+        "mean": 0.9748186026789334,
+        "sd": 0.0013288229819019759
+      },
+      "macro_f1": {
+        "mean": 0.9267606360105098,
+        "sd": 0.0006680114222130391
+      },
+      "fraud_precision": {
+        "mean": 0.8987768809227056,
+        "sd": 0.02380087223328838
+      },
+      "fraud_recall": {
+        "mean": 0.8250230840258541,
+        "sd": 0.019407063302847406
+      },
+      "fraud_f1": {
+        "mean": 0.8599664392764099,
+        "sd": 0.0012302892050466915
+      },
+      "gmean": {
+        "mean": 0.9062132471389116,
+        "sd": 0.010081423485657973
+      }
+    },
+    "TR30": {
+      "auprc": {
+        "mean": 0.8988238068671291,
+        "sd": 0.004469774166821959
+      },
+      "auroc": {
+        "mean": 0.9706829951764053,
+        "sd": 0.0022116156285437293
+      },
+      "macro_f1": {
+        "mean": 0.9243637692768684,
+        "sd": 0.001885153939028826
+      },
+      "fraud_precision": {
+        "mean": 0.8937923056200198,
+        "sd": 0.01805211966076221
+      },
+      "fraud_recall": {
+        "mean": 0.8204062788550323,
+        "sd": 0.010019637310346554
+      },
+      "fraud_f1": {
+        "mean": 0.8553830179945673,
+        "sd": 0.0035243296506096036
+      },
+      "gmean": {
+        "mean": 0.9036167367444728,
+        "sd": 0.005129147677885844
+      }
+    },
+    "TR20": {
+      "auprc": {
+        "mean": 0.8940622037294705,
+        "sd": 0.006085119344917054
+      },
+      "auroc": {
+        "mean": 0.9734093260509461,
+        "sd": 0.0021181568218875987
+      },
+      "macro_f1": {
+        "mean": 0.9306198768608903,
+        "sd": 0.00277897279014197
+      },
+      "fraud_precision": {
+        "mean": 0.9065568425684347,
+        "sd": 0.013241148589340924
+      },
+      "fraud_recall": {
+        "mean": 0.8314866112650044,
+        "sd": 0.007107481218070469
+      },
+      "fraud_f1": {
+        "mean": 0.8673413512587915,
+        "sd": 0.0052843044761838875
+      },
+      "gmean": {
+        "mean": 0.909969035823659,
+        "sd": 0.00373474165431863
+      }
+    },
+    "TR10": {
+      "auprc": {
+        "mean": 0.8943912223506413,
+        "sd": 0.0021132536833922966
+      },
+      "auroc": {
+        "mean": 0.9733019509836124,
+        "sd": 0.0006823676755887783
+      },
+      "macro_f1": {
+        "mean": 0.9253567627884692,
+        "sd": 0.0005793403951025072
+      },
+      "fraud_precision": {
+        "mean": 0.8762903749133804,
+        "sd": 0.01892550959374213
+      },
+      "fraud_recall": {
+        "mean": 0.8397968605724838,
+        "sd": 0.016052944275820557
+      },
+      "fraud_f1": {
+        "mean": 0.8574198297878551,
+        "sd": 0.0010270201455501518
+      },
+      "gmean": {
+        "mean": 0.9137460347148908,
+        "sd": 0.008245229822662787
+      }
+    }
+  },
+  "final_runs_csv": "/workspace/gaap_vast/unified/tfinance/final/GAAP_TFINANCE_FINAL_12_RUNS.csv",
+  "ratio_summary_csv": "/workspace/gaap_vast/unified/tfinance/final/GAAP_TFINANCE_FINAL_RATIO_SUMMARY.csv",
+  "gpu": "NVIDIA RTX A6000",
+  "created_utc": "2026-09-18T09:40:50.111099+00:00"
+}
