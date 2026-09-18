@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "model": "GAAP",
+  "dataset": "FDCompCN",
+  "final_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "winner_trial": 6,
+  "winner_config": {
+    "d_hidden": 64,
+    "gnn_dropout": 0.2,
+    "lr": 0.0005
+  },
+  "winner_sha256": "523bd4b1a597f332d46c2406d64cc637069f7b5ae94287d29d1a91b779425c03",
+  "checkpoint_selection": "validation AUPRC",
+  "threshold_selection": "validation macro-F1",
+  "controlled_validation_seed_nodes_only": true,
+  "test_used_for_selection": false,
+  "test_used_for_threshold": false,
+  "test_predictions_generated_before_threshold_freeze": false,
+  "test_evaluated_once_per_run": true,
+  "homo_as_fourth_relation": false,
+  "repository_commit": "6a7dbb0447c4897504525de49e41a0526ee777f8",
+  "population_sd": true
+}

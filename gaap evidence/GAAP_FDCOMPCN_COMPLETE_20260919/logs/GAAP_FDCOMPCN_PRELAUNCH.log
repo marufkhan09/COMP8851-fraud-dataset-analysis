@@ -1,0 +1,26 @@
+============================================================
+ i3 — GAAP × FDCOMPCN PRELAUNCH
+============================================================
+
+===== AMAZON COMPLETION SAFETY =====
+PRIOR_AMAZON_FINAL=PASS
+
+===== GPU =====
+NVIDIA RTX A6000, 49140 MiB, 22 MiB
+GPU_IDLE=PASS
+
+===== GAAP SOURCE =====
+GAAP_COMMIT=6a7dbb0447c4897504525de49e41a0526ee777f8
+GAAP_AUTHOR_REPO_CLEAN=PASS
+
+===== GAAP ENV =====
+TORCH=2.2.0+cu118
+DGL=2.3.0+cu118
+CUDA_AVAILABLE=True
+GPU=NVIDIA RTX A6000
+GAAP_ENV_GATE=PASS
+
+===== SEARCH EXACT FDCOMPCN SOURCE + SPLIT =====
+SPLIT=/workspace/COMP8851-recovery/models/pmp/evidence/fdcompcn/extracted/workspace/pmp_vast/shared/fdcompcn/fdcompcn_seed2_nested_splits.npz
+SPLIT_SHA256=5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168
+MISSING_EXACT_ASSETS=source
