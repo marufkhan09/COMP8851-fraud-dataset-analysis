@@ -1,0 +1,218 @@
+============================================================
+ PMP × ELLIPTIC — FINAL 12-RUN UNIFIED GRID
+============================================================
+Ratios=TR40/TR30/TR20/TR10
+Seeds=2/42/72
+Generic tuning before final=NO
+Checkpoint selection=validation AUPRC
+Threshold selection=validation Macro-F1
+Test used for selection=NO
+SOURCE_GPU_RAW_HASH_GATE=PASS
+GPU=NVIDIA RTX A6000
+EXACT_FROZEN_SPLIT_FOUND=/workspace/pmp_vast/shared/elliptic/elliptic_chronological_nested_splits.npz
+ELLIPTIC_SPLIT_SHA256=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+ELLIPTIC_CHRONOLOGY_GATE=PASS
+===== PMP × ELLIPTIC — 2-EPOCH COMPATIBILITY SMOKE =====
+IDENTITY_GPU_GATE=PASS
+ELLIPTIC_RAW_HASH_GATE=PASS
+ELLIPTIC_166_FEATURE_LABEL_GATE=PASS
+TIME_STEP_RETAINED_AS_FEATURE=YES
+UNKNOWN_NODES_RETAINED_STRUCTURALLY=157205
+ELLIPTIC_SPLIT_GATE=PASS
+ELLIPTIC_SPLIT_SHA256=1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc
+DIRECTED_RAW_EDGES_PRESERVED=234355
+REVERSE_EDGES_ADDED=NO
+SELF_LOOPS_ADDED=NO
+TRANSFER_CONFIG_SOURCE=PMP_NATIVE_TFINANCE_LA-SAGE-S
+HID=256 DROPOUT=0.4 LR=0.005 LAYERS=1 BATCH=256 NORM_FEAT=TRUE
+HID_DIM_COMPATIBILITY_SOURCE=PMP_OFFICIAL_AMAZON_CONFIG_256
+HID_DIM_REASON=ELLIPTIC_166_GT_TFINANCE_HID64_TRIGGERS_AUTHOR_DIMENSION_BUG
+PERFORMANCE_SPECIFIC_TUNING=NO
+MODEL_SIDE_FEATURE_NORMALIZATION=PMP_AUTHOR_CONFIG
+PMP_AUTHOR_MODEL_SIDE_NORMALIZATION=YES
+PROJECT_SPECIFIC_EXTRA_NORMALIZATION=NO
+PMP_TRAIN_LABEL_EXPOSURE_GATE=PASS
+VAL_TEST_PARTITION_LABELS_HIDDEN=PASS
+VERIFIED_SMOKE_SETUP_REUSED=PASS
+RAW_CLASS_ALIGNMENT_GATE=PASS
+RAW_UNKNOWN_NODES=157205
+ELLIPTIC_166_FEATURE_FINAL_GATE=PASS
+UNKNOWN_NODES_RETAINED_STRUCTURALLY=157205
+DIRECTED_RAW_EDGES_PRESERVED=234355
+HID_DIM=256
+DROPOUT=0.4
+LR=0.005
+WEIGHT_DECAY=0.0
+NORM_FEAT=TRUE
+PERFORMANCE_SPECIFIC_TUNING=NO
+FINAL_CONFIG_FROZEN=PASS
+FROZEN_CONFIG_SHA256=0149e2f7cdba425e0f7dec445ca347a76219b02c73476f58d439c53130b83bf0
+
+===== FINAL RUN elliptic_tr40_seed2 =====
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=001 loss=0.344485 val_AUPRC=0.322261 best=0.322261@1 patience=0/20 train=4.487s val=1.047s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=002 loss=0.334662 val_AUPRC=0.460667 best=0.460667@2 patience=0/20 train=2.567s val=1.061s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=003 loss=0.248227 val_AUPRC=0.551338 best=0.551338@3 patience=0/20 train=2.534s val=1.096s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=007 loss=0.232867 val_AUPRC=0.568065 best=0.568065@7 patience=0/20 train=2.832s val=1.196s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=010 loss=1.601989 val_AUPRC=0.502726 best=0.568065@7 patience=3/20 train=2.668s val=1.164s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=020 loss=0.123621 val_AUPRC=0.533633 best=0.568065@7 patience=13/20 train=2.494s val=1.155s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=026 loss=0.061205 val_AUPRC=0.568839 best=0.568839@26 patience=0/20 train=2.885s val=1.205s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=030 loss=0.052181 val_AUPRC=0.564290 best=0.568839@26 patience=4/20 train=2.577s val=1.143s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=032 loss=0.049356 val_AUPRC=0.571480 best=0.571480@32 patience=0/20 train=2.551s val=1.105s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=033 loss=0.047990 val_AUPRC=0.579374 best=0.579374@33 patience=0/20 train=2.495s val=1.108s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=037 loss=0.043644 val_AUPRC=0.588224 best=0.588224@37 patience=0/20 train=2.653s val=1.081s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=039 loss=0.041196 val_AUPRC=0.588438 best=0.588438@39 patience=0/20 train=2.654s val=1.122s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=040 loss=0.041502 val_AUPRC=0.584525 best=0.588438@39 patience=1/20 train=2.505s val=1.138s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=041 loss=0.039864 val_AUPRC=0.593250 best=0.593250@41 patience=0/20 train=2.604s val=1.185s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=050 loss=0.263836 val_AUPRC=0.479579 best=0.593250@41 patience=9/20 train=2.576s val=1.114s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=060 loss=0.154600 val_AUPRC=0.554528 best=0.593250@41 patience=19/20 train=2.428s val=1.164s
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 epoch=061 loss=0.194071 val_AUPRC=0.546885 best=0.593250@41 patience=20/20 train=2.490s val=1.133s
+EARLY_STOP elliptic_tr40_seed2 epoch=61 best_epoch=41
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+elliptic_tr40_seed2 FROZEN checkpoint_epoch=41 val_AUPRC=0.593250 threshold=0.44
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/dataloading/dataloader.py:1076: DGLWarning: Dataloader CPU affinity opt is not enabled, consider switching it on (see enable_cpu_affinity() or CPU best practices for DGL [https://docs.dgl.ai/tutorials/cpu/cpu_best_practises.html])
+  dgl_warning(
+/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/core.py:82: DGLWarning: The input graph for the user-defined edge function does not contain valid edges
+  dgl_warning(
+Traceback (most recent call last):
+  File "/workspace/pmp_vast/scripts/09_pmp_elliptic_final_12_runs.py", line 2428, in <module>
+    ) = T.evaluation(
+  File "/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/workspace/pmp_vast/repo/PMP/training_procedure/evaluate.py", line 134, in evaluate
+    batch_logits = model(blocks, relations, val_test_feats)
+  File "/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/pmp_vast/repo/PMP/model/LASAGE_S.py", line 442, in forward
+    layer_emb.append(layer(b_graph, h))
+  File "/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/pmp_vast/repo/PMP/model/LASAGE_S.py", line 311, in forward
+    neigh_fr = graph.dstdata["neigh_fr"] # 中心节点聚合邻居后的表示
+  File "/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/view.py", line 80, in __getitem__
+    return self._graph._get_n_repr(self._ntid, self._nodes)[key]
+  File "/workspace/pmp_vast/envs/pmp-author/lib/python3.10/site-packages/dgl/frame.py", line 688, in __getitem__
+    return self._columns[name].data
+KeyError: 'neigh_fr'

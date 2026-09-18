@@ -1,0 +1,24 @@
+{
+  "dataset": "FDCompCN",
+  "canonical_source": "/workspace/gaap_vast/shared/fdcompcn/comp.dgl",
+  "canonical_source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "nodes": 5317,
+  "features": 57,
+  "fraud": 559,
+  "normal": 4758,
+  "semantic_relations": [
+    "invest_bc2bc",
+    "provide_bc2bc",
+    "sale_bc2bc"
+  ],
+  "semantic_raw_memberships": 20693,
+  "semantic_directed_union_edges": 8980,
+  "stored_homo_edges": 10059,
+  "homo_equals_semantic_union": true,
+  "semantic_only_edges": 0,
+  "homo_only_edges": 0,
+  "adapter_policy": "directed deduplicated union of invest_bc2bc, provide_bc2bc, sale_bc2bc",
+  "homo_as_fourth_relation": false,
+  "reverse_edges_added": false
+}

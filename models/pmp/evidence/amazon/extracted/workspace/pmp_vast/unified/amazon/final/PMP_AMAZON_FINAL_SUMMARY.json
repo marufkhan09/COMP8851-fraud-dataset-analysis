@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "dataset": "Amazon",
+  "model": "PMP / LA-SAGE-S",
+  "final_runs_complete": 12,
+  "expected_final_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "dataset_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "winner_sha256": "56986107585136ff633afe7254a4060b6a0d83420330524f68f97ca6f692c5e6",
+  "frozen_config": {
+    "status": "FROZEN",
+    "dataset": "Amazon",
+    "winner_trial": 2,
+    "lr": 0.01,
+    "weight_decay": 1e-05,
+    "hid_dim": 256,
+    "dropout": 0.6,
+    "batch_size": 128,
+    "n_layer": 1,
+    "homo": true,
+    "full_neighbors": true,
+    "relation_agg": "cat",
+    "resi": 0.2,
+    "best_epoch": 27,
+    "best_val_auprc": 0.9284944462600302,
+    "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+    "dataset_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+    "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+    "tuning_policy": "TR40 seed2; 12 LR\u00d7WD trials; author Amazon architecture/dropout fixed",
+    "test_accessed_during_tuning": false
+  },
+  "ratio_summary": {
+    "TR40": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.9076666443337382,
+          "sd": 0.004346746314003166
+        },
+        "auroc": {
+          "mean": 0.9739173970224356,
+          "sd": 0.0028734354199203734
+        },
+        "macro_f1": {
+          "mean": 0.918017630652226,
+          "sd": 0.0048209627785632935
+        },
+        "fraud_precision": {
+          "mean": 0.9263264501047456,
+          "sd": 0.015086061373997591
+        },
+        "fraud_recall": {
+          "mean": 0.7865853658536586,
+          "sd": 0.02604879190645591
+        },
+        "fraud_f1": {
+          "mean": 0.850413885279631,
+          "sd": 0.00911831918558872
+        },
+        "gmean": {
+          "mean": 0.8838725095860283,
+          "sd": 0.01393870337724339
+        }
+      },
+      "total_train_seconds": {
+        "mean": 1217.5832255033504,
+        "sd": 315.3752129364101
+      },
+      "test_inference_seconds": {
+        "mean": 6.232581981663922,
+        "sd": 2.130059686237858
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 524.91357421875,
+        "sd": 0.0
+      }
+    },
+    "TR30": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.8998077788812476,
+          "sd": 0.007115531327496261
+        },
+        "auroc": {
+          "mean": 0.9731272612438401,
+          "sd": 0.003143335357007731
+        },
+        "macro_f1": {
+          "mean": 0.9222640446825143,
+          "sd": 0.0019826113571241584
+        },
+        "fraud_precision": {
+          "mean": 0.926831149224058,
+          "sd": 0.02823151665804009
+        },
+        "fraud_recall": {
+          "mean": 0.7997967479674797,
+          "sd": 0.01564512633977704
+        },
+        "fraud_f1": {
+          "mean": 0.8582842638670334,
+          "sd": 0.003293855927086577
+        },
+        "gmean": {
+          "mean": 0.8912689710164011,
+          "sd": 0.0073841083358597735
+        }
+      },
+      "total_train_seconds": {
+        "mean": 751.840322255984,
+        "sd": 29.218425514720792
+      },
+      "test_inference_seconds": {
+        "mean": 4.784803006000099,
+        "sd": 3.019112221896946
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 524.91357421875,
+        "sd": 0.0
+      }
+    },
+    "TR20": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.8923722871809273,
+          "sd": 0.002952027773241775
+        },
+        "auroc": {
+          "mean": 0.9694611871790074,
+          "sd": 0.0010260870942084875
+        },
+        "macro_f1": {
+          "mean": 0.9151122946221969,
+          "sd": 0.0012323795263885827
+        },
+        "fraud_precision": {
+          "mean": 0.9383560238146925,
+          "sd": 0.03426833426483864
+        },
+        "fraud_recall": {
+          "mean": 0.7693089430894308,
+          "sd": 0.020752619773030643
+        },
+        "fraud_f1": {
+          "mean": 0.8449005939853534,
+          "sd": 0.00183104818938245
+        },
+        "gmean": {
+          "mean": 0.874648995370098,
+          "sd": 0.010266457586324485
+        }
+      },
+      "total_train_seconds": {
+        "mean": 747.2061162926693,
+        "sd": 559.3125371924682
+      },
+      "test_inference_seconds": {
+        "mean": 3.11686886066794,
+        "sd": 0.3096750321210645
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 524.91357421875,
+        "sd": 0.0
+      }
+    },
+    "TR10": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.8359244454282191,
+          "sd": 0.009623812679198955
+        },
+        "auroc": {
+          "mean": 0.9420273610504647,
+          "sd": 0.004351249209602712
+        },
+        "macro_f1": {
+          "mean": 0.9017982779510954,
+          "sd": 0.0007187115852902217
+        },
+        "fraud_precision": {
+          "mean": 0.9047732722912579,
+          "sd": 0.013637712523187056
+        },
+        "fraud_recall": {
+          "mean": 0.7510162601626016,
+          "sd": 0.009314178241780172
+        },
+        "fraud_f1": {
+          "mean": 0.8206550905863748,
+          "sd": 0.0012972057845481062
+        },
+        "gmean": {
+          "mean": 0.8629891042420138,
+          "sd": 0.004768085523140082
+        }
+      },
+      "total_train_seconds": {
+        "mean": 130.1927891190256,
+        "sd": 14.225104352577814
+      },
+      "test_inference_seconds": {
+        "mean": 2.879028311666237,
+        "sd": 0.20427389067907933
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 524.91357421875,
+        "sd": 0.0
+      }
+    }
+  },
+  "gpu": "NVIDIA RTX A6000",
+  "timing_note": "Cross-host runtime comparison remains subject to the project hardware-calibration gate."
+}

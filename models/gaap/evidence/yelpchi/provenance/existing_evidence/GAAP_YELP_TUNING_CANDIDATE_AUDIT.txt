@@ -1,0 +1,457 @@
+============================================================
+ GAAP × YELPCHI — PRE-TUNING CANDIDATE AUDIT
+============================================================
+
+===== 1. SOURCE / SMOKE GATES =====
+COMMIT=6a7dbb0447c4897504525de49e41a0526ee777f8
+SMOKE_RESULT_GATE=PASS
+SMOKE_BEST_VAL_AUPRC = 0.5078296065330505
+SMOKE_PEAK_GPU_MB = 13195.822265625
+
+===== 2. ALL CONFIG FILES =====
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/dgraphfin.yaml
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/elliptic.yaml
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tfinance.yaml
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tolokers.yaml
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tsocial.yaml
+/workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/yelp.yaml
+/workspace/gaap_vast/repo/GAAP/config/config.yaml
+
+===== 3. EVERY YELP CONFIG =====
+YELP_CONFIG_COUNT = 2
+
+----------------------------------------
+CONFIG = config/SAGE_MiniF_DyPLE_MHA/yelp.yaml
+model_name = 'SAGE'
+loader_type = 'MiniF'
+data_name = 'yelp'
+norm_type = 'norm01'
+preprocess = 'None'
+n_bins = 32
+d_hidden = 64
+use_dyple = True
+use_mha = True
+gnn_n_layers = 3
+gnn_dropout = 0.1
+gnn_agg = 'max_pool'
+bs = 128
+val_bs = 1280
+lr = 0.001
+weight_decay = 0
+max_epochs = 22222
+patience = 31
+
+----------------------------------------
+CONFIG = config/config.yaml
+model_name = 'SAGE'
+loader_type = 'MiniF'
+data_name = 'yelp'
+norm_type = 'norm01'
+preprocess = 'None'
+n_bins = 32
+d_hidden = 64
+use_dyple = False
+gnn_n_layers = 3
+gnn_dropout = 0.1
+gnn_agg = 'max_pool'
+bs = 128
+val_bs = 1280
+lr = 0.001
+weight_decay = 0
+max_epochs = 11111
+patience = 30
+
+===== 4. SAME GAAP CONFIG FAMILY — DATASET-SPECIFIC VALUES =====
+
+FILE = dgraphfin.yaml
+  data_name = 'dgraphfin'
+  d_hidden = 40
+  n_bins = 30
+  gnn_n_layers = 3
+  gnn_dropout = 0.1
+  gnn_agg = 'max_pool'
+  bs = 2048
+  val_bs = 2048
+  lr = 0.002
+  weight_decay = 0
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+FILE = elliptic.yaml
+  data_name = 'elliptic'
+  d_hidden = 128
+  n_bins = 16
+  gnn_n_layers = 4
+  gnn_dropout = 0.1
+  gnn_agg = 'max_pool'
+  bs = 256
+  val_bs = 1280
+  lr = 0.001
+  weight_decay = 0
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+FILE = tfinance.yaml
+  data_name = 'tfinance'
+  d_hidden = 128
+  n_bins = 40
+  gnn_n_layers = 3
+  gnn_dropout = 0
+  gnn_agg = 'max_pool'
+  bs = 64
+  val_bs = 1280
+  lr = 0.001
+  weight_decay = 0
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+FILE = tolokers.yaml
+  data_name = 'tolokers'
+  d_hidden = 64
+  n_bins = 32
+  gnn_n_layers = 4
+  gnn_dropout = 0.2
+  gnn_agg = 'max_pool'
+  bs = 64
+  val_bs = 1280
+  lr = 0.001
+  weight_decay = 0.0001
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+FILE = tsocial.yaml
+  data_name = 'tsocial'
+  d_hidden = 64
+  n_bins = 16
+  gnn_n_layers = 2
+  gnn_dropout = 0
+  gnn_agg = 'max_pool'
+  bs = 2048
+  val_bs = 5120
+  lr = 0.001
+  weight_decay = 0
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+FILE = yelp.yaml
+  data_name = 'yelp'
+  d_hidden = 64
+  n_bins = 32
+  gnn_n_layers = 3
+  gnn_dropout = 0.1
+  gnn_agg = 'max_pool'
+  bs = 128
+  val_bs = 1280
+  lr = 0.001
+  weight_decay = 0
+  norm_type = 'norm01'
+  preprocess = 'None'
+  use_dyple = True
+  use_mha = True
+
+===== DISTINCT SOURCE-SUPPORTED VALUES =====
+d_hidden: [40, 128, 64]
+n_bins: [30, 16, 40, 32]
+gnn_n_layers: [3, 4, 2]
+gnn_dropout: [0.1, 0, 0.2]
+gnn_agg: ['max_pool']
+bs: [2048, 256, 64, 128]
+val_bs: [2048, 1280, 5120]
+lr: [0.002, 0.001]
+weight_decay: [0, 0.0001]
+norm_type: ['norm01']
+preprocess: ['None']
+use_dyple: [True]
+use_mha: [True]
+
+===== 5. SOURCE REFERENCES TO TUNABLE KEYS =====
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:51:    def __init__(self, d_in, n_bins, dy_raw_bin_width=True, n_heads=1):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:53:        self.n_bins = n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:56:        self.raw_bin_width = nn.Parameter(torch.randn(d_in, self.n_heads, self.n_bins),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:58:        self.register_buffer('mask', torch.tril(torch.ones(self.n_bins, self.n_bins)))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:60:        mask_left = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:63:        mask_right = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:66:        self.d_out = self.o_d_in * self.n_heads * self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:73:        new_bin_axis = torch.cat((zeros, bin_axis), dim=-1)[..., :self.n_bins]
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:80:        x = rate.view(-1, self.o_d_in, self.n_bins)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:84:        n_bins = self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:85:        mask_left = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:86:        mask_right = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:89:            n_bins=n_bins,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:95:        bins_matrix = torch.zeros((x.shape[1], n_bins + 1))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:137:    def __init__(self, d_in, d_feat_emb, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:141:        self.dy_ple_layer = DyPLEC(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:142:        self.nlinear = NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:157:    def __init__(self, d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout, use_feat_emb=False):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:161:        self.dy_ple_layer = DyPLEC(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:162:        self.nlinear = NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:164:        self.linear = nn.Linear(d_in * d_feat_emb, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:165:        self.bn1 = nn.BatchNorm1d(d_hidden) if pre_use_bn else nn.Identity()
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:265:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:268:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:269:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:277:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:279:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:280:        gnn_agg = kwargs['gnn_agg']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:283:        self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:290:        if use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:291:            self.embedding0 = DyPLEM(d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:293:        elif not use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:295:                nn.Linear(d_in, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:297:                nn.BatchNorm1d(d_hidden) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:303:        for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:305:                SAGEConv(d_hidden, d_hidden, gnn_agg, activation=self.act, feat_drop=gnn_dropout,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:306:                         norm=nn.BatchNorm1d(d_hidden) if gnn_use_bn else None)  # , activation=self.act , residual=True
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:310:            nn.Dropout(gnn_dropout),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:311:            nn.Linear(d_hidden, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:313:            nn.BatchNorm1d(d_hidden) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:316:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:318:                nn.Dropout(gnn_dropout),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:319:                nn.Linear(d_hidden, d_hidden*mha_n_heads),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:321:                nn.BatchNorm1d(d_hidden*mha_n_heads) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:323:            self.mha = nn.MultiheadAttention(embed_dim=d_hidden*mha_n_heads, num_heads=mha_n_heads, dropout=0., batch_first=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:327:        self.register_buffer('his_emb', torch.rand((n_nodes, d_hidden*mha_n_heads)))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:328:        self.fc_out = nn.Linear(d_hidden*mha_n_heads, n_classes)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:349:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:361:    def __init__(self, d_in, n_classes, lr, **kwargs):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:362:        super().__init__(d_in, n_classes, lr, **kwargs)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:374:        lr = self.trainer.optimizers[0].param_groups[0]['lr']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:375:        self.log('lr', lr, on_epoch=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:415:        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:416:        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.8, patience=10, verbose=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:419:            'lr_scheduler': {
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:53:    def __init__(self, d_in, n_bins, dy_raw_bin_width=True, n_heads=1):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:55:        self.n_bins = n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:58:        self.raw_bin_width = nn.Parameter(torch.randn(d_in, self.n_heads, self.n_bins),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:60:        self.register_buffer('mask', torch.tril(torch.ones(self.n_bins, self.n_bins)))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:62:        mask_left = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:65:        mask_right = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:68:        self.d_out = self.o_d_in * self.n_heads * self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:75:        new_bin_axis = torch.cat((zeros, bin_axis), dim=-1)[..., :self.n_bins]
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:82:        x = rate.view(-1, self.o_d_in, self.n_bins)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:86:        n_bins = self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:87:        mask_left = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:88:        mask_right = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:91:            n_bins=n_bins,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:97:        bins_matrix = torch.zeros((x.shape[1], n_bins + 1))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:139:    def __init__(self, d_in, d_feat_emb, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:143:        self.dy_ple_layer = DyPLEC(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:144:        self.nlinear = NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:159:    def __init__(self, d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout, use_feat_emb=False):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:163:        self.dy_ple_layer = DyPLEC(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:164:        self.nlinear = NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:166:        self.linear = nn.Linear(d_in * d_feat_emb, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:167:        self.bn1 = nn.BatchNorm1d(d_hidden) if pre_use_bn else nn.Identity()
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:402:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:405:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:406:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:414:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:416:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:417:        gnn_agg = kwargs['gnn_agg']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:420:        self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:427:        if use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:428:            self.embedding0 = DyPLEM(d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:430:        elif not use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:432:                nn.Linear(d_in, d_hidden*8),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:434:                nn.BatchNorm1d(d_hidden*8) if gnn_use_bn else None,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:435:                nn.Linear(d_hidden*8, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:437:                nn.BatchNorm1d(d_hidden) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:443:        for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:445:                SAGEConv(d_hidden, d_hidden, gnn_agg, activation=self.act, feat_drop=gnn_dropout,
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:446:                         norm=nn.BatchNorm1d(d_hidden) if gnn_use_bn else None)  # , activation=self.act , residual=True
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:450:            nn.Dropout(gnn_dropout),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:451:            nn.Linear(d_hidden, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:453:            nn.BatchNorm1d(d_hidden) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:456:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:458:            #     nn.Dropout(gnn_dropout),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:459:            #     nn.Linear(d_hidden, d_hidden*mha_n_heads),
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:461:            #     nn.BatchNorm1d(d_hidden*mha_n_heads) if gnn_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:463:            # self.mha = nn.MultiheadAttention(embed_dim=d_hidden*mha_n_heads, num_heads=mha_n_heads, dropout=0., batch_first=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:464:            # self.Wk = nn.Linear(d_hidden, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:465:            # self.Wq = nn.Linear(d_hidden, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:466:            # self.Wv = nn.Linear(d_hidden, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:468:            self.register_buffer('his_emb', torch.rand((n_nodes, d_hidden*mha_n_heads)))
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:473:        self.fc_out = nn.Linear(d_hidden*mha_n_heads, n_classes)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:494:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:518:    def __init__(self, d_in, n_classes, lr, **kwargs):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:519:        super().__init__(d_in, n_classes, lr, **kwargs)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:521:        self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:522:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:526:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:534:        lr = self.trainer.optimizers[0].param_groups[0]['lr']
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:535:        self.log('lr', lr, on_epoch=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:557:            if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:577:        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:578:        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.8, patience=10, verbose=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:581:            'lr_scheduler': {
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:27:    def __init__(self, d_in, n_bins, dy_raw_bin_width=True, n_heads=1):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:29:        self.n_bins = n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:32:        self.raw_bin_width = nn.Parameter(torch.randn(d_in, self.n_heads, self.n_bins),
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:34:        self.register_buffer('mask', torch.tril(torch.ones(self.n_bins, self.n_bins)))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:36:        mask_left = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:39:        mask_right = torch.ones((d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:42:        self.d_out = self.o_d_in * self.n_heads * self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:49:        new_bin_axis = torch.cat((zeros, bin_axis), dim=-1)[..., :self.n_bins]
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:56:        x = rate.view(-1, self.o_d_in, self.n_bins)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:60:        n_bins = self.n_bins
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:61:        mask_left = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:62:        mask_right = torch.ones((self.o_d_in, self.n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:65:            n_bins=n_bins,
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:71:        bins_matrix = torch.zeros((x.shape[1], n_bins + 1))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:119:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:122:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:123:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:131:        if not use_dyple and preprocess in ['None', 'PLEC']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:133:        elif not use_dyple and preprocess in ['PLEM']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:134:            self.fc_in.append(_NLinear(d_in, n_bins, n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:137:            d_in = d_in * kwargs.get('n_bins')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:138:        elif use_dyple and preprocess in ['None']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:139:            self.dy_ple_layer = DyPLELayer(d_in, kwargs.get('n_bins'), kwargs.get('dy_raw_bin_width'), 1)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:141:            self.fc_in.append(_NLinear(d_in, kwargs.get('n_bins'), kwargs.get('n_bins')))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:144:            d_in = d_in * kwargs.get('n_bins')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:146:            raise ValueError('use_dyple', use_dyple, 'preprocess', preprocess)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:153:                    self.fc_in.append(nn.Linear(d_in, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:155:                    self.fc_in.append(nn.Linear(d_hidden, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:157:                self.fc_in.append(nn.BatchNorm1d(d_hidden)) if pre_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:159:            d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:267:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:271:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:272:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:278:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:280:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:281:        gnn_agg = kwargs['gnn_agg']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:284:        self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:288:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:289:            self.mha = nn.MultiheadAttention(embed_dim=d_hidden, num_heads=mha_n_heads, dropout=0., batch_first=True)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:295:        if not use_dyple and preprocess in ['None', 'PLEC']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:297:        elif not use_dyple and preprocess in ['PLEM']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:298:            self.fc_in.append(_NLinear(d_in, n_bins, n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:301:            d_in = d_in * kwargs.get('n_bins')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:302:        elif use_dyple and preprocess in ['None']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:303:            self.dy_ple_layer = DyPLELayer(d_in, kwargs.get('n_bins'), kwargs.get('dy_raw_bin_width'), 1)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:305:            self.fc_in.append(_NLinear(d_in, kwargs.get('n_bins'), kwargs.get('n_bins')))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:308:            d_in = d_in * kwargs.get('n_bins')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:310:            raise ValueError(f'use_dyple: {use_dyple} preprocess: {preprocess}')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:318:                    self.fc_in.append(nn.Linear(d_in, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:320:                    self.fc_in.append(nn.Linear(d_hidden, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:322:                self.fc_in.append(nn.BatchNorm1d(d_hidden)) if pre_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:324:            d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:327:        for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:328:            self.gnn_layers.append(SAGEConv(d_in, d_hidden, gnn_agg, activation=self.act, feat_drop=gnn_dropout,
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:329:                                            norm=nn.BatchNorm1d(d_hidden) if gnn_use_bn else None))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:330:            d_in=d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:354:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:365:    def __init__(self, d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout, use_feat_emb=False):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:369:        self.dy_ple_layer = DyPLELayer(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:370:        self.nlinear = _NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:372:        self.linear = nn.Linear(d_in * d_feat_emb, d_hidden)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:373:        self.bn1 = nn.BatchNorm1d(d_hidden) if pre_use_bn else nn.Identity()
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:401:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:405:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:406:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:413:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:415:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:418:        self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:428:        if not use_dyple and preprocess in ['None', 'PLEC']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:430:        elif not use_dyple and preprocess in ['PLEM']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:431:            self.fc_in.append(_NLinear(d_in, n_bins, n_bins))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:434:            self.fc_in.append(nn.Linear(d_in * n_bins, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:435:            d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:436:        elif use_dyple and preprocess in ['None']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:437:            self.dy_ple_embedding = DyPLEEmbedding(d_in, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:440:                for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:442:                        DyPLEEmbedding(d_in, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:445:            d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:447:            raise ValueError(f'use_dyple: {use_dyple} preprocess: {preprocess}')
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:455:                    self.fc_in.append(nn.Linear(d_in, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:457:                    self.fc_in.append(nn.Linear(d_hidden, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:459:                self.fc_in.append(nn.BatchNorm1d(d_hidden)) if pre_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:461:            d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:464:        for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:465:            self.gnn_layers.append(SAGEConv(d_in, d_hidden, agg, activation=self.act, feat_drop=gnn_dropout,
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:466:                                            norm=nn.BatchNorm1d(d_hidden) if gnn_use_bn else None))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:468:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:469:            self.mha = nn.MultiheadAttention(embed_dim=d_hidden, num_heads=mha_n_heads, dropout=0., batch_first=True)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:475:        self.register_buffer('his_emb', torch.rand((n_nodes, d_hidden)))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:506:        if self.use_mha:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:632:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:636:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:637:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:645:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:647:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:650:        # self.use_mha = kwargs['use_mha']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:662:        #         self.fc_in.append(nn.Linear(d_in, d_hidden))
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:664:        #         self.fc_in.append(nn.BatchNorm1d(d_hidden)) if pre_use_bn else None
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:666:        #         d_in = d_hidden
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:667:        if not use_dyple and preprocess in ['PLEC', 'None']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:669:                nn.Linear(d_in, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:670:                nn.BatchNorm1d(d_hidden) if pre_use_bn else nn.Identity(),
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:674:        elif use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:675:            self.embedding0 = DyPLEEmbedding(d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width,
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:680:        for i in range(gnn_n_layers):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:682:                GATConv(d_in, d_feat_emb, num_heads=1, bias=False, attn_drop=gnn_dropout)  # , activation=self.act , residual=True
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:684:            if not use_dyple and preprocess in ['PLEC', 'None']:
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:687:                        nn.Linear(d_in, d_hidden),
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:689:                        nn.BatchNorm1d(d_hidden) if pre_use_bn else nn.Identity(),
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:693:            elif use_dyple and preprocess == 'None':
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:695:                    DyPLEEmbedding(d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width,
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:698:        self.fc_out = nn.Linear(d_hidden * (gnn_n_layers + 1), n_classes)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:716:    def __init__(self, d_in, d_feat_emb, d_hidden, n_bins, dy_raw_bin_width, pre_use_bn, pre_dropout, use_feat_emb=False):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:720:        self.dy_ple_layer = DyPLELayer(d_in, n_bins, dy_raw_bin_width, 1)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:721:        self.nlinear = _NLinear(d_in, n_bins, d_feat_emb)
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:817:        d_hidden = kwargs['d_hidden']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:820:        n_bins = kwargs['n_bins']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:821:        use_dyple = kwargs['use_dyple']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:828:        gnn_n_layers = kwargs['gnn_n_layers']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:830:        gnn_dropout = kwargs['gnn_dropout']
+/workspace/gaap_vast/repo/GAAP/mycode/nn/gnn.py:831:        gnn_agg = kwargs['gnn_agg']
+
+===== 6. OPTIMIZER / EARLY-STOPPING IMPLEMENTATION =====
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:29:from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, Timer, TQDMProgressBar
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:414:    def configure_optimizers(self):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:415:        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:416:        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.8, patience=10, verbose=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:421:                'monitor': 'val_aps',
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:449:        print(f"batch_size: {self.cfg['bs']}, max_epochs: {self.cfg['max_epochs']}, patience: {self.cfg['patience']}")
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:463:        monitor_metric = 'val_aps' if self.data_name in GADBenchDatasets else 'val_aps'
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:464:        checkpoint_callback = ModelCheckpoint(monitor=monitor_metric, mode='max', verbose=False, save_top_k=1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/101_retrain.py:465:        early_stopping = EarlyStopping(monitor=monitor_metric, mode='max', verbose=False, patience=self.cfg['patience'])
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:29:from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, Timer, TQDMProgressBar
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:576:    def configure_optimizers(self):
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:577:        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:578:        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.8, patience=10, verbose=True)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:583:                'monitor': 'val_aps',
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:611:        print(f"batch_size: {self.cfg['bs']}, max_epochs: {self.cfg['max_epochs']}, patience: {self.cfg['patience']}")
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:625:        monitor_metric = 'val_aps' if self.data_name in GADBenchDatasets else 'val_aps'
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:626:        checkpoint_callback = ModelCheckpoint(monitor=monitor_metric, mode='max', verbose=False, save_top_k=1)
+/workspace/gaap_vast/repo/GAAP/mycode/exp/102_retrain_reallinear_att.py:627:        early_stopping = EarlyStopping(monitor=monitor_metric, mode='max', verbose=False, patience=self.cfg['patience'])
+/workspace/gaap_vast/repo/GAAP/mycode/nn/litnn.py:109:    def configure_optimizers(self):
+/workspace/gaap_vast/repo/GAAP/mycode/nn/litnn.py:110:        return torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=self.weight_decay)
+/workspace/gaap_vast/repo/GAAP/mycode/run_one.py:15:from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, Timer, TQDMProgressBar
+/workspace/gaap_vast/repo/GAAP/mycode/run_one.py:53:        print(f"batch_size: {self.cfg['bs']}, max_epochs: {self.cfg['max_epochs']}, patience: {self.cfg['patience']}")
+/workspace/gaap_vast/repo/GAAP/mycode/run_one.py:67:        monitor_metric = 'val_aps' if self.data_name in GADBenchDatasets else 'val_aps'
+/workspace/gaap_vast/repo/GAAP/mycode/run_one.py:68:        checkpoint_callback = ModelCheckpoint(monitor=monitor_metric, mode='max', verbose=False, save_top_k=1)
+/workspace/gaap_vast/repo/GAAP/mycode/run_one.py:69:        early_stopping = EarlyStopping(monitor=monitor_metric, mode='max', verbose=False, patience=self.cfg['patience'])
+
+===== 7. CONFIG FAMILY HASHES =====
+ee33bef05de2403ea9b8340761a52071584ec9085373c63adc89bcd58f68b14a  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/dgraphfin.yaml
+00e4a61d78218dbe116e1db27361cb665ada342ebb388cf34c85145582758f0b  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/elliptic.yaml
+a2a5b954e4bc6c0e309c5b216e1c2a5842ce91dc5ac7a31af00610aeab55de14  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tfinance.yaml
+d307a5431da17f0356eed2c20c64392250db236fde73fff0e7bf2fe4e1ec6fac  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tolokers.yaml
+234e01ab6f683c47ea23b3c485c4b61d2d781d75783919f333d6a8709a92247d  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/tsocial.yaml
+e620065f2b1dde24d6e6fb893bb302717f7013716faee23a3c75e51733aa84e5  /workspace/gaap_vast/repo/GAAP/config/SAGE_MiniF_DyPLE_MHA/yelp.yaml
+
+===== FINAL AUDIT GATE =====
+TRAINING_STARTED=NO
+GAAP_AUTHOR_REPO_CLEAN=PASS
+READY_TO_PREREGISTER_GAAP_TR40_TRIALS=YES

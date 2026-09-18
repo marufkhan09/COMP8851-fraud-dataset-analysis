@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN",
+  "dataset": "FDCompCN",
+  "winner_trial": 6,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "hid_dim": 64,
+  "dropout": 0.0,
+  "batch_size": 512,
+  "n_layer": 1,
+  "homo": false,
+  "full_neighbors": true,
+  "relation_agg": "cat",
+  "resi": 0.2,
+  "best_epoch": 14,
+  "best_val_auprc": 0.15110919520635985,
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "dataset_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "tuning_policy": "TR40 seed2; 12 LR\u00d7WD trials; FDCompCN input-adapter; hid_dim 64 fixed after compatibility gate",
+  "test_accessed_during_tuning": false
+}

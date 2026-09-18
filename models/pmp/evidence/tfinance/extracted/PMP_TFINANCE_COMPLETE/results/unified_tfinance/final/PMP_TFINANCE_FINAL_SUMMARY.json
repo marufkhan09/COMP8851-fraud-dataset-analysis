@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "model": "PMP / LA-SAGE-S",
+  "dataset": "T-Finance",
+  "final_runs_complete": 12,
+  "expected_final_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "repository_commit": "3f7629f6c180891a0bc1bba3c66d94d288a1ddae",
+  "dataset_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "canonical_label_counts": {
+    "fraud": 1804,
+    "normal": 37553
+  },
+  "winner_json": "/workspace/pmp_vast/unified/tfinance/tuning/PMP_TFINANCE_FROZEN_WINNER.json",
+  "winner_sha256": "f35a6071e26809c445f0bdcafd9f6169e7b922f826f9342d7e5598bffb35006a",
+  "frozen_config": {
+    "winner_trial": 6,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "hid_dim": 64,
+    "dropout": 0.4,
+    "n_layer": 1,
+    "batch_size": 256,
+    "homo": true,
+    "full_neighbors": true,
+    "relation_agg": "cat",
+    "resi": 0.2
+  },
+  "checkpoint_selection": "best validation AUPRC",
+  "threshold_selection": "validation Macro-F1 over 0.01..0.99; tie fraud recall, then closeness to 0.5",
+  "test_isolation": "test evaluated exactly once per final run after config, checkpoint and threshold frozen",
+  "ratio_summary": {
+    "TR40": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.9013177783121407,
+          "sd": 0.009557052961136708
+        },
+        "auroc": {
+          "mean": 0.9707501833536466,
+          "sd": 0.0015191384179467215
+        },
+        "macro_f1": {
+          "mean": 0.9203392813942791,
+          "sd": 0.004172466605098161
+        },
+        "fraud_precision": {
+          "mean": 0.8698915739009464,
+          "sd": 0.030432269289597306
+        },
+        "fraud_recall": {
+          "mean": 0.8277931671283473,
+          "sd": 0.02251846426270946
+        },
+        "fraud_f1": {
+          "mean": 0.8478163792359775,
+          "sd": 0.007889784461142768
+        },
+        "gmean": {
+          "mean": 0.9070292122731175,
+          "sd": 0.011588487928692362
+        }
+      },
+      "total_train_seconds": {
+        "mean": 1322.3620878786703,
+        "sd": 573.9842418002562
+      },
+      "test_inference_seconds": {
+        "mean": 15.896397431691488,
+        "sd": 0.0662713460247694
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 159.77522786458334,
+        "sd": 0.1105084499620768
+      }
+    },
+    "TR30": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.9033615801944701,
+          "sd": 0.0012600128402349908
+        },
+        "auroc": {
+          "mean": 0.9722259873419441,
+          "sd": 0.003802332084048898
+        },
+        "macro_f1": {
+          "mean": 0.921665361107398,
+          "sd": 0.0014253528841068949
+        },
+        "fraud_precision": {
+          "mean": 0.8848713134988859,
+          "sd": 0.026906155955768913
+        },
+        "fraud_recall": {
+          "mean": 0.8190212373037857,
+          "sd": 0.019895162905277274
+        },
+        "fraud_f1": {
+          "mean": 0.8502534506469774,
+          "sd": 0.002616754661889974
+        },
+        "gmean": {
+          "mean": 0.9026051323713804,
+          "sd": 0.010353035642586338
+        }
+      },
+      "total_train_seconds": {
+        "mean": 1233.619893541676,
+        "sd": 13.186698422535297
+      },
+      "test_inference_seconds": {
+        "mean": 15.758737731375732,
+        "sd": 0.41918632029573727
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 159.77522786458334,
+        "sd": 0.1105084499620768
+      }
+    },
+    "TR20": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.8812639416008922,
+          "sd": 0.006348915423617502
+        },
+        "auroc": {
+          "mean": 0.9660429231024855,
+          "sd": 0.006127166960884769
+        },
+        "macro_f1": {
+          "mean": 0.9131934649341051,
+          "sd": 0.0015528246686981415
+        },
+        "fraud_precision": {
+          "mean": 0.8874199800501631,
+          "sd": 0.022323884826212666
+        },
+        "fraud_recall": {
+          "mean": 0.7871652816251155,
+          "sd": 0.022218299936317583
+        },
+        "fraud_f1": {
+          "mean": 0.8339006246984996,
+          "sd": 0.0031267721497970713
+        },
+        "gmean": {
+          "mean": 0.8850109490909565,
+          "sd": 0.011951942525193998
+        }
+      },
+      "total_train_seconds": {
+        "mean": 577.2167812271122,
+        "sd": 286.18413503137384
+      },
+      "test_inference_seconds": {
+        "mean": 15.343316090332033,
+        "sd": 0.6710653610901042
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 159.77522786458334,
+        "sd": 0.1105084499620768
+      }
+    },
+    "TR10": {
+      "metrics": {
+        "auprc": {
+          "mean": 0.8552350445226705,
+          "sd": 0.02550998093226761
+        },
+        "auroc": {
+          "mean": 0.9500275483820957,
+          "sd": 0.020576701667784875
+        },
+        "macro_f1": {
+          "mean": 0.9057519466126619,
+          "sd": 0.011777729146412353
+        },
+        "fraud_precision": {
+          "mean": 0.8703634319252981,
+          "sd": 0.04399654321224595
+        },
+        "fraud_recall": {
+          "mean": 0.7751615881809788,
+          "sd": 0.012490996545215766
+        },
+        "fraud_f1": {
+          "mean": 0.8196940336969846,
+          "sd": 0.02238787162462512
+        },
+        "gmean": {
+          "mean": 0.8779396583556381,
+          "sd": 0.007374998029229759
+        }
+      },
+      "total_train_seconds": {
+        "mean": 346.88754206185695,
+        "sd": 188.01616512520488
+      },
+      "test_inference_seconds": {
+        "mean": 15.544385657374127,
+        "sd": 0.5469370827086342
+      },
+      "peak_gpu_memory_mb": {
+        "mean": 159.83902994791666,
+        "sd": 0.1105084499620768
+      }
+    }
+  },
+  "final_runs_csv": "/workspace/pmp_vast/unified/tfinance/final/PMP_TFINANCE_FINAL_12_RUNS.csv",
+  "ratio_summary_csv": "/workspace/pmp_vast/unified/tfinance/final/PMP_TFINANCE_FINAL_RATIO_SUMMARY.csv",
+  "gpu": "NVIDIA RTX A6000"
+}

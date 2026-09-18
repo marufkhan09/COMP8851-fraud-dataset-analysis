@@ -1,0 +1,80 @@
+GAAP_AMAZON_CONFIG_BASE=yelp.yaml
+GAAP_AMAZON_DATA_NAME=amazon_comp8851
+GAAP_AMAZON_D_IN=25
+TUNING_TRIAL=06
+TUNING_CONFIG=d_hidden=64|gnn_dropout=0.2|lr=0.0005
+===== GAAP × AMAZON — TR40 TUNING TRIAL 06 =====
+RATIO=TR40 | TRAIN_SEED=2 | SPLIT_SEED=2
+AUTHOR_ARCHITECTURE_CHANGED=NO
+TEST_USED_FOR_SELECTION=NO
+MAX_EPOCHS=100 | PATIENCE=20
+CANONICAL_AMAZON_VIEW=FROZEN_DGL_ADAPTER
+CANONICAL_NODES=11944
+CANONICAL_FEATURES=25
+CANONICAL_ADAPTER_RAW_EDGES=8796784
+AMAZON_RELATION_RECONSTRUCTION=NO
+GAAP_AMAZON_CANONICAL_ADAPTER_LOADED=PASS
+GAAP_AMAZON_GRAPH_NODES=11944
+GAAP_AMAZON_GRAPH_EDGES=8796784
+GAAP_AMAZON_GRAPH_FEATURES=25
+EXACT_FROZEN_SPLIT_GATE=PASS
+The shape of bin-encoded feature is torch.Size([11944, 25])
+Processing dataset done!
+
+GAAP_AUTHOR_PROCESSED_EDGES=8796784
+GAAP_NATIVE_NORM_TYPE=norm01
+GAAP_NATIVE_PREPROCESS=None
+GAAP_AUTHOR_DATALOADER_GATE=PASS
+TEST_LABELS_HIDDEN_DURING_FIT=PASS
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+run=T06 | TR40 seed=2 | epoch=001 | loss=0.278515 | valAUPRC=0.643434 | valAUROC=0.924221 | best=0.643434@1 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=002 | loss=0.402252 | valAUPRC=0.643356 | valAUROC=0.891612 | best=0.643434@1 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=003 | loss=0.356393 | valAUPRC=0.832310 | valAUROC=0.954646 | best=0.832310@3 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=004 | loss=0.244120 | valAUPRC=0.879215 | valAUROC=0.966467 | best=0.879215@4 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=005 | loss=0.190156 | valAUPRC=0.878507 | valAUROC=0.971403 | best=0.879215@4 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=006 | loss=0.297813 | valAUPRC=0.897437 | valAUROC=0.979512 | best=0.897437@6 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=007 | loss=0.143961 | valAUPRC=0.841073 | valAUROC=0.893788 | best=0.897437@6 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=008 | loss=0.320570 | valAUPRC=0.911165 | valAUROC=0.974807 | best=0.911165@8 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=009 | loss=0.173022 | valAUPRC=0.916454 | valAUROC=0.979992 | best=0.916454@9 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=010 | loss=0.127684 | valAUPRC=0.914928 | valAUROC=0.981629 | best=0.916454@9 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=011 | loss=0.108663 | valAUPRC=0.912383 | valAUROC=0.978982 | best=0.916454@9 | patience=2/20
+run=T06 | TR40 seed=2 | epoch=012 | loss=0.130440 | valAUPRC=0.915780 | valAUROC=0.974748 | best=0.916454@9 | patience=3/20
+run=T06 | TR40 seed=2 | epoch=013 | loss=0.117511 | valAUPRC=0.923438 | valAUROC=0.982588 | best=0.923438@13 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=014 | loss=0.110728 | valAUPRC=0.920194 | valAUROC=0.981949 | best=0.923438@13 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=015 | loss=0.209977 | valAUPRC=0.927777 | valAUROC=0.984639 | best=0.927777@15 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=016 | loss=0.127227 | valAUPRC=0.910982 | valAUROC=0.978058 | best=0.927777@15 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=017 | loss=0.112311 | valAUPRC=0.919724 | valAUROC=0.980698 | best=0.927777@15 | patience=2/20
+run=T06 | TR40 seed=2 | epoch=018 | loss=0.110923 | valAUPRC=0.909114 | valAUROC=0.979477 | best=0.927777@15 | patience=3/20
+run=T06 | TR40 seed=2 | epoch=019 | loss=0.113054 | valAUPRC=0.929544 | valAUROC=0.984226 | best=0.929544@19 | patience=0/20
+run=T06 | TR40 seed=2 | epoch=020 | loss=0.101000 | valAUPRC=0.920315 | valAUROC=0.979325 | best=0.929544@19 | patience=1/20
+run=T06 | TR40 seed=2 | epoch=021 | loss=0.099262 | valAUPRC=0.903108 | valAUROC=0.979353 | best=0.929544@19 | patience=2/20
+run=T06 | TR40 seed=2 | epoch=022 | loss=0.100432 | valAUPRC=0.894083 | valAUROC=0.979216 | best=0.929544@19 | patience=3/20
+run=T06 | TR40 seed=2 | epoch=023 | loss=0.107978 | valAUPRC=0.846381 | valAUROC=0.965652 | best=0.929544@19 | patience=4/20
+run=T06 | TR40 seed=2 | epoch=024 | loss=0.140323 | valAUPRC=0.898696 | valAUROC=0.974011 | best=0.929544@19 | patience=5/20
+run=T06 | TR40 seed=2 | epoch=025 | loss=0.100478 | valAUPRC=0.904816 | valAUROC=0.976916 | best=0.929544@19 | patience=6/20
+run=T06 | TR40 seed=2 | epoch=026 | loss=0.110466 | valAUPRC=0.909277 | valAUROC=0.980156 | best=0.929544@19 | patience=7/20
+run=T06 | TR40 seed=2 | epoch=027 | loss=0.099950 | valAUPRC=0.922246 | valAUROC=0.984370 | best=0.929544@19 | patience=8/20
+run=T06 | TR40 seed=2 | epoch=028 | loss=0.099378 | valAUPRC=0.914188 | valAUROC=0.978951 | best=0.929544@19 | patience=9/20
+run=T06 | TR40 seed=2 | epoch=029 | loss=0.088889 | valAUPRC=0.926427 | valAUROC=0.984160 | best=0.929544@19 | patience=10/20
+run=T06 | TR40 seed=2 | epoch=030 | loss=0.111510 | valAUPRC=0.917868 | valAUROC=0.980327 | best=0.929544@19 | patience=11/20
+run=T06 | TR40 seed=2 | epoch=031 | loss=0.100025 | valAUPRC=0.915178 | valAUROC=0.981867 | best=0.929544@19 | patience=12/20
+run=T06 | TR40 seed=2 | epoch=032 | loss=0.092239 | valAUPRC=0.922525 | valAUROC=0.985208 | best=0.929544@19 | patience=13/20
+run=T06 | TR40 seed=2 | epoch=033 | loss=0.092624 | valAUPRC=0.923671 | valAUROC=0.985684 | best=0.929544@19 | patience=14/20
+run=T06 | TR40 seed=2 | epoch=034 | loss=0.094251 | valAUPRC=0.922390 | valAUROC=0.984717 | best=0.929544@19 | patience=15/20
+run=T06 | TR40 seed=2 | epoch=035 | loss=0.096012 | valAUPRC=0.910268 | valAUROC=0.980834 | best=0.929544@19 | patience=16/20
+run=T06 | TR40 seed=2 | epoch=036 | loss=0.093644 | valAUPRC=0.914585 | valAUROC=0.980526 | best=0.929544@19 | patience=17/20
+run=T06 | TR40 seed=2 | epoch=037 | loss=0.098269 | valAUPRC=0.915976 | valAUROC=0.980787 | best=0.929544@19 | patience=18/20
+run=T06 | TR40 seed=2 | epoch=038 | loss=0.082770 | valAUPRC=0.909514 | valAUROC=0.976873 | best=0.929544@19 | patience=19/20
+run=T06 | TR40 seed=2 | epoch=039 | loss=0.094982 | valAUPRC=0.912294 | valAUROC=0.979337 | best=0.929544@19 | patience=20/20
+
+===== TUNING TRIAL 06 FINAL GATE =====
+BEST_VAL_AUPRC=0.929544
+TRAINING_WALL_SECONDS=97.967
+PEAK_GPU_MEMORY_MB=3409.18
+TEST_EVALUATED=NO
+TEST_LABEL_ISOLATION=PASS
+GAAP_AUTHOR_ARCHITECTURE_CHANGED=NO
+GAAP_AMAZON_TUNING_TRIAL_06=PASS
