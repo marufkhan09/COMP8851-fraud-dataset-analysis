@@ -1,16 +1,20 @@
 {
-  "run_id": "fraudre_comp_unified_tr10_seed72_20260918T013522Z",
+  "run_id": "fraudre_comp_unified_tr10_seed72_20260919T091407Z",
   "data": "comp",
   "ratio": 10,
   "seed": 72,
   "best_epoch": 1,
   "epochs_run": 22,
-  "overall_time_s": 2.2604682445526123,
+  "overall_time_s": 1.0841009616851807,
   "test_metrics": {
-    "auprc": 0.1294823223810725,
-    "auc": 0.528920501463854,
+    "auprc": 0.12949079099680963,
+    "auc": 0.528931058103746,
     "f1_macro": 0.4887804206614327,
-    "recall": 0.5070893701674049,
+    "recall_macro": 0.5070893701674049,
+    "fraud_precision": 0.36363636363636365,
+    "fraud_recall": 0.017857142857142856,
+    "fraud_f1": 0.03404255319148936,
+    "g_mean": 0.1333846209194129,
     "threshold_used": 0.55,
     "best_epoch": 1
   }
