@@ -1,0 +1,24 @@
+{
+  "run_name": "splitgnn_tsocial_unified_tr10_seed72_a6000_20260919T064609Z",
+  "model": "splitgnn",
+  "dataset": "tsocial",
+  "track": "unified",
+  "ratio": 10,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.3990402883621403,
+  "dataset_load_seconds": 5.00120222568512e-07,
+  "train_only_total_seconds": 25.18505139835179,
+  "train_plus_valid_total_seconds": 46.83092500921339,
+  "inference_seconds": 0.23023067135363817,
+  "peak_memory_bytes": 1928893440,
+  "test_metrics": {
+    "auprc": 0.41689673338387,
+    "auc": 0.9048625517381457,
+    "f1_macro": 0.7121073883600924,
+    "recall": 0.4354977527015396,
+    "threshold_used": 0.8500000000000001,
+    "best_epoch": 99
+  }
+}
