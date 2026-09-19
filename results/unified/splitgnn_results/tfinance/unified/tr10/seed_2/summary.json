@@ -1,0 +1,24 @@
+{
+  "run_name": "splitgnn_tfinance_unified_tr10_seed2_a6000_20260918T022102Z",
+  "model": "splitgnn",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": 10,
+  "seed": 2,
+  "n_completed_epochs": 23,
+  "best_epoch": 2,
+  "best_val_auprc": 0.7128087731747123,
+  "dataset_load_seconds": 2.8032809495925903e-07,
+  "train_only_total_seconds": 74.56634123250842,
+  "train_plus_valid_total_seconds": 142.65617945976555,
+  "inference_seconds": 3.0751563124358654,
+  "peak_memory_bytes": 19395115520,
+  "test_metrics": {
+    "auprc": 0.660534616167363,
+    "auc": 0.8492098135555742,
+    "f1_macro": 0.6606449287963145,
+    "recall": 0.7077562326869806,
+    "threshold_used": 0.5,
+    "best_epoch": 2
+  }
+}

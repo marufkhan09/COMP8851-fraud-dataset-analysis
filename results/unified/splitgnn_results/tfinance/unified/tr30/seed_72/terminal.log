@@ -1,0 +1,33 @@
+=== Run: splitgnn_tfinance_unified_tr30_seed72_a6000_20260918T015433Z ===
+Result dir: /workspace/splitgnn_vast/results/splitgnn/tfinance/unified/tr30/seed_72
+Split overlap checks: PASSED
+train=11807 valid=7872 test=15743
+Model source commit: 32fbdb836781d5c02523844a7079425f89be8831
+Config SHA256: 1bba84e7b504ec9fd9dc6a86dfde089bcce2d63da111dc9ce334365285259007
+Split SHA256: e7f78da52dc324c283f864744cd85105fe1c5d0feab065727930a50ba1c1971c
+epoch 0: loss=1.7065 val_auprc=0.0269 val_auc=0.2209 val_f1_macro=0.0438 (best_epoch=0, best_auprc=0.0269)
+epoch 1: loss=1.6929 val_auprc=0.6533 val_auc=0.9199 val_f1_macro=0.0438 (best_epoch=1, best_auprc=0.6533)
+epoch 2: loss=1.6797 val_auprc=0.7451 val_auc=0.9189 val_f1_macro=0.0438 (best_epoch=2, best_auprc=0.7451)
+epoch 3: loss=1.6675 val_auprc=0.6930 val_auc=0.8973 val_f1_macro=0.4020 (best_epoch=2, best_auprc=0.7451)
+epoch 4: loss=1.6542 val_auprc=0.6833 val_auc=0.8962 val_f1_macro=0.6841 (best_epoch=2, best_auprc=0.7451)
+epoch 5: loss=1.6378 val_auprc=0.6805 val_auc=0.8942 val_f1_macro=0.7746 (best_epoch=2, best_auprc=0.7451)
+epoch 6: loss=1.6200 val_auprc=0.6810 val_auc=0.8920 val_f1_macro=0.7658 (best_epoch=2, best_auprc=0.7451)
+epoch 7: loss=1.5963 val_auprc=0.6843 val_auc=0.8908 val_f1_macro=0.7290 (best_epoch=2, best_auprc=0.7451)
+epoch 8: loss=1.5649 val_auprc=0.6859 val_auc=0.8890 val_f1_macro=0.6736 (best_epoch=2, best_auprc=0.7451)
+epoch 9: loss=1.5321 val_auprc=0.6939 val_auc=0.8878 val_f1_macro=0.6339 (best_epoch=2, best_auprc=0.7451)
+epoch 10: loss=1.4919 val_auprc=0.6951 val_auc=0.8872 val_f1_macro=0.6132 (best_epoch=2, best_auprc=0.7451)
+epoch 11: loss=1.4448 val_auprc=0.6937 val_auc=0.8871 val_f1_macro=0.6135 (best_epoch=2, best_auprc=0.7451)
+epoch 12: loss=1.3918 val_auprc=0.6907 val_auc=0.8871 val_f1_macro=0.6248 (best_epoch=2, best_auprc=0.7451)
+epoch 13: loss=1.3481 val_auprc=0.6832 val_auc=0.8873 val_f1_macro=0.6376 (best_epoch=2, best_auprc=0.7451)
+epoch 14: loss=1.2775 val_auprc=0.6641 val_auc=0.8874 val_f1_macro=0.6422 (best_epoch=2, best_auprc=0.7451)
+epoch 15: loss=1.2412 val_auprc=0.6441 val_auc=0.8879 val_f1_macro=0.6414 (best_epoch=2, best_auprc=0.7451)
+epoch 16: loss=1.1893 val_auprc=0.6143 val_auc=0.8889 val_f1_macro=0.6301 (best_epoch=2, best_auprc=0.7451)
+epoch 17: loss=1.1859 val_auprc=0.6039 val_auc=0.8907 val_f1_macro=0.6187 (best_epoch=2, best_auprc=0.7451)
+epoch 18: loss=1.1714 val_auprc=0.6043 val_auc=0.8930 val_f1_macro=0.6232 (best_epoch=2, best_auprc=0.7451)
+epoch 19: loss=1.1625 val_auprc=0.6240 val_auc=0.8958 val_f1_macro=0.6341 (best_epoch=2, best_auprc=0.7451)
+epoch 20: loss=1.1180 val_auprc=0.6490 val_auc=0.8990 val_f1_macro=0.6438 (best_epoch=2, best_auprc=0.7451)
+epoch 21: loss=1.1143 val_auprc=0.6717 val_auc=0.9022 val_f1_macro=0.6585 (best_epoch=2, best_auprc=0.7451)
+epoch 22: loss=1.0764 val_auprc=0.7125 val_auc=0.9057 val_f1_macro=0.6700 (best_epoch=2, best_auprc=0.7451)
+Early stopping at epoch 22 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.55 (val F1=0.4883)
+TEST metrics: {'auprc': 0.7035625529492081, 'auc': 0.899061397146488, 'f1_macro': 0.4882655051358731, 'recall': 0.0, 'threshold_used': 0.55, 'best_epoch': 2}

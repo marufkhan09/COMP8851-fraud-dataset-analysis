@@ -1,0 +1,24 @@
+{
+  "run_name": "splitgnn_yelp_unified_tr40_seed2_a6000_20260917T223614Z",
+  "model": "splitgnn",
+  "dataset": "yelp",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.516684022972232,
+  "dataset_load_seconds": 3.1013041734695435e-07,
+  "train_only_total_seconds": 47.40486106555909,
+  "train_plus_valid_total_seconds": 85.79078764654696,
+  "inference_seconds": 0.38190324511379004,
+  "peak_memory_bytes": 3570308608,
+  "test_metrics": {
+    "auprc": 0.5018247934258564,
+    "auc": 0.8550447345671648,
+    "f1_macro": 0.7084360025873464,
+    "recall": 0.5986521901909397,
+    "threshold_used": 0.7000000000000001,
+    "best_epoch": 99
+  }
+}
