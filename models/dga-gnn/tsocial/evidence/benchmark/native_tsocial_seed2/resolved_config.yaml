@@ -1,0 +1,22 @@
+dname: tsocial
+project: dga_reproduction
+model: dga
+
+# 模型超参数
+bin_encoding: True
+n_head: 2
+n_hidden: 128
+p: 0.2
+k: 32
+z: 0.2
+seed: 321
+
+# 训练超参数
+bs: 10240
+lr: 1e-3
+weight_decay: 5e-4
+max_epochs: 10000
+patience: 10
+usegpu: True
+gpuid: 0
+nowandb: False
