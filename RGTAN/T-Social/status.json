@@ -1,0 +1,24 @@
+{
+  "model": "RGTAN",
+  "dataset": "T-Social",
+  "status": "BLOCKED_NOT_STARTED",
+  "source_sha256": null,
+  "split_sha256": null,
+  "split_seed": 2,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "tuning_metric": "validation_AUPRC",
+  "completed_runs": [],
+  "supervisor_approval": "PENDING_WHERE_REQUIRED",
+  "notes": "Template only; no results have been generated."
+}
