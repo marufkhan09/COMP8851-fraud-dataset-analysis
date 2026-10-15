@@ -1,0 +1,48 @@
+{
+  "purpose": "Manual UI/CLI offer validation; not a current availability check",
+  "gpu": "NVIDIA RTX A6000",
+  "gpu_count": 1,
+  "vram_gb": 48,
+  "recommendations": {
+    "cpu_allocated_prefer": 6,
+    "ram_gb_min": 48,
+    "ram_gb_prefer": 64,
+    "disk_gb_prefer": 120,
+    "disk_gb_host_limit_must_exceed_request": true,
+    "on_demand": true,
+    "verified": true,
+    "ssh": true,
+    "direct": true
+  },
+  "historical_offers_not_live": [
+    {
+      "host_id": 64430,
+      "machine_id": 10958,
+      "disk_screen_gb": 144.6,
+      "cpu_allocated": 6,
+      "ram_gb": 48
+    },
+    {
+      "host_id": 45423,
+      "machine_id": 14804,
+      "disk_screen_gb": 59.9,
+      "cpu_allocated": 6,
+      "ram_gb": 48
+    },
+    {
+      "host_id": 250721,
+      "machine_id": 37274,
+      "disk_screen_gb": 60,
+      "cpu_allocated": 4.5,
+      "ram_gb": 48
+    },
+    {
+      "host_id": 73215,
+      "machine_id": 38333,
+      "disk_screen_gb": 144.7,
+      "cpu_allocated": 8,
+      "ram_gb": 64
+    }
+  ],
+  "rental_rule": "Only user explicitly starts rental; package scripts 00-09 do not create a paid GPU"
+}
