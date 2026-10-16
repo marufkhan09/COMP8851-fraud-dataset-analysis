@@ -28,4 +28,4 @@
 - `evidence/amazon_training.log.gz`: compressed full training log
 - `status.json`: machine-readable status and methodological caveat
 
-**Interpretation:** These are completed **benchmark-candidate** experiments, not supervisor-approved results. Do not represent the adaptation as identical to the published SAWGAD protocol.
+
