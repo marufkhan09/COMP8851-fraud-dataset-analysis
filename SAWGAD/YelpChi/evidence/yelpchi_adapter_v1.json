@@ -1,0 +1,27 @@
+{
+  "dataset": "YelpChi",
+  "model": "SAWGAD",
+  "source_mat_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "split_seed": 2,
+  "ratio": "TR40",
+  "nodes": 45954,
+  "features": 32,
+  "relation_nonzeros": {
+    "net_rur": 98630,
+    "net_rsr": 6805486,
+    "net_rtr": 1147232
+  },
+  "binary_relation_union_edges_before_author_cleanup": 7693958,
+  "model_graph_edges_after_author_cleanup": 7739912,
+  "train_count": 18381,
+  "val_count": 9191,
+  "test_count": 18382,
+  "train_positive": 2671,
+  "val_positive": 1335,
+  "test_labels_in_model_graph": false,
+  "test_scored": false,
+  "trained": false,
+  "graph_view": "directed binary union of three canonical YelpChi relations; original SAWGAD self-loop/dedup and feature min-max steps"
+}

@@ -1,9 +1,10 @@
 {
   "model": "SAWGAD",
   "dataset": "YelpChi",
-  "status": "BLOCKED_NOT_STARTED",
-  "source_sha256": null,
-  "split_sha256": null,
+  "status": "COMPLETE",
+  "source_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
   "split_seed": 2,
   "training_seeds": [
     2,
@@ -17,8 +18,39 @@
     "TR10"
   ],
   "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "completed_runs": [],
-  "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "notes": "Template only; no results have been generated."
+  "winner": {
+    "best_val_auprc": 0.40203948931988,
+    "config": {
+      "drop_rate": 0.1,
+      "full_lr": 0.003,
+      "hidden_dim": 128
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 9
+  },
+  "completed_runs": [
+    "TR40_seed2",
+    "TR40_seed42",
+    "TR40_seed72",
+    "TR30_seed2",
+    "TR30_seed42",
+    "TR30_seed72",
+    "TR20_seed2",
+    "TR20_seed42",
+    "TR20_seed72",
+    "TR10_seed2",
+    "TR10_seed42",
+    "TR10_seed72"
+  ],
+  "test_evaluated_once_per_final_run": true,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  }
 }

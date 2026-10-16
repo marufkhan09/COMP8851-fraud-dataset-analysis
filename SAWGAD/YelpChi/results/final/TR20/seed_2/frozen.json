@@ -1,0 +1,36 @@
+{
+  "adapter_sha256": "2e072276117ff5d906aeb4853d2f8edcd10c3f46f6cacf0df136a1d6d3ea72fe",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "best_epoch": 19,
+  "best_val_auprc": 0.37073558250791705,
+  "checkpoint_sha256": "c3b03eb0318eafe9e0a88dce3e6279e62b94a9535c13fb4e83c7cc9538204456",
+  "config": {
+    "drop_rate": 0.1,
+    "full_lr": 0.003,
+    "hidden_dim": 128
+  },
+  "dataset": "YelpChi",
+  "epochs_ran": 39,
+  "full_training_seconds": 7.363707626005635,
+  "model": "SAWGAD",
+  "peak_allocated_gpu_gib": 5.47161340713501,
+  "preprocess_seconds": 2.3059278409928083,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_labels": "frozen_train_ratio",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio": "TR20",
+  "seed": 2,
+  "source_mat_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "FROZEN_READY_FOR_TEST",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false,
+  "threshold": 0.65,
+  "val_macro_f1": 0.6342745598913659,
+  "warmup_seconds": 56.10655456688255
+}
