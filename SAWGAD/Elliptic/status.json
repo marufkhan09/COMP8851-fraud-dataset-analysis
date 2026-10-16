@@ -1,24 +1,49 @@
 {
-  "model": "SAWGAD",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
   "dataset": "Elliptic",
-  "status": "BLOCKED_NOT_STARTED",
-  "source_sha256": null,
-  "split_sha256": null,
-  "split_seed": 2,
-  "training_seeds": [
-    2,
-    42,
-    72
-  ],
+  "final_runs": 12,
+  "model": "SAWGAD",
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "temporal_graph_cutoffs": "train_ratio_prefix_val31_test49",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
   "ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
+  "source_bundle_sha256": "d2f7110d973564b5cd3b491ba3e0e59a6e16d75033e3796ac601bbf1ecd58160",
+  "source_csv_sha256s": {
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_seed": 2,
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "COMPLETE",
+  "test_evaluated_once_per_final_run": true,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
   "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "completed_runs": [],
-  "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "notes": "Template only; no results have been generated."
+  "winner": {
+    "best_val_auprc": 0.5982108081342263,
+    "config": {
+      "drop_rate": 0.25,
+      "full_lr": 0.003,
+      "hidden_dim": 128
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 12
+  }
 }
