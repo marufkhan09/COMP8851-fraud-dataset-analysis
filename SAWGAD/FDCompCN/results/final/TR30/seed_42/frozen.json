@@ -1,0 +1,36 @@
+{
+  "adapter_sha256": "130b38c27b24d3825cb9f19294fdbbddf778916efcc80dac39dabe0aef29a28b",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "best_epoch": 21,
+  "best_val_auprc": 0.13097207156333218,
+  "checkpoint_sha256": "7a14e6e40c7004337115a21238ff279ccd4d9ca3159b863f13e495e07b13ab88",
+  "config": {
+    "drop_rate": 0.25,
+    "full_lr": 0.003,
+    "hidden_dim": 64
+  },
+  "dataset": "FDCompCN",
+  "epochs_ran": 41,
+  "full_training_seconds": 1.4164090021513402,
+  "model": "SAWGAD",
+  "peak_allocated_gpu_gib": 0.052935123443603516,
+  "preprocess_seconds": 0.14561608294025064,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_labels": "frozen_train_ratio",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio": "TR30",
+  "seed": 42,
+  "source_dgl_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "FROZEN_READY_FOR_TEST",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false,
+  "threshold": 0.6,
+  "val_macro_f1": 0.4722222222222222,
+  "warmup_seconds": 12.553215320920572
+}
