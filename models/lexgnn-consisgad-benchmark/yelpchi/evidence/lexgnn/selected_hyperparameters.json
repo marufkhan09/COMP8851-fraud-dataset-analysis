@@ -1,0 +1,22 @@
+{
+  "dataset": "YelpChi",
+  "evaluation_note": "Selection uses the validation row that produced the saved best checkpoint. Post-restoration validation metrics are recorded separately.",
+  "model": "LEX-GNN",
+  "primary_selection_metric": "validation AUROC",
+  "restored_checkpoint_validation_auprc": 0.6731379848987571,
+  "restored_checkpoint_validation_auroc": 0.9095588994819085,
+  "selected_beta": 0.5,
+  "selected_learning_rate": 0.005,
+  "selected_threshold": 0.23,
+  "selected_trial": "trial_01_author_baseline",
+  "selected_validation_auprc": 0.6726585169950963,
+  "selected_validation_auroc": 0.9093330502274346,
+  "selected_validation_epoch": 20,
+  "selected_validation_fraud_f1": 0.6240171551107934,
+  "selected_validation_g_mean": 0.7804876420036923,
+  "selected_validation_macro_f1": 0.7778527333995526,
+  "selection_phase": "TR40 seed2 validation-only tuning",
+  "source_result_directory": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_01_author_baseline/20261017T150423928793Z_yelpchi_lexgnn_unified_tuning_yelpchi_tr40_seed2_trial_01_author_baseline_seed2",
+  "test_used_for_selection": false,
+  "tie_breaker": "validation AUPRC"
+}

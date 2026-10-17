@@ -1,0 +1,46 @@
+{
+  "adapter_sha256": "cb874c5b3e4ef47012efa6cd2645fb3ddcde894e77b1e3f1b9dea3e20f8977a2",
+  "dataset": "YelpChi",
+  "model": "LEX-GNN",
+  "phase": "TR40 seed2 validation-only tuning",
+  "primary_selection_metric": "validation AUROC",
+  "test_evaluated": false,
+  "tie_breaker": "validation AUPRC",
+  "trials": [
+    {
+      "beta": 0.5,
+      "config": "/workspace/comp8851_two_models/configs/lexgnn/tuning_yelpchi_tr40_seed2/trial_01_author_baseline.json",
+      "learning_rate": 0.005,
+      "results_root": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_01_author_baseline",
+      "trial": "trial_01_author_baseline"
+    },
+    {
+      "beta": 0.5,
+      "config": "/workspace/comp8851_two_models/configs/lexgnn/tuning_yelpchi_tr40_seed2/trial_02_lr_0p001.json",
+      "learning_rate": 0.001,
+      "results_root": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_02_lr_0p001",
+      "trial": "trial_02_lr_0p001"
+    },
+    {
+      "beta": 0.5,
+      "config": "/workspace/comp8851_two_models/configs/lexgnn/tuning_yelpchi_tr40_seed2/trial_03_lr_0p01.json",
+      "learning_rate": 0.01,
+      "results_root": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_03_lr_0p01",
+      "trial": "trial_03_lr_0p01"
+    },
+    {
+      "beta": 0.25,
+      "config": "/workspace/comp8851_two_models/configs/lexgnn/tuning_yelpchi_tr40_seed2/trial_04_beta_0p25.json",
+      "learning_rate": 0.005,
+      "results_root": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_04_beta_0p25",
+      "trial": "trial_04_beta_0p25"
+    },
+    {
+      "beta": 1.0,
+      "config": "/workspace/comp8851_two_models/configs/lexgnn/tuning_yelpchi_tr40_seed2/trial_05_beta_1p0.json",
+      "learning_rate": 0.005,
+      "results_root": "/workspace/comp8851_two_models/runs/lexgnn/yelpchi/tuning_tr40_seed2/trial_05_beta_1p0",
+      "trial": "trial_05_beta_1p0"
+    }
+  ]
+}

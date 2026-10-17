@@ -1,0 +1,69 @@
+{
+  "model": "ConsisGAD",
+  "dataset": "YelpChi",
+  "phase": "TR40 seed2 validation-only tuning",
+  "primary_selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "base_config": "/workspace/comp8851_two_models/configs/consisgad/yelpchi_tr40_seed2_smoke.json",
+  "base_config_sha256": "772cfbd2d57fd396f7b5cfbe838331b5ea3ad88e3902db84783ace0a573f942a",
+  "adapter": "/workspace/comp8851_two_models/adapters/consisgad/train_yelpchi_unified.py",
+  "adapter_sha256": "c86f97c227a10e53bfe200649386c3d39a4b2844b7c06684886c87744ae2ceb5",
+  "trials": [
+    {
+      "trial": "trial_01_author_baseline",
+      "config": "/workspace/comp8851_two_models/configs/consisgad/tuning_yelpchi_tr40_seed2/trial_01_author_baseline.json",
+      "config_sha256": "2b5a812a3a62276ebfb0a50624479b830087e9c09cdcd7ebe707de875115193b",
+      "learning_rate": 0.001,
+      "consistency_weight": 1.5,
+      "epochs": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "evaluate_test": false
+    },
+    {
+      "trial": "trial_02_lr_0p0005",
+      "config": "/workspace/comp8851_two_models/configs/consisgad/tuning_yelpchi_tr40_seed2/trial_02_lr_0p0005.json",
+      "config_sha256": "bc6fcb3c89d398b85c5edc413c30c541b7b4afc2c36fed0841303ecd95fc6386",
+      "learning_rate": 0.0005,
+      "consistency_weight": 1.5,
+      "epochs": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "evaluate_test": false
+    },
+    {
+      "trial": "trial_03_lr_0p005",
+      "config": "/workspace/comp8851_two_models/configs/consisgad/tuning_yelpchi_tr40_seed2/trial_03_lr_0p005.json",
+      "config_sha256": "d6f3f11ef8462c2b68cf9b73bee1d0f8cbee61ab21ea8430c7a8e64b774f5e6e",
+      "learning_rate": 0.005,
+      "consistency_weight": 1.5,
+      "epochs": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "evaluate_test": false
+    },
+    {
+      "trial": "trial_04_weight_1p0",
+      "config": "/workspace/comp8851_two_models/configs/consisgad/tuning_yelpchi_tr40_seed2/trial_04_weight_1p0.json",
+      "config_sha256": "57870718d2f0a18b07221bedefee6c4c2cd0e0d6733dd704a7bc0e828abe67c5",
+      "learning_rate": 0.001,
+      "consistency_weight": 1.0,
+      "epochs": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "evaluate_test": false
+    },
+    {
+      "trial": "trial_05_weight_2p0",
+      "config": "/workspace/comp8851_two_models/configs/consisgad/tuning_yelpchi_tr40_seed2/trial_05_weight_2p0.json",
+      "config_sha256": "4de208a76a3ff2127632d818a741de55f965d0c183a885e7b14b2a8e68d99c3b",
+      "learning_rate": 0.001,
+      "consistency_weight": 2.0,
+      "epochs": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "evaluate_test": false
+    }
+  ]
+}
