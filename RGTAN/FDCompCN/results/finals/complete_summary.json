@@ -1,0 +1,50 @@
+{
+  "by_ratio": {
+    "TR10": {
+      "macro_f1_mean": 0.4965257363217095,
+      "n": 3,
+      "test_auprc_mean": 0.11373846517754067,
+      "test_auprc_sd_sample": 0.008857348796991554,
+      "test_auroc_mean": 0.5181953463203463
+    },
+    "TR20": {
+      "macro_f1_mean": 0.49011787359812997,
+      "n": 3,
+      "test_auprc_mean": 0.1182199797832642,
+      "test_auprc_sd_sample": 0.003801363668509903,
+      "test_auroc_mean": 0.5332780478192328
+    },
+    "TR30": {
+      "macro_f1_mean": 0.5150736700669042,
+      "n": 3,
+      "test_auprc_mean": 0.13713264606085698,
+      "test_auprc_sd_sample": 0.013266475380481854,
+      "test_auroc_mean": 0.5223746027575508
+    },
+    "TR40": {
+      "macro_f1_mean": 0.5152392947892422,
+      "n": 3,
+      "test_auprc_mean": 0.13943629602935542,
+      "test_auprc_sd_sample": 0.023004188756978843,
+      "test_auroc_mean": 0.5545829110677376
+    }
+  },
+  "dataset": "FDCompCN",
+  "model": "RGTAN",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "TWELVE_FINALS_COMPLETE",
+  "test_scored_once_per_run": true,
+  "winner_sha256": "a8b4a81961ce5962e453fbb262cc19777ca8d6ad97c3542846c350484b7eca21"
+}
