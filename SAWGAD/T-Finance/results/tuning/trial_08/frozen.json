@@ -1,0 +1,36 @@
+{
+  "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "best_epoch": 100,
+  "best_val_auprc": 0.678160176297193,
+  "checkpoint_sha256": "f1c5f45e2b3e8ef9aa34ebd96983b37dc03c1355595dd9970558f4be37c16595",
+  "config": {
+    "drop_rate": 0.1,
+    "full_lr": 0.001,
+    "hidden_dim": 128
+  },
+  "dataset": "T-Finance",
+  "epochs_ran": 100,
+  "full_training_seconds": 83.16100378800184,
+  "model": "SAWGAD",
+  "peak_allocated_gpu_gib": 27.63908338546753,
+  "preprocess_seconds": 9.915699447039515,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_labels": "frozen_train_ratio",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio": "TR40",
+  "seed": 2,
+  "source_dgl_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "FROZEN_READY_FOR_TEST",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false,
+  "threshold": 0.9,
+  "val_macro_f1": 0.8251005865529109,
+  "warmup_seconds": 255.43948284187354
+}

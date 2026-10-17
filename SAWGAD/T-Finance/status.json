@@ -1,24 +1,63 @@
 {
-  "model": "SAWGAD",
-  "dataset": "T-Finance",
-  "status": "BLOCKED_NOT_STARTED",
-  "source_sha256": null,
-  "split_sha256": null,
-  "split_seed": 2,
-  "training_seeds": [
-    2,
-    42,
-    72
+  "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "canonical_source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "canonical_source_zip_sha256": "0a0091978425a0e9f1cd0e001240517ecd786344bd580c2bd00ef32ad1c80475",
+  "completed_runs": [
+    "TR40_seed2",
+    "TR40_seed42",
+    "TR40_seed72",
+    "TR30_seed2",
+    "TR30_seed42",
+    "TR30_seed72",
+    "TR20_seed2",
+    "TR20_seed42",
+    "TR20_seed72",
+    "TR10_seed2",
+    "TR10_seed42",
+    "TR10_seed72"
   ],
-  "ratios": [
+  "dataset": "T-Finance",
+  "final_runs": 12,
+  "model": "SAWGAD",
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "runner_sha256": "d083e538ec8a47b12c578e6460f7567b3aca4c112c6a31cfa26ee0cfb9d40f10",
+  "split_seed": 2,
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "COMPLETE",
+  "test_evaluated_once_per_final_run": true,
+  "training_ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
   "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "completed_runs": [],
-  "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "notes": "Template only; no results have been generated."
+  "winner": {
+    "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+    "best_val_auprc": 0.678160176297193,
+    "config": {
+      "drop_rate": 0.1,
+      "full_lr": 0.001,
+      "hidden_dim": 128
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "source_dgl_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+    "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 8
+  }
 }

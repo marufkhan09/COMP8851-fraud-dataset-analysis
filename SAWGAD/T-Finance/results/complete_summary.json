@@ -1,0 +1,184 @@
+{
+  "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "dataset": "T-Finance",
+  "final_runs": 12,
+  "model": "SAWGAD",
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio_summaries": [
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.6396428534716325,
+          "population_sd": 0.09258860457284761
+        },
+        "auroc": {
+          "mean": 0.8927660862358103,
+          "population_sd": 0.011586065154044098
+        },
+        "fraud_f1": {
+          "mean": 0.4603910308651476,
+          "population_sd": 0.3255895116929166
+        },
+        "fraud_precision": {
+          "mean": 0.5403002285404669,
+          "population_sd": 0.38238461336426344
+        },
+        "fraud_recall": {
+          "mean": 0.40166204986149584,
+          "population_sd": 0.2845240801132152
+        },
+        "gmean": {
+          "mean": 0.5156192695744318,
+          "population_sd": 0.3647502584901057
+        },
+        "macro_f1": {
+          "mean": 0.7219886473397557,
+          "population_sd": 0.16528841918504336
+        }
+      },
+      "ratio": "TR40",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.6271071956176797,
+          "population_sd": 0.10726362294825957
+        },
+        "auroc": {
+          "mean": 0.8915216450124642,
+          "population_sd": 0.015817515155335544
+        },
+        "fraud_f1": {
+          "mean": 0.454353497331241,
+          "population_sd": 0.32133712936027037
+        },
+        "fraud_precision": {
+          "mean": 0.492039586919105,
+          "population_sd": 0.3490792743667444
+        },
+        "fraud_recall": {
+          "mean": 0.4228993536472761,
+          "population_sd": 0.29920815834961895
+        },
+        "gmean": {
+          "mean": 0.5280266208396547,
+          "population_sd": 0.3734139105023436
+        },
+        "macro_f1": {
+          "mean": 0.7185261236134088,
+          "population_sd": 0.16285536663068984
+        }
+      },
+      "ratio": "TR30",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.7003111430153407,
+          "population_sd": 0.0034330684539029504
+        },
+        "auroc": {
+          "mean": 0.9026111981237963,
+          "population_sd": 0.003322162863046869
+        },
+        "fraud_f1": {
+          "mean": 0.6775300064655861,
+          "population_sd": 0.009346870950933475
+        },
+        "fraud_precision": {
+          "mean": 0.7935838589899356,
+          "population_sd": 0.04633960932390989
+        },
+        "fraud_recall": {
+          "mean": 0.592797783933518,
+          "population_sd": 0.014124707793885834
+        },
+        "gmean": {
+          "mean": 0.766941131938266,
+          "population_sd": 0.008214510606946382
+        },
+        "macro_f1": {
+          "mean": 0.8320142814316545,
+          "population_sd": 0.005110805800021888
+        }
+      },
+      "ratio": "TR20",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.6957091433135364,
+          "population_sd": 0.0026502840147703613
+        },
+        "auroc": {
+          "mean": 0.9023250490249323,
+          "population_sd": 0.001080860994253754
+        },
+        "fraud_f1": {
+          "mean": 0.6741573691657584,
+          "population_sd": 0.005151798957216746
+        },
+        "fraud_precision": {
+          "mean": 0.7678681292500165,
+          "population_sd": 0.03241642916373757
+        },
+        "fraud_recall": {
+          "mean": 0.6020313942751616,
+          "population_sd": 0.016086104700077885
+        },
+        "gmean": {
+          "mean": 0.7723865401266711,
+          "population_sd": 0.009601309241631656
+        },
+        "macro_f1": {
+          "mean": 0.8301183282087939,
+          "population_sd": 0.0028041062731728626
+        }
+      },
+      "ratio": "TR10",
+      "runs": 3
+    }
+  ],
+  "source_dgl_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "SAWGAD_TFINANCE_COMPLETE",
+  "test_evaluated_once_per_final_run": true,
+  "train_seeds": [
+    2,
+    42,
+    72
+  ],
+  "training_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "winner": {
+    "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+    "best_val_auprc": 0.678160176297193,
+    "config": {
+      "drop_rate": 0.1,
+      "full_lr": 0.001,
+      "hidden_dim": 128
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "source_dgl_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+    "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 8
+  }
+}
