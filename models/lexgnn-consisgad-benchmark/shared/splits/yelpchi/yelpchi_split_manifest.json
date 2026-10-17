@@ -1,0 +1,63 @@
+{
+  "dataset": "YelpChi",
+  "split_seed": 2,
+  "source_split": "results/author-reproduction-kaggle-t4/20260908T122216039896Z_yelp_PCGNN_author_reproduction_kaggle_t4_32d_100e_seed72/split_indices.npz",
+  "split_design": "Nested stratified training subsets",
+  "nesting_rule": "TR10 subset TR20 subset TR30 subset TR40",
+  "validation_fixed": true,
+  "test_fixed": true,
+  "splits": {
+    "TR10": {
+      "split": "TR10",
+      "train_nodes": 4595,
+      "train_percentage": 9.999129564346957,
+      "train_fraud": 668,
+      "train_normal": 3927,
+      "train_fraud_percentage": 14.537540805223067,
+      "validation_nodes": 9099,
+      "test_nodes": 18474,
+      "unused_nodes": 13786,
+      "sha256": "dbb702bb0a2bfbd333914e059224bd764c0bb80abda6da0397484fbdc56edb38",
+      "file": "yelpchi_tr10_split_seed2.npz"
+    },
+    "TR20": {
+      "split": "TR20",
+      "train_nodes": 9191,
+      "train_percentage": 20.000435217826524,
+      "train_fraud": 1336,
+      "train_normal": 7855,
+      "train_fraud_percentage": 14.535959090414535,
+      "validation_nodes": 9099,
+      "test_nodes": 18474,
+      "unused_nodes": 9190,
+      "sha256": "44893326b8cc47736d66273958d5f270afcf5f9d95574ddf9939077e16f6c325",
+      "file": "yelpchi_tr20_split_seed2.npz"
+    },
+    "TR30": {
+      "split": "TR30",
+      "train_nodes": 13786,
+      "train_percentage": 29.999564782173476,
+      "train_fraud": 2003,
+      "train_normal": 11783,
+      "train_fraud_percentage": 14.529232554765702,
+      "validation_nodes": 9099,
+      "test_nodes": 18474,
+      "unused_nodes": 4595,
+      "sha256": "f51d6b6afaa5463300d73b88e12e8c1219af8f03fddce1088118aa696c9d4909",
+      "file": "yelpchi_tr30_split_seed2.npz"
+    },
+    "TR40": {
+      "split": "TR40",
+      "train_nodes": 18381,
+      "train_percentage": 39.99869434652044,
+      "train_fraud": 2671,
+      "train_normal": 15710,
+      "train_fraud_percentage": 14.531309504379522,
+      "validation_nodes": 9099,
+      "test_nodes": 18474,
+      "unused_nodes": 0,
+      "sha256": "e97259d966039003f52c256c23f83ef12aea85ecb5ed8320fa4e36566c821521",
+      "file": "yelpchi_tr40_split_seed2.npz"
+    }
+  }
+}

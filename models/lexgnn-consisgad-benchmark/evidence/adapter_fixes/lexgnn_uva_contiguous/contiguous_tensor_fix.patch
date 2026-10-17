@@ -1,0 +1,19 @@
+--- /workspace/comp8851_two_models/evidence/adapter_fixes/lexgnn_uva_contiguous/train_amazon_unified_before_fix.py	2026-10-17 09:10:28.301846064 +0000
++++ /workspace/comp8851_two_models/adapters/lexgnn/train_amazon_unified.py	2026-10-17 09:10:28.330847192 +0000
+@@ -64,6 +64,16 @@
+         probability = torch.where(masked_labels[source] == 2, 0.5, 0.9).float()
+         graph.edges[canonical_etype].data["prob"] = probability
+ 
++    # DGL UVA requires every stored graph tensor to be contiguous.
++    # This changes only memory layout, not values or model architecture.
++    for key in list(graph.ndata.keys()):
++        graph.ndata[key] = graph.ndata[key].contiguous()
++
++    for canonical_etype in graph.canonical_etypes:
++        edge_data = graph.edges[canonical_etype].data
++        for key in list(edge_data.keys()):
++            edge_data[key] = edge_data[key].contiguous()
++
+     sampler = NeighborSampler([dict(fanout) for _ in range(layers)], prob="prob")
+ 
+     def loader(indices, shuffle):

@@ -1,0 +1,13 @@
+--- /workspace/comp8851_two_models/evidence/adapter_fixes/multi_metric_reporting/consisgad_before_multi_metric.py	2026-10-17 10:00:09.364953812 +0000
++++ /workspace/comp8851_two_models/adapters/consisgad/train_amazon_unified.py	2026-10-17 10:00:09.417955885 +0000
+@@ -209,6 +209,10 @@
+             f"{progress_text(epoch + 1, int(args['epochs']))} | "
+             f"train={training_seconds:.3f}s | "
+             f"val_AUROC={validation_metrics['auroc']:.6f} | "
++            f"val_AUPRC={validation_metrics['auprc']:.6f} | "
++            f"val_MacroF1={validation_metrics['macro_f1']:.6f} | "
++            f"val_FraudF1={validation_metrics['fraud_f1']:.6f} | "
++            f"val_GMean={validation_metrics['g_mean']:.6f} | "
+             f"best={improved}",
+             flush=True,
+         )

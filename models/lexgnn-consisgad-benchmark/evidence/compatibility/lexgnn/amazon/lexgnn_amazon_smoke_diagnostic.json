@@ -1,0 +1,49 @@
+{
+  "result_directory": "/workspace/comp8851_two_models/runs/lexgnn/amazon/compatibility_tr40/20261017T091202265239Z_amazon_lexgnn_unified_compatibility_tr40_two_epoch_seed2",
+  "status_recorded": "PASS",
+  "epochs_completed": 2,
+  "best_validation_epoch": 1,
+  "best_validation_auroc": 0.5,
+  "selected_threshold": 0.76,
+  "test_evaluations_during_training": 0,
+  "architecture_changed": false,
+  "splits": {
+    "validation": {
+      "nodes": 1728,
+      "normal_nodes": 1564,
+      "fraud_nodes": 164,
+      "score_min": 0.7506401538848877,
+      "score_max": 0.7506401538848877,
+      "score_mean": 0.7506400346755981,
+      "score_std": 1.1920928955078125e-07,
+      "unique_raw_scores": 1,
+      "predicted_normal": 1728,
+      "predicted_fraud": 0,
+      "normal_score_mean": 0.7506400942802429,
+      "fraud_score_mean": 0.7506401538848877,
+      "contains_nan": false,
+      "contains_infinity": false
+    },
+    "test": {
+      "nodes": 3456,
+      "normal_nodes": 3127,
+      "fraud_nodes": 329,
+      "score_min": 0.7506401538848877,
+      "score_max": 0.7506401538848877,
+      "score_mean": 0.7506400346755981,
+      "score_std": 1.1920928955078125e-07,
+      "unique_raw_scores": 1,
+      "predicted_normal": 3456,
+      "predicted_fraud": 0,
+      "normal_score_mean": 0.7506400346755981,
+      "fraud_score_mean": 0.7506401538848877,
+      "contains_nan": false,
+      "contains_infinity": false
+    }
+  },
+  "constant_validation_scores": false,
+  "constant_test_scores": false,
+  "author_restart_condition_triggered": true,
+  "technical_compatibility": "PASS",
+  "learning_quality": "WARNING_AUTHOR_RESTART_CONDITION"
+}

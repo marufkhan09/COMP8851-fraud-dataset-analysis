@@ -1,0 +1,56 @@
+{
+  "result_directory": "/workspace/comp8851_two_models/runs/consisgad/amazon/compatibility_tr40/20261017T091613754807Z_amazon_consisgad_unified_compatibility_tr40_two_epoch_seed2",
+  "verification_checks": {
+    "status_pass": true,
+    "model_correct": true,
+    "dataset_correct": true,
+    "epochs_completed_two": true,
+    "two_epoch_rows_saved": true,
+    "training_times_positive": true,
+    "test_not_used_during_training": true,
+    "architecture_unchanged": true,
+    "dataset_checksum_correct": true,
+    "split_checksum_correct": true,
+    "validation_size_correct": true,
+    "test_size_correct": true,
+    "validation_scores_vary": true,
+    "test_scores_vary": true,
+    "no_validation_nan": true,
+    "no_test_nan": true,
+    "best_validation_above_random": true,
+    "split_counts_correct": true
+  },
+  "best_validation_epoch": 2,
+  "best_validation_auroc": 0.926373120828395,
+  "selected_threshold": 0.02,
+  "validation_score_statistics": {
+    "minimum": 4.1568768210709095e-05,
+    "maximum": 0.9999406337738037,
+    "mean": 0.07187864184379578,
+    "standard_deviation": 0.25327032804489136,
+    "unique_scores": 1727
+  },
+  "test_score_statistics": {
+    "minimum": 4.151468965574168e-05,
+    "maximum": 0.9999433755874634,
+    "mean": 0.08062999695539474,
+    "standard_deviation": 0.267478883266449,
+    "unique_scores": 3445
+  },
+  "test_metrics": {
+    "accuracy": 0.9733796296296297,
+    "auprc": 0.8772451098090899,
+    "auroc": 0.9458894635700629,
+    "false_negative": 59,
+    "false_positive": 33,
+    "fraud_f1": 0.8544303797468354,
+    "fraud_precision": 0.8910891089108911,
+    "fraud_recall": 0.8206686930091185,
+    "g_mean": 0.9011148508768495,
+    "macro_f1": 0.9198903491090865,
+    "threshold": 0.02,
+    "true_negative": 3094,
+    "true_positive": 270
+  },
+  "final_classification": "COMPATIBILITY_PASS"
+}

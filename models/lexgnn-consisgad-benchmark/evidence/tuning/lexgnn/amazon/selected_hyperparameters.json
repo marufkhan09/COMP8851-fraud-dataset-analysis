@@ -1,0 +1,22 @@
+{
+  "model": "LEX-GNN",
+  "dataset": "Amazon",
+  "selection_phase": "TR40 seed2 validation-only tuning",
+  "primary_selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "selected_trial": "trial_01_author_baseline",
+  "selected_learning_rate": 0.005,
+  "selected_beta": 0.5,
+  "selected_validation_epoch": 20,
+  "selected_validation_auroc": 0.9326578192252509,
+  "selected_validation_auprc": 0.8135818663329207,
+  "selected_validation_macro_f1": 0.9049073167889388,
+  "selected_validation_fraud_f1": 0.8259385665529011,
+  "selected_validation_g_mean": 0.8567560563273808,
+  "selected_threshold": 0.6,
+  "restored_checkpoint_validation_auroc": 0.9262717547252199,
+  "restored_checkpoint_validation_auprc": 0.8144584897856797,
+  "source_result_directory": "/workspace/comp8851_two_models/runs/lexgnn/amazon/tuning_tr40_seed2/trial_01_author_baseline/20261017T095209482514Z_amazon_lexgnn_unified_tuning_amazon_tr40_seed2_trial_01_author_baseline_seed2",
+  "evaluation_note": "Selection uses the validation row that produced the saved best checkpoint. The post-restoration validation evaluation is recorded separately."
+}

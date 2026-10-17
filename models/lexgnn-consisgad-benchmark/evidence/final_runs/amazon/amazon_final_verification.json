@@ -1,0 +1,32 @@
+{
+  "aggregate_results": "/workspace/comp8851_two_models/evidence/final_runs/amazon/tables/amazon_three_seed_aggregate_long.csv",
+  "aggregation": "mean, sample SD and 95% t confidence interval",
+  "architecture_changed": false,
+  "dataset": "Amazon",
+  "efficiency_figure": "/workspace/comp8851_two_models/evidence/final_runs/amazon/figures/amazon_efficiency_mean_sd.png",
+  "expected_runs": 24,
+  "failed_runs": 0,
+  "formatted_summary": "/workspace/comp8851_two_models/evidence/final_runs/amazon/tables/amazon_three_seed_summary_mean_sd.csv",
+  "models": [
+    "LEX-GNN",
+    "ConsisGAD"
+  ],
+  "performance_figure": "/workspace/comp8851_two_models/evidence/final_runs/amazon/figures/amazon_performance_mean_sd.png",
+  "raw_results": "/workspace/comp8851_two_models/evidence/final_runs/amazon/tables/amazon_final_runs_raw.csv",
+  "split_seed": 2,
+  "status": "PASS",
+  "test_evaluations_during_training": 0,
+  "test_re_evaluated_during_aggregation": false,
+  "training_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "verified_runs": 24
+}

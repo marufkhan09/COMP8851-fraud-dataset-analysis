@@ -1,0 +1,40 @@
+{
+  "result_directory": "/workspace/comp8851_two_models/runs/lexgnn/amazon/v2_validation_only_gate/20261017T094605030165Z_amazon_lexgnn_adapter_v2_validation_only_restart_gate_seed2",
+  "checks": {
+    "summary_test_evaluated_false": true,
+    "summary_test_metrics_null": true,
+    "test_inference_zero": true,
+    "protocol_test_after_training_false": true,
+    "test_not_used_during_training": true,
+    "validation_only_prediction_keys": true,
+    "validation_size_correct": true,
+    "validation_scores_vary": true,
+    "one_restart_recorded": true,
+    "first_attempt_rejected": true,
+    "second_attempt_accepted": true,
+    "effective_seed_recorded": true
+  },
+  "prediction_keys": [
+    "validation_labels",
+    "validation_scores"
+  ],
+  "restart_attempts": [
+    {
+      "attempt": 1,
+      "effective_seed": 2,
+      "epochs_completed": 3,
+      "last_validation_auroc": 0.5,
+      "status": "REJECTED",
+      "training_seconds": 1.7921993209747598
+    },
+    {
+      "attempt": 2,
+      "effective_seed": 1002,
+      "epochs_completed": 4,
+      "last_validation_auroc": 0.8295022144594847,
+      "status": "ACCEPTED",
+      "training_seconds": 1.6431101629277691
+    }
+  ],
+  "final_status": "PASS"
+}

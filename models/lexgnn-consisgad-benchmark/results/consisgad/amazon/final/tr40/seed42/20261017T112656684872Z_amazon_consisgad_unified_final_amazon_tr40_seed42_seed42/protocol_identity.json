@@ -1,0 +1,12 @@
+{
+  "architecture_changed": false,
+  "compatibility_note": "sets upstream module global args so its trainable-eps branch behaves as authored",
+  "dataset_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "selection_metric": "validation AUROC",
+  "source_commit": "36811c5bc79be49c9740f25a1f260496bb4736af",
+  "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+  "test_evaluation_after_training": true,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99",
+  "transductive_unlabeled_use": "all eligible Amazon nodes; labels exposed only for training IDs"
+}

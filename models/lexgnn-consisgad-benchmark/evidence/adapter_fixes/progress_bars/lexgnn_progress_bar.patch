@@ -1,0 +1,39 @@
+--- /workspace/comp8851_two_models/evidence/adapter_fixes/progress_bars/lexgnn_before_progress_bar.py	2026-10-17 09:50:15.234688216 +0000
++++ /workspace/comp8851_two_models/adapters/lexgnn/train_amazon_unified.py	2026-10-17 09:50:15.272689706 +0000
+@@ -34,6 +34,20 @@
+ )
+ 
+ 
++def progress_text(current: int, total: int, width: int = 30) -> str:
++    """Return a log-safe ASCII progress bar."""
++    total = max(int(total), 1)
++    current = min(max(int(current), 0), total)
++    filled = int(width * current / total)
++    bar = "#" * filled + "-" * (width - filled)
++    percentage = 100.0 * current / total
++    return (
++        f"[{bar}] "
++        f"{current}/{total} "
++        f"({percentage:6.2f}%)"
++    )
++
++
+ def collect_scores(model, loader, device):
+     labels = []
+     scores = []
+@@ -265,10 +279,12 @@
+                 }
+             )
+             print(
++                f"{progress_text(epoch, int(config['epochs']))} | "
+                 f"Attempt {attempt_number + 1} | "
+-                f"Epoch {epoch:03d}/{config['epochs']} | "
+-                f"loss={np.mean(losses):.6f} | train={training_seconds:.3f}s | "
+-                f"val_AUROC={validation_metrics['auroc']:.6f} | best={improved}",
++                f"loss={np.mean(losses):.6f} | "
++                f"train={training_seconds:.3f}s | "
++                f"val_AUROC={validation_metrics['auroc']:.6f} | "
++                f"best={improved}",
+                 flush=True,
+             )
+ 

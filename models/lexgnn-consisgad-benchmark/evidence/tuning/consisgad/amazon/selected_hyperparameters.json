@@ -1,0 +1,22 @@
+{
+  "model": "ConsisGAD",
+  "dataset": "Amazon",
+  "selection_phase": "TR40 seed2 validation-only tuning",
+  "primary_selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "selected_trial": "trial_03_lr_0p005",
+  "selected_learning_rate": 0.005,
+  "selected_consistency_weight": 1.5,
+  "selected_validation_epoch": 16,
+  "selected_validation_auroc": 0.9652704135737009,
+  "selected_validation_auprc": 0.8623964670965842,
+  "selected_validation_macro_f1": 0.9058967042063302,
+  "selected_validation_fraud_f1": 0.8275862068965517,
+  "selected_validation_g_mean": 0.8537565553215247,
+  "selected_threshold": 0.5,
+  "restored_checkpoint_validation_auroc": 0.9652704135737009,
+  "restored_checkpoint_validation_auprc": 0.8623964670965842,
+  "source_result_directory": "/workspace/comp8851_two_models/runs/consisgad/amazon/tuning_tr40_seed2/trial_03_lr_0p005/20261017T101139231148Z_amazon_consisgad_unified_tuning_amazon_tr40_seed2_trial_03_lr_0p005_seed2",
+  "evaluation_note": "Selection uses the validation row that produced the saved best checkpoint. Post-restoration validation metrics are recorded separately."
+}

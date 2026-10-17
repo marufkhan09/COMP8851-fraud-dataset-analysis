@@ -1,0 +1,57 @@
+{
+  "dataset": "Amazon",
+  "source_ref": "origin/main",
+  "source_commit": "d36f5003d934862ecbe4acf828d910e6be40bf96",
+  "canonical_dataset": "/workspace/comp8851_two_models/datasets/canonical/amazon/Amazon.mat",
+  "split_seed": 2,
+  "splits": {
+    "TR10": {
+      "train": 863,
+      "validation": 1728,
+      "test": 3456,
+      "unused": 2592,
+      "training_fraud": 82,
+      "training_normal": 781,
+      "training_fraud_percentage": 9.501738122827346
+    },
+    "TR20": {
+      "train": 1727,
+      "validation": 1728,
+      "test": 3456,
+      "unused": 1728,
+      "training_fraud": 164,
+      "training_normal": 1563,
+      "training_fraud_percentage": 9.496236247828605
+    },
+    "TR30": {
+      "train": 2591,
+      "validation": 1728,
+      "test": 3456,
+      "unused": 864,
+      "training_fraud": 246,
+      "training_normal": 2345,
+      "training_fraud_percentage": 9.494403705133154
+    },
+    "TR40": {
+      "train": 3455,
+      "validation": 1728,
+      "test": 3456,
+      "unused": 0,
+      "training_fraud": 328,
+      "training_normal": 3127,
+      "training_fraud_percentage": 9.493487698986975
+    }
+  },
+  "manifest_loaded": true,
+  "checks": {
+    "eligible_node_range": true,
+    "duplicate_ids": false,
+    "partition_overlap": false,
+    "complete_eligible_node_coverage": true,
+    "fixed_validation_ids_and_order": true,
+    "fixed_test_ids_and_order": true,
+    "nested_training_sets": true,
+    "expected_class_counts": true,
+    "data_leakage_detected": false
+  }
+}

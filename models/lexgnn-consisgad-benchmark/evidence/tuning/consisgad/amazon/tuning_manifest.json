@@ -1,0 +1,60 @@
+{
+  "model": "ConsisGAD",
+  "dataset": "Amazon",
+  "phase": "TR40 validation-only tuning",
+  "split_seed": 2,
+  "training_seed": 2,
+  "selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "number_of_trials": 5,
+  "maximum_epochs_per_trial": 20,
+  "fixed_architecture": {
+    "hidden_dimension": 64,
+    "number_of_layers": 1,
+    "mlp_dropout": 0.3,
+    "input_dropout": 0.0,
+    "hidden_dropout": 0.0,
+    "trainable_drop_rate": 0.2,
+    "batch_size": 32,
+    "training_iterations": 128
+  },
+  "reported_metrics": [
+    "AUROC",
+    "AUPRC",
+    "Macro-F1",
+    "Fraud-F1",
+    "G-Mean",
+    "Fraud precision",
+    "Fraud recall",
+    "Accuracy",
+    "Confusion matrix"
+  ],
+  "trials": [
+    {
+      "trial": "trial_01_author_baseline",
+      "lr": 0.001,
+      "consistency_weight": 1.5
+    },
+    {
+      "trial": "trial_02_lr_0p0005",
+      "lr": 0.0005,
+      "consistency_weight": 1.5
+    },
+    {
+      "trial": "trial_03_lr_0p005",
+      "lr": 0.005,
+      "consistency_weight": 1.5
+    },
+    {
+      "trial": "trial_04_weight_1p0",
+      "lr": 0.001,
+      "consistency_weight": 1.0
+    },
+    {
+      "trial": "trial_05_weight_2p0",
+      "lr": 0.001,
+      "consistency_weight": 2.0
+    }
+  ]
+}

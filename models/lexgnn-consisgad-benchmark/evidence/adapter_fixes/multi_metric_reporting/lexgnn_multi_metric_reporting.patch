@@ -1,0 +1,13 @@
+--- /workspace/comp8851_two_models/evidence/adapter_fixes/multi_metric_reporting/lexgnn_before_multi_metric.py	2026-10-17 10:00:09.360953655 +0000
++++ /workspace/comp8851_two_models/adapters/lexgnn/train_amazon_unified.py	2026-10-17 10:00:09.417955885 +0000
+@@ -284,6 +284,10 @@
+                 f"loss={np.mean(losses):.6f} | "
+                 f"train={training_seconds:.3f}s | "
+                 f"val_AUROC={validation_metrics['auroc']:.6f} | "
++                f"val_AUPRC={validation_metrics['auprc']:.6f} | "
++                f"val_MacroF1={validation_metrics['macro_f1']:.6f} | "
++                f"val_FraudF1={validation_metrics['fraud_f1']:.6f} | "
++                f"val_GMean={validation_metrics['g_mean']:.6f} | "
+                 f"best={improved}",
+                 flush=True,
+             )

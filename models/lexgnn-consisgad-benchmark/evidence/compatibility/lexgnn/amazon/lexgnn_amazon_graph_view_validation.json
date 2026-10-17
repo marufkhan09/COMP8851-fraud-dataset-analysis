@@ -1,0 +1,62 @@
+{
+  "dataset": "Amazon",
+  "model_view": "LEX-GNN",
+  "normalization": "DGL RowFeatNormalizer(subtract_min=True)",
+  "nodes": 11944,
+  "feature_shape": [
+    11944,
+    25
+  ],
+  "normal_labels": 11123,
+  "fraud_labels": 821,
+  "feature_statistics": {
+    "finite": true,
+    "minimum": 0.0,
+    "maximum": 0.9821267127990723,
+    "mean": 0.03999999910593033,
+    "standard_deviation": 0.10915986448526382,
+    "nonzero_rows": 11944,
+    "zero_rows": 0,
+    "unique_rows": 10616
+  },
+  "relations": {
+    "net_upu": {
+      "canonical_etype": [
+        "user",
+        "net_upu",
+        "user"
+      ],
+      "edges": 351216,
+      "unique_sources": 10224,
+      "unique_destinations": 10224
+    },
+    "net_usu": {
+      "canonical_etype": [
+        "user",
+        "net_usu",
+        "user"
+      ],
+      "edges": 7132958,
+      "unique_sources": 11854,
+      "unique_destinations": 11854
+    },
+    "net_uvu": {
+      "canonical_etype": [
+        "user",
+        "net_uvu",
+        "user"
+      ],
+      "edges": 2073474,
+      "unique_sources": 11863,
+      "unique_destinations": 11863
+    }
+  },
+  "split_counts": {
+    "train": 3455,
+    "validation": 1728,
+    "test": 3456,
+    "unused": 0
+  },
+  "validation_status": "PASS",
+  "collapsed_smoke_interpretation": "Initialization/training-collapse warning; not a malformed dataset view."
+}

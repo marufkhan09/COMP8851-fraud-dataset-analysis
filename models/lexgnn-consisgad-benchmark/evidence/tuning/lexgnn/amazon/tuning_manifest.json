@@ -1,0 +1,59 @@
+{
+  "model": "LEX-GNN",
+  "dataset": "Amazon",
+  "phase": "TR40 validation-only tuning",
+  "split_seed": 2,
+  "training_seed": 2,
+  "selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "trials": [
+    {
+      "trial": "trial_01_author_baseline",
+      "learning_rate": 0.005,
+      "beta": 0.5
+    },
+    {
+      "trial": "trial_02_lr_0p001",
+      "learning_rate": 0.001,
+      "beta": 0.5
+    },
+    {
+      "trial": "trial_03_lr_0p01",
+      "learning_rate": 0.01,
+      "beta": 0.5
+    },
+    {
+      "trial": "trial_04_beta_0p25",
+      "learning_rate": 0.005,
+      "beta": 0.25
+    },
+    {
+      "trial": "trial_05_beta_1p0",
+      "learning_rate": 0.005,
+      "beta": 1.0
+    }
+  ],
+  "fixed_protocol": {
+    "maximum_epochs": 20,
+    "early_stopping_patience": 10,
+    "layers": 2,
+    "heads": 4,
+    "hidden_dimension": 64,
+    "dropout": 0.0,
+    "restart_threshold": 0.51,
+    "restart_check_epoch": 3,
+    "maximum_restarts": 5
+  },
+  "reported_metrics": [
+    "AUROC",
+    "AUPRC",
+    "Macro-F1",
+    "Fraud-F1",
+    "G-Mean",
+    "Fraud precision",
+    "Fraud recall",
+    "Accuracy",
+    "Confusion matrix"
+  ]
+}

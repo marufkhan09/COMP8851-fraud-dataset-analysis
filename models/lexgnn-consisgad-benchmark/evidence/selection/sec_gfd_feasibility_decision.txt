@@ -1,0 +1,20 @@
+SEC-GFD FEASIBILITY DECISION
+
+Status:
+Excluded from the four-day execution roster after source-code audit.
+
+Reason:
+The official implementation constructs dense N-by-N adjacency matrices
+using torch.zeros(n_nodes, n_nodes). This makes the implementation
+infeasible for large benchmark graphs, particularly Elliptic and
+T-Social, on the available 48 GB GPU.
+
+Benchmark rule:
+The team will not rewrite the core spectral implementation merely to
+force compatibility, because that would materially change the model.
+
+Replacement:
+LEX-GNN, subject to environment, adapter and two-epoch compatibility
+testing.
+
+SEC-GFD source remains preserved as feasibility evidence.
