@@ -1,0 +1,15 @@
+{
+  "architecture_changed": false,
+  "compatibility_note": "sets upstream module global args so its trainable-eps branch behaves as authored",
+  "dataset_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "feature_transform": "none; canonical YelpChi features retained, matching author code",
+  "graph_view": "relation-preserving YelpChi graph with net_rsr, net_rtr and net_rur",
+  "selection_metric": "validation AUROC",
+  "source_commit": "36811c5bc79be49c9740f25a1f260496bb4736af",
+  "split_policy": "COMP8851 frozen split IDs; DGL masks ignored",
+  "split_sha256": "2d2ad87317904986c60c5b14048a6bd6f0a1fbbc87278f94dfce2d50eb826e6d",
+  "test_evaluation_after_training": true,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99",
+  "transductive_unlabeled_use": "all YelpChi nodes; labels exposed only for training IDs"
+}
