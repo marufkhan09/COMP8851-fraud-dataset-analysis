@@ -1,0 +1,33 @@
+{
+  "run_name": "gdn_tfinance_unified_tr40_seed72_a6000_20261018T072024Z",
+  "model": "gdn",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.8726188089479755,
+  "reloaded_val_auprc": 0.8726188089479755,
+  "dataset_load_seconds": 6.526121146045625,
+  "train_only_total_seconds": 5286.219963208539,
+  "train_plus_valid_total_seconds": 7221.394028785173,
+  "inference_seconds": 39.178404858801514,
+  "peak_memory_bytes": 604756992,
+  "peak_rss_bytes": 6856085504,
+  "test_metrics": {
+    "auprc": 0.8313823065017819,
+    "auc": 0.9467248622012284,
+    "f1_macro": 0.8936091536989359,
+    "precision_fraud": 0.8960138648180243,
+    "recall_fraud": 0.7160664819944599,
+    "f1_fraud": 0.7959969207082371,
+    "g_mean": 0.8445153760782976,
+    "tp": 517,
+    "fp": 60,
+    "tn": 14961,
+    "fn": 205,
+    "threshold_used": 0.35,
+    "best_epoch": 99
+  }
+}

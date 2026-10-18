@@ -1,0 +1,164 @@
+Run on yelp, postive/total num: 6677/45954, train num 18473,valid num 9099, test num 18382, test positive num 2671
+Classification threshold: 0.2
+Feature dimension: 32
+Model: GDN, multi-relation aggregator: GNN, emb_size: 64.
+weight
+inter1.weight
+inter1.features.weight
+inter1.intra_agg1.weight
+inter1.intra_agg2.weight
+inter1.intra_agg3.weight
+inter1.label_clf.weight
+inter1.label_clf.bias
+/workspace/gdn/model_handler.py:161: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
+  loss = gnn_model.loss(batch_nodes, Variable(torch.cuda.LongTensor(batch_label)))
+Epoch: 0, loss: 0.05541234267385382, time: 16.998406171798706s
+Valid at epoch 0
+  Saving model ...
+Epoch: 1, loss: 0.05265976253308748, time: 16.649280548095703s
+Epoch: 2, loss: 0.050005432806516946, time: 15.887529850006104s
+Epoch: 3, loss: 0.047028381573526484, time: 16.60379958152771s
+Epoch: 4, loss: 0.04454295572481657, time: 16.635459661483765s
+Epoch: 5, loss: 0.042617512376684895, time: 16.071802139282227s
+Valid at epoch 5
+  Saving model ...
+Epoch: 6, loss: 0.04133217272005583, time: 15.855404376983643s
+Epoch: 7, loss: 0.04017526852457147, time: 16.42047691345215s
+Epoch: 8, loss: 0.038664588802739194, time: 16.394484758377075s
+Epoch: 9, loss: 0.03742818769655729, time: 15.722494125366211s
+Epoch: 10, loss: 0.03606820733923661, time: 16.274230003356934s
+Valid at epoch 10
+  Saving model ...
+Epoch: 11, loss: 0.03452780999635395, time: 16.469783067703247s
+Epoch: 12, loss: 0.033129092894102395, time: 16.468215942382812s
+Epoch: 13, loss: 0.03201736901935778, time: 16.379506826400757s
+Epoch: 14, loss: 0.030824507537641023, time: 16.244961500167847s
+Epoch: 15, loss: 0.030006675343764454, time: 16.438036680221558s
+Valid at epoch 15
+  Saving model ...
+Epoch: 16, loss: 0.029245963222102114, time: 16.44587016105652s
+Epoch: 17, loss: 0.028115950132671156, time: 16.49771499633789s
+Epoch: 18, loss: 0.027141514577363666, time: 15.893125295639038s
+Epoch: 19, loss: 0.02631424759563647, time: 16.736634016036987s
+Epoch: 20, loss: 0.025685683677071018, time: 16.890113592147827s
+Valid at epoch 20
+  Saving model ...
+Epoch: 21, loss: 0.02492066276700873, time: 16.833322525024414s
+Epoch: 22, loss: 0.024435256656847502, time: 16.40298628807068s
+Epoch: 23, loss: 0.02377775782033017, time: 16.398409605026245s
+Epoch: 24, loss: 0.02305861836985538, time: 16.512561798095703s
+Epoch: 25, loss: 0.022760268888975446, time: 15.868628740310669s
+Valid at epoch 25
+  Saving model ...
+Epoch: 26, loss: 0.022167895969591643, time: 15.691600561141968s
+Epoch: 27, loss: 0.021543960822255986, time: 16.275426387786865s
+Epoch: 28, loss: 0.021199685962576615, time: 16.814783096313477s
+Epoch: 29, loss: 0.02062893541235673, time: 16.051050901412964s
+Epoch: 30, loss: 0.019902348518371582, time: 16.7329158782959s
+Valid at epoch 30
+  Saving model ...
+Epoch: 31, loss: 0.01955033917176096, time: 16.361876726150513s
+Epoch: 32, loss: 0.018773765940415233, time: 16.627785205841064s
+Epoch: 33, loss: 0.018518818052191483, time: 16.668431282043457s
+Epoch: 34, loss: 0.018053169313230012, time: 16.51659655570984s
+Epoch: 35, loss: 0.017812849659668773, time: 16.191717863082886s
+Valid at epoch 35
+  Saving model ...
+Epoch: 36, loss: 0.017607346961372776, time: 16.536534547805786s
+Epoch: 37, loss: 0.017018733840239674, time: 16.69922137260437s
+Epoch: 38, loss: 0.016822578091370433, time: 16.778076648712158s
+Epoch: 39, loss: 0.016475900223380642, time: 16.070489645004272s
+Epoch: 40, loss: 0.016355421982313458, time: 16.664162397384644s
+Valid at epoch 40
+  Saving model ...
+Epoch: 41, loss: 0.016084729056609303, time: 16.98785901069641s
+Epoch: 42, loss: 0.01570435417325873, time: 16.332359790802002s
+Epoch: 43, loss: 0.015533315507989181, time: 16.77722477912903s
+Epoch: 44, loss: 0.015354956451215242, time: 16.896724224090576s
+Epoch: 45, loss: 0.015243469100249442, time: 16.31195902824402s
+Valid at epoch 45
+  Saving model ...
+Epoch: 46, loss: 0.014828551756708245, time: 16.773241996765137s
+Epoch: 47, loss: 0.014831371997532091, time: 16.23017978668213s
+Epoch: 48, loss: 0.014483696536013954, time: 16.88413977622986s
+Epoch: 49, loss: 0.01443801898705332, time: 16.87962770462036s
+Epoch: 50, loss: 0.014111705516514025, time: 17.037277698516846s
+Valid at epoch 50
+  Saving model ...
+Epoch: 51, loss: 0.013996005058288574, time: 16.79441237449646s
+Epoch: 52, loss: 0.013886023508874993, time: 16.1994686126709s
+Epoch: 53, loss: 0.013711108973151758, time: 16.867637395858765s
+Epoch: 54, loss: 0.013546763282073172, time: 16.520233631134033s
+Epoch: 55, loss: 0.013336838860260812, time: 16.24312686920166s
+Valid at epoch 55
+  Saving model ...
+Epoch: 56, loss: 0.01340890087579426, time: 15.929938793182373s
+Epoch: 57, loss: 0.013240086404900802, time: 16.536341667175293s
+Epoch: 58, loss: 0.01298446325879348, time: 16.46596884727478s
+Epoch: 59, loss: 0.012758669100309672, time: 16.387721300125122s
+Epoch: 60, loss: 0.012710248169146086, time: 15.919275522232056s
+Valid at epoch 60
+  Saving model ...
+Epoch: 61, loss: 0.01247488275954598, time: 16.575925827026367s
+Epoch: 62, loss: 0.012357431807016072, time: 16.512521982192993s
+Epoch: 63, loss: 0.012201738984961259, time: 15.982572555541992s
+Epoch: 64, loss: 0.012111234037499679, time: 16.406412363052368s
+Epoch: 65, loss: 0.011903919671711168, time: 16.52426767349243s
+Valid at epoch 65
+  Saving model ...
+Epoch: 66, loss: 0.011929018717063101, time: 16.5014865398407s
+Epoch: 67, loss: 0.011768459489471033, time: 16.51355218887329s
+Epoch: 68, loss: 0.011743998841235512, time: 15.830097436904907s
+Epoch: 69, loss: 0.011587801732515035, time: 16.529874801635742s
+Epoch: 70, loss: 0.011428738895215486, time: 16.28184485435486s
+Valid at epoch 70
+  Saving model ...
+Epoch: 71, loss: 0.011317028811103419, time: 16.469887495040894s
+Epoch: 72, loss: 0.01126957096551594, time: 16.547863483428955s
+Epoch: 73, loss: 0.01109828996030908, time: 15.962762594223022s
+Epoch: 74, loss: 0.011053986455264845, time: 16.513427257537842s
+Epoch: 75, loss: 0.010978672849504571, time: 16.556647062301636s
+Valid at epoch 75
+  Saving model ...
+Epoch: 76, loss: 0.01082784094308552, time: 15.965818881988525s
+Epoch: 77, loss: 0.010745195181746232, time: 16.30063796043396s
+Epoch: 78, loss: 0.01060767628644642, time: 16.29436755180359s
+Epoch: 79, loss: 0.010497879040868659, time: 16.009570121765137s
+Epoch: 80, loss: 0.010516591762241564, time: 16.576755046844482s
+Valid at epoch 80
+  Saving model ...
+Epoch: 81, loss: 0.01038291030808499, time: 16.066059350967407s
+Epoch: 82, loss: 0.010280327577339975, time: 16.699131727218628s
+Epoch: 83, loss: 0.010247250920847842, time: 16.813942909240723s
+Epoch: 84, loss: 0.0101578016030161, time: 16.089706659317017s
+Epoch: 85, loss: 0.01011051943427638, time: 16.621761798858643s
+Valid at epoch 85
+  Saving model ...
+Epoch: 86, loss: 0.010112051116792779, time: 16.951431274414062s
+Epoch: 87, loss: 0.009966012678648295, time: 16.84024214744568s
+Epoch: 88, loss: 0.00991983319583692, time: 16.26167631149292s
+Epoch: 89, loss: 0.009851218054169103, time: 16.723761320114136s
+Epoch: 90, loss: 0.009790157801226565, time: 16.83911156654358s
+Valid at epoch 90
+  Saving model ...
+Epoch: 91, loss: 0.009709070387639497, time: 16.826563835144043s
+Epoch: 92, loss: 0.00977821099130731, time: 16.75066828727722s
+Epoch: 93, loss: 0.009624779224395752, time: 16.30446982383728s
+Epoch: 94, loss: 0.00949106404655858, time: 16.974852800369263s
+Epoch: 95, loss: 0.00942886659973546, time: 16.80065369606018s
+Valid at epoch 95
+  Saving model ...
+Epoch: 96, loss: 0.009413235281643114, time: 16.748741626739502s
+Epoch: 97, loss: 0.009356279906473662, time: 16.17370295524597s
+Epoch: 98, loss: 0.009239410883501956, time: 16.586135149002075s
+Epoch: 99, loss: 0.009148838488679183, time: 16.610312700271606s
+Epoch: 100, loss: 0.009219156284081308, time: 16.080018281936646s
+Valid at epoch 100
+  Saving model ...
+Restore model from epoch 100
+Model path: ./pytorch_models/2026-10-18 04-11-42/yelp_GDN.pkl
+/workspace/gdn/model_handler.py:231: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  gnn_model.load_state_dict(torch.load(path_saver))
+F1-Macro: 0.7296892857559902
+AUC: 0.9064095434378748
+G-Mean: 0.8309885618623857

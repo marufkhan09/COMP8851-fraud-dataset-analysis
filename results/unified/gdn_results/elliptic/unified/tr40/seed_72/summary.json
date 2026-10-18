@@ -1,0 +1,33 @@
+{
+  "run_name": "gdn_elliptic_unified_tr40_seed72_a6000_20261018T075813Z",
+  "model": "gdn",
+  "dataset": "elliptic",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 85,
+  "best_val_auprc": 0.9034166857696302,
+  "reloaded_val_auprc": 0.9034166857696302,
+  "dataset_load_seconds": 0.5782376062124968,
+  "train_only_total_seconds": 4706.142211680766,
+  "train_plus_valid_total_seconds": 4750.843995173229,
+  "inference_seconds": 0.8290403930004686,
+  "peak_memory_bytes": 1013517824,
+  "peak_rss_bytes": 1724162048,
+  "test_metrics": {
+    "auprc": 0.9174236648292234,
+    "auc": 0.9806997715478353,
+    "f1_macro": 0.9207523235777968,
+    "precision_fraud": 0.8902077151335311,
+    "recall_fraud": 0.8250825082508251,
+    "f1_fraud": 0.8564087924636026,
+    "g_mean": 0.9033277936209391,
+    "tp": 1500,
+    "fp": 185,
+    "tn": 16623,
+    "fn": 318,
+    "threshold_used": 0.65,
+    "best_epoch": 85
+  }
+}

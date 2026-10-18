@@ -1,0 +1,33 @@
+{
+  "run_name": "gdn_comp_unified_tr30_seed72_a6000_20261018T064916Z",
+  "model": "gdn",
+  "dataset": "comp",
+  "track": "unified",
+  "ratio": 30,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 98,
+  "best_val_auprc": 0.18807656002605702,
+  "reloaded_val_auprc": 0.18807656002605702,
+  "dataset_load_seconds": 0.014042594004422426,
+  "train_only_total_seconds": 35.125255088321865,
+  "train_plus_valid_total_seconds": 37.75657959328964,
+  "inference_seconds": 0.031958950916305184,
+  "peak_memory_bytes": 45116416,
+  "peak_rss_bytes": 1349804032,
+  "test_metrics": {
+    "auprc": 0.16761528564778955,
+    "auc": 0.600939071766384,
+    "f1_macro": 0.5441934443369258,
+    "precision_fraud": 0.23140495867768596,
+    "recall_fraud": 0.125,
+    "f1_fraud": 0.16231884057971013,
+    "g_mean": 0.3448060677867399,
+    "tp": 28,
+    "fp": 93,
+    "tn": 1810,
+    "fn": 196,
+    "threshold_used": 0.15,
+    "best_epoch": 98
+  }
+}

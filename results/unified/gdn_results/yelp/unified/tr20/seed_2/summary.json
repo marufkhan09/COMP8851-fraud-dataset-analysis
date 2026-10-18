@@ -1,0 +1,33 @@
+{
+  "run_name": "gdn_yelp_unified_tr20_seed2_a6000_20261018T061814Z",
+  "model": "gdn",
+  "dataset": "yelp",
+  "track": "unified",
+  "ratio": 20,
+  "seed": 2,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.639627514490013,
+  "reloaded_val_auprc": 0.639627514490013,
+  "dataset_load_seconds": 3.391617765184492,
+  "train_only_total_seconds": 926.9729981773999,
+  "train_plus_valid_total_seconds": 1135.4695908762515,
+  "inference_seconds": 4.0393488619010895,
+  "peak_memory_bytes": 456344064,
+  "peak_rss_bytes": 3058499584,
+  "test_metrics": {
+    "auprc": 0.6457057713405221,
+    "auc": 0.8938390667961965,
+    "f1_macro": 0.7701044472867886,
+    "precision_fraud": 0.6074240719910011,
+    "recall_fraud": 0.6065144140771247,
+    "f1_fraud": 0.6069689022105658,
+    "g_mean": 0.7523932227118834,
+    "tp": 1620,
+    "fp": 1047,
+    "tn": 14664,
+    "fn": 1051,
+    "threshold_used": 0.35,
+    "best_epoch": 99
+  }
+}

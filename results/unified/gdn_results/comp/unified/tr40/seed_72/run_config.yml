@@ -1,0 +1,33 @@
+dataset: comp
+ratio: 40
+seed: 72
+track: unified
+max_epoch: 100
+early_stop: 20
+emb_size: 64
+multi_relation: GNN
+optimizer: adam
+lr_1: 0.001
+lr_2: 1.0e-05
+weight_decay: 0.001
+weight_decay_2: 0.1
+batch_size: 1024
+test_batch_size: 1024
+add_constraint: true
+Beta: 0.1
+topk: 10
+selection_metric: val_auprc
+threshold_rule: best val macro-F1 on 0.05..0.95 step 0.05
+author_config: gdn_yelpchi.yml
+protocol_deviations_from_native:
+- 'splits: team canonical nested TR40/30/20/10 (seed 2) instead of author train_test_split
+  40/20/40'
+- validation every epoch instead of every 5 epochs
+- checkpoint selected by validation AUPRC instead of validation AUROC
+- max 100 epochs with early stopping patience 20 instead of fixed 101 epochs
+- threshold chosen by best validation Macro-F1 (0.05..0.95) instead of fixed 0.2
+- 'training node order: canonical train mask shuffled once with RandomState(2) (author:
+  train_test_split order, random_state=2)'
+- prototype vectors snapshotted/restored around evaluation passes
+- 'environment: python 3.10, torch 2.5.1+cu121 instead of README pins (torch 1.4,
+  numpy 1.16)'
