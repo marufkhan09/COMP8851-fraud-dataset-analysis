@@ -1,0 +1,27 @@
+[tfinance_sub15] building adapted graph...
+[tfinance_sub15] loading full T-Finance graph /workspace/data/bwgnn/dataset/tfinance
+[tfinance_sub15] subsample: {'fraction': 0.15, 'rng': 'RandomState(2)', 'stratified_by': 'label', 'procedure': 'identical to splitgnn tsocial_adapter.py', 'n_nodes': 5904, 'n_edges': 902212, 'n_fraud': 271, 'fraud_rate': 0.04590108245611191, 'full_fraud_rate': 0.04583682864904404}
+[tfinance_sub15] nodes=5904 e=902212 homo=902212 features=(5904, 10)
+[tfinance_sub15] homo edge stats: {'n_edges': 902212, 'n_self_loops': 0, 'n_duplicate_edges': 0, 'n_edges_without_reverse': 0} (0.2s)
+[tfinance_sub15] edge-label check: {'method': "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"}
+[tfinance_sub15] adapted graph saved: /workspace/h2fd_vast/native/tfinance_sub15.dgl
+[tfinance_sub15] split candidates vs SplitGNN TR40: {'all_nodes': None}  ({'ref_path': '/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance_sub15/unified/tr40/seed_2/split_indices.npz', 'status': 'reference not found'})
+[tfinance_sub15] WARNING: using all_nodes without a SplitGNN match
+n=5904
+valid: 1181 (20.0%)
+test:  2361 (40.0%)
+TR40:  2362 (40.0%)
+TR30:  1772 (30.0%)
+TR20:  1180 (20.0%)
+TR10:  590 (10.0%)
+All nesting/overlap checks PASSED
+[tfinance_sub15] wrote /workspace/H2-FDetector/config/tfinance_sub15.yaml from author template /workspace/H2-FDetector/config/yelp.yaml
+[tfinance_sub15] TR40: wrote /workspace/h2fd_vast/views/tfinance_sub15_tr40.dgl
+[tfinance_sub15] TR40: train=2362 valid=1181 test=2361 edge_train=140374 splitgnn_crosscheck=reference not found
+[tfinance_sub15] TR30: wrote /workspace/h2fd_vast/views/tfinance_sub15_tr30.dgl
+[tfinance_sub15] TR30: train=1772 valid=1181 test=2361 edge_train=76438 splitgnn_crosscheck=reference not found
+[tfinance_sub15] TR20: wrote /workspace/h2fd_vast/views/tfinance_sub15_tr20.dgl
+[tfinance_sub15] TR20: train=1180 valid=1181 test=2361 edge_train=35982 splitgnn_crosscheck=reference not found
+[tfinance_sub15] TR10: wrote /workspace/h2fd_vast/views/tfinance_sub15_tr10.dgl
+[tfinance_sub15] TR10: train=590 valid=1181 test=2361 edge_train=8928 splitgnn_crosscheck=reference not found
+[tfinance_sub15] manifest written to /workspace/h2fd_vast/views/tfinance_sub15_views_manifest.json  (total 6s)

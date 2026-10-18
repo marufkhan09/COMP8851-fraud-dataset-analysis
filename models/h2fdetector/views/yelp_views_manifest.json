@@ -1,0 +1,134 @@
+{
+  "dataset": "yelp",
+  "builder_version": "h2fd_view_builder_v1",
+  "builder_sha256": "ed482257584db4afdc0f6e988ceb47fd94f3a73f83d0d592fed77221ee2382e7",
+  "native_dgl_path": "/workspace/H2-FDetector/data/yelp.dgl",
+  "native_dgl_sha256": "5ad19af45658269f57f4c30c3fec21568230276b1c8ca17577b6ddf1520854cc",
+  "source_mat_path": "/workspace/data/YelpChi.mat",
+  "source_mat_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "node_type": "r",
+  "n_nodes": 45954,
+  "n_edges": {
+    "homo": 7693958,
+    "s": 6805486,
+    "t": 1147232,
+    "u": 98630
+  },
+  "split_seed": 2,
+  "split_registry_version": "own_generate_splits_v1_seed2",
+  "edge_label_verification": {
+    "method": "recompute native edge labels/train mask from native node train mask",
+    "n_edges_homo": 7693958,
+    "edge_labels_identical": true,
+    "edge_train_mask_identical": true,
+    "n_label_mismatch": 0,
+    "n_mask_mismatch": 0,
+    "seconds": 0.837
+  },
+  "views": {
+    "tr40": {
+      "view_path": "/workspace/h2fd_vast/views/yelp_tr40.dgl",
+      "view_sha256": "d001b296a89d6047bde5e3f4f4d06d108943b82a96e274902bde0793165f39fa",
+      "split_path": "/workspace/h2fd_vast/views/yelp_tr40_split.npz",
+      "split_file_sha256": "b4aadacdc0b1e6036dc8c00858d254d76bc9a5411991bf7d3cdbe88a555245a7",
+      "split_content_sha256": "b8dd0808f39eb2737a3b4090a838b81a426b57c183c31edd65d367223c0ff6e7",
+      "n_train": 18382,
+      "n_valid": 9190,
+      "n_test": 18382,
+      "n_train_fraud": 2671,
+      "n_edge_train": 1231444,
+      "n_edge_train_same_label": 951844,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/yelp/unified/tr40/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr30": {
+      "view_path": "/workspace/h2fd_vast/views/yelp_tr30.dgl",
+      "view_sha256": "9d65437db08cd68d9e2db608a1a89e4a4f44531c66c823d52f0ff2fb25482bcf",
+      "split_path": "/workspace/h2fd_vast/views/yelp_tr30_split.npz",
+      "split_file_sha256": "7cc04a3b574abcec3325d272d8a5db5e251232a95b5e1e8aeb911155f065403d",
+      "split_content_sha256": "65e48e7583fca2336a93df117b662eb64f1bb19b4526787c1d1ee05f110990a0",
+      "n_train": 13786,
+      "n_valid": 9190,
+      "n_test": 18382,
+      "n_train_fraud": 2003,
+      "n_edge_train": 689910,
+      "n_edge_train_same_label": 532588,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/yelp/unified/tr30/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr20": {
+      "view_path": "/workspace/h2fd_vast/views/yelp_tr20.dgl",
+      "view_sha256": "6c77b079a1c2da11c3c1674ae7bfd83c2d9698bf0f4dc25d9c3058c8d82a1a5e",
+      "split_path": "/workspace/h2fd_vast/views/yelp_tr20_split.npz",
+      "split_file_sha256": "7a47e3d4ecc5f11bc8d5fcf216ca10ceedca8fd5bec896584c62e27734445e32",
+      "split_content_sha256": "9616ef6849a505bdcb71e434ec57ff201914409b63bf1d38faf4654ada545901",
+      "n_train": 9192,
+      "n_valid": 9190,
+      "n_test": 18382,
+      "n_train_fraud": 1336,
+      "n_edge_train": 308468,
+      "n_edge_train_same_label": 236924,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/yelp/unified/tr20/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr10": {
+      "view_path": "/workspace/h2fd_vast/views/yelp_tr10.dgl",
+      "view_sha256": "fa6975a882d7efe17e2541cfdd93092e8bb56a08c7ad13eadb7da8f948561d7e",
+      "split_path": "/workspace/h2fd_vast/views/yelp_tr10_split.npz",
+      "split_file_sha256": "ad6d9831caedd37ebd1281b49ec605dbcc8a857fa714223aa1b68d503ae95d31",
+      "split_content_sha256": "d3ca9f2d19af0af9df5cc9df5a6efb8b836a6b4593b5350e00df3fa702c6f431",
+      "n_train": 4596,
+      "n_valid": 9190,
+      "n_test": 18382,
+      "n_train_fraud": 668,
+      "n_edge_train": 77066,
+      "n_edge_train_same_label": 59032,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/yelp/unified/tr10/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    }
+  }
+}

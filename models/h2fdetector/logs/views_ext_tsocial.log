@@ -1,0 +1,25 @@
+[tsocial] building adapted graph...
+[tsocial] loading full graph /workspace/data/bwgnn/dataset/tsocial (large)...
+[tsocial] nodes=867160 e=3297570 homo=3297570 features=(867160, 10)
+[tsocial] homo edge stats: {'n_edges': 3297570, 'n_self_loops': 0, 'n_duplicate_edges': 0, 'n_edges_without_reverse': 0} (0.5s)
+[tsocial] edge-label check: {'method': "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"}
+[tsocial] adapted graph saved: /workspace/h2fd_vast/native/tsocial.dgl
+[tsocial] split candidates vs SplitGNN TR40: {'all_nodes': {'train_mask': True, 'valid_mask': True, 'test_mask': True}}  ({'ref_path': '/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tsocial/unified/tr40/seed_2/split_indices.npz', 'ref_keys': ['train_mask', 'valid_mask', 'test_mask']})
+n=867160
+valid: 173432 (20.0%)
+test:  346864 (40.0%)
+TR40:  346864 (40.0%)
+TR30:  260148 (30.0%)
+TR20:  173432 (20.0%)
+TR10:  86716 (10.0%)
+All nesting/overlap checks PASSED
+[tsocial] wrote /workspace/H2-FDetector/config/tsocial.yaml from author template /workspace/H2-FDetector/config/yelp.yaml
+[tsocial] TR40: wrote /workspace/h2fd_vast/views/tsocial_tr40.dgl
+[tsocial] TR40: train=346864 valid=173432 test=346864 edge_train=528910 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tsocial] TR30: wrote /workspace/h2fd_vast/views/tsocial_tr30.dgl
+[tsocial] TR30: train=260148 valid=173432 test=346864 edge_train=297396 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tsocial] TR20: wrote /workspace/h2fd_vast/views/tsocial_tr20.dgl
+[tsocial] TR20: train=173432 valid=173432 test=346864 edge_train=131582 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tsocial] TR10: wrote /workspace/h2fd_vast/views/tsocial_tr10.dgl
+[tsocial] TR10: train=86716 valid=173432 test=346864 edge_train=32214 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tsocial] manifest written to /workspace/h2fd_vast/views/tsocial_views_manifest.json  (total 23s)

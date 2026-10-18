@@ -1,0 +1,109 @@
+Run: h2fdetector_tsocial_unified_tr10_seed2_a6000_20261018T081434Z
+Model commit: 10710d08a8461f418da2db8625a6f23199051785  local changes: ['M config/amazon.yaml', ' M config/yelp.yaml', ' M src/data_preprocess.py']
+Config SHA256: ad0df58e31946036d318fe2384d0cb43c675f65d098b3274cd91406074995b4f
+Split SHA256: 7f41c5c622cc686fbceda7e814386ff42050d12ece400e90a7e5184ba7b858ee
+train=86716 valid=173432 test=346864  dataset_load=2.04s
+0: loss=5.8408 val_auprc=0.0424 val_auc=0.6824 val_f1@0.5=0.2369 val_recall@0.5=0.9866 train=1.64s valid=0.41s peak=9.39GiB best=0.0424@0 *
+1: loss=6.2595 val_auprc=0.0331 val_auc=0.5950 val_f1@0.5=0.2567 val_recall@0.5=0.9828 train=1.25s valid=0.42s peak=9.40GiB best=0.0424@0
+2: loss=5.5047 val_auprc=0.0427 val_auc=0.6866 val_f1@0.5=0.2532 val_recall@0.5=0.9872 train=1.25s valid=0.41s peak=9.40GiB best=0.0427@2 *
+3: loss=5.3474 val_auprc=0.0460 val_auc=0.6816 val_f1@0.5=0.4923 val_recall@0.5=0.0000 train=1.26s valid=0.41s peak=9.40GiB best=0.0460@3 *
+4: loss=5.7075 val_auprc=0.0396 val_auc=0.6535 val_f1@0.5=0.3040 val_recall@0.5=0.9388 train=1.26s valid=0.42s peak=9.40GiB best=0.0460@3
+5: loss=5.6257 val_auprc=0.0230 val_auc=0.3451 val_f1@0.5=0.3924 val_recall@0.5=0.1911 train=1.25s valid=0.46s peak=9.40GiB best=0.0460@3
+6: loss=6.2562 val_auprc=0.0197 val_auc=0.2937 val_f1@0.5=0.4614 val_recall@0.5=0.0434 train=1.31s valid=0.47s peak=9.40GiB best=0.0460@3
+7: loss=5.2061 val_auprc=0.0526 val_auc=0.6992 val_f1@0.5=0.4923 val_recall@0.5=0.0000 train=1.32s valid=0.47s peak=9.40GiB best=0.0526@7 *
+8: loss=5.3295 val_auprc=0.0351 val_auc=0.6111 val_f1@0.5=0.4923 val_recall@0.5=0.0000 train=1.32s valid=0.46s peak=9.40GiB best=0.0526@7
+9: loss=4.9849 val_auprc=0.0414 val_auc=0.6529 val_f1@0.5=0.4130 val_recall@0.5=0.8638 train=1.31s valid=0.43s peak=9.40GiB best=0.0526@7
+10: loss=4.9217 val_auprc=0.0433 val_auc=0.6477 val_f1@0.5=0.4326 val_recall@0.5=0.8261 train=1.28s valid=0.64s peak=9.40GiB best=0.0526@7
+11: loss=4.9124 val_auprc=0.0456 val_auc=0.6717 val_f1@0.5=0.4397 val_recall@0.5=0.8244 train=1.27s valid=0.41s peak=9.40GiB best=0.0526@7
+12: loss=4.7713 val_auprc=0.0460 val_auc=0.6968 val_f1@0.5=0.4235 val_recall@0.5=0.8611 train=1.26s valid=0.42s peak=9.40GiB best=0.0526@7
+13: loss=4.6470 val_auprc=0.0515 val_auc=0.7241 val_f1@0.5=0.4180 val_recall@0.5=0.8447 train=1.26s valid=0.42s peak=9.40GiB best=0.0526@7
+14: loss=4.6669 val_auprc=0.0539 val_auc=0.7257 val_f1@0.5=0.4472 val_recall@0.5=0.7104 train=1.26s valid=0.45s peak=9.40GiB best=0.0539@14 *
+15: loss=4.7701 val_auprc=0.0591 val_auc=0.7446 val_f1@0.5=0.4796 val_recall@0.5=0.6509 train=1.29s valid=0.42s peak=9.40GiB best=0.0591@15 *
+16: loss=4.7114 val_auprc=0.0605 val_auc=0.7484 val_f1@0.5=0.5152 val_recall@0.5=0.5078 train=1.26s valid=0.42s peak=9.40GiB best=0.0605@16 *
+17: loss=4.5724 val_auprc=0.0585 val_auc=0.7537 val_f1@0.5=0.5016 val_recall@0.5=0.5622 train=1.26s valid=0.41s peak=9.40GiB best=0.0605@16
+18: loss=4.5509 val_auprc=0.0698 val_auc=0.7817 val_f1@0.5=0.4213 val_recall@0.5=0.8946 train=1.28s valid=0.40s peak=9.40GiB best=0.0698@18 *
+19: loss=4.4972 val_auprc=0.0726 val_auc=0.7894 val_f1@0.5=0.4169 val_recall@0.5=0.9189 train=1.24s valid=0.42s peak=9.40GiB best=0.0726@19 *
+20: loss=4.5145 val_auprc=0.0659 val_auc=0.7743 val_f1@0.5=0.4582 val_recall@0.5=0.8326 train=1.26s valid=0.41s peak=9.40GiB best=0.0726@19
+21: loss=4.3872 val_auprc=0.0647 val_auc=0.7718 val_f1@0.5=0.4467 val_recall@0.5=0.8611 train=1.26s valid=0.44s peak=9.40GiB best=0.0726@19
+22: loss=4.3027 val_auprc=0.0799 val_auc=0.8032 val_f1@0.5=0.4424 val_recall@0.5=0.9059 train=1.26s valid=0.45s peak=9.40GiB best=0.0799@22 *
+23: loss=4.2508 val_auprc=0.0647 val_auc=0.7750 val_f1@0.5=0.4838 val_recall@0.5=0.8395 train=1.32s valid=0.42s peak=9.40GiB best=0.0799@22
+24: loss=4.2176 val_auprc=0.0757 val_auc=0.7906 val_f1@0.5=0.5113 val_recall@0.5=0.8345 train=1.27s valid=0.41s peak=9.40GiB best=0.0799@22
+25: loss=4.1823 val_auprc=0.0959 val_auc=0.8160 val_f1@0.5=0.5096 val_recall@0.5=0.8671 train=1.26s valid=0.42s peak=9.40GiB best=0.0959@25 *
+26: loss=4.0831 val_auprc=0.0882 val_auc=0.8059 val_f1@0.5=0.5403 val_recall@0.5=0.8280 train=1.26s valid=0.42s peak=9.40GiB best=0.0959@25
+27: loss=3.9851 val_auprc=0.1001 val_auc=0.8252 val_f1@0.5=0.5505 val_recall@0.5=0.8410 train=1.27s valid=0.41s peak=9.40GiB best=0.1001@27 *
+28: loss=3.9264 val_auprc=0.1108 val_auc=0.8445 val_f1@0.5=0.5301 val_recall@0.5=0.8799 train=1.25s valid=0.41s peak=9.40GiB best=0.1108@28 *
+29: loss=3.9145 val_auprc=0.1129 val_auc=0.8524 val_f1@0.5=0.5518 val_recall@0.5=0.8598 train=1.25s valid=0.43s peak=9.40GiB best=0.1129@29 *
+30: loss=3.8742 val_auprc=0.1598 val_auc=0.8750 val_f1@0.5=0.5592 val_recall@0.5=0.8552 train=1.30s valid=0.42s peak=9.40GiB best=0.1598@30 *
+31: loss=3.7947 val_auprc=0.1852 val_auc=0.8842 val_f1@0.5=0.5715 val_recall@0.5=0.8504 train=1.26s valid=0.41s peak=9.40GiB best=0.1852@31 *
+32: loss=3.7326 val_auprc=0.1654 val_auc=0.8853 val_f1@0.5=0.5826 val_recall@0.5=0.8498 train=1.26s valid=0.42s peak=9.40GiB best=0.1852@31
+33: loss=3.6751 val_auprc=0.2524 val_auc=0.8963 val_f1@0.5=0.5834 val_recall@0.5=0.8458 train=1.28s valid=0.43s peak=9.40GiB best=0.2524@33 *
+34: loss=3.6800 val_auprc=0.3158 val_auc=0.8918 val_f1@0.5=0.6617 val_recall@0.5=0.7286 train=1.27s valid=0.42s peak=9.40GiB best=0.3158@34 *
+35: loss=3.5922 val_auprc=0.3322 val_auc=0.9041 val_f1@0.5=0.6839 val_recall@0.5=0.7173 train=1.27s valid=0.42s peak=9.40GiB best=0.3322@35 *
+36: loss=3.5345 val_auprc=0.3039 val_auc=0.9097 val_f1@0.5=0.6381 val_recall@0.5=0.8026 train=1.27s valid=0.42s peak=9.40GiB best=0.3322@35
+37: loss=3.4828 val_auprc=0.3576 val_auc=0.9103 val_f1@0.5=0.6462 val_recall@0.5=0.7997 train=1.27s valid=0.43s peak=9.40GiB best=0.3576@37 *
+38: loss=3.4608 val_auprc=0.4056 val_auc=0.9082 val_f1@0.5=0.6769 val_recall@0.5=0.7429 train=1.26s valid=0.42s peak=9.40GiB best=0.4056@38 *
+39: loss=3.3790 val_auprc=0.4204 val_auc=0.9136 val_f1@0.5=0.6923 val_recall@0.5=0.7343 train=1.27s valid=0.41s peak=9.40GiB best=0.4204@39 *
+40: loss=3.3527 val_auprc=0.4257 val_auc=0.9142 val_f1@0.5=0.6754 val_recall@0.5=0.7959 train=1.25s valid=0.41s peak=9.40GiB best=0.4257@40 *
+41: loss=3.2837 val_auprc=0.4159 val_auc=0.9137 val_f1@0.5=0.6470 val_recall@0.5=0.8439 train=1.25s valid=0.46s peak=9.40GiB best=0.4257@40
+42: loss=3.2169 val_auprc=0.4177 val_auc=0.9144 val_f1@0.5=0.6440 val_recall@0.5=0.8500 train=1.32s valid=0.46s peak=9.40GiB best=0.4257@40
+43: loss=3.1908 val_auprc=0.3270 val_auc=0.9159 val_f1@0.5=0.6194 val_recall@0.5=0.8686 train=1.31s valid=0.46s peak=9.40GiB best=0.4257@40
+44: loss=3.1834 val_auprc=0.3095 val_auc=0.9168 val_f1@0.5=0.6274 val_recall@0.5=0.8579 train=1.32s valid=0.46s peak=9.40GiB best=0.4257@40
+45: loss=3.1792 val_auprc=0.3650 val_auc=0.9202 val_f1@0.5=0.6438 val_recall@0.5=0.8409 train=1.32s valid=0.45s peak=9.40GiB best=0.4257@40
+46: loss=3.2125 val_auprc=0.3848 val_auc=0.9224 val_f1@0.5=0.6193 val_recall@0.5=0.8629 train=1.30s valid=0.47s peak=9.40GiB best=0.4257@40
+47: loss=3.1985 val_auprc=0.3841 val_auc=0.9219 val_f1@0.5=0.6127 val_recall@0.5=0.8684 train=1.32s valid=0.45s peak=9.40GiB best=0.4257@40
+48: loss=3.1131 val_auprc=0.4266 val_auc=0.9224 val_f1@0.5=0.6188 val_recall@0.5=0.8642 train=1.29s valid=0.46s peak=9.40GiB best=0.4266@48 *
+49: loss=3.1346 val_auprc=0.4855 val_auc=0.9194 val_f1@0.5=0.6404 val_recall@0.5=0.8445 train=1.30s valid=0.46s peak=9.40GiB best=0.4855@49 *
+50: loss=3.1107 val_auprc=0.5008 val_auc=0.9120 val_f1@0.5=0.6798 val_recall@0.5=0.7921 train=1.32s valid=0.47s peak=9.40GiB best=0.5008@50 *
+51: loss=3.1331 val_auprc=0.5003 val_auc=0.9174 val_f1@0.5=0.6882 val_recall@0.5=0.7963 train=1.38s valid=0.47s peak=9.40GiB best=0.5008@50
+52: loss=3.0825 val_auprc=0.5146 val_auc=0.9225 val_f1@0.5=0.6786 val_recall@0.5=0.8303 train=1.32s valid=0.46s peak=9.40GiB best=0.5146@52 *
+53: loss=3.0457 val_auprc=0.5295 val_auc=0.9260 val_f1@0.5=0.6629 val_recall@0.5=0.8479 train=1.31s valid=0.47s peak=9.40GiB best=0.5295@53 *
+54: loss=3.0468 val_auprc=0.4984 val_auc=0.9271 val_f1@0.5=0.6438 val_recall@0.5=0.8621 train=1.32s valid=0.46s peak=9.40GiB best=0.5295@53
+55: loss=3.0611 val_auprc=0.5111 val_auc=0.9269 val_f1@0.5=0.6685 val_recall@0.5=0.8380 train=1.31s valid=0.46s peak=9.40GiB best=0.5295@53
+56: loss=3.0381 val_auprc=0.5405 val_auc=0.9259 val_f1@0.5=0.6929 val_recall@0.5=0.8173 train=1.32s valid=0.47s peak=9.40GiB best=0.5405@56 *
+57: loss=2.9929 val_auprc=0.4578 val_auc=0.9276 val_f1@0.5=0.6288 val_recall@0.5=0.8680 train=1.32s valid=0.47s peak=9.40GiB best=0.5405@56
+58: loss=3.0694 val_auprc=0.4689 val_auc=0.9274 val_f1@0.5=0.6500 val_recall@0.5=0.8518 train=1.32s valid=0.46s peak=9.40GiB best=0.5405@56
+59: loss=2.9857 val_auprc=0.4952 val_auc=0.9265 val_f1@0.5=0.6906 val_recall@0.5=0.8189 train=1.32s valid=0.47s peak=9.40GiB best=0.5405@56
+60: loss=3.0321 val_auprc=0.5109 val_auc=0.9285 val_f1@0.5=0.6700 val_recall@0.5=0.8384 train=1.32s valid=0.47s peak=9.40GiB best=0.5405@56
+61: loss=2.9961 val_auprc=0.4971 val_auc=0.9287 val_f1@0.5=0.6457 val_recall@0.5=0.8590 train=1.32s valid=0.41s peak=9.40GiB best=0.5405@56
+62: loss=3.0239 val_auprc=0.5139 val_auc=0.9290 val_f1@0.5=0.6751 val_recall@0.5=0.8380 train=1.26s valid=0.41s peak=9.40GiB best=0.5405@56
+63: loss=2.9840 val_auprc=0.4994 val_auc=0.9293 val_f1@0.5=0.6830 val_recall@0.5=0.8357 train=1.25s valid=0.41s peak=9.40GiB best=0.5405@56
+64: loss=2.9959 val_auprc=0.4749 val_auc=0.9313 val_f1@0.5=0.6346 val_recall@0.5=0.8690 train=1.25s valid=0.41s peak=9.40GiB best=0.5405@56
+65: loss=3.0036 val_auprc=0.4634 val_auc=0.9311 val_f1@0.5=0.6331 val_recall@0.5=0.8659 train=1.26s valid=0.41s peak=9.40GiB best=0.5405@56
+66: loss=2.9731 val_auprc=0.5322 val_auc=0.9298 val_f1@0.5=0.7037 val_recall@0.5=0.8152 train=1.25s valid=0.41s peak=9.40GiB best=0.5405@56
+67: loss=2.9583 val_auprc=0.5385 val_auc=0.9315 val_f1@0.5=0.6798 val_recall@0.5=0.8345 train=1.25s valid=0.41s peak=9.40GiB best=0.5405@56
+68: loss=2.9372 val_auprc=0.5302 val_auc=0.9327 val_f1@0.5=0.6490 val_recall@0.5=0.8627 train=1.26s valid=0.41s peak=9.40GiB best=0.5405@56
+69: loss=2.9117 val_auprc=0.5207 val_auc=0.9321 val_f1@0.5=0.6697 val_recall@0.5=0.8516 train=1.24s valid=0.41s peak=9.40GiB best=0.5405@56
+70: loss=2.9247 val_auprc=0.5352 val_auc=0.9316 val_f1@0.5=0.6946 val_recall@0.5=0.8311 train=1.26s valid=0.41s peak=9.40GiB best=0.5405@56
+71: loss=2.9426 val_auprc=0.5466 val_auc=0.9322 val_f1@0.5=0.6594 val_recall@0.5=0.8564 train=1.25s valid=0.40s peak=9.40GiB best=0.5466@71 *
+72: loss=2.9444 val_auprc=0.5683 val_auc=0.9328 val_f1@0.5=0.6741 val_recall@0.5=0.8439 train=1.24s valid=0.40s peak=9.40GiB best=0.5683@72 *
+73: loss=2.9203 val_auprc=0.5769 val_auc=0.9341 val_f1@0.5=0.6915 val_recall@0.5=0.8322 train=1.24s valid=0.40s peak=9.40GiB best=0.5769@73 *
+74: loss=2.9103 val_auprc=0.5078 val_auc=0.9353 val_f1@0.5=0.6315 val_recall@0.5=0.8757 train=1.24s valid=0.40s peak=9.40GiB best=0.5769@73
+75: loss=2.9113 val_auprc=0.4863 val_auc=0.9331 val_f1@0.5=0.6358 val_recall@0.5=0.8707 train=1.25s valid=0.41s peak=9.40GiB best=0.5769@73
+76: loss=2.9684 val_auprc=0.5452 val_auc=0.9323 val_f1@0.5=0.7037 val_recall@0.5=0.8330 train=1.25s valid=0.41s peak=9.40GiB best=0.5769@73
+77: loss=2.8858 val_auprc=0.5744 val_auc=0.9255 val_f1@0.5=0.7058 val_recall@0.5=0.8137 train=1.25s valid=0.40s peak=9.40GiB best=0.5769@73
+78: loss=2.9171 val_auprc=0.5869 val_auc=0.9266 val_f1@0.5=0.6984 val_recall@0.5=0.8137 train=1.25s valid=0.41s peak=9.40GiB best=0.5869@78 *
+79: loss=2.9201 val_auprc=0.5628 val_auc=0.9337 val_f1@0.5=0.6838 val_recall@0.5=0.8386 train=1.25s valid=0.40s peak=9.40GiB best=0.5869@78
+80: loss=2.8440 val_auprc=0.5224 val_auc=0.9342 val_f1@0.5=0.6748 val_recall@0.5=0.8424 train=1.25s valid=0.41s peak=9.40GiB best=0.5869@78
+81: loss=2.8706 val_auprc=0.5696 val_auc=0.9351 val_f1@0.5=0.6651 val_recall@0.5=0.8565 train=1.25s valid=0.41s peak=9.40GiB best=0.5869@78
+82: loss=2.8966 val_auprc=0.5970 val_auc=0.9355 val_f1@0.5=0.6751 val_recall@0.5=0.8539 train=1.25s valid=0.41s peak=9.40GiB best=0.5970@82 *
+83: loss=2.8515 val_auprc=0.6102 val_auc=0.9329 val_f1@0.5=0.7127 val_recall@0.5=0.8194 train=1.25s valid=0.41s peak=9.40GiB best=0.6102@83 *
+84: loss=2.8833 val_auprc=0.6141 val_auc=0.9329 val_f1@0.5=0.7245 val_recall@0.5=0.8158 train=1.29s valid=0.41s peak=9.40GiB best=0.6141@84 *
+85: loss=2.8456 val_auprc=0.6069 val_auc=0.9341 val_f1@0.5=0.6826 val_recall@0.5=0.8544 train=1.25s valid=0.42s peak=9.40GiB best=0.6141@84
+86: loss=2.8642 val_auprc=0.5758 val_auc=0.9356 val_f1@0.5=0.6592 val_recall@0.5=0.8722 train=1.25s valid=0.41s peak=9.40GiB best=0.6141@84
+87: loss=2.8186 val_auprc=0.5682 val_auc=0.9355 val_f1@0.5=0.6567 val_recall@0.5=0.8715 train=1.25s valid=0.41s peak=9.40GiB best=0.6141@84
+88: loss=2.7959 val_auprc=0.5825 val_auc=0.9350 val_f1@0.5=0.6793 val_recall@0.5=0.8565 train=1.25s valid=0.40s peak=9.40GiB best=0.6141@84
+89: loss=2.8512 val_auprc=0.5947 val_auc=0.9350 val_f1@0.5=0.7288 val_recall@0.5=0.8148 train=1.26s valid=0.42s peak=9.40GiB best=0.6141@84
+90: loss=2.8686 val_auprc=0.5918 val_auc=0.9333 val_f1@0.5=0.6894 val_recall@0.5=0.8391 train=1.26s valid=0.42s peak=9.40GiB best=0.6141@84
+91: loss=2.8257 val_auprc=0.6194 val_auc=0.9327 val_f1@0.5=0.7184 val_recall@0.5=0.8206 train=1.28s valid=0.42s peak=9.40GiB best=0.6194@91 *
+92: loss=2.8103 val_auprc=0.6313 val_auc=0.9338 val_f1@0.5=0.7035 val_recall@0.5=0.8313 train=1.27s valid=0.41s peak=9.40GiB best=0.6313@92 *
+93: loss=2.8287 val_auprc=0.5925 val_auc=0.9396 val_f1@0.5=0.6565 val_recall@0.5=0.8690 train=1.25s valid=0.41s peak=9.40GiB best=0.6313@92
+94: loss=2.8384 val_auprc=0.5683 val_auc=0.9389 val_f1@0.5=0.6696 val_recall@0.5=0.8596 train=1.26s valid=0.41s peak=9.40GiB best=0.6313@92
+95: loss=2.8502 val_auprc=0.6117 val_auc=0.9385 val_f1@0.5=0.6910 val_recall@0.5=0.8497 train=1.25s valid=0.42s peak=9.40GiB best=0.6313@92
+96: loss=2.7866 val_auprc=0.6324 val_auc=0.9349 val_f1@0.5=0.7038 val_recall@0.5=0.8322 train=1.29s valid=0.47s peak=9.40GiB best=0.6324@96 *
+97: loss=2.8281 val_auprc=0.6289 val_auc=0.9361 val_f1@0.5=0.6928 val_recall@0.5=0.8464 train=1.31s valid=0.46s peak=9.40GiB best=0.6324@96
+98: loss=2.7546 val_auprc=0.6164 val_auc=0.9382 val_f1@0.5=0.7014 val_recall@0.5=0.8462 train=1.31s valid=0.46s peak=9.40GiB best=0.6324@96
+99: loss=2.7798 val_auprc=0.6306 val_auc=0.9366 val_f1@0.5=0.7402 val_recall@0.5=0.8137 train=1.30s valid=0.43s peak=9.40GiB best=0.6324@96
+Selected threshold (best val macro-F1): 0.90 (val F1=0.8105)
+Reload check: val AUPRC at best epoch 0.632446, after reload 0.632446
+TEST: auprc=0.6437 auc=0.9367 f1_macro=0.8151 fraud_precision=0.6686 fraud_recall=0.6156 fraud_f1=0.6410 g_mean=0.7809 threshold_used=0.9000
+Done: /workspace/h2fd_vast/results/h2fdetector_results/tsocial/unified/tr10/seed_2

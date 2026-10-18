@@ -1,0 +1,156 @@
+{
+  "dataset": "tfinance",
+  "builder_version": "h2fd_view_builder_ext_v1",
+  "builder_sha256": "d205836c8573d3691e6184cda2e58492ef58427dc35526011f2045531dda6744",
+  "native_dgl_path": "/workspace/h2fd_vast/native/tfinance.dgl",
+  "native_dgl_sha256": "f63f5bbf73b50bdf2d1d0ba1b2b86888592091e5271fd949810ee3c704705a75",
+  "source_mat_path": "/workspace/data/bwgnn/dataset/tfinance",
+  "source_mat_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "adapter": {
+    "source_path": "/workspace/data/bwgnn/dataset/tfinance",
+    "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+    "source_label_shape": [
+      39357,
+      2
+    ],
+    "transform": "homo = e = original edges (as splitgnn tfinance_adapter.py)"
+  },
+  "node_type": "r",
+  "n_nodes": 39357,
+  "n_labeled_nodes": 39357,
+  "n_edges": {
+    "e": 42445086,
+    "homo": 42445086
+  },
+  "homo_edge_stats": {
+    "n_edges": 42445086,
+    "n_self_loops": 0,
+    "n_duplicate_edges": 0,
+    "n_edges_without_reverse": 0
+  },
+  "split_seed": 2,
+  "split_registry_version": "own_generate_splits_v1_seed2",
+  "split_procedure": "all_nodes",
+  "split_candidates_vs_splitgnn_tr40": {
+    "all_nodes": {
+      "train_mask": true,
+      "valid_mask": true,
+      "test_mask": true
+    }
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  },
+  "config": {
+    "path": "/workspace/H2-FDetector/config/tfinance.yaml",
+    "sha256": "4d3695dbf125c52a26cb1104c28577ce7558542fe641efef8f85854da3b5d608",
+    "template": "/workspace/H2-FDetector/config/yelp.yaml",
+    "note": "no author config exists for this dataset; author template used unchanged apart from dataset name and device; no tuning"
+  },
+  "views": {
+    "tr40": {
+      "view_path": "/workspace/h2fd_vast/views/tfinance_tr40.dgl",
+      "view_sha256": "6b7ffedcf80704b4c451d87fae422bfe40f7f312d77f0d00ccc150bab0a1f377",
+      "split_path": "/workspace/h2fd_vast/views/tfinance_tr40_split.npz",
+      "split_file_sha256": "1409fcf8a9c188b44f34ad361d96a61c3049586724aff0c579a9789ce8f0d96c",
+      "split_content_sha256": "970ab67ff9acfe190207b576fb849dc93cf3d24be4d7781339871fa5c0854155",
+      "n_train": 15742,
+      "n_valid": 7872,
+      "n_test": 15743,
+      "n_train_fraud": 721,
+      "n_edge_train": 6668416,
+      "n_edge_train_same_label": 6480524,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance/unified/tr40/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr30": {
+      "view_path": "/workspace/h2fd_vast/views/tfinance_tr30.dgl",
+      "view_sha256": "91fdaba309e3459e848faa4efe6b8f7461aeb1891be59466ab19251dad5352fe",
+      "split_path": "/workspace/h2fd_vast/views/tfinance_tr30_split.npz",
+      "split_file_sha256": "ff2dcf0560afe673a785d1a0bff79e75d23e6dcf2c7b90480b62ff006e87485f",
+      "split_content_sha256": "a7db56a9a78e5ac5222279e320222e42a4ab27b9ababb602af9458f7e4ef3215",
+      "n_train": 11807,
+      "n_valid": 7872,
+      "n_test": 15743,
+      "n_train_fraud": 541,
+      "n_edge_train": 3806322,
+      "n_edge_train_same_label": 3703182,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance/unified/tr30/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr20": {
+      "view_path": "/workspace/h2fd_vast/views/tfinance_tr20.dgl",
+      "view_sha256": "9e31358f5a9e83e2882dcb2fb86e02cf887797066819b020cd4347f7cc4fdf03",
+      "split_path": "/workspace/h2fd_vast/views/tfinance_tr20_split.npz",
+      "split_file_sha256": "b137c141dc286fc0f4b7725522e47d4ed32a9691df30abc4d8535286b8dbc4ff",
+      "split_content_sha256": "e5ae67020e9c9a1865b51eb907d9f42702b0197216896066b203621adc9059be",
+      "n_train": 7870,
+      "n_valid": 7872,
+      "n_test": 15743,
+      "n_train_fraud": 360,
+      "n_edge_train": 1706680,
+      "n_edge_train_same_label": 1659588,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance/unified/tr20/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr10": {
+      "view_path": "/workspace/h2fd_vast/views/tfinance_tr10.dgl",
+      "view_sha256": "41e3207221ce2fa487715d7a2c00038d6b86314fbef1e724323ddd877115906e",
+      "split_path": "/workspace/h2fd_vast/views/tfinance_tr10_split.npz",
+      "split_file_sha256": "f78545b82403c12b82be43d25520c1aecfe27bf56aa0f4058b51a1fb78c89e59",
+      "split_content_sha256": "1a5a3d73016f618c91dec9cd0144b34588078e42bbd2f782afb8f00564cc382b",
+      "n_train": 3935,
+      "n_valid": 7872,
+      "n_test": 15743,
+      "n_train_fraud": 180,
+      "n_edge_train": 440774,
+      "n_edge_train_same_label": 429214,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance/unified/tr10/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    }
+  }
+}

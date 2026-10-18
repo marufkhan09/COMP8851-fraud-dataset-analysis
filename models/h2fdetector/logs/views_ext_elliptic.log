@@ -1,0 +1,24 @@
+[elliptic] building adapted graph...
+[elliptic] nodes=203769 e=234355 homo=234355 features=(203769, 165)
+[elliptic] homo edge stats: {'n_edges': 234355, 'n_self_loops': 0, 'n_duplicate_edges': 0, 'n_edges_without_reverse': 234355} (0.0s)
+[elliptic] edge-label check: {'method': "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"}
+[elliptic] adapted graph saved: /workspace/h2fd_vast/native/elliptic.dgl
+[elliptic] split candidates vs SplitGNN TR40: {'labeled_subset': {'train_mask': True, 'valid_mask': True, 'test_mask': True}, 'full_then_drop_unlabeled': {'train_mask': False, 'valid_mask': False, 'test_mask': False}}  ({'ref_path': '/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/elliptic/unified/tr40/seed_2/split_indices.npz', 'ref_keys': ['train_mask', 'valid_mask', 'test_mask']})
+n=203769
+valid: 9313 (4.6%)
+test:  18626 (9.1%)
+TR40:  18625 (9.1%)
+TR30:  13969 (6.9%)
+TR20:  9313 (4.6%)
+TR10:  4656 (2.3%)
+All nesting/overlap checks PASSED
+[elliptic] wrote /workspace/H2-FDetector/config/elliptic.yaml from author template /workspace/H2-FDetector/config/yelp.yaml
+[elliptic] TR40: wrote /workspace/h2fd_vast/views/elliptic_tr40.dgl
+[elliptic] TR40: train=18625 valid=9313 test=18626 edge_train=6076 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[elliptic] TR30: wrote /workspace/h2fd_vast/views/elliptic_tr30.dgl
+[elliptic] TR30: train=13969 valid=9313 test=18626 edge_train=3493 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[elliptic] TR20: wrote /workspace/h2fd_vast/views/elliptic_tr20.dgl
+[elliptic] TR20: train=9313 valid=9313 test=18626 edge_train=1547 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[elliptic] TR10: wrote /workspace/h2fd_vast/views/elliptic_tr10.dgl
+[elliptic] TR10: train=4656 valid=9313 test=18626 edge_train=333 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[elliptic] manifest written to /workspace/h2fd_vast/views/elliptic_views_manifest.json  (total 19s)

@@ -1,0 +1,27 @@
+{
+  "run_name": "h2fdetector_comp_unified_tr40_seed72_a6000_20261018T073607Z",
+  "model": "h2fdetector",
+  "dataset": "comp",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 72,
+  "n_completed_epochs": 32,
+  "best_epoch": 11,
+  "best_val_auprc": 0.15659710902459806,
+  "reload_val_auprc": 0.15659710902459806,
+  "stop_reason": "early_stop_patience_20",
+  "dataset_load_seconds": 0.34887931996490806,
+  "train_only_total_seconds": 5.552785433828831,
+  "train_plus_valid_total_seconds": 8.842350057442673,
+  "inference_seconds": 0.0957883489318192,
+  "peak_memory_bytes": 87478272,
+  "gpu": "NVIDIA RTX A6000",
+  "test_metrics": {
+    "auprc": 0.11917247518697674,
+    "auc": 0.5167944411080249,
+    "f1_macro": 0.4418448343498812,
+    "recall": 0.38392857142857145,
+    "threshold_used": 0.9500000000000001,
+    "best_epoch": 11
+  }
+}

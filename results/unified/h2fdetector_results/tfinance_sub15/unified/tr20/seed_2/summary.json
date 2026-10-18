@@ -1,0 +1,27 @@
+{
+  "run_name": "h2fdetector_tfinance_sub15_unified_tr20_seed2_a6000_20261018T090324Z",
+  "model": "h2fdetector",
+  "dataset": "tfinance_sub15",
+  "track": "unified",
+  "ratio": 20,
+  "seed": 2,
+  "n_completed_epochs": 35,
+  "best_epoch": 14,
+  "best_val_auprc": 0.873578082371042,
+  "reload_val_auprc": 0.873578082371042,
+  "stop_reason": "early_stop_patience_20",
+  "dataset_load_seconds": 0.3881522190058604,
+  "train_only_total_seconds": 51.18989669508301,
+  "train_plus_valid_total_seconds": 81.78025433700532,
+  "inference_seconds": 0.82318263000343,
+  "peak_memory_bytes": 2621382656,
+  "gpu": "NVIDIA RTX A6000",
+  "test_metrics": {
+    "auprc": 0.8485897743532956,
+    "auc": 0.9677343788528875,
+    "f1_macro": 0.8903560371517028,
+    "recall": 0.7314814814814815,
+    "threshold_used": 0.6500000000000001,
+    "best_epoch": 14
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "elliptic",
+  "dgl_path": "/workspace/h2fd_vast/views/elliptic_tr20.dgl",
+  "dgl_sha256": "e7221e2d92b36817254ec204eaa3b13275a6b9c1a9bb56a694ec0eb96854f2ad",
+  "native_dgl_path": "/workspace/h2fd_vast/native/elliptic.dgl",
+  "native_dgl_sha256": "8f925d0afdfab83c5aa4700cef9025377c269cfa7773421819b00d32c5e3e3f1",
+  "source_mat_path": "/workspace/data/elliptic_bitcoin_dataset",
+  "source_mat_sha256": "3bc863da6548ad23241390328d58c5c534741f162c7a51835ff39d3b4385412f",
+  "n_nodes": 203769,
+  "n_edges": {
+    "e": 234355,
+    "homo": 234355
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  }
+}

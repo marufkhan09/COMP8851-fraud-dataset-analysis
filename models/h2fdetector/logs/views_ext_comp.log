@@ -1,0 +1,24 @@
+[comp] building adapted graph...
+[comp] nodes=5317 homo=10059 invest_bc2bc=8505 provide_bc2bc=5944 sale_bc2bc=6244 features=(5317, 57)
+[comp] homo edge stats: {'n_edges': 10059, 'n_self_loops': 5464, 'n_duplicate_edges': 1079, 'n_edges_without_reverse': 4510} (0.0s)
+[comp] edge-label check: {'method': "dataset-shipped homo edge labels/train mask vs the authors' rule applied to the dataset-shipped node train mask (informational)", 'edge_labels_identical': True, 'edge_train_mask_identical': True, 'n_label_mismatch': 0, 'n_mask_mismatch': 0, 'note': "these shipped labels are replaced by the authors' rule for every view"}
+[comp] adapted graph saved: /workspace/h2fd_vast/native/comp.dgl
+[comp] split candidates vs SplitGNN TR40: {'all_nodes': {'train_mask': True, 'valid_mask': True, 'test_mask': True}}  ({'ref_path': '/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/comp/unified/tr40/seed_2/split_indices.npz', 'ref_keys': ['train_mask', 'valid_mask', 'test_mask']})
+n=5317
+valid: 1064 (20.0%)
+test:  2127 (40.0%)
+TR40:  2126 (40.0%)
+TR30:  1594 (30.0%)
+TR20:  1064 (20.0%)
+TR10:  532 (10.0%)
+All nesting/overlap checks PASSED
+[comp] wrote /workspace/H2-FDetector/config/comp.yaml from author template /workspace/H2-FDetector/config/yelp.yaml
+[comp] TR40: wrote /workspace/h2fd_vast/views/comp_tr40.dgl
+[comp] TR40: train=2126 valid=1064 test=2127 edge_train=2923 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[comp] TR30: wrote /workspace/h2fd_vast/views/comp_tr30.dgl
+[comp] TR30: train=1594 valid=1064 test=2127 edge_train=1967 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[comp] TR20: wrote /workspace/h2fd_vast/views/comp_tr20.dgl
+[comp] TR20: train=1064 valid=1064 test=2127 edge_train=1244 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[comp] TR10: wrote /workspace/h2fd_vast/views/comp_tr10.dgl
+[comp] TR10: train=532 valid=1064 test=2127 edge_train=605 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[comp] manifest written to /workspace/h2fd_vast/views/comp_views_manifest.json  (total 0s)

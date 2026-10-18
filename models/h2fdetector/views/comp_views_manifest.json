@@ -1,0 +1,162 @@
+{
+  "dataset": "comp",
+  "builder_version": "h2fd_view_builder_ext_v1",
+  "builder_sha256": "d205836c8573d3691e6184cda2e58492ef58427dc35526011f2045531dda6744",
+  "native_dgl_path": "/workspace/h2fd_vast/native/comp.dgl",
+  "native_dgl_sha256": "5ed597bbd2d0a96b0ee706a8fab5febc8e9e1776aab151e2fd9bb123d72d653b",
+  "source_mat_path": "/workspace/data/FDCompCN.zip",
+  "source_mat_sha256": "8cf86d2f733a9283dd706a5919cb3637270f21b761158cc7f31950b616b302ce",
+  "adapter": {
+    "source_path": "/workspace/data/FDCompCN.zip",
+    "source_sha256": "8cf86d2f733a9283dd706a5919cb3637270f21b761158cc7f31950b616b302ce",
+    "extracted_comp_dgl_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+    "matches_splitgnn_comp_view_sha256": true,
+    "original_node_type": "company",
+    "transform": "node type renamed to r; edges, features, labels unchanged"
+  },
+  "node_type": "r",
+  "n_nodes": 5317,
+  "n_labeled_nodes": 5317,
+  "n_edges": {
+    "homo": 10059,
+    "invest_bc2bc": 8505,
+    "provide_bc2bc": 5944,
+    "sale_bc2bc": 6244
+  },
+  "homo_edge_stats": {
+    "n_edges": 10059,
+    "n_self_loops": 5464,
+    "n_duplicate_edges": 1079,
+    "n_edges_without_reverse": 4510
+  },
+  "split_seed": 2,
+  "split_registry_version": "own_generate_splits_v1_seed2",
+  "split_procedure": "all_nodes",
+  "split_candidates_vs_splitgnn_tr40": {
+    "all_nodes": {
+      "train_mask": true,
+      "valid_mask": true,
+      "test_mask": true
+    }
+  },
+  "edge_label_verification": {
+    "method": "dataset-shipped homo edge labels/train mask vs the authors' rule applied to the dataset-shipped node train mask (informational)",
+    "edge_labels_identical": true,
+    "edge_train_mask_identical": true,
+    "n_label_mismatch": 0,
+    "n_mask_mismatch": 0,
+    "note": "these shipped labels are replaced by the authors' rule for every view"
+  },
+  "config": {
+    "path": "/workspace/H2-FDetector/config/comp.yaml",
+    "sha256": "a49057767b0355faae059bd227713b563f7a97f0ac184ca2ea771898f0044fb4",
+    "template": "/workspace/H2-FDetector/config/yelp.yaml",
+    "note": "no author config exists for this dataset; author template used unchanged apart from dataset name and device; no tuning"
+  },
+  "views": {
+    "tr40": {
+      "view_path": "/workspace/h2fd_vast/views/comp_tr40.dgl",
+      "view_sha256": "19e600c11228a5ca55630db260560007cd6a99e026dcac51c2c6e9e814767cc5",
+      "split_path": "/workspace/h2fd_vast/views/comp_tr40_split.npz",
+      "split_file_sha256": "02c37fdb6f0be3fd21b787d6806a7eb82064501364078d400442e54323572aab",
+      "split_content_sha256": "3243985518ee6870a7c76de28545eef5366dc73005019bd6173fea2121025ba9",
+      "n_train": 2126,
+      "n_valid": 1064,
+      "n_test": 2127,
+      "n_train_fraud": 223,
+      "n_edge_train": 2923,
+      "n_edge_train_same_label": 2834,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/comp/unified/tr40/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr30": {
+      "view_path": "/workspace/h2fd_vast/views/comp_tr30.dgl",
+      "view_sha256": "278ad54c6ffa9ca8580e5861eb7e49967feaafd8ef94851cd87287a6ac4d427e",
+      "split_path": "/workspace/h2fd_vast/views/comp_tr30_split.npz",
+      "split_file_sha256": "940372832c807837d123f6c9376ab546956fbbc5a7aca1ebbbe2842dddec0c03",
+      "split_content_sha256": "81e8d4ae612844ccb6f3a4a366448b59ba445259d60432bbf1e2a235b90022e0",
+      "n_train": 1594,
+      "n_valid": 1064,
+      "n_test": 2127,
+      "n_train_fraud": 167,
+      "n_edge_train": 1967,
+      "n_edge_train_same_label": 1922,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/comp/unified/tr30/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr20": {
+      "view_path": "/workspace/h2fd_vast/views/comp_tr20.dgl",
+      "view_sha256": "abb021f3d9cb4c7c6a78c03d5e1d8d6ac142ce7efb5a3d968b661576e3a0ac21",
+      "split_path": "/workspace/h2fd_vast/views/comp_tr20_split.npz",
+      "split_file_sha256": "986048633c9b2d5ab03b22e02c4fc798f3dfef7e1c2b15ada7b54b348de063f3",
+      "split_content_sha256": "abe97dda0ef44a3062dc839f68e1917bf560d59f9a89d1eeda88fef900911fe9",
+      "n_train": 1064,
+      "n_valid": 1064,
+      "n_test": 2127,
+      "n_train_fraud": 112,
+      "n_edge_train": 1244,
+      "n_edge_train_same_label": 1224,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/comp/unified/tr20/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr10": {
+      "view_path": "/workspace/h2fd_vast/views/comp_tr10.dgl",
+      "view_sha256": "88c262904a01c6aa9ad85bc6664fa6e22b884e263d26396207a2d9f3aee12cd5",
+      "split_path": "/workspace/h2fd_vast/views/comp_tr10_split.npz",
+      "split_file_sha256": "67fc49e7b5881b5e20a10dc0cd4092092aa07a7fb967188a3d7f8a44e98a4b06",
+      "split_content_sha256": "996077714eeb70ddfd03bbaf6ad2e091a5e4073034215a558a8ac12cc4cc91de",
+      "n_train": 532,
+      "n_valid": 1064,
+      "n_test": 2127,
+      "n_train_fraud": 56,
+      "n_edge_train": 605,
+      "n_edge_train_same_label": 598,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/comp/unified/tr10/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    }
+  }
+}

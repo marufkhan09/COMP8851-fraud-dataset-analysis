@@ -1,0 +1,24 @@
+[tfinance] building adapted graph...
+[tfinance] nodes=39357 e=42445086 homo=42445086 features=(39357, 10)
+[tfinance] homo edge stats: {'n_edges': 42445086, 'n_self_loops': 0, 'n_duplicate_edges': 0, 'n_edges_without_reverse': 0} (8.6s)
+[tfinance] edge-label check: {'method': "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"}
+[tfinance] adapted graph saved: /workspace/h2fd_vast/native/tfinance.dgl
+[tfinance] split candidates vs SplitGNN TR40: {'all_nodes': {'train_mask': True, 'valid_mask': True, 'test_mask': True}}  ({'ref_path': '/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tfinance/unified/tr40/seed_2/split_indices.npz', 'ref_keys': ['train_mask', 'valid_mask', 'test_mask']})
+n=39357
+valid: 7872 (20.0%)
+test:  15743 (40.0%)
+TR40:  15742 (40.0%)
+TR30:  11807 (30.0%)
+TR20:  7870 (20.0%)
+TR10:  3935 (10.0%)
+All nesting/overlap checks PASSED
+[tfinance] wrote /workspace/H2-FDetector/config/tfinance.yaml from author template /workspace/H2-FDetector/config/yelp.yaml
+[tfinance] TR40: wrote /workspace/h2fd_vast/views/tfinance_tr40.dgl
+[tfinance] TR40: train=15742 valid=7872 test=15743 edge_train=6668416 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tfinance] TR30: wrote /workspace/h2fd_vast/views/tfinance_tr30.dgl
+[tfinance] TR30: train=11807 valid=7872 test=15743 edge_train=3806322 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tfinance] TR20: wrote /workspace/h2fd_vast/views/tfinance_tr20.dgl
+[tfinance] TR20: train=7870 valid=7872 test=15743 edge_train=1706680 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tfinance] TR10: wrote /workspace/h2fd_vast/views/tfinance_tr10.dgl
+[tfinance] TR10: train=3935 valid=7872 test=15743 edge_train=440774 splitgnn_crosscheck={'train_mask': True, 'valid_mask': True, 'test_mask': True}
+[tfinance] manifest written to /workspace/h2fd_vast/views/tfinance_views_manifest.json  (total 55s)
