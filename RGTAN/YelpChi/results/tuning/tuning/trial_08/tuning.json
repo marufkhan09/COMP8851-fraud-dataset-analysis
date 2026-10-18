@@ -1,0 +1,36 @@
+{
+  "status": "TUNING_COMPLETE",
+  "model": "RGTAN",
+  "dataset": "YelpChi",
+  "ratio": "TR40",
+  "split_seed": 2,
+  "seed": 2,
+  "trial": 8,
+  "config": {
+    "hidden_dim": 64,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "base_lr": 0.003
+  },
+  "base_learning_rate": 0.003,
+  "effective_lr": 0.003,
+  "batch_size": 1024,
+  "max_epochs": 100,
+  "early_stopping_patience": 20,
+  "completed_epochs": 76,
+  "best_epoch": 56,
+  "best_val_auprc": 0.7492011293818228,
+  "best_val_auroc": 0.9165488149995805,
+  "peak_allocated_gpu_gib": 3.663970470428467,
+  "wall_seconds": 1403.663,
+  "adapter_sha256": "5f4567d0c4e9796466ac5bf573e1e5d15547a785f6e3c84fb6697bc462c265ed",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "checkpoint_sha256": "0802718ddf379fbef14742b6cf8c0ade50bdaffe4553b78185ec8237d28d2113",
+  "training_method": "one model, five out-of-fold label/risk contexts",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false
+}

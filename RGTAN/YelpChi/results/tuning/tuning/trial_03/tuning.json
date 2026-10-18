@@ -1,0 +1,36 @@
+{
+  "status": "TUNING_COMPLETE",
+  "model": "RGTAN",
+  "dataset": "YelpChi",
+  "ratio": "TR40",
+  "split_seed": 2,
+  "seed": 2,
+  "trial": 3,
+  "config": {
+    "hidden_dim": 32,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "base_lr": 0.005
+  },
+  "base_learning_rate": 0.005,
+  "effective_lr": 0.005,
+  "batch_size": 1024,
+  "max_epochs": 100,
+  "early_stopping_patience": 20,
+  "completed_epochs": 100,
+  "best_epoch": 89,
+  "best_val_auprc": 0.766569991397571,
+  "best_val_auroc": 0.9246164099864985,
+  "peak_allocated_gpu_gib": 3.4356417655944824,
+  "wall_seconds": 1828.633,
+  "adapter_sha256": "5f4567d0c4e9796466ac5bf573e1e5d15547a785f6e3c84fb6697bc462c265ed",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "checkpoint_sha256": "6fbce2b9d367f546a3a9dd7e7f58b6ae678350b1249a2ac3ca76763f31b62c0d",
+  "training_method": "one model, five out-of-fold label/risk contexts",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false
+}
