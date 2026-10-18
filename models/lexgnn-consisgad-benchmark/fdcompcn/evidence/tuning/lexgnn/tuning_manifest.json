@@ -1,0 +1,46 @@
+{
+  "dataset": "FDCompCN",
+  "epochs_per_trial": 20,
+  "model": "LEX-GNN",
+  "primary_selection_metric": "validation AUROC",
+  "selection_partition": "validation only",
+  "test_evaluated": false,
+  "tie_breaker": "validation AUPRC",
+  "trials": [
+    {
+      "beta": 0.5,
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/tuning_fdcompcn_tr40_seed2/trial_01_author_baseline.json",
+      "config_sha256": "5d9fabd698613cccad3bb8f5a696e7344f214e9b5fba1e0bfa7caf7e08f70e30",
+      "learning_rate": 0.005,
+      "trial": "trial_01_author_baseline"
+    },
+    {
+      "beta": 0.5,
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/tuning_fdcompcn_tr40_seed2/trial_02_lr_0p001.json",
+      "config_sha256": "85d2a1662ea49ef2c7aa4e3376eae081daef14644bc03a4f12f080fb0cbb459d",
+      "learning_rate": 0.001,
+      "trial": "trial_02_lr_0p001"
+    },
+    {
+      "beta": 0.5,
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/tuning_fdcompcn_tr40_seed2/trial_03_lr_0p0005.json",
+      "config_sha256": "9a856f678af114a9af6dcd15211fda5b300256f3e271bddbe70712fa8ec21932",
+      "learning_rate": 0.0005,
+      "trial": "trial_03_lr_0p0005"
+    },
+    {
+      "beta": 0.25,
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/tuning_fdcompcn_tr40_seed2/trial_04_lr_0p001_beta_0p25.json",
+      "config_sha256": "0e79b8f7edd16b290efb9ce51970910ac5cf9e2a0b935e4349d27bb0e48e6f59",
+      "learning_rate": 0.001,
+      "trial": "trial_04_lr_0p001_beta_0p25"
+    },
+    {
+      "beta": 1.0,
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/tuning_fdcompcn_tr40_seed2/trial_05_lr_0p001_beta_1p0.json",
+      "config_sha256": "c19af31ed5f2c5f86f60f38e7f335b364a081250d8850cfe5cab2e4c988e755d",
+      "learning_rate": 0.001,
+      "trial": "trial_05_lr_0p001_beta_1p0"
+    }
+  ]
+}

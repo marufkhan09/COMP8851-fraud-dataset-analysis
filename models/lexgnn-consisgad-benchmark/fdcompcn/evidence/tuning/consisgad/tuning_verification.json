@@ -1,0 +1,65 @@
+{
+  "all_trials_verified": true,
+  "dataset": "FDCompCN",
+  "expected_trials": 5,
+  "model": "ConsisGAD",
+  "ranking_metric": "validation AUROC",
+  "selected_trial": "trial_03_lr_0p005",
+  "status": "PASS",
+  "test_isolation_verified": true,
+  "test_used_for_selection": false,
+  "tie_breaker": "validation AUPRC",
+  "trials": {
+    "trial_01_author_baseline": {
+      "artifacts_complete": true,
+      "protocol_verified": true,
+      "result_directory": "/workspace/comp8851_two_models/runs/consisgad/fdcompcn/tuning_tr40_seed2/trial_01_author_baseline/20261018T141404745571Z_fdcompcn_consisgad_unified_tuning_fdcompcn_tr40_seed2_trial_01_author_baseline_seed2",
+      "selected_validation_auprc": 0.1712744750602428,
+      "selected_validation_auroc": 0.5828612695078031,
+      "selected_validation_epoch": 18,
+      "test_isolation_verified": true,
+      "validation_rows": 20
+    },
+    "trial_02_lr_0p0005": {
+      "artifacts_complete": true,
+      "protocol_verified": true,
+      "result_directory": "/workspace/comp8851_two_models/runs/consisgad/fdcompcn/tuning_tr40_seed2/trial_02_lr_0p0005/20261018T141620890618Z_fdcompcn_consisgad_unified_tuning_fdcompcn_tr40_seed2_trial_02_lr_0p0005_seed2",
+      "selected_validation_auprc": 0.145573327298393,
+      "selected_validation_auroc": 0.5609149909963985,
+      "selected_validation_epoch": 3,
+      "test_isolation_verified": true,
+      "validation_rows": 20
+    },
+    "trial_03_lr_0p005": {
+      "artifacts_complete": true,
+      "protocol_verified": true,
+      "result_directory": "/workspace/comp8851_two_models/runs/consisgad/fdcompcn/tuning_tr40_seed2/trial_03_lr_0p005/20261018T141859389438Z_fdcompcn_consisgad_unified_tuning_fdcompcn_tr40_seed2_trial_03_lr_0p005_seed2",
+      "selected_validation_auprc": 0.17500110492159052,
+      "selected_validation_auroc": 0.6076680672268908,
+      "selected_validation_epoch": 20,
+      "test_isolation_verified": true,
+      "validation_rows": 20
+    },
+    "trial_04_weight_1p0": {
+      "artifacts_complete": true,
+      "protocol_verified": true,
+      "result_directory": "/workspace/comp8851_two_models/runs/consisgad/fdcompcn/tuning_tr40_seed2/trial_04_weight_1p0/20261018T142219513137Z_fdcompcn_consisgad_unified_tuning_fdcompcn_tr40_seed2_trial_04_weight_1p0_seed2",
+      "selected_validation_auprc": 0.16606671227628036,
+      "selected_validation_auroc": 0.5725727791116446,
+      "selected_validation_epoch": 20,
+      "test_isolation_verified": true,
+      "validation_rows": 20
+    },
+    "trial_05_weight_2p0": {
+      "artifacts_complete": true,
+      "protocol_verified": true,
+      "result_directory": "/workspace/comp8851_two_models/runs/consisgad/fdcompcn/tuning_tr40_seed2/trial_05_weight_2p0/20261018T142524921580Z_fdcompcn_consisgad_unified_tuning_fdcompcn_tr40_seed2_trial_05_weight_2p0_seed2",
+      "selected_validation_auprc": 0.16376092785933613,
+      "selected_validation_auroc": 0.5651823229291717,
+      "selected_validation_epoch": 20,
+      "test_isolation_verified": true,
+      "validation_rows": 20
+    }
+  },
+  "verified_trials": 5
+}

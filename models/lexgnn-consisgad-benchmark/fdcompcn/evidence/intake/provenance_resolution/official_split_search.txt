@@ -1,0 +1,227 @@
+FDCOMPCN OFFICIAL SPLIT SEARCH
+
+============================================================
+ALL REMOTE-BRANCH MATCHES
+============================================================
+
+REF: refs/remotes/origin/Akib
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr10_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr20_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr30_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr40_split_seed2.npz
+
+REF: refs/remotes/origin/HEAD
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr10_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr20_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr30_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr40_split_seed2.npz
+
+REF: refs/remotes/origin/main
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr10_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr20_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr30_split_seed2.npz
+models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr40_split_seed2.npz
+
+============================================================
+GIT OBJECT AND HISTORY MATCHES
+============================================================
+
+Tracked or historical object names:
+a00f017b8c949b935b8b43c11a00e9717e34e566 models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr10_split_seed2.npz
+b13385ad716131ab59e7966abee0ba0799a62448 models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr20_split_seed2.npz
+03db7fa4c488c369a2efe0e0fb80be63e1781ca0 models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr30_split_seed2.npz
+64a0446d16425f96e4430eaa76825fbf1ad64ae0 models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr40_split_seed2.npz
+
+Commit history for candidate split files:
+COMMIT bf76f31a07c0df65201e3ed9700cd92b39f49794 2026-09-16 10:08:35 +0000 Maruf Khan dga-gnn: FDCompCN provisional TR40/seed2 benchmark (non-native adapter, k=4 after overfitting fix, provisional split pending frozen registry)
+A	models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr10_split_seed2.npz
+A	models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr20_split_seed2.npz
+A	models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr30_split_seed2.npz
+A	models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_tr40_split_seed2.npz
+
+============================================================
+CHECKSUM AND FILENAME REFERENCES
+============================================================
+
+HASH: c173bce1440f93a945ab6bc782f282f436a3f91807c26def43cedd86def63a51
+
+HASH: f6d681064cae24e1512373689d2d3427eeb213e5e1e137d8c0b713fa7a9225e1
+
+HASH: 3dc3b77d29d018cc88a1bb8cf04613f79f09acae8229d97cfc6980e9c921a60c
+
+HASH: 9576c61c3a53f0df6e4f58e3437784c99562d1044937d89f1bde1e862ba68ed5
+
+Official filename references:
+
+============================================================
+PC-GNN COMPATIBILITY CONFIGURATION
+============================================================
+model: PCGNN
+data_name: fdcompcn
+data_dir: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR40_seed2.npz
+results_dir: /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/compatibility_team_frozen
+save_dir: ./pytorch_models/
+track: unified
+run_mode: compatibility_two_epoch_team_frozen
+split_identity: team_frozen
+hardware_profile_id: pcgnn-vast-a6000-instance-51121624-gpu0
+mode: smoke
+compatibility_only: true
+final_benchmark_result: false
+
+num_epochs: 2
+valid_epochs: 1
+early_stopping_patience: 0
+batch_size: 256
+lr: 0.005
+weight_decay: 0.0005
+emb_size: 64
+rho: 0.5
+alpha: 2
+multi_relation: GNN
+
+cuda_id: 0
+no_cuda: false
+seed: 2
+split_seed: 2
+train_ratio: 0.4
+test_ratio: 0.4
+
+optimizer: adam
+checkpoint_metric: validation_auprc
+checkpoint_selection_note: "Validation AUPRC used for compatibility checkpoint selection"
+evaluate_test: false
+select_threshold_on_validation: false
+thres: 0.5
+threshold_note: "Default threshold 0.5; FDCompCN is not a native PC-GNN dataset, so no paper-specified threshold exists."
+
+============================================================
+PC-GNN REPRESENTATIVE FINAL CONFIGURATION
+============================================================
+model: PCGNN
+data_name: fdcompcn
+data_dir: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/data/
+split_path: /workspace/comp8851_pcgnn/source/PC-GNN-COMP8851-Instrumented/splits/team_frozen/fdcompcn_TR40_seed2.npz
+results_dir: /workspace/comp8851_pcgnn/runs/pcgnn/fdcompcn/final
+save_dir: ./pytorch_models/
+track: unified
+run_mode: final_tr40
+split_identity: team_frozen
+hardware_profile_id: pcgnn-vast-a6000-instance-51121624-gpu0
+mode: final
+compatibility_only: false
+final_benchmark_result: true
+num_epochs: 100
+valid_epochs: 1
+early_stopping_patience: 20
+batch_size: 256
+lr: 0.003227
+weight_decay: 1.0e-05
+emb_size: 64
+rho: 0.4
+alpha: 1
+multi_relation: GNN
+cuda_id: 0
+no_cuda: false
+seed: 2
+split_seed: 2
+train_ratio: 0.4
+test_ratio: 0.4
+optimizer: adam
+checkpoint_metric: validation_auprc
+checkpoint_selection_note: Final benchmark run; validation AUPRC checkpoint selection.
+evaluate_test: true
+select_threshold_on_validation: true
+thres: 0.5
+threshold_note: Overridden by validation-selected threshold (select_threshold_on_validation=True).
+
+============================================================
+PC-GNN DATASET INTAKE MANIFEST
+============================================================
+{
+  "schema_version": "1.0",
+  "dataset": "FDCompCN",
+  "source_repo": "https://github.com/Split-GNN/SplitGNN",
+  "source_paper": "SplitGNN: Spectral Graph Neural Network for Fraud Detection against Heterophily (CIKM 2023)",
+  "raw_file": "comp.dgl (shipped directly inside the official SplitGNN repository, data/FDCompCN.zip)",
+  "raw_file_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "num_nodes": 5317,
+  "feature_dim": 57,
+  "fraud_count": 559,
+  "normal_count": 4758,
+  "fraud_rate": 0.1051,
+  "readme_cross_check": "README states 559 fraud (10.51%), 4758 benign, 57 features \u2014 matches exactly.",
+  "relations": {
+    "homo": {
+      "canonical_etype": "(company, homo, company)",
+      "readme_edges": 7407,
+      "empirical_edges": 10059
+    },
+    "relation1 (C-I-C, invest)": {
+      "canonical_etype": "(company, invest_bc2bc, company)",
+      "readme_edges": 5686,
+      "empirical_edges": 8505
+    },
+    "relation2 (C-P-C, provide)": {
+      "canonical_etype": "(company, provide_bc2bc, company)",
+      "readme_edges": 1043,
+      "empirical_edges": 5944
+    },
+    "relation3 (C-S-C, sale)": {
+      "canonical_etype": "(company, sale_bc2bc, company)",
+      "readme_edges": 760,
+      "empirical_edges": 6244
+    }
+  },
+  "edge_count_discrepancy_note": "Empirical edge counts loaded directly from the official comp.dgl file do not match the SplitGNN README's summary table. Every relation shows extensive self-loops, strongly suggesting the README table reports pre-self-loop-augmentation counts while the shipped .dgl file includes them. Labels (559/4758) and feature dimension (57) match the README exactly. Edge topology is used AS SHIPPED without modification.",
+  "native_splitgnn_masks_reference_only": {
+    "train_mask": 2126,
+    "valid_mask": 1053,
+    "test_mask": 2138
+  },
+  "native_masks_note": "SplitGNN ships its own native train/valid/test masks. NOT used for the unified (Track B) benchmark split \u2014 a team-frozen 40/20/40 split is generated independently, same as every other dataset.",
+  "relation_files": {
+    "homo": "fdcompcn_homo_adjlists.pickle",
+    "relation1_invest": "fdcompcn_relation1_adjlists.pickle",
+    "relation2_provide": "fdcompcn_relation2_adjlists.pickle",
+    "relation3_sale": "fdcompcn_relation3_adjlists.pickle"
+  }
+}
+============================================================
+PC-GNN COMPATIBILITY TERMINAL REFERENCES
+============================================================
+
+============================================================
+WORKSPACE ARCHIVES
+============================================================
+9263 /workspace/comp8851_lexgnn_consisgad_adapter_v1.tar.gz
+12360 /workspace/comp8851_lexgnn_consisgad_yelpchi_adapter_v1.tar.gz
+33824 /workspace/comp8851_two_models/exports/comp8851_lexgnn_consisgad_adapter_v2.tar.gz
+40158 /workspace/comp8851_two_models/exports/lexgnn_consisgad_yelpchi_adapter_audit.tar.gz
+156400 /workspace/comp8851_two_models/venvs/consisgad/lib/python3.10/site-packages/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
+156400 /workspace/comp8851_two_models/venvs/lexgnn/lib/python3.10/site-packages/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
+901149 /workspace/comp8851_two_models/exports/yelpchi_revised_figures_20261018T122158Z.tar.gz
+961153 /workspace/comp8851_two_models/exports/lexgnn_consisgad_amazon_compatibility_20261017T092008Z.tar.gz
+1004276 /workspace/comp8851_two_models/exports/yelpchi_final_figures_review_20261018T121551Z.tar.gz
+1327557 /workspace/comp8851_two_models/exports/lexgnn_consisgad_yelpchi_compatibility_20261017T145745Z.tar.gz
+2581751 /workspace/comp8851_two_models/exports/lexgnn_consisgad_source_audit.tar.gz
+4538152 /workspace/comp8851_two_models/exports/lexgnn_consisgad_amazon_tuning_20261017T102744Z.tar.gz
+5080071 /workspace/comp8851_two_models/exports/lexgnn_consisgad_yelpchi_tuning_20261018T052351Z.tar.gz
+6176947 /workspace/comp8851_two_models/exports/lexgnn_consisgad_yelpchi_pause_20261017T153344Z.tar.gz
+17980652 /workspace/yelpchi_intake_9srOgg/FraudYelp.zip
+21386746 /workspace/comp8851_two_models/exports/lexgnn_consisgad_amazon_complete_20261017T140736Z.tar.gz
+23965789 /workspace/comp8851_two_models/exports/lexgnn_consisgad_yelpchi_complete_20261018T122555Z.tar.gz
+26122297 /workspace/comp8851_two_models/datasets/canonical/amazon/FraudAmazon.zip
+
+============================================================
+CURRENT SPLIT DECISION
+============================================================
+DGA-GNN provisional splits: REJECTED
+Reason: checksums and partition sizes differ from team-frozen registry.
+
+Required official checksums:
+TR10 c173bce1440f93a945ab6bc782f282f436a3f91807c26def43cedd86def63a51
+TR20 f6d681064cae24e1512373689d2d3427eeb213e5e1e137d8c0b713fa7a9225e1
+TR30 3dc3b77d29d018cc88a1bb8cf04613f79f09acae8229d97cfc6980e9c921a60c
+TR40 9576c61c3a53f0df6e4f58e3437784c99562d1044937d89f1bde1e862ba68ed5

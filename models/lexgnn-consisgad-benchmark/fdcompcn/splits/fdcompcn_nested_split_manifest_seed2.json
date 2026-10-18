@@ -1,0 +1,64 @@
+{
+  "authoritative_combined_registry": {
+    "path": "/workspace/comp8851_two_models/shared/splits/fdcompcn/fdcompcn_seed2_nested_splits.npz",
+    "sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+    "verification": "exact byte-for-byte reconstruction"
+  },
+  "canonical_dataset": {
+    "path": "/workspace/comp8851_two_models/datasets/canonical/fdcompcn/comp.dgl",
+    "sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+  },
+  "created_utc": "2026-10-18T13:37:57.946929+00:00",
+  "dataset": "FDCompCN",
+  "derived_registries": {
+    "TR10": {
+      "path": "/workspace/comp8851_two_models/shared/splits/fdcompcn/fdcompcn_TR10_seed2.npz",
+      "sha256": "d1e0de1c1e3aecee2f3cb902df962d8df30b339b3c8d7490a7abd539616b2dfb",
+      "test_nodes": 2127,
+      "train_fraud": 56,
+      "train_nodes": 531,
+      "train_normal": 475,
+      "unused_nodes": 1595,
+      "validation_nodes": 1064
+    },
+    "TR20": {
+      "path": "/workspace/comp8851_two_models/shared/splits/fdcompcn/fdcompcn_TR20_seed2.npz",
+      "sha256": "acf2447c657b1628b6600212767862451de7654729a005fc223229d73e816a41",
+      "test_nodes": 2127,
+      "train_fraud": 111,
+      "train_nodes": 1062,
+      "train_normal": 951,
+      "unused_nodes": 1064,
+      "validation_nodes": 1064
+    },
+    "TR30": {
+      "path": "/workspace/comp8851_two_models/shared/splits/fdcompcn/fdcompcn_TR30_seed2.npz",
+      "sha256": "00e0b2ba2311d516d2d330c4f33366d2e74ee89071a53893c8068a3596864847",
+      "test_nodes": 2127,
+      "train_fraud": 167,
+      "train_nodes": 1594,
+      "train_normal": 1427,
+      "unused_nodes": 532,
+      "validation_nodes": 1064
+    },
+    "TR40": {
+      "path": "/workspace/comp8851_two_models/shared/splits/fdcompcn/fdcompcn_TR40_seed2.npz",
+      "sha256": "407ec26c4c661fe1e70d0f68fda93063f6057951478e7dea5b7fff5f29ebb732",
+      "test_nodes": 2127,
+      "train_fraud": 223,
+      "train_nodes": 2126,
+      "train_normal": 1903,
+      "unused_nodes": 0,
+      "validation_nodes": 1064
+    }
+  },
+  "historical_protocol_note": "The separate PC-GNN-specific 48/20/32 registry was not used. This benchmark uses the unified 40/20/40 nested registry employed by the other team benchmark models.",
+  "protocol": {
+    "design": "nested stratified train ratios with fixed validation and test nodes",
+    "maximum_training_fraction": 0.4,
+    "test_fraction": 0.4,
+    "test_used_for_selection": false,
+    "validation_fraction": 0.2
+  },
+  "split_seed": 2
+}

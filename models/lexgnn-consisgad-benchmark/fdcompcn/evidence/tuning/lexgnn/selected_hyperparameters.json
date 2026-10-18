@@ -1,0 +1,23 @@
+{
+  "dataset": "FDCompCN",
+  "evaluation_note": "Selection uses the validation row that produced the saved best checkpoint. Post-restoration validation metrics are recorded separately.",
+  "model": "LEX-GNN",
+  "primary_selection_metric": "validation AUROC",
+  "restored_checkpoint_validation_auprc": 0.14628319878009288,
+  "restored_checkpoint_validation_auroc": 0.5838929321728691,
+  "selected_beta": 0.5,
+  "selected_effective_initialization_seed": 2002,
+  "selected_learning_rate": 0.005,
+  "selected_threshold": 0.05,
+  "selected_trial": "trial_01_author_baseline",
+  "selected_validation_auprc": 0.14628319878009288,
+  "selected_validation_auroc": 0.5838929321728691,
+  "selected_validation_epoch": 2,
+  "selected_validation_fraud_f1": 0.07633587786259542,
+  "selected_validation_g_mean": 0.20972921717732876,
+  "selected_validation_macro_f1": 0.5078724957665506,
+  "selection_phase": "TR40 seed2 validation-only tuning",
+  "source_result_directory": "/workspace/comp8851_two_models/runs/lexgnn/fdcompcn/tuning_tr40_seed2/trial_01_author_baseline/20261018T140919413557Z_fdcompcn_lexgnn_unified_tuning_fdcompcn_tr40_seed2_trial_01_author_baseline_seed2",
+  "test_used_for_selection": false,
+  "tie_breaker": "validation AUPRC"
+}

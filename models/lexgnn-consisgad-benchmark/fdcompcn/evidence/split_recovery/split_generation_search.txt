@@ -1,0 +1,18 @@
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:6:from sklearn.model_selection import train_test_split
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:18:SPLIT_PATH = WORK / 'splits/fdcompcn_seed2_nested_splits.npz'
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:155:# 3. Recreate frozen COMP8851 nested split and VERIFY exact hash
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:160:remaining,test_ids=train_test_split(
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:164:tr40,val_ids=train_test_split(
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:168:tr30,_=train_test_split(
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:172:tr20,_=train_test_split(
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:176:tr10,_=train_test_split(
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:197:np.savez_compressed(SPLIT_PATH, **splits, seed=np.array([2]))
+/workspace/comp8851_two_models/team_repository/models/bwgnn/BWGNN_ALL_PY_EXPORT/05_bwgnn_fdcompcn_final.py:496:        (SPLIT_PATH,'splits/fdcompcn_seed2_nested_splits.npz'),
+/workspace/comp8851_two_models/team_repository/models/dga-gnn/fdcompcn/README.md:30:stratified `train_test_split`, `random_state=2`, TR40/30/20/10 train ratios,
+/workspace/comp8851_two_models/team_repository/models/dga-gnn/fdcompcn/evidence/splits/fdcompcn_split_manifest_PROVISIONAL.json:4:  "reason": "No frozen COMP8851 split registry exists yet for FDCompCN on this instance as of 2026-09-16. Generated locally following the same convention as YelpChi/Amazon/T-Finance splits (stratified train_test_split, seed=2, test_size=0.67 of remainder) so DGA-GNN work is not blocked. MUST be replaced with the official frozen split once Pathik's registry publishes it.",
+/workspace/comp8851_two_models/team_repository/models/gaap/GAAP_FDCOMPCN_COMPLETE_20260919/scripts/06_gaap_fdcompcn_final_12_runs.py:38:SPLIT=ROOT/"shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+/workspace/comp8851_two_models/team_repository/models/gaap/GAAP_FDCOMPCN_COMPLETE_20260919/shared/fdcompcn/asset_locations.json:2:  "split": "/workspace/COMP8851-recovery/models/pmp/evidence/fdcompcn/extracted/workspace/pmp_vast/shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+/workspace/comp8851_two_models/team_repository/models/pmp/evidence/fdcompcn/SHA256SUMS.txt:6:5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168  ./extracted/workspace/pmp_vast/shared/fdcompcn/fdcompcn_seed2_nested_splits.npz
+/workspace/comp8851_two_models/team_repository/models/pmp/evidence/fdcompcn/extracted/workspace/pmp_vast/scripts/06_pmp_fdcompcn_1epoch_smoke.py:25:SPLIT_PATH = WORK / "shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+/workspace/comp8851_two_models/team_repository/models/pmp/evidence/fdcompcn/extracted/workspace/pmp_vast/scripts/07_pmp_fdcompcn_all.py:50:SPLIT_PATH = WORK / "shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+/workspace/comp8851_two_models/team_repository/models/pmp/evidence/fdcompcn/extracted/workspace/pmp_vast/scripts/07_pmp_fdcompcn_all.py:447:SPLIT = WORK / "shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
