@@ -1,0 +1,20 @@
+{
+  "model": "ConsisGAD",
+  "dataset": "YelpChi",
+  "selection_phase": "TR40 seed2 validation-only tuning",
+  "primary_selection_metric": "validation AUROC",
+  "tie_breaker": "validation AUPRC",
+  "test_used_for_selection": false,
+  "selected_trial": "trial_05_weight_2p0",
+  "selected_learning_rate": 0.001,
+  "selected_consistency_weight": 2.0,
+  "selected_validation_epoch": 19,
+  "selected_validation_auroc": 0.8714766981344774,
+  "selected_validation_auprc": 0.5453795018003309,
+  "selected_validation_macro_f1": 0.727473227632514,
+  "selected_validation_fraud_f1": 0.5402177730944855,
+  "selected_validation_g_mean": 0.7246709956043776,
+  "selected_threshold": 0.27,
+  "source_result_directory": "/workspace/comp8851_two_models/runs/consisgad/yelpchi/tuning_tr40_seed2/trial_05_weight_2p0/20261017T152817209698Z_yelpchi_consisgad_unified_tuning_yelpchi_tr40_seed2_trial_05_weight_2p0_seed2",
+  "evaluation_note": "Selection used validation AUROC with validation AUPRC as the predefined tie-breaker. The test partition was not evaluated during tuning."
+}
