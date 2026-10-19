@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_amazon_unified_tr30_seed2_a6000_20261018T145247Z",
+  "model": "amnet",
+  "dataset": "amazon",
+  "track": "unified",
+  "ratio": 30,
+  "seed": 2,
+  "n_completed_epochs": 100,
+  "best_epoch": 93,
+  "best_val_auprc": 0.7675754490647472,
+  "reloaded_val_auprc": 0.7675754490647472,
+  "dataset_load_seconds": 5.719188705086708,
+  "train_only_total_seconds": 36.913107585394755,
+  "train_plus_valid_total_seconds": 55.35716589959338,
+  "inference_seconds": 0.18476323690265417,
+  "peak_memory_bytes": 5048914432,
+  "peak_rss_bytes": 5533929472,
+  "test_metrics": {
+    "auprc": 0.8151614373982619,
+    "auc": 0.9066452313208231,
+    "f1_macro": 0.916707593145275,
+    "precision_fraud": 0.9027777777777778,
+    "recall_fraud": 0.7926829268292683,
+    "f1_fraud": 0.8441558441558441,
+    "g_mean": 0.8875213450384715,
+    "tp": 260,
+    "fp": 28,
+    "tn": 4421,
+    "fn": 68,
+    "threshold_used": 0.3,
+    "best_epoch": 93
+  }
+}

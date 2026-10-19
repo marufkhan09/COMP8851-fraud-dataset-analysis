@@ -1,0 +1,26 @@
+source hashes verified: ['comp.dgl']
+comp.dgl node type 'company', edge types ['homo', 'invest_bc2bc', 'provide_bc2bc', 'sale_bc2bc']
+'homo' edge type equals union of ['invest_bc2bc', 'provide_bc2bc', 'sale_bc2bc'] after symmetrising: True
+{
+  "dataset": "comp",
+  "adapter_version": "comp_homo_etype_undirected_v1(homo_equals_union=True)",
+  "n_nodes": 5317,
+  "n_features": 57,
+  "n_fraud": 559,
+  "n_normal": 4758,
+  "n_unlabelled": 0,
+  "feature_min": 0.0,
+  "feature_max": 1.0,
+  "any_negative_features": false,
+  "feature_transform": "none",
+  "edges": {
+    "raw_edges": 10059,
+    "raw_self_loops": 5464,
+    "undirected_edges_both_directions": 7268
+  },
+  "source_sha256": {
+    "comp.dgl": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+  },
+  "source_path": "/workspace/raw/comp.dgl"
+}
+wrote /workspace/amnet_vast/views/comp_view.npz (1s)

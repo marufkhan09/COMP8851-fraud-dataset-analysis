@@ -1,0 +1,22 @@
+{
+  "dataset": "amazon",
+  "adapter_version": "mat_homo_undirected_v1",
+  "n_nodes": 11944,
+  "n_features": 25,
+  "n_fraud": 821,
+  "n_normal": 11123,
+  "n_unlabelled": 0,
+  "feature_min": -1.0,
+  "feature_max": 5525.0,
+  "any_negative_features": true,
+  "feature_transform": "none",
+  "edges": {
+    "raw_edges": 8796784,
+    "raw_self_loops": 0,
+    "undirected_edges_both_directions": 8796784
+  },
+  "source_sha256": {
+    "Amazon.mat": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63"
+  },
+  "source_path": "/workspace/gdn/data/Amazon.mat"
+}

@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_elliptic_unified_tr40_seed42_a6000_20261018T144332Z",
+  "model": "amnet",
+  "dataset": "elliptic",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 42,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.7152251669473213,
+  "reloaded_val_auprc": 0.7152251669473213,
+  "dataset_load_seconds": 5.798387720016763,
+  "train_only_total_seconds": 17.363455302780494,
+  "train_plus_valid_total_seconds": 24.98131734644994,
+  "inference_seconds": 0.07609777292236686,
+  "peak_memory_bytes": 2789207040,
+  "peak_rss_bytes": 5572493312,
+  "test_metrics": {
+    "auprc": 0.7441801356867531,
+    "auc": 0.9235858958932542,
+    "f1_macro": 0.8217658413861821,
+    "precision_fraud": 0.8303715670436187,
+    "recall_fraud": 0.5654565456545655,
+    "f1_fraud": 0.6727748691099477,
+    "g_mean": 0.7472561160971852,
+    "tp": 1028,
+    "fp": 210,
+    "tn": 16598,
+    "fn": 790,
+    "threshold_used": 0.3,
+    "best_epoch": 99
+  }
+}

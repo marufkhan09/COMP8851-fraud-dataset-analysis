@@ -1,0 +1,21 @@
+{
+  "protocol_version": "vast-v4.4",
+  "hardware_profile_id": "PENDING_TEAM_MANIFEST",
+  "container_digest": "PENDING_TEAM_MANIFEST",
+  "model_source_commit": "74f6a826ddb56dc73f82aa523bf350a1e28b8f03",
+  "model_source_repo": "https://github.com/zjunet/AMNet",
+  "dataset_manifest_version": "PENDING_TEAM_MANIFEST",
+  "source_sha256": {
+    "Amazon.mat": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63"
+  },
+  "dataset_view_id": "amazon_amnet_mat_homo_undirected_v1",
+  "dataset_view_sha256": "65686b2f8a68fb9fc9a11da5f3e5d6a1d7d4d2eaaf3d2b7d335a64bb2223fba4",
+  "split_registry_version": "team_generate_splits_seed2",
+  "split_sha256": "194b49f7cac03b0081747e62cd5d422718e854d4350e200337c19b7663dca8dc",
+  "split_source": "shared_canonical_file_sha_verified",
+  "split_identical_to_splitgnn": true,
+  "evaluator": "run_amnet_unified.py",
+  "evaluator_sha256": "9289c6ae4b5183e915916cb0acd1415e0ab909500a45d84368bfc77fd25011c1",
+  "adapter_version": "mat_homo_undirected_v1",
+  "config_sha256": "52d50919b98784ee917c0077e453f02761211727e4acc7f1072515b438792af8"
+}

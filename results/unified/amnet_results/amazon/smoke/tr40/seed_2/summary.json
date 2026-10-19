@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_amazon_smoke_tr40_seed2_a6000_20261018T145003Z",
+  "model": "amnet",
+  "dataset": "amazon",
+  "track": "smoke",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 2,
+  "best_epoch": 1,
+  "best_val_auprc": 0.04662236358036571,
+  "reloaded_val_auprc": 0.04662236358036571,
+  "dataset_load_seconds": 5.668350473046303,
+  "train_only_total_seconds": 0.7477160720154643,
+  "train_plus_valid_total_seconds": 1.1141623749863356,
+  "inference_seconds": 0.18353578401729465,
+  "peak_memory_bytes": 5048914432,
+  "peak_rss_bytes": 5540507648,
+  "test_metrics": {
+    "auprc": 0.04785080206339046,
+    "auc": 0.30388714372646086,
+    "f1_macro": 0.48211188204683436,
+    "precision_fraud": 0.0,
+    "recall_fraud": 0.0,
+    "f1_fraud": 0.0,
+    "g_mean": 0.0,
+    "tp": 0,
+    "fp": 2,
+    "tn": 4447,
+    "fn": 328,
+    "threshold_used": 0.7,
+    "best_epoch": 1
+  }
+}

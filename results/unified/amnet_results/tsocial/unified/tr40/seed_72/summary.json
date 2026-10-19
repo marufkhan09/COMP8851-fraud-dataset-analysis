@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_tsocial_unified_tr40_seed72_a6000_20261018T151543Z",
+  "model": "amnet",
+  "dataset": "tsocial",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 92,
+  "best_val_auprc": 0.06845851900229523,
+  "reloaded_val_auprc": 0.06845854361069481,
+  "dataset_load_seconds": 5.678655837895349,
+  "train_only_total_seconds": 52.63635449530557,
+  "train_plus_valid_total_seconds": 76.6789295070339,
+  "inference_seconds": 0.24012860492803156,
+  "peak_memory_bytes": 6285115392,
+  "peak_rss_bytes": 5547655168,
+  "test_metrics": {
+    "auprc": 0.0685658703420161,
+    "auc": 0.6724492627717173,
+    "f1_macro": 0.5377672377835772,
+    "precision_fraud": 0.14229910714285715,
+    "recall_fraud": 0.073156737113895,
+    "f1_fraud": 0.0966336133392282,
+    "g_mean": 0.2686149775265739,
+    "tp": 765,
+    "fp": 4611,
+    "tn": 331796,
+    "fn": 9692,
+    "threshold_used": 0.05,
+    "best_epoch": 92
+  }
+}

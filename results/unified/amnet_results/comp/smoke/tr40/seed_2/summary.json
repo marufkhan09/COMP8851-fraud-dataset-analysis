@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_comp_smoke_tr40_seed2_a6000_20261018T144023Z",
+  "model": "amnet",
+  "dataset": "comp",
+  "track": "smoke",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 2,
+  "best_epoch": 1,
+  "best_val_auprc": 0.10362798129584846,
+  "reloaded_val_auprc": 0.10362798129584846,
+  "dataset_load_seconds": 5.469109015073627,
+  "train_only_total_seconds": 0.060767451068386436,
+  "train_plus_valid_total_seconds": 0.07551941904239357,
+  "inference_seconds": 0.004567472962662578,
+  "peak_memory_bytes": 42955264,
+  "peak_rss_bytes": 5407977472,
+  "test_metrics": {
+    "auprc": 0.13069828230963768,
+    "auc": 0.5287422115456797,
+    "f1_macro": 0.5336795870923923,
+    "precision_fraud": 0.15873015873015872,
+    "recall_fraud": 0.22321428571428573,
+    "f1_fraud": 0.18552875695732837,
+    "g_mean": 0.4383273274991877,
+    "tp": 50,
+    "fp": 265,
+    "tn": 1638,
+    "fn": 174,
+    "threshold_used": 0.5,
+    "best_epoch": 1
+  }
+}

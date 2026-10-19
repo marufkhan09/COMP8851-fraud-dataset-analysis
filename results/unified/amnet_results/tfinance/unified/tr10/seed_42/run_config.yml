@@ -1,0 +1,37 @@
+dataset: tfinance
+ratio: 10
+seed: 42
+track: unified
+device: cuda
+max_epoch: 100
+early_stop: 20
+hyperparameter_profile: author README custom-dataset default profile
+K: 2
+M: 5
+hidden_channels: 64
+lr_f: 0.05
+lr: 0.0005
+weight_decay: 1.0e-05
+beta: 1.0
+selection_metric: val_auprc
+threshold_rule: best val macro-F1 on 0.05..0.95 step 0.05
+adapter_version: homo_undirected_v1
+feature_transform: none
+protocol_deviations_from_native:
+- 'splits: team canonical nested TR40/30/20/10 (seed 2) instead of the author-shipped
+  splits'
+- max 100 epochs with early stopping patience 20 instead of 2000 / 200
+- 'checkpoint selected by validation AUPRC via sklearn average_precision_score (author:
+  trapezoidal auc(recall, precision)); strict improvement required (author: >=)'
+- decision threshold chosen by best validation Macro-F1 (0.05..0.95); author reports
+  AUC metrics only
+- test set evaluated once after training (author evaluates test at every validation
+  improvement, for logging)
+- python/numpy/torch seeds set from --seed (author code sets no seeds)
+- 'dataset view: single undirected edge set (AMNet is single-relation); multi-relation
+  datasets use the stored homogeneous adjacency'
+- 'environment: torch 1.11.0+cu113, torch-geometric 2.0.4, torch-scatter 2.0.9, torch-sparse
+  0.6.13, nvidia-cusparse-cu11 for torch-sparse (author tested on CUDA 11.2)'
+- GPU scatter-add in message passing is non-deterministic, so reruns with the same
+  seed can differ slightly
+- 'no author-tuned profile for this dataset: README default profile used'

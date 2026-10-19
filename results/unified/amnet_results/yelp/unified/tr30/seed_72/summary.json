@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_yelp_unified_tr30_seed72_a6000_20261018T150631Z",
+  "model": "amnet",
+  "dataset": "yelp",
+  "track": "unified",
+  "ratio": 30,
+  "seed": 72,
+  "n_completed_epochs": 100,
+  "best_epoch": 99,
+  "best_val_auprc": 0.2995694417059107,
+  "reloaded_val_auprc": 0.2995694417059107,
+  "dataset_load_seconds": 5.653352258959785,
+  "train_only_total_seconds": 34.39544605463743,
+  "train_plus_valid_total_seconds": 51.61909449007362,
+  "inference_seconds": 0.17185752792283893,
+  "peak_memory_bytes": 4570557952,
+  "peak_rss_bytes": 5541064704,
+  "test_metrics": {
+    "auprc": 0.30148434362450993,
+    "auc": 0.716089886491259,
+    "f1_macro": 0.5940321340281892,
+    "precision_fraud": 0.35674470457079155,
+    "recall_fraud": 0.23961063272182703,
+    "f1_fraud": 0.2866741321388578,
+    "g_mean": 0.4711802406777259,
+    "tp": 640,
+    "fp": 1154,
+    "tn": 14557,
+    "fn": 2031,
+    "threshold_used": 0.2,
+    "best_epoch": 99
+  }
+}

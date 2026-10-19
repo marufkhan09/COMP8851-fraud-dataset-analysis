@@ -1,0 +1,18 @@
+=== Run: amnet_yelp_smoke_tr40_seed2_a6000_20261018T150232Z ===
+Result dir: /workspace/amnet_vast/results/amnet/yelp/smoke/tr40/seed_2
+Loaded yelp: nodes=45954 features=32 edges(both dirs)=7693958 fraud=6677 unlabelled=0 adapter=mat_homo_undirected_v1
+Splits: shared canonical file /workspace/gdn_vast/splits/yelp_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=18382 (fraud 2671) valid=9190 (fraud 1335) test=18382 (fraud 2671)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author config.py['yelp'] {'K': 2, 'M': 5, 'hidden_channels': 64, 'lr_f': 0.05, 'lr': 0.0005, 'weight_decay': 1e-05, 'beta': 1.0}
+Config SHA256: 26caaa72c8ec751df6c7a6c84491781086de4ca63534184d3f3e5ecb42a49e47
+Split SHA256: 448e01069d60e85ede228ac68b6d7208b0a153087127598c26b383b82606bb1f
+epoch 0: loss=0.7223 train=0.36s valid=0.17s val_auprc=0.1634 val_auc=0.5410 val_f1_macro@0.5=0.1268 (best_epoch=0, best_auprc=0.1634)
+epoch 1: loss=0.7134 train=0.34s valid=0.17s val_auprc=0.1646 val_auc=0.5424 val_f1_macro@0.5=0.1623 (best_epoch=1, best_auprc=0.1646)
+Selected threshold (best val macro-F1): 0.55 (val F1=0.4608)
+Reloaded checkpoint val AUPRC 0.164558 vs logged 0.164558
+TEST metrics: {"auprc": 0.1670368143657532, "auc": 0.5496705027330397, "f1_macro": 0.4608277358988649, "precision_fraud": 0.0, "recall_fraud": 0.0, "f1_fraud": 0.0, "g_mean": 0.0, "tp": 0, "fp": 0, "tn": 15711, "fn": 2671, "threshold_used": 0.55, "best_epoch": 1}
+WARNING: model predicted no fraud on the test set at the selected threshold
+=== Run complete: amnet_yelp_smoke_tr40_seed2_a6000_20261018T150232Z ===

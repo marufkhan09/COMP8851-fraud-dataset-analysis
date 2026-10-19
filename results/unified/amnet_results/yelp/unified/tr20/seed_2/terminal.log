@@ -1,0 +1,40 @@
+=== Run: amnet_yelp_unified_tr20_seed2_a6000_20261018T150733Z ===
+Result dir: /workspace/amnet_vast/results/amnet/yelp/unified/tr20/seed_2
+Loaded yelp: nodes=45954 features=32 edges(both dirs)=7693958 fraud=6677 unlabelled=0 adapter=mat_homo_undirected_v1
+Splits: shared canonical file /workspace/gdn_vast/splits/yelp_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=9192 (fraud 1336) valid=9190 (fraud 1335) test=18382 (fraud 2671)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author config.py['yelp'] {'K': 2, 'M': 5, 'hidden_channels': 64, 'lr_f': 0.05, 'lr': 0.0005, 'weight_decay': 1e-05, 'beta': 1.0}
+Config SHA256: e2b9a13fd8b5456a1d48deb417d5b066baf4e90e532ba243f6bd825a906680df
+Split SHA256: 448e01069d60e85ede228ac68b6d7208b0a153087127598c26b383b82606bb1f
+epoch 0: loss=0.7225 train=0.36s valid=0.17s val_auprc=0.1634 val_auc=0.5410 val_f1_macro@0.5=0.1268 (best_epoch=0, best_auprc=0.1634)
+epoch 1: loss=0.7135 train=0.35s valid=0.17s val_auprc=0.1646 val_auc=0.5424 val_f1_macro@0.5=0.1623 (best_epoch=1, best_auprc=0.1646)
+epoch 2: loss=0.7044 train=0.35s valid=0.17s val_auprc=0.1654 val_auc=0.5431 val_f1_macro@0.5=0.3506 (best_epoch=2, best_auprc=0.1654)
+epoch 3: loss=0.6966 train=0.34s valid=0.17s val_auprc=0.1657 val_auc=0.5429 val_f1_macro@0.5=0.5105 (best_epoch=3, best_auprc=0.1657)
+epoch 4: loss=0.6888 train=0.35s valid=0.17s val_auprc=0.1651 val_auc=0.5422 val_f1_macro@0.5=0.4777 (best_epoch=3, best_auprc=0.1657)
+epoch 5: loss=0.6816 train=0.35s valid=0.17s val_auprc=0.1641 val_auc=0.5414 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 6: loss=0.6741 train=0.35s valid=0.17s val_auprc=0.1629 val_auc=0.5405 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 7: loss=0.6664 train=0.35s valid=0.17s val_auprc=0.1617 val_auc=0.5400 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 8: loss=0.6590 train=0.35s valid=0.17s val_auprc=0.1608 val_auc=0.5397 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 9: loss=0.6505 train=0.35s valid=0.17s val_auprc=0.1600 val_auc=0.5398 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 10: loss=0.6421 train=0.34s valid=0.17s val_auprc=0.1588 val_auc=0.5401 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 11: loss=0.6326 train=0.35s valid=0.17s val_auprc=0.1583 val_auc=0.5408 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 12: loss=0.6239 train=0.35s valid=0.17s val_auprc=0.1580 val_auc=0.5416 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 13: loss=0.6132 train=0.34s valid=0.17s val_auprc=0.1580 val_auc=0.5424 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 14: loss=0.6026 train=0.35s valid=0.17s val_auprc=0.1580 val_auc=0.5431 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 15: loss=0.5913 train=0.35s valid=0.17s val_auprc=0.1584 val_auc=0.5438 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 16: loss=0.5800 train=0.35s valid=0.17s val_auprc=0.1583 val_auc=0.5445 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 17: loss=0.5681 train=0.35s valid=0.17s val_auprc=0.1583 val_auc=0.5450 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 18: loss=0.5561 train=0.35s valid=0.17s val_auprc=0.1584 val_auc=0.5455 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 19: loss=0.5430 train=0.35s valid=0.17s val_auprc=0.1586 val_auc=0.5460 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 20: loss=0.5309 train=0.35s valid=0.17s val_auprc=0.1587 val_auc=0.5464 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 21: loss=0.5166 train=0.35s valid=0.17s val_auprc=0.1590 val_auc=0.5468 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 22: loss=0.5040 train=0.35s valid=0.17s val_auprc=0.1590 val_auc=0.5471 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+epoch 23: loss=0.4909 train=0.35s valid=0.17s val_auprc=0.1596 val_auc=0.5473 val_f1_macro@0.5=0.4608 (best_epoch=3, best_auprc=0.1657)
+Early stopping at epoch 23 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.50 (val F1=0.5105)
+Reloaded checkpoint val AUPRC 0.165737 vs logged 0.165737
+TEST metrics: {"auprc": 0.16766135693407974, "auc": 0.5497087258982271, "f1_macro": 0.5135860171931361, "precision_fraud": 0.17225747960108795, "recall_fraud": 0.2845376263571696, "f1_fraud": 0.2145983340392489, "g_mean": 0.46732991840978405, "tp": 760, "fp": 3652, "tn": 12059, "fn": 1911, "threshold_used": 0.5, "best_epoch": 3}
+=== Run complete: amnet_yelp_unified_tr20_seed2_a6000_20261018T150733Z ===

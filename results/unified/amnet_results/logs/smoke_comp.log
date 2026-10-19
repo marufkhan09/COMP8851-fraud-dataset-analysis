@@ -1,0 +1,17 @@
+=== Run: amnet_comp_smoke_tr40_seed2_a6000_20261018T144023Z ===
+Result dir: /workspace/amnet_vast/results/amnet/comp/smoke/tr40/seed_2
+Loaded comp: nodes=5317 features=57 edges(both dirs)=7268 fraud=559 unlabelled=0 adapter=comp_homo_etype_undirected_v1(homo_equals_union=True)
+Splits: shared canonical file /workspace/gdn_vast/splits/comp_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=2126 (fraud 223) valid=1064 (fraud 112) test=2127 (fraud 224)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author README custom-dataset default profile {'K': 2, 'M': 5, 'hidden_channels': 64, 'lr_f': 0.05, 'lr': 0.0005, 'weight_decay': 1e-05, 'beta': 1.0}
+Config SHA256: 7e0ec1b2e9871a05b422861e4bc852a814363170cfb31b3c8c2dce376856c594
+Split SHA256: 193f52954bc953878d02f1334a94c4137fb8c2a7e3d37d0aaff51b9f11f1ae02
+epoch 0: loss=0.7014 train=0.04s valid=0.01s val_auprc=0.1015 val_auc=0.4613 val_f1_macro@0.5=0.1194 (best_epoch=0, best_auprc=0.1015)
+epoch 1: loss=0.6965 train=0.02s valid=0.01s val_auprc=0.1036 val_auc=0.4660 val_f1_macro@0.5=0.5139 (best_epoch=1, best_auprc=0.1036)
+Selected threshold (best val macro-F1): 0.50 (val F1=0.5139)
+Reloaded checkpoint val AUPRC 0.103628 vs logged 0.103628
+TEST metrics: {"auprc": 0.13069828230963768, "auc": 0.5287422115456797, "f1_macro": 0.5336795870923923, "precision_fraud": 0.15873015873015872, "recall_fraud": 0.22321428571428573, "f1_fraud": 0.18552875695732837, "g_mean": 0.4383273274991877, "tp": 50, "fp": 265, "tn": 1638, "fn": 174, "threshold_used": 0.5, "best_epoch": 1}
+=== Run complete: amnet_comp_smoke_tr40_seed2_a6000_20261018T144023Z ===
