@@ -1,0 +1,31 @@
+{
+  "run": "consisgad_tr20_seed2",
+  "protocol": "elliptic_reconstructed_v1",
+  "original_team_split": false,
+  "model": "consisgad",
+  "ratio": 20,
+  "seed": 2,
+  "selected_validation_epoch": 48,
+  "frozen_validation_threshold": 0.9500000000000001,
+  "checkpoint_sha256": "f5d342dfa823b5c4d931fdac36a6153eeccb2e7b55b4ad272bfab7744ea2c4ce",
+  "split_sha256": "bda932851c5bed7965c34cc63d3595c89580bb80416f638f5dcbc205ff99eb3c",
+  "test_nodes": 17626,
+  "test_inference_seconds": 2.83610917115584,
+  "peak_gpu_memory_mb": 250.943359375,
+  "test_metrics": {
+    "auroc": 0.8883215342788817,
+    "auprc": 0.4983846659954102,
+    "macro_f1": 0.721939291620251,
+    "fraud_f1": 0.49557522123893805,
+    "fraud_precision": 0.380506091846298,
+    "fraud_recall": 0.710411198600175,
+    "g_mean": 0.808352329096607,
+    "accuracy": 0.9062180869170543,
+    "threshold": 0.9500000000000001,
+    "true_negative": 15161,
+    "false_positive": 1322,
+    "false_negative": 331,
+    "true_positive": 812
+  },
+  "test_evaluated": true
+}

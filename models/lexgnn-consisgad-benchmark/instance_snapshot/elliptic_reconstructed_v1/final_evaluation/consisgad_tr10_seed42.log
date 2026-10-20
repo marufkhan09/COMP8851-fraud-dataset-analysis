@@ -1,0 +1,35 @@
+VERIFIED: consisgad_tr10_seed42
+Best epoch: 84
+Frozen threshold: 0.9600000000000001
+{
+  "run": "consisgad_tr10_seed42",
+  "protocol": "elliptic_reconstructed_v1",
+  "original_team_split": false,
+  "model": "consisgad",
+  "ratio": 10,
+  "seed": 42,
+  "selected_validation_epoch": 84,
+  "frozen_validation_threshold": 0.9600000000000001,
+  "checkpoint_sha256": "93fc1fdea58b3bfdbefe245b26e9b2802892614a0d420b38f5302ffbdc94ae4a",
+  "split_sha256": "1c514bc4a26af4797930ea5ba9e4680ed78667a2c726c345f2c67b2823d142f2",
+  "test_nodes": 17626,
+  "test_inference_seconds": 2.8351671039126813,
+  "peak_gpu_memory_mb": 250.943359375,
+  "test_metrics": {
+    "auroc": 0.8640558057404142,
+    "auprc": 0.38674496774325473,
+    "macro_f1": 0.6786116944955876,
+    "fraud_f1": 0.42560000000000003,
+    "fraud_precision": 0.30609896432681244,
+    "fraud_recall": 0.6981627296587927,
+    "g_mean": 0.7883779308660716,
+    "accuracy": 0.8777941677067967,
+    "threshold": 0.9600000000000001,
+    "true_negative": 14674,
+    "false_positive": 1809,
+    "false_negative": 345,
+    "true_positive": 798
+  },
+  "test_evaluated": true
+}
+PASS: consisgad_tr10_seed42 TEST EVALUATED

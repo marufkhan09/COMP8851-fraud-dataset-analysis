@@ -1,0 +1,15 @@
+{
+  "architecture_changed": false,
+  "author_restart_rule": "restart when validation AUROC <= configured threshold",
+  "dataset_sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+  "feature_transform": "DGL RowFeatNormalizer(subtract_min=True), matching author code",
+  "maximum_restarts": 5,
+  "restart_check_epoch": 3,
+  "restart_threshold": 0.51,
+  "selection_metric": "validation AUROC",
+  "source_commit": "0642925539c414809c401066b2b06c8e24188dee",
+  "split_sha256": "a0911f5267b3e5d8a210fe2576d0f40b36f9a43bfcdb659d96877651741c4b28",
+  "test_evaluation_after_training": false,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99"
+}

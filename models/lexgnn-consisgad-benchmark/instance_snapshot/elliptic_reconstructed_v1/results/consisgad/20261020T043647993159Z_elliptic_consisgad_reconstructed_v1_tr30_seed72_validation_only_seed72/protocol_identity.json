@@ -1,0 +1,12 @@
+{
+  "architecture_changed": false,
+  "compatibility_note": "sets upstream module global args so its trainable-eps branch behaves as authored",
+  "dataset_sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+  "selection_metric": "validation AUROC",
+  "source_commit": "36811c5bc79be49c9740f25a1f260496bb4736af",
+  "split_sha256": "ec693ffdacdb4aee4aa6666f3d7d326728282401d4daa2b10c221a04f3559bb6",
+  "test_evaluation_after_training": false,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99",
+  "transductive_unlabeled_use": "all eligible Elliptic nodes; labels exposed only for training IDs"
+}
