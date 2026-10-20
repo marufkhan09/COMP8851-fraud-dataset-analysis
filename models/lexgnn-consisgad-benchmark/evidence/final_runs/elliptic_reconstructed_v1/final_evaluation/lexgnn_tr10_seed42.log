@@ -1,0 +1,35 @@
+VERIFIED: lexgnn_tr10_seed42
+Best epoch: 72
+Frozen threshold: 0.12
+{
+  "run": "lexgnn_tr10_seed42",
+  "protocol": "elliptic_reconstructed_v1",
+  "original_team_split": false,
+  "model": "lexgnn",
+  "ratio": 10,
+  "seed": 42,
+  "selected_validation_epoch": 72,
+  "frozen_validation_threshold": 0.12,
+  "checkpoint_sha256": "c79a105937863d5852042946d670486f32a12f7ebaf41fbfef0a4e8e94f5e13e",
+  "split_sha256": "1c514bc4a26af4797930ea5ba9e4680ed78667a2c726c345f2c67b2823d142f2",
+  "test_nodes": 17626,
+  "test_inference_seconds": 1.5639341280329973,
+  "peak_gpu_memory_mb": 33.35205078125,
+  "test_metrics": {
+    "auroc": 0.6265545524275946,
+    "auprc": 0.08497003446511596,
+    "macro_f1": 0.37882589939448974,
+    "fraud_f1": 0.14369180208143145,
+    "fraud_precision": 0.08021608398736113,
+    "fraud_recall": 0.6885389326334208,
+    "g_mean": 0.5581956211073744,
+    "accuracy": 0.46783161239078636,
+    "threshold": 0.12,
+    "true_negative": 7459,
+    "false_positive": 9024,
+    "false_negative": 356,
+    "true_positive": 787
+  },
+  "test_evaluated": true
+}
+PASS: lexgnn_tr10_seed42 TEST EVALUATED

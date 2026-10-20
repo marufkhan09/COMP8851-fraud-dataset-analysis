@@ -1,0 +1,35 @@
+VERIFIED: consisgad_tr40_seed42
+Best epoch: 95
+Frozen threshold: 0.24000000000000002
+{
+  "run": "consisgad_tr40_seed42",
+  "protocol": "elliptic_reconstructed_v1",
+  "original_team_split": false,
+  "model": "consisgad",
+  "ratio": 40,
+  "seed": 42,
+  "selected_validation_epoch": 95,
+  "frozen_validation_threshold": 0.24000000000000002,
+  "checkpoint_sha256": "9d605c51b75587746fe215701cb7f822f3285e7851871912ecc28a4dbf1d4db5",
+  "split_sha256": "a0911f5267b3e5d8a210fe2576d0f40b36f9a43bfcdb659d96877651741c4b28",
+  "test_nodes": 17626,
+  "test_inference_seconds": 2.743690803879872,
+  "peak_gpu_memory_mb": 250.943359375,
+  "test_metrics": {
+    "auroc": 0.911604782339173,
+    "auprc": 0.5835865163534987,
+    "macro_f1": 0.786831796165868,
+    "fraud_f1": 0.6035598705501618,
+    "fraud_precision": 0.5613243039879608,
+    "fraud_recall": 0.652668416447944,
+    "g_mean": 0.7934630939502096,
+    "accuracy": 0.9444003177124702,
+    "threshold": 0.24000000000000002,
+    "true_negative": 15900,
+    "false_positive": 583,
+    "false_negative": 397,
+    "true_positive": 746
+  },
+  "test_evaluated": true
+}
+PASS: consisgad_tr40_seed42 TEST EVALUATED

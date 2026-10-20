@@ -1,0 +1,31 @@
+{
+  "run": "lexgnn_tr30_seed72",
+  "protocol": "elliptic_reconstructed_v1",
+  "original_team_split": false,
+  "model": "lexgnn",
+  "ratio": 30,
+  "seed": 72,
+  "selected_validation_epoch": 89,
+  "frozen_validation_threshold": 0.65,
+  "checkpoint_sha256": "d683fff163aef6b8002d1b60519693cb96ffd75a68fea765b03b9f77984580ba",
+  "split_sha256": "ec693ffdacdb4aee4aa6666f3d7d326728282401d4daa2b10c221a04f3559bb6",
+  "test_nodes": 17626,
+  "test_inference_seconds": 1.5896069791633636,
+  "peak_gpu_memory_mb": 33.357421875,
+  "test_metrics": {
+    "auroc": 0.642877422582688,
+    "auprc": 0.10217452581796037,
+    "macro_f1": 0.330086292268244,
+    "fraud_f1": 0.13233518473798597,
+    "fraud_precision": 0.07287234042553191,
+    "fraud_recall": 0.7191601049868767,
+    "g_mean": 0.5127116548990671,
+    "accuracy": 0.3884602292068535,
+    "threshold": 0.65,
+    "true_negative": 6025,
+    "false_positive": 10458,
+    "false_negative": 321,
+    "true_positive": 822
+  },
+  "test_evaluated": true
+}
