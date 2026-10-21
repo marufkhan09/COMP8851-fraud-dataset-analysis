@@ -1,91 +1,99 @@
-# GAGA (Label Information Enhanced Fraud Detection, WWW '23)
+# GAGA on the COMP8851 fraud-graph benchmark
 
-Official repo: https://github.com/Orion-wyc/GAGA
-Commit: see `gaga_commit.txt`
-Paper: Wang et al., "Label Information Enhanced Fraud Detection against Low
-Homophily in Graphs," WWW 2023
+Owner: Md Maruf Khan.
 
-Natively supports YelpChi and Amazon only (auto-downloaded via DGL's
-`FraudDataset`). T-Finance, Elliptic, and FDCompCN will need adapters,
-same as was done for DGA-GNN.
+## The model
 
-## Environment: `gaga` conda env, Python 3.7
+GAGA, "Label Information Enhanced Fraud Detection against Low Homophily in
+Graphs" (Wang et al., The Web Conference 2023). Official code:
+https://github.com/Orion-wyc/GAGA, commit `8cc835842305aa9487d5d019d485a102c93989fe`
+(`gaga_commit.txt`).
 
-The env file (`gaga_env.yaml`) specifies `torch==1.7.1+cu110`,
-`dgl==0.7.2`. Actual working setup:
+Standard GNNs mix fraud and benign neighbours when homophily is low. GAGA uses
+training labels to separate them:
+- **Group aggregation (preprocessing).** For every node, its multi-hop neighbours are
+  grouped by label information, and each group is aggregated into one vector.
+  Each node becomes a short sequence of group vectors (`graph2seq`).
+- **Transformer encoder.** A Transformer reads the sequence with learnable group
+  encodings, so the model weighs fraud-like, benign-like and unlabelled neighbourhoods
+  differently.
 
-- `torch==1.7.1+cu110` — installed cleanly, works fine on this A6000 (compute
-  capability 8.6) via CUDA minor-version compatibility. Confirmed with a real
-  GPU matmul test, not just `torch.cuda.is_available()`.
-- `dgl==0.6.1` (not 0.7.2) — **the CUDA-enabled wheel for dgl 0.7.2 does not
-  exist** on data.dgl.ai's package index; `dgl-cu110` tops out at 0.6.1.
-  (`dgl==0.7.2` does exist but is CPU-only, which silently fails at
-  `.to('cuda')` with "Device API gpu is not enabled.") Checked GAGA's actual
-  DGL API usage (`to_homogeneous`, `to_simple`, `add_self_loop`,
-  `heterograph`, `save_graphs`/`load_graphs`) — all stable APIs present in
-  0.6.1, so this substitution is safe.
-- CUDA 11.0-era libraries (`libcublas.so.11`, `libcusparse.so.11`, etc.) had
-  to be installed explicitly via pip (`nvidia-cublas-cu11==11.10.3.66`,
-  `nvidia-cusparse-cu11==11.7.4.91`, etc.) since dgl-cu110's compiled binary
-  expects them as loose system libraries, unlike modern torch wheels which
-  bundle their own. `LD_LIBRARY_PATH` must include all of these; set via a
-  conda activation hook at `/venv/gaga/etc/conda/activate.d/gaga_ld_path.sh`
-  so it's automatic on `conda activate gaga`.
+The preprocessing is the expensive part, and it is what limits GAGA on large graphs
+(see T-Social below).
 
-Full installed package list: `yelpchi/evidence/environment/environment_installed.txt`
+## Status
 
-## Known bug in upstream preprocessing: `mp.Process` deadlock
+| Dataset | Support | Status |
+|---|---|---|
+| YelpChi | native | complete, native paper split |
+| Amazon | native | complete, native paper split |
+| T-Finance | adapter | complete, native-style split |
+| Elliptic | adapter | complete, native-style split |
+| FDCompCN | adapter | complete, native-style split |
+| T-Social | adapter | not completed (preprocessing too slow) |
 
-`preprocessing/graph2seq_mp.py`'s multi-worker mode (`--n_workers > 1`) uses
-`mp.Process` (fork-based multiprocessing) to parallelize sequence
-generation. **This deadlocks on this instance** — all worker processes sit
-at 0% CPU indefinitely (confirmed via `ps`/`top`, not just a slow progress
-bar). Root cause: PyTorch/DGL initialize background threads (OpenMP thread
-pools) at import time; forking a process after those threads exist can
-leave the child with a corrupted copy of a lock held by a thread that no
-longer exists in the fork. This is a known class of bug with
-fork-based multiprocessing + PyTorch, not something specific to our setup.
+These are single-seed runs under GAGA's own split settings, not the frozen COMP8851
+TR40 to TR10 grid. The report marks them as native-protocol and does not rank them
+against the unified-protocol models.
 
-**Fix:** `preprocessing/graph2seq_single.py` (new file, evidence copy at
-`yelpchi/evidence/preprocessing/`) reimplements the same logic
-single-process, in chunks of 2000 nodes, with progress/ETA logging. No
-`mp.Process` call. Verified: full YelpChi preprocessing (45,954 nodes)
-completes in ~178 seconds this way — actually faster than the intended
-parallel version would have been, since it never got past 0%.
+## Results (test, single seed)
 
-The bottleneck itself is a documented TODO in the upstream code
-(`_group_aggregation` — comment reads "这部分是瓶颈所在" / "this part is the
-bottleneck," left by the original author) but is not pathologically slow at
-YelpChi's scale (~258 nodes/sec observed).
+| Dataset | AUC | AP (AUPRC) | F1-macro | F1-fraud | G-Mean |
+|---|---:|---:|---:|---:|---:|
+| YelpChi | 0.9428 | 0.7952 | 0.8313 | 0.7110 | 0.8232 |
+| Amazon | 0.9616 | 0.8708 | 0.9098 | 0.8355 | 0.8775 |
+| T-Finance | 0.9577 | 0.8449 | 0.8952 | 0.7991 | 0.8461 |
+| Elliptic | 0.8817 | 0.5985 | 0.7870 | 0.6053 | 0.8114 |
+| FDCompCN | 0.6657 | 0.2278 | 0.6009 | 0.3089 | 0.5839 |
 
-## Results: YelpChi, native paper split (train=0.4, val=0.1, test=0.5, seed=717)
+Taken from the last block of `<dataset>/evidence/benchmark/*/train.log`. YelpChi and
+Amazon use the paper split (train 0.4, validation 0.1, test 0.5). The other
+three use train 0.4 and validation 0.198. All five use split seed 717. YelpChi AUC (0.943) is lower than the AUC
+that PC-GNN and DGA-GNN reach on YelpChi (about 0.98 for DGA-GNN). It was not tuned
+or rerun to close that gap.
 
-Config: `configs/yelpchi_paper.json` (paper defaults, unmodified)
+## How to reproduce
 
-Training: 500 epochs (early stopping never fully triggered — counter
-reached 85/100 at epoch 499), best checkpoint selected from epoch 414 based
-on validation AUC.
+Run from `models/gaga/gaga_upstream/pytorch_gaga/`. Example for Elliptic:
 
-**Final test-set metrics:**
-- AUC: 0.9428
-- F1-macro: 0.8313
-- F1-fraud (binary-1): 0.7110
-- F1-benign (binary-0): 0.9517
-- Average Precision: 0.7952
-- Gmean: 0.8232
-- Precision(1): 0.7098, Recall(1): 0.7122
-- TN=18734, FP=957, FN=946, TP=2341
+```bash
+python dataset_split.py --dataset elliptic --save_dir seq_data --train_size 0.4 --val_size 0.198
+python preprocessing/graph2seq_single.py --dataset elliptic --fanouts -1 -1 --save_dir seq_data \
+       --train_size 0.4 --val_size 0.198 --add_self_loop --norm_feat
+python main_transformer.py --config configs/elliptic_paper.json --gpu 0 --log_dir logs --early_stop 100
+```
 
-Note: this uses GAGA's own native split (0.4/0.1/0.5), not the team's
-unified TR40 split (0.4/0.198/0.402). AUC here (0.943) is meaningfully
-lower than PC-GNN and DGA-GNN's YelpChi results (~0.977 both) — this is
-plausibly a genuine architectural/protocol difference (GAGA's paper split,
-different val ratio, single-seed run vs. others' more extensive validation)
-rather than a bug; not adjusted or re-run to match expectations.
+- YelpChi and Amazon: `--dataset yelp` or `amazon`, `--val_size 0.1`, configs `*_paper.json`.
+- Elliptic and FDCompCN adapters: `elliptic-fdcompcn-adapter.md`. They load the
+  preprocessed graphs built for DGA-GNN, and keep FDCompCN's three relations.
+- Run `graph2seq_single.py` and not the upstream `graph2seq_mp.py` (see below).
+- Environment: Python 3.7, `torch==1.7.1+cu110`, `dgl==0.6.1`, and the CUDA 11
+  libraries installed with pip (`nvidia-cublas-cu11`, `nvidia-cusparse-cu11`, and so on)
+  with `LD_LIBRARY_PATH` set to include them. `dgl-cu110` stops at 0.6.1, and the
+  0.7.2 wheel is CPU-only and fails at `.to('cuda')`. Package list:
+  `yelpchi/evidence/environment/environment_installed.txt`.
 
-## What's next
+## Fix to the upstream preprocessing
 
-1. Amazon (native, same setup as YelpChi should apply directly)
-2. T-Finance, Elliptic, FDCompCN — need adapters (no native support)
-3. Frozen COMP8851 TR40/30/20/10 splits for unified comparison, once
-   available
+`graph2seq_mp.py` with more than one worker deadlocks on this setup: all workers sit at
+0% CPU. This is a known class of failure for fork-based multiprocessing after PyTorch
+and DGL have started their thread pools. The replacement `graph2seq_single.py`
+does the same work in one process, in chunks of 2000 nodes, with progress logging.
+YelpChi (45,954 nodes) preprocesses in about 178 seconds this way. Copy of the file:
+`yelpchi/evidence/preprocessing/graph2seq_single.py`.
+
+## T-Social: scaling failure
+
+T-Social (5,781,065 nodes) was attempted on the same hardware as DGA-GNN. GAGA's
+reference preprocessing (`GroupFeatureSequenceLoader.load_batch`) handles nodes one at
+a time in a Python loop. At T-Social scale it ran at about 1.4 iterations per second,
+which projects to roughly 1,100 hours (about 46 days). The run was stopped once the rate
+was stable. DGA-GNN completed the same graph because its preprocessing is vectorised.
+This describes the reference implementation as shipped, on this hardware. The
+evidence is in `../dga-gnn/tsocial/README.md`. The small adapter used for the attempt
+(a `tsocial` branch in `preprocessing/data_utils.py`) was not committed.
+
+## Known limitations
+
+- Single-seed, native-style splits, so not directly comparable with the unified grid.
+- T-Social was not completed.
