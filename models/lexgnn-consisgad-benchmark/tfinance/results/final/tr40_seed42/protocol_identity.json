@@ -1,0 +1,18 @@
+{
+  "architecture_changed": false,
+  "author_restart_rule": "restart when validation AUROC <= configured threshold",
+  "dataset_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "dataset_source_commit": "not_applicable_canonical_dataset_sha256_verified",
+  "feature_transform": "none; canonical 10-dimensional T-Finance features retained",
+  "graph_view": "original homogeneous T-Finance graph; one relation and original edge topology",
+  "maximum_restarts": 0,
+  "restart_check_epoch": 2,
+  "restart_threshold": -1.0,
+  "selection_metric": "validation AUROC",
+  "source_commit": "0642925539c414809c401066b2b06c8e24188dee",
+  "split_policy": "COMP8851 frozen split IDs; DGL masks ignored",
+  "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+  "test_evaluation_after_training": true,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99"
+}
