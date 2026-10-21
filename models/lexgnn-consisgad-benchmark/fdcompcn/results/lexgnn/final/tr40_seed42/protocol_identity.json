@@ -1,0 +1,19 @@
+{
+  "architecture_changed": false,
+  "author_restart_rule": "restart when validation AUROC <= configured threshold",
+  "dataset_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "dataset_source_commit": "32fbdb836781d5c02523844a7079425f89be8831",
+  "derived_homo_relation_used": false,
+  "feature_transform": "SplitGNN row normalization: diag((row_sum + 0.01)^-1) times canonical features",
+  "graph_view": "three original semantic FDCompCN relations: invest_bc2bc, provide_bc2bc and sale_bc2bc; derived homo aggregate excluded",
+  "maximum_restarts": 5,
+  "restart_check_epoch": 3,
+  "restart_threshold": 0.51,
+  "selection_metric": "validation AUROC",
+  "source_commit": "0642925539c414809c401066b2b06c8e24188dee",
+  "split_policy": "COMP8851 frozen split IDs; DGL masks ignored",
+  "split_sha256": "407ec26c4c661fe1e70d0f68fda93063f6057951478e7dea5b7fff5f29ebb732",
+  "test_evaluation_after_training": true,
+  "test_evaluations_during_training": 0,
+  "threshold_selection": "validation macro-F1 over thresholds 0.01..0.99"
+}
