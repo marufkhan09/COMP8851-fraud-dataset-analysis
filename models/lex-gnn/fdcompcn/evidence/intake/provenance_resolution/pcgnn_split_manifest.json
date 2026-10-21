@@ -1,0 +1,43 @@
+{
+  "dataset": "FDCompCN",
+  "split_seed": 2,
+  "stratified": true,
+  "splits": {
+    "TR40": {
+      "file": "fdcompcn_TR40_seed2.npz",
+      "sha256": "9576c61c3a53f0df6e4f58e3437784c99562d1044937d89f1bde1e862ba68ed5",
+      "train_size": 2552,
+      "train_fraud_count": 268,
+      "train_fraud_ratio": 0.105,
+      "val_size": 1064,
+      "test_size": 1701
+    },
+    "TR30": {
+      "file": "fdcompcn_TR30_seed2.npz",
+      "sha256": "3dc3b77d29d018cc88a1bb8cf04613f79f09acae8229d97cfc6980e9c921a60c",
+      "train_size": 1914,
+      "train_fraud_count": 201,
+      "train_fraud_ratio": 0.105,
+      "val_size": 1064,
+      "test_size": 1701
+    },
+    "TR20": {
+      "file": "fdcompcn_TR20_seed2.npz",
+      "sha256": "f6d681064cae24e1512373689d2d3427eeb213e5e1e137d8c0b713fa7a9225e1",
+      "train_size": 1276,
+      "train_fraud_count": 134,
+      "train_fraud_ratio": 0.105,
+      "val_size": 1064,
+      "test_size": 1701
+    },
+    "TR10": {
+      "file": "fdcompcn_TR10_seed2.npz",
+      "sha256": "c173bce1440f93a945ab6bc782f282f436a3f91807c26def43cedd86def63a51",
+      "train_size": 638,
+      "train_fraud_count": 67,
+      "train_fraud_ratio": 0.105,
+      "val_size": 1064,
+      "test_size": 1701
+    }
+  }
+}

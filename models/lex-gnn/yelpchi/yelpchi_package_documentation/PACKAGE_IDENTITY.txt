@@ -1,0 +1,26 @@
+COMP8851 LEX-GNN + ConsisGAD YelpChi Adapter V1
+
+Created UTC: 2026-10-17
+
+LEX-GNN source:
+https://github.com/wdhyun/LEX-GNN
+Commit: 0642925539c414809c401066b2b06c8e24188dee
+
+ConsisGAD source:
+https://github.com/Xtra-Computing/ConsisGAD
+Commit: 36811c5bc79be49c9740f25a1f260496bb4736af
+
+Canonical YelpChi.mat SHA256:
+fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42
+
+Frozen YelpChi TR40 split SHA256:
+830d884f365eacbb0669f4808ccdb53acc0afdc5b655f6a74c66dc8ec928ef0a
+
+Adapter policy:
+- preserve net_rsr, net_rtr and net_rur;
+- retain canonical YelpChi features without Amazon normalization;
+- use COMP8851 frozen split IDs, not DGL masks;
+- select checkpoints with validation AUROC and threshold with validation Macro-F1;
+- evaluate the test partition once after training only;
+- report AUROC, AUPRC, Macro-F1, Fraud-F1 and G-Mean;
+- preserve the model architectures.

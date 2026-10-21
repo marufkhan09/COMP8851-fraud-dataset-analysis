@@ -1,0 +1,299 @@
+{
+  "dataset": "Amazon",
+  "dataset_path": "/workspace/comp8851_two_models/datasets/canonical/amazon/Amazon.mat",
+  "dataset_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_seed": 2,
+  "training_ratios": [
+    40,
+    30,
+    20,
+    10
+  ],
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "models": {
+    "LEX-GNN": {
+      "source_commit": "0642925539c414809c401066b2b06c8e24188dee",
+      "maximum_epochs": 300,
+      "early_stopping_patience": 100,
+      "learning_rate": 0.005,
+      "beta": 0.5
+    },
+    "ConsisGAD": {
+      "source_commit": "36811c5bc79be49c9740f25a1f260496bb4736af",
+      "epochs": 100,
+      "learning_rate": 0.005,
+      "consistency_weight": 1.5
+    }
+  },
+  "test_policy": "Evaluate the test set once after validation-based checkpoint selection.",
+  "configurations": [
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 40,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr40_seed2.json",
+      "config_sha256": "af44880552ec2ddff3589c82d9e6dcc2f12350827a264536c00a54d285c1120e",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 40,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr40_seed2.json",
+      "config_sha256": "980e67df8862cd389d4916ae3f8770ba68565dc920897b69e6208c32de28dd17",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 40,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr40_seed42.json",
+      "config_sha256": "57fd23367cece832037c925ab958429563d5c5f32530fa03c4991ceb4b3f5b4b",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 40,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr40_seed42.json",
+      "config_sha256": "21eb02d40ecf30508e9ab2e2b5b454e822254461d6762296bc79f2a383a63f74",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 40,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr40_seed72.json",
+      "config_sha256": "dfc09e7f9fdbf12f0dbfa96c31b99409ea49dc7c74e2c047dc4dc97addb41bd5",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 40,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR40_seed2.npz",
+      "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr40_seed72.json",
+      "config_sha256": "3cd68ca2e466c2b898be54a1c131b49c863510c8ca5a35e8cc18b976ef963bfc",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 30,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr30_seed2.json",
+      "config_sha256": "90dcf5c6710b1c2a31e77bf752f46cc755b08ac4772697776f61214a2a1a7995",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 30,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr30_seed2.json",
+      "config_sha256": "6feab3fb5a7a33563227cff49adaf7ce051eecd866afd999d1c761507d6683e7",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 30,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr30_seed42.json",
+      "config_sha256": "71c1fca65563b412893ab523ff5b9c30cf3a68cd14f9e0ee6de33e81771d4ef8",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 30,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr30_seed42.json",
+      "config_sha256": "ceb34f93b95e0c50cff902459404b8a182a804e08d72b9c6b4f9078520291506",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 30,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr30_seed72.json",
+      "config_sha256": "c72b214d4cb9cabb49897c78237a72dcc2a4bc5c87ee2a3509767a50c73aa91f",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 30,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR30_seed2.npz",
+      "split_sha256": "8ee42bfb056013bf5e127a930eda3aa31b2a9eea5f0c2565ae6e9441128c9590",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr30_seed72.json",
+      "config_sha256": "0e88dd822a5d1445984c0587db21797a1f744d6238d6c2c10e266c4f5d7981e3",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr20_seed2.json",
+      "config_sha256": "f949cdcfa1e6f93e6346639a3527e45da6f0b4d046132bfb84019d2beb48e5e8",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 20,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr20_seed2.json",
+      "config_sha256": "a95c17f144ad7572f7ccd0da495fc5dbd8501e4c2d50f22849aed726f71f5735",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 20,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr20_seed42.json",
+      "config_sha256": "4e8eece197b94b180bcf10e3a9702d3e58b88b649a6467fe6e0faffa404861cf",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 20,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr20_seed42.json",
+      "config_sha256": "1e47d1b405adc49ae9cb5349caba0102ca0fce0112b3e1a30fb7b53e14d7f841",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 20,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr20_seed72.json",
+      "config_sha256": "eca9a9ceed575d9d1ec404eb348d9c6ced24072f33b0fc803b199913572799e5",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 20,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR20_seed2.npz",
+      "split_sha256": "0ad523aedad3aec753c93dcb5cbd91fa7ba268bdea63429812540339b18513f8",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr20_seed72.json",
+      "config_sha256": "1c5fc6dd0092189f69498b332f976afc03f5e046858772a78898b1d9508811d7",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 10,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr10_seed2.json",
+      "config_sha256": "f9f30ec0945f702434ee462153efcef5c8c35147c9024883922ec4d5b48f8dcb",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 10,
+      "training_seed": 2,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr10_seed2.json",
+      "config_sha256": "f731ebf967365aed7669abca215718611ce1d5040c03390d98eef16d99207821",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 10,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr10_seed42.json",
+      "config_sha256": "75cf953174b6c6d9eb72fd9c56c553f8b264554909e1c16b48435466037494d6",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 10,
+      "training_seed": 42,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr10_seed42.json",
+      "config_sha256": "ba68c739c9b82d04530cadd72dc75c28e0cd84a614c622a423b9e4852dd90459",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "LEX-GNN",
+      "training_ratio": 10,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/lexgnn/final_amazon/lexgnn_amazon_tr10_seed72.json",
+      "config_sha256": "9a5eb21407222af3f9b7d81ebf9c72f309963dc760c506361e31761d4cef8293",
+      "test_evaluated_after_training": true
+    },
+    {
+      "model": "ConsisGAD",
+      "training_ratio": 10,
+      "training_seed": 72,
+      "split_seed": 2,
+      "split_path": "/workspace/comp8851_two_models/shared/splits/amazon/amazon_TR10_seed2.npz",
+      "split_sha256": "2c201c6693e68a7ea6d5354994f24ef79bb86754bb14714937297dfe5a8e7d02",
+      "config_path": "/workspace/comp8851_two_models/configs/consisgad/final_amazon/consisgad_amazon_tr10_seed72.json",
+      "config_sha256": "e7cd8de9fcb05e0ad2b3f77f1ebf6639ffd2a9745741d8ca0cb9d7edbd5cfcc6",
+      "test_evaluated_after_training": true
+    }
+  ]
+}

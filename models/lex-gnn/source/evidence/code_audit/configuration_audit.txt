@@ -1,0 +1,174 @@
+=== SEC-GFD CONFIGURATION-LIKE FILES ===
+
+=== CONSISGAD CONFIGURATION FILES ===
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/amazon.yml
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tfinance.yml
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tsocial.yml
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/yelp.yml
+
+=== CONSISGAD CONFIGURATION CONTENTS ===
+
+----- /workspace/comp8851_two_models/upstreams/ConsisGAD/config/amazon.yml -----
+data-set: 'amazon'
+to-homo: False
+shuffle-train: True
+model: 'backbone'
+hidden-dim: 64
+num-layers: 1
+epochs: 100
+lr: 0.001
+weight-decay: 0.00001
+device: 1
+training-ratio: 1
+train-procedure: 'CT'
+mlp-drop: 0.3
+input-drop: 0.0
+hidden-drop: 0.0
+mlp12-dim: 128
+mlp3-dim: 128
+bn-type: 2
+optim: 'adam'
+store-model: True
+trainable-consis-weight: 1.5
+trainable-temp: 0.0001
+trainable-eps: 0.000000000001
+trainable-drop-rate: 0.2
+trainable-warm-up: -1
+trainable-model: 'proj'
+trainable-optim: 'adam'
+trainable-lr: 0.01
+trainable-weight-decay: 0.0
+topk-mode: 4
+diversity-type: 'euc'
+unlabel-ratio: 6
+normal-th: 5
+fraud-th: 85
+trainable-detach-y: True
+trainable-div-eps: True
+trainable-detach-mask: False
+batch-size: 32
+train-iterations: 128
+
+----- /workspace/comp8851_two_models/upstreams/ConsisGAD/config/tfinance.yml -----
+data-set: 'tfinance'
+to-homo: False
+shuffle-train: True
+model: 'backbone'
+hidden-dim: 64
+num-layers: 1
+epochs: 100
+lr: 0.001
+weight-decay: 0.00001
+device: 3
+training-ratio: 1
+train-procedure: 'CT'
+mlp-drop: 0.5
+input-drop: 0.0
+hidden-drop: 0.0
+mlp12-dim: 64
+mlp3-dim: 128
+bn-type: 2
+optim: 'adam'
+store-model: True
+trainable-consis-weight: 1.0
+trainable-temp: 0.0001
+trainable-eps: 0.000000000001
+trainable-drop-rate: 0.2
+trainable-warm-up: -1
+trainable-model: 'proj'
+trainable-optim: 'adam'
+trainable-lr: 0.005
+trainable-weight-decay: 0.0
+topk-mode: 4
+diversity-type: 'euc'
+unlabel-ratio: 4
+normal-th: 5
+fraud-th: 88
+trainable-detach-y: True
+trainable-div-eps: True
+trainable-detach-mask: False
+batch-size: 128
+train-iterations: 128
+
+
+----- /workspace/comp8851_two_models/upstreams/ConsisGAD/config/tsocial.yml -----
+data-set: 'tsocial'
+to-homo: False
+shuffle-train: True
+model: 'backbone'
+hidden-dim: 64
+num-layers: 1
+epochs: 100
+lr: 0.001
+weight-decay: 0.00001
+device: 4
+training-ratio: 0.01
+train-procedure: 'CT'
+mlp-drop: 0.4
+input-drop: 0.0
+hidden-drop: 0.0
+mlp12-dim: 128
+mlp3-dim: 128
+bn-type: 2
+optim: 'adam'
+store-model: True
+trainable-consis-weight: 1.5
+trainable-temp: 0.0001
+trainable-eps: 0.000000000001
+trainable-drop-rate: 0.2
+trainable-warm-up: -1
+trainable-model: 'proj'
+trainable-optim: 'adam'
+trainable-lr: 0.005
+trainable-weight-decay: 0.0
+topk-mode: 4
+diversity-type: 'euc'
+unlabel-ratio: 5
+normal-th: 5
+fraud-th: 88
+trainable-detach-y: True
+trainable-div-eps: True
+trainable-detach-mask: False
+batch-size: 128
+train-iterations: 128
+
+----- /workspace/comp8851_two_models/upstreams/ConsisGAD/config/yelp.yml -----
+data-set: 'yelp'
+to-homo: False
+shuffle-train: True
+model: 'backbone'
+hidden-dim: 64
+num-layers: 1
+epochs: 100
+lr: 0.001
+weight-decay: 0.00001
+device: 2
+training-ratio: 1
+train-procedure: 'CT'
+mlp-drop: 0.4
+input-drop: 0.0
+hidden-drop: 0.0
+mlp12-dim: 128
+mlp3-dim: 128
+bn-type: 2
+optim: 'adam'
+store-model: True
+trainable-consis-weight: 1.5
+trainable-temp: 0.0001
+trainable-eps: 0.000000000001
+trainable-drop-rate: 0.2
+trainable-warm-up: -1
+trainable-model: 'mlp'
+trainable-optim: 'adam'
+trainable-lr: 0.005
+trainable-weight-decay: 0.00001
+topk-mode: 4
+diversity-type: 'cos'
+unlabel-ratio: 4
+normal-th: 7
+fraud-th: 88
+trainable-detach-y: True
+trainable-div-eps: True
+trainable-detach-mask: False
+batch-size: 128
+train-iterations: 128

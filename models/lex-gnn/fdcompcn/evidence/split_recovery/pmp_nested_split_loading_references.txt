@@ -1,0 +1,227 @@
+38-import torch
+39-import yaml
+40-import dgl
+41-
+42-from sklearn.metrics import average_precision_score, roc_auc_score
+43-
+44-
+45-WORK = Path("/workspace/pmp_vast")
+46-REPO = WORK / "repo/PMP"
+47-raw_root = WORK / "shared/fdcompcn"
+48-
+49-GRAPH_PATH = WORK / "shared/fdcompcn/comp.dgl"
+50:SPLIT_PATH = WORK / "shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+51-
+52-OUT_DIR = WORK / "unified/fdcompcn/smoke"
+53-OUT_DIR.mkdir(parents=True, exist_ok=True)
+54-
+55-RESULT_JSON = OUT_DIR / "PMP_FDCOMPCN_1EPOCH_SMOKE.json"
+56-
+57-EXPECTED_COMMIT = "3f7629f6c180891a0bc1bba3c66d94d288a1ddae"
+58-
+59-EXPECTED_DATA_SHA = (
+60-    "e252b9a6b619b28a7bf6d9f5b16aacc"
+61-    "232d43207d87ac26cd5160fb0d8a98baa"
+62-)
+63-
+64-EXPECTED_SPLIT_SHA = (
+65-    "5cd7084342f4af48e9b82828dcac0e97"
+66-    "879314cd5c9c010642b30c89e7c95168"
+67-)
+68-
+69-SEMANTIC_RELATIONS = [
+70-    "invest_bc2bc",
+71-    "provide_bc2bc",
+72-    "sale_bc2bc",
+73-]
+74-
+75-TRAIN_SEED = 2
+76-
+77-
+78-def sha256_file(path):
+79-    h = hashlib.sha256()
+80-    with open(path, "rb") as f:
+81-        for chunk in iter(lambda: f.read(8 * 1024 * 1024), b""):
+82-            h.update(chunk)
+83-    return h.hexdigest()
+84-
+85-
+--
+98-
+99-
+100-print("===== PMP × FDCOMPCN — EXACT 1-EPOCH SMOKE =====", flush=True)
+101-
+102-# ============================================================
+103-# 1. HARD IDENTITY GATES
+104-# ============================================================
+105-
+106-assert git("rev-parse", "HEAD") == EXPECTED_COMMIT
+107-assert git("status", "--porcelain", "--untracked-files=no") == ""
+108-
+109-assert sha256_file(GRAPH_PATH) == EXPECTED_DATA_SHA
+110:assert sha256_file(SPLIT_PATH) == EXPECTED_SPLIT_SHA
+111-
+112-assert torch.cuda.is_available()
+113-assert torch.cuda.device_count() == 1
+114-assert "A6000" in torch.cuda.get_device_name(0).upper()
+115-
+116-torch.cuda.set_device(0)
+117-torch.set_num_threads(8)
+118-
+119-print("IDENTITY_GATE=PASS", flush=True)
+120-print("GPU =", torch.cuda.get_device_name(0), flush=True)
+121-
+122-
+123-# ============================================================
+124-# 2. LOAD SOURCE GRAPH
+125-# ============================================================
+126-
+127-source_graphs, _ = dgl.load_graphs(str(GRAPH_PATH))
+128-source = source_graphs[0]
+129-
+130-assert source.num_nodes("company") == 5317
+131-
+132-available_relations = set(source.etypes)
+133-
+134-for rel in SEMANTIC_RELATIONS:
+135-    assert rel in available_relations
+136-
+137-assert "homo" in available_relations
+138-
+139-features = source.nodes["company"].data["feature"].float().clone()
+140-labels = source.nodes["company"].data["label"].view(-1).long().clone()
+141-
+142-assert features.shape == (5317, 57)
+143-assert labels.shape == (5317,)
+144-assert int((labels == 1).sum()) == 559
+145-assert int((labels == 0).sum()) == 4758
+--
+189-    "Semantic stored edges:",
+190-    graph.num_edges(),
+191-    flush=True,
+192-)
+193-
+194-print("PMP_FDCOMPCN_RELATION_ADAPTER=PASS", flush=True)
+195-
+196-
+197-# ============================================================
+198-# 4. EXACT FROZEN SPLIT
+199-# ============================================================
+200-
+201:splits = np.load(
+202:    SPLIT_PATH,
+203-    allow_pickle=False,
+204-)
+205-
+206-train_ids = torch.as_tensor(
+207-    splits["TR40"],
+208-    dtype=torch.long,
+209-)
+210-
+211-val_ids = torch.as_tensor(
+212-    splits["val"],
+213-    dtype=torch.long,
+214-)
+215-
+216-test_ids = torch.as_tensor(
+217-    splits["test"],
+218-    dtype=torch.long,
+219-)
+220-
+221-assert len(train_ids) == 2126
+222-assert len(val_ids) == 1064
+223-assert len(test_ids) == 2127
+224-
+225-assert int(labels[train_ids].sum()) == 223
+226-assert int(labels[val_ids].sum()) == 112
+227-assert int(labels[test_ids].sum()) == 224
+228-
+229-train_mask = torch.zeros(5317, dtype=torch.bool)
+230-val_mask = torch.zeros(5317, dtype=torch.bool)
+231-test_mask = torch.zeros(5317, dtype=torch.bool)
+232-
+233-train_mask[train_ids] = True
+234-val_mask[val_ids] = True
+235-test_mask[test_ids] = True
+236-
+237-graph.nodes["company"].data["train_mask"] = train_mask
+--
+435-
+436-ROOT = WORK / "unified/fdcompcn"
+437-SMOKE_DIR = ROOT / "smoke"
+438-TUNING_DIR = ROOT / "tuning"
+439-TRIALS_DIR = TUNING_DIR / "trials"
+440-FINAL_DIR = ROOT / "final"
+441-RUNS_DIR = FINAL_DIR / "runs"
+442-CKPT_DIR = FINAL_DIR / "checkpoints"
+443-
+444-for p in [ROOT, SMOKE_DIR, TUNING_DIR, TRIALS_DIR, FINAL_DIR, RUNS_DIR, CKPT_DIR, WORK / "logs"]:
+445-    p.mkdir(parents=True, exist_ok=True)
+446-
+447:SPLIT = WORK / "shared/fdcompcn/fdcompcn_seed2_nested_splits.npz"
+448-
+449-EXPECTED_COMMIT = "3f7629f6c180891a0bc1bba3c66d94d288a1ddae"
+450-EXPECTED_DATA_SHA = "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+451-EXPECTED_SPLIT_SHA = "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168"
+452-
+453-RATIOS = ["TR40", "TR30", "TR20", "TR10"]
+454-FINAL_SEEDS = [2, 42, 72]
+455-MAX_EPOCHS = 100
+456-PATIENCE = 20
+457-THRESHOLDS = [i / 100.0 for i in range(1, 100)]
+458-
+459-TRIALS = []
+460-tid = 0
+461-for lr in [0.01, 0.001, 0.0001]:
+462-    for wd in [0.0, 1e-5, 1e-4, 1e-3]:
+463-        tid += 1
+464-        TRIALS.append({"trial_id":tid, "lr":lr, "weight_decay":wd})
+465-
+466-assert len(TRIALS) == 12
+467-
+468-# The smoke setup calls this object config.
+469-# Keep exactly that successful configuration as the FDCompCN base.
+470-base = copy.deepcopy(config)
+471-base["hid_dim"] = 64
+472-base["dropout"] = 0.0
+473-base["n_layer"] = 1
+474-base["relation_agg"] = "cat"
+475-base["full_neighbors"] = True
+476-
+477-# Unified split file uses the same project schema as the other models.
+478:s = np.load(SPLIT, allow_pickle=False)
+479-N = int(helper.labels.shape[0])
+480-
+481-assert N == 5317
+482-assert sha256_file(SPLIT) == EXPECTED_SPLIT_SHA
+483-assert git("rev-parse", "HEAD") == EXPECTED_COMMIT
+484-assert git("status", "--porcelain", "--untracked-files=no") == ""
+485-
+486-GPU = torch.cuda.get_device_name(0)
+487-assert "A6000" in GPU
+488-
+489-# Reuse already completed compatibility smoke. Do not train it again.
+490-smoke_json = SMOKE_DIR / "PMP_FDCOMPCN_1EPOCH_SMOKE.json"
+491-assert smoke_json.exists(), smoke_json
+492-
+493-smoke_result = json.loads(smoke_json.read_text())
+494-assert smoke_result["status"] == "PASS"
+495-assert smoke_result["epochs"] == 1
+496-assert smoke_result["dataset"] == "FDCompCN"
+497-assert smoke_result["compatibility"] == "INPUT ADAPTER"
+498-assert smoke_result["homo_relation_used"] is False
+499-assert smoke_result["test_evaluated"] is False
+500-
+501-print("\n===== PMP x FDCOMPCN CONTROLLED PIPELINE =====", flush=True)
+502-print("GPU =", GPU, flush=True)
+503-print("PMP_FDCOMPCN_1EPOCH_SMOKE=PASS (existing evidence reused)", flush=True)
+504-print("SEMANTIC_RELATIONS=invest_bc2bc,provide_bc2bc,sale_bc2bc", flush=True)
+505-print("HOMO_AS_FOURTH_RELATION=NO", flush=True)
+506-print("HID_DIM=64", flush=True)
+507-print("MAX_EPOCHS=100", flush=True)
+508-print("PATIENCE=20", flush=True)
+509-print("TUNING_TRIALS=12", flush=True)
+510-print("FINAL_RUNS=12", flush=True)
+511-print("AUTHOR_TRACKED_SOURCE_CLEAN=PASS", flush=True)
+512-
+513-

@@ -1,0 +1,108 @@
+============================================================
+SEC-GFD RELEVANT CODE
+============================================================
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:1:from dgl.data import FraudYelpDataset, FraudAmazonDataset, RedditDataset
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:11:    def __init__(self, name='tfinance', homo=True, del_ratio=0.005):
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:14:        if name == 'tfinance':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:15:            graph, label_dict = load_graphs('/data/tfinance')
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:18:            if del_ratio != 0:
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:19:                graph = random_delete(graph, del_ratio)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:20:                graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:23:        elif name == 'tsocial':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:24:            graph, label_dict = load_graphs('/data/tsocial')
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:26:            if del_ratio != 0:
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:27:                graph = random_delete(graph, del_ratio)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:28:                graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:31:        elif name == 'yelp':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:32:            dataset = FraudYelpDataset()
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:36:                # graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:37:            if del_ratio != 0:
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:38:                graph = random_delete(graph, del_ratio)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:40:                graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:42:        elif name == 'amazon':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:43:            dataset = FraudAmazonDataset()
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:47:                # graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:48:            if del_ratio != 0:
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:49:                graph = random_delete(graph, del_ratio)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:51:                graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:53:        elif name == 'reddit':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:54:            dataset = load_graphs('/data/reddit')
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:56:            if del_ratio != 0:
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:57:                graph = random_delete(graph, del_ratio)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:58:            graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:71:def random_delete(graph, del_ratio):
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:77:    threshold = int(del_ratio * he_edge_num)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/dataset.py:86:    false_indices = torch.where(train_mask == False)[0].to(graph.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:9:from sklearn.model_selection import train_test_split
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:15:device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:19:    torch.cuda.manual_seed_all(seed)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:30:    if dataname == 'amanzon':
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:33:    idx_train, idx_rest, y_train, y_rest = train_test_split(index, labels[index], stratify=labels[index],
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:36:    idx_valid, idx_test, y_valid, y_test = train_test_split(idx_rest, y_rest, stratify=y_rest,
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:48:    graph = graph.to(device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:54:        graph = dgl.add_self_loop(graph)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:57:        model = SECGFD(in_feats, h_feats, num_class, graph, d=args.order, high_order=2).to(device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:71:        loss1 = F.cross_entropy(logits[train_mask], labels[train_mask], weight=torch.tensor([1., weight]).to(device))
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:126:    parser.add_argument('--dataset', type=str, default='tfinance', help='dataset for our model (yelp/amazon/tfinance/tsocial/reddit)')
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:136:    parser.add_argument("--del_ratio", type=float, default=0.000, help="delete heterophily edges ratios")
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:148:    del_ratio = args.del_ratio
+/workspace/comp8851_two_models/upstreams/SEC-GFD/main.py:150:    graph = Dataset(dataname, homo, del_ratio).graph
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/High_GNN.py:10:    adj = torch.zeros(n_nodes, n_nodes).to(g.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/High_GNN.py:42:        adj += torch.eye(n_nodes).to(g.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/SECGFD.py:55:        self.graph_new = dgl.remove_self_loop(self.g)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/SECGFD.py:56:        self.GCN = GCN(in_dim, hid_dim, in_dim, self.graph_new).to(self.g.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/SECGFD.py:65:        h_final = torch.zeros([len(in_feat), 0]).to(in_feat.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/model/SECGFD.py:155:                min=1), -0.5).unsqueeze(-1).to(feat.device)
+/workspace/comp8851_two_models/upstreams/SEC-GFD/utils.py:7:    adj = torch.zeros(n_nodes, n_nodes).to(g.device)
+
+============================================================
+CONSISGAD RELEVANT CODE
+============================================================
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/amazon.yml:1:data-set: 'amazon'
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/amazon.yml:10:device: 1
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tfinance.yml:1:data-set: 'tfinance'
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tfinance.yml:10:device: 3
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tsocial.yml:1:data-set: 'tsocial'
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/tsocial.yml:10:device: 4
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/yelp.yml:1:data-set: 'yelp'
+/workspace/comp8851_two_models/upstreams/ConsisGAD/config/yelp.yml:10:device: 2
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:88:    tmp_model.to(args['device'])
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:117:                _, _, u_blocks = fixed_augmentation(graph, unlabel_idx.to(args['device']), sampler, aug_type='none')
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:139:            _, _, u_blocks = fixed_augmentation(graph, unlabel_idx.to(args['device']), sampler, aug_type='drophidden')
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:187:        _, _, s_blocks = fixed_augmentation(graph, label_idx.to(args['device']), sampler, aug_type='none')
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:207:            _, _, blocks = sampler.sample_blocks(graph, node_idx.to(args['device']))
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:252:    graph = graph.to(args['device'])
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:267:    attn_drop = SoftAttentionDrop(args).to(args['device'])
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:306:    if torch.cuda.is_available():
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:307:        args['device'] = torch.device('cuda:%d'%(args['device']))
+/workspace/comp8851_two_models/upstreams/ConsisGAD/main.py:309:        args['device'] = torch.device('cpu')
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:8:from sklearn.model_selection import train_test_split
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:17:    if name == 'yelp':
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:18:        yelp_data = dgl.data.FraudYelpDataset(raw_dir=raw_dir, random_seed=7537, verbose=False)
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:19:        graph = yelp_data[0]
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:21:            graph = dgl.to_homogeneous(graph, ndata=['feature', 'label', 'train_mask', 'val_mask', 'test_mask'])
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:24:    elif name == 'amazon':
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:25:        amazon_data = dgl.data.FraudAmazonDataset(raw_dir=raw_dir, random_seed=7537, verbose=False)
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:26:        graph = amazon_data[0]
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:28:            graph = dgl.to_homogeneous(graph, ndata=['feature', 'label', 'train_mask', 'val_mask', 'test_mask'])
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:31:    elif name == 'tsocial':
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:32:        t_social, _ = load_graphs(os.path.join(raw_dir, 'tsocial'))
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:36:    elif name == 'tfinance':
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:37:        t_finance, _ = load_graphs(os.path.join(raw_dir, 'tfinance'))
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:50:    assert name in ['yelp', 'amazon', 'tfinance', 'tsocial'], 'Invalid dataset name'
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:52:    graph = get_dataset(name, 'data/', to_homo=to_homo, random_state=7537)
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:56:    if name == 'amazon':
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:59:    train_nids, valid_test_nids = train_test_split(index, stratify=labels[index],
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:61:    valid_nids, test_nids = train_test_split(valid_test_nids, stratify=labels[valid_test_nids],
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:64:    train_mask = torch.zeros_like(labels).bool()
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:65:    val_mask = torch.zeros_like(labels).bool()
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:66:    test_mask = torch.zeros_like(labels).bool()
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:68:    train_mask[train_nids] = 1
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:69:    val_mask[valid_nids] = 1
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:70:    test_mask[test_nids] = 1
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:72:    graph.ndata['train_mask'] = train_mask
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:73:    graph.ndata['val_mask'] = val_mask
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:74:    graph.ndata['test_mask'] = test_mask
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/data_loader.py:79:    power = 10 if name == 'tfinance' else 16
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/loss.py:10:    weight_tensor = torch.tensor([1., pos_w]).to(pred.device)
+/workspace/comp8851_two_models/upstreams/ConsisGAD/modules/loss.py:18:    weight_tensor = torch.tensor([1., pos_w]).to(pred.device)

@@ -1,0 +1,61 @@
+if isinstance(raw_labels, dict):
+    assert len(raw_labels)==1
+    raw_labels=next(iter(raw_labels.values()))
+labels_cpu=raw_labels.argmax(1).long() if raw_labels.ndim==2 else raw_labels.reshape(-1).long()
+
+normal=int((labels_cpu==0).sum().item())
+fraud=int((labels_cpu==1).sum().item())
+assert (normal,fraud)==(4758,559),(normal,fraud)
+
+# ------------------------------------------------------------------
+# 3. Recreate frozen COMP8851 nested split and VERIFY exact hash
+# ------------------------------------------------------------------
+labels_np=labels_cpu.cpu().numpy().astype(int)
+all_ids=np.arange(len(labels_np),dtype=np.int64)
+
+remaining,test_ids=train_test_split(
+    all_ids,test_size=0.40,stratify=labels_np,
+    random_state=2,shuffle=True
+)
+tr40,val_ids=train_test_split(
+    remaining,test_size=(1/3),stratify=labels_np[remaining],
+    random_state=2,shuffle=True
+)
+tr30,_=train_test_split(
+    tr40,train_size=0.75,stratify=labels_np[tr40],
+    random_state=2,shuffle=True
+)
+tr20,_=train_test_split(
+    tr30,train_size=(2/3),stratify=labels_np[tr30],
+    random_state=2,shuffle=True
+)
+tr10,_=train_test_split(
+    tr20,train_size=0.50,stratify=labels_np[tr20],
+    random_state=2,shuffle=True
+)
+splits={
+    'TR40':np.sort(tr40),
+    'TR30':np.sort(tr30),
+    'TR20':np.sort(tr20),
+    'TR10':np.sort(tr10),
+    'val':np.sort(val_ids),
+    'test':np.sort(test_ids),
+}
+expected_sizes={'TR40':2126,'TR30':1594,'TR20':1062,'TR10':531,'val':1064,'test':2127}
+for k,n in expected_sizes.items():
+    assert len(splits[k])==n,(k,len(splits[k]),n)
+assert set(splits['TR10']) <= set(splits['TR20']) <= set(splits['TR30']) <= set(splits['TR40'])
+assert not (set(splits['TR40']) & set(splits['val']))
+assert not (set(splits['TR40']) & set(splits['test']))
+assert not (set(splits['val']) & set(splits['test']))
+
+# Match the original registered artifact byte-for-byte.
+np.savez_compressed(SPLIT_PATH, **splits, seed=np.array([2]))
+split_sha=sha256_file(SPLIT_PATH)
+print('Recreated split SHA256 :',split_sha,flush=True)
+print('Registered split SHA256:',EXPECTED_SPLIT_SHA,flush=True)
+assert split_sha==EXPECTED_SPLIT_SHA, (
+    'FDCompCN frozen split hash mismatch. Training STOPPED before smoke/final runs.',
+    split_sha, EXPECTED_SPLIT_SHA
+)
+print('FDCOMPCN_SPLIT_GATE=PASS',flush=True)

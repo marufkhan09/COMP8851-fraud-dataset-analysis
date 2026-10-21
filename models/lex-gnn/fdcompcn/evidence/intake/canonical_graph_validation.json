@@ -1,0 +1,182 @@
+{
+  "all_graphs": [
+    {
+      "canonical_etypes": [
+        [
+          "company",
+          "homo",
+          "company"
+        ],
+        [
+          "company",
+          "invest_bc2bc",
+          "company"
+        ],
+        [
+          "company",
+          "provide_bc2bc",
+          "company"
+        ],
+        [
+          "company",
+          "sale_bc2bc",
+          "company"
+        ]
+      ],
+      "feature_candidate": {
+        "key": "feature",
+        "location": "graph_node_data",
+        "node_type": "company"
+      },
+      "graph_index": 0,
+      "label_candidate": {
+        "key": "label",
+        "location": "graph_node_data",
+        "node_type": "company"
+      },
+      "label_counts": {
+        "0": 4758,
+        "1": 559
+      },
+      "node_data": {
+        "company": {
+          "feature": {
+            "contiguous": true,
+            "dtype": "torch.float32",
+            "finite": true,
+            "shape": [
+              5317,
+              57
+            ]
+          },
+          "label": {
+            "contiguous": true,
+            "dtype": "torch.int64",
+            "finite": true,
+            "shape": [
+              5317
+            ]
+          },
+          "test_mask": {
+            "contiguous": true,
+            "dtype": "torch.uint8",
+            "finite": true,
+            "shape": [
+              5317
+            ]
+          },
+          "train_mask": {
+            "contiguous": true,
+            "dtype": "torch.uint8",
+            "finite": true,
+            "shape": [
+              5317
+            ]
+          },
+          "valid_mask": {
+            "contiguous": true,
+            "dtype": "torch.uint8",
+            "finite": true,
+            "shape": [
+              5317
+            ]
+          }
+        }
+      },
+      "node_types": [
+        "company"
+      ],
+      "nodes": 5317,
+      "relations": [
+        {
+          "canonical_etype": [
+            "company",
+            "homo",
+            "company"
+          ],
+          "edges": 10059
+        },
+        {
+          "canonical_etype": [
+            "company",
+            "invest_bc2bc",
+            "company"
+          ],
+          "edges": 8505
+        },
+        {
+          "canonical_etype": [
+            "company",
+            "provide_bc2bc",
+            "company"
+          ],
+          "edges": 5944
+        },
+        {
+          "canonical_etype": [
+            "company",
+            "sale_bc2bc",
+            "company"
+          ],
+          "edges": 6244
+        }
+      ]
+    }
+  ],
+  "canonical_path": "/workspace/comp8851_two_models/datasets/canonical/fdcompcn/comp.dgl",
+  "canonical_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "dataset": "FDCompCN",
+  "feature_location": {
+    "key": "feature",
+    "location": "graph_node_data",
+    "node_type": "company"
+  },
+  "features": 57,
+  "fraud_labels": 559,
+  "graphs_stored": 1,
+  "label_location": {
+    "key": "label",
+    "location": "graph_node_data",
+    "node_type": "company"
+  },
+  "nodes": 5317,
+  "normal_labels": 4758,
+  "relations": [
+    {
+      "canonical_etype": [
+        "company",
+        "homo",
+        "company"
+      ],
+      "edges": 10059
+    },
+    {
+      "canonical_etype": [
+        "company",
+        "invest_bc2bc",
+        "company"
+      ],
+      "edges": 8505
+    },
+    {
+      "canonical_etype": [
+        "company",
+        "provide_bc2bc",
+        "company"
+      ],
+      "edges": 5944
+    },
+    {
+      "canonical_etype": [
+        "company",
+        "sale_bc2bc",
+        "company"
+      ],
+      "edges": 6244
+    }
+  ],
+  "selected_graph_index": 0,
+  "source_commit": "32fbdb836781d5c02523844a7079425f89be8831",
+  "source_repository": "https://github.com/Split-GNN/SplitGNN.git",
+  "status": "PASS"
+}
