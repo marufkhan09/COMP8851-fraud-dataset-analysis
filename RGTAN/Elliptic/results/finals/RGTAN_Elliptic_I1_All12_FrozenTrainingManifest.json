@@ -1,0 +1,105 @@
+{
+  "all_no_test_scoring": true,
+  "dataset": "Elliptic",
+  "model": "RGTAN",
+  "model_count": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "rows": [
+    {
+      "checkpoint_sha256": "829116699ff1c230839df31d8ff3ad2d3d5b1856fbcad433dfc5f94cf0927e2f",
+      "ratio": "TR40",
+      "seed": 2,
+      "val_auprc": 0.7600637106972105,
+      "val_macro_f1": 0.8435510168187521
+    },
+    {
+      "checkpoint_sha256": "ad41a2f9301cdc5df6ab6b9bf2a02eb90774ab83b704b360852c537a4cef104f",
+      "ratio": "TR40",
+      "seed": 42,
+      "val_auprc": 0.7249391682959022,
+      "val_macro_f1": 0.8368691525800537
+    },
+    {
+      "checkpoint_sha256": "c7c27d358f041740602b9d6676e30532297035ed7c60c8466a83febfa2da3321",
+      "ratio": "TR40",
+      "seed": 72,
+      "val_auprc": 0.7520250795029828,
+      "val_macro_f1": 0.8367484141382666
+    },
+    {
+      "checkpoint_sha256": "513d884e6306c6ef39f73d89c2594dbb0182d545730056b424cc76bdfe9bc86d",
+      "ratio": "TR30",
+      "seed": 2,
+      "val_auprc": 0.5839444806235337,
+      "val_macro_f1": 0.7680388914476431
+    },
+    {
+      "checkpoint_sha256": "59048817a95cdf88560b92cb4082fd736b45b8d6fb81b5ec814fac99a64b8372",
+      "ratio": "TR30",
+      "seed": 42,
+      "val_auprc": 0.5912670281170755,
+      "val_macro_f1": 0.7691658495916331
+    },
+    {
+      "checkpoint_sha256": "ddc60e73ff5e0c72f9ae9effeee3c9871a39e2025aeeac2d5e54f5307b9792bc",
+      "ratio": "TR30",
+      "seed": 72,
+      "val_auprc": 0.50857735658868,
+      "val_macro_f1": 0.7222554371239882
+    },
+    {
+      "checkpoint_sha256": "f56e5d2207e7d27a1535e58b08750dafba96a014c2d9eb08e419aab03e7a3170",
+      "ratio": "TR20",
+      "seed": 2,
+      "val_auprc": 0.5965008606172192,
+      "val_macro_f1": 0.7585751392812907
+    },
+    {
+      "checkpoint_sha256": "e71a94e2fbf9f49697022382b0ae1b5becebb7bfded067829e308cf3c249a075",
+      "ratio": "TR20",
+      "seed": 42,
+      "val_auprc": 0.5795483696919403,
+      "val_macro_f1": 0.761170373538625
+    },
+    {
+      "checkpoint_sha256": "69c7498923c78d97f344a4675854b3a3e6ff88eab4136271c54febe0840f4029",
+      "ratio": "TR20",
+      "seed": 72,
+      "val_auprc": 0.5871828237843044,
+      "val_macro_f1": 0.7617443425235497
+    },
+    {
+      "checkpoint_sha256": "bc85f4504bc938713aa46668f0867e02441d44abac3029d28ecc932dddaf39a0",
+      "ratio": "TR10",
+      "seed": 2,
+      "val_auprc": 0.3616678461269339,
+      "val_macro_f1": 0.6858203419390223
+    },
+    {
+      "checkpoint_sha256": "2939ce7b3c041b8643bd1577f9731f7430f0bba0e801bf37d996c00757d5099d",
+      "ratio": "TR10",
+      "seed": 42,
+      "val_auprc": 0.3824921336413417,
+      "val_macro_f1": 0.6927531843254757
+    },
+    {
+      "checkpoint_sha256": "487c2154d53bb07af05e2a0b37fb683bdc865cb7ce6394d7843a9ad4e4e0ae69",
+      "ratio": "TR10",
+      "seed": 72,
+      "val_auprc": 0.3233409787616327,
+      "val_macro_f1": 0.6596566865597779
+    }
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "status": "RGTAN_Elliptic_I1_ALL_12_FINAL_TRAININGS_FROZEN",
+  "winner_sha256": "26445850e9e66aa8bb44bedb7b55ce67a3aae485e4e8843119e48ef6a3cc2b0c"
+}

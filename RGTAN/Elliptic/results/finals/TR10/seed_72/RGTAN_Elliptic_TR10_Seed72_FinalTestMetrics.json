@@ -1,0 +1,38 @@
+{
+  "checkpoint_sha256": "487c2154d53bb07af05e2a0b37fb683bdc865cb7ce6394d7843a9ad4e4e0ae69",
+  "crossfit_sha256": "69e93edfdc5c8e268239fd25b17f31bbf206e4b33f49fe6f8df72f80fa767b24",
+  "dataset": "Elliptic",
+  "decision_threshold_frozen_validation_macro_f1": 0.015765853226184845,
+  "frozen_winner_sha256": "26445850e9e66aa8bb44bedb7b55ce67a3aae485e4e8843119e48ef6a3cc2b0c",
+  "gpu_peak_gib": 0.28749,
+  "metrics": {
+    "auprc": 0.17448721484148508,
+    "auroc": 0.7303127858212604,
+    "fraud_f1": 0.23239365464282105,
+    "fraud_precision": 0.1367094626723728,
+    "fraud_recall": 0.7744107744107744,
+    "macro_f1": 0.48054095788817597,
+    "predicted_fraud_count": 8412,
+    "true_fraud_count": 1485
+  },
+  "model": "RGTAN",
+  "ratio": "TR10",
+  "seed": 72,
+  "source_sha256": {
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "RGTAN_Elliptic_FINAL_HELDOUT_SCORED_ONCE",
+  "test_scored_once": true,
+  "test_scores_sha256": "2d5a3725e2de0175dd52c2030b893547274e6039228908ae20aea37f7c087862",
+  "test_scoring_seconds": 0.445,
+  "test_size": 18949,
+  "test_timestep_range": [
+    32,
+    49
+  ],
+  "validation_auprc": 0.3233409787616327,
+  "validation_macro_f1": 0.6596566865597779
+}

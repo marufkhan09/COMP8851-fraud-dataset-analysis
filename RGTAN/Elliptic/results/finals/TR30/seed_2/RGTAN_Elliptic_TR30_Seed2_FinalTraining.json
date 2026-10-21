@@ -1,0 +1,40 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "batch_size": 1024,
+  "best_epoch": 2,
+  "best_val_auprc": 0.5839444806235337,
+  "checkpoint_sha256": "513d884e6306c6ef39f73d89c2594dbb0182d545730056b424cc76bdfe9bc86d",
+  "config": {
+    "base_lr": 0.003,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 64
+  },
+  "crossfit_sha256": "ac2bb85062abc02febe2b289764f566a6b07ff910a87cb1cb2990cb0bbfbb686",
+  "dataset": "Elliptic",
+  "epochs_completed": 22,
+  "frozen_winner_sha256": "26445850e9e66aa8bb44bedb7b55ce67a3aae485e4e8843119e48ef6a3cc2b0c",
+  "gpu_peak_gib": 1.69488,
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "optimizer_steps": 330,
+  "patience": 20,
+  "ratio": "TR30",
+  "seed": 2,
+  "status": "RGTAN_Elliptic_FINAL_TRAINING_FROZEN",
+  "test_label_accessed": false,
+  "test_scored": false,
+  "train_seconds": 24.756,
+  "train_time_cutoff": 12,
+  "training_count": 13670,
+  "training_positive_count": 671,
+  "training_script_sha256": "3c2c469ca2b2994bdadeadb3b2d79be24ce025b922833cf0444fe2918f9d8f2b",
+  "val_macro_f1": 0.7680388914476431,
+  "val_macro_f1_threshold": 0.7806452512741089,
+  "validation_label_count": 8726,
+  "validation_positive_count": 1289,
+  "validation_scores_sha256": "0c95c37f52945bbf1db878df0d948b16e60abc8b4a24bcfce93bf7ffd58af7b1",
+  "validation_time_cutoff": 31
+}

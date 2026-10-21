@@ -1,0 +1,233 @@
+RGTAN_Elliptic_I1_STAGE4: Frozen winner audit, 3 missing crossfits, 12 final trainings, 12 one-time held-out evaluations.
+RGTAN_Elliptic_I1_STAGE4_SOURCE_SPLIT_ENV=PASS
+RGTAN_Elliptic_I1_FROZEN_WINNER=PASS trial=11 val_AUPRC=0.760064 config={'base_lr': 0.003, 'drop': [0.3, 0.15], 'hidden_dim': 64}
+RGTAN_Elliptic_I1_STAGE4_CROSSFIT_START=TR30
+I1_PINNED_SOURCE_SPLIT_AND_PRIOR_PREFLIGHT=PASS
+READING_ORIGINAL_ELLIPTIC_FEATURES
+I1_CHRONOLOGY_AND_TRAIN_LABELS_ONLY=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+TRAIN_VALIDATION_GRAPH_PREFIX_ISOLATION=PASS train 64440 78601 validation 126103 145833
+RGTAN_Elliptic_TR30_TRAIN_ONLY_5_FOLD_MASKING=PASS
+EXACT_SPARSE_TWO_HOP_START RGTAN_Elliptic_TR30_TRAIN_T12 nodes 64440 edges 78601
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS RGTAN_Elliptic_TR30_TRAIN_T12 reachable 86498 seconds 0.63
+EXACT_SPARSE_TWO_HOP_START VALIDATION_T31 nodes 126103 edges 145833
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS VALIDATION_T31 reachable 142047 seconds 1.23
+VAL_VIEW_TRAIN_ONLY_CONTEXT_AND_OOF_SCALING=PASS
+RGTAN_ELLIPTIC_TR30_REAL_CROSSFIT_PASS
+ARTIFACT /workspace/comp8851/assets/rgtan/elliptic/RGTAN_Elliptic_TR30_TemporalCrossfit_v1.npz SHA256 ac2bb85062abc02febe2b289764f566a6b07ff910a87cb1cb2990cb0bbfbb686
+TUNING_STARTED=NO TEST_SCORED=NO
+RGTAN_Elliptic_I1_STAGE4_CROSSFIT_START=TR20
+I1_PINNED_SOURCE_SPLIT_AND_PRIOR_PREFLIGHT=PASS
+READING_ORIGINAL_ELLIPTIC_FEATURES
+I1_CHRONOLOGY_AND_TRAIN_LABELS_ONLY=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+TRAIN_VALIDATION_GRAPH_PREFIX_ISOLATION=PASS train 41917 52019 validation 126103 145833
+RGTAN_Elliptic_TR20_TRAIN_ONLY_5_FOLD_MASKING=PASS
+EXACT_SPARSE_TWO_HOP_START RGTAN_Elliptic_TR20_TRAIN_T7 nodes 41917 edges 52019
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS RGTAN_Elliptic_TR20_TRAIN_T7 reachable 59707 seconds 0.4
+EXACT_SPARSE_TWO_HOP_START VALIDATION_T31 nodes 126103 edges 145833
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS VALIDATION_T31 reachable 142047 seconds 1.25
+VAL_VIEW_TRAIN_ONLY_CONTEXT_AND_OOF_SCALING=PASS
+RGTAN_ELLIPTIC_TR20_REAL_CROSSFIT_PASS
+ARTIFACT /workspace/comp8851/assets/rgtan/elliptic/RGTAN_Elliptic_TR20_TemporalCrossfit_v1.npz SHA256 f1c4e47f78331d1d3f9a463f4071c4d00eddf6a570ca6919090b25bd2c04aab4
+TUNING_STARTED=NO TEST_SCORED=NO
+RGTAN_Elliptic_I1_STAGE4_CROSSFIT_START=TR10
+I1_PINNED_SOURCE_SPLIT_AND_PRIOR_PREFLIGHT=PASS
+READING_ORIGINAL_ELLIPTIC_FEATURES
+I1_CHRONOLOGY_AND_TRAIN_LABELS_ONLY=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+TRAIN_VALIDATION_GRAPH_PREFIX_ISOLATION=PASS train 19045 22721 validation 126103 145833
+RGTAN_Elliptic_TR10_TRAIN_ONLY_5_FOLD_MASKING=PASS
+EXACT_SPARSE_TWO_HOP_START RGTAN_Elliptic_TR10_TRAIN_T3 nodes 19045 edges 22721
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS RGTAN_Elliptic_TR10_TRAIN_T3 reachable 25698 seconds 0.18
+EXACT_SPARSE_TWO_HOP_START VALIDATION_T31 nodes 126103 edges 145833
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS VALIDATION_T31 reachable 142047 seconds 1.24
+VAL_VIEW_TRAIN_ONLY_CONTEXT_AND_OOF_SCALING=PASS
+RGTAN_ELLIPTIC_TR10_REAL_CROSSFIT_PASS
+ARTIFACT /workspace/comp8851/assets/rgtan/elliptic/RGTAN_Elliptic_TR10_TemporalCrossfit_v1.npz SHA256 69e93edfdc5c8e268239fd25b17f31bbf206e4b33f49fe6f8df72f80fa767b24
+TUNING_STARTED=NO TEST_SCORED=NO
+RGTAN_Elliptic_I1_STAGE4: Starting 12 frozen-configuration final trainings; NO TEST ACCESS.
+RGTAN_Elliptic_I1_STAGE4_SOURCE_SPLIT_ENV=PASS
+RGTAN_Elliptic_I1_FROZEN_WINNER=PASS trial=11 val_AUPRC=0.760064 config={'base_lr': 0.003, 'drop': [0.3, 0.15], 'hidden_dim': 64}
+RGTAN_Elliptic_I1_ALL_RATIO_OOF_AND_CONTEXT_ISOLATION=PASS
+RGTAN_Elliptic_I1_READING_CANONICAL_FEATURES
+RGTAN_Elliptic_TR40_Seed2 epoch=1 loss=0.23873 val_AUPRC=0.653139 best=0.653139 stale=0
+RGTAN_Elliptic_TR40_Seed2 epoch=2 loss=0.07202 val_AUPRC=0.683084 best=0.683084 stale=0
+RGTAN_Elliptic_TR40_Seed2 epoch=5 loss=0.04551 val_AUPRC=0.707753 best=0.707753 stale=0
+RGTAN_Elliptic_TR40_Seed2 epoch=10 loss=0.03083 val_AUPRC=0.708456 best=0.737544 stale=4
+RGTAN_Elliptic_TR40_Seed2 epoch=15 loss=0.02321 val_AUPRC=0.731043 best=0.748037 stale=2
+RGTAN_Elliptic_TR40_Seed2 epoch=20 loss=0.01701 val_AUPRC=0.721981 best=0.748037 stale=7
+RGTAN_Elliptic_TR40_Seed2 epoch=25 loss=0.01450 val_AUPRC=0.713720 best=0.760064 stale=3
+RGTAN_Elliptic_TR40_Seed2 epoch=30 loss=0.01476 val_AUPRC=0.723308 best=0.760064 stale=8
+RGTAN_Elliptic_TR40_Seed2 epoch=35 loss=0.01287 val_AUPRC=0.744929 best=0.760064 stale=13
+RGTAN_Elliptic_TR40_Seed2 epoch=40 loss=0.01043 val_AUPRC=0.726020 best=0.760064 stale=18
+RGTAN_Elliptic_TR40_Seed2 epoch=42 loss=0.01260 val_AUPRC=0.707223 best=0.760064 stale=20
+RGTAN_Elliptic_TR40_Seed2_FINAL_VAL_FREEZE=PASS best_AUPRC=0.760064 val_macroF1=0.843551
+RGTAN_Elliptic_TR40_Seed42 epoch=1 loss=0.24861 val_AUPRC=0.586765 best=0.586765 stale=0
+RGTAN_Elliptic_TR40_Seed42 epoch=2 loss=0.08198 val_AUPRC=0.661702 best=0.661702 stale=0
+RGTAN_Elliptic_TR40_Seed42 epoch=5 loss=0.04773 val_AUPRC=0.681161 best=0.700976 stale=1
+RGTAN_Elliptic_TR40_Seed42 epoch=10 loss=0.03003 val_AUPRC=0.710708 best=0.711402 stale=2
+RGTAN_Elliptic_TR40_Seed42 epoch=15 loss=0.02014 val_AUPRC=0.684086 best=0.711402 stale=7
+RGTAN_Elliptic_TR40_Seed42 epoch=20 loss=0.01772 val_AUPRC=0.707058 best=0.711402 stale=12
+RGTAN_Elliptic_TR40_Seed42 epoch=25 loss=0.01261 val_AUPRC=0.694282 best=0.711402 stale=17
+RGTAN_Elliptic_TR40_Seed42 epoch=30 loss=0.01477 val_AUPRC=0.671551 best=0.724939 stale=1
+RGTAN_Elliptic_TR40_Seed42 epoch=35 loss=0.01299 val_AUPRC=0.714734 best=0.724939 stale=6
+RGTAN_Elliptic_TR40_Seed42 epoch=40 loss=0.01194 val_AUPRC=0.701854 best=0.724939 stale=11
+RGTAN_Elliptic_TR40_Seed42 epoch=45 loss=0.00948 val_AUPRC=0.696397 best=0.724939 stale=16
+RGTAN_Elliptic_TR40_Seed42 epoch=49 loss=0.01474 val_AUPRC=0.705261 best=0.724939 stale=20
+RGTAN_Elliptic_TR40_Seed42_FINAL_VAL_FREEZE=PASS best_AUPRC=0.724939 val_macroF1=0.836869
+RGTAN_Elliptic_TR40_Seed72 epoch=1 loss=0.26163 val_AUPRC=0.651562 best=0.651562 stale=0
+RGTAN_Elliptic_TR40_Seed72 epoch=2 loss=0.07954 val_AUPRC=0.651576 best=0.651576 stale=0
+RGTAN_Elliptic_TR40_Seed72 epoch=5 loss=0.04840 val_AUPRC=0.704682 best=0.704682 stale=0
+RGTAN_Elliptic_TR40_Seed72 epoch=10 loss=0.03154 val_AUPRC=0.722730 best=0.722730 stale=0
+RGTAN_Elliptic_TR40_Seed72 epoch=15 loss=0.02893 val_AUPRC=0.732871 best=0.738048 stale=2
+RGTAN_Elliptic_TR40_Seed72 epoch=20 loss=0.01801 val_AUPRC=0.704938 best=0.738048 stale=7
+RGTAN_Elliptic_TR40_Seed72 epoch=25 loss=0.01746 val_AUPRC=0.724059 best=0.751764 stale=1
+RGTAN_Elliptic_TR40_Seed72 epoch=30 loss=0.01131 val_AUPRC=0.710320 best=0.752025 stale=4
+RGTAN_Elliptic_TR40_Seed72 epoch=35 loss=0.01263 val_AUPRC=0.718973 best=0.752025 stale=9
+RGTAN_Elliptic_TR40_Seed72 epoch=40 loss=0.01511 val_AUPRC=0.707244 best=0.752025 stale=14
+RGTAN_Elliptic_TR40_Seed72 epoch=45 loss=0.01015 val_AUPRC=0.704293 best=0.752025 stale=19
+RGTAN_Elliptic_TR40_Seed72 epoch=46 loss=0.01026 val_AUPRC=0.700651 best=0.752025 stale=20
+RGTAN_Elliptic_TR40_Seed72_FINAL_VAL_FREEZE=PASS best_AUPRC=0.752025 val_macroF1=0.836748
+RGTAN_Elliptic_TR30_Seed2 epoch=1 loss=0.23377 val_AUPRC=0.561124 best=0.561124 stale=0
+RGTAN_Elliptic_TR30_Seed2 epoch=2 loss=0.08157 val_AUPRC=0.583944 best=0.583944 stale=0
+RGTAN_Elliptic_TR30_Seed2 epoch=5 loss=0.03457 val_AUPRC=0.466881 best=0.583944 stale=3
+RGTAN_Elliptic_TR30_Seed2 epoch=10 loss=0.02367 val_AUPRC=0.390188 best=0.583944 stale=8
+RGTAN_Elliptic_TR30_Seed2 epoch=15 loss=0.01590 val_AUPRC=0.384684 best=0.583944 stale=13
+RGTAN_Elliptic_TR30_Seed2 epoch=20 loss=0.01212 val_AUPRC=0.313473 best=0.583944 stale=18
+RGTAN_Elliptic_TR30_Seed2 epoch=22 loss=0.01199 val_AUPRC=0.337041 best=0.583944 stale=20
+RGTAN_Elliptic_TR30_Seed2_FINAL_VAL_FREEZE=PASS best_AUPRC=0.583944 val_macroF1=0.768039
+RGTAN_Elliptic_TR30_Seed42 epoch=1 loss=0.23687 val_AUPRC=0.591267 best=0.591267 stale=0
+RGTAN_Elliptic_TR30_Seed42 epoch=2 loss=0.06496 val_AUPRC=0.504289 best=0.591267 stale=1
+RGTAN_Elliptic_TR30_Seed42 epoch=5 loss=0.03324 val_AUPRC=0.406110 best=0.591267 stale=4
+RGTAN_Elliptic_TR30_Seed42 epoch=10 loss=0.02267 val_AUPRC=0.422552 best=0.591267 stale=9
+RGTAN_Elliptic_TR30_Seed42 epoch=15 loss=0.01305 val_AUPRC=0.382592 best=0.591267 stale=14
+RGTAN_Elliptic_TR30_Seed42 epoch=20 loss=0.01359 val_AUPRC=0.344961 best=0.591267 stale=19
+RGTAN_Elliptic_TR30_Seed42 epoch=21 loss=0.01471 val_AUPRC=0.378843 best=0.591267 stale=20
+RGTAN_Elliptic_TR30_Seed42_FINAL_VAL_FREEZE=PASS best_AUPRC=0.591267 val_macroF1=0.769166
+RGTAN_Elliptic_TR30_Seed72 epoch=1 loss=0.28885 val_AUPRC=0.508577 best=0.508577 stale=0
+RGTAN_Elliptic_TR30_Seed72 epoch=2 loss=0.07660 val_AUPRC=0.497153 best=0.508577 stale=1
+RGTAN_Elliptic_TR30_Seed72 epoch=5 loss=0.03760 val_AUPRC=0.400915 best=0.508577 stale=4
+RGTAN_Elliptic_TR30_Seed72 epoch=10 loss=0.02206 val_AUPRC=0.294023 best=0.508577 stale=9
+RGTAN_Elliptic_TR30_Seed72 epoch=15 loss=0.01445 val_AUPRC=0.252089 best=0.508577 stale=14
+RGTAN_Elliptic_TR30_Seed72 epoch=20 loss=0.01220 val_AUPRC=0.219767 best=0.508577 stale=19
+RGTAN_Elliptic_TR30_Seed72 epoch=21 loss=0.01018 val_AUPRC=0.271014 best=0.508577 stale=20
+RGTAN_Elliptic_TR30_Seed72_FINAL_VAL_FREEZE=PASS best_AUPRC=0.508577 val_macroF1=0.722255
+RGTAN_Elliptic_TR20_Seed2 epoch=1 loss=0.25857 val_AUPRC=0.310100 best=0.310100 stale=0
+RGTAN_Elliptic_TR20_Seed2 epoch=2 loss=0.07757 val_AUPRC=0.596501 best=0.596501 stale=0
+RGTAN_Elliptic_TR20_Seed2 epoch=5 loss=0.03074 val_AUPRC=0.532386 best=0.596501 stale=3
+RGTAN_Elliptic_TR20_Seed2 epoch=10 loss=0.01913 val_AUPRC=0.452939 best=0.596501 stale=8
+RGTAN_Elliptic_TR20_Seed2 epoch=15 loss=0.00893 val_AUPRC=0.516558 best=0.596501 stale=13
+RGTAN_Elliptic_TR20_Seed2 epoch=20 loss=0.00806 val_AUPRC=0.579526 best=0.596501 stale=18
+RGTAN_Elliptic_TR20_Seed2 epoch=22 loss=0.00645 val_AUPRC=0.508437 best=0.596501 stale=20
+RGTAN_Elliptic_TR20_Seed2_FINAL_VAL_FREEZE=PASS best_AUPRC=0.596501 val_macroF1=0.758575
+RGTAN_Elliptic_TR20_Seed42 epoch=1 loss=0.24766 val_AUPRC=0.441155 best=0.441155 stale=0
+RGTAN_Elliptic_TR20_Seed42 epoch=2 loss=0.07325 val_AUPRC=0.520280 best=0.520280 stale=0
+RGTAN_Elliptic_TR20_Seed42 epoch=5 loss=0.03801 val_AUPRC=0.551029 best=0.551029 stale=0
+RGTAN_Elliptic_TR20_Seed42 epoch=10 loss=0.01882 val_AUPRC=0.545125 best=0.551029 stale=5
+RGTAN_Elliptic_TR20_Seed42 epoch=15 loss=0.01084 val_AUPRC=0.560566 best=0.562582 stale=2
+RGTAN_Elliptic_TR20_Seed42 epoch=20 loss=0.00865 val_AUPRC=0.542625 best=0.562582 stale=7
+RGTAN_Elliptic_TR20_Seed42 epoch=25 loss=0.00750 val_AUPRC=0.551787 best=0.562582 stale=12
+RGTAN_Elliptic_TR20_Seed42 epoch=30 loss=0.00410 val_AUPRC=0.548440 best=0.568352 stale=3
+RGTAN_Elliptic_TR20_Seed42 epoch=35 loss=0.00631 val_AUPRC=0.525675 best=0.568352 stale=8
+RGTAN_Elliptic_TR20_Seed42 epoch=40 loss=0.00293 val_AUPRC=0.579548 best=0.579548 stale=0
+RGTAN_Elliptic_TR20_Seed42 epoch=45 loss=0.00386 val_AUPRC=0.569253 best=0.579548 stale=5
+RGTAN_Elliptic_TR20_Seed42 epoch=50 loss=0.00126 val_AUPRC=0.570121 best=0.579548 stale=10
+RGTAN_Elliptic_TR20_Seed42 epoch=55 loss=0.00657 val_AUPRC=0.541007 best=0.579548 stale=15
+RGTAN_Elliptic_TR20_Seed42 epoch=60 loss=0.00193 val_AUPRC=0.540906 best=0.579548 stale=20
+RGTAN_Elliptic_TR20_Seed42_FINAL_VAL_FREEZE=PASS best_AUPRC=0.579548 val_macroF1=0.761170
+RGTAN_Elliptic_TR20_Seed72 epoch=1 loss=0.32394 val_AUPRC=0.251930 best=0.251930 stale=0
+RGTAN_Elliptic_TR20_Seed72 epoch=2 loss=0.08353 val_AUPRC=0.494331 best=0.494331 stale=0
+RGTAN_Elliptic_TR20_Seed72 epoch=5 loss=0.03175 val_AUPRC=0.466367 best=0.560394 stale=1
+RGTAN_Elliptic_TR20_Seed72 epoch=10 loss=0.01865 val_AUPRC=0.484327 best=0.560394 stale=6
+RGTAN_Elliptic_TR20_Seed72 epoch=15 loss=0.00738 val_AUPRC=0.531781 best=0.565581 stale=2
+RGTAN_Elliptic_TR20_Seed72 epoch=20 loss=0.00775 val_AUPRC=0.497379 best=0.565581 stale=7
+RGTAN_Elliptic_TR20_Seed72 epoch=25 loss=0.00831 val_AUPRC=0.506135 best=0.565581 stale=12
+RGTAN_Elliptic_TR20_Seed72 epoch=30 loss=0.00695 val_AUPRC=0.540139 best=0.587183 stale=3
+RGTAN_Elliptic_TR20_Seed72 epoch=35 loss=0.00484 val_AUPRC=0.537361 best=0.587183 stale=8
+RGTAN_Elliptic_TR20_Seed72 epoch=40 loss=0.00198 val_AUPRC=0.499345 best=0.587183 stale=13
+RGTAN_Elliptic_TR20_Seed72 epoch=45 loss=0.00591 val_AUPRC=0.508197 best=0.587183 stale=18
+RGTAN_Elliptic_TR20_Seed72 epoch=47 loss=0.00382 val_AUPRC=0.486108 best=0.587183 stale=20
+RGTAN_Elliptic_TR20_Seed72_FINAL_VAL_FREEZE=PASS best_AUPRC=0.587183 val_macroF1=0.761744
+RGTAN_Elliptic_TR10_Seed2 epoch=1 loss=0.34880 val_AUPRC=0.098998 best=0.098998 stale=0
+RGTAN_Elliptic_TR10_Seed2 epoch=2 loss=0.07506 val_AUPRC=0.163083 best=0.163083 stale=0
+RGTAN_Elliptic_TR10_Seed2 epoch=5 loss=0.03631 val_AUPRC=0.337702 best=0.337702 stale=0
+RGTAN_Elliptic_TR10_Seed2 epoch=10 loss=0.01278 val_AUPRC=0.290600 best=0.361668 stale=1
+RGTAN_Elliptic_TR10_Seed2 epoch=15 loss=0.00787 val_AUPRC=0.297044 best=0.361668 stale=6
+RGTAN_Elliptic_TR10_Seed2 epoch=20 loss=0.00427 val_AUPRC=0.204270 best=0.361668 stale=11
+RGTAN_Elliptic_TR10_Seed2 epoch=25 loss=0.00289 val_AUPRC=0.181410 best=0.361668 stale=16
+RGTAN_Elliptic_TR10_Seed2 epoch=29 loss=0.00464 val_AUPRC=0.264674 best=0.361668 stale=20
+RGTAN_Elliptic_TR10_Seed2_FINAL_VAL_FREEZE=PASS best_AUPRC=0.361668 val_macroF1=0.685820
+RGTAN_Elliptic_TR10_Seed42 epoch=1 loss=0.34535 val_AUPRC=0.084781 best=0.084781 stale=0
+RGTAN_Elliptic_TR10_Seed42 epoch=2 loss=0.07580 val_AUPRC=0.191277 best=0.191277 stale=0
+RGTAN_Elliptic_TR10_Seed42 epoch=5 loss=0.02657 val_AUPRC=0.382492 best=0.382492 stale=0
+RGTAN_Elliptic_TR10_Seed42 epoch=10 loss=0.00796 val_AUPRC=0.234846 best=0.382492 stale=5
+RGTAN_Elliptic_TR10_Seed42 epoch=15 loss=0.00634 val_AUPRC=0.240409 best=0.382492 stale=10
+RGTAN_Elliptic_TR10_Seed42 epoch=20 loss=0.00179 val_AUPRC=0.118802 best=0.382492 stale=15
+RGTAN_Elliptic_TR10_Seed42 epoch=25 loss=0.00286 val_AUPRC=0.132499 best=0.382492 stale=20
+RGTAN_Elliptic_TR10_Seed42_FINAL_VAL_FREEZE=PASS best_AUPRC=0.382492 val_macroF1=0.692753
+RGTAN_Elliptic_TR10_Seed72 epoch=1 loss=0.47355 val_AUPRC=0.093180 best=0.093180 stale=0
+RGTAN_Elliptic_TR10_Seed72 epoch=2 loss=0.09823 val_AUPRC=0.163352 best=0.163352 stale=0
+RGTAN_Elliptic_TR10_Seed72 epoch=5 loss=0.03970 val_AUPRC=0.310536 best=0.310536 stale=0
+RGTAN_Elliptic_TR10_Seed72 epoch=10 loss=0.01552 val_AUPRC=0.212756 best=0.323341 stale=4
+RGTAN_Elliptic_TR10_Seed72 epoch=15 loss=0.00544 val_AUPRC=0.194701 best=0.323341 stale=9
+RGTAN_Elliptic_TR10_Seed72 epoch=20 loss=0.00590 val_AUPRC=0.142039 best=0.323341 stale=14
+RGTAN_Elliptic_TR10_Seed72 epoch=25 loss=0.00225 val_AUPRC=0.211405 best=0.323341 stale=19
+RGTAN_Elliptic_TR10_Seed72 epoch=26 loss=0.00248 val_AUPRC=0.205463 best=0.323341 stale=20
+RGTAN_Elliptic_TR10_Seed72_FINAL_VAL_FREEZE=PASS best_AUPRC=0.323341 val_macroF1=0.659657
+RGTAN_Elliptic_I1_ALL_12_FINAL_TRAININGS_FROZEN=PASS TEST_SCORED=NO
+RGTAN_Elliptic_I1_STAGE4: All 12 frozen; each held-out final is scored once only.
+RGTAN_Elliptic_I1_STAGE4_SOURCE_SPLIT_ENV=PASS
+RGTAN_Elliptic_I1_FROZEN_WINNER=PASS trial=11 val_AUPRC=0.760064 config={'base_lr': 0.003, 'drop': [0.3, 0.15], 'hidden_dim': 64}
+RGTAN_Elliptic_I1_ALL_RATIO_OOF_AND_CONTEXT_ISOLATION=PASS
+RGTAN_Elliptic_I1_ALL_12_MODELS_FROZEN_BEFORE_HELDOUT=PASS
+RGTAN_Elliptic_I1_READING_CANONICAL_FEATURES
+RGTAN_Elliptic_I1_FULL_TEST_GRAPH_BUILT_LABEL_FREE=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+RGTAN_Elliptic_I1_FULL_TEST_RISK_USES_TRAIN_LABELS_ONLY=PASS
+RGTAN_Elliptic_TR40_Seed2_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR40_Seed2_ONE_TIME_TEST_SCORE=PASS AUPRC=0.608954 macroF1=0.730365
+RGTAN_Elliptic_TR40_Seed42_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR40_Seed42_ONE_TIME_TEST_SCORE=PASS AUPRC=0.347009 macroF1=0.688704
+RGTAN_Elliptic_TR40_Seed72_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR40_Seed72_ONE_TIME_TEST_SCORE=PASS AUPRC=0.673179 macroF1=0.733952
+RGTAN_Elliptic_TR30_Seed2_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR30_Seed2_ONE_TIME_TEST_SCORE=PASS AUPRC=0.319971 macroF1=0.589592
+RGTAN_Elliptic_TR30_Seed42_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR30_Seed42_ONE_TIME_TEST_SCORE=PASS AUPRC=0.514599 macroF1=0.664124
+RGTAN_Elliptic_TR30_Seed72_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR30_Seed72_ONE_TIME_TEST_SCORE=PASS AUPRC=0.160040 macroF1=0.572854
+RGTAN_Elliptic_TR20_Seed2_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR20_Seed2_ONE_TIME_TEST_SCORE=PASS AUPRC=0.523791 macroF1=0.690834
+RGTAN_Elliptic_TR20_Seed42_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR20_Seed42_ONE_TIME_TEST_SCORE=PASS AUPRC=0.302016 macroF1=0.521871
+RGTAN_Elliptic_TR20_Seed72_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR20_Seed72_ONE_TIME_TEST_SCORE=PASS AUPRC=0.206158 macroF1=0.486429
+RGTAN_Elliptic_TR10_Seed2_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR10_Seed2_ONE_TIME_TEST_SCORE=PASS AUPRC=0.155766 macroF1=0.497077
+RGTAN_Elliptic_TR10_Seed42_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR10_Seed42_ONE_TIME_TEST_SCORE=PASS AUPRC=0.221927 macroF1=0.562099
+RGTAN_Elliptic_TR10_Seed72_CHECKING_FROZEN_MODEL_BEFORE_TEST_CLAIM
+RGTAN_Elliptic_TR10_Seed72_ONE_TIME_TEST_SCORE=PASS AUPRC=0.174487 macroF1=0.480541
+RGTAN_Elliptic_TR40_FINAL_TEST_AUPRC_MEAN=0.543047 sampleSD=0.172785 macroF1_MEAN=0.717674
+RGTAN_Elliptic_TR30_FINAL_TEST_AUPRC_MEAN=0.331537 sampleSD=0.177562 macroF1_MEAN=0.608857
+RGTAN_Elliptic_TR20_FINAL_TEST_AUPRC_MEAN=0.343989 sampleSD=0.162923 macroF1_MEAN=0.566378
+RGTAN_Elliptic_TR10_FINAL_TEST_AUPRC_MEAN=0.184060 sampleSD=0.034103 macroF1_MEAN=0.513239
+RGTAN_Elliptic_I1_ALL_12_FINAL_TESTS_COMPLETE=PASS
+RGTAN_Elliptic_I1_STAGE4_ALL_FINALS_COMPLETE=PASS

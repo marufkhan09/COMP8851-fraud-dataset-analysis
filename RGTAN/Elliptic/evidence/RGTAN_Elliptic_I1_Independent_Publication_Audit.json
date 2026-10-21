@@ -1,0 +1,102 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "branch": "Pathik-ass3",
+  "dataset": "Elliptic",
+  "final_test_runs_verified": 12,
+  "heldout_metrics_recomputed_from_labels_by_exporter": false,
+  "model": "RGTAN",
+  "model_checkpoint_binary_in_publication": false,
+  "model_inference_executed_by_exporter": false,
+  "original_raw_datasets_in_publication": false,
+  "source_sha256": {
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "RGTAN_Elliptic_I1_PUBLIC_GITHUB_EVIDENCE_AUDIT_PASS",
+  "stored_test_scores_verified": 12,
+  "summary_rows": [
+    {
+      "auprc_mean": 0.5430471727030205,
+      "auprc_sample_sd": 0.17278458231003704,
+      "auroc_mean": 0.8616849193826596,
+      "auroc_sample_sd": 0.020471278467540013,
+      "fraud_f1_mean": 0.49865921210634095,
+      "fraud_f1_sample_sd": 0.03977274277397021,
+      "fraud_precision_mean": 0.3860707325568147,
+      "fraud_precision_sample_sd": 0.044677092985338944,
+      "fraud_recall_mean": 0.7075196408529743,
+      "fraud_recall_sample_sd": 0.006364734850171854,
+      "macro_f1_mean": 0.7176737079854115,
+      "macro_f1_sample_sd": 0.025152110561941245,
+      "ratio": "TR40",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.3315365589076293,
+      "auprc_sample_sd": 0.1775619097111456,
+      "auroc_mean": 0.8057315726101036,
+      "auroc_sample_sd": 0.037529947204165914,
+      "fraud_f1_mean": 0.3342576337093355,
+      "fraud_f1_sample_sd": 0.07705102034002419,
+      "fraud_precision_mean": 0.2301535676202426,
+      "fraud_precision_sample_sd": 0.05988436166960661,
+      "fraud_recall_mean": 0.6273849607182941,
+      "fraud_recall_sample_sd": 0.1537321282214105,
+      "macro_f1_mean": 0.6088567275336279,
+      "macro_f1_sample_sd": 0.04858909005900799,
+      "ratio": "TR30",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.3439885251263511,
+      "auprc_sample_sd": 0.16292338816635613,
+      "auroc_mean": 0.7901613606415867,
+      "auroc_sample_sd": 0.0538613412202187,
+      "fraud_f1_mean": 0.31378285919068033,
+      "fraud_f1_sample_sd": 0.11898376670618245,
+      "fraud_precision_mean": 0.21433209133805012,
+      "fraud_precision_sample_sd": 0.11694537888276434,
+      "fraud_recall_mean": 0.7093153759820426,
+      "fraud_recall_sample_sd": 0.06709157293555687,
+      "macro_f1_mean": 0.5663779435271751,
+      "macro_f1_sample_sd": 0.10922909702469653,
+      "ratio": "TR20",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.1840600430204532,
+      "auprc_sample_sd": 0.034103074207852455,
+      "auroc_mean": 0.7333050436157782,
+      "auroc_sample_sd": 0.032415161142670144,
+      "fraud_f1_mean": 0.2524538236067005,
+      "fraud_f1_sample_sd": 0.034845267330116676,
+      "fraud_precision_mean": 0.15321981222648282,
+      "fraud_precision_sample_sd": 0.026490608970559017,
+      "fraud_recall_mean": 0.7315375982042648,
+      "fraud_recall_sample_sd": 0.03807146407067421,
+      "macro_f1_mean": 0.5132389989154529,
+      "macro_f1_sample_sd": 0.04311449444714185,
+      "ratio": "TR10",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    }
+  ],
+  "tuning_trials_verified": 12
+}
