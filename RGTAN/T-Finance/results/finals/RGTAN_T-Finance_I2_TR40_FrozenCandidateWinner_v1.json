@@ -1,0 +1,43 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "candidate_only": true,
+  "configuration": {
+    "base_lr": 0.001,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "hidden_dim": 64
+  },
+  "crossfit_TR40_sha256": "798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81",
+  "dataset": "T-Finance",
+  "fanouts": [
+    10,
+    10
+  ],
+  "heldout_test_evaluation_authorized": false,
+  "model": "RGTAN",
+  "original_full_neighbor_sampling_replaced": true,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_T-Finance_I2_TR40_VALIDATION_WINNER_FROZEN_CANDIDATE",
+  "test_scored": false,
+  "trial": 7,
+  "trial_count": 12,
+  "tuning_script_sha256": "162bb6a98fc838662f41534d2815126fd0064b1758a6dd033f401d9b75afaa05",
+  "tuning_winner_sha256": "6d39220a3b27d851cc253d5d15f9d9e65589965620bd182e2c8a6b8f17092705",
+  "winner_epoch": 100,
+  "winner_val_auprc": 0.8881121769261046
+}

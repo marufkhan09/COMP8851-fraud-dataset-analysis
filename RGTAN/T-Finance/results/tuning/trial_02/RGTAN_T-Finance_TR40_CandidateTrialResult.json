@@ -1,0 +1,41 @@
+{
+  "batch": 1024,
+  "benchmark_supervisor_approval_required": true,
+  "best_epoch": 58,
+  "best_val_auprc": 0.88776139778383,
+  "candidate_method_only": true,
+  "checkpoint_sha256": "894f71e0d00012eabdeb087439f3f1821ed68422bbc287fcff41b40c330b252d",
+  "config": {
+    "base_lr": 0.003,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "hidden_dim": 32
+  },
+  "dataset": "T-Finance",
+  "epochs_completed": 78,
+  "fanouts": [
+    10,
+    10
+  ],
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "optimizer_steps": 1560,
+  "original_full_neighbor_sampling_replaced": true,
+  "original_graph_edges": 42445086,
+  "patience": 20,
+  "ratio": "TR40",
+  "risk_features": "exact_full_graph_training_only_5fold_crossfit",
+  "risk_sha256": "798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81",
+  "sampler": "MultiLayerNeighborSampler",
+  "script_sha256": "162bb6a98fc838662f41534d2815126fd0064b1758a6dd033f401d9b75afaa05",
+  "seed": 2,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "COMPLETE",
+  "test_labels_used": false,
+  "test_scored": false,
+  "trial": 2,
+  "wall_seconds": 149.256
+}

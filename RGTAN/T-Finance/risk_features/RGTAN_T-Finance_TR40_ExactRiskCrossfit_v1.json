@@ -1,0 +1,29 @@
+{
+  "artifact_sha256": "798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "dataset": "T-Finance",
+  "elapsed_seconds": 13.9,
+  "model": "RGTAN",
+  "original_source_graph_edges": 42445086,
+  "ratio": "TR40",
+  "risk_binary_graph_edges": 42445086,
+  "risk_sources": "training labelled nodes only, 5 fold held-out train contexts",
+  "risk_topology": "binary direct edges excluding self; exact 2hop excluding 1hop and self",
+  "sampling_change_proposed": [
+    10,
+    10
+  ],
+  "scaler": "OOF train only",
+  "script_sha256": "96bf30776fe746355d00cde1f0fb523cd71bdba5f478e675c620c84fbbc50409",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_TR40_EXACT_RISK_CROSSFIT_PASS",
+  "test_labels_used": false,
+  "test_scored": false,
+  "train_count": 15742,
+  "train_fraud": 721,
+  "training_started": false,
+  "val_count": 7872,
+  "validation_labels_used": false
+}

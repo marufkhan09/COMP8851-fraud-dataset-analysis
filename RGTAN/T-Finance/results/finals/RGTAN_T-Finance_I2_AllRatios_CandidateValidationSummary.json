@@ -1,0 +1,60 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "candidate_only": true,
+  "candidate_training_count": 12,
+  "dataset": "T-Finance",
+  "fanouts": [
+    10,
+    10
+  ],
+  "frozen_winner_sha256": "909da462791ac85eea602a6d8a0dcf166bd59f297b241397297e0a90ed1c58bb",
+  "model": "RGTAN",
+  "original_full_neighbor_sampling_replaced": true,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_T-Finance_I2_ALL_12_CANDIDATE_TRAININGS_FROZEN",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "validation_metrics_summary": [
+    {
+      "AUPRC_mean": 0.8403876676818663,
+      "AUPRC_sample_SD": 0.03715726664541174,
+      "macro_F1_mean": 0.8956162085613092,
+      "macro_F1_sample_SD": 0.017510832941327884,
+      "ratio": "TR40"
+    },
+    {
+      "AUPRC_mean": 0.8651606600158669,
+      "AUPRC_sample_SD": 0.03185062249128706,
+      "macro_F1_mean": 0.9071521725497197,
+      "macro_F1_sample_SD": 0.016314632035595678,
+      "ratio": "TR30"
+    },
+    {
+      "AUPRC_mean": 0.8604008603136591,
+      "AUPRC_sample_SD": 0.02889615605775035,
+      "macro_F1_mean": 0.9074135950601473,
+      "macro_F1_sample_SD": 0.013501692574024515,
+      "ratio": "TR20"
+    },
+    {
+      "AUPRC_mean": 0.8104561818994633,
+      "AUPRC_sample_SD": 0.06188138145749636,
+      "macro_F1_mean": 0.8815482623939834,
+      "macro_F1_sample_SD": 0.03360612925457884,
+      "ratio": "TR10"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "batch": 1024,
+  "benchmark_supervisor_approval_required": true,
+  "best_epoch": 43,
+  "best_val_auprc": 0.8311894325696412,
+  "best_val_macro_f1": 0.8884128521131063,
+  "candidate_only": true,
+  "checkpoint_sha256": "5a0cb87fe83c595ed8c30d4610597b5b7521ba5f5c96ac372fd9378684fea9b3",
+  "config": {
+    "base_lr": 0.001,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "hidden_dim": 64
+  },
+  "crossfit_sha256": "798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81",
+  "dataset": "T-Finance",
+  "epochs_completed": 63,
+  "fanouts": [
+    10,
+    10
+  ],
+  "frozen_val_macro_f1_threshold": 0.49082744121551514,
+  "frozen_winner_sha256": "909da462791ac85eea602a6d8a0dcf166bd59f297b241397297e0a90ed1c58bb",
+  "gpu_peak_allocated_gib": 0.87287,
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "optimizer_steps": 1260,
+  "original_full_neighbor_sampling_replaced": true,
+  "patience": 20,
+  "ratio": "TR40",
+  "seed": 2,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_CANDIDATE_FINAL_TRAINING_FROZEN",
+  "test_evaluation_authorized": false,
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "train_count": 15742,
+  "train_positive_count": 721,
+  "train_seconds": 141.674,
+  "training_script_sha256": "07b5bf12e7318d203487d006161e0fbcb4dfe71f01a6837444b0bd98791874ee",
+  "val_count": 7872,
+  "val_positive_count": 361,
+  "validation_scores_sha256": "62f174337a483ac91df239f8d20f9866ded45587885cf80d028b90d85e68e7db"
+}
