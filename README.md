@@ -101,3 +101,22 @@ Git on purpose. The `.gitignore` also ignores folders named `runs/`, `logs/`,
 
 Assessment 2 report and slides are submitted separately. The final tables and
 figures are produced from the result files in this repository.
+
+## Verified LEX-GNN and ConsisGAD outcomes
+
+The following outcomes were recorded in the October 2026 benchmark:
+
+- **FDCompCN:** ConsisGAD completed 12/12 final runs.
+  LEX-GNN completed 11/12; TR20 seed72 failed the configured
+  initialization-restart gate. No successful test evaluation was
+  produced for that run. The failure is documented under
+  `models/lex-gnn/fdcompcn/evidence/final_runs/`.
+- **Elliptic:** Both models completed 12/12 runs using the
+  `elliptic_reconstructed_v1` protocol. These were not the original
+  team-frozen splits.
+- **T-Social:** Both models completed 12/12 runs using provisional
+  splits reconstructed from the documented convention, not the
+  original team-frozen split files.
+
+These qualifications must be retained when comparing results or
+reporting the number of successful experiments.
