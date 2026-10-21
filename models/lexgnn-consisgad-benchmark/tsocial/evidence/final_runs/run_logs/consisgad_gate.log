@@ -1,0 +1,26 @@
+[###############---------------] 1/2 ( 50.00%) | train=6.485s | val_AUROC=0.940948 | val_AUPRC=0.527699 | val_MacroF1=0.780181 | val_FraudF1=0.574164 | val_GMean=0.767402 | best=True
+[##############################] 2/2 (100.00%) | train=5.297s | val_AUROC=0.937848 | val_AUPRC=0.461617 | val_MacroF1=0.757229 | val_FraudF1=0.530206 | val_GMean=0.748415 | best=False
+{
+  "run_id": "20261020T102018002388Z_tsocial_consisgad_tsocial_gate_tr40_seed2_provisional_split_seed2",
+  "status": "PASS",
+  "model": "ConsisGAD",
+  "dataset": "T-Social",
+  "run_mode": "tsocial_gate_tr40_seed2_provisional_split",
+  "seed": 2,
+  "epochs_completed": 2,
+  "best_validation_epoch": 1,
+  "best_validation_auroc": 0.9409480071879097,
+  "selected_threshold": 0.85,
+  "training_seconds_total": 11.781143093947321,
+  "training_seconds_mean": 5.890571546973661,
+  "final_validation_inference_seconds": 5.648680968210101,
+  "test_inference_seconds": 0.0,
+  "complete_wall_seconds": 136.13730726391077,
+  "peak_gpu_memory_mb": 10345.06787109375,
+  "test_evaluated": false,
+  "total_parameters": 56386,
+  "trainable_parameters": 56386,
+  "test_metrics": null,
+  "result_directory": "/workspace/tsocial_work/results/consisgad/20261020T102018002388Z_tsocial_consisgad_tsocial_gate_tr40_seed2_provisional_split_seed2"
+}
+RESULT_DIRECTORY=/workspace/tsocial_work/results/consisgad/20261020T102018002388Z_tsocial_consisgad_tsocial_gate_tr40_seed2_provisional_split_seed2

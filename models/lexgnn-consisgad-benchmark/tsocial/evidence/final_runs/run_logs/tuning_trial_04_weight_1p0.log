@@ -1,0 +1,44 @@
+[#-----------------------------] 1/20 (  5.00%) | train=8.808s | val_AUROC=0.938152 | val_AUPRC=0.506131 | val_MacroF1=0.773224 | val_FraudF1=0.560431 | val_GMean=0.751459 | best=True
+[###---------------------------] 2/20 ( 10.00%) | train=9.826s | val_AUROC=0.939500 | val_AUPRC=0.495241 | val_MacroF1=0.764020 | val_FraudF1=0.542954 | val_GMean=0.748224 | best=True
+[####--------------------------] 3/20 ( 15.00%) | train=10.124s | val_AUROC=0.943156 | val_AUPRC=0.497546 | val_MacroF1=0.768353 | val_FraudF1=0.551080 | val_GMean=0.747348 | best=True
+[######------------------------] 4/20 ( 20.00%) | train=9.272s | val_AUROC=0.942159 | val_AUPRC=0.483500 | val_MacroF1=0.763666 | val_FraudF1=0.542521 | val_GMean=0.753867 | best=False
+[#######-----------------------] 5/20 ( 25.00%) | train=10.046s | val_AUROC=0.945433 | val_AUPRC=0.504636 | val_MacroF1=0.770964 | val_FraudF1=0.556635 | val_GMean=0.763469 | best=True
+[#########---------------------] 6/20 ( 30.00%) | train=9.873s | val_AUROC=0.943492 | val_AUPRC=0.469993 | val_MacroF1=0.759173 | val_FraudF1=0.533769 | val_GMean=0.746417 | best=False
+[##########--------------------] 7/20 ( 35.00%) | train=9.915s | val_AUROC=0.946157 | val_AUPRC=0.502300 | val_MacroF1=0.769861 | val_FraudF1=0.554473 | val_GMean=0.761328 | best=True
+[############------------------] 8/20 ( 40.00%) | train=14.188s | val_AUROC=0.946409 | val_AUPRC=0.500978 | val_MacroF1=0.772543 | val_FraudF1=0.560148 | val_GMean=0.777255 | best=True
+[#############-----------------] 9/20 ( 45.00%) | train=9.826s | val_AUROC=0.945888 | val_AUPRC=0.489422 | val_MacroF1=0.769368 | val_FraudF1=0.553589 | val_GMean=0.762396 | best=False
+[###############---------------] 10/20 ( 50.00%) | train=10.169s | val_AUROC=0.945955 | val_AUPRC=0.496530 | val_MacroF1=0.767849 | val_FraudF1=0.550773 | val_GMean=0.763441 | best=False
+[################--------------] 11/20 ( 55.00%) | train=9.420s | val_AUROC=0.946956 | val_AUPRC=0.503911 | val_MacroF1=0.768359 | val_FraudF1=0.551762 | val_GMean=0.764207 | best=True
+[##################------------] 12/20 ( 60.00%) | train=10.188s | val_AUROC=0.947719 | val_AUPRC=0.501454 | val_MacroF1=0.771963 | val_FraudF1=0.558923 | val_GMean=0.773796 | best=True
+[###################-----------] 13/20 ( 65.00%) | train=5.330s | val_AUROC=0.948811 | val_AUPRC=0.519492 | val_MacroF1=0.778735 | val_FraudF1=0.571610 | val_GMean=0.772147 | best=True
+[#####################---------] 14/20 ( 70.00%) | train=10.208s | val_AUROC=0.947543 | val_AUPRC=0.512415 | val_MacroF1=0.776333 | val_FraudF1=0.567173 | val_GMean=0.774479 | best=False
+[######################--------] 15/20 ( 75.00%) | train=10.358s | val_AUROC=0.949030 | val_AUPRC=0.516535 | val_MacroF1=0.778313 | val_FraudF1=0.571130 | val_GMean=0.780460 | best=True
+[########################------] 16/20 ( 80.00%) | train=10.527s | val_AUROC=0.947368 | val_AUPRC=0.508914 | val_MacroF1=0.773434 | val_FraudF1=0.561830 | val_GMean=0.777370 | best=False
+[#########################-----] 17/20 ( 85.00%) | train=10.520s | val_AUROC=0.946278 | val_AUPRC=0.492997 | val_MacroF1=0.765631 | val_FraudF1=0.547053 | val_GMean=0.774251 | best=False
+[###########################---] 18/20 ( 90.00%) | train=11.153s | val_AUROC=0.950148 | val_AUPRC=0.518976 | val_MacroF1=0.780309 | val_FraudF1=0.575081 | val_GMean=0.785542 | best=True
+[############################--] 19/20 ( 95.00%) | train=9.531s | val_AUROC=0.945889 | val_AUPRC=0.467178 | val_MacroF1=0.759415 | val_FraudF1=0.535462 | val_GMean=0.775237 | best=False
+[##############################] 20/20 (100.00%) | train=9.818s | val_AUROC=0.945673 | val_AUPRC=0.462718 | val_MacroF1=0.758703 | val_FraudF1=0.533669 | val_GMean=0.764633 | best=False
+{
+  "run_id": "20261020T114627597432Z_tsocial_consisgad_tsocial_tuning_tr40_seed2_trial_04_weight_1p0_seed2",
+  "status": "PASS",
+  "model": "ConsisGAD",
+  "dataset": "T-Social",
+  "run_mode": "tsocial_tuning_tr40_seed2_trial_04_weight_1p0",
+  "seed": 2,
+  "epochs_completed": 20,
+  "best_validation_epoch": 18,
+  "best_validation_auroc": 0.9501475921227134,
+  "selected_threshold": 0.32,
+  "training_seconds_total": 199.0995722708758,
+  "training_seconds_mean": 9.95497861354379,
+  "final_validation_inference_seconds": 6.662057776004076,
+  "test_inference_seconds": 0.0,
+  "complete_wall_seconds": 1070.9882643788587,
+  "peak_gpu_memory_mb": 10345.06787109375,
+  "test_evaluated": false,
+  "total_parameters": 56386,
+  "trainable_parameters": 56386,
+  "test_metrics": null,
+  "result_directory": "/workspace/tsocial_work/results/consisgad/tuning/trial_04_weight_1p0/20261020T114627597432Z_tsocial_consisgad_tsocial_tuning_tr40_seed2_trial_04_weight_1p0_seed2"
+}
+RESULT_DIRECTORY=/workspace/tsocial_work/results/consisgad/tuning/trial_04_weight_1p0/20261020T114627597432Z_tsocial_consisgad_tsocial_tuning_tr40_seed2_trial_04_weight_1p0_seed2

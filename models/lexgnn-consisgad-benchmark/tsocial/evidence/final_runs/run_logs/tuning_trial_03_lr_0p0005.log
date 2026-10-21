@@ -1,0 +1,30 @@
+[###############---------------] 1/2 ( 50.00%) | Attempt 1 | loss=0.778571 | train=500.914s | val_AUROC=0.500000 | val_AUPRC=0.030147 | val_MacroF1=0.492348 | val_FraudF1=0.000000 | val_GMean=0.000000 | best=True
+[##############################] 2/2 (100.00%) | Attempt 1 | loss=0.147965 | train=503.918s | val_AUROC=0.500000 | val_AUPRC=0.030147 | val_MacroF1=0.492348 | val_FraudF1=0.000000 | val_GMean=0.000000 | best=False
+{
+  "run_id": "20261020T112413542436Z_tsocial_lexgnn_tsocial_tuning_tr40_seed2_trial_03_lr_0p0005_seed2",
+  "status": "PASS",
+  "model": "LEX-GNN",
+  "dataset": "T-Social",
+  "run_mode": "tsocial_tuning_tr40_seed2_trial_03_lr_0p0005",
+  "seed": 2,
+  "effective_initialization_seed": 2,
+  "initialization_restarts": 0,
+  "epochs_completed": 2,
+  "best_validation_epoch": 1,
+  "best_validation_auroc": 0.5,
+  "selected_threshold": 0.5,
+  "training_seconds_total": 1004.8315668711439,
+  "restart_overhead_seconds": 0.0,
+  "training_seconds_including_restarts": 1004.8315668711439,
+  "training_seconds_mean": 502.41578343557194,
+  "final_validation_inference_seconds": 72.67588637396693,
+  "test_inference_seconds": 0.0,
+  "complete_wall_seconds": 1329.1652786149643,
+  "peak_gpu_memory_mb": 3553.056640625,
+  "test_evaluated": false,
+  "total_parameters": 111978,
+  "trainable_parameters": 111978,
+  "test_metrics": null,
+  "result_directory": "/workspace/tsocial_work/results/lexgnn/tuning/trial_03_lr_0p0005/20261020T112413542436Z_tsocial_lexgnn_tsocial_tuning_tr40_seed2_trial_03_lr_0p0005_seed2"
+}
+RESULT_DIRECTORY=/workspace/tsocial_work/results/lexgnn/tuning/trial_03_lr_0p0005/20261020T112413542436Z_tsocial_lexgnn_tsocial_tuning_tr40_seed2_trial_03_lr_0p0005_seed2
