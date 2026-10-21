@@ -1,0 +1,506 @@
+{
+  "branch": "Pathik-ass3",
+  "dataset": "YelpChi",
+  "destination": "EOGFD/YelpChi/",
+  "files": {
+    "EOGFD/YelpChi/README.md": {
+      "bytes": 4761,
+      "sha256": "355ffda477ef2a3affe9bcca080d00b237218f3fe562efbfa6f1a515fb6f489e"
+    },
+    "EOGFD/YelpChi/evidence/EOGFD_YelpChi_I1_Environment.txt": {
+      "bytes": 609,
+      "sha256": "3ab4cc0eee45a3c4b778e10433d7158457afeabfac56c74939d4b9bb4ed37c8f"
+    },
+    "EOGFD/YelpChi/evidence/EOGFD_YelpChi_I1_IndependentCompletedPublicationAudit.json": {
+      "bytes": 5078,
+      "sha256": "781388c70435cc80413241e997f9dee9a6b81ea15898c5d3506610b9bff3f918"
+    },
+    "EOGFD/YelpChi/evidence/EOGFD_YelpChi_I1_Stage2_FullGraphPilot.json": {
+      "bytes": 1211,
+      "sha256": "c341034ab77c18c697e36b84d1108303401a3f1e6dd37e79ead47ca0db22e0e9"
+    },
+    "EOGFD/YelpChi/evidence/EOGFD_YelpChi_I1_Stage5_Launch_before_cuda_fix.sh": {
+      "bytes": 653,
+      "sha256": "1e9b06dd3a8471e2181aa555fec5ce3e1b48b79b24e4a675d1cc2c1832542489"
+    },
+    "EOGFD/YelpChi/evidence/logs/EOGFD_YelpChi_I1_Stage2_Retry1.log": {
+      "bytes": 750,
+      "sha256": "04934a27685e0a2a4e697e2006e9fafc0dfa416c1901152bc05d1db39002f757"
+    },
+    "EOGFD/YelpChi/evidence/logs/EOGFD_YelpChi_I1_Stage3_Master.log": {
+      "bytes": 28625,
+      "sha256": "42e0a888614b3ddad4a07dab376c3dca272054866774e518d175ad9d4b412645"
+    },
+    "EOGFD/YelpChi/evidence/logs/EOGFD_YelpChi_I1_Stage4_Master.log": {
+      "bytes": 15093,
+      "sha256": "d89c49eccbc95d01bdd4bc30da31324cebd8d8756c7dffe10f453383528835ae"
+    },
+    "EOGFD/YelpChi/evidence/logs/EOGFD_YelpChi_I1_Stage5_CUDA_Recovery.log": {
+      "bytes": 3856,
+      "sha256": "9d7e02ab0614898e98f6cdcd1a678385fe7424c0944331065df6d34351057837"
+    },
+    "EOGFD/YelpChi/evidence/logs/EOGFD_YelpChi_I1_Stage5_Master.log": {
+      "bytes": 1924,
+      "sha256": "18c95329c8ee2f58b9ba10ddca1b661f51c2a57b4779114fdea593c5fa00cba7"
+    },
+    "EOGFD/YelpChi/results/finals/EOGFD_YelpChi_I1_Stage4_12FrozenTrainingSummary.json": {
+      "bytes": 1713,
+      "sha256": "16685d0f75a5b05206b230bd0fedc70470c0fb452a9cf4c5d42ff66a4d0e7ce7"
+    },
+    "EOGFD/YelpChi/results/finals/EOGFD_YelpChi_I1_Stage5_AllRatios_FinalHeldoutTestSummary.json": {
+      "bytes": 5072,
+      "sha256": "a7cb893ea629de2247b8fcd7b578edad1d0d4dc37dc0373aa474c32689655f06"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "3f040f33eb09ab41426202f81333bee1d072d4bab8b147fb86680409501d3f07"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/frozen_training.json": {
+      "bytes": 1412,
+      "sha256": "ce45ed58e6ebfa65b97f8e6ad9260539a89dacc3f3044ae1ac68c72769d4dc0c"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/test_metrics.json": {
+      "bytes": 1363,
+      "sha256": "d747c8e8dae435cec5e37a726507d3e07565e87a8d70f39e50949af42c0f008b"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "5fcef68e39051387a7190e357564932b225633a7f7cb00a6c772c16bc94ff3d2"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "e5e975f5bfac5c6c240a840f96cd3666daa67c04679a6aba99f238bbaab863df"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_2/validation_history.json": {
+      "bytes": 26821,
+      "sha256": "8f9b6feee5c16cb96be9ac8bedc9b433fbdd79f8e92521456d6f9a99aae0ea15"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "77bda1abda4b7cc8f9dcc9731b4198447f20a0591aff7ba3c708f318f6aefa15"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/frozen_training.json": {
+      "bytes": 1411,
+      "sha256": "2394cb6aa8b2c51f629bf8791849610e6b2df608f4a061afd12bcdc41b5081e2"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/test_metrics.json": {
+      "bytes": 1366,
+      "sha256": "178117926edfd5c1c29fe64e004d1e6902e2cec789e2ee1ef2d3cba2d799be27"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "e61ae776013a985dad8db42baca0ce31959424e3c44db8c1d2ad208535c145ba"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "437c24c9f3b051fd4531f82bc7453fe4f604a5094466c34cc041afefb5808266"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_42/validation_history.json": {
+      "bytes": 26802,
+      "sha256": "a404365c69c0c429479d0b6350d11094b0cbfb356a188d9ccfff5864ad5a0562"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "d90ceb5c1bdcaf1140cadab2e6c41ea844ca6afa877ec7d4a10820a11d97ab17"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/frozen_training.json": {
+      "bytes": 1413,
+      "sha256": "ba02c915f552ca7cbb14bc37166508e23dc394fa39f88551801c2ffc01b2e6a8"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/test_metrics.json": {
+      "bytes": 1363,
+      "sha256": "8ae61f4f473b64ac281fafda1e84521803cd1017a7204c3da5e8b84cf1f5c51d"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "f3527b64d7ec3f5f7f9866ef0795e0c1f509753c671887b67aa0a610e3d92d68"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "0d43b0a607c734b1388229ff3896f3c6466e6378243927cced4ff249cafce74c"
+    },
+    "EOGFD/YelpChi/results/finals/TR10/seed_72/validation_history.json": {
+      "bytes": 26823,
+      "sha256": "996f8ec197008fdfd7ad4ba6028c2f24dae4af3cc1ed2ed371897cabb730e56a"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "2ae8ef57bb36ea1a1e0d1277a885d01c3ab6c98c8ffaa76057b4b816f971c4f5"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/frozen_training.json": {
+      "bytes": 1413,
+      "sha256": "a68b05ba1a2f32d1916f01d2c34b189ab865cc0f9b6adf19b33f6188fdbf0b4f"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/test_metrics.json": {
+      "bytes": 1361,
+      "sha256": "88cbdb34b1effe82d90c56741595a8df16a578bd67e8b716b75891dd43a56f32"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "c92d3652b14ca7aeec4f6eee78a9df2ed2b4cdb4a6f278dad28672dc790987f4"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "7461fe70b879f742b27ea43ad0fbdd2bc78f2a508df2dcb32d2eda9f80e4f310"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_2/validation_history.json": {
+      "bytes": 26823,
+      "sha256": "48928ae90082153b4c63a679f54300bff67d3079ea47d61f301c9944fc11e80c"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "68c5bbe5456b5de8b9a46acfd15aadfe223ee7fd8f9da8b97c48daffec1c0557"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/frozen_training.json": {
+      "bytes": 1414,
+      "sha256": "1bbcbe2cd10f0df19aa9ade5d0d6ca76cf5b82b5b6623d77d4c3a8a214615c16"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/test_metrics.json": {
+      "bytes": 1363,
+      "sha256": "ae647e594be6c574eea49b003f88459fc4a4dcae6e538bc1de145ab80956b19a"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "80e145bab9935cef16e1e5a0f4a90aa523cbc124a34568a260960c9e68d6c969"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "292f52d0a688cb2e264ae89a4d1726f073299b36df1a12b52ad1700b8933f708"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_42/validation_history.json": {
+      "bytes": 26821,
+      "sha256": "f8c873d3885f319954772cd55b84836419b653e6b334cc3980bba5264a96bf6f"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "f37bc813cdf9c1f6020907defd21eaf7b0793d68cb6919a93b50cd0ebb6deff1"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/frozen_training.json": {
+      "bytes": 1415,
+      "sha256": "e8b9578199c2fddf97d21dfb62d81541f79424ffd100008be1aa3761a8127fbd"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/test_metrics.json": {
+      "bytes": 1362,
+      "sha256": "f80ad58fea610cd21a2ab88fb439abe95d19102d4f03b5a6361e24aa4d65095b"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "a08acc8ea753d5ecd821542091e01fe75f35a6bf933026c8dbcc137dda2820f0"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "2ac97d2cd6fd8849f00c7c572dd00292596e8320138dcfff9b0d523ddf6ed57c"
+    },
+    "EOGFD/YelpChi/results/finals/TR20/seed_72/validation_history.json": {
+      "bytes": 26808,
+      "sha256": "1cb7fbd26c2b9f7333d06036eba3edeae2b121be70ebf35bd8cd4713b5eaa1dc"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "021534227d2cb5c9ea13bf9017e2439fdcf83ecf7fd51b0ef9bea440c19773b7"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/frozen_training.json": {
+      "bytes": 1415,
+      "sha256": "b7c97ebf7ff5c4acc9850e79b26ebe3e71a54daa353bd264ea9ac3cf1d40455a"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/test_metrics.json": {
+      "bytes": 1362,
+      "sha256": "79b405701122977067428b11965e74961049a9480a34b4c5d4a455328ee3982c"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "b61198814d358655788c22a5d1e6671d87d16a813a6c2a7a3b4dacaa9baf1afd"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "a8ea588ffc578b40caa16e01a0c724e99d35c657a37ccb082a2198b2cfdc2689"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_2/validation_history.json": {
+      "bytes": 26807,
+      "sha256": "a6a1191e176a7076e4b12ce289055998c381bc573efbd68731278ef03b97191f"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "1166d1add792064240ff5b303f5d3f212a3fcbce33df0594b147837eeae67e7f"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/frozen_training.json": {
+      "bytes": 1416,
+      "sha256": "3c234862f32c318aaad0e4d652724850c7634670dd45bfb774c0833d1fb5810e"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/test_metrics.json": {
+      "bytes": 1364,
+      "sha256": "202a5969bdb341633296f09d8661d06ec4f4cbb36a7771511d8dcf64b4ed2283"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "56a2cd9703222a5c655c7c7d30acceffbf372868de65770910cf01f2a466fd23"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "ceb3765361e2bd38f7fb48fa8f07f58839fa423de78e6a5052e4dbc2e7c055b8"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_42/validation_history.json": {
+      "bytes": 26818,
+      "sha256": "99a23ee8e3d01dfc952ee547e497383158c88c1568d7bea393d8408758ceb55e"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "7d72c6486a552d8f17fafe9c06862e83b0d767d23ffe99412a9c5c44818c4519"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/frozen_training.json": {
+      "bytes": 1415,
+      "sha256": "135764f968793bce672290b8ba132268b59c5deea97c8df55780ff8aec0bea98"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/test_metrics.json": {
+      "bytes": 1363,
+      "sha256": "6935824b2dfa4afb0d1cdae04fd26f27a2a90ceb3634217adf54aa0412c40b66"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "3ee88eaaa7c524c3761b14e9f7b39d0729ee81248312e0aa90b9fd448030d79a"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "07bd382e2080db34a2f1e7c9a3327aed555bb2bf99095a284d9913127a41359c"
+    },
+    "EOGFD/YelpChi/results/finals/TR30/seed_72/validation_history.json": {
+      "bytes": 26809,
+      "sha256": "5e2fa9af7a78ca51bad436cfbbe9dc32baa76be946ab56d55463d4b1ac7e6d6f"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "94594facc7473ce9eeaa9258c1f9c1367ccc86304c2fc91baa7c3b56182c7b69"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/frozen_training.json": {
+      "bytes": 1413,
+      "sha256": "e96b36405bf93b8ef6c0054f3789b559227d613743a6ec8e54c58a71660f94c5"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/test_metrics.json": {
+      "bytes": 1362,
+      "sha256": "c09bcbac862d66798fabe42c81faca0a40e5253b53e09c4fe443086a08452764"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "7a1f2b46a970991fea667c034820b2dc855b74f89e5e578e97dca8e4166fbd61"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "812688a944b382c89e62d3b449cbefdab9b7290f6eb3047252284a6da3afade5"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_2/validation_history.json": {
+      "bytes": 26799,
+      "sha256": "323ac0f3147e7b4e5aada7d52a0542f27df6cfcee21e87fc7a3f7ac935ab9bea"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "8695116531ef0ba63f3ec7c14f462a9c8789737061c6d10c6b844dc375905dcb"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/frozen_training.json": {
+      "bytes": 1416,
+      "sha256": "235c0b5b3a48ee38337cd0613ef13a99682293a26f72df8d1585b53a5717a95e"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/test_metrics.json": {
+      "bytes": 1365,
+      "sha256": "ca7c885f769727775fb4d42932fea4db233a9756f0d12f47c3b8aaf19673327e"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "090c49ad35de80da42f53b6a8ec8897d65fbaebd5aaeda2e1eae6964d0da3aa3"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "a7747ad9b4f2c11a52b1d0d237add7214c3337e1100459e40710955f07ed7d4e"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_42/validation_history.json": {
+      "bytes": 26793,
+      "sha256": "579c2a8009a4ed218fe289735b819f1d8525627c592be4f1b6a502c3829953c8"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/best_validation_scores.npy": {
+      "bytes": 73656,
+      "sha256": "ebfc391a5029b8de741c8dd7d9fcda79d210b8c9af3e04091ce93ef2485da874"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/frozen_training.json": {
+      "bytes": 1415,
+      "sha256": "f7bdb1126f828e21de9001445562b800ca7abf8de740d31449565ce73c269d03"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/test_metrics.json": {
+      "bytes": 1364,
+      "sha256": "2cc2f3da5c88165cb3f324603523e18f67531c1296250285ac7b33b2388a4915"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/test_once_claim.json": {
+      "bytes": 638,
+      "sha256": "acad73863463b2dbc4359fb75df947c4301004a8c9c732d50e92d4e1772cf0d6"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/test_scores.npy": {
+      "bytes": 147184,
+      "sha256": "160d1a2dcb135419586ac260a7edd20c423d9f4f34c404e4d1e8deebc3d257c0"
+    },
+    "EOGFD/YelpChi/results/finals/TR40/seed_72/validation_history.json": {
+      "bytes": 26807,
+      "sha256": "bce6c95922ac5e24481c0e0557082c71dae6ae462384067f49a8e1eefce78f67"
+    },
+    "EOGFD/YelpChi/results/tuning/EOGFD_STAGE3_POP20_COST_GATE.json": {
+      "bytes": 320,
+      "sha256": "7dab03f57f47f1a80974b5500bf856ad210e3f73c415d3a10db8efba83b7ebc1"
+    },
+    "EOGFD/YelpChi/results/tuning/EOGFD_YelpChi_I1_TR40_FrozenWinner.json": {
+      "bytes": 3214,
+      "sha256": "6df299a1d0002283a7a377de96c03586d62540bf9254b3e1b8ba78b6b98638d5"
+    },
+    "EOGFD/YelpChi/results/tuning/EOGFD_YelpChi_I1_TR40_TuningSummary.json": {
+      "bytes": 7360,
+      "sha256": "669c1ca9343eb36aeb69dd07631d35776ce07d2f015abfecff04f489c81b90e4"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_01/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "a4089cf4afac503241a91e2e3528dd851e60d5e5898786a0b56ee6b72d559d84"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_01/validation_history.json": {
+      "bytes": 25484,
+      "sha256": "a7c67a47272c99cb0e15f8b9ff859576c7e5bea71b9b0ea26d67ee5d07f3218b"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_02/trial_result.json": {
+      "bytes": 1230,
+      "sha256": "0dba723b450a474d66adfb1f95e584de20a678460c03e37ef72125496355570b"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_02/validation_history.json": {
+      "bytes": 25486,
+      "sha256": "0ce11bd8eb3ef777b7c0c8bc896360762421cb97a565f20eeceeba0fded145e2"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_03/trial_result.json": {
+      "bytes": 1234,
+      "sha256": "c5287f537f1d57f604cdf5803926d01050cd4e2742d7c587174867155a34d6c4"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_03/validation_history.json": {
+      "bytes": 25527,
+      "sha256": "e8871b498a8414a5e2589f3408ed435967247be734947fe70d031576b175bdf7"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_04/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "2f51cea5c1f1c8853217e0a28b67e64666a2c7835cf854ac36516879f73fab40"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_04/validation_history.json": {
+      "bytes": 25504,
+      "sha256": "5118bf06d5072295ccc0f00bc784dc0ebc39d6ce0871aabe751ad8486392ca7d"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_05/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "15a59c875260b8c3528d3372dc6da1943e072c7aab53f730a47ab909041dedf6"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_05/validation_history.json": {
+      "bytes": 25507,
+      "sha256": "bf944cf37f9388a567aab5c6f10e573a8f78bce4b689f3e2c0d1fb53884db4df"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_06/trial_result.json": {
+      "bytes": 1229,
+      "sha256": "68d07ad7cb635b302e98f7505c663aebcc147c9ca74468402a16f8c4a0b605cc"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_06/validation_history.json": {
+      "bytes": 25507,
+      "sha256": "e0f8db17b4bc865667c5e5967d2730f18a82f363d39303c836a9dd86d113389f"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_07/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "81f006f461c96bdda2b1b1da11ec09c8b52800155fcb8e3589a94fe7985c76b2"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_07/validation_history.json": {
+      "bytes": 25496,
+      "sha256": "3c64c75142ad227e22b1826fe838824879bc819ac78459a2f6d9e98fc65a4e94"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_08/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "9a761a2d6a8c830590ed6ed8e94a7990df8716b9e4c2bfe7baa9450f668b41e4"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_08/validation_history.json": {
+      "bytes": 25479,
+      "sha256": "455bcd29332081ec6444cc5a7a596fcb3e537e2300f024efb1c3c22a5940bc23"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_09/trial_result.json": {
+      "bytes": 1232,
+      "sha256": "744ceaf3aef26e82a1d2207ee85064655b00259377274c40d75925ed044d567e"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_09/validation_history.json": {
+      "bytes": 25525,
+      "sha256": "195499fe38029c34f60a41437a1e65818149bc1a569159ca35df4c55aec06a9c"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_10/trial_result.json": {
+      "bytes": 1231,
+      "sha256": "eb37115af72f80907abaf5c8bf9bcd0c290bd100005cb5538925ca00bf365ce8"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_10/validation_history.json": {
+      "bytes": 25534,
+      "sha256": "e657aeb9c045e678f7d67560770b73b643334a05d42724d9298935960f034e79"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_11/trial_result.json": {
+      "bytes": 1234,
+      "sha256": "701bc37ca3e1ee1135e94f744266ebaf60c73be920ddc1a707faf8049ee17875"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_11/validation_history.json": {
+      "bytes": 25515,
+      "sha256": "81042e1bc6a5fd827cdff357d8806a5cc35dd4b82535bdf3a122a6a7e0af4e4a"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_12/trial_result.json": {
+      "bytes": 1233,
+      "sha256": "32ed3d2f1aff54033b49810953689fda817b429ca1b87ff5ce7aa4c9f7df2723"
+    },
+    "EOGFD/YelpChi/results/tuning/trial_12/validation_history.json": {
+      "bytes": 25516,
+      "sha256": "6ffabacf522d22b99ec4e5d133b037dd37510d1d5609ad7478660c31e550ab1e"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage2_Config.json": {
+      "bytes": 612,
+      "sha256": "4f426adc9c696a8263ca2cbf87b3430d4ae4ce6410ca993bbdc2bf9820db8313"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage2_Launch.sh": {
+      "bytes": 725,
+      "sha256": "9b2b745b8bf8b909b41c0024f9681d37a94b2353417fa612d21be8b4fafab6b2"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage2_RealGraphPilot.py": {
+      "bytes": 8550,
+      "sha256": "b40d132a9cc03ac45f0e0eb9b24b3538f38ce1ae509e12731c1fa0557d9395d0"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage3_Config.json": {
+      "bytes": 640,
+      "sha256": "ecf00ec44eca9ba7ac5d050ec21dd6475ba3e45507791c8c17bbd6c0dc9a9bae"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage3_Launch.sh": {
+      "bytes": 810,
+      "sha256": "62c9ca8195fbdf489196d4d25f11dc52911ced9e6a130d197834487b88251842"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage3_ValidationTune12.py": {
+      "bytes": 16564,
+      "sha256": "f9b04e6399ccfb37235e36a26126954f7ac5363688eaec787c26526940ede5e5"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage4_Config.json": {
+      "bytes": 640,
+      "sha256": "ecf00ec44eca9ba7ac5d050ec21dd6475ba3e45507791c8c17bbd6c0dc9a9bae"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage4_FrozenFinals12.py": {
+      "bytes": 16938,
+      "sha256": "9c7e344f3d43be58c15d956482e44b6f8f023578424a55a16d56d24d8ea748fa"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage4_Launch.sh": {
+      "bytes": 758,
+      "sha256": "0dedef0231fb044cdbc46b27e21057331e11e0e6af3ff1d9a81f32e7a57413b0"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage5_Config.json": {
+      "bytes": 1540,
+      "sha256": "758d5fbeccc309f7287f04277ddc3dc6cdeba2c514d240b2de39fc6a3f4d58a8"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage5_Launch.sh": {
+      "bytes": 713,
+      "sha256": "d5107c3ac2e7efbd4bfa21f47721ea8920747b1231b66250195718209c6664be"
+    },
+    "EOGFD/YelpChi/scripts/EOGFD_YelpChi_I1_Stage5_TestOnce.py": {
+      "bytes": 16211,
+      "sha256": "12c99de98ca4001a3c3b8b6aae40715722504d7b0f7d76c97f6d5ac98ffec2bf"
+    },
+    "EOGFD/YelpChi/status.json": {
+      "bytes": 5536,
+      "sha256": "f1541b6be10d56c14d8d14f505d52d980982c1952b20f2db488265c195479510"
+    }
+  },
+  "model": "EOGFD",
+  "repository": "marufkhan09/COMP8851-fraud-dataset-analysis",
+  "status": "COMPLETED_FROZEN_SPLIT_BENCHMARK"
+}

@@ -1,0 +1,25 @@
+EOGFD_YelpChi_I1_STAGE5_STOP_ERROR=OSError('libcusparse.so.11: cannot open shared object file: No such file or directory')
+Traceback (most recent call last):
+  File "/workspace/comp8851/eogfd/pipeline/EOGFD_YelpChi_I1_Stage5_TestOnce.py", line 262, in <module>
+    try:main()
+  File "/workspace/comp8851/eogfd/pipeline/EOGFD_YelpChi_I1_Stage5_TestOnce.py", line 158, in main
+    K,g,x,device,records,config,winner_sha=preflight()
+  File "/workspace/comp8851/eogfd/pipeline/EOGFD_YelpChi_I1_Stage5_TestOnce.py", line 88, in preflight
+    spec.loader.exec_module(mod)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workspace/comp8851/eogfd/pipeline/EOGFD_YelpChi_I1_Stage4_FrozenFinals12.py", line 13, in <module>
+    import dgl
+  File "/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/dgl/__init__.py", line 16, in <module>
+    from .backend import load_backend, backend_name
+  File "/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/dgl/backend/__init__.py", line 109, in <module>
+    load_backend(get_preferred_backend())
+  File "/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/dgl/backend/__init__.py", line 43, in load_backend
+    from .._ffi.base import load_tensor_adapter # imports DGL C library
+  File "/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/dgl/_ffi/base.py", line 45, in <module>
+    _LIB, _LIB_NAME, _DIR_NAME = _load_lib()
+  File "/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/dgl/_ffi/base.py", line 35, in _load_lib
+    lib = ctypes.CDLL(lib_path[0])
+  File "/.uv/python_install/cpython-3.10-linux-x86_64-gnu/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libcusparse.so.11: cannot open shared object file: No such file or directory

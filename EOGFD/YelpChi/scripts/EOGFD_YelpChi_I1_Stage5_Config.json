@@ -1,0 +1,56 @@
+{
+  "beta": 0.5,
+  "dataset": "YelpChi",
+  "features": 32,
+  "hostname": "2be00658fac4",
+  "id": "I1",
+  "nodes": 45954,
+  "order": 3,
+  "relations": [
+    "net_rur",
+    "net_rtr",
+    "net_rsr"
+  ],
+  "source_name": "YelpChi.mat",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_name": "yelpchi_seed2_nested_splits.npz",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "stage4_config": {
+    "beta": 0.5,
+    "dataset": "YelpChi",
+    "features": 32,
+    "hostname": "2be00658fac4",
+    "id": "I1",
+    "nodes": 45954,
+    "order": 3,
+    "relations": [
+      "net_rur",
+      "net_rtr",
+      "net_rsr"
+    ],
+    "source_name": "YelpChi.mat",
+    "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+    "split_name": "yelpchi_seed2_nested_splits.npz",
+    "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+    "test_nodes": 18382,
+    "train_counts": [
+      18381,
+      13785,
+      9190,
+      4595
+    ],
+    "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+    "validation_nodes": 9191
+  },
+  "stage4_config_sha256": "ecf00ec44eca9ba7ac5d050ec21dd6475ba3e45507791c8c17bbd6c0dc9a9bae",
+  "stage4_script_sha256": "9c7e344f3d43be58c15d956482e44b6f8f023578424a55a16d56d24d8ea748fa",
+  "test_nodes": 18382,
+  "train_counts": [
+    18381,
+    13785,
+    9190,
+    4595
+  ],
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_nodes": 9191
+}
