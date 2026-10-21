@@ -1,0 +1,47 @@
+[######------------------------] 1/5 ( 20.00%) | Attempt 1 | loss=0.037768 | train=392.549s | val_AUROC=0.999099 | val_AUPRC=0.990295 | val_MacroF1=0.979945 | val_FraudF1=0.961092 | val_GMean=0.977070 | best=True
+[############------------------] 2/5 ( 40.00%) | Attempt 1 | loss=0.007123 | train=398.839s | val_AUROC=0.999368 | val_AUPRC=0.991772 | val_MacroF1=0.983311 | val_FraudF1=0.967624 | val_GMean=0.981496 | best=True
+[##################------------] 3/5 ( 60.00%) | Attempt 1 | loss=0.006811 | train=403.854s | val_AUROC=0.999270 | val_AUPRC=0.992012 | val_MacroF1=0.983360 | val_FraudF1=0.967719 | val_GMean=0.981245 | best=False
+[########################------] 4/5 ( 80.00%) | Attempt 1 | loss=0.006472 | train=392.623s | val_AUROC=0.999311 | val_AUPRC=0.992433 | val_MacroF1=0.984497 | val_FraudF1=0.969919 | val_GMean=0.978906 | best=False
+[##############################] 5/5 (100.00%) | Attempt 1 | loss=0.006430 | train=403.176s | val_AUROC=0.999320 | val_AUPRC=0.992425 | val_MacroF1=0.983642 | val_FraudF1=0.968265 | val_GMean=0.980866 | best=False
+{
+  "run_id": "20261020T143457284843Z_tsocial_lexgnn_tsocial_final_tr30_seed2_seed2",
+  "status": "PASS",
+  "model": "LEX-GNN",
+  "dataset": "T-Social",
+  "run_mode": "tsocial_final_tr30_seed2",
+  "seed": 2,
+  "effective_initialization_seed": 2,
+  "initialization_restarts": 0,
+  "epochs_completed": 5,
+  "best_validation_epoch": 2,
+  "best_validation_auroc": 0.9993676973823894,
+  "selected_threshold": 0.53,
+  "training_seconds_total": 1991.0413575628772,
+  "restart_overhead_seconds": 0.0,
+  "training_seconds_including_restarts": 1991.0413575628772,
+  "training_seconds_mean": 398.20827151257544,
+  "final_validation_inference_seconds": 75.01746159698814,
+  "test_inference_seconds": 112.70331349805929,
+  "complete_wall_seconds": 2782.5615827688016,
+  "peak_gpu_memory_mb": 3591.294921875,
+  "test_evaluated": true,
+  "total_parameters": 111978,
+  "trainable_parameters": 111978,
+  "test_metrics": {
+    "auroc": 0.9994062078495772,
+    "auprc": 0.991600112965405,
+    "macro_f1": 0.9829742192608075,
+    "fraud_f1": 0.9669663587770246,
+    "fraud_precision": 0.9752265067623758,
+    "fraud_recall": 0.9588449621299059,
+    "g_mean": 0.9788355341840825,
+    "accuracy": 0.9980250178816533,
+    "threshold": 0.53,
+    "true_negative": 2241016,
+    "false_positive": 1698,
+    "false_negative": 2869,
+    "true_positive": 66843
+  },
+  "result_directory": "/workspace/tsocial_work/results/lexgnn/final/tr30_seed2/20261020T143457284843Z_tsocial_lexgnn_tsocial_final_tr30_seed2_seed2"
+}
+RESULT_DIRECTORY=/workspace/tsocial_work/results/lexgnn/final/tr30_seed2/20261020T143457284843Z_tsocial_lexgnn_tsocial_final_tr30_seed2_seed2
