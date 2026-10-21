@@ -1,42 +1,88 @@
 {
-  "approved_benchmark": false,
-  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
-  "author_full_neighbor_sampling_replaced": true,
-  "candidate_winner_configuration": {
-    "base_lr": 0.001,
-    "drop": [
-      0.2,
-      0.1
-    ],
-    "hidden_dim": 64
-  },
-  "candidate_winner_trial": 7,
-  "dataset": "T-Finance",
-  "fanout_sampler": [
-    10,
-    10
+  "adapted_heldout_test_summary": [
+    {
+      "auprc_mean": 0.8591636550447568,
+      "auprc_sample_sd": 0.03361144758016868,
+      "auroc_mean": 0.960335754628039,
+      "auroc_sample_sd": 0.00697521408238155,
+      "fraud_f1_mean": 0.8021080997335931,
+      "fraud_f1_sample_sd": 0.038866187328194586,
+      "fraud_precision_mean": 0.8435243938138294,
+      "fraud_precision_sample_sd": 0.033862553925640165,
+      "fraud_recall_mean": 0.765466297322253,
+      "fraud_recall_sample_sd": 0.052051279196912104,
+      "macro_f1_mean": 0.8965373699655049,
+      "macro_f1_sample_sd": 0.020238497016939014,
+      "ratio": "TR40",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.8803776068067096,
+      "auprc_sample_sd": 0.027470381561894873,
+      "auroc_mean": 0.9644371840641939,
+      "auroc_sample_sd": 0.009834890991928464,
+      "fraud_f1_mean": 0.830702605894341,
+      "fraud_f1_sample_sd": 0.027502371200653207,
+      "fraud_precision_mean": 0.8686587925526966,
+      "fraud_precision_sample_sd": 0.031769171705295564,
+      "fraud_recall_mean": 0.7959372114496768,
+      "fraud_recall_sample_sd": 0.023842569406602693,
+      "macro_f1_mean": 0.9114589600642246,
+      "macro_f1_sample_sd": 0.014397752707288379,
+      "ratio": "TR30",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.8671788922765201,
+      "auprc_sample_sd": 0.03325697754881146,
+      "auroc_mean": 0.960498361696518,
+      "auroc_sample_sd": 0.005375152353902737,
+      "fraud_f1_mean": 0.8186464710902653,
+      "fraud_f1_sample_sd": 0.028781503738794068,
+      "fraud_precision_mean": 0.8523906672495588,
+      "fraud_precision_sample_sd": 0.008422704708244862,
+      "fraud_recall_mean": 0.7880886426592797,
+      "fraud_recall_sample_sd": 0.045915746410667015,
+      "macro_f1_mean": 0.9051482001127652,
+      "macro_f1_sample_sd": 0.014943136863474685,
+      "ratio": "TR20",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    },
+    {
+      "auprc_mean": 0.8180305178011912,
+      "auprc_sample_sd": 0.05903432445091493,
+      "auroc_mean": 0.9402854470961337,
+      "auroc_sample_sd": 0.01603782792542063,
+      "fraud_f1_mean": 0.7719086382492487,
+      "fraud_f1_sample_sd": 0.06560027397758186,
+      "fraud_precision_mean": 0.8257230930177099,
+      "fraud_precision_sample_sd": 0.093588903435136,
+      "fraud_recall_mean": 0.7262234533702677,
+      "fraud_recall_sample_sd": 0.051346263177421955,
+      "macro_f1_mean": 0.8807802066739425,
+      "macro_f1_sample_sd": 0.03443731533796292,
+      "ratio": "TR10",
+      "seeds": [
+        2,
+        42,
+        72
+      ]
+    }
   ],
-  "model": "RGTAN",
-  "public_evidence_audit_status": "RGTAN_T-Finance_I2_PUBLIC_CANDIDATE_EVIDENCE_AUDIT_PASS",
-  "ratios": [
-    "TR40",
-    "TR30",
-    "TR20",
-    "TR10"
-  ],
-  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
-  "split_seed": 2,
-  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
-  "status": "CANDIDATE_VALIDATION_COMPLETE_SUPERVISOR_APPROVAL_PENDING",
-  "supervisor_approval_required": true,
-  "test_score_count": 0,
-  "test_scored": false,
-  "training_seeds": [
-    2,
-    42,
-    72
-  ],
-  "validation_metrics_summary": [
+  "author_identical_benchmark": false,
+  "candidate_validation_aggregate": [
     {
       "AUPRC_mean": 0.8403876676818663,
       "AUPRC_sample_SD": 0.03715726664541174,
@@ -66,6 +112,32 @@
       "ratio": "TR10"
     }
   ],
-  "validation_only_candidate_finals": 12,
-  "validation_only_tuning_trials": 12
+  "computationally_complete": true,
+  "dataset": "T-Finance",
+  "evidence_audit_status": "RGTAN_T-Finance_I2_STAGE7_INDEPENDENT_12_TEST_METRICS_AUDIT_PASS",
+  "final_training_run_count": 12,
+  "heldout_test_run_count": 12,
+  "heldout_test_scored_once_per_model": true,
+  "method_approval_needed_for_author_identical_comparison": true,
+  "methodological_deviation": "bounded MultiLayerNeighborSampler([10,10]) replacing author full-neighbour sampling",
+  "model": "RGTAN",
+  "predecessor_status": "CANDIDATE_VALIDATION_COMPLETE_SUPERVISOR_APPROVAL_PENDING",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "source_upstream_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "split_seed": 2,
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "ADAPTED_BENCHMARK_COMPLETE_12_OF_12_HELDOUT_TESTS",
+  "supervisor_method_approval_documented": false,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "tuning_trial_count": 12
 }
