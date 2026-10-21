@@ -1,0 +1,56 @@
+{
+  "beta": 0.9,
+  "dataset": "Amazon",
+  "features": 25,
+  "hostname": "f24d1bb2672d",
+  "id": "I2",
+  "nodes": 11944,
+  "order": 4,
+  "relations": [
+    "net_upu",
+    "net_usu",
+    "net_uvu"
+  ],
+  "source_name": "Amazon.mat",
+  "source_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_name": "amazon_seed2_nested_splits.npz",
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "stage4_config": {
+    "beta": 0.9,
+    "dataset": "Amazon",
+    "features": 25,
+    "hostname": "f24d1bb2672d",
+    "id": "I2",
+    "nodes": 11944,
+    "order": 4,
+    "relations": [
+      "net_upu",
+      "net_usu",
+      "net_uvu"
+    ],
+    "source_name": "Amazon.mat",
+    "source_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+    "split_name": "amazon_seed2_nested_splits.npz",
+    "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+    "test_nodes": 3456,
+    "train_counts": [
+      3455,
+      2591,
+      1727,
+      863
+    ],
+    "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+    "validation_nodes": 1728
+  },
+  "stage4_config_sha256": "2500e280738b59588076080a4ead25f409f356a12bfd4595133617142f8b24e8",
+  "stage4_script_sha256": "206c4e0a6b91d84a87648c8cb4d3fe74988bb82277cb119b9adca486c13ccce6",
+  "test_nodes": 3456,
+  "train_counts": [
+    3455,
+    2591,
+    1727,
+    863
+  ],
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_nodes": 1728
+}
