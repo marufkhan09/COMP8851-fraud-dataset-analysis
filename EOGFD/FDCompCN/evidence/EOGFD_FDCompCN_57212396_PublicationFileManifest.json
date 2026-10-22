@@ -1,0 +1,682 @@
+{
+  "branch": "Pathik-ass3",
+  "dataset": "FDCompCN",
+  "destination": "EOGFD/FDCompCN/",
+  "files": {
+    "EOGFD/FDCompCN/README.md": {
+      "bytes": 4533,
+      "sha256": "aec3a2690b6f4ad7e2bb8f17ee665cee6b38c3ea977120a24483ba794ff4a5dc"
+    },
+    "EOGFD/FDCompCN/evidence/EOGFD_57212396_Environment.json": {
+      "bytes": 630,
+      "sha256": "6445abce9aa42e3d2993d8ac02b7f7ada27c017e50208e0639b3c5c8e71d4937"
+    },
+    "EOGFD/FDCompCN/evidence/EOGFD_FDCompCN_57212396_IndependentPublicationAudit.json": {
+      "bytes": 5564,
+      "sha256": "43f597e34725c8fd47b98064f29e3f3bbad3c40fa5d3d43010547fec2b44c3a0"
+    },
+    "EOGFD/FDCompCN/evidence/logs/EOGFD_57212396_Stage3_ImportRecovery.log": {
+      "bytes": 25562,
+      "sha256": "9c90dbf69fa21e7279a6df0d48b4d0599ef520e97c7f3136662d6dd524b12295"
+    },
+    "EOGFD/FDCompCN/evidence/logs/EOGFD_57212396_Stage3_Master.log": {
+      "bytes": 1483,
+      "sha256": "cf13b988e8984bb8bd71cf3185ff9c2df9ac702bf64d104040feec1d467dd8ab"
+    },
+    "EOGFD/FDCompCN/evidence/logs/EOGFD_57212396_Stage4_Master.log": {
+      "bytes": 20494,
+      "sha256": "197f1b30d63f23190ee0bed78dcf9cd3fefa71a9203f56b7d5c556ed61c4afd4"
+    },
+    "EOGFD/FDCompCN/evidence/logs/EOGFD_57212396_Stage5_AuditRecovery.log": {
+      "bytes": 11688,
+      "sha256": "c8b165725c43da79f2fe2d1cbaaf7ca5488d28c83ac694d1ad3a8dee271b4c0f"
+    },
+    "EOGFD/FDCompCN/evidence/logs/EOGFD_57212396_Stage5_Master.log": {
+      "bytes": 2601,
+      "sha256": "d799a6120321030164dd97a50df8cbb89619e90a64869c578e23b885ea4b42c9"
+    },
+    "EOGFD/FDCompCN/evidence/logs/FDCompCN_Stage3.log": {
+      "bytes": 14357,
+      "sha256": "26ca5077837acaf57c12436e587bd0d957a954fd5146f43d63aa55f60ef46c62"
+    },
+    "EOGFD/FDCompCN/evidence/logs/eogfd_elliptic_fdcompcn_stage12.log": {
+      "bytes": 9999,
+      "sha256": "d4d84e09b2671cbdf1426b951c531377103431e72e946d7132d778531fb51656"
+    },
+    "EOGFD/FDCompCN/evidence/stage1_stage2_pilot.json": {
+      "bytes": 1380,
+      "sha256": "a8402891c621199196614ed763012021d37c50875f22ba0de459c7fdf5621cc7"
+    },
+    "EOGFD/FDCompCN/results/finals/EOGFD_FDCompCN_Stage4_12FrozenFinalsSummary.json": {
+      "bytes": 1509,
+      "sha256": "59d1ded3e8d4105f5e2cd6ef3e5a40e9dca9b1671336b039bbe6b5475e388129"
+    },
+    "EOGFD/FDCompCN/results/finals/EOGFD_FDCompCN_Stage5_All12_PretestAudit.json": {
+      "bytes": 5758,
+      "sha256": "aa2969f5b83be00cf5dd797ea3936a74fea86d921457df7ccfbfe67856835b42"
+    },
+    "EOGFD/FDCompCN/results/finals/EOGFD_FDCompCN_Stage5_AllRatios_Summary.json": {
+      "bytes": 5679,
+      "sha256": "3866b264747a49da3ffa38ac58aa2a1bf4d9379b163647686400afbd8422a421"
+    },
+    "EOGFD/FDCompCN/results/finals/EOGFD_FDCompCN_Stage5_ValidationReplayProvenance.json": {
+      "bytes": 558,
+      "sha256": "da297bb2d37c9bb1e07176ebd0c48940087107c9078fdca60a4df010902d4cda"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "f381cec08c75d608f6d44693c02edd90986eb74b750dfb2ef44ac6db1545fe8f"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/epoch_times.csv": {
+      "bytes": 1653,
+      "sha256": "e5cf2eeb1932c9db09f0a8f6d0f17acdfed3c44f0062635a24879b8079e619eb"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/frozen_training.json": {
+      "bytes": 1929,
+      "sha256": "54eabf0c0117912be01bbbd858660e6e447a37657432c1014d63655c18b63431"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/test_metrics.json": {
+      "bytes": 1939,
+      "sha256": "8c87a42fed00ca2b0bfd6568c4e41a6649de4f31c8f9b5dd11a0f78ebf90258d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/test_once_claim.json": {
+      "bytes": 882,
+      "sha256": "dbfcad8048f5dcb11a46ca08536e6d2212d0800f01655626e903b4381c37d95c"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "8a79c2328d367784d6304a1392424436b1282c42d5aba219b4924759fd117bf3"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_2/validation_history.json": {
+      "bytes": 17955,
+      "sha256": "ce9a4bfb4135096f78f926b79f6f7a421f7971b4f95e4cafebc4e5611980d724"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "0d440122c60bfec5723dd76a2db9127202a7305624054c83698110cc58d1e146"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/epoch_times.csv": {
+      "bytes": 2208,
+      "sha256": "e2a8cc10adbfc80f65301c0d574f58f19fc22d8b9f60c8d23634abb7bb92ed38"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/frozen_training.json": {
+      "bytes": 1930,
+      "sha256": "5036442616251f85885b4de65fe53fd1ba1ed11fe79e7282a7849197efdb807d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/test_metrics.json": {
+      "bytes": 1937,
+      "sha256": "018ae8fc0a29045c37303f998dddeb002e9712cd8281bf2d9bf6aed37500ca3f"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "b4df56512b513ba41043df852ee4fbce7af9ea9415471c90c85e2440c8c7df1e"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "bc9c8eaeef570dfbd7e2c2f4805c1a283e76e8615696308c57daf8c09ad88257"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_42/validation_history.json": {
+      "bytes": 24194,
+      "sha256": "e360fc421e841a6c1073f3bb7aa50dadaeb4d9bbdfbc236bd2ecc4992e618c56"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "413267bf09fa566b491e9b2ae7ab1e532ec0b51e7cddb35a73e64c91da4c9f94"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/epoch_times.csv": {
+      "bytes": 2097,
+      "sha256": "4aa94ccd93d93ed6908d27ffea7f6fe6dcc283681ecf7977094b015d01c5031a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/frozen_training.json": {
+      "bytes": 1932,
+      "sha256": "a9ace5b63b5a6791e3c9584c5cb112da4fada6023707bd1a5cd3957d99ea6e33"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/test_metrics.json": {
+      "bytes": 1920,
+      "sha256": "951096b06bf5ee8a80d0b53a83ef862ca163dcefb9344a9d36ca979e390868e2"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "9ceb310663783ddef15af137cddbfd8dcc341500672229caac15a5f9c43cec7a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "3ffdc9f444a3d5d1514acab62568548a6c55467e7aa6d48f1b66301864a2e23c"
+    },
+    "EOGFD/FDCompCN/results/finals/TR10/seed_72/validation_history.json": {
+      "bytes": 22963,
+      "sha256": "fe7fcf00d8cecbf6191aa72522dbdd40aa6fb424de943b0e0ce70e29d9ed4cd3"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "23b5b13da14f1d39b7144050e056c4693da4384036c2ca92a831aa089483ecae"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/epoch_times.csv": {
+      "bytes": 1098,
+      "sha256": "698d73c032515e3d5e44d40cb94b3ec591cae8eb1dc3561389d36b9880549f4f"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/frozen_training.json": {
+      "bytes": 1931,
+      "sha256": "9ea3e0174194f9b3295f1112d05c66d1e9f7eaa04e0d19f1a51e44293c100aa0"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/test_metrics.json": {
+      "bytes": 1938,
+      "sha256": "f93b10008e5504cd0f399237141b70e574947ef7c72b6f26b76482539a22dd73"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "06617d72eff059c4c51f5b7b6b927345626ac84e68065b39128120aa3f5173a7"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "51b2851c2c45ce54dad64b1eecbf056712405c94ac89ff1ec73a098da894973b"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_2/validation_history.json": {
+      "bytes": 11725,
+      "sha256": "c207599131d59dc09244287eb26a67a4360a7da3ee40669640c09c7d7b63ee4d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "57e309ed2e2154cd29d8d1e695bda7dec7e29a4f1801bd942f71ba83c21cfb8b"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/epoch_times.csv": {
+      "bytes": 2948,
+      "sha256": "a7192834b6ffedd2fc8fbb6221fd620a5dc1490bc41d5707583f0254aba8d280"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/frozen_training.json": {
+      "bytes": 1917,
+      "sha256": "ecc106fbe6848f437af28698edc30ca5f077e3bf89dcc232dbc62b8efe6366b7"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/test_metrics.json": {
+      "bytes": 1939,
+      "sha256": "1c1c9e338fc5de51ce29b27c763f4b3f8b194479761190242236affc164d5a89"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "68db8a426376bc71af8f2f6e98f3670e694569b5b05196922a3ece4e2118cd9e"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "465de1e582abd04e25871885b0422f7d44026881b1048ed8744b86fd1335c424"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_42/validation_history.json": {
+      "bytes": 32489,
+      "sha256": "5b80426c7daf0bbe349f2fd4b7ba6c11a732c3bbfee684d5f48abf6a7988d7d9"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "91b4fc7d1f5e182301ee76a2f3f687f767b60152a5eb85271f6f4163d31a81b9"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/epoch_times.csv": {
+      "bytes": 2134,
+      "sha256": "b1946a3398756f25bf90a00a209708badeb601f46f58521becd74f74be267aa9"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/frozen_training.json": {
+      "bytes": 1933,
+      "sha256": "c819b9fd3e4a567b22d0bae5aab1161b9ae4440f68c9072586a83a5c969582a5"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/test_metrics.json": {
+      "bytes": 1938,
+      "sha256": "f3b8c2ad151ce16f359e2581ad0143fe86005186413941806f10540f9d355827"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "04878b88a6ca764b468cb247536b482b03041b0981ce21b5f2a567dc74aa6e8b"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "6420930bc65203a84d0e70dbcb8a4d361ebf2c98045804b4e9a85248ce490a00"
+    },
+    "EOGFD/FDCompCN/results/finals/TR20/seed_72/validation_history.json": {
+      "bytes": 23364,
+      "sha256": "b63737e6aa1423bb19e92f18cbe6e070e727a3c651799285e61205e96cf2132d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "8c3ef79bf7f34205b1e508088028bc189f6e8efe4cc1a5bb839eb132749d3c0c"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/epoch_times.csv": {
+      "bytes": 1135,
+      "sha256": "72bb87d7cce49730071bfd3ee06ef51ed170a8f428a3c3938ee8d3f0991ba010"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/frozen_training.json": {
+      "bytes": 1915,
+      "sha256": "75c21e803dd1bd2fdbc1018ceabde90fe716c954a843b8eb937e4940b19f220d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/test_metrics.json": {
+      "bytes": 1938,
+      "sha256": "9facde2538a0f71660f7f101ccefebb6fd6e205cdfd32e9ea578020d4ff23e68"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "6cc1697a7c735ab567b9d0e04daac3e171248345bee6240978e5533784b38917"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "705eb7571d20afb0cfe2aab6e300f4cae170cb49f929b8ebdc5f59df0dc87752"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_2/validation_history.json": {
+      "bytes": 12083,
+      "sha256": "62baec4d13adfd4cdd08a180428549ded59ec987ba6399a89de2fab583a7e084"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "864fc8c96cf4f05e76a6648c0d925bcbd43bd35f8753c59f905f6b5fae51ef05"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/epoch_times.csv": {
+      "bytes": 1727,
+      "sha256": "83e0955b1fd093807700c5a0246a579a7184b931da2e6e4ced8c58e8e63b9fc9"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/frozen_training.json": {
+      "bytes": 1931,
+      "sha256": "c5fdc5b9bfa48156ae9a558c618bbe2e1562064c980c546a225e39d4acd10829"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/test_metrics.json": {
+      "bytes": 1920,
+      "sha256": "f2731b7e4c16ecff9409b8892dc5c79aa6b3a4fa64e0b93b1bb4ee72a8b8f825"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "2f576ad6f6d2190daf5c31e2caafdf37ec7d977b30d8a82486b8352a488be721"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "1ab8360c56aa4c4417887fd3c4880d034330f30519bca201b253aadf5584c264"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_42/validation_history.json": {
+      "bytes": 18790,
+      "sha256": "6eae46430d676cb083151049900034f76797ecc4705eac38825743f9d91d3147"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "e3b390510c2c6fbf9377229415c3f4386b6dcdfad5e60d8522c268354f40d8a5"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/epoch_times.csv": {
+      "bytes": 1468,
+      "sha256": "7b01cea02b6ff6adbdebeddeb0541702f7a9ad3eede195d69bfa2b43d50de1c1"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/frozen_training.json": {
+      "bytes": 1933,
+      "sha256": "984f39464079c0d15ad44db3ce486e4c88bb625c386697fb66459a377856e599"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/test_metrics.json": {
+      "bytes": 1937,
+      "sha256": "8c8cd60d191a0aab1c3efcaa439e52d9cd42641ea51a403e4de7460e408e140d"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "a412152fb89c4cff65fba863d8175b929691575b7303b790005e07fa60542499"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "6a14ad2ce2003e4de8927e5b0395089024784d8dc0a71344802bafcd14f618a2"
+    },
+    "EOGFD/FDCompCN/results/finals/TR30/seed_72/validation_history.json": {
+      "bytes": 15876,
+      "sha256": "05f4971a213e59ccf1533c6d8a66b900daed0e51e3129066999080024a8c05b1"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "096b458eae486b81f17bf62451c36fb9b3e54fcff370950f8412d5d921589c39"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/epoch_times.csv": {
+      "bytes": 3763,
+      "sha256": "4ea1c9bd423a5b6cb4b4aaa19e4359d3f2e79e87ef5e575edcce76726b5b50e1"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/frozen_training.json": {
+      "bytes": 1932,
+      "sha256": "bdb2568007de010fdbf82d462025a0f32a5919b7ba02f5a2abb6f3e431ad630a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/test_metrics.json": {
+      "bytes": 1936,
+      "sha256": "5d0ef77d3a7644ed5e9a87113ceed9742fd8a1204fcfa5986191393fd20c392e"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/test_once_claim.json": {
+      "bytes": 881,
+      "sha256": "ddeaa7297fc2b5d0ed8e54934c8430f6c0664f33f4d4091886308574021b8206"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "a3d9c63d8747bc8251ae261a61982e3210a41f4e57e2f7f195c2657b71967e23"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_2/validation_history.json": {
+      "bytes": 41673,
+      "sha256": "2c4ce36f469384143e0981c606fc76eb1a2baa4ef663e244c18b1d4e3f8b31cb"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "9c568184eac385f95aeb57013e7c0ebba9079ff14edde7e8f7956db380481a14"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/epoch_times.csv": {
+      "bytes": 1690,
+      "sha256": "565a779d168b36077e7e1c7733498e3781f770437e8a2fea4f85c9b97c81367c"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/frozen_training.json": {
+      "bytes": 1932,
+      "sha256": "3b0e787810bc22d26a6f1bfb9b00f34fc465267268eea507f2f5df4f5d54e45b"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/test_metrics.json": {
+      "bytes": 1923,
+      "sha256": "3def016b78bb4d1989e1d61344992ab39d17a77c062e1dbe5bd8000cc5187da5"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "aa7a00a454159b5efe71207ba1bbdf12378092d738753a4a69fbee30adc9a073"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "e2352baab5772d1bd0bea817a165943d45410bc4e3c8f7012fa5c43add1ba9dd"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_42/validation_history.json": {
+      "bytes": 18389,
+      "sha256": "cbd481bbd143dd13bc333d61331f9fecb47b74ae2bf8aff113279b9067e63d7f"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "f905bdf2becc0d46a1b8cc29a24b2cdec9848ccc82ce5ae505c4538d14b33f1a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/epoch_times.csv": {
+      "bytes": 2763,
+      "sha256": "0ecfb8688cc1ffff5923751539c5b9552aaf3fdf68a05577184fcb13d3105424"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/frozen_training.json": {
+      "bytes": 1932,
+      "sha256": "e5a47ae98383f4f2a17946179692ea76760518984d5e71725aaa2adaaa086d9a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/test_metrics.json": {
+      "bytes": 1938,
+      "sha256": "db09baafd9b970ed164802653c0af98b439ebae2dec45a58c62fa80f5b93da0f"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "1923619c51c0a2b5d9d904a6af426d60f3b82c4611193f98eca11fbdb61f3a8a"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/test_scores.npy": {
+      "bytes": 17144,
+      "sha256": "4e009c94e73b9cf6e58ab518c360c5fa4cf4fec80417b9eae3ae64a5ab311cea"
+    },
+    "EOGFD/FDCompCN/results/finals/TR40/seed_72/validation_history.json": {
+      "bytes": 30444,
+      "sha256": "99febb038a59695aa7819a4be8ff242b0854362b9f16dc161ed15fb868d5f172"
+    },
+    "EOGFD/FDCompCN/results/finals/stage4_frozen_training_manifest.json": {
+      "bytes": 1258,
+      "sha256": "899cc31face13c68c28ebedf34a19f4fb97d5bbdccaf43b7178594b8dde13aa6"
+    },
+    "EOGFD/FDCompCN/results/tuning/EOGFD_FDCompCN_NewI_TR40_FrozenWinner.json": {
+      "bytes": 1408,
+      "sha256": "087773f22087c94868f62b44e0ca91278926af1784cb79dbf6823f439e50fa46"
+    },
+    "EOGFD/FDCompCN/results/tuning/EOGFD_FDCompCN_NewI_TR40_TuningSummary.json": {
+      "bytes": 5375,
+      "sha256": "9ccf38794522848e7c1321ddaf992a6d0b0eb33b20e3185f69fbe86df5d6fca6"
+    },
+    "EOGFD/FDCompCN/results/tuning/population20_cost_gate.json": {
+      "bytes": 363,
+      "sha256": "2dc3355f38a00cfccaa260ead2939a19f5fc37b0c3612bfe9781c674e8fdd36e"
+    },
+    "EOGFD/FDCompCN/results/tuning/stage3_run_manifest.json": {
+      "bytes": 3577,
+      "sha256": "84c89bc392030290c88053588f8bd687bf45130bac762cba40759cbb8f5720ba"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_01/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "5bc62fe1ba4588b127942b307335218d819b2f58aabf4386d7a4ed01fe9a6f9d"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_01/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "c3890dd33646658a9e5072ce6de30a5e53180c19867018aca77fd877162d3703"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_01/trial_result.json": {
+      "bytes": 1491,
+      "sha256": "40ab4c13f12956ac3102bbf0346826728f23a9ef93164b689cc8d1a8eca655fe"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_01/validation_history.json": {
+      "bytes": 41056,
+      "sha256": "e1fe526d2b56585281c5148a79cf2362203211b6d65fb9efb0173dc4d221fab6"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_02/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "0abc8cec54bc48437df374ee1cc500b8c6ef412d23f652cf06c67eb81e02406e"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_02/epoch_times.csv": {
+      "bytes": 2604,
+      "sha256": "c5c6301845c5558de8c600e3f6e0bc7fc651c1b6d3fa7a1f22dbc08d396eaa4c"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_02/trial_result.json": {
+      "bytes": 1485,
+      "sha256": "8c291f01b10bd0e082dbf64acad32c62ae57d90d64f475e2b9d8c77672a79197"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_02/validation_history.json": {
+      "bytes": 33638,
+      "sha256": "e2d4b49616d48a18dd1047ebbbef2f505d46d8d7609d6adc6dd82053928f250c"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_03/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "72dd59e168e07da55c9c9c8831a7b981473a4f6c29b98f77db70d450b68d1245"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_03/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "a2265096ba677735414287a80560b53cb19d12ffeb3c6b80bc92ce10b3ae2980"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_03/trial_result.json": {
+      "bytes": 1489,
+      "sha256": "fbd6f0a91b72038fb4265b724098bd0ccf139ae55c8b66f5adefa9ab92d7c3fc"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_03/validation_history.json": {
+      "bytes": 41125,
+      "sha256": "fa61de76e6bdfe5d1d70b09824c146d7142a4007691ca130d1962ded0b689746"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_04/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "fbfc120266b08f3079e6c947d55a44b32cbb4a845a1eb9d44602241ebc8c6315"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_04/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "f85bbc95611ed8ec2c2efbc9bcb1dedb1c8f927234c5587bdb13201287bb3dc6"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_04/trial_result.json": {
+      "bytes": 1490,
+      "sha256": "20838c8ca0a874e9918e66adebf666ee98ec2e89179299a1fba967d8ceb98c1a"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_04/validation_history.json": {
+      "bytes": 41174,
+      "sha256": "85e7de21618a83b429fc7da37304a6e9c9c7a048acd3c06ba22d411920d5a0b7"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_05/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "1ac58db92f1faf520d1321bc2f232675a315fa61dc2820f945548134e475a27d"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_05/epoch_times.csv": {
+      "bytes": 1023,
+      "sha256": "caa953020b66b4375acb2acdcf277f85a76e187dc95d0dc16cc9f190db319831"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_05/trial_result.json": {
+      "bytes": 1491,
+      "sha256": "333a0740cad46ff546b9a077f565353b709e41dd48286ff470cc696666823aff"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_05/validation_history.json": {
+      "bytes": 12817,
+      "sha256": "abec99aedde5afb85172d1d627568a1b272b8afa12a29a827cea4dcea87d1be3"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_06/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "4dc66faf9e9cb358fe18d274c88452c3d6cc5975c98b943483b068bce791d213"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_06/epoch_times.csv": {
+      "bytes": 1240,
+      "sha256": "87780e6a9e24a0617cc681b25ce1cc13e9ce051a9f7a44bcbc0104dcb3a5e21b"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_06/trial_result.json": {
+      "bytes": 1490,
+      "sha256": "247454f8e753e39ad9ce0907c65af80391e199382692cb7eeaf71b43e7b6c011"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_06/validation_history.json": {
+      "bytes": 15676,
+      "sha256": "d031177b988f88a965472ebf83865126098ccc673fd2cd800e5e860d945d01da"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_07/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "c4d77afbab67acc4703eb1edbd60967385f9f2103e862dbf69cf117658e60ffd"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_07/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "cee5fcbf560a59bd100ab840b3a4e75b68ac2f8b6e2da8b1f590bc3c8fa0a773"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_07/trial_result.json": {
+      "bytes": 1489,
+      "sha256": "fc981e43214aeaaf60b87ebda614703df2b7d149ab8fc1361693daa02005dc83"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_07/validation_history.json": {
+      "bytes": 41159,
+      "sha256": "3729c693100c34ae131f7d240400c09aac3289fcc9bd6b408e7f80fb889e5121"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_08/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "bb83b5e9b66ae12373f42996ecea6466fc8c6ee3064274a3cd0f8c17073eb577"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_08/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "a470466c3150398a911fbe8422d9265534e101a583b4f3371a956e377d80634f"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_08/trial_result.json": {
+      "bytes": 1490,
+      "sha256": "dd9c67d57c96ebe4c938a9ab30073e6ef179c4ede4d23a3c3df4247bdeadaa0e"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_08/validation_history.json": {
+      "bytes": 41038,
+      "sha256": "181e551cd64f10df5baa2ee7a5fe138b143b05252d07683583f41760a39ce811"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_09/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "45dcdee6ca8da91bd6c3e12a2e5935f828036658dae773f9ba6f71e181fe090f"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_09/epoch_times.csv": {
+      "bytes": 744,
+      "sha256": "8f75f0b9d6b1ae2c3cddda07e7aeb1058c48433de14c78f63600abc4ded1f970"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_09/trial_result.json": {
+      "bytes": 1477,
+      "sha256": "e40903d0fbbe5132048ea859184208b5e55c496d44eeb543bc0796f429dac8b3"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_09/validation_history.json": {
+      "bytes": 9050,
+      "sha256": "963b091129c630fc747ec2af9a036d8d10b75ec546aea9cfbfc4cddf2707bd26"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_10/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "ec5b73ec9e5d20b7448a5b6e80593c2c7f494b14f840e70661d2a36c482b8fa1"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_10/epoch_times.csv": {
+      "bytes": 713,
+      "sha256": "96d40382f35cf74cd7661463d27ca17d03bb8588371549ba5b1aa28106389309"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_10/trial_result.json": {
+      "bytes": 1490,
+      "sha256": "f1a7acf6055acc3d383d944cb7ef323392af2b03b7d6c988c37ec3f1a6b64e59"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_10/validation_history.json": {
+      "bytes": 8640,
+      "sha256": "7503ab5c55688d86c94e6a1e6094d68a70e964d6d3a4ed66c39442817f524b86"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_11/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "eeb79d98b846967d117095b47c3c63d4d96886f0d4ef5c126547f778a90a6502"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_11/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "daa6c93bc56c2efe63a1627ededfb37e157c8e31a7dcfd268253274132971ae6"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_11/trial_result.json": {
+      "bytes": 1478,
+      "sha256": "54ee22da902f750fbf84802023339b83b890e6f685532b448590d0750ba60c3b"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_11/validation_history.json": {
+      "bytes": 41118,
+      "sha256": "e2e08c218258e3b15b001454a7f465b70f9f9e5e6c43168939187f735a82801a"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_12/best_validation_scores.npy": {
+      "bytes": 8640,
+      "sha256": "cb61c818b9eb0a75edf7af8d5f277e3c4f64c13a706b9a00161cbd602b566042"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_12/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "3d2b0307c84bddcb27deec51284dccefa07bd74932bc9e25197c5a0d73b95aef"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_12/trial_result.json": {
+      "bytes": 1491,
+      "sha256": "4c1c33a14f68a0594a5e7171e01e6754e1e6dacd5bf6e7ad7d8897d72dadc009"
+    },
+    "EOGFD/FDCompCN/results/tuning/trial_12/validation_history.json": {
+      "bytes": 41184,
+      "sha256": "fd6e38881ce683ad3f5eafed48fe68ec392238b30ff224a076e643ec9688f691"
+    },
+    "EOGFD/FDCompCN/scripts/enable_eogfd_cuda11.sh": {
+      "bytes": 366,
+      "sha256": "c3dadfdbaa12527fb2fbe76bde563aaff9ce8126ac029eea7951412f46c5a07b"
+    },
+    "EOGFD/FDCompCN/scripts/stage2_pilot_elliptic_corrected.py": {
+      "bytes": 11898,
+      "sha256": "81112b076aa3936039422a297fae948f09753d1ed36138b940fdb244aba92160"
+    },
+    "EOGFD/FDCompCN/scripts/stage2_pilot_original.py": {
+      "bytes": 11898,
+      "sha256": "70879ceaac03871676e408dbc2902581c26fba31bcf9d6991977702871ff3706"
+    },
+    "EOGFD/FDCompCN/scripts/stage3_launch_both.sh": {
+      "bytes": 1059,
+      "sha256": "43a10ccceb17f664effafb6a92ab9f03f776865c0eccf5b864f88c06ec853643"
+    },
+    "EOGFD/FDCompCN/scripts/stage3_runner.py": {
+      "bytes": 25121,
+      "sha256": "05e4a6c2e6e0b535df4ab384cd85d25ddd8898b9e78d63574ed55c2fe5e7016f"
+    },
+    "EOGFD/FDCompCN/scripts/stage4_launch_both.sh": {
+      "bytes": 1670,
+      "sha256": "090aaa00de44a482f0658edea7447e723c9b66b9ecac328b3e1addca29544fba"
+    },
+    "EOGFD/FDCompCN/scripts/stage4_runner.py": {
+      "bytes": 24115,
+      "sha256": "ba463b693f59aee7f1e2b91d2c1d8d13b0aa83258b527c953617b1af27740deb"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_integrity_and_safe_resume.sh": {
+      "bytes": 1942,
+      "sha256": "dd277c78c79e86db2cc1fe2600ecd23a8af1f07d7e3b88069a3d0a81303906c8"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_launch_both.sh": {
+      "bytes": 2611,
+      "sha256": "f5a76426f0e2a0a5dd7eb1d1bf348376645b7a1dc4e84797884101d4cae3c513"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_launch_both_dualsnapshot_audited.sh": {
+      "bytes": 2736,
+      "sha256": "18b7cdff8d5fc741cde0d837e4682ceda04f2b165a388428cb5f21a8e0348e98"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_pretest_forensics.py": {
+      "bytes": 3600,
+      "sha256": "2c1d85d44e9b0df67dbe99908dfe27dcd68947c9035b09719ae73209b96d18ed"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_test_once_dualsnapshot_audited.py": {
+      "bytes": 29503,
+      "sha256": "792a4135d0ccec5439a6c1dde4a1803f17626e0bcd6fbadd2da7987a01527d82"
+    },
+    "EOGFD/FDCompCN/scripts/stage5_test_once_original.py": {
+      "bytes": 26763,
+      "sha256": "b775575f81d45a610a01e43a003b42854662f9976afd2750a1bf11f0df8e4269"
+    },
+    "EOGFD/FDCompCN/scripts/stage6_mac_verify_and_publish.sh": {
+      "bytes": 6670,
+      "sha256": "95db7781088b6539cb846675a0ceb9419654c5cfb9782d938a5217bf4152d897"
+    },
+    "EOGFD/FDCompCN/scripts/stage6_offline_export_and_private_backup.py": {
+      "bytes": 26412,
+      "sha256": "2ca83579fc4d7c17df6d4b634d99e0560ebfb25e4a01b47dfcc37f507f33a43f"
+    },
+    "EOGFD/FDCompCN/status.json": {
+      "bytes": 5852,
+      "sha256": "929a175f13a87a57a4c9f599435bacdd38a3863b1a1531efd51ef39c8855fe99"
+    }
+  },
+  "model": "EOGFD",
+  "repository": "marufkhan09/COMP8851-fraud-dataset-analysis",
+  "status": "COMPLETED_CONDITIONAL_UNIFIED_BENCHMARK"
+}

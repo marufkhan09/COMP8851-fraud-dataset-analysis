@@ -1,0 +1,27 @@
+{
+  "checked_frozen_checkpoints": 12,
+  "dataset": "Elliptic",
+  "differences_larger_than_1e-8": [
+    {
+      "absolute_difference": 5.2157804741881364e-08,
+      "checkpoint_best_epoch_value": 0.8122148467608907,
+      "field": "val_auroc",
+      "maximum_allowed_difference": 1e-06,
+      "post_restore_replay_value": 0.812214794603086,
+      "ratio": "TR30",
+      "seed": 2
+    }
+  ],
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "purpose": "Separate checkpoint best-epoch validation snapshot from independently saved replay validation snapshot",
+  "status": "PASS_BEST_EPOCH_AND_POST_RESTORE_REPLAY_CONSISTENT_WITHIN_MICRO_TOLERANCES",
+  "test_labels_opened": false,
+  "test_scored": false,
+  "tolerance": {
+    "threshold": 1e-12,
+    "val_auprc": 1e-08,
+    "val_auroc": 1e-06,
+    "val_fraud_recall": 1e-06,
+    "val_macro_f1": 1e-06
+  }
+}

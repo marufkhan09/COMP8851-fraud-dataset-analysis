@@ -1,0 +1,17 @@
+{
+  "checked_frozen_checkpoints": 12,
+  "dataset": "FDCompCN",
+  "differences_larger_than_1e-8": [],
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "purpose": "Separate checkpoint best-epoch validation snapshot from independently saved replay validation snapshot",
+  "status": "PASS_BEST_EPOCH_AND_POST_RESTORE_REPLAY_CONSISTENT_WITHIN_MICRO_TOLERANCES",
+  "test_labels_opened": false,
+  "test_scored": false,
+  "tolerance": {
+    "threshold": 1e-12,
+    "val_auprc": 1e-08,
+    "val_auroc": 1e-06,
+    "val_fraud_recall": 1e-06,
+    "val_macro_f1": 1e-06
+  }
+}

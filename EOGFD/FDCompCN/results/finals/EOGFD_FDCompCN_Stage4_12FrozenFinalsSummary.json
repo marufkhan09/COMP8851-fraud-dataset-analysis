@@ -1,0 +1,57 @@
+{
+  "completed_finals": 12,
+  "dataset": "FDCompCN",
+  "frozen_config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.001,
+    "mutation_rate": 0.05,
+    "order": 3,
+    "population_size": 10,
+    "weight_decay": 0.0
+  },
+  "frozen_winner_sha256": "087773f22087c94868f62b44e0ca91278926af1784cb79dbf6823f439e50fa46",
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "model": "EOGFDHeteroModel",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "EOGFD_12_CONDITIONAL_FROZEN_TRAININGS_COMPLETE",
+  "test_evaluations": 0,
+  "test_scored": false,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_stats": [
+    {
+      "ratio": "TR40",
+      "validation_AUPRC_mean": 0.1986924375432634,
+      "validation_AUPRC_sample_sd": 0.019108633464802467
+    },
+    {
+      "ratio": "TR30",
+      "validation_AUPRC_mean": 0.16313109723286687,
+      "validation_AUPRC_sample_sd": 0.005805091700510444
+    },
+    {
+      "ratio": "TR20",
+      "validation_AUPRC_mean": 0.16437966122902176,
+      "validation_AUPRC_sample_sd": 0.004316606256279862
+    },
+    {
+      "ratio": "TR10",
+      "validation_AUPRC_mean": 0.165490340016078,
+      "validation_AUPRC_sample_sd": 0.002788572203419329
+    }
+  ],
+  "venus_approval_recorded": false
+}

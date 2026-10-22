@@ -1,0 +1,144 @@
+
+EOGFD_57212396_BOOTSTRAP_START=2026-10-22T13:15:20Z hostname=60d39211b1fd
+0, NVIDIA RTX A6000, 49140 MiB, 2 MiB
+EOGFD_NEWI_MAC_ASSET_ZIP_STRUCTURE_AND_CRC=PASS
+EOGFD_NEWI_NO_ASSET_OVERWRITE_CONFLICT=PASS
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS comp8851/assets/elliptic/source/elliptic_txs_features.csv
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS comp8851/assets/elliptic/source/elliptic_txs_classes.csv
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS comp8851/assets/elliptic/source/elliptic_txs_edgelist.csv
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS uploads/ass2_split_candidates/Elliptic/elliptic_seed2_nested_splits.npz
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS comp8851/assets/fdcompcn/source/comp.dgl
+EOGFD_CANONICAL_ORIGINAL_SHA_PASS uploads/ass2_split_candidates/FDCompCN/fdcompcn_seed2_nested_splits.npz
+EOGFD_NEWI_ALL_SIX_CANONICAL_INPUTS=PASS
+EOGFD_INSTALL_ISOLATED_PYTHON310_ENV=START
+Downloading cpython-3.10.22-linux-x86_64-gnu (download) (28.0MiB)
+ Downloaded cpython-3.10.22-linux-x86_64-gnu (download)
+Installed Python 3.10.22 in 1.27s
+ + cpython-3.10.22-linux-x86_64-gnu (python3.10)
+warning: `/.uv/python_bin` is not on your PATH. To use installed Python executables, run `export PATH="/.uv/python_bin:$PATH"` or `uv python update-shell`.
+Using CPython 3.10.22
+Creating virtual environment with seed packages at: comp8851/env/eogfd-legacy
+ + packaging==26.3
+ + pip==26.2.2
+ + setuptools==84.2.1
+ + wheel==0.48.0
+Activate with: source comp8851/env/eogfd-legacy/bin/activate
+pip 26.2.2 from /workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/pip (python 3.10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'numpy'
+Collecting numpy==1.23.5
+  Downloading numpy-1.23.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.3 kB)
+Collecting pandas==1.5.3
+  Downloading pandas-1.5.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting scipy==1.10.1
+  Downloading scipy-1.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Collecting scikit-learn==1.2.2
+  Downloading scikit_learn-1.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting networkx==2.8.8
+  Downloading networkx-2.8.8-py3-none-any.whl.metadata (5.1 kB)
+Collecting pyyaml==6.0.2
+  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting tqdm==4.65.0
+  Downloading tqdm-4.65.0-py3-none-any.whl.metadata (56 kB)
+Collecting python-dateutil>=2.8.1 (from pandas==1.5.3)
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting pytz>=2020.1 (from pandas==1.5.3)
+  Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Collecting joblib>=1.1.1 (from scikit-learn==1.2.2)
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.2.2)
+  Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.1.1->scikit-learn==1.2.2)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting six>=1.6 (from python-dateutil>=2.8.1->pandas==1.5.3)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting tzdata (from python-dateutil>=2.8.1->pandas==1.5.3)
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading numpy-1.23.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 90.9 MB/s  0:00:00
+Downloading pandas-1.5.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 299.5 MB/s  0:00:00
+Downloading scipy-1.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.4/34.4 MB 87.7 MB/s  0:00:00
+Downloading scikit_learn-1.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 79.0 MB/s  0:00:00
+Downloading networkx-2.8.8-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 385.9 MB/s  0:00:00
+Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 449.6 MB/s  0:00:00
+Downloading tqdm-4.65.0-py3-none-any.whl (77 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Installing collected packages: pytz, tzdata, tqdm, threadpoolctl, six, pyyaml, numpy, networkx, cloudpickle, scipy, python-dateutil, joblib, scikit-learn, pandas
+
+Successfully installed cloudpickle-3.1.2 joblib-1.6.0 networkx-2.8.8 numpy-1.23.5 pandas-1.5.3 python-dateutil-3.0.0 pytz-2026.5 pyyaml-6.0.2 scikit-learn-1.2.2 scipy-1.10.1 six-1.17.0 threadpoolctl-3.7.0 tqdm-4.65.0 tzdata-2026.5
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cu113
+Collecting torch==1.12.1+cu113
+  Downloading torch-1.12.1%2Bcu113-cp310-cp310-linux_x86_64.whl (1837.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 GB 150.7 MB/s  0:00:11
+Collecting typing-extensions (from torch==1.12.1+cu113)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, torch
+
+Successfully installed torch-1.12.1+cu113 typing-extensions-4.16.0
+Looking in links: https://data.dgl.ai/wheels/repo.html
+Collecting dgl-cu113==0.8.1
+  Downloading dgl_cu113-0.8.1-cp310-cp310-manylinux1_x86_64.whl (220.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 220.6/220.6 MB 45.7 MB/s  0:00:04
+Installing collected packages: dgl-cu113
+Successfully installed dgl-cu113-0.8.1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/dgl/__init__.py", line 16, in <module>
+    from .backend import load_backend, backend_name
+  File "/workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/dgl/backend/__init__.py", line 109, in <module>
+    load_backend(get_preferred_backend())
+  File "/workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/dgl/backend/__init__.py", line 43, in load_backend
+    from .._ffi.base import load_tensor_adapter # imports DGL C library
+  File "/workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/dgl/_ffi/base.py", line 45, in <module>
+    _LIB, _LIB_NAME, _DIR_NAME = _load_lib()
+  File "/workspace/comp8851/env/eogfd-legacy/lib/python3.10/site-packages/dgl/_ffi/base.py", line 35, in _load_lib
+    lib = ctypes.CDLL(lib_path[0])
+  File "/.uv/python_install/cpython-3.10-linux-x86_64-gnu/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libcusparse.so.11: cannot open shared object file: No such file or directory
+EOGFD_NEWI_GPU_ENV=PASS hostname=60d39211b1fd gpu=NVIDIA RTX A6000
+=== FDCompCN CANONICAL_PREFLIGHT_START ===
+FDCompCN_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+FDCompCN_RELATIONS_PRESERVED [(('company', 'homo', 'company'), 10059), (('company', 'invest_bc2bc', 'company'), 8505), (('company', 'provide_bc2bc', 'company'), 5944), (('company', 'sale_bc2bc', 'company'), 6244)]
+FDCompCN_CANONICAL_GRAPH_ADAPTER=PASS TEST_SCORED=NO
+FDCompCN_REAL_FULL_GRAPH_TRAIN_LABELS_ONLY_PILOT=PASS seconds=0.872 peak_gpu_gib=0.136 loss=0.94755
+FDCompCN_STAGE1_STAGE2=PASS AUDIT=/workspace/comp8851/diagnostics/eogfd_newi_57212396/FDCompCN_Stage1_Stage2_ReadOnlyThenOneStep.json
+=== Elliptic CANONICAL_PREFLIGHT_START ===
+Elliptic_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+EOGFD_NEWI_STAGE12_STOP_ERROR=AssertionError((90762, 106807))
+Traceback (most recent call last):
+  File "/workspace/EOGFD_NEWI_KIT/vast_preflight_and_realgraph_pilots.py", line 193, in <module>
+    try:main()
+  File "/workspace/EOGFD_NEWI_KIT/vast_preflight_and_realgraph_pilots.py", line 184, in main
+    g,x,train_nodes,y,meta=fdcompcn_graph(ids) if dataset=='FDCompCN' else elliptic_graph(ids)
+  File "/workspace/EOGFD_NEWI_KIT/vast_preflight_and_realgraph_pilots.py", line 137, in elliptic_graph
+    assert len(visible)==90762 and len(uu)==197569,(len(visible),len(uu))
+AssertionError: (90762, 106807)
+FDCompCN_PREVIOUS_SUCCESSFUL_PILOT=VERIFIED_AND_REUSED
+FDCompCN_RETRAINED=NO
+ELLIPTIC_TWO_ASSERTIONS_CORRECTED=PASS
+ORIGINAL_SCRIPT_UNCHANGED=YES
+CORRECTED_SCRIPT_SHA256=81112b076aa3936039422a297fae948f09753d1ed36138b940fdb244aba92160
+=== ELLIPTIC CANONICAL PREFLIGHT ===
+Elliptic_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+ELLIPTIC_CAUSAL_TRAIN_PREFIX=PASS times_le_20 nodes= 90762 edges= 106807
+ELLIPTIC_ORIGINAL_CHRONOLOGICAL_GRAPH=PASS
+ELLIPTIC_TEST_ISOLATION=PASS
+=== ELLIPTIC GPU PILOT ===
+Elliptic_REAL_FULL_GRAPH_TRAIN_LABELS_ONLY_PILOT=PASS seconds=0.872 peak_gpu_gib=0.762 loss=0.85981
+Elliptic_STAGE1_STAGE2=PASS
+FDCompCN_STAGE1_STAGE2=PASS PREVIOUS_AUDIT_REUSED=YES
+EOGFD_NEWI_FDCOMPCN_ELLIPTIC_BOTH_PILOTS=PASS TEST_SCORED=NO TUNING_STARTED=NO

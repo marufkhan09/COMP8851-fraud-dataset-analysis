@@ -1,0 +1,43 @@
+{
+  "best_epoch": 95,
+  "best_val_auprc": 0.7077120901703813,
+  "best_validation_metrics": {
+    "threshold": 0.99,
+    "val_auprc": 0.7077120901703813,
+    "val_auroc": 0.8210762491820351,
+    "val_fraud_recall": 0.6454615981380916,
+    "val_macro_f1": 0.8174190385890292
+  },
+  "checkpoint_sha256": "44a7c262c764c72c7f5618d634479942ebd51f073b28331a85f0dfbeb69488c7",
+  "config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.01,
+    "mutation_rate": 0.1,
+    "order": 3,
+    "population_size": 20,
+    "weight_decay": 0.0
+  },
+  "dataset": "Elliptic",
+  "epochs_completed": 100,
+  "fixed_validation_rng_seed": 100921,
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "model": "EOGFDHeteroModel",
+  "peak_gpu_allocated_gib": 3.410595417022705,
+  "ratio": "TR40",
+  "seed": 2,
+  "selection_metric": "validation_AUPRC",
+  "source_sha256": "d2f7110d973564b5cd3b491ba3e0e59a6e16d75033e3796ac601bbf1ecd58160",
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "threshold_metric": "validation_macroF1_recall_then_nearest_0.5",
+  "train_wall_seconds": 4.542407628148794,
+  "trial": 12,
+  "trial_wall_seconds": 11.360312761738896,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_scores_sha256": "d961c6e5143c8043e7227f40aa225dd931a2ba71472b281cf5e7641597edd5dd",
+  "validation_wall_seconds": 6.016354883089662,
+  "venus_approval_recorded": false
+}

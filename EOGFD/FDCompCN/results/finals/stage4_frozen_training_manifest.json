@@ -1,0 +1,43 @@
+{
+  "classification": "CONDITIONAL_ADAPTED_UNIFIED_TRAINING_NOT_AUTHOR_REPRODUCTION",
+  "dataset": "FDCompCN",
+  "elliptic_chronological_cutoffs": null,
+  "frozen_config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.001,
+    "mutation_rate": 0.05,
+    "order": 3,
+    "population_size": 10,
+    "weight_decay": 0.0
+  },
+  "heldout_test_access": false,
+  "max_epochs": 100,
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "model": "EOGFDHeteroModel",
+  "note": "Exploratory/conditional dataset adaptation; Venus methodological signoff NOT recorded.",
+  "original_stage3_grid_trial_count": 12,
+  "patience": 20,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "selection_metric": "validation_AUPRC",
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_seed": 2,
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "test_scored": false,
+  "threshold_metric": "validation_macroF1",
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_approval_recorded": false,
+  "winner_sha256": "087773f22087c94868f62b44e0ca91278926af1784cb79dbf6823f439e50fa46",
+  "winner_trial": 1
+}
