@@ -1,0 +1,199 @@
+I1_TFINANCE_TUNING_CANONICAL_INPUTS=PASS TEST_SCORED=NO
+I1_TFINANCE_TUNING_GRAPH_READY=PASS nodes=39357 original_edges=42445086 relation_count=1 train=15742 val=7872 test_labels_indexed=NO
+I1_TFINANCE_STAGE3_STOP=ModuleNotFoundError("No module named 'models'")
+Traceback (most recent call last):
+  File "/workspace/EOGFD_TFINANCE_STAGE3_I1_20261023/stage3_tfinance.py", line 333, in <module>
+    try:main()
+  File "/workspace/EOGFD_TFINANCE_STAGE3_I1_20261023/stage3_tfinance.py", line 306, in main
+    for i in which:trial_run(i,b)
+  File "/workspace/EOGFD_TFINANCE_STAGE3_I1_20261023/stage3_tfinance.py", line 201, in trial_run
+    model=build_model(cfg)
+  File "/workspace/EOGFD_TFINANCE_STAGE3_I1_20261023/stage3_tfinance.py", line 164, in build_model
+    from models.eogfd import EOGFDHeteroModel
+ModuleNotFoundError: No module named 'models'
+I1_TFINANCE_TUNING_CANONICAL_INPUTS=PASS TEST_SCORED=NO
+I1_TFINANCE_TUNING_GRAPH_READY=PASS nodes=39357 original_edges=42445086 relation_count=1 train=15742 val=7872 test_labels_indexed=NO
+I1_TFINANCE_TRIAL_08 epoch=1 loss=1.00089 val_AUPRC=0.646031 best=0.646031 train_s=1.011 val_s=0.111 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_08 epoch=2 loss=0.50369 val_AUPRC=0.660100 best=0.660100 train_s=0.142 val_s=0.108 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_08 epoch=10 loss=0.32316 val_AUPRC=0.785730 best=0.785730 train_s=0.143 val_s=0.108 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=20 loss=0.25457 val_AUPRC=0.818907 best=0.823339 train_s=0.145 val_s=0.109 peak_gib=1.110 stale=2
+I1_TFINANCE_TRIAL_08 epoch=30 loss=0.23789 val_AUPRC=0.839250 best=0.839250 train_s=0.144 val_s=0.108 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=40 loss=0.22191 val_AUPRC=0.849377 best=0.849377 train_s=0.145 val_s=0.108 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=50 loss=0.21177 val_AUPRC=0.858842 best=0.858842 train_s=0.145 val_s=0.109 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=60 loss=0.20249 val_AUPRC=0.866392 best=0.866392 train_s=0.144 val_s=0.108 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=70 loss=0.19237 val_AUPRC=0.869680 best=0.869680 train_s=0.144 val_s=0.108 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_08 epoch=80 loss=0.17403 val_AUPRC=0.877664 best=0.881644 train_s=0.144 val_s=0.108 peak_gib=1.110 stale=1
+I1_TFINANCE_TRIAL_08 epoch=90 loss=0.17809 val_AUPRC=0.875094 best=0.883130 train_s=0.146 val_s=0.110 peak_gib=1.110 stale=3
+I1_TFINANCE_TRIAL_08 epoch=100 loss=0.16301 val_AUPRC=0.880943 best=0.883130 train_s=0.145 val_s=0.109 peak_gib=1.110 stale=13
+I1_TFINANCE_STAGE3_TRIAL_08_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.883130 best_epoch=87 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_08_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.145
+I1_TFINANCE_STAGE3_TRIAL_08_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.109
+I1_TFINANCE_STAGE3_ONE_COMPLETE_TRIAL_GATE=PASS NEXT_REVIEW_REAL_EPOCH_TIMINGS_BEFORE_ALL_12
+I1_TFINANCE_STAGE3_HELDOUT_TEST_EVALUATIONS=0
+I1_TFINANCE_TUNING_CANONICAL_INPUTS=PASS TEST_SCORED=NO
+I1_TFINANCE_TUNING_GRAPH_READY=PASS nodes=39357 original_edges=42445086 relation_count=1 train=15742 val=7872 test_labels_indexed=NO
+I1_TFINANCE_TRIAL_01 epoch=1 loss=1.00053 val_AUPRC=0.057786 best=0.057786 train_s=1.023 val_s=0.104 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_01 epoch=2 loss=0.71635 val_AUPRC=0.621282 best=0.621282 train_s=0.137 val_s=0.104 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_01 epoch=10 loss=0.39129 val_AUPRC=0.688959 best=0.688959 train_s=0.137 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=20 loss=0.31572 val_AUPRC=0.796001 best=0.796001 train_s=0.139 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=30 loss=0.27189 val_AUPRC=0.813197 best=0.813197 train_s=0.139 val_s=0.102 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=40 loss=0.24860 val_AUPRC=0.829872 best=0.829872 train_s=0.138 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=50 loss=0.23525 val_AUPRC=0.838326 best=0.838326 train_s=0.138 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=60 loss=0.22745 val_AUPRC=0.846171 best=0.846171 train_s=0.138 val_s=0.102 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=70 loss=0.22293 val_AUPRC=0.853805 best=0.853805 train_s=0.138 val_s=0.102 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=80 loss=0.21200 val_AUPRC=0.857872 best=0.857872 train_s=0.139 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=90 loss=0.20323 val_AUPRC=0.862459 best=0.862459 train_s=0.139 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_01 epoch=100 loss=0.19974 val_AUPRC=0.865408 best=0.865408 train_s=0.140 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_STAGE3_TRIAL_01_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.865408 best_epoch=100 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_01_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.138
+I1_TFINANCE_STAGE3_TRIAL_01_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.103
+I1_TFINANCE_TRIAL_02 epoch=1 loss=1.00089 val_AUPRC=0.057925 best=0.057925 train_s=0.141 val_s=0.104 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_02 epoch=2 loss=0.71640 val_AUPRC=0.620468 best=0.620468 train_s=0.140 val_s=0.104 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_02 epoch=10 loss=0.39131 val_AUPRC=0.688934 best=0.688934 train_s=0.139 val_s=0.103 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=20 loss=0.31282 val_AUPRC=0.795928 best=0.795928 train_s=0.140 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=30 loss=0.26757 val_AUPRC=0.814030 best=0.814030 train_s=0.141 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=40 loss=0.24873 val_AUPRC=0.829796 best=0.829796 train_s=0.140 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=50 loss=0.23545 val_AUPRC=0.839015 best=0.839015 train_s=0.140 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=60 loss=0.22637 val_AUPRC=0.846647 best=0.846647 train_s=0.140 val_s=0.105 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=70 loss=0.21809 val_AUPRC=0.854142 best=0.854142 train_s=0.142 val_s=0.104 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=80 loss=0.21256 val_AUPRC=0.859184 best=0.859184 train_s=0.142 val_s=0.105 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=90 loss=0.20329 val_AUPRC=0.862784 best=0.862784 train_s=0.142 val_s=0.105 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_02 epoch=100 loss=0.19609 val_AUPRC=0.865263 best=0.865263 train_s=0.142 val_s=0.105 peak_gib=0.605 stale=0
+I1_TFINANCE_STAGE3_TRIAL_02_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.865263 best_epoch=100 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_02_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.141
+I1_TFINANCE_STAGE3_TRIAL_02_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.104
+I1_TFINANCE_TRIAL_03 epoch=1 loss=1.00030 val_AUPRC=0.057762 best=0.057762 train_s=0.148 val_s=0.111 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_03 epoch=2 loss=0.71632 val_AUPRC=0.615898 best=0.615898 train_s=0.148 val_s=0.110 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_03 epoch=10 loss=0.39085 val_AUPRC=0.685036 best=0.685036 train_s=0.149 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=20 loss=0.31338 val_AUPRC=0.784262 best=0.784262 train_s=0.149 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=30 loss=0.27230 val_AUPRC=0.804330 best=0.804330 train_s=0.149 val_s=0.111 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=40 loss=0.25157 val_AUPRC=0.821546 best=0.821546 train_s=0.152 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=50 loss=0.23622 val_AUPRC=0.831915 best=0.831915 train_s=0.151 val_s=0.111 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=60 loss=0.22939 val_AUPRC=0.841615 best=0.841615 train_s=0.151 val_s=0.111 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=70 loss=0.21957 val_AUPRC=0.848343 best=0.848343 train_s=0.151 val_s=0.111 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=80 loss=0.21246 val_AUPRC=0.852915 best=0.852915 train_s=0.151 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=90 loss=0.20626 val_AUPRC=0.857637 best=0.857637 train_s=0.151 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_03 epoch=100 loss=0.19695 val_AUPRC=0.860205 best=0.860205 train_s=0.152 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_STAGE3_TRIAL_03_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.860205 best_epoch=100 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_03_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.151
+I1_TFINANCE_STAGE3_TRIAL_03_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.111
+I1_TFINANCE_TRIAL_04 epoch=1 loss=1.00089 val_AUPRC=0.057925 best=0.057925 train_s=0.150 val_s=0.112 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_04 epoch=2 loss=0.71640 val_AUPRC=0.620468 best=0.620468 train_s=0.152 val_s=0.112 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_04 epoch=10 loss=0.39134 val_AUPRC=0.688911 best=0.688911 train_s=0.153 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=20 loss=0.31282 val_AUPRC=0.795892 best=0.795892 train_s=0.152 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=30 loss=0.26770 val_AUPRC=0.813921 best=0.813921 train_s=0.153 val_s=0.112 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=40 loss=0.24882 val_AUPRC=0.830020 best=0.830020 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=50 loss=0.23549 val_AUPRC=0.838656 best=0.838656 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=60 loss=0.22646 val_AUPRC=0.846677 best=0.846677 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=70 loss=0.21818 val_AUPRC=0.853730 best=0.853730 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=80 loss=0.21050 val_AUPRC=0.858922 best=0.858922 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=90 loss=0.20339 val_AUPRC=0.862645 best=0.862645 train_s=0.153 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_04 epoch=100 loss=0.19617 val_AUPRC=0.865784 best=0.865784 train_s=0.152 val_s=0.113 peak_gib=1.110 stale=0
+I1_TFINANCE_STAGE3_TRIAL_04_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.865784 best_epoch=100 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_04_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.153
+I1_TFINANCE_STAGE3_TRIAL_04_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.113
+I1_TFINANCE_TRIAL_05 epoch=1 loss=1.00053 val_AUPRC=0.647883 best=0.647883 train_s=0.146 val_s=0.108 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_05 epoch=2 loss=0.50386 val_AUPRC=0.661228 best=0.661228 train_s=0.147 val_s=0.108 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_05 epoch=10 loss=0.32536 val_AUPRC=0.787002 best=0.787002 train_s=0.148 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=20 loss=0.25764 val_AUPRC=0.815390 best=0.818944 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=2
+I1_TFINANCE_TRIAL_05 epoch=30 loss=0.23571 val_AUPRC=0.836636 best=0.836636 train_s=0.148 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=40 loss=0.22196 val_AUPRC=0.846557 best=0.846557 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=50 loss=0.21307 val_AUPRC=0.855936 best=0.855936 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=60 loss=0.20237 val_AUPRC=0.862499 best=0.862499 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=70 loss=0.19540 val_AUPRC=0.865761 best=0.865761 train_s=0.148 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_05 epoch=80 loss=0.17639 val_AUPRC=0.875991 best=0.876267 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=2
+I1_TFINANCE_TRIAL_05 epoch=90 loss=0.25915 val_AUPRC=0.832854 best=0.877423 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=8
+I1_TFINANCE_TRIAL_05 epoch=100 loss=0.19826 val_AUPRC=0.864992 best=0.877423 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=18
+I1_TFINANCE_STAGE3_TRIAL_05_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.877423 best_epoch=82 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_05_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.147
+I1_TFINANCE_STAGE3_TRIAL_05_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.108
+I1_TFINANCE_TRIAL_06 epoch=1 loss=1.00089 val_AUPRC=0.646031 best=0.646031 train_s=0.147 val_s=0.109 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_06 epoch=2 loss=0.50369 val_AUPRC=0.660100 best=0.660100 train_s=0.148 val_s=0.109 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_06 epoch=10 loss=0.32316 val_AUPRC=0.785814 best=0.785814 train_s=0.149 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=20 loss=0.25472 val_AUPRC=0.819048 best=0.823349 train_s=0.149 val_s=0.109 peak_gib=0.605 stale=3
+I1_TFINANCE_TRIAL_06 epoch=30 loss=0.23416 val_AUPRC=0.840094 best=0.840094 train_s=0.148 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=40 loss=0.22206 val_AUPRC=0.849694 best=0.849694 train_s=0.148 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=50 loss=0.21191 val_AUPRC=0.859228 best=0.859228 train_s=0.149 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=60 loss=0.20247 val_AUPRC=0.866701 best=0.866701 train_s=0.148 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=70 loss=0.19250 val_AUPRC=0.869253 best=0.869253 train_s=0.148 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_06 epoch=80 loss=0.17801 val_AUPRC=0.876008 best=0.880384 train_s=0.149 val_s=0.108 peak_gib=0.605 stale=1
+I1_TFINANCE_TRIAL_06 epoch=90 loss=0.16944 val_AUPRC=0.879659 best=0.881711 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=2
+I1_TFINANCE_TRIAL_06 epoch=100 loss=0.16071 val_AUPRC=0.881907 best=0.881907 train_s=0.146 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_STAGE3_TRIAL_06_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.881907 best_epoch=100 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_06_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.148
+I1_TFINANCE_STAGE3_TRIAL_06_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.109
+I1_TFINANCE_TRIAL_07 epoch=1 loss=1.00030 val_AUPRC=0.643431 best=0.643431 train_s=0.152 val_s=0.115 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_07 epoch=2 loss=0.50381 val_AUPRC=0.655737 best=0.655737 train_s=0.152 val_s=0.114 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_07 epoch=10 loss=0.32438 val_AUPRC=0.775306 best=0.775306 train_s=0.152 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=20 loss=0.25693 val_AUPRC=0.808712 best=0.815143 train_s=0.154 val_s=0.115 peak_gib=1.110 stale=3
+I1_TFINANCE_TRIAL_07 epoch=30 loss=0.23615 val_AUPRC=0.833288 best=0.833288 train_s=0.152 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=40 loss=0.22143 val_AUPRC=0.844642 best=0.844642 train_s=0.152 val_s=0.115 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=50 loss=0.21201 val_AUPRC=0.854478 best=0.854478 train_s=0.152 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=60 loss=0.20493 val_AUPRC=0.862019 best=0.862019 train_s=0.153 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=70 loss=0.19348 val_AUPRC=0.866233 best=0.866233 train_s=0.152 val_s=0.115 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=80 loss=0.17724 val_AUPRC=0.877943 best=0.877943 train_s=0.153 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_07 epoch=90 loss=0.19266 val_AUPRC=0.876438 best=0.878958 train_s=0.152 val_s=0.113 peak_gib=1.110 stale=7
+I1_TFINANCE_TRIAL_07 epoch=100 loss=0.16829 val_AUPRC=0.873090 best=0.878958 train_s=0.152 val_s=0.114 peak_gib=1.110 stale=17
+I1_TFINANCE_STAGE3_TRIAL_07_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.878958 best_epoch=83 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_07_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.152
+I1_TFINANCE_STAGE3_TRIAL_07_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.114
+I1_TFINANCE_STAGE3_trial_08_VERIFIED_REUSE=PASS AUPRC=0.883130
+I1_TFINANCE_TRIAL_09 epoch=1 loss=1.00053 val_AUPRC=0.639102 best=0.639102 train_s=0.147 val_s=0.109 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_09 epoch=2 loss=0.59687 val_AUPRC=0.679198 best=0.679198 train_s=0.147 val_s=0.108 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_09 epoch=10 loss=0.26971 val_AUPRC=0.824622 best=0.824622 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_09 epoch=20 loss=0.23574 val_AUPRC=0.838875 best=0.841122 train_s=0.146 val_s=0.109 peak_gib=0.605 stale=1
+I1_TFINANCE_TRIAL_09 epoch=30 loss=0.22153 val_AUPRC=0.846575 best=0.846575 train_s=0.146 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_09 epoch=40 loss=0.20970 val_AUPRC=0.858796 best=0.858796 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_09 epoch=50 loss=0.19958 val_AUPRC=0.865764 best=0.865764 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_09 epoch=60 loss=0.17460 val_AUPRC=0.875840 best=0.876938 train_s=0.147 val_s=0.108 peak_gib=0.605 stale=1
+I1_TFINANCE_TRIAL_09 epoch=70 loss=0.19317 val_AUPRC=0.857904 best=0.879358 train_s=0.148 val_s=0.108 peak_gib=0.605 stale=7
+I1_TFINANCE_TRIAL_09 epoch=80 loss=0.18635 val_AUPRC=0.866238 best=0.879358 train_s=0.149 val_s=0.109 peak_gib=0.605 stale=17
+I1_TFINANCE_TRIAL_09 epoch=83 loss=0.18246 val_AUPRC=0.874392 best=0.879358 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=20
+I1_TFINANCE_STAGE3_TRIAL_09_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.879358 best_epoch=63 epochs=83
+I1_TFINANCE_STAGE3_TRIAL_09_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.147
+I1_TFINANCE_STAGE3_TRIAL_09_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.108
+I1_TFINANCE_TRIAL_10 epoch=1 loss=1.00089 val_AUPRC=0.640035 best=0.640035 train_s=0.147 val_s=0.110 peak_gib=0.602 stale=0
+I1_TFINANCE_TRIAL_10 epoch=2 loss=0.59455 val_AUPRC=0.679296 best=0.679296 train_s=0.148 val_s=0.108 peak_gib=0.604 stale=0
+I1_TFINANCE_TRIAL_10 epoch=10 loss=0.26733 val_AUPRC=0.828525 best=0.828525 train_s=0.146 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_10 epoch=20 loss=0.23369 val_AUPRC=0.840955 best=0.842694 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=1
+I1_TFINANCE_TRIAL_10 epoch=30 loss=0.22352 val_AUPRC=0.848087 best=0.848087 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_10 epoch=40 loss=0.21085 val_AUPRC=0.859175 best=0.859175 train_s=0.146 val_s=0.110 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_10 epoch=50 loss=0.20063 val_AUPRC=0.865477 best=0.865477 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_10 epoch=60 loss=0.17677 val_AUPRC=0.878192 best=0.878192 train_s=0.147 val_s=0.109 peak_gib=0.605 stale=0
+I1_TFINANCE_TRIAL_10 epoch=70 loss=0.24548 val_AUPRC=0.833317 best=0.878503 train_s=0.149 val_s=0.109 peak_gib=0.605 stale=9
+I1_TFINANCE_TRIAL_10 epoch=80 loss=0.19836 val_AUPRC=0.869462 best=0.878503 train_s=0.148 val_s=0.110 peak_gib=0.605 stale=19
+I1_TFINANCE_TRIAL_10 epoch=81 loss=0.19262 val_AUPRC=0.877123 best=0.878503 train_s=0.150 val_s=0.110 peak_gib=0.605 stale=20
+I1_TFINANCE_STAGE3_TRIAL_10_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.878503 best_epoch=61 epochs=81
+I1_TFINANCE_STAGE3_TRIAL_10_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.147
+I1_TFINANCE_STAGE3_TRIAL_10_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.109
+I1_TFINANCE_TRIAL_11 epoch=1 loss=1.00030 val_AUPRC=0.627952 best=0.627952 train_s=0.152 val_s=0.114 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_11 epoch=2 loss=0.59825 val_AUPRC=0.676621 best=0.676621 train_s=0.154 val_s=0.114 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_11 epoch=10 loss=0.27011 val_AUPRC=0.820767 best=0.820767 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_11 epoch=20 loss=0.23475 val_AUPRC=0.839262 best=0.840336 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=1
+I1_TFINANCE_TRIAL_11 epoch=30 loss=0.22228 val_AUPRC=0.844514 best=0.844931 train_s=0.154 val_s=0.114 peak_gib=1.110 stale=7
+I1_TFINANCE_TRIAL_11 epoch=40 loss=0.21183 val_AUPRC=0.857169 best=0.857169 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_11 epoch=50 loss=0.20075 val_AUPRC=0.863699 best=0.863699 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_11 epoch=60 loss=0.17731 val_AUPRC=0.871429 best=0.876714 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=1
+I1_TFINANCE_TRIAL_11 epoch=70 loss=0.19223 val_AUPRC=0.871717 best=0.876714 train_s=0.156 val_s=0.115 peak_gib=1.110 stale=11
+I1_TFINANCE_TRIAL_11 epoch=80 loss=0.17278 val_AUPRC=0.880158 best=0.880158 train_s=0.156 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_11 epoch=90 loss=0.15854 val_AUPRC=0.877307 best=0.881672 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=7
+I1_TFINANCE_TRIAL_11 epoch=100 loss=0.14748 val_AUPRC=0.874974 best=0.881672 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=17
+I1_TFINANCE_STAGE3_TRIAL_11_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.881672 best_epoch=83 epochs=100
+I1_TFINANCE_STAGE3_TRIAL_11_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.155
+I1_TFINANCE_STAGE3_TRIAL_11_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.114
+I1_TFINANCE_TRIAL_12 epoch=1 loss=1.00089 val_AUPRC=0.640035 best=0.640035 train_s=0.153 val_s=0.114 peak_gib=1.107 stale=0
+I1_TFINANCE_TRIAL_12 epoch=2 loss=0.59455 val_AUPRC=0.679296 best=0.679296 train_s=0.155 val_s=0.114 peak_gib=1.109 stale=0
+I1_TFINANCE_TRIAL_12 epoch=10 loss=0.26765 val_AUPRC=0.828353 best=0.828353 train_s=0.156 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_12 epoch=20 loss=0.23425 val_AUPRC=0.842655 best=0.843369 train_s=0.156 val_s=0.115 peak_gib=1.110 stale=1
+I1_TFINANCE_TRIAL_12 epoch=30 loss=0.22345 val_AUPRC=0.847408 best=0.847408 train_s=0.156 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_12 epoch=40 loss=0.21094 val_AUPRC=0.859191 best=0.859191 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_12 epoch=50 loss=0.20106 val_AUPRC=0.865479 best=0.865479 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_12 epoch=60 loss=0.17803 val_AUPRC=0.878538 best=0.878538 train_s=0.154 val_s=0.114 peak_gib=1.110 stale=0
+I1_TFINANCE_TRIAL_12 epoch=70 loss=0.19008 val_AUPRC=0.872629 best=0.880544 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=9
+I1_TFINANCE_TRIAL_12 epoch=80 loss=0.17902 val_AUPRC=0.876733 best=0.880544 train_s=0.155 val_s=0.114 peak_gib=1.110 stale=19
+I1_TFINANCE_TRIAL_12 epoch=81 loss=0.17961 val_AUPRC=0.876243 best=0.880544 train_s=0.156 val_s=0.114 peak_gib=1.110 stale=20
+I1_TFINANCE_STAGE3_TRIAL_12_VALIDATION_ONLY_COMPLETE=PASS best_val_AUPRC=0.880544 best_epoch=61 epochs=81
+I1_TFINANCE_STAGE3_TRIAL_12_MEASURED_EPOCH_MEDIAN_TRAIN_SECONDS=0.155
+I1_TFINANCE_STAGE3_TRIAL_12_MEASURED_EPOCH_MEDIAN_VALIDATION_SECONDS=0.114
+I1_TFINANCE_STAGE3_12_TRIALS_FROZEN=PASS WINNER_TRIAL=8 VAL_AUPRC=0.883130 TEST_SCORED=NO
+I1_TFINANCE_STAGE3_HELDOUT_TEST_EVALUATIONS=0

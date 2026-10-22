@@ -1,0 +1,34 @@
+{
+  "dataset": "T-Finance",
+  "external_private_backup": "EOGFD_TFINANCE_I1_PRETEST_BACKUP_20261023.tar.gz",
+  "extra_test_inference_in_publication_export": false,
+  "fixed_eval_rng_seed": 100921,
+  "fresh_training_in_publication_export": false,
+  "frozen_split_seed": 2,
+  "graph_relation_count": 1,
+  "hostname": "60d39211b1fd",
+  "instance_id": "57212396",
+  "model_implementation_mode": "UNIFIED_INPUT_ADAPTER_NOT_AUTHOR_IDENTICAL",
+  "once_only_inference_per_final": true,
+  "original_model_repository_unchanged": true,
+  "pretest_backup_sha256": "35852eff778177305e357577d88a2a65007e2b9dc269db2bb18538da402f1266",
+  "private_model_checkpoints_exported_to_public_git": false,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "source_nodes": 39357,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "source_stored_directed_edges": 42445086,
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "upstream_model": "EOGFDHeteroModel",
+  "venus_methodological_approval_recorded": false
+}

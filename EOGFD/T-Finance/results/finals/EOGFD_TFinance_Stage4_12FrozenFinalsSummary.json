@@ -1,0 +1,49 @@
+{
+  "completed_finals": 12,
+  "config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.003,
+    "mutation_rate": 0.1,
+    "order": 7,
+    "population_size": 20,
+    "weight_decay": 0.0
+  },
+  "dataset": "T-Finance",
+  "frozen_winner_sha256": "fd4582835be1cf9df21d7a6b55c35734f9d1815c39b05ec8337704635d112b6f",
+  "frozen_winner_trial": 8,
+  "mode": "UNIFIED_INPUT_ADAPTER_NOT_AUTHOR_IDENTICAL",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "run_record_hashes": {
+    "TR10_seed2": "3ab80d78931271fea4b5c536e95aa6b08ccac1ae36c8e23910ee9f1daa458594",
+    "TR10_seed42": "e40159860cbb8251b207aff2c4fc94d45041f0e6174da7507398f1938dcaf284",
+    "TR10_seed72": "64d672cde13b3c4a4afff32cebc9f11d33a9ce3fe03ab676be8a512489ecd63b",
+    "TR20_seed2": "964afe41ccae97b8668d9691a8ba01edad058bf82e49f68116864bed194bf0c6",
+    "TR20_seed42": "ec4fd1d324861cbb173839df6a576174451c641cee27491351f241231af9b21a",
+    "TR20_seed72": "0870625f08611a57b90a57deddef388034ad61ca305c8f4c64cc4becdbd9e65b",
+    "TR30_seed2": "9c28626f82dba13e2d11a07f47b0e57167eee3e5a24b1f27dbcfcddf29ceff43",
+    "TR30_seed42": "17eb0a8b6515fcb869586e038e2cb529a4072abd8e236a442b08ab22271adf97",
+    "TR30_seed72": "ce31291717213ff3a36b369aef51311103eac9587e208c1ab84a33b11a4563b4",
+    "TR40_seed2": "a827dc147ca2af393a4ab08c64ba8a0fa163f712759e97038c8b9f2a5d021f46",
+    "TR40_seed42": "393a5ecbfb4781b929f727f56bdb8db89e0fc5a3ffb7d7a66c0e383fbb9aaf04",
+    "TR40_seed72": "16e170a67a100093c3f95d001e6e5c9e1baea796428ec06859b1353ac34fd63e"
+  },
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "EOGFD_TFINANCE_12_FROZEN_VALIDATION_ONLY_FINALS_COMPLETE",
+  "test_evaluations": 0,
+  "test_scored": false,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_methodological_approval_recorded": false
+}

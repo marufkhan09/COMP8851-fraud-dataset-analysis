@@ -1,0 +1,38 @@
+{
+  "author_identical_reproduction": false,
+  "dataset": "T-Finance",
+  "final_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratio": "TR40",
+  "selection": "validation_AUPRC",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "TR40_12_VALIDATION_ONLY_TRIALS_COMPLETE",
+  "test_scored": false,
+  "training_seed": 2,
+  "tuning_trials_completed": 12,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_methodological_approval_recorded": false,
+  "winner_checkpoint_sha256": "770413225d00251bfead53b8d9f613ecf45f5868abf574a356edcccae2542af3",
+  "winner_config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.003,
+    "mutation_rate": 0.1,
+    "order": 7,
+    "population_size": 20,
+    "weight_decay": 0.0
+  },
+  "winner_trial": 8,
+  "winner_val_auprc": 0.8831298392129493
+}

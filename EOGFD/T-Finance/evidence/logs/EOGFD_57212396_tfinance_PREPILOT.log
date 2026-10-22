@@ -1,0 +1,18 @@
+=== INSTANCE_LABEL=57212396 DATASET=tfinance ACTUAL_HOSTNAME=60d39211b1fd ===
+Do not confuse the instance number with container hostname.
+NVIDIA RTX A6000, 49140 MiB, 48569 MiB
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         103G  6.2G   97G   7% /
+UPSTREAM_AUTHOR_COMMIT=PASS
+EOGFD_LEGACY_ENV_GPU=PASS NVIDIA RTX A6000
+=== GRAPH + FROZEN SPLITS + TRAIN-ONLY PILOT ===
+SOURCE_AND_SPLIT_SHA256_ALREADY_VERIFIED_BY_BOOTSTRAP=PASS
+FROZEN_SPLIT_NESTED_AND_DISJOINT=PASS {'TR10': 3935, 'TR20': 7870, 'TR30': 11806, 'TR40': 15742, 'val': 7872, 'test': 15743}
+CANONICAL_GRAPH_COMPATIBILITY=PASS nodes=39357 stored_edges=42445086 features=10 etypes=[('_N', '_E', '_N')] label_encoding=author_two_column_onehot_argmax
+NON_TEST_LABEL_COUNTS train_pos=721 val_pos=361
+TFINANCE_DATA_AND_SPLIT_PREFLIGHT=PASS TEST_SCORED=NO
+TFINANCE_TRAIN_ONLY_REAL_GRAPH_PILOT_START d=7 hidden=64 pop=20
+TFINANCE_REAL_GRAPH_ONE_UPDATE_PILOT=PASS train_only=YES test_scored=NO elapsed_s=1.626 peak_gpu_gib=1.107
+PILOT_DIAGNOSTIC_NOT_FINAL_TUNING_GUARANTEE=TRUE; run one complete validation-only trial before 12-trial queue
+PILOT_RECORD=/workspace/comp8851/diagnostics/EOGFD_57212396_tfinance/train_only_one_update.json
+EOGFD_57212396_tfinance_BOOTSTRAP_AND_PREFLIGHT=PASS

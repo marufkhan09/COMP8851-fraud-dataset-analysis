@@ -1,0 +1,45 @@
+{
+  "benchmark_vs_author_mode": "conditional input adapter; not strict author reproduction",
+  "dataset": "T-Finance",
+  "dataset_adapted_single_relation_view": true,
+  "diagnostic_config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lr": 0.003,
+    "mutation_rate": 0.1,
+    "order": 7,
+    "population_size": 20
+  },
+  "graph": {
+    "label_encoding": "author_two_column_onehot_argmax",
+    "original_etypes": [
+      [
+        "_N",
+        "_E",
+        "_N"
+      ]
+    ],
+    "relation_count": 1,
+    "train_positive": 721,
+    "train_size": 15742,
+    "val_positive": 361,
+    "val_size": 7872
+  },
+  "hostname": "60d39211b1fd",
+  "instance_user_label": "57212396",
+  "loss": 1.000891089439392,
+  "model": "EOGFDHeteroModel",
+  "original_author_code_unchanged": true,
+  "peak_gpu_allocated_gib": 1.1066255569458008,
+  "pilot_sufficient_for_full_tuning_authorization": false,
+  "seconds": 1.626208620145917,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "TRAIN_ONLY_REAL_FULL_GRAPH_ONE_UPDATE_PASS",
+  "test_labels_indexed": false,
+  "test_scored": false,
+  "timestamp_utc": "2026-10-22T17:54:51.386872+00:00",
+  "training_labels_only": true,
+  "tuning_started": false,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f"
+}

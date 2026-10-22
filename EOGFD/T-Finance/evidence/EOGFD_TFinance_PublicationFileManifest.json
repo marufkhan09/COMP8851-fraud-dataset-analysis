@@ -1,0 +1,638 @@
+{
+  "branch": "Pathik-ass3",
+  "completed_finals": 12,
+  "completed_trials": 12,
+  "dataset": "T-Finance",
+  "destination": "EOGFD/T-Finance/",
+  "files": {
+    "EOGFD/T-Finance/README.md": {
+      "bytes": 4376,
+      "sha256": "624f31edd8d3df3bc5afe39913c01611d0e5305a828f35ad0cc3daffe97fcad9"
+    },
+    "EOGFD/T-Finance/evidence/EOGFD_TFinance_PreTest_Audit.json": {
+      "bytes": 3557,
+      "sha256": "cb3f57f580ea0cdec2ce2c6a690d73c20ad4755566cd7eca2e86aeb566cf3877"
+    },
+    "EOGFD/T-Finance/evidence/environment_and_provenance.json": {
+      "bytes": 1195,
+      "sha256": "d7d92829088cded262824cb34edf2de917822c80cb62b720c6c9b0fe7d827df7"
+    },
+    "EOGFD/T-Finance/evidence/logs/EOGFD_57212396_TFinance_STAGE3_TR40.log": {
+      "bytes": 22211,
+      "sha256": "3170e5e8ec0ddea4ccb1c2985668c5dc755576d90532efb1a9569b5c8a796c5a"
+    },
+    "EOGFD/T-Finance/evidence/logs/EOGFD_57212396_TFinance_STAGE4.log": {
+      "bytes": 16895,
+      "sha256": "66ad8811d4d3b2925a79ee62eaf51990d0b322e8e328e263448667bf8fdb70ff"
+    },
+    "EOGFD/T-Finance/evidence/logs/EOGFD_57212396_TFinance_STAGE5.log": {
+      "bytes": 5696,
+      "sha256": "c25019b42cc1f1ad338df622767fbb8599105d175d0bfdfd306e9e2eeea26492"
+    },
+    "EOGFD/T-Finance/evidence/logs/EOGFD_57212396_tfinance_PREPILOT.log": {
+      "bytes": 1259,
+      "sha256": "1c4f529dd58e95c3e597084e27aef1416883dc461d37e54b5b806e4675d11f01"
+    },
+    "EOGFD/T-Finance/evidence/train_only_one_update.json": {
+      "bytes": 1383,
+      "sha256": "19cafcfcf8262a5448fb42a500c76006211ca9bbf15975c0c327acae01123a28"
+    },
+    "EOGFD/T-Finance/results/finals/EOGFD_TFinance_Stage4_12FrozenFinalsSummary.json": {
+      "bytes": 2003,
+      "sha256": "1d470fb5bd3a43c50962b2baada669c14d5dc8cb4ee5c33643f8400837b6b966"
+    },
+    "EOGFD/T-Finance/results/finals/EOGFD_TFinance_Stage5_AllRatios_Summary.json": {
+      "bytes": 5691,
+      "sha256": "028ade7576ca8bc3d2e9b2632972746092c3c0694dd5ea010b234e8cd5e50608"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "baa7830aec7ccb6934480919f954521c7fb831bcf005bc41b098e4f75fca02e1"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/epoch_times.csv": {
+      "bytes": 3569,
+      "sha256": "a196417cc319ac2fc15b4cd458e3335e2068dbe54179052b1b07a1e7d68527f4"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/frozen_training.json": {
+      "bytes": 1721,
+      "sha256": "3ab80d78931271fea4b5c536e95aa6b08ccac1ae36c8e23910ee9f1daa458594"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/test_metrics.json": {
+      "bytes": 1425,
+      "sha256": "254acc7c774a745f2c0fd28297642c59c7a24b7c25e9187cb9af602bdf2082ef"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/test_once_claim.json": {
+      "bytes": 793,
+      "sha256": "138d03a09267e3b9f5e8647919b8e7dbd38ca48e89b14af6762343fa33db415a"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "f4f02013090d354fa07fe2c1d6ba2ae6a78ccccb0f8dbec60588eb41960f8ee7"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_2/validation_history.json": {
+      "bytes": 38832,
+      "sha256": "c1084d94b357b65d42a563af0593b831e3fdb09966927ad52a2d7a3a655ed2ba"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "faa4243b29043d8e5d56cf8e9a5788986a3c478b302e51b292b4972b87237965"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/epoch_times.csv": {
+      "bytes": 2886,
+      "sha256": "54f39d2a54e3935414253b442f4b3d1dbde57b64e304d88cf370f49b5cf8bbee"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/frozen_training.json": {
+      "bytes": 1721,
+      "sha256": "e40159860cbb8251b207aff2c4fc94d45041f0e6174da7507398f1938dcaf284"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/test_metrics.json": {
+      "bytes": 1425,
+      "sha256": "e958f2303a38897b7253b227aa397bce93ce78554fd6f7e874e337142eacfa76"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "0cd0b43f9c2d185cd1c8bb1480fd70aabc64aa77c9efb7992235dd2376674731"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "c3ba682def96b81b80831d1a3cf1369fd6cb67c09dd3ea2e05d53750900810a1"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_42/validation_history.json": {
+      "bytes": 31383,
+      "sha256": "baa06ca8e2bac4d4de78dc94fc24502db1115ddaf48bf704ad10cb24e7b6e7d3"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "9fd554b002e710d5ece06f354689443269a5b746ec9662b81ae6b660719dae17"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/epoch_times.csv": {
+      "bytes": 3152,
+      "sha256": "85df35e8f6244e1b288f9dcc17e5256aeec5cfcb83f53975352bbf1dbad2aa09"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/frozen_training.json": {
+      "bytes": 1721,
+      "sha256": "64d672cde13b3c4a4afff32cebc9f11d33a9ce3fe03ab676be8a512489ecd63b"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/test_metrics.json": {
+      "bytes": 1427,
+      "sha256": "805d94cd8219d8b62a68a49221dba67635e8be97bc23d2b7de8f3f333110dc45"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "5e11e491f2175605536eb30a84143dc1e2d05f3dccd7e768b648b476082f88ab"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "e080349da5a0bbf0870830227d3a8a8da33f47f5eb74d7613cf646d2d8aec044"
+    },
+    "EOGFD/T-Finance/results/finals/TR10/seed_72/validation_history.json": {
+      "bytes": 34270,
+      "sha256": "ea44fda2d06fc7c898d50cf00530a8bc5dd733740357f058400bb6c29cb34db6"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "39e513687dae2b904fdb1ca4eb64b4a9d34bba1ee0f70380f83bb2f3700d3dec"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/epoch_times.csv": {
+      "bytes": 3569,
+      "sha256": "060d524bbcf3e845e879dab8d855516b47d727e519824e8c965f8e2dbcef808a"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/frozen_training.json": {
+      "bytes": 1722,
+      "sha256": "964afe41ccae97b8668d9691a8ba01edad058bf82e49f68116864bed194bf0c6"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/test_metrics.json": {
+      "bytes": 1424,
+      "sha256": "f6974ddf2fe504f7e759f663b21da384b6fe226cc4bb3444806c836cda7f76f9"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/test_once_claim.json": {
+      "bytes": 793,
+      "sha256": "530de817ba94eec2a54e0f681e35dcf87cdf6a7632e0c8ac63d802a5ffc8581b"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "ad414d64a155eeaec197cfd8935eb4bc9f51d6913867551ce02b4fd38ce14b9a"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_2/validation_history.json": {
+      "bytes": 38830,
+      "sha256": "77ee4114ca807aa675fc690d7bc5169386222471b1de81a34902e0943b7e7a4c"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "793358a51dc7482654d22bf761a36de87a2f89cc9873b491e4fc937b13505474"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "991eadb6e1ed753e094665fe2be0895429a7779a986d605e0c7840a9178e117e"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/frozen_training.json": {
+      "bytes": 1723,
+      "sha256": "ec4fd1d324861cbb173839df6a576174451c641cee27491351f241231af9b21a"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/test_metrics.json": {
+      "bytes": 1424,
+      "sha256": "6522dd12f6024939496089f22880787572fd072ce50b87cd2ce79d5314190817"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "5663bd734b8b6191d6d82e6470c94cf6f6b87a3f3a94d5ea20bcc11bfc814c96"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "b86f3b6c6edb9bdb433be21ed9cd94d8c2ffb576d84b8b94d81a123dc6154e53"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_42/validation_history.json": {
+      "bytes": 41324,
+      "sha256": "7a0dc5324de8e072ba67a72c3bc06d644a535bc31945c1dfb33ca832724a7007"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "23b37061500cdcecf127cfeb9d29b795941a763e3e3e4e81d414a867d9032bdf"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/epoch_times.csv": {
+      "bytes": 3075,
+      "sha256": "082e21139694e7372bd64159d378239dfd7407efc8df37bccc9b6f93a77fa083"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/frozen_training.json": {
+      "bytes": 1723,
+      "sha256": "0870625f08611a57b90a57deddef388034ad61ca305c8f4c64cc4becdbd9e65b"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/test_metrics.json": {
+      "bytes": 1425,
+      "sha256": "16e0801a55477db6098ab8e83b17c7a0d69e9de8de8197d71570c25eec3324d9"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "54134dd9511fce932a2b2db13d4fb41934d4990ded0f1c705a6ffb1911e4a0a1"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "45ec89f9f6776b9d83308345bc7dabd38d454dbb51115b4f1e5084aed521cee0"
+    },
+    "EOGFD/T-Finance/results/finals/TR20/seed_72/validation_history.json": {
+      "bytes": 33419,
+      "sha256": "0c08c20821f91755db084f536b0711e2266d9df9dce86179a97c5f886aebc609"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "2d004fb97dcd4e12a0a30ebbb08febcca66608f4adeb02dfeb2670ef1f7fc893"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "642e4d6fac79db54fee7b2eb358744da68ee5db96242bf2707501a7ae717fdba"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/frozen_training.json": {
+      "bytes": 1720,
+      "sha256": "9c28626f82dba13e2d11a07f47b0e57167eee3e5a24b1f27dbcfcddf29ceff43"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/test_metrics.json": {
+      "bytes": 1421,
+      "sha256": "a0aade3df17fbf0d5c54dbd9d17e2e8e4f13ca592ca32e24e86a2ead80f4aa7e"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/test_once_claim.json": {
+      "bytes": 793,
+      "sha256": "374447402a328bfac21c359679b1a84e860290a2caafa0d8e72d65a151ab88b5"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "4700e1fda9de1d3490ecf68d4650e153ce94dd01b50a5395ebc03997427d8ca4"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_2/validation_history.json": {
+      "bytes": 41273,
+      "sha256": "564bdbe2ea0a25fe3e2ec42e997e9573202676ede410dff318dedda310edfd34"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "cd4d96418fdafb2e149bac74dc1a8a942f558872a9a1daa587a25e365ef92851"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "ce4e3828f8fd8694a1d0250c28e101fa00d315d1b1f0bd733bc54573fe2b4cec"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/frozen_training.json": {
+      "bytes": 1723,
+      "sha256": "17eb0a8b6515fcb869586e038e2cb529a4072abd8e236a442b08ab22271adf97"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/test_metrics.json": {
+      "bytes": 1426,
+      "sha256": "d6c1ec8f487aeec086edc354bc6d30bf970258f621383d1d54fc1927407ea6be"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "f3b7b259bf74975d7e2abd7108932d6bfbb9c17f8b4d930066bd7b0c49afe1b8"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "8c08d8973c1aa81fb51e2b26058811b4ea00e16ba330fd4454b8bb5dc3b2f979"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_42/validation_history.json": {
+      "bytes": 41294,
+      "sha256": "9218e1e3b2168b2321d4867249e681b88975d7e61d1e3182fcf88cb2abca399b"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "02d5c12f36444af1f01a2b35ccad587b80ba1788d7c543597ec576a165efe011"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "3030d7329140231150e30ab67db2522cae2e8e419864eca8f42d2030ed6ed30f"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/frozen_training.json": {
+      "bytes": 1722,
+      "sha256": "ce31291717213ff3a36b369aef51311103eac9587e208c1ab84a33b11a4563b4"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/test_metrics.json": {
+      "bytes": 1425,
+      "sha256": "329b0e575b1e1740feb155351463170d96f137458d5f37baf940b2b5d57964f0"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "2f68daab2c55f4398c2ca2398996cfc2a9bd20f46e43ff331023e4e55b864fc1"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "9eda52e53200851c09c27d4e1e8ce8fb089319661e8c1c3b0b45c7d4e0fcbff3"
+    },
+    "EOGFD/T-Finance/results/finals/TR30/seed_72/validation_history.json": {
+      "bytes": 41241,
+      "sha256": "40e1459de15b352e123a31a0223d9c9f694522696698793b27a8edc0184d8bcc"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "df84c4884779cef85fa88d02dafd59f8c46ffe19c5fa21a9fa3f537b388b3c53"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/epoch_times.csv": {
+      "bytes": 3800,
+      "sha256": "fc2ef0c9db21edecfb4ea2e3f51a58b1564331cbffd924131d36ca167e0bc426"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/frozen_training.json": {
+      "bytes": 1724,
+      "sha256": "a827dc147ca2af393a4ab08c64ba8a0fa163f712759e97038c8b9f2a5d021f46"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/test_metrics.json": {
+      "bytes": 1424,
+      "sha256": "2fc68575e14197ac39f251f38c25802f4f60a0499c6102150c70211ae27da6d4"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/test_once_claim.json": {
+      "bytes": 793,
+      "sha256": "46be20a3be2b7810907c65e0182d2f9869b199dea841758ccfb1e2c58ebfd981"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "93db8979d1dfc06efde9da72bd66fae659ca702cccc5a131595269f5af646c80"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_2/validation_history.json": {
+      "bytes": 41270,
+      "sha256": "0510770ae6248223f038be395a5a4dbe45eb186dd4014d615dd0977b39eab515"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "e5903183c04043ab3ae3f9178f051bd481f1e05af6d8acb34784e0af853a2224"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/epoch_times.csv": {
+      "bytes": 3680,
+      "sha256": "ef7df63f50b514c9da64b7c1bc699db9e3b25d52b398571c6a08fab61aea8171"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/frozen_training.json": {
+      "bytes": 1724,
+      "sha256": "393a5ecbfb4781b929f727f56bdb8db89e0fc5a3ffb7d7a66c0e383fbb9aaf04"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/test_metrics.json": {
+      "bytes": 1424,
+      "sha256": "15e555d22ee9b9f88c543572a966403edf142f5b155ebb35cb90c4705c7e5005"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "f05e0b67821808041704788d038fdf8ed6e86424711f931dd96cc28f626002a1"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "fa210d23d1b9c0620027b3148b4e96c54fd6d94405314f81ea6bacce7252de0a"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_42/validation_history.json": {
+      "bytes": 40052,
+      "sha256": "0093aa8f21c77fa88d0f3f0f99bfee429f0ed71b74505972a08bbad18fd1f97b"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "917ec36e505d6bc98eb5455d9a16a665b623573f86851967b15d8e95073156f8"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/epoch_times.csv": {
+      "bytes": 3797,
+      "sha256": "7ffb899e125949f3db6b3865fff1b90ef7e45a833e3a7022c5f0e1bd3f1e87e8"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/frozen_training.json": {
+      "bytes": 1725,
+      "sha256": "16e170a67a100093c3f95d001e6e5c9e1baea796428ec06859b1353ac34fd63e"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/test_metrics.json": {
+      "bytes": 1425,
+      "sha256": "6a3081582a3141358162b65340a39df800dfcd6a86a66ea08b05e2563b56e8b4"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/test_once_claim.json": {
+      "bytes": 794,
+      "sha256": "70924915b57f9cc12f49a3666b88e1d31be570e3a41da8b714e130f1cf88dffb"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/test_scores.npy": {
+      "bytes": 126072,
+      "sha256": "42c40295fb9003f3de4f213c1a3c532fd3d65e914be67d32fc3d84e9a1cdc28e"
+    },
+    "EOGFD/T-Finance/results/finals/TR40/seed_72/validation_history.json": {
+      "bytes": 41282,
+      "sha256": "6ab472845e985e633acc8eeb60f9354fba209d4984db9697b7a72b1728616d51"
+    },
+    "EOGFD/T-Finance/results/finals/stage4_plan.json": {
+      "bytes": 1089,
+      "sha256": "2a1621ff9924b7eafbf6f8397638e2c9652580cfbeb19cb43df74fb211d58483"
+    },
+    "EOGFD/T-Finance/results/tuning/EOGFD_TFinance_TR40_FrozenWinner.json": {
+      "bytes": 1019,
+      "sha256": "fd4582835be1cf9df21d7a6b55c35734f9d1815c39b05ec8337704635d112b6f"
+    },
+    "EOGFD/T-Finance/results/tuning/stage3_run_manifest.json": {
+      "bytes": 3235,
+      "sha256": "6a53fe2a5f35df0995496763da26526147b21cd3fbc402b87d1b77dbe076deae"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_01/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "d046c1e4a10b090568424cbd26ec3d0c7a66baebbde3e03cc1070a975cd7c433"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_01/epoch_times.csv": {
+      "bytes": 3797,
+      "sha256": "9276ad91799a7883988f9a6895165913e6d89dacb75396673d89ebe629f2fd7b"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_01/trial_result.json": {
+      "bytes": 1689,
+      "sha256": "aa88501c43b27c1f47b54c50498306df3315b6cd9fb35111fb55d688bde50104"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_01/validation_history.json": {
+      "bytes": 41213,
+      "sha256": "1ccef535ed7b7a216cb1a91bc8dab690c019fc304f82855279e41fcebc13f255"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_02/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "0c13c118500634ecbdf5b97417fb4fec36b536fdbf63b5ae9fa39fc33ff5e5d5"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_02/epoch_times.csv": {
+      "bytes": 3792,
+      "sha256": "ead8d0e5b2e80be9f14fd2198275bd86f715983ce357e9e822b3057f1085edce"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_02/trial_result.json": {
+      "bytes": 1685,
+      "sha256": "db854d90243ae9d0cdf1861ce032f11f799fbc4b7677a260d908b5482f1bdac4"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_02/validation_history.json": {
+      "bytes": 41244,
+      "sha256": "1c263ae0b92911fa8681b8509214758a236ea962f262fbd7932685fc292676dc"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_03/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "c826d18a3952537c20a2026e7b95f99e82346489e6c35cb867827507adc56d5e"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_03/epoch_times.csv": {
+      "bytes": 3797,
+      "sha256": "ed45e304bc9dd68447fb5b1b0ca0b71641c1b6a3acdbda5bc9f8b32c721f2469"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_03/trial_result.json": {
+      "bytes": 1688,
+      "sha256": "e7dfb3d3097c1d5be78954adc48ec8364b777e1c6a09e84be358fbab2a80c8de"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_03/validation_history.json": {
+      "bytes": 41223,
+      "sha256": "fd94bf0415b4b78b1db3649655f02158483569ed59c399ef297d9b75112a1e3a"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_04/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "0072fc93e0d9a0a58f154cd2c7f9d1ec5b4b2255cdc328aab85e7f5c6dd6779f"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_04/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "f4864634d2277896a73db6c7f436c6e0e1439d0874e07e2b65e1c6a1be7810b7"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_04/trial_result.json": {
+      "bytes": 1688,
+      "sha256": "f594872ef9d38f3654c0496931ab405878debdb313f3110332c9eadb52077cdc"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_04/validation_history.json": {
+      "bytes": 41230,
+      "sha256": "8896985b3ccdc2d5fa3b56e01db562dabebf2384d2b26bca1e21e6f4ba3ded18"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_05/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "b1eef9777ce4eb086800cd9deba59ca3a82fb5faec8c23c3cc70b6885dc25d73"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_05/epoch_times.csv": {
+      "bytes": 3796,
+      "sha256": "a2b5e94b60f0b5270cd63080ca285950c0133950a629fc4a34bad3e877f3d64f"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_05/trial_result.json": {
+      "bytes": 1689,
+      "sha256": "e68374ea1d5011e64c457d4ee65065e6ebac01a2a8c1bed152747d3dc3e019f1"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_05/validation_history.json": {
+      "bytes": 41277,
+      "sha256": "3e919efe0dcfd874c698bf55382ad990798c1150e17e24be8d6938ddf630cf28"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_06/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "7e7a068dc4743178d073b8738501f754600d64c46a51225dc3e4ffb20a84fc4e"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_06/epoch_times.csv": {
+      "bytes": 3796,
+      "sha256": "f40313d63505447197bc948e14dae08ca88ac109a4172a3656d3c1b2be294db0"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_06/trial_result.json": {
+      "bytes": 1689,
+      "sha256": "ecf8e2709afbea8ed06d6ef7961fb24aded4ee431cd0aed8196f1885c2c86d03"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_06/validation_history.json": {
+      "bytes": 41271,
+      "sha256": "bc69f280a9d1a01d2901ad345c84b932cbeff72758184c676334e43befb243e7"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_07/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "d0dda525125c043fd3f49ebf42ac489c97f9b0669ace1096d16dfa3856aa082a"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_07/epoch_times.csv": {
+      "bytes": 3798,
+      "sha256": "c0006a1263e90e6288065abde4c700813dda6631814cc8f158b4c05e734962d0"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_07/trial_result.json": {
+      "bytes": 1689,
+      "sha256": "84fabd02d8e35a4ec64c8d0cb9dec6783dea4947638aa2249dbf6d11735c04b5"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_07/validation_history.json": {
+      "bytes": 41279,
+      "sha256": "53a986331721de350523e8a777b32f9c6defefab17219742c0df215d57c5bdce"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_08/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "4d5f3b8c81640832424da5c5c3d337ee8040a0c08e5e2cb9e0881cc3511b5091"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_08/epoch_times.csv": {
+      "bytes": 3800,
+      "sha256": "3ca5a9227a8ea342e942831725ccbb9c0f4e17e2b5e7849438f0c14e859aa3a9"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_08/trial_result.json": {
+      "bytes": 1688,
+      "sha256": "618a12ce04c906f6f66e869f041fbbb9e1794857a469be7a5342031f2d7c38a1"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_08/validation_history.json": {
+      "bytes": 41266,
+      "sha256": "476f0480f4113223cdcfccb212546b9d840ba65cef85b02d63227791fa42323b"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_09/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "1169091bcd3d64eecbba9efe4cff8233fabc9841af0a494cf9f81eaad290cc8d"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_09/epoch_times.csv": {
+      "bytes": 3149,
+      "sha256": "72d7b4f4980e36f3aaf8afd81d57770378a89a1383b3d03fedccf2b225f5ab0b"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_09/trial_result.json": {
+      "bytes": 1684,
+      "sha256": "1b2fbb6d842d736e147e7edfb91bb357d6d5c03f7203b47220b822a1a3ef2d92"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_09/validation_history.json": {
+      "bytes": 34289,
+      "sha256": "78afd95a0a957981f47e3475c9d7f647ad9a7190644e945a1a3eeddb3d22918b"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_10/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "0a4c009df5d736aa406446715e66b88f2b26dc0cb099a4cf700c19748d507cbb"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_10/epoch_times.csv": {
+      "bytes": 3073,
+      "sha256": "1e2e06cd5f8d2364ea05c75e44a42c9077f0124e0e6ffa0578c0f100778118df"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_10/trial_result.json": {
+      "bytes": 1684,
+      "sha256": "43547452f14250ad7162807f170df929cdc19d58842d216a56ed68de11258e2b"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_10/validation_history.json": {
+      "bytes": 33440,
+      "sha256": "17eabeaf5bdb347de17ec34289414ec362f957a0b11f1310793eaed501181ed4"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_11/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "fef35d192376449896bdff42192ddd021fb20f8a26e89242d52c4a3ac4489632"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_11/epoch_times.csv": {
+      "bytes": 3799,
+      "sha256": "c73847f28bb05d850e530189d0b87ef081ef6d0cc91a98490ca15d720a455a3d"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_11/trial_result.json": {
+      "bytes": 1689,
+      "sha256": "6bf43a3ad090f82f3df7aa2619d2afdb5794609b132cb059ac07c19baaf76a11"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_11/validation_history.json": {
+      "bytes": 41296,
+      "sha256": "258e1d65e620f59a5d0a599882dd28a23bb95451bde30ab2387cde2c7014ef04"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_12/best_validation_scores.npy": {
+      "bytes": 63104,
+      "sha256": "486fbae149ea501e0b853f9061f7ec54993b092008bdd7950b47436b4d2af8a8"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_12/epoch_times.csv": {
+      "bytes": 3076,
+      "sha256": "3be58da302e42ded5a7569b5b9967ae0a509eeb00f901a0023a38c888bf7ff17"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_12/trial_result.json": {
+      "bytes": 1687,
+      "sha256": "62fc3ff7b6cd60b28adeb43768ce863958ee6dcd8bbdc8403c3f79dc7fcd5d0d"
+    },
+    "EOGFD/T-Finance/results/tuning/trial_12/validation_history.json": {
+      "bytes": 33459,
+      "sha256": "cdd330a9b692f46bb6990cbeeea9656654292e63e24b014b77f819f6571b8a85"
+    },
+    "EOGFD/T-Finance/scripts/enable_eogfd_cuda11.sh": {
+      "bytes": 366,
+      "sha256": "c3dadfdbaa12527fb2fbe76bde563aaff9ce8126ac029eea7951412f46c5a07b"
+    },
+    "EOGFD/T-Finance/scripts/i1_pretest_audit_backup_v2.py": {
+      "bytes": 15912,
+      "sha256": "71ec2bf1f0dd0731b351c96d352e1bab05b799feb552783150b91c46c0ce57e1"
+    },
+    "EOGFD/T-Finance/scripts/i1_stage5_once.py": {
+      "bytes": 14947,
+      "sha256": "393df2b54281390de4efebd8a1fe882bca0dc9ab6cbe39b05e4d378df7cfea8f"
+    },
+    "EOGFD/T-Finance/scripts/i1_stage6_public_export.py": {
+      "bytes": 14211,
+      "sha256": "8668423e10d8c72eb89a5c2af89bd084972e65f454ad6ae0de6c218a6a8326cd"
+    },
+    "EOGFD/T-Finance/scripts/stage3_launcher_import_fixed.sh": {
+      "bytes": 1375,
+      "sha256": "5882e569a43058fc47fe7edcb06b6b7dc84dcba904030908fd2de9dff5273c53"
+    },
+    "EOGFD/T-Finance/scripts/stage3_tfinance.py": {
+      "bytes": 19852,
+      "sha256": "f08af08d63ea8c79283031ad3aa05d80753d843636819fc74d75a62c1574b37a"
+    },
+    "EOGFD/T-Finance/scripts/stage4_launcher.sh": {
+      "bytes": 1052,
+      "sha256": "bcca13c3cbc7e6af9ecf60d11f789f3e311e4c4d9460046bb6bdea65a4693eeb"
+    },
+    "EOGFD/T-Finance/scripts/stage4_tfinance.py": {
+      "bytes": 14287,
+      "sha256": "448b68f776b9b3fdd0cf72dec398ff60af59017e64a6530dfec16114444374ae"
+    },
+    "EOGFD/T-Finance/scripts/vast_i1_audit_backup_v2.sh": {
+      "bytes": 786,
+      "sha256": "b95534f4354e370147ac7ea044ecc5faf5782654396d063c45d56cff09b45dc7"
+    },
+    "EOGFD/T-Finance/scripts/vast_i1_finalize.sh": {
+      "bytes": 1659,
+      "sha256": "d912bf8a12b0cf2ceb49982f2562996d6fc3ecadb116274e4d520ae752f15289"
+    },
+    "EOGFD/T-Finance/status.json": {
+      "bytes": 5813,
+      "sha256": "b922ab8d13912d9077da841f2299fe79a6c2c2d3f07c55e9aa7158d7bb6e1ea8"
+    }
+  },
+  "once_only_tests": 12,
+  "publication_performed_model_inference": false,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "test_inference_per_checkpoint": 1
+}
