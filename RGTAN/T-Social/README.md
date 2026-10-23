@@ -1,4 +1,4 @@
-# RGTAN × T-Social — TR40 validation-only tuning in progress
+# RGTAN × T-Social — TR40 validation-only tuning completed
 
 **Status as recorded on 23 October 2026:** the canonical T-Social graph, frozen training/validation/test splits, exact sparse two-hop risk features and independent Stage 2 crossfit audit have passed. **Trial 1/12 has completed; trial 2 is actively training on I1. Final tuning, frozen multi-ratio training and held-out test evaluation have not completed.** No test performance can yet be reported.
 
