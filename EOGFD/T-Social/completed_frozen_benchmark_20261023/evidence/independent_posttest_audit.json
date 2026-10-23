@@ -1,0 +1,271 @@
+{
+  "additional_model_inferences_performed": 0,
+  "author_identical_reproduction": false,
+  "dataset": "T-Social",
+  "frozen_winner_trial": 9,
+  "independent_audit_uses_stored_predictions_and_canonical_test_labels_only": true,
+  "instance": "57231045",
+  "model": "EOGFDHeteroModel",
+  "original_upstream_author_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "results": [
+    {
+      "best_checkpoint_sha256": "4d55da11b97d676900fdd3c596bcd4ac3d54c961085aa4820e07a46bf9238c6b",
+      "claim_sha256": "73820dfdf8398f2da87f0654add8d22f1aafdd706a6aeb0451cf9f6d71a51874",
+      "metric_verified": {
+        "test_accuracy": 0.9898383775307837,
+        "test_auprc": 0.8537851949265884,
+        "test_auroc": 0.9668123189655644,
+        "test_balanced_accuracy": 0.8807420889257277,
+        "test_brier": 0.03579325382298171,
+        "test_fraud_f1": 0.8193961939311957,
+        "test_fraud_precision": 0.8825915623551228,
+        "test_fraud_recall": 0.7646459719990819,
+        "test_macro_f1": 0.9070841549924844,
+        "test_mcc": 0.8164139715277013
+      },
+      "ratio": "TR40",
+      "seed": 2,
+      "test_record_sha256": "b1988ab832507fdeaced4031876a683dde6e1ec2b00fdbfab1defdc101399c1d",
+      "test_scores_sha256": "6a65aa7d24a533040410e48b682b364c393007d0c678c0680694159b850c0d92",
+      "validation_threshold": 0.95
+    },
+    {
+      "best_checkpoint_sha256": "1ef13d66d28c6ad8913f2a014c401c7d8b07205e8a9e9d88de39c4ab7908e4bb",
+      "claim_sha256": "282fa61060629b648ef6344eda0f5ac00df315cbef6c4e4de2cbb3ae6c1630b5",
+      "metric_verified": {
+        "test_accuracy": 0.9901501712919678,
+        "test_auprc": 0.8601460617008091,
+        "test_auroc": 0.967891747775799,
+        "test_balanced_accuracy": 0.8860384546316993,
+        "test_brier": 0.037460993138262934,
+        "test_fraud_f1": 0.8259504069078822,
+        "test_fraud_precision": 0.8837505927754975,
+        "test_fraud_recall": 0.775246729400964,
+        "test_macro_f1": 0.9104410394699332,
+        "test_mcc": 0.8227697526689031
+      },
+      "ratio": "TR40",
+      "seed": 42,
+      "test_record_sha256": "70cfeb012ae01e6c302e446a5ecef9c7676548d3c609ccce6a26999dd4d2d6f4",
+      "test_scores_sha256": "370371cf16affe068da39b44c1f800b8218c7362145cb0601731e2143ef12451",
+      "validation_threshold": 0.96
+    },
+    {
+      "best_checkpoint_sha256": "096bd1cb3a63cf7e24cc074fdd26666cee3ada2fde0d3d6ecefd88bdd1ec47ba",
+      "claim_sha256": "8ce305f66d35936836fdac771c0251c8546ae9332c790eac554282309430067f",
+      "metric_verified": {
+        "test_accuracy": 0.9909406830748314,
+        "test_auprc": 0.8647961647228912,
+        "test_auroc": 0.9657402372708201,
+        "test_balanced_accuracy": 0.8814424126229405,
+        "test_brier": 0.03242326471014593,
+        "test_fraud_f1": 0.8358190239582434,
+        "test_fraud_precision": 0.9212058391638593,
+        "test_fraud_recall": 0.7649185219187514,
+        "test_macro_f1": 0.915580424569135,
+        "test_mcc": 0.8350021756328313
+      },
+      "ratio": "TR40",
+      "seed": 72,
+      "test_record_sha256": "252368469cd66a20d70dc9699f6cf7054515d70b369c33c73d5f784713c456c7",
+      "test_scores_sha256": "d8492215f14d151dc25864f94d5c5f8724ea972f864cba41f4007ad229f4bf49",
+      "validation_threshold": 0.96
+    },
+    {
+      "best_checkpoint_sha256": "492e5be2ac28b6811343ccd7c096018a56db7b8fbc75acc454e811329e348641",
+      "claim_sha256": "1443e75a966f0641ab2c21eab10c96143fc45b68b3f4ec01370d52fac8bbfcc8",
+      "metric_verified": {
+        "test_accuracy": 0.9886469880549691,
+        "test_auprc": 0.8330988039831231,
+        "test_auroc": 0.963784212791401,
+        "test_balanced_accuracy": 0.8728657316127152,
+        "test_brier": 0.04196484470372621,
+        "test_fraud_f1": 0.7992475510999977,
+        "test_fraud_precision": 0.8558654460293804,
+        "test_fraud_recall": 0.7496557264172595,
+        "test_macro_f1": 0.8967029323694495,
+        "test_mcc": 0.7952767277465932
+      },
+      "ratio": "TR30",
+      "seed": 2,
+      "test_record_sha256": "b5b8fd82ba05608e6f9017ab4ed89e473013e43bf19a62183b2b4c760db48968",
+      "test_scores_sha256": "2616189d2b1f2c91c636456b9f2ed2d52ea367c513f8f801fb99874dd3591ef2",
+      "validation_threshold": 0.96
+    },
+    {
+      "best_checkpoint_sha256": "e81a84cbe4214eacbc1085288cbe319b88e78dc7f78cc574af287863daf8e69d",
+      "claim_sha256": "0c8c34cf65266b1393ebd266e1b71a2f817d50a490afe5d8f58d1977da9ee38e",
+      "metric_verified": {
+        "test_accuracy": 0.9899897337255332,
+        "test_auprc": 0.8582752818620321,
+        "test_auroc": 0.967496803134182,
+        "test_balanced_accuracy": 0.8809243607155995,
+        "test_brier": 0.04161223398941673,
+        "test_fraud_f1": 0.8216476099485315,
+        "test_fraud_precision": 0.8875424462347693,
+        "test_fraud_recall": 0.7648611429882947,
+        "test_macro_f1": 0.9082489806781044,
+        "test_mcc": 0.8189191333393092
+      },
+      "ratio": "TR30",
+      "seed": 42,
+      "test_record_sha256": "a7a4e58ec548ff2ebfa6af438b711e3c6023942db990e0d7723a989fdd43eedc",
+      "test_scores_sha256": "87f9cec233db7a0929d19c30616b9a2f5552ebba3decb59fcfb094ebec319b03",
+      "validation_threshold": 0.97
+    },
+    {
+      "best_checkpoint_sha256": "1dc537896d376fd199abf8f30f9bd37bbff7b8bfd9f91c4643909e6196365dab",
+      "claim_sha256": "b15a8701747dedce4685e39b0114f6700d5213ddf43a2889c1a5d606050f17de",
+      "metric_verified": {
+        "test_accuracy": 0.9908710592252465,
+        "test_auprc": 0.866636914256297,
+        "test_auroc": 0.9655175565632201,
+        "test_balanced_accuracy": 0.8930676489668583,
+        "test_brier": 0.03136663967419026,
+        "test_fraud_f1": 0.8389950729899172,
+        "test_fraud_precision": 0.8957688674636005,
+        "test_fraud_recall": 0.7889889832453523,
+        "test_macro_f1": 0.9171487124202128,
+        "test_mcc": 0.8360970551539044
+      },
+      "ratio": "TR30",
+      "seed": 72,
+      "test_record_sha256": "92b15e767bde2ae0c661e4c4e906966a0a57a5c8223d9b6d536ed663b3e963e5",
+      "test_scores_sha256": "8aa147871dfe0942ea046e73a095b0988e48201114393f6cb103331d43647564",
+      "validation_threshold": 0.94
+    },
+    {
+      "best_checkpoint_sha256": "ff0d0783c1ebcc2941345722358016b45c97587cdb45f788b18238471e831596",
+      "claim_sha256": "2e5022bedba66537633dbda6f82b667117f135bd065e668c6e4cdf11de38ae3d",
+      "metric_verified": {
+        "test_accuracy": 0.9895404220502624,
+        "test_auprc": 0.8516014898264341,
+        "test_auroc": 0.9663952881948399,
+        "test_balanced_accuracy": 0.877231909501418,
+        "test_brier": 0.036777242448452103,
+        "test_fraud_f1": 0.8137039690058614,
+        "test_fraud_precision": 0.8786240622764849,
+        "test_fraud_recall": 0.757717466146431,
+        "test_macro_f1": 0.9041615632568454,
+        "test_mcc": 0.810698685164556
+      },
+      "ratio": "TR20",
+      "seed": 2,
+      "test_record_sha256": "8dc02138f0d7126ab3164d5ec13b285cb2903a319de2d25ad6bfa29a65b94d36",
+      "test_scores_sha256": "e0ad18017ab91d955b938e7495308f0fe94f51c2c3996fd26a3951af96406fb5",
+      "validation_threshold": 0.96
+    },
+    {
+      "best_checkpoint_sha256": "668ede8e1809e0544bf58b18e6fbe4c338540f0ed0fd01d47b427b76b2615765",
+      "claim_sha256": "9fdfd8052d2c40f3c5a5f06d837e9f3b894bc8826ebeb3582f8a8bd0ad337a56",
+      "metric_verified": {
+        "test_accuracy": 0.9899633545030198,
+        "test_auprc": 0.8579979293589293,
+        "test_auroc": 0.9672445935115879,
+        "test_balanced_accuracy": 0.8856294187560361,
+        "test_brier": 0.03745510376720349,
+        "test_fraud_f1": 0.8231115717911391,
+        "test_fraud_precision": 0.878103910887064,
+        "test_fraud_recall": 0.7746012164333257,
+        "test_macro_f1": 0.9089733611601933,
+        "test_mcc": 0.8196715807716876
+      },
+      "ratio": "TR20",
+      "seed": 42,
+      "test_record_sha256": "9b288bbad55b60344a82754ad099419d1ad80b8a067fe6504f3747df463206ef",
+      "test_scores_sha256": "278bb6f3b12a4ae1d16d5449edda63b39bc7092830352db64287ed4c1368a674",
+      "validation_threshold": 0.96
+    },
+    {
+      "best_checkpoint_sha256": "8e0b2ca79cbc7ee4a70ff5b1f225e3f81544a3b7654412f37c02b74f383bed38",
+      "claim_sha256": "1fdc04a92c7d524df80282e8d54d5fbc453f124775841b175dbda6e2645d076e",
+      "metric_verified": {
+        "test_accuracy": 0.9911097695666802,
+        "test_auprc": 0.8689905213947758,
+        "test_auroc": 0.9666327353043659,
+        "test_balanced_accuracy": 0.8904109452890743,
+        "test_brier": 0.029191640250872328,
+        "test_fraud_f1": 0.8415714924245926,
+        "test_fraud_precision": 0.9092756036636137,
+        "test_fraud_recall": 0.7832510901996786,
+        "test_macro_f1": 0.9184990289274366,
+        "test_mcc": 0.839490425544069
+      },
+      "ratio": "TR20",
+      "seed": 72,
+      "test_record_sha256": "d89dc5568c3bd546ea0d685ef9ae8f3e27e828013e22f68d91dd59e8bdbbc7da",
+      "test_scores_sha256": "0a91b8ec027e13e2751cf74abadd3c6db730dd02a7ee1199df9dbbaf4c1b2711",
+      "validation_threshold": 0.95
+    },
+    {
+      "best_checkpoint_sha256": "9ed92320c7328e80b3f782d7b280532c3651de6bd1fbddee7f276d3da15b45f2",
+      "claim_sha256": "d73e1c7a5fb37e03e0b6f54ff30be0ed102519e75beb60cf650cd9d0f132733b",
+      "metric_verified": {
+        "test_accuracy": 0.9900913585991509,
+        "test_auprc": 0.8575055808674695,
+        "test_auroc": 0.9660443530006663,
+        "test_balanced_accuracy": 0.8817411890300011,
+        "test_brier": 0.03395724528388928,
+        "test_fraud_f1": 0.8234378491673922,
+        "test_fraud_precision": 0.889595577829207,
+        "test_fraud_recall": 0.7664390635758549,
+        "test_macro_f1": 0.9091702485759996,
+        "test_mcc": 0.8207749086341222
+      },
+      "ratio": "TR10",
+      "seed": 2,
+      "test_record_sha256": "ff35092118d1857d7e6b99b652dcb52f97ac881d4f7238c93bfe440c050689ed",
+      "test_scores_sha256": "5ebb75dc76bf07f8b0a642c49d3b6e9b905467f72c058ab13e7c7268d33c296f",
+      "validation_threshold": 0.95
+    },
+    {
+      "best_checkpoint_sha256": "a2236e8d2101921d15ffc5a63aa6f21060023a73d9a7d518397cbeac17d14de3",
+      "claim_sha256": "46f0538e32702d03d2ea2e1185599324ef610740f5d8bde77dc44fa38f4fab72",
+      "metric_verified": {
+        "test_accuracy": 0.9905449947371289,
+        "test_auprc": 0.8608596546462104,
+        "test_auroc": 0.9663411987205963,
+        "test_balanced_accuracy": 0.8848660170701783,
+        "test_brier": 0.03504651741057274,
+        "test_fraud_f1": 0.8312390008953656,
+        "test_fraud_precision": 0.8997727424637391,
+        "test_fraud_recall": 0.7724064723433555,
+        "test_macro_f1": 0.9131876249938751,
+        "test_mcc": 0.828952541880949
+      },
+      "ratio": "TR10",
+      "seed": 42,
+      "test_record_sha256": "69e79d4bbb8328fad3dc2e61355e21aacf86fc51a72990d74b169ac59fc5f30a",
+      "test_scores_sha256": "99ef28854f945720f6d19f3335bdad68476f8e0f4b94fa6256d78076cd045793",
+      "validation_threshold": 0.95
+    },
+    {
+      "best_checkpoint_sha256": "db08705319a85033d2fc59abe74db1ab4845ee214ac2571e7d8fc8de85d38108",
+      "claim_sha256": "335835191e36d65e9431b9ed378035519529b8c2371e4d39d0dc738ba0f0ff84",
+      "metric_verified": {
+        "test_accuracy": 0.9905873744716588,
+        "test_auprc": 0.8617464117709093,
+        "test_auroc": 0.9669964961777782,
+        "test_balanced_accuracy": 0.8806695663580785,
+        "test_brier": 0.03468410877573845,
+        "test_fraud_f1": 0.8302766601166526,
+        "test_fraud_precision": 0.9095708330485888,
+        "test_fraud_recall": 0.7636992196465457,
+        "test_macro_f1": 0.9127180612690522,
+        "test_mcc": 0.8288108841627954
+      },
+      "ratio": "TR10",
+      "seed": 72,
+      "test_record_sha256": "ee273cbd79f794a5d93aec82d8e2f0ebf7de6b783470f32b6b8c45b05ecded00",
+      "test_scores_sha256": "1d4f4875c41e243ff9e969e2b315126b5fc0b27d6380e6c2475f285555ff081b",
+      "validation_threshold": 0.97
+    }
+  ],
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "stage4_sha256": "1caa14cc42b273ef4e41414eca6983a6188e297a109f374fc9fc7c717303dc26",
+  "stage5_summary_sha256": "10518828a8f0ef4771f591417ad0020ed3cac1c8626bad61ddf1c81f3d54b95f",
+  "staged_test_inferences_existing": 12,
+  "status": "I2_TSOCIAL_STAGE6_POSTTEST_INDEPENDENT_AUDIT_PASS",
+  "supervisor_approval_recorded": false
+}

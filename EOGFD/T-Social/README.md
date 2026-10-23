@@ -1,14 +1,7 @@
-# EOGFD x T-Social
+# EOGFD × T-Social — Completed frozen-split benchmark
 
-Status: NOT STARTED / BLOCKED.
+**Status: COMPLETE.** TR40 validation-only tuning (12/12), frozen final training (12/12), and once-only held-out test evaluations (12/12). Independent post-test metrics and all private backup files were verified.
 
-Required sequence:
-1. Verify canonical source and frozen split hashes.
-2. Validate architecture-preserving input adapter.
-3. Check test isolation and model environment.
-4. Conduct a diagnostic smoke run.
-5. Run TR40 validation-only tuning after approval.
-6. Freeze the winner and complete ratios x seeds.
-7. Export per-run metrics, evidence and cost logs.
+**[Open the complete audited benchmark, reproducibility scripts and test metrics](completed_frozen_benchmark_20261023/README.md).**
 
-Do not upload raw datasets, environments or large checkpoints to this public GitHub repository.
+The newly published 2026-10-23 results are isolated in `completed_frozen_benchmark_20261023/`. Existing legacy files and folders in this directory have been preserved without modification. This is an **adapted** EOGFD benchmark, not an author-identical protocol reproduction. No graph data, frozen-split binaries, model weights, optimizer states or per-node predictions have been published.

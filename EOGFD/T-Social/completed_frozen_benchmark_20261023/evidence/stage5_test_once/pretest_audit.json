@@ -1,0 +1,103 @@
+{
+  "author_identical_reproduction": false,
+  "config": {
+    "beta_p": 1,
+    "hidden_dim": 10,
+    "lamb": 0.0,
+    "lr": 0.01,
+    "mutation_rate": 0.05,
+    "order": 8,
+    "population_size": 10,
+    "weight_decay": 0.0
+  },
+  "dataset": "T-Social",
+  "fixed_eval_seed": 100921,
+  "frozen_split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "instance": "57231045",
+  "method_mode": "UNIFIED_FROZEN_SPLITS_SCOPED_ELITE_PLUS_STREAMED_TRAIN_EVAL_IMPL_OPT_NOT_AUTHOR_UNMODIFIED",
+  "model": "EOGFDHeteroModel",
+  "original_author_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "original_source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "ratio_seed_runs": {
+    "TR10_seed2": {
+      "checkpoint_sha256": "9ed92320c7328e80b3f782d7b280532c3651de6bd1fbddee7f276d3da15b45f2",
+      "final_training_sha256": "5523209ab62ecb269c296ebe1c267c756032dff9fdc5ceb11e21a36d398575cc",
+      "threshold": 0.95,
+      "validation_auprc": 0.8589953984920582
+    },
+    "TR10_seed42": {
+      "checkpoint_sha256": "a2236e8d2101921d15ffc5a63aa6f21060023a73d9a7d518397cbeac17d14de3",
+      "final_training_sha256": "1c7f3d160f0359a28f86696bf7516f044db10c78d6f69ee948bb9b3760c3410f",
+      "threshold": 0.95,
+      "validation_auprc": 0.8619833337428399
+    },
+    "TR10_seed72": {
+      "checkpoint_sha256": "db08705319a85033d2fc59abe74db1ab4845ee214ac2571e7d8fc8de85d38108",
+      "final_training_sha256": "fda36c6db180d2b4ae82e8ca9ac1b9291ee35840386449dc74dc4df4b83f0786",
+      "threshold": 0.97,
+      "validation_auprc": 0.8644713836355639
+    },
+    "TR20_seed2": {
+      "checkpoint_sha256": "ff0d0783c1ebcc2941345722358016b45c97587cdb45f788b18238471e831596",
+      "final_training_sha256": "f5252c26fca9b14edfed8f6729157dfae22c3753204446194fd415c2d8339c9f",
+      "threshold": 0.96,
+      "validation_auprc": 0.8546917686725859
+    },
+    "TR20_seed42": {
+      "checkpoint_sha256": "668ede8e1809e0544bf58b18e6fbe4c338540f0ed0fd01d47b427b76b2615765",
+      "final_training_sha256": "f8686fdaf1bf04b4f9967327db85df7120bc1a4d31309ad7e58297aba747b6d9",
+      "threshold": 0.96,
+      "validation_auprc": 0.859128323412779
+    },
+    "TR20_seed72": {
+      "checkpoint_sha256": "8e0b2ca79cbc7ee4a70ff5b1f225e3f81544a3b7654412f37c02b74f383bed38",
+      "final_training_sha256": "3cb0b8d1eea080401f44dd5407ca3aa27bbb6d2a47c357874a6d4c74bdebdd45",
+      "threshold": 0.95,
+      "validation_auprc": 0.8709178363129705
+    },
+    "TR30_seed2": {
+      "checkpoint_sha256": "492e5be2ac28b6811343ccd7c096018a56db7b8fbc75acc454e811329e348641",
+      "final_training_sha256": "a7be7dbdfe253e3a9bab76fb6698bb3c78476899d2f221f82957d26818cfb09d",
+      "threshold": 0.96,
+      "validation_auprc": 0.8357969548835279
+    },
+    "TR30_seed42": {
+      "checkpoint_sha256": "e81a84cbe4214eacbc1085288cbe319b88e78dc7f78cc574af287863daf8e69d",
+      "final_training_sha256": "5cdde525dc441de370bcb81fced9749a0cf4dc9bf8853831fba2b7f7c8b4018b",
+      "threshold": 0.97,
+      "validation_auprc": 0.8607472813633912
+    },
+    "TR30_seed72": {
+      "checkpoint_sha256": "1dc537896d376fd199abf8f30f9bd37bbff7b8bfd9f91c4643909e6196365dab",
+      "final_training_sha256": "021734efc31c53cc3a3050d5077756bc143dda234fbdaf3f1fa1a47504368992",
+      "threshold": 0.94,
+      "validation_auprc": 0.868854615981777
+    },
+    "TR40_seed2": {
+      "checkpoint_sha256": "4d55da11b97d676900fdd3c596bcd4ac3d54c961085aa4820e07a46bf9238c6b",
+      "final_training_sha256": "5d5792b638731dca2191d0fb668dabd0e7bb1f510c42b4b0f18afa1b5216245f",
+      "threshold": 0.95,
+      "validation_auprc": 0.8556208997202703
+    },
+    "TR40_seed42": {
+      "checkpoint_sha256": "1ef13d66d28c6ad8913f2a014c401c7d8b07205e8a9e9d88de39c4ab7908e4bb",
+      "final_training_sha256": "d0cf56add4acbfb8cb25f75875065bac4dd236e900e9b0d7803d8d38fa5e61a2",
+      "threshold": 0.96,
+      "validation_auprc": 0.8620890865721971
+    },
+    "TR40_seed72": {
+      "checkpoint_sha256": "096bd1cb3a63cf7e24cc074fdd26666cee3ada2fde0d3d6ecefd88bdd1ec47ba",
+      "final_training_sha256": "353326021ba73c6bfc44e0467e06cbb7c9f3aff064569b5b36363463682df893",
+      "threshold": 0.96,
+      "validation_auprc": 0.8659031647533495
+    }
+  },
+  "stage3_frozen_winner_sha256": "cac8c481f7b17c46f7452d781a5582ee7166c6c0bb24b28755dfbb7e4fe75c33",
+  "stage4_code_sha256": "ee1fd00adb6fc0287e572d894481a9a06861a615f51cd7e56295bb2baf7fe914",
+  "stage4_summary_sha256": "1caa14cc42b273ef4e41414eca6983a6188e297a109f374fc9fc7c717303dc26",
+  "status": "I2_EOGFD_TSOCIAL_STAGE5_PRETEST_INPUT_AUDIT_PASS",
+  "supervisor_approval_recorded": false,
+  "test_evaluations_before_stage5": 0,
+  "test_label_access_during_pretest_audit": false,
+  "winner_trial": 9
+}
