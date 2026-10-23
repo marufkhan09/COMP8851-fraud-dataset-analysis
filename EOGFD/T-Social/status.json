@@ -1,24 +1,32 @@
 {
-  "model": "EOGFD",
+  "author_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "completed_runs": [],
   "dataset": "T-Social",
-  "status": "BLOCKED_NOT_STARTED",
-  "source_sha256": null,
-  "split_sha256": null,
-  "split_seed": 2,
-  "training_seeds": [
-    2,
-    42,
-    72
-  ],
+  "final_runs_completed": 12,
+  "heldout_test_evaluations": 12,
+  "independent_saved_score_audit": "PASS",
+  "model": "EOGFD",
+  "notes": "Completed adapted benchmark; see full root README and audited evidence.",
+  "offhost_private_backup": "VERIFIED",
   "ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
-  "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "completed_runs": [],
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_seed": 2,
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "status": "COMPLETE_AUDITED_12_TEST_ONCE",
   "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "notes": "Template only; no results have been generated."
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "tuning_metric": "validation_AUPRC",
+  "tuning_trials": 12,
+  "tuning_trials_completed": 12,
+  "winner_trial": 9,
+  "winner_validation_auprc": 0.859637
 }

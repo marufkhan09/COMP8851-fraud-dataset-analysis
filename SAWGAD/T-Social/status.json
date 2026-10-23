@@ -1,24 +1,28 @@
 {
-  "model": "SAWGAD",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "completed_runs": [],
   "dataset": "T-Social",
-  "status": "BLOCKED_NOT_STARTED",
-  "source_sha256": null,
-  "split_sha256": null,
-  "split_seed": 2,
-  "training_seeds": [
-    2,
-    42,
-    72
-  ],
+  "final_runs_completed": 0,
+  "heldout_test_evaluations": 0,
+  "model": "SAWGAD",
+  "notes": "I2 source and split hashes verified, original author pinned. CUDA environment and full-graph capacity not yet established.",
   "ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
-  "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "completed_runs": [],
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_seed": 2,
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "status": "CANONICAL_INPUT_AUTHOR_PINNED_ENV_CAPACITY_PENDING",
   "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "notes": "Template only; no results have been generated."
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "tuning_metric": "validation_AUPRC",
+  "tuning_trials": 12,
+  "tuning_trials_completed": 0
 }
