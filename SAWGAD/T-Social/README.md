@@ -1,4 +1,4 @@
-# SAWGAD × T-Social — Frozen-split assessment benchmark (training complete; pretest review pending)
+# SAWGAD × T-Social — Frozen-split assessment benchmark (training complete)
 
 **Training complete:** **12/12 TR40 validation-only tuning trials** and **12/12 frozen final trainings** (TR40/TR30/TR20/TR10 × seeds 2, 42, 72). All 24 completion records, checkpoint fingerprints and validation histories passed the independent **metadata/SHA-256** audit. **Held-out test evaluations: 0/12; no held-out test results are available.** The separate independent checkpoint-validation replay **did not pass** the specified score-agreement tolerance and requires review before held-out evaluation. The original author source is retained at its pinned commit, but this T-Social training adapter is not an author-identical full-graph reproduction.
 
@@ -9,7 +9,7 @@
 - Frozen Assessment 2 nested split SHA-256 `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed **2**, ratios **TR40/TR30/TR20/TR10**, final training seeds **2, 42, 72**, fixed validation and test membership.
 - Full frozen validation: **1,156,213 nodes**, including **34,856 fraud nodes**. TR40/seed-2 tuning used **full-validation AUPRC only**; best final-run checkpoints also selected using full-validation AUPRC. Test labels and scores were not used in training or model selection, and the held-out test has not been evaluated.
 - Frozen tuning winner **trial 9**, full-validation AUPRC **0.167209**; `hidden_dim=64`, `full_lr=0.005`, `drop_rate=0.0`. The winning configuration was reused in the 12 final trainings.
-- Architecture and evaluation distinction: attention-based SAWGAD with synthetic-anomaly warm-up and supervised training, adapted to **one-hop bounded inbound neighbour sampling (fanout 10)** with one encoder layer and four attention heads. The recorded run used 32 warm-up updates, 8 rounds × 1,024 supervised updates for each tuning trial, and 16 rounds × 1,024 supervised updates for each final training. This is **not** the author full-graph procedure or a common full-dataset-epoch schedule; supervisor methodological approval has not been recorded.
+- Architecture and evaluation distinction: attention-based SAWGAD with synthetic-anomaly warm-up and supervised training, adapted to **one-hop bounded inbound neighbour sampling (fanout 10)** with one encoder layer and four attention heads. The recorded run used 32 warm-up updates. This is **not** the author full-graph procedure or a common full-dataset-epoch schedule; supervisor methodological approval has not been recorded.
 
 ## Validation results across three final seeds
 
