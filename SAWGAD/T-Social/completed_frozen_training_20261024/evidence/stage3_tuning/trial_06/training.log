@@ -1,0 +1,232 @@
+
+=== LAUNCH 2026-10-23T11:10:44.772552+00:00 ===
+I2_AUTHOR_PIN_SOURCE_SPLIT_ENV_AUDIT=PASS
+I2_FROZEN_SPLIT_AUDIT=PASS
+I2_TRAIN_POOL_AUDIT=PASS ratio= TR40 seed= 2 nodes= 2312426 fraud= 69712
+I2_AUTHOR_MINMAX_FEATURE_ADAPTER=PASS range= 0.0 1.0
+I2_TRAIN_LABELS_ONLY_VALIDATION_SELECTED_TEST_LABELS_INDEXED=NO full_validation=1156213 val_fraud=34856
+I2_CANONICAL_GRAPH_PREP_SECONDS= 3.999
+I2_SAWGAD_REAL_TRAINING_STARTED=YES run_id= tune_06 stage=synthetic_warmup
+I2_SAWGAD_WARMUP_STEP=1/32 loss=0.691775 elapsed_s=14.5
+I2_SAWGAD_WARMUP_STEP=2/32 loss=0.692760 elapsed_s=14.6
+I2_SAWGAD_WARMUP_STEP=3/32 loss=0.698172 elapsed_s=14.6
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.458333 best= 0.458333 step= 4
+I2_SAWGAD_WARMUP_STEP=4/32 loss=0.694715 elapsed_s=14.7
+I2_SAWGAD_WARMUP_STEP=5/32 loss=0.696096 elapsed_s=14.8
+I2_SAWGAD_WARMUP_STEP=6/32 loss=0.698084 elapsed_s=14.9
+I2_SAWGAD_WARMUP_STEP=7/32 loss=0.691888 elapsed_s=14.9
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.477244 best= 0.477244 step= 8
+I2_SAWGAD_WARMUP_STEP=8/32 loss=0.692076 elapsed_s=15.0
+I2_SAWGAD_WARMUP_STEP=9/32 loss=0.694041 elapsed_s=15.1
+I2_SAWGAD_WARMUP_STEP=10/32 loss=0.690610 elapsed_s=15.1
+I2_SAWGAD_WARMUP_STEP=11/32 loss=0.692857 elapsed_s=15.2
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.500641 best= 0.500641 step= 12
+I2_SAWGAD_WARMUP_STEP=12/32 loss=0.696129 elapsed_s=15.3
+I2_SAWGAD_WARMUP_STEP=13/32 loss=0.694689 elapsed_s=15.3
+I2_SAWGAD_WARMUP_STEP=14/32 loss=0.695054 elapsed_s=15.4
+I2_SAWGAD_WARMUP_STEP=15/32 loss=0.695641 elapsed_s=15.5
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.519872 best= 0.519872 step= 16
+I2_SAWGAD_WARMUP_STEP=16/32 loss=0.690914 elapsed_s=15.5
+I2_SAWGAD_WARMUP_STEP=17/32 loss=0.694791 elapsed_s=15.6
+I2_SAWGAD_WARMUP_STEP=18/32 loss=0.693611 elapsed_s=15.7
+I2_SAWGAD_WARMUP_STEP=19/32 loss=0.694781 elapsed_s=15.7
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.534615 best= 0.534615 step= 20
+I2_SAWGAD_WARMUP_STEP=20/32 loss=0.694423 elapsed_s=15.8
+I2_SAWGAD_WARMUP_STEP=21/32 loss=0.697243 elapsed_s=15.9
+I2_SAWGAD_WARMUP_STEP=22/32 loss=0.691876 elapsed_s=15.9
+I2_SAWGAD_WARMUP_STEP=23/32 loss=0.691214 elapsed_s=16.0
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.545192 best= 0.545192 step= 24
+I2_SAWGAD_WARMUP_STEP=24/32 loss=0.695324 elapsed_s=16.1
+I2_SAWGAD_WARMUP_STEP=25/32 loss=0.693364 elapsed_s=16.1
+I2_SAWGAD_WARMUP_STEP=26/32 loss=0.692869 elapsed_s=16.2
+I2_SAWGAD_WARMUP_STEP=27/32 loss=0.693438 elapsed_s=16.3
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.558974 best= 0.558974 step= 28
+I2_SAWGAD_WARMUP_STEP=28/32 loss=0.692895 elapsed_s=16.4
+I2_SAWGAD_WARMUP_STEP=29/32 loss=0.690495 elapsed_s=16.4
+I2_SAWGAD_WARMUP_STEP=30/32 loss=0.693956 elapsed_s=16.5
+I2_SAWGAD_WARMUP_STEP=31/32 loss=0.695274 elapsed_s=16.5
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.570833 best= 0.570833 step= 32
+I2_SAWGAD_WARMUP_STEP=32/32 loss=0.689869 elapsed_s=16.6
+I2_SAWGAD_WARMUP_BEST_STATE_RESTORED=PASS best_synthetic_val_AUROC= 0.570833 winning_step= 32
+I2_SAWGAD_WARMUP_CHECKPOINT=PASS completed_steps= 32
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=64/1024 loss=3.664277 elapsed_s=3.9
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=128/1024 loss=3.346982 elapsed_s=7.8
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=192/1024 loss=4.395924 elapsed_s=11.5
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=256/1024 loss=3.307339 elapsed_s=15.0
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=320/1024 loss=3.165315 elapsed_s=18.5
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=384/1024 loss=3.594463 elapsed_s=21.7
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=448/1024 loss=3.044681 elapsed_s=24.9
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=512/1024 loss=2.918155 elapsed_s=28.6
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=576/1024 loss=2.619598 elapsed_s=32.0
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=640/1024 loss=2.078902 elapsed_s=35.6
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=704/1024 loss=2.229325 elapsed_s=39.0
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=768/1024 loss=2.663233 elapsed_s=42.4
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=832/1024 loss=3.500651 elapsed_s=45.9
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=896/1024 loss=2.814190 elapsed_s=49.3
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=960/1024 loss=2.404944 elapsed_s=52.6
+I2_SAWGAD_tune_06_TRAIN round=1/8 batch=1024/1024 loss=2.707903 elapsed_s=56.0
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 63.447, "epoch": 1, "full_validation_AUPRC": 0.11537874814446292, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 3.138410403043963, "train_batch_count": 1024, "validation_seconds": 7.42}
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=64/1024 loss=2.366025 elapsed_s=3.7
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=128/1024 loss=2.694275 elapsed_s=7.0
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=192/1024 loss=2.816182 elapsed_s=10.1
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=256/1024 loss=2.767898 elapsed_s=13.7
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=320/1024 loss=2.492371 elapsed_s=16.8
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=384/1024 loss=2.370265 elapsed_s=20.2
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=448/1024 loss=2.692538 elapsed_s=23.4
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=512/1024 loss=2.336988 elapsed_s=26.6
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=576/1024 loss=2.244633 elapsed_s=30.2
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=640/1024 loss=2.181254 elapsed_s=33.5
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=704/1024 loss=2.575181 elapsed_s=36.7
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=768/1024 loss=2.411743 elapsed_s=40.0
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=832/1024 loss=2.209064 elapsed_s=43.6
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=896/1024 loss=3.545092 elapsed_s=46.9
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=960/1024 loss=2.326870 elapsed_s=50.4
+I2_SAWGAD_tune_06_TRAIN round=2/8 batch=1024/1024 loss=2.920291 elapsed_s=53.6
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 60.613, "epoch": 2, "full_validation_AUPRC": 0.12622093470703719, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.597890004864894, "train_batch_count": 1024, "validation_seconds": 7.003}
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=64/1024 loss=2.781478 elapsed_s=3.2
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=128/1024 loss=2.797160 elapsed_s=6.3
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=192/1024 loss=2.991761 elapsed_s=9.6
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=256/1024 loss=2.419176 elapsed_s=12.7
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=320/1024 loss=2.423527 elapsed_s=16.0
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=384/1024 loss=2.429720 elapsed_s=19.9
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=448/1024 loss=2.299203 elapsed_s=23.3
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=512/1024 loss=3.009121 elapsed_s=26.7
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=576/1024 loss=2.091666 elapsed_s=30.4
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=640/1024 loss=2.568626 elapsed_s=33.8
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=704/1024 loss=2.534176 elapsed_s=37.2
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=768/1024 loss=2.098575 elapsed_s=40.3
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=832/1024 loss=2.158764 elapsed_s=43.8
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=896/1024 loss=2.033120 elapsed_s=47.1
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=960/1024 loss=2.287047 elapsed_s=50.9
+I2_SAWGAD_tune_06_TRAIN round=3/8 batch=1024/1024 loss=2.401101 elapsed_s=54.5
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 61.537, "epoch": 3, "full_validation_AUPRC": 0.13181432637373144, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.47171826811973, "train_batch_count": 1024, "validation_seconds": 6.993}
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=64/1024 loss=2.105205 elapsed_s=3.3
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=128/1024 loss=2.372850 elapsed_s=6.7
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=192/1024 loss=2.233403 elapsed_s=10.5
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=256/1024 loss=2.211316 elapsed_s=14.1
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=320/1024 loss=2.297468 elapsed_s=17.6
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=384/1024 loss=1.866400 elapsed_s=21.2
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=448/1024 loss=1.957921 elapsed_s=24.8
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=512/1024 loss=2.605342 elapsed_s=28.4
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=576/1024 loss=2.054986 elapsed_s=31.8
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=640/1024 loss=2.104153 elapsed_s=35.1
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=704/1024 loss=2.744300 elapsed_s=38.4
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=768/1024 loss=1.985923 elapsed_s=41.8
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=832/1024 loss=2.535536 elapsed_s=45.0
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=896/1024 loss=2.751457 elapsed_s=48.6
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=960/1024 loss=2.689219 elapsed_s=52.2
+I2_SAWGAD_tune_06_TRAIN round=4/8 batch=1024/1024 loss=1.914901 elapsed_s=55.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 64.236, "epoch": 4, "full_validation_AUPRC": 0.13708551256937246, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.421110831666738, "train_batch_count": 1024, "validation_seconds": 8.568}
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=64/1024 loss=1.564263 elapsed_s=4.3
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=128/1024 loss=2.533049 elapsed_s=8.0
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=192/1024 loss=2.375578 elapsed_s=10.5
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=256/1024 loss=2.244913 elapsed_s=12.7
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=320/1024 loss=2.436880 elapsed_s=14.8
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=384/1024 loss=3.358670 elapsed_s=16.9
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=448/1024 loss=2.614604 elapsed_s=19.2
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=512/1024 loss=2.247960 elapsed_s=21.2
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=576/1024 loss=2.617188 elapsed_s=23.3
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=640/1024 loss=2.082072 elapsed_s=25.5
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=704/1024 loss=2.879539 elapsed_s=27.7
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=768/1024 loss=2.258802 elapsed_s=29.9
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=832/1024 loss=2.211051 elapsed_s=32.0
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=896/1024 loss=2.640260 elapsed_s=34.2
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=960/1024 loss=1.966900 elapsed_s=36.4
+I2_SAWGAD_tune_06_TRAIN round=5/8 batch=1024/1024 loss=3.027283 elapsed_s=39.0
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 44.997, "epoch": 5, "full_validation_AUPRC": 0.13167951140892536, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.399730387260206, "train_batch_count": 1024, "validation_seconds": 6.037}
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=64/1024 loss=2.971808 elapsed_s=2.5
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=128/1024 loss=2.138243 elapsed_s=4.8
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=192/1024 loss=1.918056 elapsed_s=7.2
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=256/1024 loss=3.154409 elapsed_s=9.5
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=320/1024 loss=2.103862 elapsed_s=11.5
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=384/1024 loss=2.270824 elapsed_s=13.7
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=448/1024 loss=2.207764 elapsed_s=15.9
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=512/1024 loss=1.737715 elapsed_s=18.1
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=576/1024 loss=2.232867 elapsed_s=20.2
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=640/1024 loss=1.982160 elapsed_s=22.7
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=704/1024 loss=2.010100 elapsed_s=24.9
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=768/1024 loss=1.991804 elapsed_s=33.3
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=832/1024 loss=2.265700 elapsed_s=37.0
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=896/1024 loss=1.774261 elapsed_s=41.1
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=960/1024 loss=1.638231 elapsed_s=44.6
+I2_SAWGAD_tune_06_TRAIN round=6/8 batch=1024/1024 loss=2.838956 elapsed_s=48.1
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 56.567, "epoch": 6, "full_validation_AUPRC": 0.14120781119750275, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.3600014918483794, "train_batch_count": 1024, "validation_seconds": 8.497}
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=64/1024 loss=2.144940 elapsed_s=3.6
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=128/1024 loss=2.186932 elapsed_s=7.1
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=192/1024 loss=2.169133 elapsed_s=10.7
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=256/1024 loss=1.947552 elapsed_s=14.4
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=320/1024 loss=2.059573 elapsed_s=17.8
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=384/1024 loss=2.774750 elapsed_s=21.3
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=448/1024 loss=2.306952 elapsed_s=24.8
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=512/1024 loss=2.171268 elapsed_s=28.3
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=576/1024 loss=3.016161 elapsed_s=31.7
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=640/1024 loss=2.118794 elapsed_s=35.2
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=704/1024 loss=1.923853 elapsed_s=38.7
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=768/1024 loss=2.507872 elapsed_s=42.6
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=832/1024 loss=2.116815 elapsed_s=46.1
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=896/1024 loss=2.919114 elapsed_s=49.5
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=960/1024 loss=2.641957 elapsed_s=52.9
+I2_SAWGAD_tune_06_TRAIN round=7/8 batch=1024/1024 loss=2.706258 elapsed_s=56.5
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 64.423, "epoch": 7, "full_validation_AUPRC": 0.1430323650504082, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.3303379251156002, "train_batch_count": 1024, "validation_seconds": 7.893}
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=64/1024 loss=1.927476 elapsed_s=3.6
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=128/1024 loss=2.457717 elapsed_s=7.3
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=192/1024 loss=1.934583 elapsed_s=10.8
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=256/1024 loss=3.339839 elapsed_s=14.8
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=320/1024 loss=2.488682 elapsed_s=18.5
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=384/1024 loss=2.496880 elapsed_s=22.9
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=448/1024 loss=1.882966 elapsed_s=26.6
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=512/1024 loss=2.444458 elapsed_s=30.1
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=576/1024 loss=2.247147 elapsed_s=34.0
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=640/1024 loss=2.210938 elapsed_s=37.8
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=704/1024 loss=2.657909 elapsed_s=41.4
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=768/1024 loss=2.480250 elapsed_s=44.9
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=832/1024 loss=3.038277 elapsed_s=48.8
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=896/1024 loss=2.574333 elapsed_s=52.7
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=960/1024 loss=1.858891 elapsed_s=56.5
+I2_SAWGAD_tune_06_TRAIN round=8/8 batch=1024/1024 loss=1.924854 elapsed_s=60.3
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 70.987, "epoch": 8, "full_validation_AUPRC": 0.14450282011522428, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0323, "mean_training_loss": 2.3090907343430445, "train_batch_count": 1024, "validation_seconds": 10.688}
+I2_SAWGAD_WORKER_COMPLETED=PASS run_id= tune_06
+I2_SAWGAD_NO_TEST_LABEL_ACCESS=PASS
+I2_SAWGAD_HOLDOUT_TEST_AUTHORIZED=NO
+I2_SAWGAD_HELDOUT_TEST_AUTHORIZED=NO
+I2_SAWGAD_RUN_SUMMARY={"all_validation_nodes_evaluated": true, "best_warmup_synthetic_val_AUROC": 0.5708333333333333, "final_benchmark_result": false, "full_validation_AUPRC_best": 0.14450282011522428, "full_validation_examples": 1156213, "full_validation_fraud": 34856, "fullgraph_author_equivalent": false, "heldout_test_labels_indexed": false, "heldout_test_metrics_computed": false, "max_cuda_allocated_gib": 0.0323, "max_process_rss_gib": 7.0542, "methodological_approval_recorded": false, "protocol": {"author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2", "checkpoints_selected_on": "full_frozen_validation_AUPRC", "complete_validation": true, "configuration_frozen_from_trial": null, "configuration_frozen_sha256": null, "dataset": "T-Social", "drop_rate": 0.25, "encoder_heads": 4, "encoder_layers": 1, "fanout": 10, "feature_adapter": "author_global_transductive_minmax", "final_canonical_benchmark": false, "full_lr": 0.005, "heldout_test_indexed": false, "heldout_test_scored": false, "hidden_dim": 32, "hidden_multiplier": 1.25, "joint_regularization_weight": 4.44, "methodological_approval_required": true, "model": "SAWGAD", "phase": "TR40_12TRIAL_VAL_ONLY_TUNE", "ratio": "TR40", "real_neg_per_step": 248, "real_pos_per_step": 8, "run_id": "tune_06", "sampling_mode": "one_hop_inbound_bounded_neighbour_context_not_fullgraph", "seed": 2, "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0", "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519", "stage": "tune", "supervised_epochs": 8, "supervised_steps_per_epoch": 1024, "synthetic_anomalies_per_type": 4, "synthetic_normals_per_step": 64, "training_budget_not_equivalent_to_full_dataset_epoch": true, "validation_batch_size": 2048, "validation_nodes": 1156213, "warmup_lr": 0.0003, "warmup_selection": "best_mean_synthetic_validation_AUROC", "warmup_steps": 32, "warmup_synthetic_val_period": 4, "warmup_validation_negatives": 160, "weight_decay": 0.002}, "status": "ADAPTED_TUNING_VALIDATION_ONLY_COMPLETED", "total_supervised_optimizer_steps": 8192, "total_warmup_optimizer_steps": 32}

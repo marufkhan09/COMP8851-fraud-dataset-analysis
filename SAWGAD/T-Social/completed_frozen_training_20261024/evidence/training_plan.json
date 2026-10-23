@@ -1,0 +1,96 @@
+{
+  "author_equivalent": false,
+  "experimental_status": "adapted research evidence; not an approved canonical final benchmark",
+  "finals_budget": {
+    "rounds": 16,
+    "updates_per_round": 1024,
+    "warmup_steps": 32
+  },
+  "full_validation": true,
+  "grid": [
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.001,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.003,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.005,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.001,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.003,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.005,
+      "hidden_dim": 32
+    },
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.001,
+      "hidden_dim": 64
+    },
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.003,
+      "hidden_dim": 64
+    },
+    {
+      "drop_rate": 0.0,
+      "full_lr": 0.005,
+      "hidden_dim": 64
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.001,
+      "hidden_dim": 64
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.003,
+      "hidden_dim": 64
+    },
+    {
+      "drop_rate": 0.25,
+      "full_lr": 0.005,
+      "hidden_dim": 64
+    }
+  ],
+  "heldout_test_scoring": false,
+  "orchestrator_sha256": "060e40abf1b399357b108660af3ac63e8af1809ac43b97952b5a2cb6229af8de",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "schema": "sawgad-tsocial-12tune-3x4-plan-v1",
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "supervisor_approval_recorded": false,
+  "tuning_budget": {
+    "rounds": 8,
+    "updates_per_round": 1024,
+    "warmup_steps": 32
+  },
+  "upstream_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "worker_sha256": "0bfbdd5a447077ee312258e4a59dc23da7d2184f3abe8dc6e26a4345cdc525cf"
+}
