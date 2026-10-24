@@ -1,34 +1,36 @@
-# RGTAN × T-Social — Frozen-split assessment benchmark (validation-only tuning in progress)
+# RGTAN × T-Social — Validation-only TR40 tuning in progress
 
-**Status at the latest verified I1 snapshot (24 October 2026, 05:05 AEDT):** the canonical graph, frozen splits, training-only risk-feature construction and Stage 2 crossfit checks had passed. **4/12 TR40 validation-only tuning trials were complete; trial 5 was training.** The remaining tuning trials, frozen final trainings (TR40/TR30/TR20/TR10 × seeds 2, 42, 72) and once-only held-out test evaluations had **not** been verified complete. The snapshot is dated; it is not a live progress indicator. **No held-out test metrics are available.** The author RGTAN model source is pinned and unchanged, but the T-Social runner uses bounded-neighbour sampling; this is not an author-identical full-neighbour experiment.
+**Progress:** **6/12 TR40 tuning trials completed**, with **trial 7 in progress** at the most recent I1 check (epoch 31). The frozen 12-run training matrix (TR40/TR30/TR20/TR10 × seeds 2, 42, 72) and once-only held-out test evaluations have **not started**. **No held-out test results are available.** The source RGTAN model is pinned and unchanged; the T-Social experiment uses an explicitly adapted bounded-neighbour training procedure, not an author-identical reproduction.
 
 ## Provenance
 
-- Original RGTAN author: `AI4Risk/antifraud` (pinned commit `65e583f03ac5c5983e49cc35179fe7a65908b9c1`); original author model source is unchanged.
-- Canonical T-Social graph: **5,781,065 nodes**, **146,211,016 stored directed edges**, **10 node features**; source SHA-256 `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
-- Frozen Assessment 2 nested split SHA-256 `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed **2**, ratios **TR40/TR30/TR20/TR10**, planned final seeds **2, 42, 72**, fixed validation and test membership.
-- Five-fold training-only out-of-fold label contexts and exact sparse one-hop/two-hop risk features. The independent Stage 2 audit checked **16 saved artifacts**, label masking, crossfit scaling and sampled exact two-hop features; **18,777,751,032** candidate binary-CSR two-hop walks were recorded during construction. Validation/test labels were excluded from training risk-feature fitting.
-- T-Social training adaptation: two RGTAN graph layers with `MultiLayerNeighborSampler([10,10])`, batch **1024**, rather than original full-neighbour propagation. Trial training allows up to **100 epochs** with **early-stopping patience 20**; full frozen-validation AUPRC selects checkpoints. This is **not** an author-identical reproduction, and supervisor methodological approval has not been recorded.
-- TR40 tuning grid: **12** candidate configurations; hidden dimensions `{32,64}`, base learning rates `{0.001,0.003,0.005}`, dropout pairs `[0.2,0.1]` and `[0.3,0.15]`. The winner is **not yet verified or frozen**. Test labels are not used for tuning or checkpoint selection.
+- Original RGTAN author: `AI4Risk/antifraud`, pinned commit `65e583f03ac5c5983e49cc35179fe7a65908b9c1`; original author model source remains unchanged.
+- Canonical T-Social graph: **5,781,065 nodes**, **146,211,016 stored directed edges**, **10 node features**; original source SHA-256 `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
+- Frozen Assessment 2 split SHA-256 `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed **2**, ratios **TR40/TR30/TR20/TR10**, final model seeds **2, 42, 72**; fixed validation and test memberships.
+- Five-fold training-only out-of-fold label contexts and exact sparse one-hop/two-hop risk features. Independent Stage 2 checks covered **16 saved artifacts**, label masking, crossfit scaling and sampled exact two-hop computations; **18,777,751,032** candidate binary-CSR two-hop walks were recorded. Validation/test labels were excluded from training risk-feature fitting.
+- T-Social computational adaptation: two RGTAN graph layers with `MultiLayerNeighborSampler([10,10])`, batch size **1024**, rather than original full-neighbour propagation. Up to **100 epochs** and early stopping patience **20** per trial; checkpoints selected using validation AUPRC. This is **not** an author-identical experiment; supervisor methodological approval has not been recorded.
+- TR40 tuning grid: **12 configurations**, hidden dimensions `{32,64}`, base learning rates `{0.001,0.003,0.005}` and dropout pairs `[0.2,0.1]` and `[0.3,0.15]`. The winning configuration has **not** been independently approved and frozen. No test outcomes have been used for model selection.
 
-## Validation-only TR40 tuning results — last verified snapshot
+## Validation-only TR40 tuning results
 
-These are the recorded **validation** AUPRC values available from the I1 terminal on **24 October 2026 at 05:05 AEDT**. They are neither a completed 12-trial ranking nor held-out test results. Trial 2's near-perfect value requires a separate alignment, metric and feature-provenance audit before winner selection.
+The results below are **validation AUPRC**, not held-out test results. Six tuning trials have completed; trial 7 was still running at the most recent I1 terminal check. Trial 2's near-perfect AUPRC and trial 7's provisional near-perfect AUPRC require independent feature-provenance, label-isolation and metric checks before winner selection.
 
-| Trial | Training status at snapshot | Epochs completed | Best validation AUPRC | Verification note |
+| Trial | Training progress | Epochs reached | Best validation AUPRC | Evidence |
 |---|---|---:|---:|---|
-| 01 | Complete | 43 | 0.584989 | Stored checkpoint/score hashes checked |
-| 02 | Complete | 22 | 0.991912 | Exceptional score; independent integrity review required |
-| 03 | Complete | 26 | 0.477618 | Training completed |
-| 04 | Complete | 39 | 0.576455 | Training completed |
-| 05 | Active | 35 | 0.519692 | Provisional; stale epochs 18/20 at snapshot |
-| 06–12 | Not started at snapshot | — | — | No result available |
+| 01 | Complete | 43 | 0.584989 | Checkpoint, saved scores and history hashes passed |
+| 02 | Complete | 22 | 0.991912 | Hashes passed; unusually high score requires independent review |
+| 03 | Complete | 26 | 0.477618 | Checkpoint, saved scores and history hashes passed |
+| 04 | Complete | 39 | 0.576455 | Checkpoint, saved scores and history hashes passed |
+| 05 | Complete | 37 | 0.519692 | Checkpoint, saved scores and history hashes passed |
+| 06 | Complete | 31 | 0.446338 | Completion verified; hashes not rechecked in the most recent audit |
+| 07 | In progress | 31 | 0.995064 | Provisional best at epoch 16; early-stopping stale count 15/20 |
+| 08–12 | Pending | — | — | No completed trial results |
 
 ## Held-out test results across three final seeds
 
-**Not available.** At the last verified I1 snapshot, the pipeline was still tuning TR40; no frozen winning configuration, completed 12-run final matrix or once-only held-out test records were available. The four training ratios below are the planned final evaluation matrix, **not completed results**.
+**Not available.** Tuning remains in progress; the frozen final-model matrix and once-only held-out evaluations have not been completed. The following is a **planned evaluation matrix**, not observed performance.
 
-| Ratio | Planned final seeds | Held-out test AUPRC | Held-out test AUROC | Held-out test macro-F1 |
+| Ratio | Planned final seeds | Test AUPRC | Test AUROC | Test macro-F1 |
 |---|---|---|---|---|
 | TR40 | 2, 42, 72 | Not evaluated | Not evaluated | Not evaluated |
 | TR30 | 2, 42, 72 | Not evaluated | Not evaluated | Not evaluated |
@@ -37,13 +39,13 @@ These are the recorded **validation** AUPRC values available from the I1 termina
 
 ## Individual once-only held-out test results
 
-**Not available:** no verified held-out test evaluations or validation-selected classification thresholds have been published for this model/dataset pair. Do not treat TR40 tuning values as per-seed final or test metrics.
+**Not available:** no final ratio/seed test results or frozen validation-selected classification thresholds have been recorded for publication. Validation-only tuning scores must not be represented as held-out test outcomes.
 
 ## Public evidence and scripts
 
-- `README.md`: this dated, evidence-limited progress snapshot. The corresponding `status.json` on this branch is historical and may not match the latest I1 training output.
-- Stage 2 exact sparse crossfit verification, original graph/split hashes and risk-context evidence are retained on I1; the original author model remains pinned at the commit above.
-- I1 Stage 3 tuning runner: `RGTAN_TSOCIAL_I1_STAGE3_GRID_V2_20261023/stage3_tr40_rgtan_grid_v2.py` (private I1 workspace). The most recent verified invocation used `--mode all`; it **only** performs tuning and winner freezing, not Stage 4 final training.
-- Before test access: finish and independently audit the full 12-trial validation grid; inspect the trial-2 anomaly; freeze the winner; rebuild ratio-specific training-only risk contexts; complete and audit all 12 seed/ratio final checkpoints with validation-selected thresholds; then perform exactly one held-out evaluation per frozen run.
+- `README.md` records the most recently supplied I1 tuning progress. `status.json` still describes an earlier stage and is **not updated** by this README-only publication.
+- Original pinned model source, canonical graph/split hashes and Stage 2 risk-feature audit are retained in the private I1 experiment; binary graph data, split arrays and model checkpoints are not published here.
+- I1 Stage 3 runner: `RGTAN_TSOCIAL_I1_STAGE3_GRID_V2_20261023/stage3_tr40_rgtan_grid_v2.py`; its `--mode all` operation covers tuning and winner freezing, **not** the twelve Stage 4 final trainings or Stage 5 held-out scoring.
+- Remaining work: complete all 12 validation-only trials, independently investigate the trial-2/trial-7 scoring anomalies, select and freeze the winner using validation only, prepare ratio-specific training-only risk contexts, train and audit the twelve ratio/seed final models, and evaluate each frozen checkpoint exactly once on the held-out test set.
 
-**Withheld privately:** original graph, frozen split arrays, risk-feature arrays, training/optimizer checkpoints and node-level predictions. No unverified completion claim or held-out test metric should be inferred from this README.
+**Withheld privately:** original graph, frozen split data, training-only risk-feature arrays, model/optimizer checkpoints and node-level predictions. The GitHub folder is a public progress/evidence record, not a complete private training archive.
