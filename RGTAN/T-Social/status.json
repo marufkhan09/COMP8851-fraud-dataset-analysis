@@ -18,11 +18,30 @@
     "TR20",
     "TR10"
   ],
-  "tuning_trials": 12,
-  "tuning_metric": "validation_AUPRC",
-  "highest_recorded_validation_trial": 7,
-  "highest_recorded_validation_auprc": 0.9950644969608748,
-  "recorded_training_adapter": {
+  "prior_i1_validation_tuning": {
+    "configurations": 12,
+    "metric": "validation_AUPRC",
+    "highest_trial": 7,
+    "highest_recorded_auprc": 0.9950644969608748,
+    "evidence_path": "tuning_evidence_20261025",
+    "stage2_risk_audit": "PASS",
+    "stage3_saved_score_alignment_audit": "REQUIRES_VERIFICATION"
+  },
+  "separate_vast_ai_final_evaluation": {
+    "user_reported_runs": 12,
+    "dataset": "T-Social",
+    "model": "RGTAN",
+    "metric_stage": "heldout_test_as_reported",
+    "measurements_source": "user_supplied_separate_gpu_screenshot_table",
+    "aggregate_sample_sd_ddof": 1,
+    "arithmetic_recomputation": "PASS",
+    "source_level_prediction_label_audit": "NOT_PERFORMED",
+    "metric_consistency_review": "RECOMMENDED",
+    "per_seed_csv": "final_evaluation_20261026/results/heldout_test_per_seed.csv",
+    "summary_csv": "final_evaluation_20261026/results/heldout_test_summary.csv",
+    "provenance_json": "final_evaluation_20261026/evidence/metric_provenance.json"
+  },
+  "sampling_adaptation": {
     "layers": 2,
     "fanouts": [
       10,
@@ -31,11 +50,5 @@
     "batch_size": 1024,
     "max_epochs": 100,
     "patience": 20
-  },
-  "independent_stage2_risk_audit": "PASS",
-  "stage3_saved_score_alignment_audit": "REQUIRED",
-  "winner_frozen": false,
-  "public_evidence_path": "tuning_evidence_20261025",
-  "metric_scope": "TR40 validation AUPRC and epoch-level training metrics",
-  "heldout_test_metric_provenance": "No final ratio-seed heldout prediction-label pairs in archived evidence"
+  }
 }

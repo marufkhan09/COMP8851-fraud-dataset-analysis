@@ -1,0 +1,28 @@
+{
+  "model": "RGTAN",
+  "dataset": "T-Social",
+  "experiment": "separate_gpu_reported_final_evaluation",
+  "source": "user-provided results table; calculated summary",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0f237fec2ced7ee54532b02f7f9a76229aa336abb0ec2ea016e4eb6de40bdbb2",
+      "size_bytes": 1084
+    },
+    {
+      "path": "results/heldout_test_per_seed.csv",
+      "sha256": "b1fa37d6272e7a15e65c5fd586b3cee6bf5db726c8ec7ace7c1c9bdb51ffbd42",
+      "size_bytes": 463
+    },
+    {
+      "path": "results/heldout_test_summary.csv",
+      "sha256": "5cd4a5152eb43a659c6286159eef8ff7980a3a1482226b8ea461057427b593d9",
+      "size_bytes": 329
+    },
+    {
+      "path": "evidence/metric_provenance.json",
+      "sha256": "d729df9323b50f0b6942e2a63728b9eaa9529d443f65d724a0bed6fb8bc263fb",
+      "size_bytes": 1255
+    }
+  ]
+}
