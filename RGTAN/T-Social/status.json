@@ -1,28 +1,32 @@
 {
-  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
-  "completed_runs": [],
-  "completed_tuning_trials_last_verified": 1,
-  "dataset": "T-Social",
-  "heldout_test_evaluations_last_verified": 0,
   "model": "RGTAN",
-  "notes": "Trial 1 verified; trial 2 active at last check. No final or held-out results claimed.",
-  "ratios": [
+  "dataset": "T-Social",
+  "protocol": "Assessment 2 frozen split",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "split_seed": 2,
+  "training_ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
-  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
-  "split_seed": 2,
-  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
-  "stage2_exact_sparse_crossfit_audit": "PASS",
-  "status": "TR40_VALIDATION_TUNING_IN_PROGRESS",
-  "supervisor_approval": "PENDING_WHERE_REQUIRED",
-  "training_seeds": [
+  "planned_final_seeds": [
     2,
     42,
     72
   ],
-  "tuning_metric": "validation_AUPRC",
-  "tuning_trials": 12
+  "tr40_validation_tuning_configurations": 12,
+  "configurations_with_measured_validation_auprc": 12,
+  "highest_observed_validation_trial": 7,
+  "highest_observed_validation_auprc": 0.9950644969608748,
+  "recorded_validation_metric": "average_precision_score",
+  "independent_stage2_risk_audit": "PASS",
+  "stage3_saved_score_alignment_audit": "REQUIRED",
+  "winner_selection": "REQUIRES_INDEPENDENT_AUDIT",
+  "ratio_seed_final_metrics": "NOT_RECORDED_IN_TUNING_EVIDENCE",
+  "heldout_test_metrics": "NOT_RECORDED_IN_TUNING_EVIDENCE",
+  "training_adaptation": "two_layer_bounded_neighbor_sampling_[10,10]",
+  "public_evidence_path": "tuning_evidence_20261025"
 }
