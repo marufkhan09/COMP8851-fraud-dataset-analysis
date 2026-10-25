@@ -1,32 +1,45 @@
 {
   "model": "RGTAN",
   "dataset": "T-Social",
+  "branch": "Pathik-ass3",
   "protocol": "Assessment 2 frozen split",
   "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
   "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
   "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
   "split_seed": 2,
-  "training_ratios": [
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
-  "planned_final_seeds": [
-    2,
-    42,
-    72
-  ],
-  "tr40_validation_tuning_configurations": 12,
-  "configurations_with_measured_validation_auprc": 12,
-  "highest_observed_validation_trial": 7,
-  "highest_observed_validation_auprc": 0.9950644969608748,
-  "recorded_validation_metric": "average_precision_score",
+  "tuning_trials": 12,
+  "tuning_metric": "validation_AUPRC",
+  "highest_recorded_validation_trial": 7,
+  "highest_recorded_validation_auprc": 0.9950644969608748,
+  "recorded_training_adapter": {
+    "layers": 2,
+    "fanouts": [
+      10,
+      10
+    ],
+    "batch_size": 1024,
+    "max_epochs": 100,
+    "patience": 20
+  },
   "independent_stage2_risk_audit": "PASS",
   "stage3_saved_score_alignment_audit": "REQUIRED",
-  "winner_selection": "REQUIRES_INDEPENDENT_AUDIT",
-  "ratio_seed_final_metrics": "NOT_RECORDED_IN_TUNING_EVIDENCE",
-  "heldout_test_metrics": "NOT_RECORDED_IN_TUNING_EVIDENCE",
-  "training_adaptation": "two_layer_bounded_neighbor_sampling_[10,10]",
+  "winner_frozen": false,
+  "ratio_seed_metric_tables": {
+    "heldout_primary": "tuning_evidence_20261025/results/heldout_test_summary.csv",
+    "heldout_additional": "tuning_evidence_20261025/results/heldout_test_additional_metrics.csv",
+    "individual": "tuning_evidence_20261025/results/heldout_test_per_seed.csv",
+    "cost": "tuning_evidence_20261025/results/final_run_cost_summary.csv"
+  },
   "public_evidence_path": "tuning_evidence_20261025"
 }
