@@ -1,12 +1,12 @@
 {
   "model": "RGTAN",
   "dataset": "T-Social",
-  "experiment": "TR40 validation measurements with common four-ratio reporting schema",
+  "experiment": "TR40 validation-tuning measurements, scripts and frozen ratio/seed design",
   "files": [
     {
       "path": "README.md",
-      "sha256": "9cf7afa23c209c07f3215268361e97ff42468f9deb0a5ccefc97283c7f6965d4",
-      "size_bytes": 2457
+      "sha256": "162abea12617b719d86561fecf276a359a91885a2251d6bcc996b376eba279ee",
+      "size_bytes": 1887
     },
     {
       "path": "evidence/stage2_audit_summary.json",
@@ -82,26 +82,6 @@
       "path": "results/epoch_level_validation.csv",
       "sha256": "5dee5b0b4a2d2c33d1baf16ef4a460de9adcd3482f7ada6b237bd6f51c763988",
       "size_bytes": 46691
-    },
-    {
-      "path": "results/final_run_cost_summary.csv",
-      "sha256": "9f6056d97c847e1f0dd4e615b8db87b482d9413112ee317cacbe0b7a97769c24",
-      "size_bytes": 82
-    },
-    {
-      "path": "results/heldout_test_additional_metrics.csv",
-      "sha256": "c2645721ccb7dc5b066bb0836571b6589f30af5713b6bc910ab47683478e2aae",
-      "size_bytes": 332
-    },
-    {
-      "path": "results/heldout_test_per_seed.csv",
-      "sha256": "080683dd45e81108afb49c3c9310caa4eeecde18c7196bf692d3aa4f9039aab0",
-      "size_bytes": 243
-    },
-    {
-      "path": "results/heldout_test_summary.csv",
-      "sha256": "3f441b4bb956cc8eca62446187e3592ddcbaa6ecacc546db15861932b02adfe7",
-      "size_bytes": 194
     },
     {
       "path": "results/ratio_seed_evaluation_protocol.csv",

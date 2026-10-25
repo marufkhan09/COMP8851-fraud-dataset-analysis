@@ -2,85 +2,47 @@
 
 Model source: https://github.com/AI4Risk/antifraud/tree/65e583f03ac5c5983e49cc35179fe7a65908b9c1
 
-- Original model commit: `65e583f03ac5c5983e49cc35179fe7a65908b9c1`.
-- Canonical T-Social graph: 5,781,065 nodes, 146,211,016 stored directed edges, 10 original node features; source SHA-256 `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
-- Frozen Assessment 2 split SHA-256: `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed 2.
-- Four training ratios: TR40, TR30, TR20, TR10. Three final training seeds: 2, 42, 72; frozen validation and test membership.
-- Training-only, five-fold cross-fitted label/risk features with exact sparse one-hop/two-hop neighbourhood statistics and training-only feature scaling. Independent Stage 2 checks covered 16 saved artifacts and 18,777,751,032 candidate two-hop walks.
-- RGTAN two-layer bounded-neighbour adapter: `MultiLayerNeighborSampler([10,10])`, batch 1024, maximum 100 epochs and patience 20. This is an adapted sampling protocol, not the original author's full-neighbour training procedure.
-- TR40 12-configuration validation AUPRC tuning grid; highest recorded result is trial 7, validation AUPRC 0.995064, `hidden_dim=64`, `drop=[0.2,0.1]`, `base_lr=0.001`.
-- Checkpoint selection uses validation AUPRC. Independent validation-score alignment and label-isolation verification are required before declaring a frozen winner. Test scores are not used for selecting configurations or thresholds.
+## Model, dataset and methodology
+
+- Original RGTAN source commit: `65e583f03ac5c5983e49cc35179fe7a65908b9c1`.
+- Canonical T-Social graph: 5,781,065 nodes, 146,211,016 stored directed edges and 10 base node features; source SHA-256 `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
+- Frozen Assessment 2 split SHA-256: `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed 2; fixed validation and test membership.
+- Training ratios: TR40, TR30, TR20 and TR10. Model seeds under the unified protocol: 2, 42 and 72.
+- Five-fold training-only out-of-fold label contexts and sparse one-hop/two-hop risk statistics, with training-only scaling. Independent Stage 2 checks covered 16 saved artifacts and 18,777,751,032 candidate sparse two-hop walks.
+- T-Social sampling adaptation: two RGTAN graph layers with `MultiLayerNeighborSampler([10,10])`, batch size 1024, maximum 100 epochs, early stopping patience 20. This differs from the author's original full-neighbour method.
+- TR40 tuning uses 12 configurations varying hidden dimensions 32/64, base learning rates 0.001/0.003/0.005 and dropout pairs [0.2,0.1] / [0.3,0.15]. Validation AUPRC selects the best checkpoint for each configuration.
 
 ## Held-out test results
 
-The table schema follows the RGTAN × Amazon benchmark: four training ratios, three final seeds per ratio and the same metric definitions. Only verified held-out measurements belong in these cells. The available T-Social archive provides validation-tuning measurements, not held-out label-score pairs; unmeasured cells are left blank.
+Under the common Assessment 2 protocol, held-out AUPRC, AUROC, macro-F1, fraud-F1, precision, recall, accuracy, balanced accuracy, MCC and Brier score are computed from frozen final-run prediction scores, ground-truth labels and validation-selected classification thresholds. The uploaded I1 research archives contain validation-only TR40 tuning histories and checkpoint scores, rather than final-run held-out predictions. Thus they do not supply held-out numerical outcomes for RGTAN × T-Social. Validation results are reported separately below, not converted into test measurements.
 
-### Primary fraud-detection metrics (mean ± population SD; three seeds)
+### Primary fraud-detection metrics
 
-| Ratio | AUPRC | AUROC | Macro-F1 | Fraud F1 |
-|---|---:|---:|---:|---:|
-| TR40 |  |  |  |  |
-| TR30 |  |  |  |  |
-| TR20 |  |  |  |  |
-| TR10 |  |  |  |  |
+AUPRC is the primary ranking metric for imbalanced fraud detection; AUROC measures ranking across false-positive rates. Macro-F1 averages fraud and legitimate-class F1, while fraud-F1 refers only to the positive class. These measures have different definitions and cannot be calculated from AUPRC alone.
 
-Macro-F1 is the average of F1 for the two classes. Fraud F1 is F1 for the fraud class. AUROC measures ranking across false-positive rates; AUPRC is the primary fraud-ranking measure. Neither AUPRC nor AUROC identifies a decision threshold by itself.
+### Additional metrics
 
-### Additional metrics (mean ± population SD; three seeds)
-
-| Ratio | Fraud precision | Fraud recall | Accuracy | Balanced accuracy | MCC | Brier score |
-|---|---:|---:|---:|---:|---:|---:|
-| TR40 |  |  |  |  |  |  |
-| TR30 |  |  |  |  |  |  |
-| TR20 |  |  |  |  |  |  |
-| TR10 |  |  |  |  |  |  |
-
-Precision, recall and Fraud F1 concern the fraud class. Balanced accuracy averages recall across classes. MCC incorporates all four confusion-matrix outcomes. Lower Brier score indicates better probabilistic calibration. Calculating these metrics requires ground-truth labels and appropriately ordered prediction scores for each evaluated run.
+Fraud precision and recall, overall accuracy, balanced accuracy and Matthews correlation coefficient depend on the prediction labels and the frozen decision threshold. Brier score additionally requires class-probability estimates paired with true labels. None can be reconstructed from aggregate tuning AUPRC values.
 
 ### Individual final-run evidence (held-out test set)
 
-| Ratio | Seed | AUPRC | AUROC | Macro-F1 | Fraud F1 | Decision threshold |
-|---|---:|---:|---:|---:|---:|---:|
-| TR40 | 2 |  |  |  |  |  |
-| TR40 | 42 |  |  |  |  |  |
-| TR40 | 72 |  |  |  |  |  |
-| TR30 | 2 |  |  |  |  |  |
-| TR30 | 42 |  |  |  |  |  |
-| TR30 | 72 |  |  |  |  |  |
-| TR20 | 2 |  |  |  |  |  |
-| TR20 | 42 |  |  |  |  |  |
-| TR20 | 72 |  |  |  |  |  |
-| TR10 | 2 |  |  |  |  |  |
-| TR10 | 42 |  |  |  |  |  |
-| TR10 | 72 |  |  |  |  |  |
+The unified final-run design comprises TR40, TR30, TR20 and TR10, each with model seeds 2, 42 and 72. Each ratio–seed result must be derived from that model's own frozen held-out predictions. The TR40 validation-only hyperparameter trials are not replacements for those twelve final runs.
 
-Each row corresponds to one of the twelve ratio-by-seed combinations defined by the frozen Assessment 2 protocol. A validation-selected threshold and held-out node-level scores would be needed to populate each measured test row.
+### Recorded training cost
 
-### Recorded training cost (three seeds per ratio)
+The available recorded timing covers TR40 validation-tuning configurations. It must not be presented as mean three-seed final-run training cost. Individual tuning runtimes are tabulated below; they exclude external setup overhead.
 
-| Ratio | Mean training time (hours) | Mean peak allocated GPU memory (GiB) |
-|---|---:|---:|
-| TR40 |  |  |
-| TR30 |  |  |
-| TR20 |  |  |
-| TR10 |  |  |
+## Validation-only model selection
 
-This table uses the same final-run cost convention as RGTAN × Amazon. TR40 tuning runtime cannot substitute for a three-seed final-run mean; observed tuning time appears in the separate tuning table below.
+- Highest recorded TR40 validation AUPRC: 0.9950644969608748 (Trial 07; `hidden_dim=64`, `base_lr=0.001`, `drop=[0.2,0.1]`).
+- Other high recorded validation AUPRC measurements: Trial 02 (0.9919115114291359), Trial 08 (0.9929484256358545) and Trial 10 (0.9941635055787835).
+- These values describe hyperparameter selection on the full frozen validation set. The unusually high scores require independent prediction-order alignment, risk-context label-isolation and checkpoint-replay verification before scientific performance conclusions.
 
-### Validation-only model selection
+### TR40 tuning evidence — measured validation metrics
 
-- TR40 tuning: twelve recorded configurations, using best validation AUPRC to select checkpoints.
-- Highest observed trial: 7; validation AUPRC 0.9950644969608748.
-- Recorded configuration: `hidden_dim=64`, `drop=[0.2,0.1]`, `base_lr=0.001`.
-- Tuning design: hidden dimensions 32 and 64; learning rates 0.001, 0.003 and 0.005; paired dropout settings 0.2/0.1 and 0.3/0.15.
-- Training adaptation: bounded two-hop neighbour sampling, batch 1024, maximum 100 epochs, patience 20.
-- Selection integrity: exceptional validation scores require independent label ordering, risk-context and checkpoint-replay verification. The tuning maximum is not a held-out test result.
+The following table uses original saved experiment histories and trial configuration records. Runtime is the sum of per-epoch training and validation seconds. It is not a test-set metric.
 
-### TR40 tuning evidence
-
-The following metrics were recorded during validation-only configuration search. AUPRC, loss and time refer to these training and validation runs, not the held-out test matrix.
-
-| Trial | Hidden dim | Base learning rate | Dropout | Recorded epochs | Best epoch | Validation AUPRC | Loss at best epoch | Recorded runtime (hours) |
+| Trial | Hidden dim | Learning rate | Dropout | Epochs recorded | Best epoch | Validation AUPRC | Training loss at best epoch | Recorded runtime (h) |
 |---|---:|---:|---|---:|---:|---:|---:|---:|
 | 01 | 32 | 0.001 | 0.2/0.1 | 43 | 23 | 0.584989 | 0.076348 | 4.99 |
 | 02 | 32 | 0.003 | 0.2/0.1 | 22 | 2 | 0.991912 | 0.012406 | 2.55 |
@@ -95,18 +57,19 @@ The following metrics were recorded during validation-only configuration search.
 | 11 | 64 | 0.003 | 0.3/0.15 | 28 | 8 | 0.514858 | 0.086862 | 3.28 |
 | 12 | 64 | 0.005 | 0.3/0.15 | 47 | 29 | 0.484938 | 0.089085 | 5.59 |
 
-Recorded runtime is the sum of saved per-epoch training and validation seconds, excluding initialization and other external overhead. Four configurations produced validation AUPRC above 0.99; verifying those results independently is essential before scientific performance claims.
+### Validation tuning and optimisation interpretation
 
-Complete lightweight records: [TR40 tuning CSV](tuning_evidence_20261025/results/tr40_tuning_trials.csv), [epoch-level validation CSV](tuning_evidence_20261025/results/epoch_level_validation.csv), [held-out aggregate table schema](tuning_evidence_20261025/results/heldout_test_summary.csv), [individual ratio–seed table schema](tuning_evidence_20261025/results/heldout_test_per_seed.csv), [additional-metric table schema](tuning_evidence_20261025/results/heldout_test_additional_metrics.csv) and [published scripts and audits](tuning_evidence_20261025/README.md).
+The saved TR40 results span best validation AUPRC 0.446338–0.995064 across the grid. Four trials exceed 0.99 and several have substantially lower validation scores. This separation warrants careful validation of feature construction and score alignment. Learning rate 0.005 corresponds to markedly lower observed peak AUPRC in both hidden-dimension settings, while rapid epoch-to-epoch fluctuations show why saved checkpoint selection and replication matter. This is an association within these recordings, not a controlled causal finding.
 
-## Reproducibility and backup
+## Reproducibility and evidence
 
-- `tuning_evidence_20261025/scripts/stage2/`: actual sparse crossfit-risk construction and independent Stage 2 audit code.
-- `tuning_evidence_20261025/scripts/stage3/`: exact recorded TR40 training and recovery runners, including the computational adaptation.
-- `tuning_evidence_20261025/evidence/stage3_tuning/`: per-configuration hyperparameters, validation results, loss/timing metadata and model/source fingerprints.
-- `tuning_evidence_20261025/evidence/stage2_audit_summary.json`: checks on training-only risk feature provenance and label isolation.
-- `tuning_evidence_20261025/evidence/validation_integrity_review.md`: conditions for independent validation-score confirmation.
-- `tuning_evidence_20261025/PUBLIC_SHA256_MANIFEST.json`: hashes for every research-evidence file in the public release.
-- Private Mac archives preserve recorded tuning evidence, source code, model checkpoint state, log files, training label contexts and the frozen split; raw graph and full derived risk arrays are not published in this repository.
+- [TR40 trial-level metrics](tuning_evidence_20261025/results/tr40_tuning_trials.csv): full precision AUPRC, training loss, recorded epochs, train and validation time, and checkpoint fingerprints.
+- [Epoch-level validation history](tuning_evidence_20261025/results/epoch_level_validation.csv): 402 saved training/validation epoch records.
+- [Frozen evaluation design](tuning_evidence_20261025/results/ratio_seed_evaluation_protocol.csv): all 12 ratio/seed specifications; design rows are not measured evaluation outputs.
+- [Risk-feature integrity audit](tuning_evidence_20261025/evidence/stage2_audit_summary.json): independent Stage 2 checks of sparse risk-context construction.
+- [Validation-integrity review](tuning_evidence_20261025/evidence/validation_integrity_review.md): scoring and provenance questions requiring verification.
+- [Per-configuration evidence](tuning_evidence_20261025/evidence/stage3_tuning): 12 source-linked records with observed validation results.
+- [Experiment scripts](tuning_evidence_20261025/scripts): actual Stage 2 and Stage 3 source runners.
+- [Public SHA-256 manifest](tuning_evidence_20261025/PUBLIC_SHA256_MANIFEST.json): cryptographic file fingerprints.
 
-The public folder provides the common benchmark reporting structure without substituting validation measurements for unseen held-out outcomes. Source data, private split arrays, private node predictions, full model checkpoints and the GPU environment are excluded from this publication.
+The published files exclude the canonical raw graph, frozen split binaries, crossfit feature arrays, model checkpoint binaries, complete environment and per-node private predictions. The verified Mac archives preserve the exported validation evidence and recovery state. Final held-out metrics require the corresponding final-run evidence and are not derivable from these saved tuning records.

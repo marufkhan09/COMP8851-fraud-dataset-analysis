@@ -35,11 +35,7 @@
   "independent_stage2_risk_audit": "PASS",
   "stage3_saved_score_alignment_audit": "REQUIRED",
   "winner_frozen": false,
-  "ratio_seed_metric_tables": {
-    "heldout_primary": "tuning_evidence_20261025/results/heldout_test_summary.csv",
-    "heldout_additional": "tuning_evidence_20261025/results/heldout_test_additional_metrics.csv",
-    "individual": "tuning_evidence_20261025/results/heldout_test_per_seed.csv",
-    "cost": "tuning_evidence_20261025/results/final_run_cost_summary.csv"
-  },
-  "public_evidence_path": "tuning_evidence_20261025"
+  "public_evidence_path": "tuning_evidence_20261025",
+  "metric_scope": "TR40 validation AUPRC and epoch-level training metrics",
+  "heldout_test_metric_provenance": "No final ratio-seed heldout prediction-label pairs in archived evidence"
 }
