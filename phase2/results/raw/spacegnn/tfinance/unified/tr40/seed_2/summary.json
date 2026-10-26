@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "model": "SpaceGNN",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 2,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "early stopping: no validation improvement for 20 epochs",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 39,
+  "selected_threshold": 0.65,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.9206218329337097,
+  "best_validation_metrics": {
+    "auprc": 0.9206218329337097,
+    "threshold": 0.65
+  },
+  "test_metrics": {
+    "auroc": 0.971473329429318,
+    "auprc": 0.8984436889289821,
+    "macro_f1": 0.9222849374591042,
+    "fraud_f1": 0.851031321619557,
+    "fraud_precision": 0.9472789115646258,
+    "fraud_recall": 0.7725381414701803,
+    "gmean": 0.878034171877166,
+    "accuracy": 0.9876143292682927,
+    "test_prevalence": 0.04579522357723577,
+    "auprc_lift_over_prevalence": 19.618720441744653,
+    "threshold": 0.65
+  },
+  "timing": {
+    "training_epochs_completed": 60,
+    "total_train_epoch_seconds": 3589.744449972175,
+    "total_validation_seconds": 228.70083200652152,
+    "setup_seconds": 5.018947560340166,
+    "total_wall_seconds": 3938.6659149862826,
+    "peak_gpu_memory_mb": 18098.59326171875,
+    "peak_rss_mb": 3110.875
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "name.py PARAMETERS[tfinance] / paper Table 4 + overrides {\"alpha\": 1.0, \"batch_size\": 50, \"beta\": 1.0, \"drop_rate\": 0.1, \"hid_dim\": 128, \"layer_num\": 3, \"lr\": 0.001, \"stdneg\": \"official\", \"stdpos\": \"official\"}",
+    "hyperparameters": {
+      "alpha": 1.0,
+      "batch_size": 50,
+      "beta": 1.0,
+      "drop_rate": 0.1,
+      "hid_dim": 128,
+      "layer_num": 3,
+      "lr": 0.001,
+      "stdneg": "official",
+      "stdpos": "official"
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "74fa4d6692a47431dbfba1f9f20d10a34362fe8b2f45e1c1353d2d2d0a91b245",
+    "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+    "model_source_commit": "921c03ff879b239dab9b319b296fef3bc3bda2d2"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "597e8c2f8fd9a2a4cbfa2f9e038fdd362e80e6559e6ff9642b0c3b075e283b11",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}

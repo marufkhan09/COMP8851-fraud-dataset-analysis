@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "model": "SpaceGNN",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 72,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "early stopping: no validation improvement for 20 epochs",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 64,
+  "selected_threshold": 0.49,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.9229384119157763,
+  "best_validation_metrics": {
+    "auprc": 0.9229384119157763,
+    "threshold": 0.49
+  },
+  "test_metrics": {
+    "auroc": 0.9726606905011022,
+    "auprc": 0.9077568810792868,
+    "macro_f1": 0.9280865173341298,
+    "fraud_f1": 0.8622754491017964,
+    "fraud_precision": 0.9365853658536586,
+    "fraud_recall": 0.7988904299583911,
+    "gmean": 0.8926457835414308,
+    "accuracy": 0.9883130081300813,
+    "test_prevalence": 0.04579522357723577,
+    "auprc_lift_over_prevalence": 19.822086457298603,
+    "threshold": 0.49
+  },
+  "timing": {
+    "training_epochs_completed": 85,
+    "total_train_epoch_seconds": 3758.266681343317,
+    "total_validation_seconds": 238.66999307088554,
+    "setup_seconds": 4.085841774940491,
+    "total_wall_seconds": 4112.986560725607,
+    "peak_gpu_memory_mb": 18103.328125,
+    "peak_rss_mb": 3113.60546875
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "name.py PARAMETERS[tfinance] / paper Table 4 + overrides {\"alpha\": 1.0, \"batch_size\": 50, \"beta\": 1.0, \"drop_rate\": 0.1, \"hid_dim\": 128, \"layer_num\": 3, \"lr\": 0.001, \"stdneg\": \"official\", \"stdpos\": \"official\"}",
+    "hyperparameters": {
+      "alpha": 1.0,
+      "batch_size": 50,
+      "beta": 1.0,
+      "drop_rate": 0.1,
+      "hid_dim": 128,
+      "layer_num": 3,
+      "lr": 0.001,
+      "stdneg": "official",
+      "stdpos": "official"
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "ef18f4f313732d5e0590c4417a9d211bda16f25699f7ec66f9a2c137c6aa051c",
+    "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+    "model_source_commit": "921c03ff879b239dab9b319b296fef3bc3bda2d2"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "dd9d4f3879317dd0811027bfc565c3f043808189a5dbb316817a3b80f2a6e883",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}
