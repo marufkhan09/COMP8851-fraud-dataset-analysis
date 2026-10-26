@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "model": "SpaceGNN",
+  "dataset": "fdcompcn",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 42,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "epoch budget of 100 exhausted",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 94,
+  "selected_threshold": 0.23,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.2996211016493069,
+  "best_validation_metrics": {
+    "auprc": 0.2996211016493069,
+    "threshold": 0.23
+  },
+  "test_metrics": {
+    "auroc": 0.6727245977660864,
+    "auprc": 0.25175288125001405,
+    "macro_f1": 0.5763601928374655,
+    "fraud_f1": 0.22916666666666666,
+    "fraud_precision": 0.2732919254658385,
+    "fraud_recall": 0.19730941704035873,
+    "gmean": 0.4303384724558975,
+    "accuracy": 0.8609022556390977,
+    "test_prevalence": 0.10479323308270677,
+    "auprc_lift_over_prevalence": 2.4023772704037216,
+    "threshold": 0.23
+  },
+  "timing": {
+    "training_epochs_completed": 100,
+    "total_train_epoch_seconds": 152.04656085930765,
+    "total_validation_seconds": 1.4293116442859173,
+    "setup_seconds": 0.9538238393142819,
+    "total_wall_seconds": 193.41080042999238,
+    "peak_gpu_memory_mb": 79.8115234375,
+    "peak_rss_mb": 1337.03125
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "not in name.py: argparse defaults + stdneg/stdpos 0.015 + overrides {\"alpha\": 0.0, \"batch_size\": 50, \"beta\": 0.5, \"drop_rate\": 0.0, \"hid_dim\": 64, \"layer_num\": 1, \"lr\": 0.001, \"stdneg\": 0.015, \"stdpos\": 0.015}",
+    "hyperparameters": {
+      "alpha": 0.0,
+      "batch_size": 50,
+      "beta": 0.5,
+      "drop_rate": 0.0,
+      "hid_dim": 64,
+      "layer_num": 1,
+      "lr": 0.001,
+      "stdneg": 0.015,
+      "stdpos": 0.015
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "a099588391342130cbdf7b3867d0c975bfa1cff111b3d3e7935ff4be6908d91b",
+    "split_sha256": "3b0bbd04965265effbf3a44511591e5966766ef91a75afc2afe86f35315e613b",
+    "model_source_commit": "921c03ff879b239dab9b319b296fef3bc3bda2d2"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "72b77998b266ecbe5d46e289cdb3964f79827e84a16365c73ce438aefaffcc63",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}
