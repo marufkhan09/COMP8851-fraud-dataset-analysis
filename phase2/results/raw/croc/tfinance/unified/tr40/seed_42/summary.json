@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0",
+  "model": "CRoC",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 42,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "epoch budget of 100 exhausted",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 99,
+  "selected_threshold": 0.92,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.8135716612007236,
+  "best_validation_metrics": {
+    "auprc": 0.8135716612007236,
+    "threshold": 0.92
+  },
+  "test_metrics": {
+    "auroc": 0.9449705550887623,
+    "auprc": 0.806454659204087,
+    "macro_f1": 0.8779641061843233,
+    "fraud_f1": 0.7656870532168387,
+    "fraud_precision": 0.895910780669145,
+    "fraud_recall": 0.6685159500693482,
+    "gmean": 0.8161029213356628,
+    "accuracy": 0.9812627032520326,
+    "test_prevalence": 0.04579522357723577,
+    "auprc_lift_over_prevalence": 17.610016857849025,
+    "threshold": 0.92
+  },
+  "timing": {
+    "training_epochs_completed": 100,
+    "total_train_epoch_seconds": 57.08946041017771,
+    "total_validation_seconds": 728.8950056470931,
+    "setup_seconds": 4.5331743927672505,
+    "total_wall_seconds": 913.487504106015,
+    "peak_gpu_memory_mb": 20164.44384765625,
+    "peak_rss_mb": 4419.18359375
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "Table 10 (T-Fin); backbone inferred (SAGE) + overrides {\"alpha\": 0.9, \"backbone\": \"CRoCSAGE\", \"bn\": false, \"bs\": 1024, \"dropout\": 0.0, \"eta\": 0.8, \"gamma\": 1.0, \"hid_dim\": 64, \"k\": 10, \"lr\": 0.003, \"n_layer\": 2, \"n_neb\": [10, 5], \"q\": 10240, \"wd\": 0.0}",
+    "hyperparameters": {
+      "alpha": 0.9,
+      "backbone": "CRoCSAGE",
+      "bn": false,
+      "bs": 1024,
+      "dropout": 0.0,
+      "eta": 0.8,
+      "gamma": 1.0,
+      "hid_dim": 64,
+      "k": 10,
+      "lr": 0.003,
+      "n_layer": 2,
+      "n_neb": [
+        10,
+        5
+      ],
+      "q": 10240,
+      "wd": 0.0
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "65e7fc2507cf8e78d268b086c4722a0f15d780be4f1e71f2a64842042c2cfd77",
+    "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+    "model_source_commit": "70cb7c6c654f2e8a517d226be5235e700953a37d"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "141ab02fef46acb0a91783aad43f3155f97d22e7275a5889fb465e10ec01bea3",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}
