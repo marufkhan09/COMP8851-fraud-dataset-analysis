@@ -1,0 +1,48 @@
+==============================================================================
+SAGAD | fdcompcn | unified | TR40 | seed 42 | controlled-tuned
+==============================================================================
+Run ID: sagad_fdcompcn_unified_tr40_seed42_a6000_20261014T204217Z   device: cuda:0   protocol: vast-v4.4
+Data: 5,317 nodes, 57 features, relations ['homo', 'invest_bc2bc', 'provide_bc2bc', 'sale_bc2bc']
+Split: train 2,126 | valid 1,063 | test 2,128  (fdcompcn_TR40_seed2.npz, sha256 3b0bbd04965265ef)
+Hyperparameters (semi_train.conf.yaml: default block (FDCompCN not in the file) + overrides {"K": 5, "activation": "ReLU", "conv_norm": "none", "dropout": 0.2, "feat_trans": "no", "fusion": "NodeDimGated", "hid_dims": [128], "lr": 0.1, "mlp_norm": "none", "num_gate_layers": 2, "p": [0.8, 1.0], "wd": 0.0}): {'lr': 0.1, 'wd': 0.0, 'dropout': 0.2, 'hid_dims': [128], 'conv_norm': 'none', 'mlp_norm': 'none', 'feat_trans': 'no', 'activation': 'ReLU', 'num_gate_layers': 2, 'K': 5, 'p': [0.8, 1.0], 'fusion': 'NodeDimGated'}
+Budget: {'epochs': 100, 'patience': 20, 'source': 'protocol vast-v4.4 unified stopping rule (MAX_EPOCHS, EARLY_STOPPING_PATIENCE)'}
+[note] mrq_sampling: {'nodes': 5317, 'candidate_pairs': 7268, 'selected_edges': 3251, 'nan_key_centres_official_fallback': 0, 'cache': 'hit (sagad_mrq_fdcompcn_e5ae5d2d858a47da472a.npz)', 'implementation': 'mrq_one_hop_exact (official rule, vectorised)'}
+Setup done in 1.1s; parameters {'total_parameters': 46965, 'trainable_parameters': 46965}
+epoch   1/100 | loss 1.941274 | train 0.18s | val AUPRC 0.148303 AUROC 0.575879 | best epoch 1
+epoch   2/100 | loss 3.383261 | train 0.02s | val AUPRC 0.117408 AUROC 0.530673 | best epoch 1
+epoch   3/100 | loss 2.828393 | train 0.03s | val AUPRC 0.119049 AUROC 0.544849 | best epoch 1
+epoch   4/100 | loss 2.294924 | train 0.03s | val AUPRC 0.123069 AUROC 0.558669 | best epoch 1
+epoch   5/100 | loss 1.803141 | train 0.03s | val AUPRC 0.131460 AUROC 0.570818 | best epoch 1
+epoch   6/100 | loss 1.510482 | train 0.03s | val AUPRC 0.126514 AUROC 0.579719 | best epoch 1
+epoch   7/100 | loss 1.353806 | train 0.04s | val AUPRC 0.127868 AUROC 0.580972 | best epoch 1
+epoch   8/100 | loss 1.306277 | train 0.03s | val AUPRC 0.115948 AUROC 0.547849 | best epoch 1
+epoch   9/100 | loss 1.319612 | train 0.04s | val AUPRC 0.103126 AUROC 0.473735 | best epoch 1
+epoch  10/100 | loss 1.334663 | train 0.03s | val AUPRC 0.110091 AUROC 0.472942 | best epoch 1
+epoch  11/100 | loss 1.366689 | train 0.04s | val AUPRC 0.115547 AUROC 0.491550 | best epoch 1
+epoch  12/100 | loss 1.331954 | train 0.03s | val AUPRC 0.103222 AUROC 0.472928 | best epoch 1
+epoch  13/100 | loss 1.322813 | train 0.04s | val AUPRC 0.093629 AUROC 0.447640 | best epoch 1
+epoch  14/100 | loss 1.321538 | train 0.04s | val AUPRC 0.095532 AUROC 0.466849 | best epoch 1
+epoch  15/100 | loss 1.323640 | train 0.03s | val AUPRC 0.092586 AUROC 0.467675 | best epoch 1
+epoch  16/100 | loss 1.297857 | train 0.04s | val AUPRC 0.097018 AUROC 0.479533 | best epoch 1
+epoch  17/100 | loss 1.291249 | train 0.04s | val AUPRC 0.112988 AUROC 0.500422 | best epoch 1
+epoch  18/100 | loss 1.286360 | train 0.03s | val AUPRC 0.120071 AUROC 0.500615 | best epoch 1
+epoch  19/100 | loss 1.281946 | train 0.03s | val AUPRC 0.133046 AUROC 0.540812 | best epoch 1
+epoch  20/100 | loss 1.285469 | train 0.05s | val AUPRC 0.141060 AUROC 0.561040 | best epoch 1
+epoch  21/100 | loss 1.271594 | train 0.05s | val AUPRC 0.142878 AUROC 0.575475 | best epoch 1
+Stopped: early stopping: no validation improvement for 20 epochs
+Checkpoint reload check: parameters identical True; max |diff| 0.000e+00 (repeat noise 0.000e+00, tol 1.000e-05); |dAUPRC| 0.00e+00 -> PASS
+------------------------------------------------------------------------------
+test auroc: 0.518681
+test auprc: 0.108774
+test macro_f1: 0.503104
+test fraud_f1: 0.104513
+test fraud_precision: 0.111111
+test fraud_recall: 0.098655
+test gmean: 0.299233
+test accuracy: 0.822838
+test prevalence 0.1048 | AUPRC lift 1.04
+threshold 0.99 (validation Macro-F1) | best epoch 1
+------------------------------------------------------------------------------
+Artefacts: /workspace/comp8851_phase2/results/raw/sagad/fdcompcn/unified/tr40/seed_42
+Artefact bundle complete: True  missing: []
+RUN STATUS: COMPLETE
