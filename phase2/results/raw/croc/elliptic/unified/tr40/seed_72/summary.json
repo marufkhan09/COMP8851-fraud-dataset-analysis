@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0",
+  "model": "CRoC",
+  "dataset": "elliptic",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 72,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "early stopping: no validation improvement for 20 epochs",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 74,
+  "selected_threshold": 0.75,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.8144631402403222,
+  "best_validation_metrics": {
+    "auprc": 0.8144631402403222,
+    "threshold": 0.75
+  },
+  "test_metrics": {
+    "auroc": 0.8189007418715493,
+    "auprc": 0.49757865512623467,
+    "macro_f1": 0.5339492041574462,
+    "fraud_f1": 0.27541299891474735,
+    "fraud_precision": 0.1660849331006399,
+    "fraud_recall": 0.8059280169371913,
+    "gmean": 0.7330613982593338,
+    "accuracy": 0.6773691275167785,
+    "test_prevalence": 0.07608053691275168,
+    "auprc_lift_over_prevalence": 6.540156987809541,
+    "threshold": 0.75
+  },
+  "timing": {
+    "training_epochs_completed": 95,
+    "total_train_epoch_seconds": 55.89825381152332,
+    "total_validation_seconds": 77.22751398384571,
+    "setup_seconds": 1.1092933053150773,
+    "total_wall_seconds": 217.1578461267054,
+    "peak_gpu_memory_mb": 498.06787109375,
+    "peak_rss_mb": 1672.6171875
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "not supported upstream: main.py argparse defaults + overrides {\"alpha\": 0.2, \"backbone\": \"CRoCSAGE\", \"bn\": false, \"bs\": 1024, \"dropout\": 0.0, \"eta\": 0.2, \"gamma\": 1.0, \"hid_dim\": 64, \"k\": 10, \"lr\": 0.003, \"n_layer\": 2, \"n_neb\": [10, 5], \"q\": 10240, \"wd\": 0.0}",
+    "hyperparameters": {
+      "alpha": 0.2,
+      "backbone": "CRoCSAGE",
+      "bn": false,
+      "bs": 1024,
+      "dropout": 0.0,
+      "eta": 0.2,
+      "gamma": 1.0,
+      "hid_dim": 64,
+      "k": 10,
+      "lr": 0.003,
+      "n_layer": 2,
+      "n_neb": [
+        10,
+        5
+      ],
+      "q": 10240,
+      "wd": 0.0
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "64aed5cbbf754e32fc5b24e5d2a37383e893090d7f9ee5155f9a2beca79de6a2",
+    "split_sha256": "3ab3eb3d35495cfc73de8878a7c15d75f5c5e5f140cfc6621b0ae311ab968a3c",
+    "model_source_commit": "70cb7c6c654f2e8a517d226be5235e700953a37d"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "e29013ea50b0ca47d8119061c69fc11d928a113b652ee7242c317cb69de5c3c6",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}
