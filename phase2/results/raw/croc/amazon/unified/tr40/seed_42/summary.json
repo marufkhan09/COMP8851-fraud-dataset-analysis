@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0",
+  "model": "CRoC",
+  "dataset": "amazon",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 42,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "epoch budget of 100 exhausted",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 99,
+  "selected_threshold": 0.68,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.7957311700515719,
+  "best_validation_metrics": {
+    "auprc": 0.7957311700515719,
+    "threshold": 0.68
+  },
+  "test_metrics": {
+    "auroc": 0.9558444297777082,
+    "auprc": 0.8203069517550228,
+    "macro_f1": 0.8633690856925433,
+    "fraud_f1": 0.7546099290780142,
+    "fraud_precision": 0.7074468085106383,
+    "fraud_recall": 0.8085106382978723,
+    "gmean": 0.8832153000870517,
+    "accuracy": 0.9499421296296297,
+    "test_prevalence": 0.09519675925925926,
+    "auprc_lift_over_prevalence": 8.616962994727533,
+    "threshold": 0.68
+  },
+  "timing": {
+    "training_epochs_completed": 100,
+    "total_train_epoch_seconds": 31.777884125709534,
+    "total_validation_seconds": 387.33443642314523,
+    "setup_seconds": 1.4840208748355508,
+    "total_wall_seconds": 485.66830507759005,
+    "peak_gpu_memory_mb": 13164.0849609375,
+    "peak_rss_mb": 2102.4375
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "Table 10 (Amazon) + README command (CRoCSAGE) + overrides {\"alpha\": 0.75, \"backbone\": \"CRoCGIN\", \"bn\": false, \"bs\": 1024, \"dropout\": 0.0, \"eta\": 0.2, \"gamma\": 0.5, \"hid_dim\": 64, \"k\": 10, \"lr\": 0.003, \"n_layer\": 2, \"n_neb\": [10, 5], \"q\": 10240, \"wd\": 0.0}",
+    "hyperparameters": {
+      "alpha": 0.75,
+      "backbone": "CRoCGIN",
+      "bn": false,
+      "bs": 1024,
+      "dropout": 0.0,
+      "eta": 0.2,
+      "gamma": 0.5,
+      "hid_dim": 64,
+      "k": 10,
+      "lr": 0.003,
+      "n_layer": 2,
+      "n_neb": [
+        10,
+        5
+      ],
+      "q": 10240,
+      "wd": 0.0
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "348f97f423a99a73a88651236c5190eb66195dd4be31a07af3150ea7073ca280",
+    "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+    "model_source_commit": "70cb7c6c654f2e8a517d226be5235e700953a37d"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "fd8a78b7c03604aaf59e5ccdeff4adf2c795181268dd9ad93b42122e17a4a2c6",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}
