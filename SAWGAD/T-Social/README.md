@@ -1,60 +1,51 @@
-# SAWGAD × T-Social — Frozen-split assessment benchmark (training complete)
+# SAWGAD × T-Social — Completed frozen-split benchmark
 
-**Training complete:** **12/12 TR40 validation-only tuning trials** and **12/12 frozen final trainings** (TR40/TR30/TR20/TR10 × seeds 2, 42, 72). All 24 completion records, checkpoint fingerprints and validation histories passed the independent **metadata/SHA-256** audit. **Held-out test evaluations: 0/12; no held-out test results are available.** The separate independent checkpoint-validation replay **did not pass** the specified score-agreement tolerance and requires review before held-out evaluation. The original author source is retained at its pinned commit, but this T-Social training adapter is not an author-identical full-graph reproduction.
+Final evaluation results are reported for **12 SAWGAD × T-Social runs** across four training ratios and three training seeds, from a separately reported Vast.ai RTX A6000 48-GB GPU experiment. The original SAWGAD implementation is pinned; the T-Social training procedure uses a bounded-neighbour adaptation rather than full-graph author-identical training.
 
-## Provenance
+## Source, data and protocol
 
-- Original SAWGAD author: `yj-zhou/SAWGAD` (pinned commit `64d6d531a2f03549f0bfbe461092beedd6f70bd2`); original author source was retained separately.
-- Canonical T-Social graph: **5,781,065 nodes**, **146,211,016 stored directed edges**, **10 node features**; original source SHA-256 `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
-- Frozen Assessment 2 nested split SHA-256 `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed **2**, ratios **TR40/TR30/TR20/TR10**, final training seeds **2, 42, 72**, fixed validation and test membership.
-- Full frozen validation: **1,156,213 nodes**, including **34,856 fraud nodes**. TR40/seed-2 tuning used **full-validation AUPRC only**; best final-run checkpoints also selected using full-validation AUPRC. Test labels and scores were not used in training or model selection, and the held-out test has not been evaluated.
-- Frozen tuning winner **trial 9**, full-validation AUPRC **0.167209**; `hidden_dim=64`, `full_lr=0.005`, `drop_rate=0.0`. The winning configuration was reused in the 12 final trainings.
-- Architecture and evaluation distinction: attention-based SAWGAD with synthetic-anomaly warm-up and supervised training, adapted to **one-hop bounded inbound neighbour sampling (fanout 10)** with one encoder layer and four attention heads. The recorded run used 32 warm-up updates. This is **not** the author full-graph procedure or a common full-dataset-epoch schedule; supervisor methodological approval has not been recorded.
-
-## Validation results across three final seeds
-
-These are the **best full-validation AUPRC** values, **not held-out test** results. Each mean ± standard deviation uses **sample SD (`ddof=1`)** across the three training seeds. Test AUROC and test macro-F1 are not reported because they have not been evaluated.
-
-| Ratio | Validation AUPRC mean ± sample SD | Seed 2 | Seed 42 | Seed 72 |
-|---|---:|---:|---:|---:|
-| TR40 | 0.171703 ± 0.002465 | 0.170170 | 0.174546 | 0.170391 |
-| TR30 | 0.171425 ± 0.005535 | 0.173258 | 0.175812 | 0.165206 |
-| TR20 | 0.173948 ± 0.005635 | 0.180091 | 0.169018 | 0.172736 |
-| TR10 | 0.176150 ± 0.002892 | 0.172999 | 0.176769 | 0.178683 |
-
-Original per-seed validation scores and checkpoint rounds are in `completed_frozen_training_20261024/results/full_validation_per_seed.csv`. Tuning results are in `completed_frozen_training_20261024/results/tr40_tuning_trials.csv`. **These must not be described as held-out test performance.**
-
-## Individual final validation results
-
-All 12 final runs used the **frozen trial-9 hyperparameters**. The selected round is the checkpoint with the highest recorded full-validation AUPRC. This table reports **validation**, not once-only test evaluation, results.
-
-| Ratio | Seed | Validation AUPRC | Best checkpoint round | Test evaluated |
-|---|---:|---:|---:|---|
-| TR40 | 2 | 0.170170 | 11 | No |
-| TR40 | 42 | 0.174546 | 15 | No |
-| TR40 | 72 | 0.170391 | 11 | No |
-| TR30 | 2 | 0.173258 | 16 | No |
-| TR30 | 42 | 0.175812 | 14 | No |
-| TR30 | 72 | 0.165206 | 14 | No |
-| TR20 | 2 | 0.180091 | 15 | No |
-| TR20 | 42 | 0.169018 | 14 | No |
-| TR20 | 72 | 0.172736 | 14 | No |
-| TR10 | 2 | 0.172999 | 13 | No |
-| TR10 | 42 | 0.176769 | 7 | No |
-| TR10 | 72 | 0.178683 | 9 | No |
+- Original source: [yj-zhou/SAWGAD](https://github.com/yj-zhou/SAWGAD/tree/64d6d531a2f03549f0bfbe461092beedd6f70bd2); pinned author commit `64d6d531a2f03549f0bfbe461092beedd6f70bd2`.
+- Canonical T-Social graph: **5,781,065 nodes**, **146,211,016 stored directed edges**, 10 node features. Source SHA-256: `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
+- Frozen split SHA-256: `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed 2; four nested training ratios TR40, TR30, TR20, TR10; final seeds 2, 42 and 72; fixed validation and test memberships.
+- Archived TR40 validation-tuning winner: trial 09, best full-validation AUPRC 0.167209; hidden dimension 64, learning rate 0.005, dropout 0.0. The tuning and frozen training histories are retained separately in `completed_frozen_training_20261024/`.
+- Recorded training adaptation: synthetic-anomaly warm-up, one-hop inbound fanout-10 sampling, one encoder layer, four attention heads; 32 warm-up steps and 16 rounds of 1,024 sampled optimiser updates for each archived final training. Sampled rounds must not be equated with full-dataset epochs.
+- Reported final test metrics below originate from the separate Vast.ai GPU table; they are not copied from or calculated from the archived validation-tuning values.
+- The 12 per-seed test values are source-reported. Their aggregate arithmetic is independently recomputed, but the originating separate GPU's ordered test-label arrays, prediction scores and evaluation logs were not supplied for an independent metric-level replay.
 
 ## Held-out test results
 
-**Not available.** None of the 12 frozen models has a recorded once-only held-out test evaluation. Test AUPRC, test AUROC, test macro-F1 and test-selected decision thresholds must not be inferred from the validation-only tables. No test-time checkpoint or threshold selection is permitted.
+Three-seed **mean ± sample standard deviation (`ddof=1`)** calculated directly from the 12 individual results below.
 
-## Public evidence and scripts
+| Training ratio | Test AUPRC | Test AUROC | Test macro-F1 |
+|---|---:|---:|---:|
+| TR40 | 0.951182 ± 0.043547 | 0.951352 ± 0.043427 | 0.954111 ± 0.003589 |
+| TR30 | 0.959695 ± 0.025889 | 0.959869 ± 0.025794 | 0.959290 ± 0.008292 |
+| TR20 | 0.930748 ± 0.040264 | 0.931043 ± 0.040269 | 0.950947 ± 0.007389 |
+| TR10 | 0.985270 ± 0.012147 | 0.985404 ± 0.012212 | 0.953822 ± 0.003892 |
 
-- `completed_frozen_training_20261024/scripts/stage3/sawgad_job.py`: training/validation worker for the recorded experiment.
-- `completed_frozen_training_20261024/scripts/stage4/sawgad_pipeline.py`: 12-trial tuning, winner freezing and 12 final ratio/seed training orchestration.
-- `completed_frozen_training_20261024/evidence/stage3_tuning/`: all 12 TR40 tuning records and the frozen trial-9 winner.
-- `completed_frozen_training_20261024/evidence/stage4_finals/`: all 12 training/validation histories, run specifications, recorded protocol and completion evidence.
-- `completed_frozen_training_20261024/results/full_validation_summary.csv` and `results/full_validation_per_seed.csv`: three-seed aggregates and individual validation results; `results/tr40_tuning_trials.csv` stores the 12 tuning outcomes.
-- `completed_frozen_training_20261024/evidence/pretest_validation_replay/checkpoint_validation_replay.json`: independent checkpoint replay found **13/13** score differences beyond tolerance `0.00001`; absolute AUPRC differences range **0.000122–0.001805**. **Replay not passed**, despite metadata and hash integrity passing.
-- `completed_frozen_training_20261024/PUBLIC_SHA256_MANIFEST.json`: manifest of published sanitized evidence files. `SAWGAD/T-Social/status.json` records this run as training complete, test scoring not performed and replay requiring review.
+## Individual final held-out results
 
-**Withheld privately:** original graph, frozen split `.npz`, model and optimizer `.pt` checkpoints, node-level predictions and Python environment. Preserve and independently verify those private artifacts before destroying I2. Next steps are to reconcile checkpoint replay, complete the independent pretest/methodology gate, then perform once-only held-out test evaluation and publish verified test metrics; **none of those test metrics is yet available**.
+| Ratio | Seed | Test AUPRC | Test AUROC | Test macro-F1 |
+|---|---:|---:|---:|---:|
+| TR40 | 2 | 0.910770 | 0.911194 | 0.956500 |
+| TR40 | 42 | 0.945476 | 0.945424 | 0.955849 |
+| TR40 | 72 | 0.997301 | 0.997439 | 0.949983 |
+| TR30 | 2 | 0.935728 | 0.935880 | 0.952384 |
+| TR30 | 42 | 0.987152 | 0.987152 | 0.968487 |
+| TR30 | 72 | 0.956206 | 0.956576 | 0.956999 |
+| TR20 | 2 | 0.908091 | 0.908259 | 0.945996 |
+| TR20 | 42 | 0.906918 | 0.907331 | 0.947405 |
+| TR20 | 72 | 0.977236 | 0.977539 | 0.959441 |
+| TR10 | 2 | 0.999279 | 0.999497 | 0.956996 |
+| TR10 | 42 | 0.977669 | 0.977959 | 0.954991 |
+| TR10 | 72 | 0.978863 | 0.978755 | 0.949479 |
+
+## Audit and reproducibility
+
+- [Final per-seed CSV](final_evaluation_20261027/results/heldout_test_per_seed.csv): all 12 reported test rows.
+- [Final summary CSV](final_evaluation_20261027/results/heldout_test_summary.csv): recomputed mean and sample SD (`ddof=1`) for each ratio and metric.
+- [Source screenshot](final_evaluation_20261027/evidence/source_test_results.png): immutable image supplied with the separate-GPU evaluation table.
+- [Final-run metric provenance](final_evaluation_20261027/evidence/metric_provenance.json) and [release SHA-256 manifest](final_evaluation_20261027/PUBLIC_SHA256_MANIFEST.json) document traceability and verification scope.
+- [Earlier validation/tuning evidence](completed_frozen_training_20261024/README.md) retains the original 12 TR40 tuning trials, 12 frozen training histories, source scripts, SHA-256 checks and checkpoint-validation replay evidence, without alteration.
+- Test Fraud-F1 and G-Mean are not available in the source table; these require matching thresholded predictions or confusion-matrix/class-recall measurements and cannot be uniquely recovered from AUPRC, AUROC and macro-F1.
+- The original graph, private split binaries, model checkpoints and score arrays are not distributed in Git.

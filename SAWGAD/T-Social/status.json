@@ -1,35 +1,52 @@
 {
-  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
-  "best_tuning_validation_AUPRC": 0.16720867793152064,
-  "dataset": "T-Social",
-  "final_runs_completed": 12,
-  "full_validation_nodes": 1156213,
-  "heldout_test_evaluations": 0,
-  "independent_saved_checkpoint_validation_replay": "CHECK_REQUIRED",
-  "metadata_and_sha256_audit": "PASS",
   "model": "SAWGAD",
+  "dataset": "T-Social",
+  "branch": "Pathik-ass3",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "split_seed": 2,
   "ratios": [
     "TR40",
     "TR30",
     "TR20",
     "TR10"
   ],
-  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
-  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
-  "status": "TRAINING_EVIDENCE_COMPLETE_PRETEST_VALIDATION_REPLAY_REVIEW_PENDING",
-  "test_scored": false,
-  "training_evidence_dir": "completed_frozen_training_20261024",
   "training_seeds": [
     2,
     42,
     72
   ],
-  "tuning_trials": 12,
-  "tuning_trials_completed": 12,
-  "winner_config": {
-    "drop_rate": 0.0,
-    "full_lr": 0.005,
-    "hidden_dim": 64
+  "archived_i2_training_evidence": {
+    "folder": "completed_frozen_training_20261024",
+    "tuning_trials_completed": 12,
+    "final_trainings_completed": 12,
+    "heldout_test_evaluations_in_archive": 0,
+    "metadata_and_sha256_audit": "PASS",
+    "independent_checkpoint_validation_replay": "CHECK_REQUIRED",
+    "winner_trial": 9,
+    "winner_config": {
+      "hidden_dim": 64,
+      "full_lr": 0.005,
+      "drop_rate": 0
+    },
+    "best_tuning_validation_AUPRC": 0.16720867793152064,
+    "full_validation_nodes": 1156213
   },
-  "winner_trial": 9
+  "separate_vast_ai_final_evaluation": {
+    "reported_runs": 12,
+    "metric_stage": "heldout_test_as_reported",
+    "measurement_source": "user_supplied_separate_gpu_screenshot_table",
+    "available_metrics": [
+      "test_auprc",
+      "test_auroc",
+      "test_macro_f1"
+    ],
+    "aggregate_sample_sd_ddof": 1,
+    "arithmetic_recomputation": "PASS",
+    "source_level_prediction_label_audit": "NOT_PERFORMED",
+    "per_seed_csv": "final_evaluation_20261027/results/heldout_test_per_seed.csv",
+    "summary_csv": "final_evaluation_20261027/results/heldout_test_summary.csv",
+    "provenance_json": "final_evaluation_20261027/evidence/metric_provenance.json"
+  }
 }
