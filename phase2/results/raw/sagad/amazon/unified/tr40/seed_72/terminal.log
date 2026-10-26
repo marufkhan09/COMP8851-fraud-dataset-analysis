@@ -1,0 +1,127 @@
+==============================================================================
+SAGAD | amazon | unified | TR40 | seed 72 | controlled-tuned
+==============================================================================
+Run ID: sagad_amazon_unified_tr40_seed72_a6000_20261014T203911Z   device: cuda:0   protocol: vast-v4.4
+Data: 11,944 nodes, 25 features, relations ['upu', 'usu', 'uvu']
+Split: train 3,455 | valid 1,728 | test 3,456  (amazon_TR40_seed2.npz, sha256 2aa40cd079e0d7fe)
+Hyperparameters (semi_train.conf.yaml: amazon + overrides {"K": 5, "activation": "Identity", "conv_norm": "none", "dropout": 0.0, "feat_trans": "no", "fusion": "NodeDimGated", "hid_dims": [32], "lr": 0.01, "mlp_norm": "none", "num_gate_layers": 1, "p": [0.1, 0.8], "wd": 0.0}): {'lr': 0.01, 'wd': 0.0, 'dropout': 0.0, 'hid_dims': [32], 'conv_norm': 'none', 'mlp_norm': 'none', 'feat_trans': 'no', 'activation': 'Identity', 'num_gate_layers': 1, 'K': 5, 'p': [0.1, 0.8], 'fusion': 'NodeDimGated'}
+Budget: {'epochs': 100, 'patience': 20, 'source': 'protocol vast-v4.4 unified stopping rule (MAX_EPOCHS, EARLY_STOPPING_PATIENCE)'}
+[note] mrq_sampling: {'nodes': 11944, 'candidate_pairs': 8835152, 'selected_edges': 87397, 'nan_key_centres_official_fallback': 0, 'cache': 'hit (sagad_mrq_amazon_c0978940f9f836c1e679.npz)', 'implementation': 'mrq_one_hop_exact (official rule, vectorised)'}
+Setup done in 6.1s; parameters {'total_parameters': 2183, 'trainable_parameters': 2183}
+epoch   1/100 | loss 45.069592 | train 0.17s | val AUPRC 0.102743 AUROC 0.579953 | best epoch 1
+epoch   2/100 | loss 4.432965 | train 0.02s | val AUPRC 0.155562 AUROC 0.705880 | best epoch 2
+epoch   3/100 | loss 10.410604 | train 0.03s | val AUPRC 0.162347 AUROC 0.709364 | best epoch 3
+epoch   4/100 | loss 11.038153 | train 0.03s | val AUPRC 0.157366 AUROC 0.700974 | best epoch 3
+epoch   5/100 | loss 9.322256 | train 0.03s | val AUPRC 0.169641 AUROC 0.719986 | best epoch 5
+epoch   6/100 | loss 6.378610 | train 0.05s | val AUPRC 0.244702 AUROC 0.758926 | best epoch 6
+epoch   7/100 | loss 4.064915 | train 0.06s | val AUPRC 0.241794 AUROC 0.761784 | best epoch 6
+epoch   8/100 | loss 3.700295 | train 0.04s | val AUPRC 0.204108 AUROC 0.716216 | best epoch 6
+epoch   9/100 | loss 4.761758 | train 0.04s | val AUPRC 0.196636 AUROC 0.702075 | best epoch 6
+epoch  10/100 | loss 5.117111 | train 0.04s | val AUPRC 0.285635 AUROC 0.762860 | best epoch 10
+epoch  11/100 | loss 3.821799 | train 0.04s | val AUPRC 0.478746 AUROC 0.816637 | best epoch 11
+epoch  12/100 | loss 2.753301 | train 0.04s | val AUPRC 0.459479 AUROC 0.815596 | best epoch 11
+epoch  13/100 | loss 2.644984 | train 0.05s | val AUPRC 0.325574 AUROC 0.795486 | best epoch 11
+epoch  14/100 | loss 2.843845 | train 0.04s | val AUPRC 0.296658 AUROC 0.790077 | best epoch 11
+epoch  15/100 | loss 2.945249 | train 0.04s | val AUPRC 0.330354 AUROC 0.805640 | best epoch 11
+epoch  16/100 | loss 2.800359 | train 0.04s | val AUPRC 0.462118 AUROC 0.837826 | best epoch 11
+epoch  17/100 | loss 2.471228 | train 0.04s | val AUPRC 0.661290 AUROC 0.867641 | best epoch 17
+epoch  18/100 | loss 2.091112 | train 0.05s | val AUPRC 0.741458 AUROC 0.880154 | best epoch 18
+epoch  19/100 | loss 1.763930 | train 0.04s | val AUPRC 0.719001 AUROC 0.865401 | best epoch 18
+epoch  20/100 | loss 1.571807 | train 0.04s | val AUPRC 0.468591 AUROC 0.816122 | best epoch 18
+epoch  21/100 | loss 1.893447 | train 0.05s | val AUPRC 0.356099 AUROC 0.792110 | best epoch 18
+epoch  22/100 | loss 2.097806 | train 0.04s | val AUPRC 0.467385 AUROC 0.823767 | best epoch 18
+epoch  23/100 | loss 1.773654 | train 0.04s | val AUPRC 0.698985 AUROC 0.871784 | best epoch 18
+epoch  24/100 | loss 1.562187 | train 0.04s | val AUPRC 0.761590 AUROC 0.895764 | best epoch 24
+epoch  25/100 | loss 1.677168 | train 0.04s | val AUPRC 0.764723 AUROC 0.902092 | best epoch 25
+epoch  26/100 | loss 1.783085 | train 0.04s | val AUPRC 0.763313 AUROC 0.905051 | best epoch 25
+epoch  27/100 | loss 1.816342 | train 0.04s | val AUPRC 0.765864 AUROC 0.904373 | best epoch 27
+epoch  28/100 | loss 1.747121 | train 0.04s | val AUPRC 0.764100 AUROC 0.897761 | best epoch 27
+epoch  29/100 | loss 1.613911 | train 0.04s | val AUPRC 0.732938 AUROC 0.879558 | best epoch 27
+epoch  30/100 | loss 1.493971 | train 0.04s | val AUPRC 0.598146 AUROC 0.850602 | best epoch 27
+epoch  31/100 | loss 1.525612 | train 0.04s | val AUPRC 0.517704 AUROC 0.835163 | best epoch 27
+epoch  32/100 | loss 1.593706 | train 0.04s | val AUPRC 0.623990 AUROC 0.856427 | best epoch 27
+epoch  33/100 | loss 1.484367 | train 0.04s | val AUPRC 0.744385 AUROC 0.889651 | best epoch 27
+epoch  34/100 | loss 1.372301 | train 0.04s | val AUPRC 0.774557 AUROC 0.915036 | best epoch 34
+epoch  35/100 | loss 1.384008 | train 0.04s | val AUPRC 0.779148 AUROC 0.920151 | best epoch 35
+epoch  36/100 | loss 1.411738 | train 0.04s | val AUPRC 0.775833 AUROC 0.922533 | best epoch 35
+epoch  37/100 | loss 1.402174 | train 0.04s | val AUPRC 0.776888 AUROC 0.923044 | best epoch 35
+epoch  38/100 | loss 1.364027 | train 0.04s | val AUPRC 0.779105 AUROC 0.924038 | best epoch 35
+epoch  39/100 | loss 1.311538 | train 0.04s | val AUPRC 0.778071 AUROC 0.923964 | best epoch 35
+epoch  40/100 | loss 1.280218 | train 0.04s | val AUPRC 0.762381 AUROC 0.916221 | best epoch 35
+epoch  41/100 | loss 1.300521 | train 0.04s | val AUPRC 0.753266 AUROC 0.916899 | best epoch 35
+epoch  42/100 | loss 1.319174 | train 0.04s | val AUPRC 0.775610 AUROC 0.928069 | best epoch 35
+epoch  43/100 | loss 1.275146 | train 0.04s | val AUPRC 0.785961 AUROC 0.935383 | best epoch 43
+epoch  44/100 | loss 1.252316 | train 0.04s | val AUPRC 0.771499 AUROC 0.933749 | best epoch 43
+epoch  45/100 | loss 1.264183 | train 0.02s | val AUPRC 0.757932 AUROC 0.932073 | best epoch 43
+epoch  46/100 | loss 1.278199 | train 0.04s | val AUPRC 0.757204 AUROC 0.933063 | best epoch 43
+epoch  47/100 | loss 1.269843 | train 0.04s | val AUPRC 0.763939 AUROC 0.935605 | best epoch 43
+epoch  48/100 | loss 1.246241 | train 0.04s | val AUPRC 0.769188 AUROC 0.937204 | best epoch 43
+epoch  49/100 | loss 1.230810 | train 0.04s | val AUPRC 0.756476 AUROC 0.935757 | best epoch 43
+epoch  50/100 | loss 1.242772 | train 0.05s | val AUPRC 0.749942 AUROC 0.933558 | best epoch 43
+epoch  51/100 | loss 1.243244 | train 0.04s | val AUPRC 0.759702 AUROC 0.936865 | best epoch 43
+epoch  52/100 | loss 1.224717 | train 0.04s | val AUPRC 0.767811 AUROC 0.939332 | best epoch 43
+epoch  53/100 | loss 1.209448 | train 0.04s | val AUPRC 0.774666 AUROC 0.940245 | best epoch 43
+epoch  54/100 | loss 1.214586 | train 0.04s | val AUPRC 0.780563 AUROC 0.941582 | best epoch 43
+epoch  55/100 | loss 1.220916 | train 0.04s | val AUPRC 0.787456 AUROC 0.942931 | best epoch 55
+epoch  56/100 | loss 1.214505 | train 0.04s | val AUPRC 0.792156 AUROC 0.942978 | best epoch 56
+epoch  57/100 | loss 1.203282 | train 0.04s | val AUPRC 0.790625 AUROC 0.941481 | best epoch 56
+epoch  58/100 | loss 1.197042 | train 0.04s | val AUPRC 0.783801 AUROC 0.939313 | best epoch 56
+epoch  59/100 | loss 1.197410 | train 0.04s | val AUPRC 0.784980 AUROC 0.940058 | best epoch 56
+epoch  60/100 | loss 1.197871 | train 0.04s | val AUPRC 0.796176 AUROC 0.944444 | best epoch 60
+epoch  61/100 | loss 1.189894 | train 0.05s | val AUPRC 0.805615 AUROC 0.946662 | best epoch 61
+epoch  62/100 | loss 1.182822 | train 0.04s | val AUPRC 0.809599 AUROC 0.948093 | best epoch 62
+epoch  63/100 | loss 1.182791 | train 0.04s | val AUPRC 0.812309 AUROC 0.947871 | best epoch 63
+epoch  64/100 | loss 1.185903 | train 0.04s | val AUPRC 0.813289 AUROC 0.947656 | best epoch 64
+epoch  65/100 | loss 1.182663 | train 0.04s | val AUPRC 0.811714 AUROC 0.947200 | best epoch 64
+epoch  66/100 | loss 1.179563 | train 0.04s | val AUPRC 0.809404 AUROC 0.946701 | best epoch 64
+epoch  67/100 | loss 1.178434 | train 0.04s | val AUPRC 0.806098 AUROC 0.946389 | best epoch 64
+epoch  68/100 | loss 1.178537 | train 0.04s | val AUPRC 0.809085 AUROC 0.946978 | best epoch 64
+epoch  69/100 | loss 1.176033 | train 0.04s | val AUPRC 0.813901 AUROC 0.947960 | best epoch 69
+epoch  70/100 | loss 1.172046 | train 0.05s | val AUPRC 0.817196 AUROC 0.948810 | best epoch 70
+epoch  71/100 | loss 1.169948 | train 0.04s | val AUPRC 0.818966 AUROC 0.949450 | best epoch 71
+epoch  72/100 | loss 1.168864 | train 0.04s | val AUPRC 0.818975 AUROC 0.949703 | best epoch 72
+epoch  73/100 | loss 1.165851 | train 0.04s | val AUPRC 0.819345 AUROC 0.949843 | best epoch 73
+epoch  74/100 | loss 1.163159 | train 0.04s | val AUPRC 0.817693 AUROC 0.949617 | best epoch 73
+epoch  75/100 | loss 1.160271 | train 0.04s | val AUPRC 0.816658 AUROC 0.949340 | best epoch 73
+epoch  76/100 | loss 1.160664 | train 0.04s | val AUPRC 0.817793 AUROC 0.949590 | best epoch 73
+epoch  77/100 | loss 1.158689 | train 0.04s | val AUPRC 0.820793 AUROC 0.950487 | best epoch 77
+epoch  78/100 | loss 1.155693 | train 0.04s | val AUPRC 0.822964 AUROC 0.951500 | best epoch 78
+epoch  79/100 | loss 1.153835 | train 0.04s | val AUPRC 0.823170 AUROC 0.951680 | best epoch 79
+epoch  80/100 | loss 1.154581 | train 0.04s | val AUPRC 0.823736 AUROC 0.951804 | best epoch 80
+epoch  81/100 | loss 1.151275 | train 0.04s | val AUPRC 0.824382 AUROC 0.951847 | best epoch 81
+epoch  82/100 | loss 1.147809 | train 0.04s | val AUPRC 0.823869 AUROC 0.951882 | best epoch 81
+epoch  83/100 | loss 1.148542 | train 0.03s | val AUPRC 0.821977 AUROC 0.951750 | best epoch 81
+epoch  84/100 | loss 1.148347 | train 0.04s | val AUPRC 0.822592 AUROC 0.952264 | best epoch 81
+epoch  85/100 | loss 1.145669 | train 0.04s | val AUPRC 0.825457 AUROC 0.953114 | best epoch 85
+epoch  86/100 | loss 1.144050 | train 0.04s | val AUPRC 0.826041 AUROC 0.953524 | best epoch 86
+epoch  87/100 | loss 1.143278 | train 0.04s | val AUPRC 0.826904 AUROC 0.954054 | best epoch 87
+epoch  88/100 | loss 1.142758 | train 0.04s | val AUPRC 0.827530 AUROC 0.954409 | best epoch 88
+epoch  89/100 | loss 1.140652 | train 0.04s | val AUPRC 0.827527 AUROC 0.954537 | best epoch 88
+epoch  90/100 | loss 1.139644 | train 0.04s | val AUPRC 0.825859 AUROC 0.954342 | best epoch 88
+epoch  91/100 | loss 1.138986 | train 0.04s | val AUPRC 0.826787 AUROC 0.954689 | best epoch 88
+epoch  92/100 | loss 1.137929 | train 0.04s | val AUPRC 0.829414 AUROC 0.955563 | best epoch 92
+epoch  93/100 | loss 1.136388 | train 0.04s | val AUPRC 0.830790 AUROC 0.956042 | best epoch 93
+epoch  94/100 | loss 1.135899 | train 0.04s | val AUPRC 0.831593 AUROC 0.956370 | best epoch 94
+epoch  95/100 | loss 1.134943 | train 0.04s | val AUPRC 0.831261 AUROC 0.956459 | best epoch 94
+epoch  96/100 | loss 1.133801 | train 0.04s | val AUPRC 0.830620 AUROC 0.956522 | best epoch 94
+epoch  97/100 | loss 1.132201 | train 0.04s | val AUPRC 0.831136 AUROC 0.956802 | best epoch 94
+epoch  98/100 | loss 1.132238 | train 0.04s | val AUPRC 0.832337 AUROC 0.957192 | best epoch 98
+epoch  99/100 | loss 1.131071 | train 0.04s | val AUPRC 0.833161 AUROC 0.957493 | best epoch 99
+epoch 100/100 | loss 1.129397 | train 0.04s | val AUPRC 0.833898 AUROC 0.957625 | best epoch 100
+Stopped: epoch budget of 100 exhausted
+Checkpoint reload check: parameters identical True; max |diff| 0.000e+00 (repeat noise 0.000e+00, tol 1.000e-05); |dAUPRC| 0.00e+00 -> PASS
+------------------------------------------------------------------------------
+test auroc: 0.967524
+test auprc: 0.867210
+test macro_f1: 0.913682
+test fraud_f1: 0.842949
+test fraud_precision: 0.891525
+test fraud_recall: 0.799392
+test gmean: 0.889501
+test accuracy: 0.971644
+test prevalence 0.0952 | AUPRC lift 9.11
+threshold 0.85 (validation Macro-F1) | best epoch 100
+------------------------------------------------------------------------------
+Artefacts: /workspace/comp8851_phase2/results/raw/sagad/amazon/unified/tr40/seed_72
+Artefact bundle complete: True  missing: []
+RUN STATUS: COMPLETE

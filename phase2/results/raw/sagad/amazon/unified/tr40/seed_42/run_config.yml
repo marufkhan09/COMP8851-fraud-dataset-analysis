@@ -1,0 +1,70 @@
+adapter:
+  batching: full batch over training nodes
+  class_weight_w: 9.533536585365853
+  graph: canonical homogeneous union -> to_bidirected -> remove/add self-loop (load_data)
+  input: concat[X, mean_{MRQ one-hop}(X)] (main.py)
+  loss: CE(weight=[1,w]) + BCE(gate.mean(1), p-targets, weight=w on anomalies)
+  optimizer: Adam(lr, weight_decay=wd)
+budget:
+  epochs: 100
+  patience: 20
+  source: protocol vast-v4.4 unified stopping rule (MAX_EPOCHS, EARLY_STOPPING_PATIENCE)
+checkpoint_every: 1
+config: null
+data_path: null
+dataset: amazon
+epochs: null
+eval_batch_size: null
+force: false
+hardware_profile_id: null
+hyperparameter_source: 'semi_train.conf.yaml: amazon + overrides {"K": 5, "activation":
+  "Identity", "conv_norm": "none", "dropout": 0.0, "feat_trans": "no", "fusion": "NodeDimGated",
+  "hid_dims": [32], "lr": 0.01, "mlp_norm": "none", "num_gate_layers": 1, "p": [0.1,
+  0.8], "wd": 0.0}'
+hyperparameters:
+  K: 5
+  activation: Identity
+  conv_norm: none
+  dropout: 0.0
+  feat_trans: 'no'
+  fusion: NodeDimGated
+  hid_dims:
+  - 32
+  lr: 0.01
+  mlp_norm: none
+  num_gate_layers: 1
+  p:
+  - 0.1
+  - 0.8
+  wd: 0.0
+inject_fault: null
+max_minutes: 240.0
+model: SAGAD
+no_cuda: false
+num_workers: null
+official_implementation:
+  commit: faddcbca117b475c8468e87a65c8428b616b694b
+  files_verified: 8
+  license_detected_by_github: null
+  paper: arXiv:2603.08137v1; WWW '26, DOI 10.1145/3774904.3792454
+  repository: https://github.com/Cloudy1225/SAGAD
+patience: null
+phase2_version: 1.0.0
+ratio: TR40
+require_cuda: true
+resolved_device: cuda:0
+results_root: /workspace/comp8851_phase2/results/raw
+resume: false
+run_mode: controlled-tuned
+seed: 42
+selection_metric: auprc
+skip_test: false
+smoke: false
+smoke_epochs: 2
+smoke_subset_nodes: 0
+split_dir: /workspace/comp8851_phase2/shared/splits
+split_path: null
+total_parameters: 2183
+track: unified
+trainable_parameters: 2183
+valid_every: 1
