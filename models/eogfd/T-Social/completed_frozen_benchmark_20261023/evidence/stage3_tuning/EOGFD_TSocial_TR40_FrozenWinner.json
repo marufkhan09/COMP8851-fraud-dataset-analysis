@@ -1,0 +1,39 @@
+{
+  "author_identical_reproduction": false,
+  "dataset": "T-Social",
+  "final_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratio": "TR40",
+  "scoped_memory_optimizer": true,
+  "selection": "validation_AUPRC",
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "status": "TR40_12_VALIDATION_ONLY_TRIALS_COMPLETE",
+  "test_scored": false,
+  "training_seed": 2,
+  "tuning_trials_completed": 12,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_methodological_approval_recorded": false,
+  "winner_checkpoint_sha256": "bdb31ce0963bad975bc7b6546cf6c5581cf031a9f436c98a4c994200f9e34e28",
+  "winner_config": {
+    "beta_p": 1,
+    "hidden_dim": 10,
+    "lamb": 0.0,
+    "lr": 0.01,
+    "mutation_rate": 0.05,
+    "order": 8,
+    "population_size": 10,
+    "weight_decay": 0.0
+  },
+  "winner_trial": 9,
+  "winner_val_auprc": 0.8596373896243849
+}

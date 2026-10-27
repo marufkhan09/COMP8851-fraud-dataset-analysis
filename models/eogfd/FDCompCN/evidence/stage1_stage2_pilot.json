@@ -1,0 +1,55 @@
+{
+  "dataset": "FDCompCN",
+  "graph": {
+    "canonical_etypes": [
+      [
+        "company",
+        "homo",
+        "company"
+      ],
+      [
+        "company",
+        "invest_bc2bc",
+        "company"
+      ],
+      [
+        "company",
+        "provide_bc2bc",
+        "company"
+      ],
+      [
+        "company",
+        "sale_bc2bc",
+        "company"
+      ]
+    ],
+    "edge_count": 30752,
+    "features": 57,
+    "model_graph_labels_stripped": true,
+    "node_count": 5317,
+    "static_transductive_unlabeled_test_node_features_present": true,
+    "test_labels_in_model_graph": false
+  },
+  "heldout_test_evaluated": false,
+  "hostname": "60d39211b1fd",
+  "instance_id_user_identified": "57212396",
+  "loss": 0.9475509524345398,
+  "model": "EOGFDHeteroModel",
+  "peak_gpu_gib": 0.1365,
+  "pilot_degree": 3,
+  "pilot_hidden_dim": 64,
+  "pilot_population_size": 3,
+  "seconds": 0.872,
+  "source_sha256": {
+    "assets/fdcompcn/source/comp.dgl": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+  },
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "FDCompCN_REAL_GRAPH_PILOT_PASS",
+  "test_count": 2127,
+  "test_scored": false,
+  "train_count": 2126,
+  "training_labels_only": true,
+  "tuning_started": false,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_count": 1064
+}

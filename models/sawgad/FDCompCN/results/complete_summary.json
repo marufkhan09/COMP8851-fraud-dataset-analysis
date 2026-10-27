@@ -1,0 +1,181 @@
+{
+  "adapter_sha256": "130b38c27b24d3825cb9f19294fdbbddf778916efcc80dac39dabe0aef29a28b",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "dataset": "FDCompCN",
+  "final_runs": 12,
+  "model": "SAWGAD",
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio_summaries": [
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.12478146358687876,
+          "population_sd": 0.008445224002139524
+        },
+        "auroc": {
+          "mean": 0.5423426826064109,
+          "population_sd": 0.005264839584268865
+        },
+        "fraud_f1": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "fraud_precision": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "fraud_recall": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "gmean": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "macro_f1": {
+          "mean": 0.47220843672456575,
+          "population_sd": 0.0
+        }
+      },
+      "ratio": "TR40",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.1205495416396881,
+          "population_sd": 0.004872359224496322
+        },
+        "auroc": {
+          "mean": 0.5243850561769637,
+          "population_sd": 0.016890490682885735
+        },
+        "fraud_f1": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "fraud_precision": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "fraud_recall": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "gmean": {
+          "mean": 0.0,
+          "population_sd": 0.0
+        },
+        "macro_f1": {
+          "mean": 0.4721647706731655,
+          "population_sd": 6.175312210556965e-05
+        }
+      },
+      "ratio": "TR30",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.11859230292597625,
+          "population_sd": 0.00765575739931582
+        },
+        "auroc": {
+          "mean": 0.5391768635988289,
+          "population_sd": 0.013415776853582518
+        },
+        "fraud_f1": {
+          "mean": 0.041343669250646,
+          "population_sd": 0.05846877777253106
+        },
+        "fraud_precision": {
+          "mean": 0.0365296803652968,
+          "population_sd": 0.051660769401756894
+        },
+        "fraud_recall": {
+          "mean": 0.047619047619047616,
+          "population_sd": 0.06734350297014738
+        },
+        "gmean": {
+          "mean": 0.11706555080001961,
+          "population_sd": 0.16555568962806425
+        },
+        "macro_f1": {
+          "mean": 0.481990746071092,
+          "population_sd": 0.013834274549186473
+        }
+      },
+      "ratio": "TR20",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.11713749101139753,
+          "population_sd": 0.007417722999953098
+        },
+        "auroc": {
+          "mean": 0.5379370448915246,
+          "population_sd": 0.012065375504296932
+        },
+        "fraud_f1": {
+          "mean": 0.04989384288747346,
+          "population_sd": 0.07056054929037735
+        },
+        "fraud_precision": {
+          "mean": 0.03877887788778878,
+          "population_sd": 0.05484161504252102
+        },
+        "fraud_recall": {
+          "mean": 0.06994047619047619,
+          "population_sd": 0.09891076998740397
+        },
+        "gmean": {
+          "mean": 0.13762236466121397,
+          "population_sd": 0.19462741458974456
+        },
+        "macro_f1": {
+          "mean": 0.4818742594770656,
+          "population_sd": 0.013669537628079674
+        }
+      },
+      "ratio": "TR10",
+      "runs": 3
+    }
+  ],
+  "source_dgl_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "SAWGAD_FDCOMPCN_COMPLETE",
+  "test_evaluated_once_per_final_run": true,
+  "train_seeds": [
+    2,
+    42,
+    72
+  ],
+  "training_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "winner": {
+    "best_val_auprc": 0.15264236029799222,
+    "config": {
+      "drop_rate": 0.25,
+      "full_lr": 0.003,
+      "hidden_dim": 64
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 6
+  }
+}

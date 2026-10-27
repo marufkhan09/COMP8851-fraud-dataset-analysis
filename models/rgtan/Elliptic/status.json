@@ -1,0 +1,59 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "completed_final_runs": 12,
+  "completed_tuning_trials": 12,
+  "dataset": "Elliptic",
+  "evidence_publication_status": "RGTAN_Elliptic_I1_PUBLIC_GITHUB_EVIDENCE_AUDIT_PASS",
+  "graph_protocol": "chronological train_prefix -> validation thru timestep31 -> heldout timestep32-49",
+  "model": "RGTAN",
+  "public_archive_excludes": "original source, frozen split arrays, crossfit arrays, model weights, environments",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "sampler": "two layer full neighbor",
+  "source_sha256": {
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_seed": 2,
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "BENCHMARK_COMPLETE_EVIDENCE_PUBLISHED",
+  "test_auprc_summary": {
+    "TR10": {
+      "mean": 0.1840600430204532,
+      "sample_sd": 0.034103074207852455
+    },
+    "TR20": {
+      "mean": 0.3439885251263511,
+      "sample_sd": 0.16292338816635613
+    },
+    "TR30": {
+      "mean": 0.3315365589076293,
+      "sample_sd": 0.1775619097111456
+    },
+    "TR40": {
+      "mean": 0.5430471727030205,
+      "sample_sd": 0.17278458231003704
+    }
+  },
+  "test_scored_once_per_run": true,
+  "test_scoring_count": 12,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "tuning_winner_configuration": {
+    "base_lr": 0.003,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 64
+  },
+  "tuning_winner_trial": 11
+}

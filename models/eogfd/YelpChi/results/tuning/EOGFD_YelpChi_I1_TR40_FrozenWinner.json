@@ -1,0 +1,159 @@
+{
+  "dataset": "YelpChi",
+  "final_training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "grid": [
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20
+    },
+    {
+      "beta": 0.5,
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20
+    }
+  ],
+  "heldout_test_evaluations": 0,
+  "model": "EOGFDHeteroModel",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "VALIDATION_ONLY_TR40_12_TRIALS_COMPLETE",
+  "test_scored": false,
+  "trials_completed": 12,
+  "tuning_seed": 2,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_metric": "AUPRC",
+  "winner_checkpoint_sha256": "31aca34f6473171dab8bf6860a7399319a0c4bd59fdbf5ffe0cbcb2ef5f5093f",
+  "winner_config": {
+    "beta": 0.5,
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.003,
+    "mutation_rate": 0.1,
+    "order": 3,
+    "population_size": 20
+  },
+  "winner_trial": 8,
+  "winner_val_auprc": 0.6131032255844833
+}

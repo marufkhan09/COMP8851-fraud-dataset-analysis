@@ -1,0 +1,686 @@
+{
+  "branch": "Pathik-ass3",
+  "dataset": "Elliptic",
+  "destination": "EOGFD/Elliptic/",
+  "files": {
+    "EOGFD/Elliptic/README.md": {
+      "bytes": 5296,
+      "sha256": "f88383d52b01cf37c3eac2bcdce9f5e21c7bea1668c7ced533bdf6adbcdc9015"
+    },
+    "EOGFD/Elliptic/evidence/EOGFD_57212396_Environment.json": {
+      "bytes": 848,
+      "sha256": "0dc225312dad7d616a7183f488c2f961b97a5fd03ee511200ab962f012d165bc"
+    },
+    "EOGFD/Elliptic/evidence/EOGFD_Elliptic_57212396_IndependentPublicationAudit.json": {
+      "bytes": 5761,
+      "sha256": "19d65ef54667c40eb8dd1849e0ce55a07df106a2b900b7c3f5d9ec1b2a92b242"
+    },
+    "EOGFD/Elliptic/evidence/elliptic_edgecount_assertion_repair.json": {
+      "bytes": 568,
+      "sha256": "6ae2e884d1f1e98f699f9d901f48c2d3553feb5290d4f407952277f6fa6de320"
+    },
+    "EOGFD/Elliptic/evidence/logs/EOGFD_57212396_Stage3_ImportRecovery.log": {
+      "bytes": 25562,
+      "sha256": "9c90dbf69fa21e7279a6df0d48b4d0599ef520e97c7f3136662d6dd524b12295"
+    },
+    "EOGFD/Elliptic/evidence/logs/EOGFD_57212396_Stage3_Master.log": {
+      "bytes": 1483,
+      "sha256": "cf13b988e8984bb8bd71cf3185ff9c2df9ac702bf64d104040feec1d467dd8ab"
+    },
+    "EOGFD/Elliptic/evidence/logs/EOGFD_57212396_Stage4_Master.log": {
+      "bytes": 20494,
+      "sha256": "197f1b30d63f23190ee0bed78dcf9cd3fefa71a9203f56b7d5c556ed61c4afd4"
+    },
+    "EOGFD/Elliptic/evidence/logs/EOGFD_57212396_Stage5_AuditRecovery.log": {
+      "bytes": 11688,
+      "sha256": "c8b165725c43da79f2fe2d1cbaaf7ca5488d28c83ac694d1ad3a8dee271b4c0f"
+    },
+    "EOGFD/Elliptic/evidence/logs/EOGFD_57212396_Stage5_Master.log": {
+      "bytes": 2601,
+      "sha256": "d799a6120321030164dd97a50df8cbb89619e90a64869c578e23b885ea4b42c9"
+    },
+    "EOGFD/Elliptic/evidence/logs/Elliptic_Stage3.log": {
+      "bytes": 12278,
+      "sha256": "629c0acc308ec581de2845cd0f9844cf39471572eb203e97346bb65a08306c22"
+    },
+    "EOGFD/Elliptic/evidence/logs/eogfd_elliptic_fdcompcn_stage12.log": {
+      "bytes": 9999,
+      "sha256": "d4d84e09b2671cbdf1426b951c531377103431e72e946d7132d778531fb51656"
+    },
+    "EOGFD/Elliptic/evidence/stage1_stage2_pilot.json": {
+      "bytes": 1672,
+      "sha256": "4cd715b73357e6e6c5bb18cbd38debefe7fd920731ebef4b786df660ab2c0467"
+    },
+    "EOGFD/Elliptic/results/finals/EOGFD_Elliptic_Stage4_12FrozenFinalsSummary.json": {
+      "bytes": 1505,
+      "sha256": "d1b5014af5a6186f297b39c8c7d0ff634ca3792c3a87f03eca4e85becdb6d597"
+    },
+    "EOGFD/Elliptic/results/finals/EOGFD_Elliptic_Stage5_All12_PretestAudit.json": {
+      "bytes": 5750,
+      "sha256": "955286b4ec05fbcd3180e5a694d8f294171308c50bf003dc32e8da8a7a76b220"
+    },
+    "EOGFD/Elliptic/results/finals/EOGFD_Elliptic_Stage5_AllRatios_Summary.json": {
+      "bytes": 5655,
+      "sha256": "0d4c4dc80b29d56b7c3d84c5cdb8a2cc177ead76c80ddce40a5004ff9f35c101"
+    },
+    "EOGFD/Elliptic/results/finals/EOGFD_Elliptic_Stage5_ValidationReplayProvenance.json": {
+      "bytes": 847,
+      "sha256": "800d890edbde5c2eac095cc59921c8c1f04f35843b94735451a0d6210485123d"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "e532bd3da6a4c99cc4c5e5aaf77e3c89d2bf676314856095dba3bae12e7d14f6"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/epoch_times.csv": {
+      "bytes": 950,
+      "sha256": "153e78fbc036e532f6d2d15b29fc04180f2bd1fe847e9b2605278a7d8aabc56e"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/frozen_training.json": {
+      "bytes": 1924,
+      "sha256": "376dd9f3b084092ea896493560b0f46cf95074b05c7102375a1402d1b15f3b18"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/test_metrics.json": {
+      "bytes": 2081,
+      "sha256": "2429ae8b6bc56d5f9a461d44ae8d7b11a0726d9bf0981094168fb1776a82f9b2"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/test_once_claim.json": {
+      "bytes": 882,
+      "sha256": "a7de8e00ebdf674847e868d73e8b042cf6b8a35ddaa645f309e33c98d2069b55"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "d0d52329056fe065fb72b1cc287676a7aa51581e24d67430b12b61572072c364"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_2/validation_history.json": {
+      "bytes": 10098,
+      "sha256": "07ec94505b8da6451ead3daf8500baa676bc7b919d055dc2ddb66818fb26517a"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "e462678f37372bc5eeab6af66c29fb71c66990c6ccce05ee36ff3355bdf1bcab"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/epoch_times.csv": {
+      "bytes": 1394,
+      "sha256": "52d73608df029171880919eadf192317d6f85cd9c4e332cba15152a6fff0cc45"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/frozen_training.json": {
+      "bytes": 1927,
+      "sha256": "9f1e9d74e0ac90d25cc77cb981393f7ee0b5d68270bd6dbdb5343c2c749fd789"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/test_metrics.json": {
+      "bytes": 2079,
+      "sha256": "6ca74e2cf50befae058434c6d381d95ab1758f790c74c754ce08f977bab8f416"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "1ed2d9c2ce5bfae4e1e2a352afccb6344deb8e83ad87ced686a0bb1c3c5fc0ab"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "3a67394e7146f4bfde3718e9e11686e8ef9f23b81a06bf5cec6c860de33daab6"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_42/validation_history.json": {
+      "bytes": 15118,
+      "sha256": "f6e92156ea43d9c978b72a0bc8359629b27de02d0d452e1e18f5bdeb84b58fcb"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "46a2012aa528288041ac13eb0c8e84ef8ac269c608d14344b231b20239c7413e"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/epoch_times.csv": {
+      "bytes": 876,
+      "sha256": "b5e157b92eae0fe6c03b34e13d986ac9a59785bb2f8e0bc52c69297190acac74"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/frozen_training.json": {
+      "bytes": 1925,
+      "sha256": "c47f2e2bf17b4737055125b8a64147ca3c0b69273a28fa3116a9c92b7ef06891"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/test_metrics.json": {
+      "bytes": 2081,
+      "sha256": "806f829743e9416c83dfee122d0af0d93b60a33897e7512fb77b6eb31f5baeb8"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "b2af0edbf5fc6383d39fde6d060a188cad088a3f0d289fd2563c96a1af808dac"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "38fd1f7a1b124aa6c18e2837dfd0a4ec64517e6985ded5814fafa5d2cfc2ae79"
+    },
+    "EOGFD/Elliptic/results/finals/TR10/seed_72/validation_history.json": {
+      "bytes": 9245,
+      "sha256": "c12208b1c5f41699c5b0df9c178d12729163775503930b6b20960e06f63ae9a3"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "b06e145b7eb58986be1176a5f0b405f12b9b93109556e6f80f81b500e9bad868"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/epoch_times.csv": {
+      "bytes": 1172,
+      "sha256": "26b2ca44b94e81689e08f5573c0045d991e1b5b5cd44bf38defb33645f427812"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/frozen_training.json": {
+      "bytes": 1923,
+      "sha256": "c7febbf327453c2622ce48dc97a9ebb96e02f98ffcf1eda8dcfc706ceafa36a4"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/test_metrics.json": {
+      "bytes": 2078,
+      "sha256": "64f3744fbd09905b61cafb8c769a14f049bb1485d710d2746c787da80ffb2b9d"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/test_once_claim.json": {
+      "bytes": 882,
+      "sha256": "58e8b3d027e1a018c4d1df95f5cdbcb8092937f20684ac20dfdfb710b389de00"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "b32cfcb226bc2961aa54cb583f3c1f931601e701b905c2764e83e6c1c199041a"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_2/validation_history.json": {
+      "bytes": 12565,
+      "sha256": "7cc367614202f56db18cee6c222e090bffb1c987cbbc34bc292dd8a5c8480e9f"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "ffe8c2c2ec63a32ff31666c9d52f5c3434401c7e538ec31ec0ec6986153e4cd9"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/epoch_times.csv": {
+      "bytes": 1283,
+      "sha256": "94d58eef8795dfd27b392a0070e8d1ca9f4274c25a9577453eaef28ea4fedd86"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/frozen_training.json": {
+      "bytes": 1926,
+      "sha256": "418b2ae4ab31ad9e17d2f1f53519f2e08aab27b3ff788c7a13bd947a637df755"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/test_metrics.json": {
+      "bytes": 2081,
+      "sha256": "5cd3fc03018cdba2cbf80dc545f7e53f80442d89b0416d2f1a2d00ef6eea3412"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "3a6ade6c00f08b111fc6d4a20fe606fdb246d6156dc2a2b18dff10a1dc71d6f5"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "cedd116a1442255580e4c940c056e7cd8e3a219be93b1d33d2a05fab2045b602"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_42/validation_history.json": {
+      "bytes": 13815,
+      "sha256": "1c14a8d9e52808cd0d0bf85110302c16b47952b497493ad046d00ce400aebc32"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "fb312c464fd6edddd68dbfcc0e659e68e82ad4c95d188496141d41eab4840048"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/epoch_times.csv": {
+      "bytes": 876,
+      "sha256": "d1e808de503ef6e81263ea6afe435b86a6b0d12e6b0708eb01042b9d4c2cdaa4"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/frozen_training.json": {
+      "bytes": 1923,
+      "sha256": "9737cfb68e71dfed95dbe19e25fbf7394a465ac841c68d0994a2d94667382b99"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/test_metrics.json": {
+      "bytes": 2079,
+      "sha256": "e439b0c546ac68a01676cda7249edc1772455d6533a9d71cab5e87b21bea620e"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/test_once_claim.json": {
+      "bytes": 883,
+      "sha256": "66d1b31c86a0dd591167b368a6799e89df195b6c0a2e77425bf6e94f24415dd7"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "ec8a3d355abc758477953c0329f9e7e61f0bb5d77f7003833940c176acc3b6b0"
+    },
+    "EOGFD/Elliptic/results/finals/TR20/seed_72/validation_history.json": {
+      "bytes": 9196,
+      "sha256": "0a1c1a712d810354eed9e8029ac646b20c0153ed295aec19e1e30067718791fc"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "261f8c754d17a5ac1cd86e34e882ce4e39cde83e67c40a2425ed8e4ac8438418"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/epoch_times.csv": {
+      "bytes": 950,
+      "sha256": "0ecb64dc899f80750004475ab5b393ab1f7e4d76e5daa6a4c23d476e950f72f3"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/frozen_training.json": {
+      "bytes": 1926,
+      "sha256": "71a272fb95503e3a95982aad1e6995527b4753fdecf7cb09074f011ee4cf7a59"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/test_metrics.json": {
+      "bytes": 2076,
+      "sha256": "88dd78b35bd0b70ddbf79098da46c5d66f9d7292dad5b859257e04c7096b2b0d"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/test_once_claim.json": {
+      "bytes": 882,
+      "sha256": "3155b8ad14125534e4eced9dfc48ab9881fbe4652f33b78810a0f11f9c2b3646"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "0fd15480401df7e2b5a45960e2413d6ba2d18b68ba48ab53a39522d4db9f5a90"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_2/validation_history.json": {
+      "bytes": 10038,
+      "sha256": "1078b462217b97ad726ae3fcb16bbd934e8f64ed0b51e474334c2a2d91265470"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "80b307a5bae787192009c73d75d4db49d3c97275c60c7d8a82533433c6cf27ed"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/epoch_times.csv": {
+      "bytes": 1209,
+      "sha256": "d1d81dda64c56daa319499d0ac4d8fdd543799a3a01bad9dc0c457dd6548c992"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/frozen_training.json": {
+      "bytes": 1927,
+      "sha256": "82aae1ccac7fd49c68938b19e59f26ccd11ce04760782ad4bc11b0f417c62031"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/test_metrics.json": {
+      "bytes": 2079,
+      "sha256": "317d16bd5f54383649f0e38f4b55b1aec372fbb41545f8147d0f25732707ac88"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "ad01500e5606fc4fee241abdf571a9ab86c94f302d48b158b22a72c43d3f995d"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "9ef16c3885b684bbf53e0451f0022b93e284296d0a750fda4ceef2b714aa71e4"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_42/validation_history.json": {
+      "bytes": 12956,
+      "sha256": "e19035632811bcf306315629edc1a72ba6462e481cbc271a3eabc26c25186101"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "b5783a7c33498c8fd404843ae09c642521606152b8a0fd5b47800035d6a6b413"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/epoch_times.csv": {
+      "bytes": 1172,
+      "sha256": "26cec882f405e422e3da91c6619c54f07e5a5a78c70fc300ee22fdc777365ba2"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/frozen_training.json": {
+      "bytes": 1928,
+      "sha256": "d0bdf091ec7e6600439e94f5c2ff61e100fd4ca04ec70f5ffab95376ffb9c000"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/test_metrics.json": {
+      "bytes": 2078,
+      "sha256": "15727dee62ab18e37591ed3bf5d27b0f6ff47dc673e01821234aa57f760c66a3"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/test_once_claim.json": {
+      "bytes": 882,
+      "sha256": "0016b7b9603bbb208444935e4b92dd1dfb6f2595343dc6d082fe802fcbfa3ece"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "33dd472b9dfadab3f6d103338c7ba1ae299c8d9e191d44030886a5f1a09c39a0"
+    },
+    "EOGFD/Elliptic/results/finals/TR30/seed_72/validation_history.json": {
+      "bytes": 12539,
+      "sha256": "547ecfb99f37f9a1980f9f7dec25cb8d5fe99b20820700da82d335954826fd05"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "4f6038be5da9681de986e29fd9a70f03cdf6ea63ab0f7265f49b91426cf11f69"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/epoch_times.csv": {
+      "bytes": 3725,
+      "sha256": "4baf1b3d1085bccc4c4dbb58789d3eb4d76108567a50d01c3fc5f863efc3fd7a"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/frozen_training.json": {
+      "bytes": 1926,
+      "sha256": "eb41d51d8be7cecdffce49bcd52b00278b5177b9911e2554a7fbed6c4f708aac"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/test_metrics.json": {
+      "bytes": 2078,
+      "sha256": "6224d0094715bf525c08a774781d81a8aa21f4749689e789ab91042ee158429a"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/test_once_claim.json": {
+      "bytes": 881,
+      "sha256": "d6af139a393be327f128defabab5360051e602bb9f5fcdf6705bbb9637243fec"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "88f327076369748785852205ef9f27ba697495924829ee4d6e6787ac64a14944"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_2/validation_history.json": {
+      "bytes": 41388,
+      "sha256": "f449000f5a433ba8c2bd53999367f796895b3c788e634aa3689ba4501d120049"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "71de67960ac4eea618d9a98160be552d5e95b1d5c921f36a903dc339d56bd1b2"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/epoch_times.csv": {
+      "bytes": 1616,
+      "sha256": "e4d5e67fe44bce677dc86a2ba02d7e7814393c490690c5fe5f339ad391e7a302"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/frozen_training.json": {
+      "bytes": 1930,
+      "sha256": "02f74a5db68633ccfb369785eb22a7aed0b5b783fb45cb7072e655384d9001fd"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/test_metrics.json": {
+      "bytes": 2081,
+      "sha256": "1210da843cfc092d5483d84574d8f72f55ecb1301fefe03c6ba7873957cc1830"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/test_once_claim.json": {
+      "bytes": 884,
+      "sha256": "2fe550ab952ad6b931213f95c18fe9c5841fa0a8f953c079da2d160618901f94"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "6e662ab556b8a8d56e44739cf7ffddcb8160e76742c084c366a4a8657ee1dd41"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_42/validation_history.json": {
+      "bytes": 17541,
+      "sha256": "3719de65546bc3cf4a60640a0b77dbb2828a7de33a3779a15b63f3c51d27a37f"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "595ef881b6ddfd8265996dc27fa681719407b51935c2b75861d323b9bba9b2e5"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/epoch_times.csv": {
+      "bytes": 1505,
+      "sha256": "0d1532abc7e6e786a2b8c45070c3290ab672b59ad6ad4b8064e6dc411cfde6ba"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/frozen_training.json": {
+      "bytes": 1930,
+      "sha256": "92f3c9c6f6dfbfee45aa679b1c25b4142de10ff941297534516dbcdef055fd02"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/test_metrics.json": {
+      "bytes": 2077,
+      "sha256": "ad9f71e946ea6980379b33e42a8843f1a61ac80f1fd8ec3f9cbc1b02107a3f34"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/test_once_claim.json": {
+      "bytes": 880,
+      "sha256": "3c1d04cdab213e6f5450b7c50c9fb7dd271398137e9ae24f2519d46df6484ca8"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/test_scores.npy": {
+      "bytes": 151720,
+      "sha256": "8b3734f542156a4069feb832afce6a0cddc910e662b72474845154ce8f40d60f"
+    },
+    "EOGFD/Elliptic/results/finals/TR40/seed_72/validation_history.json": {
+      "bytes": 16296,
+      "sha256": "8f3c3cfc68723049705ae3b6067005cd52291a8fcb4573bce16a6b58945a78b0"
+    },
+    "EOGFD/Elliptic/results/finals/stage4_frozen_training_manifest.json": {
+      "bytes": 1319,
+      "sha256": "1a6ec73fba4460b39a02131b2e3977268505ffdfbf2d3265b6f65de471a153c1"
+    },
+    "EOGFD/Elliptic/results/tuning/EOGFD_Elliptic_NewI_TR40_FrozenWinner.json": {
+      "bytes": 1449,
+      "sha256": "3ac745e3bcebdb2db95b3541ae2b8ccf20f2f94213148eb4e99ffa770715e69e"
+    },
+    "EOGFD/Elliptic/results/tuning/EOGFD_Elliptic_NewI_TR40_TuningSummary.json": {
+      "bytes": 5404,
+      "sha256": "bfffc694ec72469a4e7b24f8c71b3338145eb7b3abb036b2dd5c363d3d5bc0ab"
+    },
+    "EOGFD/Elliptic/results/tuning/population20_cost_gate.json": {
+      "bytes": 363,
+      "sha256": "096148a014fb8dd47b2dcbafbaffadaa210d8b981b63b197b6108b9cb3fccc14"
+    },
+    "EOGFD/Elliptic/results/tuning/stage3_run_manifest.json": {
+      "bytes": 3841,
+      "sha256": "4fac8f3d27579b740acde71918003a0afdec876f96351a30424c46a07ea5ad8e"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_01/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "bf582c76a8b4235b025c89a0b7bf909d4ddf26f2516784dc5301c52ffc89460a"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_01/epoch_times.csv": {
+      "bytes": 2015,
+      "sha256": "e834acd194503197f205a628018cbbd57d5883f922cdb3e21e0cfe2028351ce0"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_01/trial_result.json": {
+      "bytes": 1484,
+      "sha256": "57dea68b9f3594834a223a11928cdaecbe1e20dde31819af8b48f0c509a2625e"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_01/validation_history.json": {
+      "bytes": 25892,
+      "sha256": "61e866781a7624b56e0a51d1f7025d0c65ae3ca0a90e6cf139c9f3e0134cce1d"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_02/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "84816a1e2a964f9564737594e5d5118019bca57ae4f1b15a222eb6156504e9db"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_02/epoch_times.csv": {
+      "bytes": 1984,
+      "sha256": "8cf8e0a257d8286a65195a5952178f185675809db402ad95cacc4942967dbeb2"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_02/trial_result.json": {
+      "bytes": 1486,
+      "sha256": "04a5cbfc93ab22a9982149f581a0dd19b6f65c0091127fcb6d76d7cc9e7d1572"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_02/validation_history.json": {
+      "bytes": 25455,
+      "sha256": "1784fc4c31a1a4faf328edaa8b7619c1d3ec3ae01f27123cf3e6bde44f0831df"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_03/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "9b5684dcbe0657b48c9406ea84294f651a71092cc15749aa6d65b9336e59aeb0"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_03/epoch_times.csv": {
+      "bytes": 1984,
+      "sha256": "43c5a5f2e8cc249a2032bca55723d75877011a116025560af6472c0213cbb072"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_03/trial_result.json": {
+      "bytes": 1484,
+      "sha256": "ad34aafc206c5baa9d21bd49e8efc536ca1c4d2b6e319829f7b08462b06efb50"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_03/validation_history.json": {
+      "bytes": 25461,
+      "sha256": "48a3eb2cd448af57fcadd92abe02d067940c96cd94583d800a4f7446591d96e8"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_04/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "b29000d8e577766be1bc765fc151d7bc9b4f6979ca07fe14fe0315427d930f89"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_04/epoch_times.csv": {
+      "bytes": 1984,
+      "sha256": "08c28f4b539bf66beab990b227b212bbe55aea1f0acbd4499bbb67a53e52d262"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_04/trial_result.json": {
+      "bytes": 1485,
+      "sha256": "d083372a3104fab8933078a9d26e34f9088c75d9399ed8c5db630af29fbc7508"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_04/validation_history.json": {
+      "bytes": 25474,
+      "sha256": "a908bb86fa0d55289838384f8f6a059f3c2f0971b09f9284e160035b9d90c349"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_05/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "631a257a855a67ea72c35757a1e2099ad4953f5876468e2c6b34cf5df1d97886"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_05/epoch_times.csv": {
+      "bytes": 1333,
+      "sha256": "b7c061bb21a3789d298863c75c49cd3115743dac7b69d536666df7b8f8eb8c28"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_05/trial_result.json": {
+      "bytes": 1488,
+      "sha256": "a0e715cfd7d160c0169e353f9d2b77b21ef9adffc36ee124966dfc914587fd6d"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_05/validation_history.json": {
+      "bytes": 16871,
+      "sha256": "84c06dfd1b1c751860916c0426ef7c70c83cc9a63b4aea33f52e95ad4a0e5ece"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_06/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "9c9ac46ad196eb32a4db3f9c1262d3a88aaf6424e6f79efe295a2b391a122652"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_06/epoch_times.csv": {
+      "bytes": 1333,
+      "sha256": "c38e8a3ec16cafcf855454f8442b74c6046dd907697ecf9b81c63340ba92583f"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_06/trial_result.json": {
+      "bytes": 1487,
+      "sha256": "4d4bb9127f9e24b2a9f557bb4e4082d2dd2c4678a68cbc6b7ad560bc257fb77d"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_06/validation_history.json": {
+      "bytes": 16868,
+      "sha256": "afe52c39c818b095ce523c77654c03647fcc7040ddf8fc0c6402d75824f5e6b5"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_07/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "cfa9bf96611fddd585484a729a26c3ad41d35897c6e106fb4f4cda09ea0e0fb9"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_07/epoch_times.csv": {
+      "bytes": 1333,
+      "sha256": "cd339d47b4b918fdcab096cf8e05bd7c35a1cfb1d4963856031268fbd3acaf9b"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_07/trial_result.json": {
+      "bytes": 1485,
+      "sha256": "79fb0b89fbde81cdba0c44986fdb4cecae9926686c4d7822b83bd7ab96514ad8"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_07/validation_history.json": {
+      "bytes": 16871,
+      "sha256": "82db1c39ba70b5dd4c96e1893e4751b821d7a4a131987eabac50afc04b1eb989"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_08/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "35a7b6e3e77533a17c36b12e148d1f2748e8f04063fc9a1aa4b6ab7ef8aadc13"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_08/epoch_times.csv": {
+      "bytes": 1333,
+      "sha256": "520e4c5f74e08a9507c58524485e7042343dedb0e35c1040fbdda13de3e04d1d"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_08/trial_result.json": {
+      "bytes": 1484,
+      "sha256": "d78a4b431fdb08ce766ddbf3088e127b594964c5506268bb06a45cb95a2f4970"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_08/validation_history.json": {
+      "bytes": 16873,
+      "sha256": "f41a677c4653323628246b3d965aa62f7b230a99da2cc830ef84e0d01239ebd5"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_09/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "e1b5e321ab3d36872cc3f17468a49e00046a215fbf64cdccb29cc514e4a39248"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_09/epoch_times.csv": {
+      "bytes": 2325,
+      "sha256": "cab35c27162605081e94735237b4532947b4d546ee55eaa834b33f0f3d7c2252"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_09/trial_result.json": {
+      "bytes": 1485,
+      "sha256": "60f014604dbe43948b61bd67680a743d30919026b5dde063b95478febd530e56"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_09/validation_history.json": {
+      "bytes": 30043,
+      "sha256": "6f7bb7f6be4179658e921b81b3178db34c8c79900bf2e37937b5ccabbee72a82"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_10/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "670c768fc856c0cd37a89040389dfd77cbbd2bed581a3885188ccf53fedee68a"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_10/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "34db6a492ae0d544afe85316ee86fb2cd7ef6845cc571d0a492a1712e2793956"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_10/trial_result.json": {
+      "bytes": 1487,
+      "sha256": "b543289ce1c82cdc2d8c5e84a13ec4c6934c72360d043074f2b738a391c83fb5"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_10/validation_history.json": {
+      "bytes": 41191,
+      "sha256": "e9ffa6fbda054f1a0205fca7985d10f17896848f81a45598d2b3950a63dab0de"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_11/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "75e5cb673d3959aa73efdb85ddf3b9814e4a2673293f5e1fe0348d21357d2f20"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_11/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "2327dfdfe3217e1af9124b7e8fcbfd0f63dea5b71265df010bdb013db0d7bb80"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_11/trial_result.json": {
+      "bytes": 1483,
+      "sha256": "97b7c50f8487d1ca5ab21b9b12e5c708f2b052beb4ddcca1a0e1eb15ba033bf8"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_11/validation_history.json": {
+      "bytes": 41188,
+      "sha256": "cddc66124e9cc95fdd27f63e7925f5553c8e47668fc0c3868167564d1f5ac759"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_12/best_validation_scores.npy": {
+      "bytes": 69936,
+      "sha256": "d961c6e5143c8043e7227f40aa225dd931a2ba71472b281cf5e7641597edd5dd"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_12/epoch_times.csv": {
+      "bytes": 3163,
+      "sha256": "841e76e81ea1533f2849fd8784ad96005dd2beb744e9c2ada28413f120685eb4"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_12/trial_result.json": {
+      "bytes": 1485,
+      "sha256": "defdd32663294ff8296cf81e98bd7f1f8aa7874a6dc3e0bb5964bf20005cbf2e"
+    },
+    "EOGFD/Elliptic/results/tuning/trial_12/validation_history.json": {
+      "bytes": 41225,
+      "sha256": "8524b72635569bfe565c1702283d04f524897d1889ee64a103e9c0f38d3f0374"
+    },
+    "EOGFD/Elliptic/scripts/enable_eogfd_cuda11.sh": {
+      "bytes": 366,
+      "sha256": "c3dadfdbaa12527fb2fbe76bde563aaff9ce8126ac029eea7951412f46c5a07b"
+    },
+    "EOGFD/Elliptic/scripts/stage2_pilot_elliptic_corrected.py": {
+      "bytes": 11898,
+      "sha256": "81112b076aa3936039422a297fae948f09753d1ed36138b940fdb244aba92160"
+    },
+    "EOGFD/Elliptic/scripts/stage2_pilot_original.py": {
+      "bytes": 11898,
+      "sha256": "70879ceaac03871676e408dbc2902581c26fba31bcf9d6991977702871ff3706"
+    },
+    "EOGFD/Elliptic/scripts/stage3_launch_both.sh": {
+      "bytes": 1059,
+      "sha256": "43a10ccceb17f664effafb6a92ab9f03f776865c0eccf5b864f88c06ec853643"
+    },
+    "EOGFD/Elliptic/scripts/stage3_runner.py": {
+      "bytes": 25121,
+      "sha256": "05e4a6c2e6e0b535df4ab384cd85d25ddd8898b9e78d63574ed55c2fe5e7016f"
+    },
+    "EOGFD/Elliptic/scripts/stage4_launch_both.sh": {
+      "bytes": 1670,
+      "sha256": "090aaa00de44a482f0658edea7447e723c9b66b9ecac328b3e1addca29544fba"
+    },
+    "EOGFD/Elliptic/scripts/stage4_runner.py": {
+      "bytes": 24115,
+      "sha256": "ba463b693f59aee7f1e2b91d2c1d8d13b0aa83258b527c953617b1af27740deb"
+    },
+    "EOGFD/Elliptic/scripts/stage5_integrity_and_safe_resume.sh": {
+      "bytes": 1942,
+      "sha256": "dd277c78c79e86db2cc1fe2600ecd23a8af1f07d7e3b88069a3d0a81303906c8"
+    },
+    "EOGFD/Elliptic/scripts/stage5_launch_both.sh": {
+      "bytes": 2611,
+      "sha256": "f5a76426f0e2a0a5dd7eb1d1bf348376645b7a1dc4e84797884101d4cae3c513"
+    },
+    "EOGFD/Elliptic/scripts/stage5_launch_both_dualsnapshot_audited.sh": {
+      "bytes": 2736,
+      "sha256": "18b7cdff8d5fc741cde0d837e4682ceda04f2b165a388428cb5f21a8e0348e98"
+    },
+    "EOGFD/Elliptic/scripts/stage5_pretest_forensics.py": {
+      "bytes": 3600,
+      "sha256": "2c1d85d44e9b0df67dbe99908dfe27dcd68947c9035b09719ae73209b96d18ed"
+    },
+    "EOGFD/Elliptic/scripts/stage5_test_once_dualsnapshot_audited.py": {
+      "bytes": 29503,
+      "sha256": "792a4135d0ccec5439a6c1dde4a1803f17626e0bcd6fbadd2da7987a01527d82"
+    },
+    "EOGFD/Elliptic/scripts/stage5_test_once_original.py": {
+      "bytes": 26763,
+      "sha256": "b775575f81d45a610a01e43a003b42854662f9976afd2750a1bf11f0df8e4269"
+    },
+    "EOGFD/Elliptic/scripts/stage6_mac_verify_and_publish.sh": {
+      "bytes": 6670,
+      "sha256": "95db7781088b6539cb846675a0ceb9419654c5cfb9782d938a5217bf4152d897"
+    },
+    "EOGFD/Elliptic/scripts/stage6_offline_export_and_private_backup.py": {
+      "bytes": 26412,
+      "sha256": "2ca83579fc4d7c17df6d4b634d99e0560ebfb25e4a01b47dfcc37f507f33a43f"
+    },
+    "EOGFD/Elliptic/status.json": {
+      "bytes": 6045,
+      "sha256": "c936a0737af9ddc218223892fbeb82c4ce658316dcd62b6e25d784ba9a73a93a"
+    }
+  },
+  "model": "EOGFD",
+  "repository": "marufkhan09/COMP8851-fraud-dataset-analysis",
+  "status": "COMPLETED_CONDITIONAL_UNIFIED_BENCHMARK"
+}

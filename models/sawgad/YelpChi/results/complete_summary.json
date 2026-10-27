@@ -1,0 +1,181 @@
+{
+  "adapter_sha256": "2e072276117ff5d906aeb4853d2f8edcd10c3f46f6cacf0df136a1d6d3ea72fe",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "dataset": "YelpChi",
+  "final_runs": 12,
+  "model": "SAWGAD",
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio_summaries": [
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.4035777444516594,
+          "population_sd": 0.0029306499102766223
+        },
+        "auroc": {
+          "mean": 0.7694992812225929,
+          "population_sd": 0.0012904985000787193
+        },
+        "fraud_f1": {
+          "mean": 0.40330455784252006,
+          "population_sd": 0.003141120484532186
+        },
+        "fraud_precision": {
+          "mean": 0.3968413637721157,
+          "population_sd": 0.0054824169922996786
+        },
+        "fraud_recall": {
+          "mean": 0.4103332085361288,
+          "population_sd": 0.011490834334124162
+        },
+        "gmean": {
+          "mean": 0.6055421488112622,
+          "population_sd": 0.0066971131445046385
+        },
+        "macro_f1": {
+          "mean": 0.6499030495132467,
+          "population_sd": 0.0009884504493644986
+        }
+      },
+      "ratio": "TR40",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.3973351806645604,
+          "population_sd": 0.00898729758229939
+        },
+        "auroc": {
+          "mean": 0.7648739883044264,
+          "population_sd": 0.005199165128595847
+        },
+        "fraud_f1": {
+          "mean": 0.40570933141412835,
+          "population_sd": 0.007507300994505862
+        },
+        "fraud_precision": {
+          "mean": 0.36957852748000347,
+          "population_sd": 0.010980492537620307
+        },
+        "fraud_recall": {
+          "mean": 0.45026831398976663,
+          "population_sd": 0.013982857102637499
+        },
+        "gmean": {
+          "mean": 0.6254745017710734,
+          "population_sd": 0.008004970146720388
+        },
+        "macro_f1": {
+          "mean": 0.6457072011468311,
+          "population_sd": 0.005020275096042795
+        }
+      },
+      "ratio": "TR30",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.3888307936259779,
+          "population_sd": 0.009812187635832812
+        },
+        "auroc": {
+          "mean": 0.7511888560123597,
+          "population_sd": 0.013659089507784222
+        },
+        "fraud_f1": {
+          "mean": 0.38262302224580386,
+          "population_sd": 0.01577200731624829
+        },
+        "fraud_precision": {
+          "mean": 0.389038898075258,
+          "population_sd": 0.012869465727642455
+        },
+        "fraud_recall": {
+          "mean": 0.37913390740047426,
+          "population_sd": 0.03768834253382859
+        },
+        "gmean": {
+          "mean": 0.5826312951583313,
+          "population_sd": 0.024184746402019668
+        },
+        "macro_f1": {
+          "mean": 0.6395623170228553,
+          "population_sd": 0.00637209631724945
+        }
+      },
+      "ratio": "TR20",
+      "runs": 3
+    },
+    {
+      "metrics": {
+        "auprc": {
+          "mean": 0.39898891380578133,
+          "population_sd": 0.003091891753986105
+        },
+        "auroc": {
+          "mean": 0.7633265617485265,
+          "population_sd": 0.0024763830294094857
+        },
+        "fraud_f1": {
+          "mean": 0.4014196331665008,
+          "population_sd": 0.009724474181694804
+        },
+        "fraud_precision": {
+          "mean": 0.40104969945672897,
+          "population_sd": 0.0215055708522888
+        },
+        "fraud_recall": {
+          "mean": 0.4070884812180207,
+          "population_sd": 0.044300019409772934
+        },
+        "gmean": {
+          "mean": 0.6023316153566878,
+          "population_sd": 0.024979771230431973
+        },
+        "macro_f1": {
+          "mean": 0.6491124682077132,
+          "population_sd": 0.0013266449292886546
+        }
+      },
+      "ratio": "TR10",
+      "runs": 3
+    }
+  ],
+  "source_mat_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "SAWGAD_YELPCHI_COMPLETE",
+  "test_evaluated_once_per_final_run": true,
+  "train_seeds": [
+    2,
+    42,
+    72
+  ],
+  "training_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "winner": {
+    "best_val_auprc": 0.40203948931988,
+    "config": {
+      "drop_rate": 0.1,
+      "full_lr": 0.003,
+      "hidden_dim": 128
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 9
+  }
+}

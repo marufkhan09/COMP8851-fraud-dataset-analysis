@@ -1,0 +1,39 @@
+{
+  "best_epoch": 99,
+  "best_val_auprc": 0.6107976892762299,
+  "best_validation_metrics": {
+    "threshold": 0.71,
+    "val_auprc": 0.6107976892762299,
+    "val_auroc": 0.8825670114495372,
+    "val_macro_f1": 0.7553596110209695
+  },
+  "checkpoint_sha256": "01103bf66f25dc26b0fc7be80fd1b7b5e1f1c1e3e831e4807b246f13c91357d9",
+  "config": {
+    "beta": 0.5,
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.003,
+    "mutation_rate": 0.05,
+    "order": 3,
+    "population_size": 20
+  },
+  "dataset": "YelpChi",
+  "epochs_completed": 100,
+  "fixed_validation_evolution_rng_seed": 100921,
+  "full_heldout_test_pending": true,
+  "model": "EOGFDHeteroModel",
+  "peak_gpu_allocated_gib": 1.7589,
+  "ratio": "TR40",
+  "sampling": "FULL_HETEROGRAPH_ORIGINAL_RELATIONS",
+  "seed": 2,
+  "selection_metric": "validation_AUPRC",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "trial": 7,
+  "trial_wall_seconds": 16.971,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_threshold_metric": "validation_macro_F1"
+}

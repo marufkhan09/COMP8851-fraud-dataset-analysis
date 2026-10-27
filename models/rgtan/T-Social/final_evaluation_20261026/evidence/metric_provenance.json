@@ -1,0 +1,39 @@
+{
+  "model": "RGTAN",
+  "dataset": "T-Social",
+  "assessment": "frozen_split",
+  "reported_execution": "separate Vast.ai GPU independent of the archived I1 tuning run",
+  "reported_runs": 12,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "input_provenance": "user-provided screenshot with 12 ratio-seed rows in conversation; six-decimal transcription",
+  "metric_columns": [
+    "test_auprc",
+    "test_auroc",
+    "test_macro_f1"
+  ],
+  "derived_aggregates": {
+    "method": "arithmetic mean and sample standard deviation",
+    "ddof": 1,
+    "rounded_decimal_places": 6,
+    "verified_from_per_seed_rows": true
+  },
+  "verification": {
+    "reported_rows_transcribed": 12,
+    "source_prediction_score_arrays_provided": false,
+    "source_aligned_test_labels_provided": false,
+    "source_evaluation_logs_provided": false,
+    "independent_metric_recomputation_performed": false,
+    "metric_consistency_issue": "Near-0.99 AUPRC together with approximately 0.91 AUROC on a highly imbalanced test set requires checking primary scores, labels and metric definitions; overlap with archived tuning values also merits provenance reconciliation."
+  },
+  "separate_from_archived_i1_tuning": true
+}

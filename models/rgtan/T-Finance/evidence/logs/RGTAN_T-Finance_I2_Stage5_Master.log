@@ -1,0 +1,238 @@
+RGTAN_T-Finance_I2_STAGE5 START. FROZEN TR40 TUNING WINNER; ORIGINAL FULL 42M GRAPH; [10,10] CANDIDATE FANOUT; NO TEST SCORING; SUPERVISOR APPROVAL REQUIRED
+--- Stage5a: Verify all twelve finished validation-only tuning trials and freeze winner ---
+RGTAN_T-Finance_I2_STAGE5_FROZEN_SOURCES_SPLITS_ENV=PASS
+RGTAN_T-Finance_I2_TR40_CANDIDATE_WINNER=PASS trial=7 val_AUPRC=0.888112 config={'base_lr': 0.001, 'drop': [0.2, 0.1], 'hidden_dim': 64}
+--- Stage5b: Build/reuse OOF crossfits TR30/TR20/TR10 in ONE exact 2hop pass ---
+RGTAN_T-Finance_I2_ALL_RATIOS_CANONICAL_SPLIT=PASS
+RGTAN_T-Finance_TR30_TRAIN_ONLY_5_FOLDS=PASS
+RGTAN_T-Finance_TR20_TRAIN_ONLY_5_FOLDS=PASS
+RGTAN_T-Finance_TR10_TRAIN_ONLY_5_FOLDS=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+RGTAN_T-Finance_I2_ORIGINAL_GRAPH_ONE_PASS_TWOHOP_START columns=18
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=128/39357 elapsed=8.6s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=6400/39357 elapsed=9.6s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=12800/39357 elapsed=10.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=19200/39357 elapsed=11.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=25600/39357 elapsed=12.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=32000/39357 elapsed=13.4s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=38400/39357 elapsed=14.4s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=39357/39357 elapsed=14.5s
+RGTAN_T-Finance_EXACT_TWOHOP_RISK=PASS elapsed_s 14.54
+RGTAN_T-Finance_TR30_CROSSFIT_BUILT=PASS SHA256=135cfecddf752b2dcac94e7e4631b9cc8ff56f455f05738e11337c5423565b74
+RGTAN_T-Finance_TR20_CROSSFIT_BUILT=PASS SHA256=bd283341972f152d3317d856dfd154e0e2b30b52c197e0848340fb64da356ed2
+RGTAN_T-Finance_TR10_CROSSFIT_BUILT=PASS SHA256=10149cce01fab7c125bb9f013a39565c6e8ed62539a841d115dc1e950101f3cd
+RGTAN_T-Finance_I2_TR30_TR20_TR10_CROSSFITS_READY=PASS
+--- Stage5c: Four ratios x three seeds, validation-frozen candidate trainings ---
+RGTAN_T-Finance_I2_STAGE5_FROZEN_SOURCES_SPLITS_ENV=PASS
+RGTAN_T-Finance_I2_TR40_CANDIDATE_WINNER=PASS trial=7 val_AUPRC=0.888112 config={'base_lr': 0.001, 'drop': [0.2, 0.1], 'hidden_dim': 64}
+RGTAN_T-Finance_I2_ALL_RATIO_TRAIN_ONLY_OOF_AND_RISK_SHA=PASS
+RGTAN_T-Finance_I2_FULL_42M_ORIGINAL_GRAPH_LABEL_FIELDS_REMOVED=PASS
+RGTAN_T-Finance_TR40_Seed2 epoch=1 loss=0.28723 val_AUPRC=0.579557 best=0.579557 stale=0
+RGTAN_T-Finance_TR40_Seed2 epoch=2 loss=0.10949 val_AUPRC=0.731458 best=0.731458 stale=0
+RGTAN_T-Finance_TR40_Seed2 epoch=5 loss=0.08972 val_AUPRC=0.730728 best=0.731458 stale=3
+RGTAN_T-Finance_TR40_Seed2 epoch=10 loss=0.07491 val_AUPRC=0.779303 best=0.779303 stale=0
+RGTAN_T-Finance_TR40_Seed2 epoch=15 loss=0.07339 val_AUPRC=0.792330 best=0.811818 stale=1
+RGTAN_T-Finance_TR40_Seed2 epoch=20 loss=0.07199 val_AUPRC=0.804316 best=0.811818 stale=6
+RGTAN_T-Finance_TR40_Seed2 epoch=25 loss=0.07561 val_AUPRC=0.774387 best=0.811818 stale=11
+RGTAN_T-Finance_TR40_Seed2 epoch=30 loss=0.07351 val_AUPRC=0.774985 best=0.811818 stale=16
+RGTAN_T-Finance_TR40_Seed2 epoch=35 loss=0.06681 val_AUPRC=0.814371 best=0.814371 stale=0
+RGTAN_T-Finance_TR40_Seed2 epoch=40 loss=0.06357 val_AUPRC=0.817666 best=0.827730 stale=4
+RGTAN_T-Finance_TR40_Seed2 epoch=45 loss=0.06308 val_AUPRC=0.814240 best=0.831189 stale=2
+RGTAN_T-Finance_TR40_Seed2 epoch=50 loss=0.06716 val_AUPRC=0.818891 best=0.831189 stale=7
+RGTAN_T-Finance_TR40_Seed2 epoch=55 loss=0.06846 val_AUPRC=0.805202 best=0.831189 stale=12
+RGTAN_T-Finance_TR40_Seed2 epoch=60 loss=0.06366 val_AUPRC=0.808811 best=0.831189 stale=17
+RGTAN_T-Finance_TR40_Seed2 epoch=63 loss=0.06264 val_AUPRC=0.821620 best=0.831189 stale=20
+RGTAN_T-Finance_TR40_Seed2_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.831189 macroF1=0.888413
+RGTAN_T-Finance_TR40_Seed42 epoch=1 loss=0.30232 val_AUPRC=0.705672 best=0.705672 stale=0
+RGTAN_T-Finance_TR40_Seed42 epoch=2 loss=0.09734 val_AUPRC=0.686911 best=0.705672 stale=1
+RGTAN_T-Finance_TR40_Seed42 epoch=5 loss=0.09660 val_AUPRC=0.729134 best=0.758832 stale=2
+RGTAN_T-Finance_TR40_Seed42 epoch=10 loss=0.07642 val_AUPRC=0.805734 best=0.805734 stale=0
+RGTAN_T-Finance_TR40_Seed42 epoch=15 loss=0.07536 val_AUPRC=0.790046 best=0.805734 stale=5
+RGTAN_T-Finance_TR40_Seed42 epoch=20 loss=0.06993 val_AUPRC=0.785319 best=0.808693 stale=1
+RGTAN_T-Finance_TR40_Seed42 epoch=25 loss=0.07477 val_AUPRC=0.775251 best=0.808693 stale=6
+RGTAN_T-Finance_TR40_Seed42 epoch=30 loss=0.07617 val_AUPRC=0.784344 best=0.808693 stale=11
+RGTAN_T-Finance_TR40_Seed42 epoch=35 loss=0.08545 val_AUPRC=0.744768 best=0.808693 stale=16
+RGTAN_T-Finance_TR40_Seed42 epoch=39 loss=0.08164 val_AUPRC=0.745960 best=0.808693 stale=20
+RGTAN_T-Finance_TR40_Seed42_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.808693 macroF1=0.882856
+RGTAN_T-Finance_TR40_Seed72 epoch=1 loss=0.35617 val_AUPRC=0.754745 best=0.754745 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=2 loss=0.09250 val_AUPRC=0.783587 best=0.783587 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=5 loss=0.07511 val_AUPRC=0.787158 best=0.805649 stale=2
+RGTAN_T-Finance_TR40_Seed72 epoch=10 loss=0.06776 val_AUPRC=0.822367 best=0.822367 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=15 loss=0.06246 val_AUPRC=0.837456 best=0.837779 stale=2
+RGTAN_T-Finance_TR40_Seed72 epoch=20 loss=0.06498 val_AUPRC=0.837025 best=0.843043 stale=2
+RGTAN_T-Finance_TR40_Seed72 epoch=25 loss=0.05845 val_AUPRC=0.847518 best=0.849043 stale=1
+RGTAN_T-Finance_TR40_Seed72 epoch=30 loss=0.05947 val_AUPRC=0.850025 best=0.851824 stale=3
+RGTAN_T-Finance_TR40_Seed72 epoch=35 loss=0.05865 val_AUPRC=0.859499 best=0.861325 stale=1
+RGTAN_T-Finance_TR40_Seed72 epoch=40 loss=0.05498 val_AUPRC=0.860470 best=0.861325 stale=6
+RGTAN_T-Finance_TR40_Seed72 epoch=45 loss=0.05613 val_AUPRC=0.864753 best=0.864978 stale=1
+RGTAN_T-Finance_TR40_Seed72 epoch=50 loss=0.05306 val_AUPRC=0.861438 best=0.864978 stale=6
+RGTAN_T-Finance_TR40_Seed72 epoch=55 loss=0.05549 val_AUPRC=0.865099 best=0.866348 stale=3
+RGTAN_T-Finance_TR40_Seed72 epoch=60 loss=0.05104 val_AUPRC=0.866857 best=0.866857 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=65 loss=0.05450 val_AUPRC=0.864863 best=0.867080 stale=2
+RGTAN_T-Finance_TR40_Seed72 epoch=70 loss=0.04932 val_AUPRC=0.874350 best=0.874350 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=75 loss=0.05176 val_AUPRC=0.871766 best=0.876436 stale=4
+RGTAN_T-Finance_TR40_Seed72 epoch=80 loss=0.05139 val_AUPRC=0.869003 best=0.876436 stale=9
+RGTAN_T-Finance_TR40_Seed72 epoch=85 loss=0.05080 val_AUPRC=0.864553 best=0.876436 stale=14
+RGTAN_T-Finance_TR40_Seed72 epoch=90 loss=0.05163 val_AUPRC=0.879611 best=0.879611 stale=0
+RGTAN_T-Finance_TR40_Seed72 epoch=95 loss=0.05079 val_AUPRC=0.876615 best=0.881280 stale=3
+RGTAN_T-Finance_TR40_Seed72 epoch=100 loss=0.04858 val_AUPRC=0.880490 best=0.881280 stale=8
+RGTAN_T-Finance_TR40_Seed72_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.881280 macroF1=0.915580
+RGTAN_T-Finance_TR30_Seed2 epoch=1 loss=0.33054 val_AUPRC=0.692295 best=0.692295 stale=0
+RGTAN_T-Finance_TR30_Seed2 epoch=2 loss=0.10509 val_AUPRC=0.748177 best=0.748177 stale=0
+RGTAN_T-Finance_TR30_Seed2 epoch=5 loss=0.06597 val_AUPRC=0.828604 best=0.828604 stale=0
+RGTAN_T-Finance_TR30_Seed2 epoch=10 loss=0.09806 val_AUPRC=0.720819 best=0.828604 stale=5
+RGTAN_T-Finance_TR30_Seed2 epoch=15 loss=0.08028 val_AUPRC=0.717887 best=0.828604 stale=10
+RGTAN_T-Finance_TR30_Seed2 epoch=20 loss=0.07689 val_AUPRC=0.755389 best=0.828604 stale=15
+RGTAN_T-Finance_TR30_Seed2 epoch=25 loss=0.07274 val_AUPRC=0.788107 best=0.828604 stale=20
+RGTAN_T-Finance_TR30_Seed2_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.828604 macroF1=0.888328
+RGTAN_T-Finance_TR30_Seed42 epoch=1 loss=0.36828 val_AUPRC=0.727245 best=0.727245 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=2 loss=0.10706 val_AUPRC=0.761165 best=0.761165 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=5 loss=0.07145 val_AUPRC=0.786215 best=0.793221 stale=1
+RGTAN_T-Finance_TR30_Seed42 epoch=10 loss=0.08537 val_AUPRC=0.755527 best=0.812775 stale=4
+RGTAN_T-Finance_TR30_Seed42 epoch=15 loss=0.07085 val_AUPRC=0.794569 best=0.812775 stale=9
+RGTAN_T-Finance_TR30_Seed42 epoch=20 loss=0.06976 val_AUPRC=0.765533 best=0.819078 stale=3
+RGTAN_T-Finance_TR30_Seed42 epoch=25 loss=0.06376 val_AUPRC=0.835266 best=0.839239 stale=3
+RGTAN_T-Finance_TR30_Seed42 epoch=30 loss=0.05855 val_AUPRC=0.853783 best=0.853783 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=35 loss=0.05585 val_AUPRC=0.862684 best=0.862684 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=40 loss=0.05615 val_AUPRC=0.866611 best=0.868464 stale=2
+RGTAN_T-Finance_TR30_Seed42 epoch=45 loss=0.05381 val_AUPRC=0.870803 best=0.870803 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=50 loss=0.05097 val_AUPRC=0.866532 best=0.871283 stale=1
+RGTAN_T-Finance_TR30_Seed42 epoch=55 loss=0.05040 val_AUPRC=0.864120 best=0.871283 stale=6
+RGTAN_T-Finance_TR30_Seed42 epoch=60 loss=0.04882 val_AUPRC=0.872994 best=0.872994 stale=0
+RGTAN_T-Finance_TR30_Seed42 epoch=65 loss=0.05011 val_AUPRC=0.872381 best=0.875431 stale=4
+RGTAN_T-Finance_TR30_Seed42 epoch=70 loss=0.04775 val_AUPRC=0.873372 best=0.877405 stale=4
+RGTAN_T-Finance_TR30_Seed42 epoch=75 loss=0.04986 val_AUPRC=0.873403 best=0.879954 stale=4
+RGTAN_T-Finance_TR30_Seed42 epoch=80 loss=0.04812 val_AUPRC=0.877468 best=0.879954 stale=9
+RGTAN_T-Finance_TR30_Seed42 epoch=85 loss=0.04852 val_AUPRC=0.876570 best=0.879954 stale=14
+RGTAN_T-Finance_TR30_Seed42 epoch=90 loss=0.04729 val_AUPRC=0.875949 best=0.879954 stale=19
+RGTAN_T-Finance_TR30_Seed42 epoch=91 loss=0.04840 val_AUPRC=0.874793 best=0.879954 stale=20
+RGTAN_T-Finance_TR30_Seed42_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.879954 macroF1=0.917190
+RGTAN_T-Finance_TR30_Seed72 epoch=1 loss=0.42001 val_AUPRC=0.711328 best=0.711328 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=2 loss=0.11203 val_AUPRC=0.701312 best=0.711328 stale=1
+RGTAN_T-Finance_TR30_Seed72 epoch=5 loss=0.06646 val_AUPRC=0.822506 best=0.822506 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=10 loss=0.06273 val_AUPRC=0.837058 best=0.839173 stale=1
+RGTAN_T-Finance_TR30_Seed72 epoch=15 loss=0.05623 val_AUPRC=0.857470 best=0.857470 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=20 loss=0.05297 val_AUPRC=0.868796 best=0.868796 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=25 loss=0.05478 val_AUPRC=0.869111 best=0.871681 stale=1
+RGTAN_T-Finance_TR30_Seed72 epoch=30 loss=0.05187 val_AUPRC=0.852741 best=0.876764 stale=3
+RGTAN_T-Finance_TR30_Seed72 epoch=35 loss=0.05051 val_AUPRC=0.876352 best=0.878369 stale=2
+RGTAN_T-Finance_TR30_Seed72 epoch=40 loss=0.04829 val_AUPRC=0.876113 best=0.878410 stale=4
+RGTAN_T-Finance_TR30_Seed72 epoch=45 loss=0.04935 val_AUPRC=0.880822 best=0.880822 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=50 loss=0.04737 val_AUPRC=0.882625 best=0.882625 stale=0
+RGTAN_T-Finance_TR30_Seed72 epoch=55 loss=0.04605 val_AUPRC=0.875310 best=0.883598 stale=4
+RGTAN_T-Finance_TR30_Seed72 epoch=60 loss=0.04589 val_AUPRC=0.881950 best=0.883598 stale=9
+RGTAN_T-Finance_TR30_Seed72 epoch=65 loss=0.04264 val_AUPRC=0.877699 best=0.884855 stale=4
+RGTAN_T-Finance_TR30_Seed72 epoch=70 loss=0.04381 val_AUPRC=0.882496 best=0.886925 stale=4
+RGTAN_T-Finance_TR30_Seed72 epoch=75 loss=0.04403 val_AUPRC=0.878092 best=0.886925 stale=9
+RGTAN_T-Finance_TR30_Seed72 epoch=80 loss=0.04530 val_AUPRC=0.880971 best=0.886925 stale=14
+RGTAN_T-Finance_TR30_Seed72 epoch=85 loss=0.04335 val_AUPRC=0.873180 best=0.886925 stale=19
+RGTAN_T-Finance_TR30_Seed72 epoch=86 loss=0.04444 val_AUPRC=0.881514 best=0.886925 stale=20
+RGTAN_T-Finance_TR30_Seed72_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.886925 macroF1=0.915939
+RGTAN_T-Finance_TR20_Seed2 epoch=1 loss=0.38551 val_AUPRC=0.562157 best=0.562157 stale=0
+RGTAN_T-Finance_TR20_Seed2 epoch=2 loss=0.15555 val_AUPRC=0.636350 best=0.636350 stale=0
+RGTAN_T-Finance_TR20_Seed2 epoch=5 loss=0.08655 val_AUPRC=0.689627 best=0.753379 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=10 loss=0.07856 val_AUPRC=0.784227 best=0.800663 stale=4
+RGTAN_T-Finance_TR20_Seed2 epoch=15 loss=0.07772 val_AUPRC=0.790411 best=0.801125 stale=3
+RGTAN_T-Finance_TR20_Seed2 epoch=20 loss=0.07513 val_AUPRC=0.780086 best=0.801125 stale=8
+RGTAN_T-Finance_TR20_Seed2 epoch=25 loss=0.07504 val_AUPRC=0.801120 best=0.816598 stale=2
+RGTAN_T-Finance_TR20_Seed2 epoch=30 loss=0.08212 val_AUPRC=0.760460 best=0.816598 stale=7
+RGTAN_T-Finance_TR20_Seed2 epoch=35 loss=0.08090 val_AUPRC=0.768763 best=0.816598 stale=12
+RGTAN_T-Finance_TR20_Seed2 epoch=40 loss=0.08132 val_AUPRC=0.769296 best=0.816598 stale=17
+RGTAN_T-Finance_TR20_Seed2 epoch=45 loss=0.06536 val_AUPRC=0.826452 best=0.827415 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=50 loss=0.06229 val_AUPRC=0.824589 best=0.828102 stale=2
+RGTAN_T-Finance_TR20_Seed2 epoch=55 loss=0.06166 val_AUPRC=0.828614 best=0.832954 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=60 loss=0.05568 val_AUPRC=0.836495 best=0.836495 stale=0
+RGTAN_T-Finance_TR20_Seed2 epoch=65 loss=0.05733 val_AUPRC=0.843703 best=0.844637 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=70 loss=0.05783 val_AUPRC=0.838364 best=0.850466 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=75 loss=0.05412 val_AUPRC=0.849071 best=0.850617 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=80 loss=0.05055 val_AUPRC=0.863622 best=0.863622 stale=0
+RGTAN_T-Finance_TR20_Seed2 epoch=85 loss=0.05090 val_AUPRC=0.863257 best=0.865044 stale=4
+RGTAN_T-Finance_TR20_Seed2 epoch=90 loss=0.05089 val_AUPRC=0.865811 best=0.869339 stale=3
+RGTAN_T-Finance_TR20_Seed2 epoch=95 loss=0.05115 val_AUPRC=0.868984 best=0.869539 stale=1
+RGTAN_T-Finance_TR20_Seed2 epoch=100 loss=0.04975 val_AUPRC=0.875974 best=0.875974 stale=0
+RGTAN_T-Finance_TR20_Seed2_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.875974 macroF1=0.915528
+RGTAN_T-Finance_TR20_Seed42 epoch=1 loss=0.48221 val_AUPRC=0.734403 best=0.734403 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=2 loss=0.14260 val_AUPRC=0.758146 best=0.758146 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=5 loss=0.07098 val_AUPRC=0.799920 best=0.799920 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=10 loss=0.08589 val_AUPRC=0.589979 best=0.799920 stale=5
+RGTAN_T-Finance_TR20_Seed42 epoch=15 loss=0.06759 val_AUPRC=0.822379 best=0.822379 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=20 loss=0.06430 val_AUPRC=0.827726 best=0.827726 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=25 loss=0.06164 val_AUPRC=0.820078 best=0.833204 stale=3
+RGTAN_T-Finance_TR20_Seed42 epoch=30 loss=0.06200 val_AUPRC=0.836712 best=0.836712 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=35 loss=0.05814 val_AUPRC=0.836485 best=0.837695 stale=4
+RGTAN_T-Finance_TR20_Seed42 epoch=40 loss=0.05995 val_AUPRC=0.836864 best=0.837695 stale=9
+RGTAN_T-Finance_TR20_Seed42 epoch=45 loss=0.05832 val_AUPRC=0.833506 best=0.841913 stale=1
+RGTAN_T-Finance_TR20_Seed42 epoch=50 loss=0.05903 val_AUPRC=0.849256 best=0.849256 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=55 loss=0.05494 val_AUPRC=0.849421 best=0.850557 stale=2
+RGTAN_T-Finance_TR20_Seed42 epoch=60 loss=0.05460 val_AUPRC=0.857051 best=0.857051 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=65 loss=0.05169 val_AUPRC=0.863241 best=0.863241 stale=0
+RGTAN_T-Finance_TR20_Seed42 epoch=70 loss=0.04846 val_AUPRC=0.863914 best=0.870923 stale=1
+RGTAN_T-Finance_TR20_Seed42 epoch=75 loss=0.04846 val_AUPRC=0.868557 best=0.874579 stale=1
+RGTAN_T-Finance_TR20_Seed42 epoch=80 loss=0.04717 val_AUPRC=0.869082 best=0.875096 stale=1
+RGTAN_T-Finance_TR20_Seed42 epoch=85 loss=0.04482 val_AUPRC=0.867267 best=0.878170 stale=2
+RGTAN_T-Finance_TR20_Seed42 epoch=90 loss=0.04801 val_AUPRC=0.867903 best=0.878170 stale=7
+RGTAN_T-Finance_TR20_Seed42 epoch=95 loss=0.04453 val_AUPRC=0.869470 best=0.878170 stale=12
+RGTAN_T-Finance_TR20_Seed42 epoch=100 loss=0.04690 val_AUPRC=0.870869 best=0.878170 stale=17
+RGTAN_T-Finance_TR20_Seed42_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.878170 macroF1=0.914885
+RGTAN_T-Finance_TR20_Seed72 epoch=1 loss=0.51574 val_AUPRC=0.734377 best=0.734377 stale=0
+RGTAN_T-Finance_TR20_Seed72 epoch=2 loss=0.15428 val_AUPRC=0.765138 best=0.765138 stale=0
+RGTAN_T-Finance_TR20_Seed72 epoch=5 loss=0.08929 val_AUPRC=0.741506 best=0.773096 stale=2
+RGTAN_T-Finance_TR20_Seed72 epoch=10 loss=0.06975 val_AUPRC=0.810994 best=0.810994 stale=0
+RGTAN_T-Finance_TR20_Seed72 epoch=15 loss=0.06836 val_AUPRC=0.819538 best=0.819538 stale=0
+RGTAN_T-Finance_TR20_Seed72 epoch=20 loss=0.06612 val_AUPRC=0.821117 best=0.826034 stale=3
+RGTAN_T-Finance_TR20_Seed72 epoch=25 loss=0.06741 val_AUPRC=0.814772 best=0.826034 stale=8
+RGTAN_T-Finance_TR20_Seed72 epoch=30 loss=0.07473 val_AUPRC=0.786311 best=0.826034 stale=13
+RGTAN_T-Finance_TR20_Seed72 epoch=35 loss=0.06742 val_AUPRC=0.827059 best=0.827059 stale=0
+RGTAN_T-Finance_TR20_Seed72 epoch=40 loss=0.08719 val_AUPRC=0.720988 best=0.827059 stale=5
+RGTAN_T-Finance_TR20_Seed72 epoch=45 loss=0.07757 val_AUPRC=0.773204 best=0.827059 stale=10
+RGTAN_T-Finance_TR20_Seed72 epoch=50 loss=0.07079 val_AUPRC=0.790456 best=0.827059 stale=15
+RGTAN_T-Finance_TR20_Seed72 epoch=55 loss=0.06663 val_AUPRC=0.823554 best=0.827059 stale=20
+RGTAN_T-Finance_TR20_Seed72_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.827059 macroF1=0.891828
+RGTAN_T-Finance_TR10_Seed2 epoch=1 loss=0.51698 val_AUPRC=0.724904 best=0.724904 stale=0
+RGTAN_T-Finance_TR10_Seed2 epoch=2 loss=0.26174 val_AUPRC=0.762864 best=0.762864 stale=0
+RGTAN_T-Finance_TR10_Seed2 epoch=5 loss=0.09475 val_AUPRC=0.801254 best=0.801254 stale=0
+RGTAN_T-Finance_TR10_Seed2 epoch=10 loss=0.07306 val_AUPRC=0.823762 best=0.825514 stale=1
+RGTAN_T-Finance_TR10_Seed2 epoch=15 loss=0.06064 val_AUPRC=0.828286 best=0.832292 stale=1
+RGTAN_T-Finance_TR10_Seed2 epoch=20 loss=0.06350 val_AUPRC=0.821604 best=0.832292 stale=6
+RGTAN_T-Finance_TR10_Seed2 epoch=25 loss=0.05844 val_AUPRC=0.814942 best=0.832292 stale=11
+RGTAN_T-Finance_TR10_Seed2 epoch=30 loss=0.05676 val_AUPRC=0.843625 best=0.845112 stale=1
+RGTAN_T-Finance_TR10_Seed2 epoch=35 loss=0.05327 val_AUPRC=0.855256 best=0.855256 stale=0
+RGTAN_T-Finance_TR10_Seed2 epoch=40 loss=0.04908 val_AUPRC=0.847613 best=0.855256 stale=5
+RGTAN_T-Finance_TR10_Seed2 epoch=45 loss=0.05168 val_AUPRC=0.863027 best=0.864252 stale=2
+RGTAN_T-Finance_TR10_Seed2 epoch=50 loss=0.04846 val_AUPRC=0.858700 best=0.864252 stale=7
+RGTAN_T-Finance_TR10_Seed2 epoch=55 loss=0.04465 val_AUPRC=0.855625 best=0.870229 stale=1
+RGTAN_T-Finance_TR10_Seed2 epoch=60 loss=0.04409 val_AUPRC=0.869602 best=0.872436 stale=2
+RGTAN_T-Finance_TR10_Seed2 epoch=65 loss=0.04405 val_AUPRC=0.870894 best=0.872798 stale=1
+RGTAN_T-Finance_TR10_Seed2 epoch=70 loss=0.04241 val_AUPRC=0.861859 best=0.873064 stale=4
+RGTAN_T-Finance_TR10_Seed2 epoch=75 loss=0.04572 val_AUPRC=0.865246 best=0.873064 stale=9
+RGTAN_T-Finance_TR10_Seed2 epoch=80 loss=0.03984 val_AUPRC=0.863571 best=0.873064 stale=14
+RGTAN_T-Finance_TR10_Seed2 epoch=85 loss=0.03754 val_AUPRC=0.867940 best=0.873064 stale=19
+RGTAN_T-Finance_TR10_Seed2 epoch=86 loss=0.03871 val_AUPRC=0.866805 best=0.873064 stale=20
+RGTAN_T-Finance_TR10_Seed2_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.873064 macroF1=0.916425
+RGTAN_T-Finance_TR10_Seed42 epoch=1 loss=0.59597 val_AUPRC=0.758901 best=0.758901 stale=0
+RGTAN_T-Finance_TR10_Seed42 epoch=2 loss=0.28353 val_AUPRC=0.648283 best=0.758901 stale=1
+RGTAN_T-Finance_TR10_Seed42 epoch=5 loss=0.11641 val_AUPRC=0.760002 best=0.760002 stale=0
+RGTAN_T-Finance_TR10_Seed42 epoch=10 loss=0.10887 val_AUPRC=0.681454 best=0.760002 stale=5
+RGTAN_T-Finance_TR10_Seed42 epoch=15 loss=0.08389 val_AUPRC=0.767894 best=0.767894 stale=0
+RGTAN_T-Finance_TR10_Seed42 epoch=20 loss=0.07312 val_AUPRC=0.808977 best=0.808977 stale=0
+RGTAN_T-Finance_TR10_Seed42 epoch=25 loss=0.07580 val_AUPRC=0.790403 best=0.808977 stale=5
+RGTAN_T-Finance_TR10_Seed42 epoch=30 loss=0.07814 val_AUPRC=0.783591 best=0.808977 stale=10
+RGTAN_T-Finance_TR10_Seed42 epoch=35 loss=0.07307 val_AUPRC=0.765522 best=0.808977 stale=15
+RGTAN_T-Finance_TR10_Seed42 epoch=40 loss=0.07262 val_AUPRC=0.789398 best=0.808977 stale=20
+RGTAN_T-Finance_TR10_Seed42_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.808977 macroF1=0.878843
+RGTAN_T-Finance_TR10_Seed72 epoch=1 loss=0.66558 val_AUPRC=0.567340 best=0.567340 stale=0
+RGTAN_T-Finance_TR10_Seed72 epoch=2 loss=0.36140 val_AUPRC=0.683643 best=0.683643 stale=0
+RGTAN_T-Finance_TR10_Seed72 epoch=5 loss=0.11354 val_AUPRC=0.741166 best=0.741166 stale=0
+RGTAN_T-Finance_TR10_Seed72 epoch=10 loss=0.09213 val_AUPRC=0.740028 best=0.749328 stale=1
+RGTAN_T-Finance_TR10_Seed72 epoch=15 loss=0.09333 val_AUPRC=0.737965 best=0.749328 stale=6
+RGTAN_T-Finance_TR10_Seed72 epoch=20 loss=0.12073 val_AUPRC=0.583892 best=0.749328 stale=11
+RGTAN_T-Finance_TR10_Seed72 epoch=25 loss=0.11284 val_AUPRC=0.591924 best=0.749328 stale=16
+RGTAN_T-Finance_TR10_Seed72 epoch=29 loss=0.11338 val_AUPRC=0.603500 best=0.749328 stale=20
+RGTAN_T-Finance_TR10_Seed72_FROZEN_CANDIDATE_VAL=PASS AUPRC=0.749328 macroF1=0.849377
+RGTAN_T-Finance_TR40_CANDIDATE_VALIDATION_AUPRC_MEAN=0.840388 sampleSD=0.037157
+RGTAN_T-Finance_TR30_CANDIDATE_VALIDATION_AUPRC_MEAN=0.865161 sampleSD=0.031851
+RGTAN_T-Finance_TR20_CANDIDATE_VALIDATION_AUPRC_MEAN=0.860401 sampleSD=0.028896
+RGTAN_T-Finance_TR10_CANDIDATE_VALIDATION_AUPRC_MEAN=0.810456 sampleSD=0.061881
+RGTAN_T-Finance_I2_ALL_12_CANDIDATE_FINAL_TRAININGS=PASS TEST_SCORED=NO APPROVAL_REQUIRED=YES
+RGTAN_T-Finance_I2_STAGE5_ALL_12_CANDIDATE_FINALS_COMPLETE=PASS; TEST_SCORED=NO; SUPERVISOR_APPROVAL_REQUIRED=YES

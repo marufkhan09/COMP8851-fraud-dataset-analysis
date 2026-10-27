@@ -1,0 +1,56 @@
+{
+  "model": "SAWGAD",
+  "dataset": "FDCompCN",
+  "status": "COMPLETE",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "split_seed": 2,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "winner": {
+    "best_val_auprc": 0.15264236029799222,
+    "config": {
+      "drop_rate": 0.25,
+      "full_lr": 0.003,
+      "hidden_dim": 64
+    },
+    "selection": "TR40 seed2 maximum validation AUPRC only",
+    "status": "WINNER_FROZEN",
+    "test_scoring_performed": false,
+    "winner_trial": 6
+  },
+  "completed_runs": [
+    "TR40_seed2",
+    "TR40_seed42",
+    "TR40_seed72",
+    "TR30_seed2",
+    "TR30_seed42",
+    "TR30_seed72",
+    "TR20_seed2",
+    "TR20_seed42",
+    "TR20_seed72",
+    "TR10_seed2",
+    "TR10_seed42",
+    "TR10_seed72"
+  ],
+  "test_evaluated_once_per_final_run": true,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "full_training_labels": "frozen ratio IDs",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  }
+}

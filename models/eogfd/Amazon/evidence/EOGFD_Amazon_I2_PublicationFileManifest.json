@@ -1,0 +1,506 @@
+{
+  "branch": "Pathik-ass3",
+  "dataset": "Amazon",
+  "destination": "EOGFD/Amazon/",
+  "files": {
+    "EOGFD/Amazon/README.md": {
+      "bytes": 4759,
+      "sha256": "5391f3a6307be3d0cab1b5654fd7ad6c07b781a0d2cf7bf2f349c3f0ccb7436c"
+    },
+    "EOGFD/Amazon/evidence/EOGFD_Amazon_I2_Environment.txt": {
+      "bytes": 609,
+      "sha256": "3ab4cc0eee45a3c4b778e10433d7158457afeabfac56c74939d4b9bb4ed37c8f"
+    },
+    "EOGFD/Amazon/evidence/EOGFD_Amazon_I2_IndependentCompletedPublicationAudit.json": {
+      "bytes": 5090,
+      "sha256": "59ce6182ef07d786609d49c78e1794194a763163b6bbb1a64f64c39235c2f11a"
+    },
+    "EOGFD/Amazon/evidence/EOGFD_Amazon_I2_Stage2_FullGraphPilot.json": {
+      "bytes": 1209,
+      "sha256": "3dde04ccc0803fe637d748bbe43286e01e47bb5e8c4ffafb2e65835c2c48ddb1"
+    },
+    "EOGFD/Amazon/evidence/EOGFD_Amazon_I2_Stage5_Launch_before_cuda_fix.sh": {
+      "bytes": 652,
+      "sha256": "5d0ab1a5e9c8530861710b0a9a1a9ab404eac7ad03c815bd03594146d6fa975e"
+    },
+    "EOGFD/Amazon/evidence/logs/EOGFD_Amazon_I2_Stage2_Retry1.log": {
+      "bytes": 739,
+      "sha256": "c703c30c2fd64277b27becbbdbdbd040b25d07134e69b34338d357b5d85ddbbe"
+    },
+    "EOGFD/Amazon/evidence/logs/EOGFD_Amazon_I2_Stage3_Master.log": {
+      "bytes": 23680,
+      "sha256": "264588d53a1bf43342a5db7601f3a79232a609a7ff73d8e35b9a50d5bfa35a24"
+    },
+    "EOGFD/Amazon/evidence/logs/EOGFD_Amazon_I2_Stage4_Master.log": {
+      "bytes": 12571,
+      "sha256": "1a460d8c5c6ee7b1d2bfd6e8a33aed452dcfd5401af6004f3a8a4761c9da8a52"
+    },
+    "EOGFD/Amazon/evidence/logs/EOGFD_Amazon_I2_Stage5_CUDA_Recovery.log": {
+      "bytes": 3807,
+      "sha256": "ac3da176c58335169da57f8905d9d4c7c65f7c7d74519ce5a0132a6e47805818"
+    },
+    "EOGFD/Amazon/evidence/logs/EOGFD_Amazon_I2_Stage5_Master.log": {
+      "bytes": 1919,
+      "sha256": "3fabd6452cb3ec785736e9535f987dc8f5b89ec492f3dabcfc8c576cc94565d9"
+    },
+    "EOGFD/Amazon/results/finals/EOGFD_Amazon_I2_Stage4_12FrozenTrainingSummary.json": {
+      "bytes": 1718,
+      "sha256": "2e2b7370fc7900ba83d6ffdc7de1c0ca4f7a2fa2f24be1ca70b1d754429c0a8b"
+    },
+    "EOGFD/Amazon/results/finals/EOGFD_Amazon_I2_Stage5_AllRatios_FinalHeldoutTestSummary.json": {
+      "bytes": 5083,
+      "sha256": "219de3d97040616c47c47e4e39945952c3f987e4dce1654cc0e24eec28a4f255"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "dcc12f601eaef7655dff56b91214c3972fe414f7bb56bc3c15c41aea7182d2e2"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/frozen_training.json": {
+      "bytes": 1407,
+      "sha256": "9d759f0c6a46e64c50b0a6b3d487ec609da69fb34e62445db698401c682d14f1"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/test_metrics.json": {
+      "bytes": 1354,
+      "sha256": "1c2e0cf38fb83eda8fe4e87a641fdc6678223f8631ee79de75ecdcd525053f59"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "2be3fa217011a9a6db14ff8f0bc32a45e893c7c19d99c8b1bd947d610d78b794"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "777160ccfba0215e7fad8d9c5e877a822bfe1222d55b595a8635fab7476899c4"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_2/validation_history.json": {
+      "bytes": 16631,
+      "sha256": "fe7a5345fe425bccb771679ddb6464c910865708df38b986baaeeefe6f20e90b"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "58d01b2386689a99f130cbb5fcf3a2a53d4bfff6ac0702ab2b32b59b0471ed35"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/frozen_training.json": {
+      "bytes": 1408,
+      "sha256": "ddc5f7e31776b801c78206b98b055a525c129d776bdb178ad69fe38b9a35033a"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/test_metrics.json": {
+      "bytes": 1355,
+      "sha256": "0a852275829b43349134be703514d10bd249382a32ac5ded2c52387e0f535d08"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "7d4ab844acde473cdbde61644858d87d0c8e514fd2759458044605de20adcb66"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "b77fc7d7ccc9eb9b91f63e57f5df81eabb94a2ea304e4b208c74df1c6e4667af"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_42/validation_history.json": {
+      "bytes": 13678,
+      "sha256": "0a41f5e78e09473b35cb2a65235735f6b571133f198cafa0939c287d0a504d8f"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "b13e02e78789883a8658fa6dbec7bfabd90ddbd15f108436c4a10ce22e00bda5"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/frozen_training.json": {
+      "bytes": 1406,
+      "sha256": "8e5c3f584907739642fdf5ec32aed1f3aee07067928c297c638c38c17384d008"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/test_metrics.json": {
+      "bytes": 1352,
+      "sha256": "5d3158434897b4eba5c94179fa2509534c42993c75a18732574bca63e712d74c"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "b326324c3df1aebef3c42d87e18893e07c0130899689bf98e556c606ccf44d26"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "c89d4b80590b6a47c80b07fce4e798263871359a07ef80dc9b44b957e565bdd8"
+    },
+    "EOGFD/Amazon/results/finals/TR10/seed_72/validation_history.json": {
+      "bytes": 15563,
+      "sha256": "94a0316d2f97072453d1e0fb785ce861789982e4de4d1e118af14893d159710a"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "09bc4caa3604ada446e3b084c5fee7583bf61cba59d93af5c9b994c726b36bb2"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/frozen_training.json": {
+      "bytes": 1409,
+      "sha256": "34b4239cf91425792cd50b6c136b51bc13a0711edfb24418570cdb4605ed10f8"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/test_metrics.json": {
+      "bytes": 1354,
+      "sha256": "d8a018698ded4203037b49948370fb311bd18fe7ec217756858c9aa0a41e7728"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "b84dfe78bb40bb37313f4de0c59a386f857b3a7be54c66284205ac85b8d20d66"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "465a5210e97d9b4a62fcd062add5e41ee21ea1f3edb4079908c68f9fcf78864e"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_2/validation_history.json": {
+      "bytes": 23337,
+      "sha256": "707eea2c8aeb6b483dff08fbeeb463d583581a4a4fd8ba18fcb09a6e7825f4d3"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "37d77ef301e68c831e1a1b11b9a751793ea39f1ccd183ee49e0575991ce209ba"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/frozen_training.json": {
+      "bytes": 1411,
+      "sha256": "4b6d816b556e9da6c346de6bdd63c6cc3331f183b36b4a2126115d5c2865e928"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/test_metrics.json": {
+      "bytes": 1339,
+      "sha256": "893d1459dd38492e632ada7f06200eeaac5e1bba1fc11884bf5935b5549563ed"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "e9ace5886878e5a8949591ecca9334370fe45f8c372c13d930a31876fb2e6f63"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "b99557dcc9dd1842e0dcf01ad822398854a5097c8eb6ae8d6ad6406005c81912"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_42/validation_history.json": {
+      "bytes": 26297,
+      "sha256": "817c162a5259adc970d9e80a1cbc02fd26b77573fd5087367e40abb65d296590"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "4b068040716e6214d03ac7fa5e099b9032057c19f74b18198a15f90161f9fafc"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/frozen_training.json": {
+      "bytes": 1412,
+      "sha256": "f057507f4d8a498f5f88bb487f39214b33bc3f5fa4040bbcbb9c17504d2bac00"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/test_metrics.json": {
+      "bytes": 1356,
+      "sha256": "08df4cb89776b105c36a963c10d3848f875b5dc4c085f73539622b66e75dfe63"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "19dfa6183ed7bd949cd00418eb0866bc0612e3656868e8e2344a20feedda09fb"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "b06461a1c37ea89adbd539790824803f5085c8a42fc8ccbfec9b7cc71b9490ea"
+    },
+    "EOGFD/Amazon/results/finals/TR20/seed_72/validation_history.json": {
+      "bytes": 26831,
+      "sha256": "3ce84ad9d293b6d51b23cec702266e17e62e164d66bade521911c6f5874f8766"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "276bd9836371270c013821f803b0695c241b9cdfc8dd36e6f742e48829fd9c27"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/frozen_training.json": {
+      "bytes": 1408,
+      "sha256": "c6fee523bf8a6223d8cd01c679f32b3c49f0bab20552e5719fcda4e64ff0d2a2"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/test_metrics.json": {
+      "bytes": 1354,
+      "sha256": "dd993b9a092182246ed1368755a099264a183c10e92498e8e6eb14b2eef10f6a"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "cf558bae768636a0333b117120c87f38a217056173a2a94bfc67e80a759e0bd0"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "9e5f9b5cd9b27a315a27849182cbd1715b6f03c455736be3946c023c6ae1dfe9"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_2/validation_history.json": {
+      "bytes": 22782,
+      "sha256": "973444ab3fd9a8c43cb97c6d4a3cd2748f5676712b0e3a4fbea36bc86ef9a00e"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "73a8d4d4cd90e5864cc7b725bedb54f251cb465fbcf150401228a0ad348b60c5"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/frozen_training.json": {
+      "bytes": 1409,
+      "sha256": "c6c3d2dc122849a374715fbb971741e7aa518929c15634addb0f299dd7159702"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/test_metrics.json": {
+      "bytes": 1355,
+      "sha256": "9beb2e9b0ed7695a3205fb49a8095ae548b442ef886dba8a7842ed27a29801f9"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "080edaf5c4315dfc9559c058327884e00c7087a0b21f903ac9a90b3fa3597afa"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "9cf35402a42ab2c98877ecd615fe20f223ca6d7804359a5d79b5682a85e314a6"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_42/validation_history.json": {
+      "bytes": 15017,
+      "sha256": "162f2aa349ccff43e7541f3ded7e591af4c256228bf32e7a298b9fcd23f20d7e"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "c0cbd1495bba0f9ffb6f00e962348b52800049bbb19642dc921f8d577986d071"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/frozen_training.json": {
+      "bytes": 1411,
+      "sha256": "184546c2539dbeaf691fcca077a05cbaa0a2e9814798c2f4caea1d739168a903"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/test_metrics.json": {
+      "bytes": 1354,
+      "sha256": "b8de636f40f3c9a195d861783093d48703e90a29e95209276440a79d6f03e580"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "c40fb65c0b062731e0bd4f438931d8311d107f8409671c5a1fd19db0f93364d8"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "cf3713613a79bcb6b6c3a97eda4a2265f98b533a30a9255ca1374d25b3b283ef"
+    },
+    "EOGFD/Amazon/results/finals/TR30/seed_72/validation_history.json": {
+      "bytes": 26811,
+      "sha256": "b4c8939a9daac7030b28288d2ddf1f1c46b66aa79f5568b2f5c746dee5346712"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "5cb23a7090d3517b7855732a43b9010c5c06f8170fa1d25ee88e9727982e0a66"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/frozen_training.json": {
+      "bytes": 1410,
+      "sha256": "d56a7dcfbf3cf683d243779076faa4097ec8c412b5ef0bb985ec7131f23652ec"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/test_metrics.json": {
+      "bytes": 1353,
+      "sha256": "d72dfe1b1adf44f53a1bd0c23d64773b5fde57699d7395d835dd169d5a358d3f"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/test_once_claim.json": {
+      "bytes": 636,
+      "sha256": "dfa3548c2db9f8f3a1925618b4461ab849d1eb1bc737f3a66208d5b86d27f7a2"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "99da3eaf00bb3eed0863fb26252e4b0cb0da665d49d18db83aa74cca5040ac6c"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_2/validation_history.json": {
+      "bytes": 26813,
+      "sha256": "98ec3e35fc960bc48eb17a26faeb1f597a24ff4b313329d41251b0f3f9538f79"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "a523bf04009c2f9439dbd9dba470dc6d1eba037727571d77bee4065448f8cc2a"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/frozen_training.json": {
+      "bytes": 1411,
+      "sha256": "71f965cdc81df21f514a163ec58991bb4f69e1552091b0e78e813d5c021583ea"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/test_metrics.json": {
+      "bytes": 1355,
+      "sha256": "4e51179321fd28e52d629aa076e4b32eeefbe5b4e4ed63cc7138531dcbaa66bc"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "68ad0f0d1893332c5153dc642ca09df7f39438177443b85b7e0504c9b0d490e2"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "535932c8519393e01c131a575d0fc6a9c5372a85f5961ecd4768520a60569371"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_42/validation_history.json": {
+      "bytes": 26819,
+      "sha256": "e379a9bdc2cceff99cb797632657ace5ef2b964f5e216e4ace2cfd431573aaf6"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/best_validation_scores.npy": {
+      "bytes": 13952,
+      "sha256": "6fc74b1cda8c192ce52b80cf593376aa9ab5857c2d88bfc1e68cc53f807fc173"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/frozen_training.json": {
+      "bytes": 1410,
+      "sha256": "d33edadf3922f06b5d84a2fad92f73436f5274d3f5b80f049f6ca4d147be5812"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/test_metrics.json": {
+      "bytes": 1354,
+      "sha256": "673b64849534265573669ff38cdb00d835183f490cbac516588dba7930408c3d"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/test_once_claim.json": {
+      "bytes": 637,
+      "sha256": "6152c9d835432ff40f02eb8a332d29c9dee07b2d5df72fa045beb5b67db84ea3"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/test_scores.npy": {
+      "bytes": 27776,
+      "sha256": "32d36ada1c3b6503837d4b2a19939d9b427cc928c01f351d5d0e45183919b9e6"
+    },
+    "EOGFD/Amazon/results/finals/TR40/seed_72/validation_history.json": {
+      "bytes": 22250,
+      "sha256": "3134d2b5e99fa1c26c8cb503775b1a7223189602a485a1b58010ef5c37f87dcd"
+    },
+    "EOGFD/Amazon/results/tuning/EOGFD_Amazon_I2_TR40_FrozenWinner.json": {
+      "bytes": 3214,
+      "sha256": "233d696ed354fc1c1857742364a975f0a78bf133e4ee885877645b9168be11c6"
+    },
+    "EOGFD/Amazon/results/tuning/EOGFD_Amazon_I2_TR40_TuningSummary.json": {
+      "bytes": 7355,
+      "sha256": "7332a8c7682c7dfdafffe77dcbfdb87d092711d491d800beb99e1e2adb1692d9"
+    },
+    "EOGFD/Amazon/results/tuning/EOGFD_STAGE3_POP20_COST_GATE.json": {
+      "bytes": 320,
+      "sha256": "86f98d6c2b6a47e65371c7cf476c9a1c183521a05a06efae286d0f96f48501dc"
+    },
+    "EOGFD/Amazon/results/tuning/trial_01/trial_result.json": {
+      "bytes": 1228,
+      "sha256": "985285261860dd67caddd1335dbcc9596587c209de8dabc52b5dd8aebe8b220e"
+    },
+    "EOGFD/Amazon/results/tuning/trial_01/validation_history.json": {
+      "bytes": 16047,
+      "sha256": "75cadbc205ced70c1ccdf1b827ef294b985e5b6f5d851f8fc12f023933d8af1f"
+    },
+    "EOGFD/Amazon/results/tuning/trial_02/trial_result.json": {
+      "bytes": 1228,
+      "sha256": "3f408ca4d3ed015235a8dcc20d06f4ac6a5b059179a3fbcb126c2a28b051514c"
+    },
+    "EOGFD/Amazon/results/tuning/trial_02/validation_history.json": {
+      "bytes": 16573,
+      "sha256": "50027cbf3ce0baffdb0312cbbb148d9d32d5319e61276346bdb00e41bb1f877a"
+    },
+    "EOGFD/Amazon/results/tuning/trial_03/trial_result.json": {
+      "bytes": 1231,
+      "sha256": "e4fbbf54c59c5779bb1d5c8587e295bbd9d15aeaf1a1d2cad2fac4e35b848ee7"
+    },
+    "EOGFD/Amazon/results/tuning/trial_03/validation_history.json": {
+      "bytes": 25470,
+      "sha256": "a4fc7375699c12f16d90a7b620c6cf9268c9231e20f75296f354847942323536"
+    },
+    "EOGFD/Amazon/results/tuning/trial_04/trial_result.json": {
+      "bytes": 1231,
+      "sha256": "1ed032af20c16a457ddd4212877973a1f03852f6e57c6c1592149251dcecbf9d"
+    },
+    "EOGFD/Amazon/results/tuning/trial_04/validation_history.json": {
+      "bytes": 25471,
+      "sha256": "cf171a9b29e6297f6e0fee9c1dcad205edae3052f2c7f740a389fbfeef2a546d"
+    },
+    "EOGFD/Amazon/results/tuning/trial_05/trial_result.json": {
+      "bytes": 1230,
+      "sha256": "0d6b0d85b03cf55913113d6fa6a7b983205c60d8d1ffb588d4e674dfb1b59cd4"
+    },
+    "EOGFD/Amazon/results/tuning/trial_05/validation_history.json": {
+      "bytes": 25012,
+      "sha256": "c1282a0eb58cdcc9813faf4c29aed4b9731c4ebad1cc9aa06fc66f4400c8a79f"
+    },
+    "EOGFD/Amazon/results/tuning/trial_06/trial_result.json": {
+      "bytes": 1228,
+      "sha256": "0ebbbd924cd051ffe657ff1e1d837f9102a22c37442d288de5e7a5e7ca1ea582"
+    },
+    "EOGFD/Amazon/results/tuning/trial_06/validation_history.json": {
+      "bytes": 22193,
+      "sha256": "dfbcdb131e8ab26f4d1fe7b4c0ec823fa6c402a9e93ee310022e3712075e4bce"
+    },
+    "EOGFD/Amazon/results/tuning/trial_07/trial_result.json": {
+      "bytes": 1230,
+      "sha256": "d61b3379c63e08174283a569c5962f2c412e34bc63cc8735960e682f90dedfad"
+    },
+    "EOGFD/Amazon/results/tuning/trial_07/validation_history.json": {
+      "bytes": 25494,
+      "sha256": "cab564fdba1ffd7c0e2a74d8fdb0975ecf64b41baf579d363865574687eb8b19"
+    },
+    "EOGFD/Amazon/results/tuning/trial_08/trial_result.json": {
+      "bytes": 1229,
+      "sha256": "59891463029007ede90451df20fb3817ea48ebb1410a1a76ec68d7e87ea61109"
+    },
+    "EOGFD/Amazon/results/tuning/trial_08/validation_history.json": {
+      "bytes": 25530,
+      "sha256": "56b0140faca56f2d74b07f8df03dbc5bcd6f125aaae7d96472693974ac396079"
+    },
+    "EOGFD/Amazon/results/tuning/trial_09/trial_result.json": {
+      "bytes": 1229,
+      "sha256": "959b596814f6521e15c70545f806954f93f92a3d8501c504e46d9d1537bb8768"
+    },
+    "EOGFD/Amazon/results/tuning/trial_09/validation_history.json": {
+      "bytes": 15816,
+      "sha256": "b990a34aba42a02a938c447bda5fd44493ef49876d02b9d4db7e34c95f8c1ccd"
+    },
+    "EOGFD/Amazon/results/tuning/trial_10/trial_result.json": {
+      "bytes": 1227,
+      "sha256": "26bca0641bb68cdaee19fd301809b4cc2ca393f6b936809cefcab159771ec809"
+    },
+    "EOGFD/Amazon/results/tuning/trial_10/validation_history.json": {
+      "bytes": 14521,
+      "sha256": "ae691359017cb6f2c9d516eebc598c7f13af8560ff26e14d7cc20ab8de9e12dc"
+    },
+    "EOGFD/Amazon/results/tuning/trial_11/trial_result.json": {
+      "bytes": 1230,
+      "sha256": "9ac57f855d13cb30baea33cb7f16674ff0658f4f1e67898af90883d4d2e431c8"
+    },
+    "EOGFD/Amazon/results/tuning/trial_11/validation_history.json": {
+      "bytes": 17594,
+      "sha256": "0470d799bf2c1e4191da30a24fd9b4d9916de84521835e9f03f45725ce6377e6"
+    },
+    "EOGFD/Amazon/results/tuning/trial_12/trial_result.json": {
+      "bytes": 1228,
+      "sha256": "fe7ac3f48ca9e52544b87642692d3997abec36fc5b38d72b2cff882dbbe52160"
+    },
+    "EOGFD/Amazon/results/tuning/trial_12/validation_history.json": {
+      "bytes": 17351,
+      "sha256": "b07ff2fb001047b122038db9f1756e7a8c1a9e084b6eab1c58866b3250b52ceb"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage2_Config.json": {
+      "bytes": 605,
+      "sha256": "4ee429e96198d7e436e6d7ee011178fdd7b9f8e6f776a3b75eeee42733a997e7"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage2_Launch.sh": {
+      "bytes": 719,
+      "sha256": "8cf1b2809d16dedb2d27268916987c3609f573dc5c54faeb9fb1de92cd42b39a"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage2_RealGraphPilot.py": {
+      "bytes": 8549,
+      "sha256": "bb8285e0a8592cb9a7594ef84187df244c3e7b0597ab5389af969a5c4d1c1eab"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage3_Config.json": {
+      "bytes": 633,
+      "sha256": "2500e280738b59588076080a4ead25f409f356a12bfd4595133617142f8b24e8"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage3_Launch.sh": {
+      "bytes": 804,
+      "sha256": "02fe3b8884f4f6677a18f297790c3e3c48762f1ee8446546990a1666b38b4283"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage3_ValidationTune12.py": {
+      "bytes": 16563,
+      "sha256": "24c55f95f28111eee9931cc084a26f52ba9715da152ee6efbd9ea4908c837384"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage4_Config.json": {
+      "bytes": 633,
+      "sha256": "2500e280738b59588076080a4ead25f409f356a12bfd4595133617142f8b24e8"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage4_FrozenFinals12.py": {
+      "bytes": 16937,
+      "sha256": "206c4e0a6b91d84a87648c8cb4d3fe74988bb82277cb119b9adca486c13ccce6"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage4_Launch.sh": {
+      "bytes": 752,
+      "sha256": "4e6aa77c37ed000a0a3628f43d2e45d8ad5cf6516ed7f03b087f08dd0c8770c9"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage5_Config.json": {
+      "bytes": 1526,
+      "sha256": "c6e72c55132b7d84085b283cee36a2141d5499e427ebd6866acd56ef4513dd2f"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage5_Launch.sh": {
+      "bytes": 712,
+      "sha256": "2d29a1075528272dbb6777646ee4e1af897bc8e370e8c22b1290f23d1250a72e"
+    },
+    "EOGFD/Amazon/scripts/EOGFD_Amazon_I2_Stage5_TestOnce.py": {
+      "bytes": 16210,
+      "sha256": "c2ba84ebb2cc1015a88c62cb4523d1422f3fd9f1ba2afb7be433c5630cd0320a"
+    },
+    "EOGFD/Amazon/status.json": {
+      "bytes": 5549,
+      "sha256": "0cc39f85945a6227e2afa5a923724068607d86957c5dd222c1d1ff48dc49c7a1"
+    }
+  },
+  "model": "EOGFD",
+  "repository": "marufkhan09/COMP8851-fraud-dataset-analysis",
+  "status": "COMPLETED_FROZEN_SPLIT_BENCHMARK"
+}

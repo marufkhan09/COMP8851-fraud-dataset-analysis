@@ -1,0 +1,160 @@
+{
+  "author_identical_reproduction": false,
+  "checkpoint_metric": "validation_AUPRC",
+  "dataset": "Elliptic",
+  "eval_rng_seed": 100921,
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "frozen_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "grid": [
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 20,
+      "weight_decay": 0.0
+    }
+  ],
+  "heldout_test_access_during_stage3": false,
+  "individual_source_sha256": {
+    "assets/elliptic/source/elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "assets/elliptic/source/elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "assets/elliptic/source/elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "instance_id": "57212396",
+  "machine_hostname": "60d39211b1fd",
+  "max_epochs": 100,
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "model": "EOGFDHeteroModel",
+  "note": "This is adapted, conditional unified-mode validation tuning only, not author-mode and not evidence of supervisor permission.",
+  "patience": 20,
+  "source_sha256": "d2f7110d973564b5cd3b491ba3e0e59a6e16d75033e3796ac601bbf1ecd58160",
+  "split_seed": 2,
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "stochastic_evolution_rng_fixed_on_validation": true,
+  "threshold_selection": "validation_macroF1_max; tie fraud recall then nearest 0.5",
+  "tuning_seed": 2,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_approval_recorded": false
+}

@@ -1,0 +1,78 @@
+{
+  "adapter_sha256": "ab3f636d1be4c30f1d120e71666f21316a1dcd7a6deb39631f0ed42b2a15d118",
+  "batch_size": 1024,
+  "best_epoch": 44,
+  "checkpoint_sha256": "bdf62911fc65e03c07bb570323919edbbebfc8b3ffb355d33813d0d24953a941",
+  "completed_epochs": 64,
+  "config": {
+    "base_lr": 0.001,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 32
+  },
+  "dataset": "YelpChi",
+  "effective_lr": 0.001,
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "patience": 20,
+  "peak_gpu_allocated_gib": 3.434751510620117,
+  "ratio": "TR20",
+  "seed": 72,
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "FINAL_COMPLETE",
+  "test": {
+    "accuracy": 0.899031661407899,
+    "auprc": 0.6961993804977675,
+    "auroc": 0.9017013502571402,
+    "balanced_accuracy": 0.7767059881521057,
+    "brier": 0.07899810806423828,
+    "fn": 1057,
+    "fp": 799,
+    "fraud_f1": 0.6349331235247837,
+    "macro_f1": 0.7881736324694626,
+    "mcc": 0.5775238052337556,
+    "precision": 0.6688769167012019,
+    "recall": 0.6042680643953575,
+    "threshold": 0.48125264048576355,
+    "tn": 14912,
+    "tp": 1614
+  },
+  "test_count": 18382,
+  "test_predictions_sha256": "f96574aad10345aa48e0dacc9402e56a92e2d5a76b44169b019f55854edc31e7",
+  "test_scoring_count": 1,
+  "test_used_for_model_selection": false,
+  "train_count": 9190,
+  "val_count": 9191,
+  "validation": {
+    "adapter_sha256": "ab3f636d1be4c30f1d120e71666f21316a1dcd7a6deb39631f0ed42b2a15d118",
+    "batch_size": 1024,
+    "best_epoch": 44,
+    "best_val_auprc": 0.6974619485872546,
+    "best_val_auroc": 0.8965603713281005,
+    "checkpoint_sha256": "bdf62911fc65e03c07bb570323919edbbebfc8b3ffb355d33813d0d24953a941",
+    "ratio": "TR20",
+    "seed": 72,
+    "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+    "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+    "status": "VALIDATION_FROZEN",
+    "test_scoring_performed": false,
+    "threshold": 0.48125264048576355,
+    "val_auprc_rescored": 0.6974619485872546,
+    "val_macro_f1": 0.7936675498493408,
+    "winner_config": {
+      "base_lr": 0.001,
+      "drop": [
+        0.3,
+        0.15
+      ],
+      "hidden_dim": 32
+    },
+    "winner_trial": 4
+  },
+  "wall_seconds": 648.407,
+  "winner_sha256": "124ca6d541e0467f3e70987a48854292d5c9ccdf5b54f6e2071d322d41a1c7e5",
+  "winner_trial": 4
+}

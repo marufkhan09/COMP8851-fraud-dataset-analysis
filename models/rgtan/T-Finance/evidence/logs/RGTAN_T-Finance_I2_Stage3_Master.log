@@ -1,0 +1,25 @@
+RGTAN_T-Finance_I2_Stage3: capped sampler GPU pilot, then exact-risk crossfit. NO tuning.
+RGTAN_T-Finance_CANONICAL_SHA_AND_FROZEN_TR40_VALIDATION_ISOLATION=PASS
+RGTAN_T-Finance_ORIGINAL_42M_EDGE_GRAPH_TR40_LABEL_ONLY=PASS
+RGTAN_T-Finance_CAPPED_10x10_ARCHITECTURE_PILOT {"batch_size": 32, "block_edges": [3448, 316], "elapsed_seconds": 3.573, "gpu_peak_gib": 0.0152, "process_rss_gib": 5.884, "sampled_input_nodes": 3384}
+RGTAN_T-Finance_CAPPED_10x10_ARCHITECTURE_PILOT {"batch_size": 256, "block_edges": [26452, 2529], "elapsed_seconds": 0.022, "gpu_peak_gib": 0.073, "process_rss_gib": 5.89, "sampled_input_nodes": 17015}
+RGTAN_T-Finance_CAPPED_10x10_ARCHITECTURE_PILOT {"batch_size": 1024, "block_edges": [91370, 10106], "elapsed_seconds": 0.032, "gpu_peak_gib": 0.1225, "process_rss_gib": 5.896, "sampled_input_nodes": 29303}
+RGTAN_T-Finance_TR40_BOUNDED_FANOUT_PILOT=PASS
+RGTAN_T-Finance_TR40_5FOLD_TRAIN_ONLY_CONTEXT=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+RGTAN_T-Finance_EXACT_RISK_BINARY_ADJACENCY_EDGES 42445086
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=128/39357 elapsed=4.7s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=6400/39357 elapsed=5.6s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=12800/39357 elapsed=6.6s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=19200/39357 elapsed=7.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=25600/39357 elapsed=8.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=32000/39357 elapsed=9.5s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=38400/39357 elapsed=10.4s
+RGTAN_T-Finance_TWOHOP_RISK_ROWS=39357/39357 elapsed=10.6s
+RGTAN_T-Finance_EXACT_TWOHOP_RISK=PASS elapsed_s 10.61
+RGTAN_T-Finance_TR40_EXACT_5FOLD_CROSSFIT=PASS
+RGTAN_T-Finance_TR40_CROSSFIT_ARTIFACT_SHA256 798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81
+RGTAN_T-Finance_TR40_RISK_CROSSFIT_AND_CAPPED_SAMPLER_PREFLIGHT=PASS
+RGTAN_T-Finance_TUNING_STARTED=NO TEST_SCORED=NO
+RGTAN_T-Finance_I2_TR40_PILOT_CROSSFIT=PASS TUNING_STARTED=NO

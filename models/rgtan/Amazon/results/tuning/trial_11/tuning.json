@@ -1,0 +1,36 @@
+{
+  "status": "TUNING_COMPLETE",
+  "model": "RGTAN",
+  "dataset": "Amazon",
+  "ratio": "TR40",
+  "split_seed": 2,
+  "seed": 2,
+  "trial": 11,
+  "config": {
+    "hidden_dim": 64,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "base_lr": 0.003
+  },
+  "base_learning_rate": 0.003,
+  "effective_lr": 0.0005303300858899107,
+  "batch_size": 32,
+  "max_epochs": 100,
+  "early_stopping_patience": 20,
+  "completed_epochs": 50,
+  "best_epoch": 30,
+  "best_val_auprc": 0.9081294115691722,
+  "best_val_auroc": 0.968868910236417,
+  "peak_allocated_gpu_gib": 1.2819585800170898,
+  "wall_seconds": 3863.214,
+  "adapter_sha256": "fd3f871171c795999e6a1470857b270d5a605bb3f7cb3c3ea296cd5b3d1c6efe",
+  "source_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "checkpoint_sha256": "98cabb752c2d140e728aeed1339bf4f03b3ba81e9a49816ec90bf94275bb9b72",
+  "training_method": "one model, five out-of-fold label/risk contexts",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false
+}

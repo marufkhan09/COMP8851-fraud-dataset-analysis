@@ -1,0 +1,232 @@
+{
+  "trial_metrics": [
+    {
+      "best_epoch": 89,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 1,
+      "val_auprc": 0.21591929683704497
+    },
+    {
+      "best_epoch": 62,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 2,
+      "val_auprc": 0.2008812438557649
+    },
+    {
+      "best_epoch": 98,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 3,
+      "val_auprc": 0.21044870079026678
+    },
+    {
+      "best_epoch": 99,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 4,
+      "val_auprc": 0.21180378853552556
+    },
+    {
+      "best_epoch": 11,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 5,
+      "val_auprc": 0.17299777386881307
+    },
+    {
+      "best_epoch": 18,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 6,
+      "val_auprc": 0.17310866166083838
+    },
+    {
+      "best_epoch": 88,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 7,
+      "val_auprc": 0.20859759486905705
+    },
+    {
+      "best_epoch": 99,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 8,
+      "val_auprc": 0.21093685496730652
+    },
+    {
+      "best_epoch": 2,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 9,
+      "val_auprc": 0.14550361772740658
+    },
+    {
+      "best_epoch": 1,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 10,
+      "val_auprc": 0.14441122378823468
+    },
+    {
+      "best_epoch": 100,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 11,
+      "val_auprc": 0.20885255049386953
+    },
+    {
+      "best_epoch": 100,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 12,
+      "val_auprc": 0.18874973687888894
+    }
+  ],
+  "winner": {
+    "adapter_provenance": {
+      "adapter_eligibility": "INPUT_ADAPTER_PENDING_VENUS_REVIEW",
+      "author_identical": false,
+      "graph_semantics": "FDCompCN original 4 directed relation types; full static unlabeled transductive topology",
+      "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+      "test_labels_in_graph": false,
+      "train_edges": 30752,
+      "train_nodes": 5317,
+      "val_edges": 30752,
+      "val_nodes": 5317
+    },
+    "dataset": "FDCompCN",
+    "final_seeds": [
+      2,
+      42,
+      72
+    ],
+    "final_training_started": false,
+    "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+    "ratios": [
+      "TR40",
+      "TR30",
+      "TR20",
+      "TR10"
+    ],
+    "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+    "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+    "status": "TR40_12_VALIDATION_ONLY_TRIALS_COMPLETED_CONDITIONAL",
+    "test_labels_accessed": false,
+    "test_scored": false,
+    "trial_count": 12,
+    "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+    "venus_approval_recorded": false,
+    "winner_checkpoint_sha256": "23b0610b8a0175cd9578e5538c7294fae2182c41957f1357ac9f1e68df905796",
+    "winner_config": {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    "winner_trial": 1,
+    "winner_val_auprc": 0.21591929683704497
+  }
+}

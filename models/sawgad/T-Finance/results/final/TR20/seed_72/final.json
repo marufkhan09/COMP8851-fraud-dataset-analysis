@@ -1,0 +1,50 @@
+{
+  "adapter_sha256": "4f25f8d0ae87097f68fc393068d013ba07df2531428a687292ed9903709419c9",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "best_epoch": 54,
+  "best_val_auprc": 0.6701006837546718,
+  "checkpoint_sha256": "68b196467f1bb3f75de46c7f277ddecd51dd0ef225878e176a534b89a3d6d1c2",
+  "config": {
+    "drop_rate": 0.1,
+    "full_lr": 0.001,
+    "hidden_dim": 128
+  },
+  "dataset": "T-Finance",
+  "epochs_ran": 74,
+  "full_training_seconds": 61.14635018212721,
+  "model": "SAWGAD",
+  "peak_allocated_gpu_gib": 27.627203464508057,
+  "preprocess_seconds": 9.834175436990336,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_labels": "frozen_train_ratio",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio": "TR20",
+  "seed": 72,
+  "source_dgl_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "FINAL_COMPLETE",
+  "test_evaluated_once": true,
+  "test_inference_seconds": 0.047985965851694345,
+  "test_metrics": {
+    "auprc": 0.6954581480047085,
+    "auroc": 0.9026030685387643,
+    "fraud_count": 722,
+    "fraud_f1": 0.6651617757712566,
+    "fraud_precision": 0.728171334431631,
+    "fraud_recall": 0.6121883656509696,
+    "gmean": 0.7781154850980099,
+    "macro_f1": 0.825202833039324,
+    "test_count": 15743,
+    "threshold": 0.7999999999999999
+  },
+  "test_scoring_performed": true,
+  "test_used_for_selection": false,
+  "threshold": 0.7999999999999999,
+  "val_macro_f1": 0.8192184756580032,
+  "warmup_seconds": 251.0412291160319
+}

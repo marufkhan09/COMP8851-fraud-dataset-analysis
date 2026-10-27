@@ -1,0 +1,42 @@
+{
+  "status": "FINAL_CANDIDATE_COMPLETE",
+  "model": "SAWGAD",
+  "dataset": "Amazon",
+  "ratio": "TR40",
+  "seed": 2,
+  "config": {
+    "hidden_dim": 128,
+    "drop_rate": 0.1,
+    "full_lr": 0.003
+  },
+  "best_epoch": 100,
+  "epochs_ran": 100,
+  "best_val_auprc": 0.8269637274465406,
+  "threshold": 0.95,
+  "val_macro_f1": 0.8739950779327317,
+  "preprocess_seconds": 3.41122684488073,
+  "warmup_seconds": 62.3687261629384,
+  "full_training_seconds": 21.10132873803377,
+  "peak_allocated_gpu_gib": 5.954501152038574,
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "source_mat_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "test_used_for_selection": false,
+  "test_scoring_performed": true,
+  "protocol": "Ass2 candidate: warmup=100 native, full<=100 patience20, AUPRC selection; differs from author full=350",
+  "checkpoint_sha256": "983885f180c35f42ad01603581154cde72546aab50fbf2ab451659f509a39378",
+  "test_evaluated_once": true,
+  "test_inference_seconds": 0.01251731114462018,
+  "test_metrics": {
+    "auprc": 0.8021780323638611,
+    "auroc": 0.9413811521427234,
+    "macro_f1": 0.8394847190272757,
+    "fraud_precision": 0.9043062200956937,
+    "fraud_recall": 0.5762195121951219,
+    "fraud_f1": 0.7039106145251397,
+    "gmean": 0.7566605871950347,
+    "threshold": 0.95,
+    "test_count": 3456,
+    "fraud_count": 328
+  }
+}

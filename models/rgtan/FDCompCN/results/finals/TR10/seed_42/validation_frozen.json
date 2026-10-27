@@ -1,0 +1,29 @@
+{
+  "best_checkpoint_sha256": "6c0bca0e320a3f23a0b2132cc09fd60b8afdf8c119615a2e0c4bbaf012701bc7",
+  "best_epoch": 10,
+  "best_val_auprc": 0.1438330028282021,
+  "crossfit_sha256": "51d43146af8c774966f13fd453fdb826b66e2f6afa20529814afcc9baa8ea6b2",
+  "ratio": "TR10",
+  "seed": 42,
+  "test_scoring_performed": false,
+  "threshold": 0.13941574096679688,
+  "threshold_selection": "maximize validation macro F1 only; higher threshold wins ties",
+  "validation": {
+    "accuracy": 0.8768796992481203,
+    "auprc": 0.1438330028282021,
+    "auroc": 0.5686290141056423,
+    "balanced_accuracy": 0.5372899159663865,
+    "brier": 0.09414494085982988,
+    "fn": 100,
+    "fp": 31,
+    "fraud_f1": 0.15483870967741933,
+    "macro_f1": 0.544221179471249,
+    "mcc": 0.11622559737125165,
+    "precision": 0.27906976744186046,
+    "recall": 0.10714285714285714,
+    "threshold": 0.13941574096679688,
+    "tn": 921,
+    "tp": 12
+  },
+  "winner_sha256": "a8b4a81961ce5962e453fbb262cc19777ca8d6ad97c3542846c350484b7eca21"
+}

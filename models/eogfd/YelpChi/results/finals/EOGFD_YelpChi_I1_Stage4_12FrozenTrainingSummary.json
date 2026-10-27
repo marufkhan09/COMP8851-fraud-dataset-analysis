@@ -1,0 +1,77 @@
+{
+  "config": {
+    "beta": 0.5,
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.003,
+    "mutation_rate": 0.1,
+    "order": 3,
+    "population_size": 20
+  },
+  "dataset": "YelpChi",
+  "frozen_winner_sha256": "6df299a1d0002283a7a377de96c03586d62540bf9254b3e1b8ba78b6b98638d5",
+  "heldout_test_pending": true,
+  "heldout_test_scored_count": 0,
+  "model": "EOGFDHeteroModel",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "EOGFD_12_FROZEN_TRAININGS_COMPLETE",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "training_count": 12,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_results": [
+    {
+      "ratio": "TR40",
+      "seeds": [
+        2,
+        42,
+        72
+      ],
+      "validation_auprc_mean": 0.604581709405459,
+      "validation_auprc_sample_sd": 0.009328527815779255
+    },
+    {
+      "ratio": "TR30",
+      "seeds": [
+        2,
+        42,
+        72
+      ],
+      "validation_auprc_mean": 0.5949606503430022,
+      "validation_auprc_sample_sd": 0.003981759422358132
+    },
+    {
+      "ratio": "TR20",
+      "seeds": [
+        2,
+        42,
+        72
+      ],
+      "validation_auprc_mean": 0.5798276323075661,
+      "validation_auprc_sample_sd": 0.01593032972369309
+    },
+    {
+      "ratio": "TR10",
+      "seeds": [
+        2,
+        42,
+        72
+      ],
+      "validation_auprc_mean": 0.5308720509798053,
+      "validation_auprc_sample_sd": 0.00385084185077736
+    }
+  ]
+}

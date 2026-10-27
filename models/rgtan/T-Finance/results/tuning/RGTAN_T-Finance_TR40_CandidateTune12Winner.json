@@ -1,0 +1,31 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "dataset": "T-Finance",
+  "fanouts": [
+    10,
+    10
+  ],
+  "model": "RGTAN",
+  "original_full_neighbor_sampling_replaced": true,
+  "ratio": "TR40",
+  "risk_sha256": "798daba5c4a131159208d242b71e03ef3d1c79aa44f5cfd599c7fd97b98dab81",
+  "sampler": "MultiLayerNeighborSampler",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_TR40_CANDIDATE_12_VAL_ONLY_TUNE_COMPLETE",
+  "test_labels_used": false,
+  "test_scored": false,
+  "trial_count": 12,
+  "winner_configuration": {
+    "base_lr": 0.001,
+    "drop": [
+      0.2,
+      0.1
+    ],
+    "hidden_dim": 64
+  },
+  "winner_epoch": 100,
+  "winner_trial": 7,
+  "winner_val_auprc": 0.8881121769261046
+}

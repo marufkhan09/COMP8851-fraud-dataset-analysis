@@ -1,0 +1,36 @@
+{
+  "schema": "sawgad-tsocial-separate-gpu-reported-final-test-v1",
+  "model": "SAWGAD",
+  "dataset": "T-Social",
+  "measurement_source": "user-supplied screenshot of independent Vast.ai RTX A6000 48-GB GPU final-evaluation table",
+  "reported_execution": "separate GPU experiment; distinct from previously archived training-only evidence",
+  "metric_stage": "heldout_test_as_reported",
+  "reported_run_count": 12,
+  "training_ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "metric_columns": [
+    "test_auprc",
+    "test_auroc",
+    "test_macro_f1"
+  ],
+  "sample_standard_deviation_ddof": 1,
+  "summary_calculated_from_individual_rows": true,
+  "source_screenshot_sha256": "6f8077175e415c75e198e129a8434d5c8e1d1c6fbb5f181b2ca462a8718b5c94",
+  "validation_training_archive": "../completed_frozen_training_20261024",
+  "source_score_arrays_provided": false,
+  "source_aligned_ground_truth_labels_provided": false,
+  "source_evaluation_logs_provided": false,
+  "independent_recomputation_from_predictions_performed": false,
+  "fraud_f1_supplied": false,
+  "gmean_supplied": false,
+  "notes": "The published CSVs faithfully transcribe the separate-GPU screenshot; aggregate arithmetic was independently checked. Exact Fraud-F1 and G-Mean require class-specific thresholded predictions or confusion counts."
+}

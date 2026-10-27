@@ -1,0 +1,229 @@
+EOGFD_STAGE4_PINNED_HETEROMODEL_CUDA_GPU0=PASS
+=== EOGFD_FDCompCN_STAGE4_CONDITIONAL_FROZEN_FINALS_START ===
+EOGFD_STAGE4_PINNED_MODEL_STAGE3_CODE_GPU0=PASS
+FDCompCN_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+EOGFD_FDCompCN_PINNED_SOURCE_SPLIT_AND_REAL_GRAPH_PILOT=PASS TEST_SCORED=NO
+EOGFD_FDCompCN_STAGE4_ALL12_TUNING_TRIALS_AND_WINNER_SHA=PASS winner=1 val_AUPRC=0.215919
+FDCompCN_RELATIONS_PRESERVED [(('company', 'homo', 'company'), 10059), (('company', 'invest_bc2bc', 'company'), 8505), (('company', 'provide_bc2bc', 'company'), 5944), (('company', 'sale_bc2bc', 'company'), 6244)]
+EOGFD_FDCompCN_STAGE4_12_FROZEN_TRAININGS_START=PASS VENUS_SIGNOFF_NOT_RECORDED TEST_SCORED=NO
+EOGFD_FDCompCN_TR40_seed2 epoch=1 loss=0.73711 val_AUPRC=0.124332 best=0.124332 stale=0
+EOGFD_FDCompCN_TR40_seed2 epoch=2 loss=0.70216 val_AUPRC=0.141442 best=0.141442 stale=0
+EOGFD_FDCompCN_TR40_seed2 epoch=10 loss=0.66692 val_AUPRC=0.167396 best=0.167650 stale=3
+EOGFD_FDCompCN_TR40_seed2 epoch=20 loss=0.65176 val_AUPRC=0.168483 best=0.168688 stale=2
+EOGFD_FDCompCN_TR40_seed2 epoch=30 loss=0.63896 val_AUPRC=0.177297 best=0.177297 stale=0
+EOGFD_FDCompCN_TR40_seed2 epoch=40 loss=0.62913 val_AUPRC=0.184722 best=0.186639 stale=4
+EOGFD_FDCompCN_TR40_seed2 epoch=50 loss=0.61645 val_AUPRC=0.196994 best=0.200884 stale=3
+EOGFD_FDCompCN_TR40_seed2 epoch=60 loss=0.60069 val_AUPRC=0.199984 best=0.203870 stale=1
+EOGFD_FDCompCN_TR40_seed2 epoch=70 loss=0.57915 val_AUPRC=0.200101 best=0.203870 stale=11
+EOGFD_FDCompCN_TR40_seed2 epoch=80 loss=0.55808 val_AUPRC=0.197226 best=0.206261 stale=2
+EOGFD_FDCompCN_TR40_seed2 epoch=90 loss=0.55036 val_AUPRC=0.191168 best=0.216117 stale=1
+EOGFD_FDCompCN_TR40_seed2 epoch=100 loss=0.54302 val_AUPRC=0.206735 best=0.216117 stale=11
+EOGFD_FDCompCN_TR40_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.216117 threshold=0.68 test_scored=NO
+EOGFD_FDCompCN_TR40_seed42 epoch=1 loss=0.73525 val_AUPRC=0.115943 best=0.115943 stale=0
+EOGFD_FDCompCN_TR40_seed42 epoch=2 loss=0.69773 val_AUPRC=0.130657 best=0.130657 stale=0
+EOGFD_FDCompCN_TR40_seed42 epoch=10 loss=0.66699 val_AUPRC=0.160889 best=0.160889 stale=0
+EOGFD_FDCompCN_TR40_seed42 epoch=20 loss=0.65432 val_AUPRC=0.159261 best=0.165551 stale=7
+EOGFD_FDCompCN_TR40_seed42 epoch=30 loss=0.64404 val_AUPRC=0.169577 best=0.178257 stale=6
+EOGFD_FDCompCN_TR40_seed42 epoch=40 loss=0.63481 val_AUPRC=0.174606 best=0.178257 stale=16
+EOGFD_FDCompCN_TR40_seed42 epoch=44 loss=0.62933 val_AUPRC=0.172482 best=0.178257 stale=20
+EOGFD_FDCompCN_TR40_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.178257 threshold=0.65 test_scored=NO
+EOGFD_FDCompCN_TR40_seed72 epoch=1 loss=0.76916 val_AUPRC=0.111236 best=0.111236 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=2 loss=0.72904 val_AUPRC=0.111831 best=0.111831 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=10 loss=0.67289 val_AUPRC=0.150955 best=0.150955 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=20 loss=0.65524 val_AUPRC=0.167053 best=0.167053 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=30 loss=0.64436 val_AUPRC=0.171775 best=0.171775 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=40 loss=0.63198 val_AUPRC=0.175349 best=0.175349 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=50 loss=0.62067 val_AUPRC=0.198728 best=0.198728 stale=0
+EOGFD_FDCompCN_TR40_seed72 epoch=60 loss=0.60412 val_AUPRC=0.195632 best=0.201703 stale=7
+EOGFD_FDCompCN_TR40_seed72 epoch=70 loss=0.58352 val_AUPRC=0.185816 best=0.201703 stale=17
+EOGFD_FDCompCN_TR40_seed72 epoch=73 loss=0.57749 val_AUPRC=0.184513 best=0.201703 stale=20
+EOGFD_FDCompCN_TR40_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.201703 threshold=0.65 test_scored=NO
+EOGFD_FDCompCN_TR30_seed2 epoch=1 loss=0.74292 val_AUPRC=0.124099 best=0.124099 stale=0
+EOGFD_FDCompCN_TR30_seed2 epoch=2 loss=0.70269 val_AUPRC=0.136172 best=0.136172 stale=0
+EOGFD_FDCompCN_TR30_seed2 epoch=10 loss=0.66507 val_AUPRC=0.167846 best=0.169833 stale=1
+EOGFD_FDCompCN_TR30_seed2 epoch=20 loss=0.64841 val_AUPRC=0.162973 best=0.169833 stale=11
+EOGFD_FDCompCN_TR30_seed2 epoch=29 loss=0.63661 val_AUPRC=0.161926 best=0.169833 stale=20
+EOGFD_FDCompCN_TR30_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.169833 threshold=0.51 test_scored=NO
+EOGFD_FDCompCN_TR30_seed42 epoch=1 loss=0.72899 val_AUPRC=0.115839 best=0.115839 stale=0
+EOGFD_FDCompCN_TR30_seed42 epoch=2 loss=0.69306 val_AUPRC=0.135570 best=0.135570 stale=0
+EOGFD_FDCompCN_TR30_seed42 epoch=10 loss=0.66172 val_AUPRC=0.153477 best=0.153477 stale=0
+EOGFD_FDCompCN_TR30_seed42 epoch=20 loss=0.64761 val_AUPRC=0.153514 best=0.154795 stale=9
+EOGFD_FDCompCN_TR30_seed42 epoch=30 loss=0.63268 val_AUPRC=0.156500 best=0.159679 stale=5
+EOGFD_FDCompCN_TR30_seed42 epoch=40 loss=0.61851 val_AUPRC=0.153785 best=0.159679 stale=15
+EOGFD_FDCompCN_TR30_seed42 epoch=45 loss=0.61033 val_AUPRC=0.157561 best=0.159679 stale=20
+EOGFD_FDCompCN_TR30_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.159679 threshold=0.66 test_scored=NO
+EOGFD_FDCompCN_TR30_seed72 epoch=1 loss=0.77911 val_AUPRC=0.110932 best=0.110932 stale=0
+EOGFD_FDCompCN_TR30_seed72 epoch=2 loss=0.73408 val_AUPRC=0.111575 best=0.111575 stale=0
+EOGFD_FDCompCN_TR30_seed72 epoch=10 loss=0.66828 val_AUPRC=0.145352 best=0.145352 stale=0
+EOGFD_FDCompCN_TR30_seed72 epoch=20 loss=0.64836 val_AUPRC=0.153371 best=0.159881 stale=2
+EOGFD_FDCompCN_TR30_seed72 epoch=30 loss=0.63394 val_AUPRC=0.157768 best=0.159881 stale=12
+EOGFD_FDCompCN_TR30_seed72 epoch=38 loss=0.62173 val_AUPRC=0.157406 best=0.159881 stale=20
+EOGFD_FDCompCN_TR30_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.159881 threshold=0.69 test_scored=NO
+EOGFD_FDCompCN_TR20_seed2 epoch=1 loss=0.73875 val_AUPRC=0.123493 best=0.123493 stale=0
+EOGFD_FDCompCN_TR20_seed2 epoch=2 loss=0.69603 val_AUPRC=0.135945 best=0.135945 stale=0
+EOGFD_FDCompCN_TR20_seed2 epoch=10 loss=0.65554 val_AUPRC=0.159963 best=0.166067 stale=2
+EOGFD_FDCompCN_TR20_seed2 epoch=20 loss=0.63298 val_AUPRC=0.157614 best=0.166067 stale=12
+EOGFD_FDCompCN_TR20_seed2 epoch=28 loss=0.61816 val_AUPRC=0.159275 best=0.166067 stale=20
+EOGFD_FDCompCN_TR20_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.166067 threshold=0.76 test_scored=NO
+EOGFD_FDCompCN_TR20_seed42 epoch=1 loss=0.72936 val_AUPRC=0.117493 best=0.117493 stale=0
+EOGFD_FDCompCN_TR20_seed42 epoch=2 loss=0.69319 val_AUPRC=0.136127 best=0.136127 stale=0
+EOGFD_FDCompCN_TR20_seed42 epoch=10 loss=0.65527 val_AUPRC=0.159871 best=0.159871 stale=0
+EOGFD_FDCompCN_TR20_seed42 epoch=20 loss=0.63352 val_AUPRC=0.151796 best=0.159871 stale=10
+EOGFD_FDCompCN_TR20_seed42 epoch=30 loss=0.61158 val_AUPRC=0.158882 best=0.161004 stale=1
+EOGFD_FDCompCN_TR20_seed42 epoch=40 loss=0.59256 val_AUPRC=0.160681 best=0.163617 stale=5
+EOGFD_FDCompCN_TR20_seed42 epoch=50 loss=0.56277 val_AUPRC=0.157812 best=0.163617 stale=15
+EOGFD_FDCompCN_TR20_seed42 epoch=60 loss=0.53270 val_AUPRC=0.162634 best=0.167598 stale=2
+EOGFD_FDCompCN_TR20_seed42 epoch=70 loss=0.51354 val_AUPRC=0.155998 best=0.167598 stale=12
+EOGFD_FDCompCN_TR20_seed42 epoch=78 loss=0.48521 val_AUPRC=0.160095 best=0.167598 stale=20
+EOGFD_FDCompCN_TR20_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.167598 threshold=0.73 test_scored=NO
+EOGFD_FDCompCN_TR20_seed72 epoch=1 loss=0.77392 val_AUPRC=0.112138 best=0.112138 stale=0
+EOGFD_FDCompCN_TR20_seed72 epoch=2 loss=0.72838 val_AUPRC=0.114420 best=0.114420 stale=0
+EOGFD_FDCompCN_TR20_seed72 epoch=10 loss=0.66020 val_AUPRC=0.145168 best=0.145168 stale=0
+EOGFD_FDCompCN_TR20_seed72 epoch=20 loss=0.63310 val_AUPRC=0.144365 best=0.157614 stale=7
+EOGFD_FDCompCN_TR20_seed72 epoch=30 loss=0.60949 val_AUPRC=0.155060 best=0.157614 stale=17
+EOGFD_FDCompCN_TR20_seed72 epoch=40 loss=0.58032 val_AUPRC=0.155815 best=0.159474 stale=4
+EOGFD_FDCompCN_TR20_seed72 epoch=50 loss=0.55092 val_AUPRC=0.154729 best=0.159474 stale=14
+EOGFD_FDCompCN_TR20_seed72 epoch=56 loss=0.53731 val_AUPRC=0.154866 best=0.159474 stale=20
+EOGFD_FDCompCN_TR20_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.159474 threshold=0.68 test_scored=NO
+EOGFD_FDCompCN_TR10_seed2 epoch=1 loss=0.73775 val_AUPRC=0.123337 best=0.123337 stale=0
+EOGFD_FDCompCN_TR10_seed2 epoch=2 loss=0.69342 val_AUPRC=0.132535 best=0.132535 stale=0
+EOGFD_FDCompCN_TR10_seed2 epoch=10 loss=0.64916 val_AUPRC=0.156943 best=0.156943 stale=0
+EOGFD_FDCompCN_TR10_seed2 epoch=20 loss=0.62416 val_AUPRC=0.160705 best=0.161006 stale=1
+EOGFD_FDCompCN_TR10_seed2 epoch=30 loss=0.59425 val_AUPRC=0.162062 best=0.162999 stale=7
+EOGFD_FDCompCN_TR10_seed2 epoch=40 loss=0.55673 val_AUPRC=0.159225 best=0.162999 stale=17
+EOGFD_FDCompCN_TR10_seed2 epoch=43 loss=0.55421 val_AUPRC=0.157040 best=0.162999 stale=20
+EOGFD_FDCompCN_TR10_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.162999 threshold=0.64 test_scored=NO
+EOGFD_FDCompCN_TR10_seed42 epoch=1 loss=0.72938 val_AUPRC=0.121169 best=0.121169 stale=0
+EOGFD_FDCompCN_TR10_seed42 epoch=2 loss=0.69111 val_AUPRC=0.139984 best=0.139984 stale=0
+EOGFD_FDCompCN_TR10_seed42 epoch=10 loss=0.64968 val_AUPRC=0.148872 best=0.148901 stale=5
+EOGFD_FDCompCN_TR10_seed42 epoch=20 loss=0.62751 val_AUPRC=0.152730 best=0.152730 stale=0
+EOGFD_FDCompCN_TR10_seed42 epoch=30 loss=0.60180 val_AUPRC=0.164673 best=0.164686 stale=1
+EOGFD_FDCompCN_TR10_seed42 epoch=40 loss=0.56750 val_AUPRC=0.167294 best=0.168503 stale=2
+EOGFD_FDCompCN_TR10_seed42 epoch=50 loss=0.52614 val_AUPRC=0.156655 best=0.168503 stale=12
+EOGFD_FDCompCN_TR10_seed42 epoch=58 loss=0.50702 val_AUPRC=0.164859 best=0.168503 stale=20
+EOGFD_FDCompCN_TR10_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.168503 threshold=0.72 test_scored=NO
+EOGFD_FDCompCN_TR10_seed72 epoch=1 loss=0.78990 val_AUPRC=0.112134 best=0.112134 stale=0
+EOGFD_FDCompCN_TR10_seed72 epoch=2 loss=0.73073 val_AUPRC=0.115349 best=0.115349 stale=0
+EOGFD_FDCompCN_TR10_seed72 epoch=10 loss=0.65126 val_AUPRC=0.142040 best=0.142040 stale=0
+EOGFD_FDCompCN_TR10_seed72 epoch=20 loss=0.62492 val_AUPRC=0.153983 best=0.154471 stale=4
+EOGFD_FDCompCN_TR10_seed72 epoch=30 loss=0.59845 val_AUPRC=0.159946 best=0.159946 stale=0
+EOGFD_FDCompCN_TR10_seed72 epoch=40 loss=0.55174 val_AUPRC=0.162966 best=0.164969 stale=5
+EOGFD_FDCompCN_TR10_seed72 epoch=50 loss=0.51542 val_AUPRC=0.146817 best=0.164969 stale=15
+EOGFD_FDCompCN_TR10_seed72 epoch=55 loss=0.48641 val_AUPRC=0.156737 best=0.164969 stale=20
+EOGFD_FDCompCN_TR10_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.164969 threshold=0.75 test_scored=NO
+EOGFD_FDCompCN_TR40_STAGE4_VAL_AUPRC_MEAN=0.198692 SAMPLE_SD=0.019109
+EOGFD_FDCompCN_TR30_STAGE4_VAL_AUPRC_MEAN=0.163131 SAMPLE_SD=0.005805
+EOGFD_FDCompCN_TR20_STAGE4_VAL_AUPRC_MEAN=0.164380 SAMPLE_SD=0.004317
+EOGFD_FDCompCN_TR10_STAGE4_VAL_AUPRC_MEAN=0.165490 SAMPLE_SD=0.002789
+EOGFD_FDCompCN_STAGE4_12_FROZEN_TRAININGS_COMPLETE=PASS TEST_SCORED=NO VENUS_APPROVAL_NOT_RECORDED
+EOGFD_FDCompCN_STAGE4_SEQUENCE_STEP=PASS
+=== EOGFD_Elliptic_STAGE4_CONDITIONAL_FROZEN_FINALS_START ===
+EOGFD_STAGE4_PINNED_MODEL_STAGE3_CODE_GPU0=PASS
+Elliptic_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+EOGFD_Elliptic_PINNED_SOURCE_SPLIT_AND_REAL_GRAPH_PILOT=PASS TEST_SCORED=NO
+EOGFD_Elliptic_STAGE4_ALL12_TUNING_TRIALS_AND_WINNER_SHA=PASS winner=10 val_AUPRC=0.708897
+ELLIPTIC_CAUSAL_TRAIN_PREFIX=PASS times_le_20 nodes= 90762 edges= 106807
+EOGFD_Elliptic_CAUSAL_VALIDATION_SNAPSHOT=PASS t<=31 nodes=126103 edges=145833 test_nodes_excluded=YES
+EOGFD_Elliptic_STAGE4_TEST_PERIOD_EXCLUDED_FROM_ALL_TRAINING_PREFIXES=PASS
+EOGFD_Elliptic_STAGE4_12_FROZEN_TRAININGS_START=PASS VENUS_SIGNOFF_NOT_RECORDED TEST_SCORED=NO
+EOGFD_Elliptic_TR40_seed2 epoch=1 loss=0.83016 val_AUPRC=0.532042 best=0.532042 stale=0
+EOGFD_Elliptic_TR40_seed2 epoch=2 loss=0.50414 val_AUPRC=0.439528 best=0.532042 stale=1
+EOGFD_Elliptic_TR40_seed2 epoch=10 loss=0.17540 val_AUPRC=0.656617 best=0.656617 stale=0
+EOGFD_Elliptic_TR40_seed2 epoch=20 loss=0.09942 val_AUPRC=0.680716 best=0.680716 stale=0
+EOGFD_Elliptic_TR40_seed2 epoch=30 loss=0.05920 val_AUPRC=0.689961 best=0.691134 stale=1
+EOGFD_Elliptic_TR40_seed2 epoch=40 loss=0.02979 val_AUPRC=0.694195 best=0.694195 stale=0
+EOGFD_Elliptic_TR40_seed2 epoch=50 loss=0.01826 val_AUPRC=0.694970 best=0.697835 stale=4
+EOGFD_Elliptic_TR40_seed2 epoch=60 loss=0.01006 val_AUPRC=0.698005 best=0.703673 stale=5
+EOGFD_Elliptic_TR40_seed2 epoch=70 loss=0.00509 val_AUPRC=0.707068 best=0.707068 stale=0
+EOGFD_Elliptic_TR40_seed2 epoch=80 loss=0.00272 val_AUPRC=0.711845 best=0.711864 stale=1
+EOGFD_Elliptic_TR40_seed2 epoch=90 loss=0.00166 val_AUPRC=0.709539 best=0.711864 stale=11
+EOGFD_Elliptic_TR40_seed2 epoch=99 loss=0.00111 val_AUPRC=0.707545 best=0.711864 stale=20
+EOGFD_Elliptic_TR40_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.711864 threshold=0.99 test_scored=NO
+EOGFD_Elliptic_TR40_seed42 epoch=1 loss=0.67066 val_AUPRC=0.545044 best=0.545044 stale=0
+EOGFD_Elliptic_TR40_seed42 epoch=2 loss=0.38431 val_AUPRC=0.561166 best=0.561166 stale=0
+EOGFD_Elliptic_TR40_seed42 epoch=10 loss=0.14147 val_AUPRC=0.664409 best=0.664409 stale=0
+EOGFD_Elliptic_TR40_seed42 epoch=20 loss=0.07099 val_AUPRC=0.683348 best=0.683348 stale=0
+EOGFD_Elliptic_TR40_seed42 epoch=30 loss=0.03162 val_AUPRC=0.673603 best=0.684633 stale=8
+EOGFD_Elliptic_TR40_seed42 epoch=40 loss=0.01210 val_AUPRC=0.678105 best=0.684633 stale=18
+EOGFD_Elliptic_TR40_seed42 epoch=42 loss=0.00986 val_AUPRC=0.676491 best=0.684633 stale=20
+EOGFD_Elliptic_TR40_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.684633 threshold=0.99 test_scored=NO
+EOGFD_Elliptic_TR40_seed72 epoch=1 loss=0.72194 val_AUPRC=0.591857 best=0.591857 stale=0
+EOGFD_Elliptic_TR40_seed72 epoch=2 loss=0.39476 val_AUPRC=0.498572 best=0.591857 stale=1
+EOGFD_Elliptic_TR40_seed72 epoch=10 loss=0.21254 val_AUPRC=0.673833 best=0.673833 stale=0
+EOGFD_Elliptic_TR40_seed72 epoch=20 loss=0.12023 val_AUPRC=0.681548 best=0.683562 stale=1
+EOGFD_Elliptic_TR40_seed72 epoch=30 loss=0.08028 val_AUPRC=0.674868 best=0.683562 stale=11
+EOGFD_Elliptic_TR40_seed72 epoch=39 loss=0.05060 val_AUPRC=0.682004 best=0.683562 stale=20
+EOGFD_Elliptic_TR40_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.683562 threshold=0.96 test_scored=NO
+EOGFD_Elliptic_TR30_TRAIN_PREFIX=PASS timestep_le_12 nodes=64440 edges=78601 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR30_seed2 epoch=1 loss=0.80017 val_AUPRC=0.539729 best=0.539729 stale=0
+EOGFD_Elliptic_TR30_seed2 epoch=2 loss=0.54519 val_AUPRC=0.490004 best=0.539729 stale=1
+EOGFD_Elliptic_TR30_seed2 epoch=10 loss=0.14475 val_AUPRC=0.580662 best=0.603307 stale=6
+EOGFD_Elliptic_TR30_seed2 epoch=20 loss=0.06066 val_AUPRC=0.577196 best=0.603307 stale=16
+EOGFD_Elliptic_TR30_seed2 epoch=24 loss=0.04206 val_AUPRC=0.587205 best=0.603307 stale=20
+EOGFD_Elliptic_TR30_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.603307 threshold=0.93 test_scored=NO
+EOGFD_Elliptic_TR30_TRAIN_PREFIX=PASS timestep_le_12 nodes=64440 edges=78601 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR30_seed42 epoch=1 loss=0.67888 val_AUPRC=0.521850 best=0.521850 stale=0
+EOGFD_Elliptic_TR30_seed42 epoch=2 loss=0.40046 val_AUPRC=0.473261 best=0.521850 stale=1
+EOGFD_Elliptic_TR30_seed42 epoch=10 loss=0.15200 val_AUPRC=0.612176 best=0.612176 stale=0
+EOGFD_Elliptic_TR30_seed42 epoch=20 loss=0.06213 val_AUPRC=0.528278 best=0.617754 stale=9
+EOGFD_Elliptic_TR30_seed42 epoch=30 loss=0.02334 val_AUPRC=0.475571 best=0.617754 stale=19
+EOGFD_Elliptic_TR30_seed42 epoch=31 loss=0.02083 val_AUPRC=0.471440 best=0.617754 stale=20
+EOGFD_Elliptic_TR30_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.617754 threshold=0.96 test_scored=NO
+EOGFD_Elliptic_TR30_TRAIN_PREFIX=PASS timestep_le_12 nodes=64440 edges=78601 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR30_seed72 epoch=1 loss=0.72974 val_AUPRC=0.613155 best=0.613155 stale=0
+EOGFD_Elliptic_TR30_seed72 epoch=2 loss=0.38144 val_AUPRC=0.534915 best=0.613155 stale=1
+EOGFD_Elliptic_TR30_seed72 epoch=10 loss=0.20366 val_AUPRC=0.659499 best=0.659499 stale=0
+EOGFD_Elliptic_TR30_seed72 epoch=20 loss=0.09647 val_AUPRC=0.640706 best=0.659499 stale=10
+EOGFD_Elliptic_TR30_seed72 epoch=30 loss=0.05114 val_AUPRC=0.614904 best=0.659499 stale=20
+EOGFD_Elliptic_TR30_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.659499 threshold=0.93 test_scored=NO
+EOGFD_Elliptic_TR20_TRAIN_PREFIX=PASS timestep_le_7 nodes=41917 edges=52019 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR20_seed2 epoch=1 loss=0.76215 val_AUPRC=0.479630 best=0.479630 stale=0
+EOGFD_Elliptic_TR20_seed2 epoch=2 loss=0.59061 val_AUPRC=0.435595 best=0.479630 stale=1
+EOGFD_Elliptic_TR20_seed2 epoch=10 loss=0.11730 val_AUPRC=0.576052 best=0.576052 stale=0
+EOGFD_Elliptic_TR20_seed2 epoch=20 loss=0.02498 val_AUPRC=0.470363 best=0.576052 stale=10
+EOGFD_Elliptic_TR20_seed2 epoch=30 loss=0.00700 val_AUPRC=0.470089 best=0.576052 stale=20
+EOGFD_Elliptic_TR20_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.576052 threshold=0.97 test_scored=NO
+EOGFD_Elliptic_TR20_TRAIN_PREFIX=PASS timestep_le_7 nodes=41917 edges=52019 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR20_seed42 epoch=1 loss=0.70159 val_AUPRC=0.490022 best=0.490022 stale=0
+EOGFD_Elliptic_TR20_seed42 epoch=2 loss=0.50448 val_AUPRC=0.430964 best=0.490022 stale=1
+EOGFD_Elliptic_TR20_seed42 epoch=10 loss=0.12383 val_AUPRC=0.582795 best=0.582795 stale=0
+EOGFD_Elliptic_TR20_seed42 epoch=20 loss=0.03310 val_AUPRC=0.557739 best=0.603132 stale=7
+EOGFD_Elliptic_TR20_seed42 epoch=30 loss=0.00983 val_AUPRC=0.477629 best=0.603132 stale=17
+EOGFD_Elliptic_TR20_seed42 epoch=33 loss=0.00789 val_AUPRC=0.445247 best=0.603132 stale=20
+EOGFD_Elliptic_TR20_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.603132 threshold=0.98 test_scored=NO
+EOGFD_Elliptic_TR20_TRAIN_PREFIX=PASS timestep_le_7 nodes=41917 edges=52019 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR20_seed72 epoch=1 loss=0.74411 val_AUPRC=0.564578 best=0.564578 stale=0
+EOGFD_Elliptic_TR20_seed72 epoch=2 loss=0.39239 val_AUPRC=0.586088 best=0.586088 stale=0
+EOGFD_Elliptic_TR20_seed72 epoch=10 loss=0.13295 val_AUPRC=0.477285 best=0.586088 stale=8
+EOGFD_Elliptic_TR20_seed72 epoch=20 loss=0.03769 val_AUPRC=0.508808 best=0.586088 stale=18
+EOGFD_Elliptic_TR20_seed72 epoch=22 loss=0.02978 val_AUPRC=0.510744 best=0.586088 stale=20
+EOGFD_Elliptic_TR20_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.586088 threshold=0.96 test_scored=NO
+EOGFD_Elliptic_TR10_TRAIN_PREFIX=PASS timestep_le_3 nodes=19045 edges=22721 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR10_seed2 epoch=1 loss=0.79322 val_AUPRC=0.373555 best=0.373555 stale=0
+EOGFD_Elliptic_TR10_seed2 epoch=2 loss=0.47212 val_AUPRC=0.257208 best=0.373555 stale=1
+EOGFD_Elliptic_TR10_seed2 epoch=10 loss=0.04763 val_AUPRC=0.353879 best=0.463745 stale=6
+EOGFD_Elliptic_TR10_seed2 epoch=20 loss=0.00513 val_AUPRC=0.292151 best=0.463745 stale=16
+EOGFD_Elliptic_TR10_seed2 epoch=24 loss=0.00289 val_AUPRC=0.282260 best=0.463745 stale=20
+EOGFD_Elliptic_TR10_seed2_FROZEN_TRAINING=PASS val_AUPRC=0.463745 threshold=0.94 test_scored=NO
+EOGFD_Elliptic_TR10_TRAIN_PREFIX=PASS timestep_le_3 nodes=19045 edges=22721 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR10_seed42 epoch=1 loss=0.78259 val_AUPRC=0.226426 best=0.226426 stale=0
+EOGFD_Elliptic_TR10_seed42 epoch=2 loss=0.61702 val_AUPRC=0.233818 best=0.233818 stale=0
+EOGFD_Elliptic_TR10_seed42 epoch=10 loss=0.04876 val_AUPRC=0.336512 best=0.336512 stale=0
+EOGFD_Elliptic_TR10_seed42 epoch=20 loss=0.00691 val_AUPRC=0.346741 best=0.350292 stale=4
+EOGFD_Elliptic_TR10_seed42 epoch=30 loss=0.00197 val_AUPRC=0.308084 best=0.350292 stale=14
+EOGFD_Elliptic_TR10_seed42 epoch=36 loss=0.00066 val_AUPRC=0.284959 best=0.350292 stale=20
+EOGFD_Elliptic_TR10_seed42_FROZEN_TRAINING=PASS val_AUPRC=0.350292 threshold=0.98 test_scored=NO
+EOGFD_Elliptic_TR10_TRAIN_PREFIX=PASS timestep_le_3 nodes=19045 edges=22721 test_features_in_train_graph=NO
+EOGFD_Elliptic_TR10_seed72 epoch=1 loss=0.74596 val_AUPRC=0.365352 best=0.365352 stale=0
+EOGFD_Elliptic_TR10_seed72 epoch=2 loss=0.37999 val_AUPRC=0.500746 best=0.500746 stale=0
+EOGFD_Elliptic_TR10_seed72 epoch=10 loss=0.04039 val_AUPRC=0.403521 best=0.500746 stale=8
+EOGFD_Elliptic_TR10_seed72 epoch=20 loss=0.00359 val_AUPRC=0.393021 best=0.500746 stale=18
+EOGFD_Elliptic_TR10_seed72 epoch=22 loss=0.00240 val_AUPRC=0.388495 best=0.500746 stale=20
+EOGFD_Elliptic_TR10_seed72_FROZEN_TRAINING=PASS val_AUPRC=0.500746 threshold=0.95 test_scored=NO
+EOGFD_Elliptic_TR40_STAGE4_VAL_AUPRC_MEAN=0.693353 SAMPLE_SD=0.016040
+EOGFD_Elliptic_TR30_STAGE4_VAL_AUPRC_MEAN=0.626853 SAMPLE_SD=0.029181
+EOGFD_Elliptic_TR20_STAGE4_VAL_AUPRC_MEAN=0.588424 SAMPLE_SD=0.013690
+EOGFD_Elliptic_TR10_STAGE4_VAL_AUPRC_MEAN=0.438261 SAMPLE_SD=0.078397
+EOGFD_Elliptic_STAGE4_12_FROZEN_TRAININGS_COMPLETE=PASS TEST_SCORED=NO VENUS_APPROVAL_NOT_RECORDED
+EOGFD_Elliptic_STAGE4_SEQUENCE_STEP=PASS
+EOGFD_NEWI_BOTH_CONDITIONAL_STAGE4_12X2_FROZEN_TRAININGS_COMPLETE=PASS TEST_SCORED=NO VENUS_APPROVAL_NOT_RECORDED

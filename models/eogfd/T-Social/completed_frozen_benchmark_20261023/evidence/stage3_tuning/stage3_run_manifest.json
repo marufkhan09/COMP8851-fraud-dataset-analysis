@@ -1,0 +1,156 @@
+{
+  "dataset": "T-Social",
+  "eval_seed": 100921,
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "grid": [
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 10,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 8,
+      "population_size": 20,
+      "weight_decay": 0.0
+    }
+  ],
+  "max_epochs": 100,
+  "memory_diagnostic_sha256": "8f324b22a3ff5bbf3df53fc15552cd2f00c518d742c8693bfafd5dcc56db18af",
+  "mode": "UNIFIED_FROZEN_SPLITS_SCOPED_ELITE_PLUS_STREAMED_TRAIN_EVAL_IMPL_OPT_NOT_AUTHOR_UNMODIFIED",
+  "note": "Input graph and nested splits verified. Process-local elite-only selection, plus train-and-validation per-candidate streamed population fitness. Small-graph theta and RNG-state tested. Full-graph bitwise equivalence not claimed. Author repository unchanged; not unmodified author-run.",
+  "original_eogfd_author_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "original_native_relation_count": 1,
+  "original_repository_unchanged": true,
+  "patience": 20,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "runtime_select_override": true,
+  "selection": "TR40_seed2_validation_AUPRC",
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_seed": 2,
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "streamed_fitness_chunk_population_size": 1,
+  "streamed_fitness_training_and_validation": true,
+  "streamed_fitness_validation_only": true,
+  "test_labels_indexed": false,
+  "test_scored": false,
+  "tuning_seed": 2
+}

@@ -1,0 +1,113 @@
+{
+  "completed_finals": 12,
+  "frozen_winner_sha256": "fd4582835be1cf9df21d7a6b55c35734f9d1815c39b05ec8337704635d112b6f",
+  "mode": "UNIFIED_INPUT_ADAPTER_NOT_AUTHOR_IDENTICAL",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "runs": [
+    {
+      "ratio": "TR40",
+      "record_sha256": "a827dc147ca2af393a4ab08c64ba8a0fa163f712759e97038c8b9f2a5d021f46",
+      "seed": 2,
+      "threshold": 0.98,
+      "validation_auprc": 0.8817605429349379
+    },
+    {
+      "ratio": "TR40",
+      "record_sha256": "393a5ecbfb4781b929f727f56bdb8db89e0fc5a3ffb7d7a66c0e383fbb9aaf04",
+      "seed": 42,
+      "threshold": 0.94,
+      "validation_auprc": 0.8783943764598776
+    },
+    {
+      "ratio": "TR40",
+      "record_sha256": "16e170a67a100093c3f95d001e6e5c9e1baea796428ec06859b1353ac34fd63e",
+      "seed": 72,
+      "threshold": 0.96,
+      "validation_auprc": 0.8811916332897669
+    },
+    {
+      "ratio": "TR30",
+      "record_sha256": "9c28626f82dba13e2d11a07f47b0e57167eee3e5a24b1f27dbcfcddf29ceff43",
+      "seed": 2,
+      "threshold": 0.97,
+      "validation_auprc": 0.881860568140852
+    },
+    {
+      "ratio": "TR30",
+      "record_sha256": "17eb0a8b6515fcb869586e038e2cb529a4072abd8e236a442b08ab22271adf97",
+      "seed": 42,
+      "threshold": 0.93,
+      "validation_auprc": 0.8792613918684586
+    },
+    {
+      "ratio": "TR30",
+      "record_sha256": "ce31291717213ff3a36b369aef51311103eac9587e208c1ab84a33b11a4563b4",
+      "seed": 72,
+      "threshold": 0.94,
+      "validation_auprc": 0.879616372439193
+    },
+    {
+      "ratio": "TR20",
+      "record_sha256": "964afe41ccae97b8668d9691a8ba01edad058bf82e49f68116864bed194bf0c6",
+      "seed": 2,
+      "threshold": 0.97,
+      "validation_auprc": 0.8757999837919676
+    },
+    {
+      "ratio": "TR20",
+      "record_sha256": "ec4fd1d324861cbb173839df6a576174451c641cee27491351f241231af9b21a",
+      "seed": 42,
+      "threshold": 0.96,
+      "validation_auprc": 0.8715641222267255
+    },
+    {
+      "ratio": "TR20",
+      "record_sha256": "0870625f08611a57b90a57deddef388034ad61ca305c8f4c64cc4becdbd9e65b",
+      "seed": 72,
+      "threshold": 0.96,
+      "validation_auprc": 0.8762509742069825
+    },
+    {
+      "ratio": "TR10",
+      "record_sha256": "3ab80d78931271fea4b5c536e95aa6b08ccac1ae36c8e23910ee9f1daa458594",
+      "seed": 2,
+      "threshold": 0.96,
+      "validation_auprc": 0.8602594040288256
+    },
+    {
+      "ratio": "TR10",
+      "record_sha256": "e40159860cbb8251b207aff2c4fc94d45041f0e6174da7507398f1938dcaf284",
+      "seed": 42,
+      "threshold": 0.95,
+      "validation_auprc": 0.8568654555231999
+    },
+    {
+      "ratio": "TR10",
+      "record_sha256": "64d672cde13b3c4a4afff32cebc9f11d33a9ce3fe03ab676be8a512489ecd63b",
+      "seed": 72,
+      "threshold": 0.94,
+      "validation_auprc": 0.8645509252777789
+    }
+  ],
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "stage3_launch_import_patch_exactly_attested": true,
+  "stage3_runtime_launcher_sha256": "5882e569a43058fc47fe7edcb06b6b7dc84dcba904030908fd2de9dff5273c53",
+  "stage4_summary_sha256": "1d470fb5bd3a43c50962b2baada669c14d5dc8cb4ee5c33643f8400837b6b966",
+  "status": "ALL_12_FROZEN_PRETEST_AUDITS_PASS",
+  "test_evaluations": 0,
+  "test_labels_indexed": false,
+  "test_scored": false,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_methodological_approval_recorded": false
+}

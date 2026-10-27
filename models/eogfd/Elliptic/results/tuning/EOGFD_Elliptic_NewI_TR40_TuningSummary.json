@@ -1,0 +1,232 @@
+{
+  "trial_metrics": [
+    {
+      "best_epoch": 43,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 1,
+      "val_auprc": 0.7066154025287541
+    },
+    {
+      "best_epoch": 42,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 2,
+      "val_auprc": 0.7066690554275403
+    },
+    {
+      "best_epoch": 42,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 3,
+      "val_auprc": 0.705945349944022
+    },
+    {
+      "best_epoch": 42,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.001,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 4,
+      "val_auprc": 0.7066660008828201
+    },
+    {
+      "best_epoch": 21,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 5,
+      "val_auprc": 0.6987764175908884
+    },
+    {
+      "best_epoch": 21,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 6,
+      "val_auprc": 0.6988471080596481
+    },
+    {
+      "best_epoch": 21,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 7,
+      "val_auprc": 0.6978783282395413
+    },
+    {
+      "best_epoch": 21,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.003,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 8,
+      "val_auprc": 0.6987973607034725
+    },
+    {
+      "best_epoch": 53,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 9,
+      "val_auprc": 0.6999430310508239
+    },
+    {
+      "best_epoch": 100,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 10,
+        "weight_decay": 0.0
+      },
+      "trial": 10,
+      "val_auprc": 0.7088969760688977
+    },
+    {
+      "best_epoch": 91,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.05,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 11,
+      "val_auprc": 0.707918939621427
+    },
+    {
+      "best_epoch": 95,
+      "config": {
+        "beta_p": 1,
+        "hidden_dim": 64,
+        "lamb": 0.0,
+        "lr": 0.01,
+        "mutation_rate": 0.1,
+        "order": 3,
+        "population_size": 20,
+        "weight_decay": 0.0
+      },
+      "trial": 12,
+      "val_auprc": 0.7077120901703813
+    }
+  ],
+  "winner": {
+    "adapter_provenance": {
+      "adapter_eligibility": "CONDITIONAL_PENDING_VENUS_REVIEW",
+      "author_identical": false,
+      "graph_semantics": "Single original directed transaction-edge relation; train prefix <=20, validation only snapshot <=31; held-out test starts at 32",
+      "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+      "test_labels_in_graph": false,
+      "train_edges": 106807,
+      "train_nodes": 90762,
+      "val_edges": 145833,
+      "val_nodes": 126103
+    },
+    "dataset": "Elliptic",
+    "final_seeds": [
+      2,
+      42,
+      72
+    ],
+    "final_training_started": false,
+    "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+    "ratios": [
+      "TR40",
+      "TR30",
+      "TR20",
+      "TR10"
+    ],
+    "source_sha256": "d2f7110d973564b5cd3b491ba3e0e59a6e16d75033e3796ac601bbf1ecd58160",
+    "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+    "status": "TR40_12_VALIDATION_ONLY_TRIALS_COMPLETED_CONDITIONAL",
+    "test_labels_accessed": false,
+    "test_scored": false,
+    "trial_count": 12,
+    "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+    "venus_approval_recorded": false,
+    "winner_checkpoint_sha256": "70c76fc94713c3e0fd15b9bee4d13f51a485deac6132339490be01290f6f0da2",
+    "winner_config": {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 3,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    "winner_trial": 10,
+    "winner_val_auprc": 0.7088969760688977
+  }
+}

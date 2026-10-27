@@ -1,0 +1,52 @@
+{
+  "batch_size": 1024,
+  "by_ratio": {
+    "TR10": {
+      "macro_f1_mean": 0.7474574667021313,
+      "n": 3,
+      "test_auprc_mean": 0.6146858254298093,
+      "test_auprc_sd_sample": 0.01084274016628897,
+      "test_auroc_mean": 0.8720891643816371
+    },
+    "TR20": {
+      "macro_f1_mean": 0.7864213251813642,
+      "n": 3,
+      "test_auprc_mean": 0.6904250804996189,
+      "test_auprc_sd_sample": 0.0088633492574039,
+      "test_auroc_mean": 0.899553251267435
+    },
+    "TR30": {
+      "macro_f1_mean": 0.8060830164942089,
+      "n": 3,
+      "test_auprc_mean": 0.7387983173433107,
+      "test_auprc_sd_sample": 0.007031638825162195,
+      "test_auroc_mean": 0.9176124973800014
+    },
+    "TR40": {
+      "macro_f1_mean": 0.828722596074195,
+      "n": 3,
+      "test_auprc_mean": 0.7817470880377458,
+      "test_auprc_sd_sample": 0.009146477583589397,
+      "test_auroc_mean": 0.9340549997190851
+    }
+  },
+  "dataset": "YelpChi",
+  "model": "RGTAN",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "seeds": [
+    2,
+    42,
+    72
+  ],
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "TWELVE_FINALS_COMPLETE",
+  "test_scored_once_per_run": true,
+  "winner_sha256": "124ca6d541e0467f3e70987a48854292d5c9ccdf5b54f6e2071d322d41a1c7e5",
+  "winner_trial": 4
+}

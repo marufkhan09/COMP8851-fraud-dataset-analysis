@@ -1,0 +1,408 @@
+
+=== LAUNCH 2026-10-23T13:57:15.345682+00:00 ===
+I2_AUTHOR_PIN_SOURCE_SPLIT_ENV_AUDIT=PASS
+I2_FROZEN_SPLIT_AUDIT=PASS
+I2_TRAIN_POOL_AUDIT=PASS ratio= TR20 seed= 72 nodes= 1156212 fraud= 34856
+I2_AUTHOR_MINMAX_FEATURE_ADAPTER=PASS range= 0.0 1.0
+I2_TRAIN_LABELS_ONLY_VALIDATION_SELECTED_TEST_LABELS_INDEXED=NO full_validation=1156213 val_fraud=34856
+I2_CANONICAL_GRAPH_PREP_SECONDS= 4.048
+I2_SAWGAD_REAL_TRAINING_STARTED=YES run_id= final_TR20_seed72 stage=synthetic_warmup
+I2_SAWGAD_WARMUP_STEP=1/32 loss=0.694156 elapsed_s=9.7
+I2_SAWGAD_WARMUP_STEP=2/32 loss=0.692797 elapsed_s=9.8
+I2_SAWGAD_WARMUP_STEP=3/32 loss=0.694636 elapsed_s=9.8
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.389744 best= 0.389744 step= 4
+I2_SAWGAD_WARMUP_STEP=4/32 loss=0.693915 elapsed_s=9.9
+I2_SAWGAD_WARMUP_STEP=5/32 loss=0.694582 elapsed_s=9.9
+I2_SAWGAD_WARMUP_STEP=6/32 loss=0.693452 elapsed_s=10.0
+I2_SAWGAD_WARMUP_STEP=7/32 loss=0.692551 elapsed_s=10.0
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.416987 best= 0.416987 step= 8
+I2_SAWGAD_WARMUP_STEP=8/32 loss=0.694758 elapsed_s=10.1
+I2_SAWGAD_WARMUP_STEP=9/32 loss=0.694001 elapsed_s=10.1
+I2_SAWGAD_WARMUP_STEP=10/32 loss=0.692915 elapsed_s=10.1
+I2_SAWGAD_WARMUP_STEP=11/32 loss=0.694986 elapsed_s=10.2
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.469551 best= 0.469551 step= 12
+I2_SAWGAD_WARMUP_STEP=12/32 loss=0.692696 elapsed_s=10.2
+I2_SAWGAD_WARMUP_STEP=13/32 loss=0.692584 elapsed_s=10.3
+I2_SAWGAD_WARMUP_STEP=14/32 loss=0.693234 elapsed_s=10.3
+I2_SAWGAD_WARMUP_STEP=15/32 loss=0.693051 elapsed_s=10.4
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.492308 best= 0.492308 step= 16
+I2_SAWGAD_WARMUP_STEP=16/32 loss=0.692152 elapsed_s=10.4
+I2_SAWGAD_WARMUP_STEP=17/32 loss=0.690783 elapsed_s=10.5
+I2_SAWGAD_WARMUP_STEP=18/32 loss=0.692801 elapsed_s=10.5
+I2_SAWGAD_WARMUP_STEP=19/32 loss=0.690910 elapsed_s=10.5
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.496474 best= 0.496474 step= 20
+I2_SAWGAD_WARMUP_STEP=20/32 loss=0.692604 elapsed_s=10.6
+I2_SAWGAD_WARMUP_STEP=21/32 loss=0.692252 elapsed_s=10.6
+I2_SAWGAD_WARMUP_STEP=22/32 loss=0.692545 elapsed_s=10.7
+I2_SAWGAD_WARMUP_STEP=23/32 loss=0.690929 elapsed_s=10.7
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.502564 best= 0.502564 step= 24
+I2_SAWGAD_WARMUP_STEP=24/32 loss=0.692815 elapsed_s=10.8
+I2_SAWGAD_WARMUP_STEP=25/32 loss=0.691718 elapsed_s=10.8
+I2_SAWGAD_WARMUP_STEP=26/32 loss=0.691609 elapsed_s=10.9
+I2_SAWGAD_WARMUP_STEP=27/32 loss=0.691680 elapsed_s=10.9
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.508654 best= 0.508654 step= 28
+I2_SAWGAD_WARMUP_STEP=28/32 loss=0.692298 elapsed_s=11.0
+I2_SAWGAD_WARMUP_STEP=29/32 loss=0.693716 elapsed_s=11.0
+I2_SAWGAD_WARMUP_STEP=30/32 loss=0.691043 elapsed_s=11.0
+I2_SAWGAD_WARMUP_STEP=31/32 loss=0.690358 elapsed_s=11.1
+I2_WARMUP_SYNTHETIC_VALIDATION_AUROC= 0.511859 best= 0.511859 step= 32
+I2_SAWGAD_WARMUP_STEP=32/32 loss=0.691939 elapsed_s=11.1
+I2_SAWGAD_WARMUP_BEST_STATE_RESTORED=PASS best_synthetic_val_AUROC= 0.511859 winning_step= 32
+I2_SAWGAD_WARMUP_CHECKPOINT=PASS completed_steps= 32
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=64/1024 loss=3.524877 elapsed_s=2.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=128/1024 loss=3.738886 elapsed_s=4.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=192/1024 loss=2.994164 elapsed_s=6.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=256/1024 loss=2.885226 elapsed_s=9.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=320/1024 loss=2.630095 elapsed_s=11.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=384/1024 loss=2.650145 elapsed_s=13.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=448/1024 loss=2.743072 elapsed_s=15.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=512/1024 loss=2.557943 elapsed_s=18.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=576/1024 loss=2.859563 elapsed_s=20.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=640/1024 loss=2.950881 elapsed_s=22.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=704/1024 loss=2.291591 elapsed_s=25.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=768/1024 loss=2.358650 elapsed_s=27.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=832/1024 loss=2.622150 elapsed_s=29.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=896/1024 loss=2.758891 elapsed_s=32.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=960/1024 loss=2.283906 elapsed_s=36.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=1/16 batch=1024/1024 loss=2.310654 elapsed_s=39.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 46.881, "epoch": 1, "full_validation_AUPRC": 0.13077589828866049, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.8844300707569346, "train_batch_count": 1024, "validation_seconds": 7.141}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=64/1024 loss=2.641594 elapsed_s=3.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=128/1024 loss=2.610054 elapsed_s=7.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=192/1024 loss=2.101570 elapsed_s=11.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=256/1024 loss=2.317373 elapsed_s=14.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=320/1024 loss=2.963130 elapsed_s=18.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=384/1024 loss=2.536203 elapsed_s=22.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=448/1024 loss=2.422859 elapsed_s=25.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=512/1024 loss=1.609047 elapsed_s=29.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=576/1024 loss=2.342678 elapsed_s=32.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=640/1024 loss=2.414598 elapsed_s=36.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=704/1024 loss=2.770082 elapsed_s=39.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=768/1024 loss=1.892478 elapsed_s=42.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=832/1024 loss=2.404025 elapsed_s=46.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=896/1024 loss=3.110916 elapsed_s=49.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=960/1024 loss=2.737292 elapsed_s=53.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=2/16 batch=1024/1024 loss=2.021029 elapsed_s=56.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 63.806, "epoch": 2, "full_validation_AUPRC": 0.13527058717349535, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.366112655377947, "train_batch_count": 1024, "validation_seconds": 7.15}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=64/1024 loss=2.312173 elapsed_s=2.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=128/1024 loss=1.942186 elapsed_s=4.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=192/1024 loss=2.115421 elapsed_s=6.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=256/1024 loss=2.491951 elapsed_s=9.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=320/1024 loss=1.763845 elapsed_s=11.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=384/1024 loss=4.639816 elapsed_s=13.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=448/1024 loss=2.242873 elapsed_s=16.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=512/1024 loss=2.185957 elapsed_s=18.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=576/1024 loss=2.002861 elapsed_s=20.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=640/1024 loss=2.185310 elapsed_s=22.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=704/1024 loss=2.468124 elapsed_s=25.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=768/1024 loss=1.827249 elapsed_s=27.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=832/1024 loss=2.022585 elapsed_s=30.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=896/1024 loss=2.245398 elapsed_s=33.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=960/1024 loss=2.822918 elapsed_s=35.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=3/16 batch=1024/1024 loss=2.062025 elapsed_s=37.8
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 43.852, "epoch": 3, "full_validation_AUPRC": 0.1464465724977231, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.2691504190443084, "train_batch_count": 1024, "validation_seconds": 6.068}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=64/1024 loss=2.172073 elapsed_s=2.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=128/1024 loss=2.068176 elapsed_s=4.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=192/1024 loss=2.183659 elapsed_s=6.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=256/1024 loss=1.920176 elapsed_s=9.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=320/1024 loss=2.452967 elapsed_s=11.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=384/1024 loss=1.925662 elapsed_s=13.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=448/1024 loss=1.785253 elapsed_s=15.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=512/1024 loss=3.017171 elapsed_s=18.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=576/1024 loss=2.618941 elapsed_s=21.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=640/1024 loss=2.329990 elapsed_s=26.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=704/1024 loss=2.220189 elapsed_s=31.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=768/1024 loss=2.555676 elapsed_s=35.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=832/1024 loss=1.937294 elapsed_s=40.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=896/1024 loss=2.035581 elapsed_s=44.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=960/1024 loss=1.274878 elapsed_s=49.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=4/16 batch=1024/1024 loss=2.290314 elapsed_s=54.4
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 65.359, "epoch": 4, "full_validation_AUPRC": 0.15140020145865823, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.1923933369107544, "train_batch_count": 1024, "validation_seconds": 10.932}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=64/1024 loss=2.455359 elapsed_s=4.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=128/1024 loss=2.206421 elapsed_s=8.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=192/1024 loss=2.495152 elapsed_s=13.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=256/1024 loss=1.995347 elapsed_s=17.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=320/1024 loss=2.028968 elapsed_s=22.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=384/1024 loss=2.553963 elapsed_s=26.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=448/1024 loss=2.082772 elapsed_s=31.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=512/1024 loss=2.601254 elapsed_s=35.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=576/1024 loss=1.935245 elapsed_s=41.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=640/1024 loss=2.063335 elapsed_s=46.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=704/1024 loss=2.669005 elapsed_s=49.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=768/1024 loss=1.509921 elapsed_s=53.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=832/1024 loss=2.036419 elapsed_s=56.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=896/1024 loss=1.904795 elapsed_s=60.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=960/1024 loss=1.799568 elapsed_s=64.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=5/16 batch=1024/1024 loss=2.598934 elapsed_s=67.8
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 76.054, "epoch": 5, "full_validation_AUPRC": 0.1513290988231851, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.160374138271436, "train_batch_count": 1024, "validation_seconds": 8.282}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=64/1024 loss=2.363679 elapsed_s=3.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=128/1024 loss=1.860653 elapsed_s=7.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=192/1024 loss=1.947531 elapsed_s=10.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=256/1024 loss=1.854546 elapsed_s=14.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=320/1024 loss=1.992453 elapsed_s=17.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=384/1024 loss=2.300918 elapsed_s=21.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=448/1024 loss=2.265964 elapsed_s=25.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=512/1024 loss=2.910909 elapsed_s=29.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=576/1024 loss=1.760319 elapsed_s=32.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=640/1024 loss=2.020097 elapsed_s=36.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=704/1024 loss=2.565729 elapsed_s=39.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=768/1024 loss=2.047924 elapsed_s=42.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=832/1024 loss=1.654818 elapsed_s=46.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=896/1024 loss=2.173235 elapsed_s=50.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=960/1024 loss=1.680779 elapsed_s=53.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=6/16 batch=1024/1024 loss=1.651150 elapsed_s=56.9
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 64.134, "epoch": 6, "full_validation_AUPRC": 0.14897226756201432, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.1347468679305166, "train_batch_count": 1024, "validation_seconds": 7.254}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=64/1024 loss=1.412976 elapsed_s=3.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=128/1024 loss=2.036148 elapsed_s=6.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=192/1024 loss=2.053038 elapsed_s=10.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=256/1024 loss=1.942712 elapsed_s=15.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=320/1024 loss=1.771471 elapsed_s=19.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=384/1024 loss=2.329033 elapsed_s=22.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=448/1024 loss=2.332515 elapsed_s=24.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=512/1024 loss=2.405463 elapsed_s=26.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=576/1024 loss=2.100809 elapsed_s=28.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=640/1024 loss=1.952476 elapsed_s=30.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=704/1024 loss=2.705751 elapsed_s=33.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=768/1024 loss=2.308800 elapsed_s=35.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=832/1024 loss=2.827037 elapsed_s=38.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=896/1024 loss=2.122400 elapsed_s=40.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=960/1024 loss=1.789492 elapsed_s=42.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=7/16 batch=1024/1024 loss=2.604683 elapsed_s=45.0
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 51.185, "epoch": 7, "full_validation_AUPRC": 0.15439766904938867, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.0907367154723033, "train_batch_count": 1024, "validation_seconds": 6.216}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=64/1024 loss=2.112921 elapsed_s=2.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=128/1024 loss=2.364977 elapsed_s=4.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=192/1024 loss=2.341105 elapsed_s=6.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=256/1024 loss=2.486377 elapsed_s=8.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=320/1024 loss=2.217437 elapsed_s=10.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=384/1024 loss=2.007545 elapsed_s=12.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=448/1024 loss=2.074460 elapsed_s=14.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=512/1024 loss=1.543440 elapsed_s=17.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=576/1024 loss=2.559073 elapsed_s=19.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=640/1024 loss=1.761525 elapsed_s=21.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=704/1024 loss=1.960646 elapsed_s=23.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=768/1024 loss=2.607380 elapsed_s=26.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=832/1024 loss=1.813728 elapsed_s=28.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=896/1024 loss=1.909214 elapsed_s=30.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=960/1024 loss=2.006680 elapsed_s=34.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=8/16 batch=1024/1024 loss=1.544861 elapsed_s=38.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 46.567, "epoch": 8, "full_validation_AUPRC": 0.1516611103526441, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.070633037481457, "train_batch_count": 1024, "validation_seconds": 7.898}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=64/1024 loss=1.985840 elapsed_s=3.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=128/1024 loss=1.546516 elapsed_s=7.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=192/1024 loss=2.583976 elapsed_s=11.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=256/1024 loss=1.906194 elapsed_s=14.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=320/1024 loss=2.666637 elapsed_s=18.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=384/1024 loss=2.365903 elapsed_s=22.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=448/1024 loss=1.918406 elapsed_s=26.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=512/1024 loss=2.245797 elapsed_s=31.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=576/1024 loss=2.515336 elapsed_s=34.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=640/1024 loss=2.156086 elapsed_s=38.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=704/1024 loss=1.901123 elapsed_s=41.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=768/1024 loss=2.657043 elapsed_s=45.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=832/1024 loss=2.578034 elapsed_s=49.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=896/1024 loss=2.859231 elapsed_s=53.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=960/1024 loss=2.204715 elapsed_s=57.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=9/16 batch=1024/1024 loss=2.202083 elapsed_s=60.6
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 69.047, "epoch": 9, "full_validation_AUPRC": 0.15993387745721432, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.0544722862541676, "train_batch_count": 1024, "validation_seconds": 8.456}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=64/1024 loss=1.793769 elapsed_s=3.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=128/1024 loss=2.099578 elapsed_s=7.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=192/1024 loss=1.399965 elapsed_s=11.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=256/1024 loss=2.321616 elapsed_s=14.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=320/1024 loss=2.054157 elapsed_s=18.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=384/1024 loss=2.219329 elapsed_s=22.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=448/1024 loss=1.991892 elapsed_s=25.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=512/1024 loss=2.142300 elapsed_s=29.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=576/1024 loss=1.856191 elapsed_s=33.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=640/1024 loss=1.899477 elapsed_s=37.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=704/1024 loss=1.851997 elapsed_s=41.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=768/1024 loss=1.564887 elapsed_s=45.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=832/1024 loss=1.866111 elapsed_s=49.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=896/1024 loss=1.661634 elapsed_s=54.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=960/1024 loss=2.369899 elapsed_s=58.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=10/16 batch=1024/1024 loss=1.913356 elapsed_s=62.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 75.021, "epoch": 10, "full_validation_AUPRC": 0.1659716536788394, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.034187660785392, "train_batch_count": 1024, "validation_seconds": 12.325}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=64/1024 loss=2.578397 elapsed_s=2.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=128/1024 loss=1.935914 elapsed_s=5.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=192/1024 loss=1.779001 elapsed_s=7.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=256/1024 loss=1.580740 elapsed_s=9.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=320/1024 loss=1.951924 elapsed_s=12.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=384/1024 loss=1.452543 elapsed_s=14.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=448/1024 loss=2.513358 elapsed_s=16.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=512/1024 loss=2.210485 elapsed_s=19.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=576/1024 loss=2.373732 elapsed_s=21.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=640/1024 loss=1.875164 elapsed_s=23.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=704/1024 loss=2.233536 elapsed_s=26.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=768/1024 loss=1.808574 elapsed_s=28.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=832/1024 loss=1.722045 elapsed_s=30.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=896/1024 loss=1.872356 elapsed_s=33.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=960/1024 loss=2.092305 elapsed_s=35.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=11/16 batch=1024/1024 loss=1.823041 elapsed_s=37.2
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 42.832, "epoch": 11, "full_validation_AUPRC": 0.17026407956770606, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.008659402956255, "train_batch_count": 1024, "validation_seconds": 5.631}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=64/1024 loss=2.257256 elapsed_s=2.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=128/1024 loss=1.371709 elapsed_s=4.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=192/1024 loss=2.207982 elapsed_s=6.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=256/1024 loss=2.044270 elapsed_s=8.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=320/1024 loss=2.385829 elapsed_s=11.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=384/1024 loss=1.984143 elapsed_s=13.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=448/1024 loss=2.632565 elapsed_s=15.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=512/1024 loss=1.686422 elapsed_s=18.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=576/1024 loss=2.084584 elapsed_s=20.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=640/1024 loss=2.606549 elapsed_s=24.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=704/1024 loss=1.438623 elapsed_s=27.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=768/1024 loss=2.125876 elapsed_s=31.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=832/1024 loss=2.492368 elapsed_s=35.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=896/1024 loss=2.209789 elapsed_s=39.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=960/1024 loss=2.827705 elapsed_s=42.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=12/16 batch=1024/1024 loss=1.652454 elapsed_s=46.2
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 53.708, "epoch": 12, "full_validation_AUPRC": 0.16848392616676677, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.0475981686031446, "train_batch_count": 1024, "validation_seconds": 7.48}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=64/1024 loss=1.925674 elapsed_s=3.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=128/1024 loss=1.557441 elapsed_s=7.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=192/1024 loss=1.707427 elapsed_s=11.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=256/1024 loss=1.735270 elapsed_s=15.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=320/1024 loss=2.386593 elapsed_s=19.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=384/1024 loss=1.901306 elapsed_s=22.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=448/1024 loss=2.033596 elapsed_s=26.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=512/1024 loss=1.956650 elapsed_s=30.5
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=576/1024 loss=1.538000 elapsed_s=33.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=640/1024 loss=2.040317 elapsed_s=37.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=704/1024 loss=2.013273 elapsed_s=40.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=768/1024 loss=1.422691 elapsed_s=44.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=832/1024 loss=1.737302 elapsed_s=47.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=896/1024 loss=2.150940 elapsed_s=51.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=960/1024 loss=2.142458 elapsed_s=54.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=13/16 batch=1024/1024 loss=1.872588 elapsed_s=57.9
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 65.846, "epoch": 13, "full_validation_AUPRC": 0.16684708489794206, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.0145727172493935, "train_batch_count": 1024, "validation_seconds": 7.94}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=64/1024 loss=1.366882 elapsed_s=3.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=128/1024 loss=1.686530 elapsed_s=6.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=192/1024 loss=1.404713 elapsed_s=9.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=256/1024 loss=2.164180 elapsed_s=13.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=320/1024 loss=1.727162 elapsed_s=16.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=384/1024 loss=2.058440 elapsed_s=20.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=448/1024 loss=2.015769 elapsed_s=23.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=512/1024 loss=1.978481 elapsed_s=27.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=576/1024 loss=2.339705 elapsed_s=30.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=640/1024 loss=2.908560 elapsed_s=34.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=704/1024 loss=1.813474 elapsed_s=37.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=768/1024 loss=2.047349 elapsed_s=41.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=832/1024 loss=1.738492 elapsed_s=45.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=896/1024 loss=1.474785 elapsed_s=49.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=960/1024 loss=1.564195 elapsed_s=53.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=14/16 batch=1024/1024 loss=2.458992 elapsed_s=57.7
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 67.58, "epoch": 14, "full_validation_AUPRC": 0.1727357837502907, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 1.9951685775304213, "train_batch_count": 1024, "validation_seconds": 9.875}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=64/1024 loss=1.780196 elapsed_s=4.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=128/1024 loss=1.732995 elapsed_s=7.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=192/1024 loss=1.800990 elapsed_s=11.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=256/1024 loss=1.965407 elapsed_s=14.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=320/1024 loss=2.232657 elapsed_s=18.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=384/1024 loss=2.003289 elapsed_s=21.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=448/1024 loss=2.108341 elapsed_s=25.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=512/1024 loss=1.694309 elapsed_s=28.8
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=576/1024 loss=2.234061 elapsed_s=32.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=640/1024 loss=1.762255 elapsed_s=36.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=704/1024 loss=1.804321 elapsed_s=39.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=768/1024 loss=1.705842 elapsed_s=43.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=832/1024 loss=2.117027 elapsed_s=47.0
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=896/1024 loss=2.464403 elapsed_s=50.6
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=960/1024 loss=1.679883 elapsed_s=54.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=15/16 batch=1024/1024 loss=1.509534 elapsed_s=57.8
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 66.277, "epoch": 15, "full_validation_AUPRC": 0.16902348068972117, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 2.0016547654522583, "train_batch_count": 1024, "validation_seconds": 8.482}
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=64/1024 loss=1.989150 elapsed_s=3.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=128/1024 loss=1.595333 elapsed_s=6.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=192/1024 loss=2.064568 elapsed_s=10.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=256/1024 loss=2.281910 elapsed_s=13.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=320/1024 loss=1.798907 elapsed_s=17.4
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=384/1024 loss=1.457023 elapsed_s=20.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=448/1024 loss=2.863375 elapsed_s=24.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=512/1024 loss=1.446048 elapsed_s=27.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=576/1024 loss=2.197281 elapsed_s=31.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=640/1024 loss=2.108867 elapsed_s=34.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=704/1024 loss=2.289564 elapsed_s=38.3
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=768/1024 loss=3.092507 elapsed_s=42.2
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=832/1024 loss=3.264206 elapsed_s=45.9
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=896/1024 loss=1.907862 elapsed_s=49.7
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=960/1024 loss=2.196720 elapsed_s=54.1
+I2_SAWGAD_final_TR20_seed72_TRAIN round=16/16 batch=1024/1024 loss=1.910516 elapsed_s=58.1
+I2_FULL_VALIDATION_PROGRESS= 206848 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 411648 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 616448 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 821248 / 1156213
+I2_FULL_VALIDATION_PROGRESS= 1026048 / 1156213
+I2_SAWGAD_EPOCH_COMPLETE={"elapsed_seconds": 66.791, "epoch": 16, "full_validation_AUPRC": 0.17020227220112183, "full_validation_count": 1156213, "full_validation_fraud": 34856, "gpu_peak_allocated_gib": 0.0442, "mean_training_loss": 1.9625279650790617, "train_batch_count": 1024, "validation_seconds": 8.662}
+I2_SAWGAD_WORKER_COMPLETED=PASS run_id= final_TR20_seed72
+I2_SAWGAD_NO_TEST_LABEL_ACCESS=PASS
+I2_SAWGAD_HOLDOUT_TEST_AUTHORIZED=NO
+I2_SAWGAD_HELDOUT_TEST_AUTHORIZED=NO
+I2_SAWGAD_RUN_SUMMARY={"all_validation_nodes_evaluated": true, "best_warmup_synthetic_val_AUROC": 0.5118589743589743, "final_benchmark_result": false, "full_validation_AUPRC_best": 0.1727357837502907, "full_validation_examples": 1156213, "full_validation_fraud": 34856, "fullgraph_author_equivalent": false, "heldout_test_labels_indexed": false, "heldout_test_metrics_computed": false, "max_cuda_allocated_gib": 0.0442, "max_process_rss_gib": 7.0268, "methodological_approval_recorded": false, "protocol": {"author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2", "checkpoints_selected_on": "full_frozen_validation_AUPRC", "complete_validation": true, "configuration_frozen_from_trial": 9, "configuration_frozen_sha256": "ffb707289082e29b9cdc147d307718924bcdef01bfab7eb260a5e4cbe0ec9859", "dataset": "T-Social", "drop_rate": 0.0, "encoder_heads": 4, "encoder_layers": 1, "fanout": 10, "feature_adapter": "author_global_transductive_minmax", "final_canonical_benchmark": false, "full_lr": 0.005, "heldout_test_indexed": false, "heldout_test_scored": false, "hidden_dim": 64, "hidden_multiplier": 1.25, "joint_regularization_weight": 4.44, "methodological_approval_required": true, "model": "SAWGAD", "phase": "FROZEN_3SEED_4RATIO_TRAIN_ONLY", "ratio": "TR20", "real_neg_per_step": 248, "real_pos_per_step": 8, "run_id": "final_TR20_seed72", "sampling_mode": "one_hop_inbound_bounded_neighbour_context_not_fullgraph", "seed": 72, "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0", "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519", "stage": "final", "supervised_epochs": 16, "supervised_steps_per_epoch": 1024, "synthetic_anomalies_per_type": 4, "synthetic_normals_per_step": 64, "training_budget_not_equivalent_to_full_dataset_epoch": true, "validation_batch_size": 2048, "validation_nodes": 1156213, "warmup_lr": 0.0003, "warmup_selection": "best_mean_synthetic_validation_AUROC", "warmup_steps": 32, "warmup_synthetic_val_period": 4, "warmup_validation_negatives": 160, "weight_decay": 0.002}, "status": "ADAPTED_FINAL_TRAINING_COMPLETE_PRETEST_AUDIT_PENDING", "total_supervised_optimizer_steps": 16384, "total_warmup_optimizer_steps": 32}

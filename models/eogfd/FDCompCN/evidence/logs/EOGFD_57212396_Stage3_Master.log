@@ -1,0 +1,19 @@
+EOGFD_NEWI_STAGE3_CUDA_DGL_GPU0=PASS
+=== EOGFD_FDCompCN_STAGE3_VALIDATION_ONLY_START ===
+FDCompCN_PINNED_AUTHOR_DATA_SPLIT_AND_NESTING=PASS
+EOGFD_FDCompCN_PINNED_SOURCE_SPLIT_AND_REAL_GRAPH_PILOT=PASS TEST_SCORED=NO
+EOGFD_FDCompCN_STAGE3_UNIQUE_ATTEMPT=20261022T141317Z_EOGFD_FDCompCN_unified_conditional_TR40_splitS2_trainS2_1792678397227702773
+FDCompCN_RELATIONS_PRESERVED [(('company', 'homo', 'company'), 10059), (('company', 'invest_bc2bc', 'company'), 8505), (('company', 'provide_bc2bc', 'company'), 5944), (('company', 'sale_bc2bc', 'company'), 6244)]
+EOGFD_FDCompCN_STAGE3_GRAPH_READY train_nodes=5317 val_nodes=5317 relations=4 weights=[1.0, 8.533632286995516]
+EOGFD_FDCompCN_STAGE3_CONDITIONAL_NOT_YET_VENUS_APPROVED=YES
+EOGFD_FDCompCN_STAGE3_STOP_ERROR=ModuleNotFoundError("No module named 'models'")
+Traceback (most recent call last):
+  File "/workspace/EOGFD_NEWI_STAGE3/stage3_runner.py", line 421, in <module>
+    try:main(args.dataset)
+  File "/workspace/EOGFD_NEWI_STAGE3/stage3_runner.py", line 389, in main
+    cost_gate(dataset,None,b,weights,out,source_sha,gate_sha)
+  File "/workspace/EOGFD_NEWI_STAGE3/stage3_runner.py", line 249, in cost_gate
+    model=make_model(cfg,b['train_x'].shape[1]);opt=torch.optim.Adam(model.parameters(),lr=cfg['lr'],betas=(.9,.999),eps=1e-8,weight_decay=0.)
+  File "/workspace/EOGFD_NEWI_STAGE3/stage3_runner.py", line 207, in make_model
+    from models.eogfd import EOGFDHeteroModel
+ModuleNotFoundError: No module named 'models'

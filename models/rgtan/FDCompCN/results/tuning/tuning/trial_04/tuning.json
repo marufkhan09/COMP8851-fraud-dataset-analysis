@@ -1,0 +1,36 @@
+{
+  "adapter_sha256": "79c88a3421795dc4c420781567f7bdb9288b1ff1aee9ec551ba4b3f669878744",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "base_learning_rate": 0.001,
+  "batch_size": 256,
+  "best_epoch": 2,
+  "best_val_auprc": 0.16130329579050395,
+  "best_val_auroc": 0.5690557472989196,
+  "checkpoint_sha256": "5ddc1204d36f93576755a2a334055eb37355327265f435680c8ee3a9632cda3d",
+  "completed_epochs": 22,
+  "config": {
+    "base_lr": 0.001,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 32
+  },
+  "dataset": "FDCompCN",
+  "effective_lr": 0.0005,
+  "elapsed_seconds": 12.647,
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "patience": 20,
+  "peak_gpu_allocated_gib": 0.21938705444335938,
+  "protocol": "Single model, five OOF contexts, accelerated batch size 256",
+  "ratio": "TR40",
+  "seed": 2,
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_seed": 2,
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "TUNING_COMPLETE",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false,
+  "trial": 4
+}

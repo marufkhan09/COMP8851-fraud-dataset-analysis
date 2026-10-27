@@ -1,0 +1,47 @@
+{
+  "adapter_repair_sha256": "81112b076aa3936039422a297fae948f09753d1ed36138b940fdb244aba92160",
+  "dataset": "Elliptic",
+  "graph": {
+    "canonical_etypes": [
+      [
+        "tx",
+        "original_transaction_edge",
+        "tx"
+      ]
+    ],
+    "edge_count": 106807,
+    "features": 165,
+    "future_edges_visible_during_training": false,
+    "future_nodes_visible_during_training": false,
+    "node_count": 90762,
+    "single_original_relation_conditional_methodology_requires_venus_confirmation": true,
+    "test_labels_accessed": false,
+    "test_start": 32,
+    "train_cutoff": 20,
+    "validation_cutoff": 31
+  },
+  "heldout_test_evaluated": false,
+  "hostname": "60d39211b1fd",
+  "instance_id_user_identified": "57212396",
+  "loss": 0.8598058819770813,
+  "model": "EOGFDHeteroModel",
+  "peak_gpu_gib": 0.7621,
+  "pilot_degree": 3,
+  "pilot_hidden_dim": 64,
+  "pilot_population_size": 3,
+  "seconds": 0.872,
+  "source_sha256": {
+    "assets/elliptic/source/elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "assets/elliptic/source/elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "assets/elliptic/source/elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "Elliptic_REAL_GRAPH_PILOT_PASS",
+  "test_count": 18949,
+  "test_scored": false,
+  "train_count": 18889,
+  "training_labels_only": true,
+  "tuning_started": false,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "validation_count": 8726
+}

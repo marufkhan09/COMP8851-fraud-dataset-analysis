@@ -1,0 +1,37 @@
+{
+  "adapter_sha256": "20edcf81bb3e7a1a91eae41251e8cca47fe4a223c970616167860914f6df4e64",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "best_epoch": 22,
+  "best_val_auprc": 0.3115759481149447,
+  "checkpoint_sha256": "ad39a85faeb467746ab6c01175c073ad184f4be43ab08dc25af5b79aff281d58",
+  "config": {
+    "drop_rate": 0.1,
+    "full_lr": 0.0005,
+    "hidden_dim": 64
+  },
+  "dataset": "Elliptic",
+  "epochs_ran": 42,
+  "full_training_seconds": 2.2387232538312674,
+  "model": "SAWGAD",
+  "peak_allocated_gpu_gib": 0.6960844993591309,
+  "preprocess_seconds": 4.791959846857935,
+  "protocol": {
+    "checkpoint_selection": "validation_AUPRC",
+    "full_labels": "frozen_train_ratio",
+    "full_max_epochs": 100,
+    "full_patience": 20,
+    "synthetic_validation": "10pct_negative_frozen_train_ids_warmup_only",
+    "threshold_selection": "validation_macro_F1",
+    "warmup_epochs": 100
+  },
+  "ratio": "TR40",
+  "seed": 2,
+  "source_bundle_sha256": "d2f7110d973564b5cd3b491ba3e0e59a6e16d75033e3796ac601bbf1ecd58160",
+  "split_sha256": "1e7963e9d09935fb33e0df74cfb786cab826d1b95ae10b9592dbc240b48ffdbc",
+  "status": "FROZEN_READY_FOR_TEST",
+  "test_scoring_performed": false,
+  "test_used_for_selection": false,
+  "threshold": 0.49999999999999994,
+  "val_macro_f1": 0.5841189606443419,
+  "warmup_seconds": 16.56303518288769
+}

@@ -1,0 +1,26 @@
+{
+  "OOF_scaler_fit_train_only": true,
+  "artifact_sha256": "10149cce01fab7c125bb9f013a39565c6e8ed62539a841d115dc1e950101f3cd",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "combined_gpu_twohop_seconds": 16.094,
+  "dataset": "T-Finance",
+  "fanouts": [
+    10,
+    10
+  ],
+  "full_neighbor_sampling_replaced_for_downstream_model": true,
+  "model": "RGTAN",
+  "original_graph_edges": 42445086,
+  "ratio": "TR10",
+  "risk_features": "original_directed_edges_binary_exact_2hop_OOF_5fold",
+  "script_sha256": "3508a8748d75f4603530eadd29cb7ac941271976665fb64f6cdcfa45b9a497a3",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_TR10_EXACT_RISK_CROSSFIT_PASS",
+  "test_labels_used": false,
+  "train_count": 3935,
+  "training_positive_count": 181,
+  "validation_count": 7872,
+  "validation_labels_used": false
+}

@@ -1,0 +1,157 @@
+{
+  "status": "SAWGAD_AMAZON_FULL_CANDIDATE_COMPLETE",
+  "winner": {
+    "status": "WINNER_FROZEN",
+    "winner_trial": 9,
+    "config": {
+      "hidden_dim": 128,
+      "drop_rate": 0.1,
+      "full_lr": 0.003
+    },
+    "best_val_auprc": 0.8269637274465406,
+    "selection": "TR40 seed2 max validation AUPRC only",
+    "test_scoring_performed": false
+  },
+  "final_runs": 12,
+  "ratio_summaries": [
+    {
+      "ratio": "TR40",
+      "runs": 3,
+      "metrics": {
+        "auprc": {
+          "mean": 0.8175928423112264,
+          "population_sd": 0.023880298768154493
+        },
+        "auroc": {
+          "mean": 0.9447447523548126,
+          "population_sd": 0.002394724930989592
+        },
+        "macro_f1": {
+          "mean": 0.8598960982854388,
+          "population_sd": 0.03004276602003572
+        },
+        "fraud_precision": {
+          "mean": 0.8695363787543388,
+          "population_sd": 0.026834223786249122
+        },
+        "fraud_recall": {
+          "mean": 0.6544715447154471,
+          "population_sd": 0.09194767915664655
+        },
+        "fraud_f1": {
+          "mean": 0.7428127580332026,
+          "population_sd": 0.05628138558469813
+        },
+        "gmean": {
+          "mean": 0.8027931946756629,
+          "population_sd": 0.05460930564339859
+        }
+      }
+    },
+    {
+      "ratio": "TR30",
+      "runs": 3,
+      "metrics": {
+        "auprc": {
+          "mean": 0.8441496681516503,
+          "population_sd": 0.006492345727354201
+        },
+        "auroc": {
+          "mean": 0.9483822359802883,
+          "population_sd": 0.003280457836740816
+        },
+        "macro_f1": {
+          "mean": 0.8965125305207101,
+          "population_sd": 0.005281599471628276
+        },
+        "fraud_precision": {
+          "mean": 0.8542782348571446,
+          "population_sd": 0.05059716325659364
+        },
+        "fraud_recall": {
+          "mean": 0.7774390243902438,
+          "population_sd": 0.036669956407863226
+        },
+        "fraud_f1": {
+          "mean": 0.8118641548289789,
+          "population_sd": 0.009201935206448401
+        },
+        "gmean": {
+          "mean": 0.8750045437867476,
+          "population_sd": 0.017747967791782147
+        }
+      }
+    },
+    {
+      "ratio": "TR20",
+      "runs": 3,
+      "metrics": {
+        "auprc": {
+          "mean": 0.797098530444813,
+          "population_sd": 0.017375367237683327
+        },
+        "auroc": {
+          "mean": 0.9409968056681847,
+          "population_sd": 0.0045907335122495375
+        },
+        "macro_f1": {
+          "mean": 0.8438884315428488,
+          "population_sd": 0.03124307105383161
+        },
+        "fraud_precision": {
+          "mean": 0.8139093267443921,
+          "population_sd": 0.13784151433545697
+        },
+        "fraud_recall": {
+          "mean": 0.6636178861788617,
+          "population_sd": 0.0997696302136169
+        },
+        "fraud_f1": {
+          "mean": 0.715273382189208,
+          "population_sd": 0.05685094505205767
+        },
+        "gmean": {
+          "mean": 0.8036351781500475,
+          "population_sd": 0.058500774562254804
+        }
+      }
+    },
+    {
+      "ratio": "TR10",
+      "runs": 3,
+      "metrics": {
+        "auprc": {
+          "mean": 0.8374084499580229,
+          "population_sd": 0.019726489728576654
+        },
+        "auroc": {
+          "mean": 0.9488890664961637,
+          "population_sd": 0.010944141690318234
+        },
+        "macro_f1": {
+          "mean": 0.8806733723340129,
+          "population_sd": 0.015642084362276237
+        },
+        "fraud_precision": {
+          "mean": 0.8730450834830484,
+          "population_sd": 0.040527040782176386
+        },
+        "fraud_recall": {
+          "mean": 0.709349593495935,
+          "population_sd": 0.037450255635545264
+        },
+        "fraud_f1": {
+          "mean": 0.7818732749181434,
+          "population_sd": 0.028683472934516313
+        },
+        "gmean": {
+          "mean": 0.837304305594455,
+          "population_sd": 0.021920846139572393
+        }
+      }
+    }
+  ],
+  "test_evaluated_once_per_final_run": true,
+  "author_original_training_protocol": false,
+  "supervisor_methodological_approval_pending": true
+}

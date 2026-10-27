@@ -1,0 +1,19 @@
+I1_PINNED_SOURCE_SPLIT_AND_PRIOR_PREFLIGHT=PASS
+READING_ORIGINAL_ELLIPTIC_FEATURES
+I1_CHRONOLOGY_AND_TRAIN_LABELS_ONLY=PASS
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+TRAIN_VALIDATION_GRAPH_PREFIX_ISOLATION=PASS train 90762 106807 validation 126103 145833
+TR40_TRAIN_ONLY_5_FOLD_MASKING=PASS
+EXACT_SPARSE_TWO_HOP_START TRAIN_T20 nodes 90762 edges 106807
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS TRAIN_T20 reachable 110942 seconds 1.07
+EXACT_SPARSE_TWO_HOP_START VALIDATION_T31 nodes 126103 edges 145833
+/workspace/comp8851/env/rgtan-legacy/lib/python3.10/site-packages/scipy/sparse/_index.py:146: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+EXACT_SPARSE_TWO_HOP=PASS VALIDATION_T31 reachable 142047 seconds 1.22
+VAL_VIEW_TRAIN_ONLY_CONTEXT_AND_OOF_SCALING=PASS
+RGTAN_ELLIPTIC_TR40_REAL_CROSSFIT_PASS
+ARTIFACT /workspace/comp8851/assets/rgtan/elliptic/RGTAN_Elliptic_TR40_TemporalCrossfit_v1.npz SHA256 4413a8a5af304deb40bd602d160bc1a07e1197587dedc1ecd9ffb79bea37c718
+TUNING_STARTED=NO TEST_SCORED=NO

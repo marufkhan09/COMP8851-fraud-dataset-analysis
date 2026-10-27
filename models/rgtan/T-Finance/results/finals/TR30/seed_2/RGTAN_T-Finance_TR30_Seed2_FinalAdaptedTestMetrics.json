@@ -1,0 +1,42 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "author_identical_benchmark": false,
+  "checkpoint_sha256": "950504831e5d47c2851bfe401d43bade1725fa1e3d9f23f051eeaaa28021bcf6",
+  "crossfit_sha256": "135cfecddf752b2dcac94e7e4631b9cc8ff56f455f05738e11337c5423565b74",
+  "dataset": "T-Finance",
+  "decision_threshold_frozen_validation_macro_f1": 0.33376041054725647,
+  "evaluation_sampler_seed": 90210,
+  "fanouts": [
+    10,
+    10
+  ],
+  "frozen_training_record_sha256": "5c85d987f44149c74fcde2a8cb07f0e1c9abe619e37174acdc1b7f69890769db",
+  "gpu_peak_allocated_gib": 0.13063,
+  "metrics": {
+    "auprc": 0.8487283991076047,
+    "auroc": 0.9532331098419738,
+    "fraud_f1": 0.7991360691144709,
+    "fraud_precision": 0.8320839580209896,
+    "fraud_recall": 0.7686980609418282,
+    "macro_f1": 0.8949330211007448,
+    "predicted_fraud_count": 667,
+    "true_fraud_count": 722
+  },
+  "model": "RGTAN",
+  "original_full_neighbor_sampling_replaced": true,
+  "ratio": "TR30",
+  "sampler": "MultiLayerNeighborSampler",
+  "seed": 2,
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_ADAPTED_HELDOUT_SCORED_ONCE",
+  "supervisor_approval_documented": false,
+  "test_count": 15743,
+  "test_positive_count": 722,
+  "test_scored_once": true,
+  "test_scores_sha256": "7bd87d9fc2d6877dcbe5045c9c46cb212f472daf82db953438c3a09620c23f01",
+  "test_scoring_seconds": 0.51,
+  "user_directed_test_completion": true,
+  "validation_auprc": 0.8286036132808035,
+  "validation_macro_f1": 0.8883275271915905
+}

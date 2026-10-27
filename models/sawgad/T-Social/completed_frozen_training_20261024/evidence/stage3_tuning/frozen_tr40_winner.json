@@ -1,0 +1,176 @@
+{
+  "final_test_authorized": false,
+  "methodological_approval_recorded": false,
+  "schema": "sawgad-tsocial-winner-v1",
+  "selection_rule": "maximum full validation AUPRC, tie -> earlier trial",
+  "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "split_sha256": "b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519",
+  "test_labels_indexed": false,
+  "test_scored": false,
+  "trials": [
+    {
+      "best_val_AUPRC": 0.14112378319611757,
+      "checkpoint_sha256": "1798b8478b8cc059698c379422d67e58d0222c42fd8987546e65dfe79afdca38",
+      "completed_sha256": "1e918ad19495534133f206e928e78b9586a9a9b4b8f62d5dd9b92ddab71fe33e",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.001,
+        "hidden_dim": 32
+      },
+      "history_sha256": "447a41fb54ea55677b370e66ed75b1b90d1918ead8c1eddfaa2fdfb7b9a075b0",
+      "run_id": "tune_01",
+      "trial": 1
+    },
+    {
+      "best_val_AUPRC": 0.15675226060812117,
+      "checkpoint_sha256": "79a0ab4064f05a6ecab92995462426987a82b238dc297fca432a31aa7c37ed75",
+      "completed_sha256": "71efce4c3187279d7d0925bc3a6b336bab81475e058474fb635ec26d4787739d",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.003,
+        "hidden_dim": 32
+      },
+      "history_sha256": "d8d4756b78cfcabf339ff51aa7fb573fde546d118986f67d3362b3b04ba50a50",
+      "run_id": "tune_02",
+      "trial": 2
+    },
+    {
+      "best_val_AUPRC": 0.16558871044121218,
+      "checkpoint_sha256": "d5ee1432aa51088746f2f2a116c5ca960ec08d56e14bcea920b7fd9e41fb5883",
+      "completed_sha256": "4e583f358d01df4e13f2c5fc023f407dc55bf945aa7ef972838e4e57a1d18ff1",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.005,
+        "hidden_dim": 32
+      },
+      "history_sha256": "ed19596e71ceb54707be862b3285689a3327ada24b14cbdf07917d4c8919928e",
+      "run_id": "tune_03",
+      "trial": 3
+    },
+    {
+      "best_val_AUPRC": 0.13884848661898858,
+      "checkpoint_sha256": "d51ddab18222f8d09786d58f386f382bcd2dd6f7167d6771d9a266479de5a622",
+      "completed_sha256": "57a737517772db61a00e916a55e5a4cb1b66a18eac3880b986ef7a34ce6ed991",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.001,
+        "hidden_dim": 32
+      },
+      "history_sha256": "62e2b790afb01961fa0c20a5387a9d080c274f3499341cb07ce5dee531d08b7f",
+      "run_id": "tune_04",
+      "trial": 4
+    },
+    {
+      "best_val_AUPRC": 0.1436470412085874,
+      "checkpoint_sha256": "6441d86f5c21b9971711f2d20c4791e9dd9d623dba8cbd7f358f8ed38a6f149a",
+      "completed_sha256": "a492be638032446b682ac516adee38c4a95406edf33ceb80f2e33b5056ba4dca",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.003,
+        "hidden_dim": 32
+      },
+      "history_sha256": "f254d98b397607ca768077b356c59392af3f9b032bd78a7a5e0e540f367859aa",
+      "run_id": "tune_05",
+      "trial": 5
+    },
+    {
+      "best_val_AUPRC": 0.14450282011522428,
+      "checkpoint_sha256": "c68758bf54f29b06dd926f2dac42f9a32741f78144b002004ce88a67975ab5b9",
+      "completed_sha256": "a120f4cc578ae5d57b5e80142be9c7666afcd61265311fadb25427cd04ef2dfe",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.005,
+        "hidden_dim": 32
+      },
+      "history_sha256": "901f56ff95ad67d1ffe3973032b668e2faacf7f9bad2635f8de370498f269015",
+      "run_id": "tune_06",
+      "trial": 6
+    },
+    {
+      "best_val_AUPRC": 0.16043245391778754,
+      "checkpoint_sha256": "f168c24eb0a03fab8334a747c5754ab6fcb34355dc487a9ea1e43bcdbb82519f",
+      "completed_sha256": "e88cad5873a0725a0cb8bc13a553de19ad2b410d9daa0caca32ee9e51bd88d8d",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.001,
+        "hidden_dim": 64
+      },
+      "history_sha256": "85da1426ae7f3069abade9fb6a0441220d4467e526e6bc34ac742e2837d912fb",
+      "run_id": "tune_07",
+      "trial": 7
+    },
+    {
+      "best_val_AUPRC": 0.1645666650703162,
+      "checkpoint_sha256": "f6b6afe1bfcd308bc52313ce7f51de2fc5fcad112738e195ec61c591745a8db8",
+      "completed_sha256": "1a2341bc29fa863bd261cd8efbec465221a18d318365388325c056c1a99fa226",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.003,
+        "hidden_dim": 64
+      },
+      "history_sha256": "64d69f39b96eaa2bd84463a3b0dd407c66ce75bd86172b56687e51a50466b8d7",
+      "run_id": "tune_08",
+      "trial": 8
+    },
+    {
+      "best_val_AUPRC": 0.16720867793152064,
+      "checkpoint_sha256": "ee72603ac780f053c4c79131e55a919d67e03bb1177521815e940ee3d898e5f5",
+      "completed_sha256": "603057f2b7e2c82031fe5c290c7cca2470230180b4c29088fbfaa4f6cbee28b7",
+      "config": {
+        "drop_rate": 0.0,
+        "full_lr": 0.005,
+        "hidden_dim": 64
+      },
+      "history_sha256": "46bfae1ef4269267ef8a377e8fdbffa144ea0eda493c7b80ee3f30d9d772fa34",
+      "run_id": "tune_09",
+      "trial": 9
+    },
+    {
+      "best_val_AUPRC": 0.15734022607864911,
+      "checkpoint_sha256": "5f97da2e1ccfe8a0b2ddd9b5288924ba428051b18290bea5ab1cc9af21fc8011",
+      "completed_sha256": "519bebe410d47650b4a066677eabb60c298730e80c7cc1943739f9ce0f6c2ad2",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.001,
+        "hidden_dim": 64
+      },
+      "history_sha256": "c37eb0eaf46930fcd46ced1c3968db2794efcd01c4c404a01b043434b5986f19",
+      "run_id": "tune_10",
+      "trial": 10
+    },
+    {
+      "best_val_AUPRC": 0.1572549828722387,
+      "checkpoint_sha256": "36d16cc9c88be635081e4d5d7bc588ad88b3210da05f7daaefee7f1c0876dcec",
+      "completed_sha256": "bff97f689d7ed102796f5624a955653fe4f9f628a017ad8ff746f516fbe61eee",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.003,
+        "hidden_dim": 64
+      },
+      "history_sha256": "3f18166f37a4a786ae7a87a78c84c6794279521edfc184a1b35fbb0353f05cdc",
+      "run_id": "tune_11",
+      "trial": 11
+    },
+    {
+      "best_val_AUPRC": 0.14972477587729424,
+      "checkpoint_sha256": "8f35a9184d5c464a31c043c29172a2fea3bbaa0f4a37904b4fa8d3f8599ca16d",
+      "completed_sha256": "b2157e4dd8f4fcd9ab09e5d5cd6adc97bac880ce18c65c2bcd466a5f3629cc9e",
+      "config": {
+        "drop_rate": 0.25,
+        "full_lr": 0.005,
+        "hidden_dim": 64
+      },
+      "history_sha256": "eb8d59d3b4e2c95190368bb8f37abf08438d7c45d1af0fafe7cf89258bef5d98",
+      "run_id": "tune_12",
+      "trial": 12
+    }
+  ],
+  "winner_checkpoint_sha256": "ee72603ac780f053c4c79131e55a919d67e03bb1177521815e940ee3d898e5f5",
+  "winner_config": {
+    "drop_rate": 0.0,
+    "full_lr": 0.005,
+    "hidden_dim": 64
+  },
+  "winner_full_validation_AUPRC": 0.16720867793152064,
+  "winner_trial": 9
+}

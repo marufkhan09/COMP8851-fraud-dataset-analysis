@@ -1,0 +1,28 @@
+{
+  "batch_size": 1024,
+  "branch": "Pathik-ass3",
+  "dataset": "YelpChi",
+  "final_runs_completed": 12,
+  "model": "RGTAN",
+  "note": "No assertion about supervisor approval is made by this status record.",
+  "private_mac_backup_sha256": "0d767969c32c3200203bf1b1fd12d81921a2cbe91bc7e442e81817e092060106",
+  "publication_performed_test_inference": false,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "COMPLETE_AUDITED",
+  "test_scored_once_per_run": true,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "tuning_trials_completed": 12,
+  "winner_trial": 4,
+  "winner_val_auprc": 0.7725199800465359
+}

@@ -1,0 +1,53 @@
+{
+  "model": "SAWGAD",
+  "dataset": "Amazon",
+  "status": "BENCHMARK_CANDIDATE_COMPLETE_PENDING_SUPERVISOR_APPROVAL",
+  "source_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "source_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "split_seed": 2,
+  "training_seeds": [
+    2,
+    42,
+    72
+  ],
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "tuning_trials": 12,
+  "tuning_metric": "validation_AUPRC",
+  "winner": {
+    "status": "WINNER_FROZEN",
+    "winner_trial": 9,
+    "config": {
+      "hidden_dim": 128,
+      "drop_rate": 0.1,
+      "full_lr": 0.003
+    },
+    "best_val_auprc": 0.8269637274465406,
+    "selection": "TR40 seed2 max validation AUPRC only",
+    "test_scoring_performed": false
+  },
+  "completed_runs": [
+    "TR40_seed2",
+    "TR40_seed42",
+    "TR40_seed72",
+    "TR30_seed2",
+    "TR30_seed42",
+    "TR30_seed72",
+    "TR20_seed2",
+    "TR20_seed42",
+    "TR20_seed72",
+    "TR10_seed2",
+    "TR10_seed42",
+    "TR10_seed72"
+  ],
+  "test_evaluated_once_per_final_run": true,
+  "supervisor_approval": "PENDING",
+  "author_original_training_protocol": false,
+  "protocol_note": "Author synthetic warm-up 100 epochs retained; full training <=100 epochs, patience 20, validation AUPRC checkpoint, all frozen train labels; differs from native 350 full epochs and 30 labelled anomalies.",
+  "checkpoint_policy": "Checkpoint SHA256 recorded; .pt weights stored in local full backup, not public GitHub"
+}

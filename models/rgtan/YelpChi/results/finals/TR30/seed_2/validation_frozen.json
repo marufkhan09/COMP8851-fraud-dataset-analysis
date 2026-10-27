@@ -1,0 +1,26 @@
+{
+  "adapter_sha256": "936d9df01168ffa3fa107379ccb176d05030d87d9258567fcaffbea15bc683a4",
+  "batch_size": 1024,
+  "best_epoch": 43,
+  "best_val_auprc": 0.7325680222230568,
+  "best_val_auroc": 0.9098870492841179,
+  "checkpoint_sha256": "039aa439378b966d8718aafc53a46b121ee0533236b1def0ff5ca8f06f4376d0",
+  "ratio": "TR30",
+  "seed": 2,
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_sha256": "0ea0af36dfc5a3a1f381ea2e3168377e45826498b6063190185c673e9ec8c22b",
+  "status": "VALIDATION_FROZEN",
+  "test_scoring_performed": false,
+  "threshold": 0.35650813579559326,
+  "val_auprc_rescored": 0.7325680222230568,
+  "val_macro_f1": 0.8043281245419716,
+  "winner_config": {
+    "base_lr": 0.001,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 32
+  },
+  "winner_trial": 4
+}

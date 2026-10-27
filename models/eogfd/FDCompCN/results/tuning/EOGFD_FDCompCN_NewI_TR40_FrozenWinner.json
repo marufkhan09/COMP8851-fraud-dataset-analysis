@@ -1,0 +1,48 @@
+{
+  "adapter_provenance": {
+    "adapter_eligibility": "INPUT_ADAPTER_PENDING_VENUS_REVIEW",
+    "author_identical": false,
+    "graph_semantics": "FDCompCN original 4 directed relation types; full static unlabeled transductive topology",
+    "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+    "test_labels_in_graph": false,
+    "train_edges": 30752,
+    "train_nodes": 5317,
+    "val_edges": 30752,
+    "val_nodes": 5317
+  },
+  "dataset": "FDCompCN",
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "final_training_started": false,
+  "mode": "UNIFIED_CONDITIONAL_ADAPTED",
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_sha256": "5cd7084342f4af48e9b82828dcac0e97879314cd5c9c010642b30c89e7c95168",
+  "status": "TR40_12_VALIDATION_ONLY_TRIALS_COMPLETED_CONDITIONAL",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "trial_count": 12,
+  "upstream_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "venus_approval_recorded": false,
+  "winner_checkpoint_sha256": "23b0610b8a0175cd9578e5538c7294fae2182c41957f1357ac9f1e68df905796",
+  "winner_config": {
+    "beta_p": 1,
+    "hidden_dim": 64,
+    "lamb": 0.0,
+    "lr": 0.001,
+    "mutation_rate": 0.05,
+    "order": 3,
+    "population_size": 10,
+    "weight_decay": 0.0
+  },
+  "winner_trial": 1,
+  "winner_val_auprc": 0.21591929683704497
+}

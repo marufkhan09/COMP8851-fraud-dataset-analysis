@@ -1,0 +1,29 @@
+{
+  "asset_sha256": "4413a8a5af304deb40bd602d160bc1a07e1197587dedc1ecd9ffb79bea37c718",
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "batch_size": 1024,
+  "best_epoch": 33,
+  "best_val_auprc": 0.7347271631321959,
+  "config": {
+    "base_lr": 0.005,
+    "drop": [
+      0.3,
+      0.15
+    ],
+    "hidden_dim": 64
+  },
+  "dataset": "Elliptic",
+  "early_stopping_patience": 20,
+  "epochs_completed": 53,
+  "max_epochs": 100,
+  "model": "RGTAN",
+  "optimizer_steps": 1060,
+  "ratio": "TR40",
+  "script_sha256": "f6e37dc1d9ae3252e193aaf10142c2872096b5fef37bb339ff0b9f040085da6e",
+  "seed": 2,
+  "status": "COMPLETE",
+  "test_labels_used": false,
+  "test_scored": false,
+  "trial": 12,
+  "wall_seconds": 77.643
+}

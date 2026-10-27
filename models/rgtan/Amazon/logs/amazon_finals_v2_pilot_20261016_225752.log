@@ -1,0 +1,111 @@
+FINALS_SOURCE_SPLIT_AND_TR40_ASSET=PASS
+FROZEN_WINNER_AND_12_TUNING_CHECKPOINTS=PASS
+CROSSFIT_TR40=PASS hash=fd3f871171c795999e6a1470857b270d5a605bb3f7cb3c3ea296cd5b3d1c6efe train=3455 fraud=329
+CROSSFIT_TR30=PASS hash=19592b4ca782530213cd7b7bb4912997d0da748568aab7aa50d5f5b99fb0b4b2 train=2591 fraud=247
+CROSSFIT_TR20=PASS hash=a292a973bf6745388245b3bcb8c226cc8000c51de0b5b0cd63bf52144ad2a405 train=1727 fraud=165
+CROSSFIT_TR10=PASS hash=bb4ec1c069bbd81d823aa7d894aa383e91cfa37a9314d63a9e522ac7882dcff2 train=863 fraud=82
+FINALS_PREFLIGHT=PASS
+FINAL_STARTED ratio=TR40 seed=2 winner_trial=1 config={'hidden_dim': 32, 'drop': [0.2, 0.1], 'base_lr': 0.001}
+FINAL ratio=TR40 seed=2 epoch=001/100 loss=0.35242 valAUPRC=0.855318 best=0.855318@1 wait=0/20 seconds=78.5
+FINAL ratio=TR40 seed=2 epoch=002/100 loss=0.17537 valAUPRC=0.856923 best=0.856923@2 wait=0/20 seconds=74.6
+FINAL ratio=TR40 seed=2 epoch=003/100 loss=0.14037 valAUPRC=0.853891 best=0.856923@2 wait=1/20 seconds=74.2
+FINAL ratio=TR40 seed=2 epoch=004/100 loss=0.13168 valAUPRC=0.860567 best=0.860567@4 wait=0/20 seconds=74.0
+FINAL ratio=TR40 seed=2 epoch=005/100 loss=0.12634 valAUPRC=0.861770 best=0.861770@5 wait=0/20 seconds=74.6
+FINAL ratio=TR40 seed=2 epoch=006/100 loss=0.12429 valAUPRC=0.866468 best=0.866468@6 wait=0/20 seconds=74.8
+FINAL ratio=TR40 seed=2 epoch=007/100 loss=0.12194 valAUPRC=0.863036 best=0.866468@6 wait=1/20 seconds=73.7
+FINAL ratio=TR40 seed=2 epoch=008/100 loss=0.11992 valAUPRC=0.868160 best=0.868160@8 wait=0/20 seconds=73.6
+FINAL ratio=TR40 seed=2 epoch=009/100 loss=0.10935 valAUPRC=0.881127 best=0.881127@9 wait=0/20 seconds=73.5
+FINAL ratio=TR40 seed=2 epoch=010/100 loss=0.11031 valAUPRC=0.881582 best=0.881582@10 wait=0/20 seconds=73.8
+FINAL ratio=TR40 seed=2 epoch=011/100 loss=0.11179 valAUPRC=0.874578 best=0.881582@10 wait=1/20 seconds=73.2
+FINAL ratio=TR40 seed=2 epoch=012/100 loss=0.10410 valAUPRC=0.881739 best=0.881739@12 wait=0/20 seconds=73.6
+FINAL ratio=TR40 seed=2 epoch=013/100 loss=0.10848 valAUPRC=0.877612 best=0.881739@12 wait=1/20 seconds=73.2
+FINAL ratio=TR40 seed=2 epoch=014/100 loss=0.10416 valAUPRC=0.880913 best=0.881739@12 wait=2/20 seconds=72.6
+FINAL ratio=TR40 seed=2 epoch=015/100 loss=0.10260 valAUPRC=0.888073 best=0.888073@15 wait=0/20 seconds=72.2
+FINAL ratio=TR40 seed=2 epoch=016/100 loss=0.09721 valAUPRC=0.886760 best=0.888073@15 wait=1/20 seconds=72.0
+FINAL ratio=TR40 seed=2 epoch=017/100 loss=0.09957 valAUPRC=0.885217 best=0.888073@15 wait=2/20 seconds=72.0
+FINAL ratio=TR40 seed=2 epoch=018/100 loss=0.09803 valAUPRC=0.889910 best=0.889910@18 wait=0/20 seconds=71.9
+FINAL ratio=TR40 seed=2 epoch=019/100 loss=0.10030 valAUPRC=0.888161 best=0.889910@18 wait=1/20 seconds=71.7
+FINAL ratio=TR40 seed=2 epoch=020/100 loss=0.09748 valAUPRC=0.893437 best=0.893437@20 wait=0/20 seconds=72.3
+FINAL ratio=TR40 seed=2 epoch=021/100 loss=0.09575 valAUPRC=0.891006 best=0.893437@20 wait=1/20 seconds=72.9
+FINAL ratio=TR40 seed=2 epoch=022/100 loss=0.09972 valAUPRC=0.894809 best=0.894809@22 wait=0/20 seconds=76.5
+FINAL ratio=TR40 seed=2 epoch=023/100 loss=0.09437 valAUPRC=0.894632 best=0.894809@22 wait=1/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=024/100 loss=0.09593 valAUPRC=0.893666 best=0.894809@22 wait=2/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=025/100 loss=0.09382 valAUPRC=0.894331 best=0.894809@22 wait=3/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=026/100 loss=0.09705 valAUPRC=0.898113 best=0.898113@26 wait=0/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=027/100 loss=0.09075 valAUPRC=0.896938 best=0.898113@26 wait=1/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=028/100 loss=0.09168 valAUPRC=0.897708 best=0.898113@26 wait=2/20 seconds=77.5
+FINAL ratio=TR40 seed=2 epoch=029/100 loss=0.08947 valAUPRC=0.898184 best=0.898184@29 wait=0/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=030/100 loss=0.08849 valAUPRC=0.899502 best=0.899502@30 wait=0/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=031/100 loss=0.09128 valAUPRC=0.897354 best=0.899502@30 wait=1/20 seconds=77.5
+FINAL ratio=TR40 seed=2 epoch=032/100 loss=0.09030 valAUPRC=0.899269 best=0.899502@30 wait=2/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=033/100 loss=0.09202 valAUPRC=0.901070 best=0.901070@33 wait=0/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=034/100 loss=0.09482 valAUPRC=0.904122 best=0.904122@34 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=035/100 loss=0.08737 valAUPRC=0.903552 best=0.904122@34 wait=1/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=036/100 loss=0.08717 valAUPRC=0.903925 best=0.904122@34 wait=2/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=037/100 loss=0.08643 valAUPRC=0.907927 best=0.907927@37 wait=0/20 seconds=77.2
+FINAL ratio=TR40 seed=2 epoch=038/100 loss=0.09188 valAUPRC=0.908783 best=0.908783@38 wait=0/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=039/100 loss=0.08618 valAUPRC=0.903697 best=0.908783@38 wait=1/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=040/100 loss=0.08830 valAUPRC=0.906553 best=0.908783@38 wait=2/20 seconds=78.3
+FINAL ratio=TR40 seed=2 epoch=041/100 loss=0.08322 valAUPRC=0.909318 best=0.909318@41 wait=0/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=042/100 loss=0.08871 valAUPRC=0.906337 best=0.909318@41 wait=1/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=043/100 loss=0.08506 valAUPRC=0.910157 best=0.910157@43 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=044/100 loss=0.07948 valAUPRC=0.912125 best=0.912125@44 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=045/100 loss=0.07881 valAUPRC=0.911430 best=0.912125@44 wait=1/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=046/100 loss=0.08399 valAUPRC=0.911033 best=0.912125@44 wait=2/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=047/100 loss=0.08324 valAUPRC=0.910780 best=0.912125@44 wait=3/20 seconds=77.8
+FINAL ratio=TR40 seed=2 epoch=048/100 loss=0.08733 valAUPRC=0.913345 best=0.913345@48 wait=0/20 seconds=77.9
+FINAL ratio=TR40 seed=2 epoch=049/100 loss=0.08071 valAUPRC=0.906684 best=0.913345@48 wait=1/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=050/100 loss=0.08185 valAUPRC=0.911953 best=0.913345@48 wait=2/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=051/100 loss=0.08460 valAUPRC=0.911161 best=0.913345@48 wait=3/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=052/100 loss=0.07706 valAUPRC=0.907414 best=0.913345@48 wait=4/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=053/100 loss=0.07804 valAUPRC=0.910500 best=0.913345@48 wait=5/20 seconds=76.9
+FINAL ratio=TR40 seed=2 epoch=054/100 loss=0.08004 valAUPRC=0.914520 best=0.914520@54 wait=0/20 seconds=77.4
+FINAL ratio=TR40 seed=2 epoch=055/100 loss=0.07796 valAUPRC=0.915026 best=0.915026@55 wait=0/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=056/100 loss=0.07793 valAUPRC=0.912638 best=0.915026@55 wait=1/20 seconds=77.2
+FINAL ratio=TR40 seed=2 epoch=057/100 loss=0.07697 valAUPRC=0.915423 best=0.915423@57 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=058/100 loss=0.07408 valAUPRC=0.916302 best=0.916302@58 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=059/100 loss=0.07946 valAUPRC=0.913789 best=0.916302@58 wait=1/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=060/100 loss=0.07550 valAUPRC=0.915937 best=0.916302@58 wait=2/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=061/100 loss=0.07643 valAUPRC=0.918264 best=0.918264@61 wait=0/20 seconds=77.2
+FINAL ratio=TR40 seed=2 epoch=062/100 loss=0.07222 valAUPRC=0.916822 best=0.918264@61 wait=1/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=063/100 loss=0.07727 valAUPRC=0.915693 best=0.918264@61 wait=2/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=064/100 loss=0.07298 valAUPRC=0.917198 best=0.918264@61 wait=3/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=065/100 loss=0.07272 valAUPRC=0.917834 best=0.918264@61 wait=4/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=066/100 loss=0.07429 valAUPRC=0.914397 best=0.918264@61 wait=5/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=067/100 loss=0.07541 valAUPRC=0.915537 best=0.918264@61 wait=6/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=068/100 loss=0.06787 valAUPRC=0.916081 best=0.918264@61 wait=7/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=069/100 loss=0.07181 valAUPRC=0.914937 best=0.918264@61 wait=8/20 seconds=77.2
+FINAL ratio=TR40 seed=2 epoch=070/100 loss=0.06701 valAUPRC=0.918977 best=0.918977@70 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=071/100 loss=0.07097 valAUPRC=0.916921 best=0.918977@70 wait=1/20 seconds=76.9
+FINAL ratio=TR40 seed=2 epoch=072/100 loss=0.07076 valAUPRC=0.921596 best=0.921596@72 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=073/100 loss=0.06703 valAUPRC=0.916548 best=0.921596@72 wait=1/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=074/100 loss=0.07139 valAUPRC=0.917018 best=0.921596@72 wait=2/20 seconds=77.4
+FINAL ratio=TR40 seed=2 epoch=075/100 loss=0.06844 valAUPRC=0.914027 best=0.921596@72 wait=3/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=076/100 loss=0.06736 valAUPRC=0.912540 best=0.921596@72 wait=4/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=077/100 loss=0.06881 valAUPRC=0.917825 best=0.921596@72 wait=5/20 seconds=77.9
+FINAL ratio=TR40 seed=2 epoch=078/100 loss=0.06512 valAUPRC=0.919075 best=0.921596@72 wait=6/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=079/100 loss=0.07087 valAUPRC=0.917831 best=0.921596@72 wait=7/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=080/100 loss=0.06941 valAUPRC=0.916406 best=0.921596@72 wait=8/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=081/100 loss=0.06859 valAUPRC=0.919982 best=0.921596@72 wait=9/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=082/100 loss=0.06786 valAUPRC=0.913563 best=0.921596@72 wait=10/20 seconds=77.5
+FINAL ratio=TR40 seed=2 epoch=083/100 loss=0.06496 valAUPRC=0.922334 best=0.922334@83 wait=0/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=084/100 loss=0.06288 valAUPRC=0.917475 best=0.922334@83 wait=1/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=085/100 loss=0.07364 valAUPRC=0.920519 best=0.922334@83 wait=2/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=086/100 loss=0.06676 valAUPRC=0.921271 best=0.922334@83 wait=3/20 seconds=77.3
+FINAL ratio=TR40 seed=2 epoch=087/100 loss=0.06454 valAUPRC=0.918193 best=0.922334@83 wait=4/20 seconds=77.9
+FINAL ratio=TR40 seed=2 epoch=088/100 loss=0.06544 valAUPRC=0.919519 best=0.922334@83 wait=5/20 seconds=77.9
+FINAL ratio=TR40 seed=2 epoch=089/100 loss=0.06404 valAUPRC=0.920027 best=0.922334@83 wait=6/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=090/100 loss=0.06070 valAUPRC=0.915492 best=0.922334@83 wait=7/20 seconds=80.0
+FINAL ratio=TR40 seed=2 epoch=091/100 loss=0.06749 valAUPRC=0.916135 best=0.922334@83 wait=8/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=092/100 loss=0.06722 valAUPRC=0.920759 best=0.922334@83 wait=9/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=093/100 loss=0.06335 valAUPRC=0.916760 best=0.922334@83 wait=10/20 seconds=77.1
+FINAL ratio=TR40 seed=2 epoch=094/100 loss=0.06243 valAUPRC=0.913497 best=0.922334@83 wait=11/20 seconds=77.7
+FINAL ratio=TR40 seed=2 epoch=095/100 loss=0.06793 valAUPRC=0.914964 best=0.922334@83 wait=12/20 seconds=77.5
+FINAL ratio=TR40 seed=2 epoch=096/100 loss=0.06246 valAUPRC=0.915662 best=0.922334@83 wait=13/20 seconds=77.6
+FINAL ratio=TR40 seed=2 epoch=097/100 loss=0.06415 valAUPRC=0.919976 best=0.922334@83 wait=14/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=098/100 loss=0.06307 valAUPRC=0.916744 best=0.922334@83 wait=15/20 seconds=77.2
+FINAL ratio=TR40 seed=2 epoch=099/100 loss=0.06365 valAUPRC=0.913965 best=0.922334@83 wait=16/20 seconds=78.0
+FINAL ratio=TR40 seed=2 epoch=100/100 loss=0.05990 valAUPRC=0.922785 best=0.922785@100 wait=0/20 seconds=77.6
+VALIDATION_FROZEN ratio=TR40 seed=2 bestAUPRC=0.922785 epoch=100 threshold=0.88801652 macroF1=0.924259
+TEST_EVALUATION_CLAIMED ratio=TR40 seed=2
+FINAL_COMPLETE ratio=TR40 seed=2 testAUPRC=0.903755 testAUROC=0.976042 macroF1=0.912659

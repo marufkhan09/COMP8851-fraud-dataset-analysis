@@ -1,0 +1,102 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "container_memory_cgroup_bytes": 147197001728,
+  "description": "Analytical exact block edge counts, no two-hop block allocated",
+  "elapsed_seconds": 1.91,
+  "gpu_name": "NVIDIA RTX A6000",
+  "gpu_total_bytes": 50897289216,
+  "graph_directed_edges": 42445086,
+  "graph_nodes": 39357,
+  "model_forward_executed": false,
+  "read_only_graph_source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "script_sha256": "b929290bde4cb8400ed7ec5b92f428815089cffc51ac7de2396b99f157705eff",
+  "seeds": [
+    {
+      "degree_quantile": 0.0,
+      "fraction_of_original_graph_edges": 3e-06,
+      "layer1_predecessor_edges": 137,
+      "layer2_seed_in_degree_edges": 1,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 138,
+      "training_node": 8272,
+      "unique_layer1_source_nodes": 1
+    },
+    {
+      "degree_quantile": 0.1,
+      "fraction_of_original_graph_edges": 0.000717,
+      "layer1_predecessor_edges": 30417,
+      "layer2_seed_in_degree_edges": 28,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 30445,
+      "training_node": 33047,
+      "unique_layer1_source_nodes": 28
+    },
+    {
+      "degree_quantile": 0.25,
+      "fraction_of_original_graph_edges": 0.004412,
+      "layer1_predecessor_edges": 187264,
+      "layer2_seed_in_degree_edges": 94,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 187358,
+      "training_node": 31331,
+      "unique_layer1_source_nodes": 94
+    },
+    {
+      "degree_quantile": 0.5,
+      "fraction_of_original_graph_edges": 0.003693,
+      "layer1_predecessor_edges": 156769,
+      "layer2_seed_in_degree_edges": 267,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 157036,
+      "training_node": 25494,
+      "unique_layer1_source_nodes": 267
+    },
+    {
+      "degree_quantile": 0.75,
+      "fraction_of_original_graph_edges": 0.017887,
+      "layer1_predecessor_edges": 759198,
+      "layer2_seed_in_degree_edges": 643,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 759841,
+      "training_node": 29230,
+      "unique_layer1_source_nodes": 643
+    },
+    {
+      "degree_quantile": 0.9,
+      "fraction_of_original_graph_edges": 0.758268,
+      "layer1_predecessor_edges": 32184771,
+      "layer2_seed_in_degree_edges": 5618,
+      "process_peak_current_rss_gib": 1.527,
+      "total_edges_in_two_layer_blocks": 32190389,
+      "training_node": 871,
+      "unique_layer1_source_nodes": 5618
+    },
+    {
+      "degree_quantile": 0.99,
+      "fraction_of_original_graph_edges": 0.771324,
+      "layer1_predecessor_edges": 32738893,
+      "layer2_seed_in_degree_edges": 6331,
+      "process_peak_current_rss_gib": 1.528,
+      "total_edges_in_two_layer_blocks": 32745224,
+      "training_node": 22407,
+      "unique_layer1_source_nodes": 6331
+    },
+    {
+      "degree_quantile": 1.0,
+      "fraction_of_original_graph_edges": 0.785215,
+      "layer1_predecessor_edges": 33328506,
+      "layer2_seed_in_degree_edges": 7467,
+      "process_peak_current_rss_gib": 1.528,
+      "total_edges_in_two_layer_blocks": 33335973,
+      "training_node": 1395,
+      "unique_layer1_source_nodes": 7467
+    }
+  ],
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_TWOHOP_EXPANSION_BUDGET_PASS",
+  "test_labels_accessed": false,
+  "test_scored": false,
+  "train_or_tune_started": false,
+  "train_seed_ratio": "TR40",
+  "two_hop_sampler_executed": false
+}

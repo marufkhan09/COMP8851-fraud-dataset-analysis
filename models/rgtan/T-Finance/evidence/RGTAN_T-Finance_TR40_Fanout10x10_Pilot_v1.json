@@ -1,0 +1,56 @@
+{
+  "author_commit": "65e583f03ac5c5983e49cc35179fe7a65908b9c1",
+  "benchmark_supervisor_approval_required": true,
+  "dataset": "T-Finance",
+  "deviation_from_author_full_neighbor_sampling": true,
+  "fanouts": [
+    10,
+    10
+  ],
+  "model": "RGTAN",
+  "optimizer_steps": 0,
+  "real_risk_crossfit_required_before_tuning": true,
+  "records": [
+    {
+      "batch_size": 32,
+      "block_edges": [
+        3448,
+        316
+      ],
+      "elapsed_seconds": 3.573,
+      "gpu_peak_gib": 0.0152,
+      "process_rss_gib": 5.884,
+      "sampled_input_nodes": 3384
+    },
+    {
+      "batch_size": 256,
+      "block_edges": [
+        26452,
+        2529
+      ],
+      "elapsed_seconds": 0.022,
+      "gpu_peak_gib": 0.073,
+      "process_rss_gib": 5.89,
+      "sampled_input_nodes": 17015
+    },
+    {
+      "batch_size": 1024,
+      "block_edges": [
+        91370,
+        10106
+      ],
+      "elapsed_seconds": 0.032,
+      "gpu_peak_gib": 0.1225,
+      "process_rss_gib": 5.896,
+      "sampled_input_nodes": 29303
+    }
+  ],
+  "risk_features": "placeholder zeros in architecture-only pilot, NOT evaluated",
+  "sampler": "MultiLayerNeighborSampler",
+  "script_sha256": "96bf30776fe746355d00cde1f0fb523cd71bdba5f478e675c620c84fbbc50409",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "status": "RGTAN_TFINANCE_CAPPED_FANOUT_PILOT_PASS",
+  "test_scored": false,
+  "validation_labels_used": false
+}

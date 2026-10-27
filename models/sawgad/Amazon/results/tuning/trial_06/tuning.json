@@ -1,0 +1,28 @@
+{
+  "status": "TUNING_COMPLETE",
+  "model": "SAWGAD",
+  "dataset": "Amazon",
+  "ratio": "TR40",
+  "seed": 2,
+  "config": {
+    "hidden_dim": 64,
+    "drop_rate": 0.25,
+    "full_lr": 0.003
+  },
+  "best_epoch": 93,
+  "epochs_ran": 100,
+  "best_val_auprc": 0.7735626186819029,
+  "threshold": 0.9,
+  "val_macro_f1": 0.8480254634822162,
+  "preprocess_seconds": 3.505852792877704,
+  "warmup_seconds": 56.50597700686194,
+  "full_training_seconds": 18.281416310928762,
+  "peak_allocated_gpu_gib": 3.782371997833252,
+  "split_sha256": "0fd96816c440b247b8cac768896bc454b1ecf4abebaf5001c1a3e1d900efa4fd",
+  "source_mat_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "author_commit": "64d6d531a2f03549f0bfbe461092beedd6f70bd2",
+  "test_used_for_selection": false,
+  "test_scoring_performed": false,
+  "protocol": "Ass2 candidate: warmup=100 native, full<=100 patience20, AUPRC selection; differs from author full=350",
+  "checkpoint_sha256": "b2e839c75a2686d7f0865c695d6b32e67ad3a0d3ef95cf74ffbc6bf75ab373c3"
+}

@@ -1,0 +1,151 @@
+{
+  "dataset": "T-Finance",
+  "eval_seed": 100921,
+  "final_seeds": [
+    2,
+    42,
+    72
+  ],
+  "grid": [
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.001,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.003,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 10,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.05,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    },
+    {
+      "beta_p": 1,
+      "hidden_dim": 64,
+      "lamb": 0.0,
+      "lr": 0.01,
+      "mutation_rate": 0.1,
+      "order": 7,
+      "population_size": 20,
+      "weight_decay": 0.0
+    }
+  ],
+  "max_epochs": 100,
+  "mode": "UNIFIED_INPUT_ADAPTER_NOT_AUTHOR_IDENTICAL",
+  "note": "Inputs are the original canonical graph with exact frozen node splits, no synthetic relations; not an author-identical reproduction.",
+  "original_eogfd_author_commit": "a4726f173bc8c923109ddcb2786f4d9c5206ae7f",
+  "original_model_code_unchanged": true,
+  "original_native_relation_count": 1,
+  "patience": 20,
+  "ratios": [
+    "TR40",
+    "TR30",
+    "TR20",
+    "TR10"
+  ],
+  "selection": "TR40_seed2_validation_AUPRC",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_seed": 2,
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "test_labels_indexed": false,
+  "test_scored": false,
+  "tuning_seed": 2
+}
