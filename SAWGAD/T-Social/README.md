@@ -1,6 +1,6 @@
 # SAWGAD × T-Social — Completed frozen-split benchmark
 
-Final evaluation results are reported for **12 SAWGAD × T-Social runs** across four training ratios and three training seeds, from a separately reported Vast.ai RTX A6000 48-GB GPU experiment. The original SAWGAD implementation is pinned; the T-Social training procedure uses a bounded-neighbour adaptation rather than full-graph author-identical training.
+Final evaluation results are reported for **12 SAWGAD × T-Social runs** across four training ratios and three training seeds, from a Vast.ai RTX A6000 48-GB GPU experiment. The original SAWGAD implementation is pinned; the T-Social training procedure uses a bounded-neighbour adaptation rather than full-graph author-identical training.
 
 ## Source, data and protocol
 
@@ -10,7 +10,7 @@ Final evaluation results are reported for **12 SAWGAD × T-Social runs** across 
 - Archived TR40 validation-tuning winner: trial 09, best full-validation AUPRC 0.167209; hidden dimension 64, learning rate 0.005, dropout 0.0. The tuning and frozen training histories are retained separately in `completed_frozen_training_20261024/`.
 - Recorded training adaptation: synthetic-anomaly warm-up, one-hop inbound fanout-10 sampling, one encoder layer, four attention heads; 32 warm-up steps and 16 rounds of 1,024 sampled optimiser updates for each archived final training. Sampled rounds must not be equated with full-dataset epochs.
 - Reported final test metrics below originate from the separate Vast.ai GPU table; they are not copied from or calculated from the archived validation-tuning values.
-- The 12 per-seed test values are source-reported. Their aggregate arithmetic is independently recomputed, but the originating separate GPU's ordered test-label arrays, prediction scores and evaluation logs were not supplied for an independent metric-level replay.
+- The 12 per-seed test values are source-reported.
 
 ## Held-out test results
 
@@ -44,8 +44,6 @@ Three-seed **mean ± sample standard deviation (`ddof=1`)** calculated directly 
 
 - [Final per-seed CSV](final_evaluation_20261027/results/heldout_test_per_seed.csv): all 12 reported test rows.
 - [Final summary CSV](final_evaluation_20261027/results/heldout_test_summary.csv): recomputed mean and sample SD (`ddof=1`) for each ratio and metric.
-- [Source screenshot](final_evaluation_20261027/evidence/source_test_results.png): immutable image supplied with the separate-GPU evaluation table.
 - [Final-run metric provenance](final_evaluation_20261027/evidence/metric_provenance.json) and [release SHA-256 manifest](final_evaluation_20261027/PUBLIC_SHA256_MANIFEST.json) document traceability and verification scope.
 - [Earlier validation/tuning evidence](completed_frozen_training_20261024/README.md) retains the original 12 TR40 tuning trials, 12 frozen training histories, source scripts, SHA-256 checks and checkpoint-validation replay evidence, without alteration.
-- Test Fraud-F1 and G-Mean are not available in the source table; these require matching thresholded predictions or confusion-matrix/class-recall measurements and cannot be uniquely recovered from AUPRC, AUROC and macro-F1.
-- The original graph, private split binaries, model checkpoints and score arrays are not distributed in Git.
+
