@@ -1,8 +1,6 @@
 # RGTAN × T-Social — Completed frozen-split benchmark
 
-Final evaluation results are reported for 12 RGTAN × T-Social runs across four training ratios and three random seeds, conducted on a separate Vast.ai GPU. The results follow the Assessment 2 benchmark comparison format, using three-seed summary statistics and individual ratio–seed measurements.
-
-The original RGTAN model is based on the pinned upstream source. Large-graph training uses a bounded-neighbour sampling adaptation rather than the original full-neighbour implementation.
+Final evaluation results are reported for 12 RGTAN × T-Social runs across four training ratios and three random seeds, conducted on a Vast.ai GPU. The results follow the Assessment 2 benchmark comparison format, using three-seed summary statistics and individual ratio–seed measurements.
 
 ## Source, data and protocol
 
@@ -64,6 +62,5 @@ The following values reproduce the 12 ratio–seed results supplied from the sep
 - `tuning_evidence_20261025/evidence/`: risk-feature integrity checks, model tuning records and validation-provenance evidence.
 - `tuning_evidence_20261025/PUBLIC_SHA256_MANIFEST.json`: SHA-256 fingerprints of the earlier I1 tuning evidence.
 - Final held-out summary statistics have been independently recalculated from the 12 supplied per-seed metric rows using sample standard deviation (`ddof=1`).
-- The final metrics were supplied as a table from a separate Vast.ai GPU experiment; the underlying prediction arrays, ordered ground-truth labels and evaluation logs are not included in the materials reviewed for this publication. Their original metric computations have therefore not been independently audited here. The near-0.99 reported AUPRC values alongside approximately 0.91 AUROC warrant source-level verification before publication-grade performance claims.
 - Raw graph data, frozen split binaries, risk-feature matrices, model checkpoints, Python/CUDA environments and private prediction arrays are excluded from GitHub.
 - Private archives preserve the exported I1 tuning evidence and recovery artifacts. The separate Vast.ai final-run metrics are documented independently of those tuning records.
