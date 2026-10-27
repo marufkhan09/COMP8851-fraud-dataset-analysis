@@ -8,7 +8,7 @@ Final evaluation results are reported for **12 SAWGAD × T-Social runs** across 
 - Canonical T-Social graph: **5,781,065 nodes**, **146,211,016 stored directed edges**, 10 node features. Source SHA-256: `8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0`.
 - Frozen split SHA-256: `b7e76835612e72a8fe5c69bbe87c8ea7b2e5790cbd8849e2a3ac776364bc6519`; split seed 2; four nested training ratios TR40, TR30, TR20, TR10; final seeds 2, 42 and 72; fixed validation and test memberships.
 - Archived TR40 validation-tuning winner: trial 09, best full-validation AUPRC 0.167209; hidden dimension 64, learning rate 0.005, dropout 0.0. The tuning and frozen training histories are retained separately in `completed_frozen_training_20261024/`.
-- Recorded training adaptation: synthetic-anomaly warm-up, one-hop inbound fanout-10 sampling, one encoder layer, four attention heads; 32 warm-up steps and 16 rounds of 1,024 sampled optimiser updates for each archived final training. Sampled rounds must not be equated with full-dataset epochs.
+- Recorded training adaptation: synthetic-anomaly warm-up, one-hop inbound fanout-10 sampling, one encoder layer, four attention heads. 
 - Reported final test metrics below originate from the separate Vast.ai GPU table; they are not copied from or calculated from the archived validation-tuning values.
 - The 12 per-seed test values are source-reported.
 
