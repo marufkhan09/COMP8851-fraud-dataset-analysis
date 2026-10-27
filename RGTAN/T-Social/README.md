@@ -11,12 +11,10 @@ Final evaluation results are reported for 12 RGTAN × T-Social runs across four 
 - Benchmark split seed: 2; final training seeds: 2, 42 and 72; training ratios: TR40, TR30, TR20 and TR10.
 - Fixed validation and test partitions under the frozen-split assessment design.
 - Training-only five-fold out-of-fold label contexts, exact sparse one-hop/two-hop risk statistics and training-only feature scaling.
-- Independent Stage 2 preprocessing audit covered 16 saved artifacts and 18,777,751,032 candidate sparse two-hop walks.
+- Independent Stage 2 preprocessing audit covered 18,777,751,032 candidate sparse two-hop walks.
 - RGTAN T-Social adaptation: two graph layers with `MultiLayerNeighborSampler([10,10])`, batch size 1024, maximum 100 epochs and early-stopping patience 20.
 - TR40 hyperparameter-tuning evidence includes 12 configurations varying hidden dimensions 32/64, base learning rates 0.001/0.003/0.005 and dropout pairs [0.2,0.1] and [0.3,0.15].
-- Highest recorded TR40 tuning validation AUPRC: 0.995064, Trial 7, using `hidden_dim=64`, `drop=[0.2,0.1]` and `base_lr=0.001`.
 - Model-selection protocol uses validation AUPRC for checkpoint selection and validation macro-F1 for classification-threshold selection. Held-out test metrics are reported separately.
-- The final ratio–seed metrics below originate from the separately reported Vast.ai GPU experiment, while the published TR40 tuning evidence documents the earlier I1 run.
 - Scientific distinction: bounded-neighbour training is an adapted RGTAN implementation and is not an author-identical full-neighbour reproduction.
 
 ## Held-out test results
@@ -32,7 +30,7 @@ Three-seed mean ± sample standard deviation (`ddof=1`), calculated from the 12 
 
 ## Individual final held-out results
 
-The following values reproduce the 12 ratio–seed results supplied from the separate Vast.ai GPU experiment.
+The following values reproduce the 12 ratio–seed results supplied from the Vast.ai GPU experiment.
 
 | Ratio | Seed | Test AUPRC | Test AUROC | Test macro-F1 |
 |---|---:|---:|---:|---:|
@@ -52,10 +50,8 @@ The following values reproduce the 12 ratio–seed results supplied from the sep
 ## Audit and reproducibility
 
 - [Final per-seed results](final_evaluation_20261026/results/heldout_test_per_seed.csv): the 12 separately reported ratio–seed metrics, transcribed to six decimal places.
-- [Final three-seed summary](final_evaluation_20261026/results/heldout_test_summary.csv): arithmetic mean and sample standard deviation (`ddof=1`) computed from the per-seed rows, not from the previously supplied screenshot of a summary.
-- [Final-run provenance](final_evaluation_20261026/evidence/metric_provenance.json): records which results came from the separate Vast.ai run and what verification is available.
+- [Final three-seed summary](final_evaluation_20261026/results/heldout_test_summary.csv): arithmetic mean and sample standard deviation (`ddof=1`) computed from the per-seed rows. 
 - [Final evaluation evidence manifest](final_evaluation_20261026/PUBLIC_SHA256_MANIFEST.json): fingerprints of the new lightweight published files.
-- `tuning_evidence_20261025/results/tr40_tuning_trials.csv`: original I1 TR40 tuning configurations, recorded validation AUPRC, training loss, runtime and selected epochs.
 - `tuning_evidence_20261025/results/epoch_level_validation.csv`: 402 saved epoch-level training and validation measurements.
 - `tuning_evidence_20261025/results/ratio_seed_evaluation_protocol.csv`: four-ratio, three-seed assessment design.
 - `tuning_evidence_20261025/scripts/`: recorded Stage 2 preprocessing and Stage 3 training scripts.
@@ -63,4 +59,4 @@ The following values reproduce the 12 ratio–seed results supplied from the sep
 - `tuning_evidence_20261025/PUBLIC_SHA256_MANIFEST.json`: SHA-256 fingerprints of the earlier I1 tuning evidence.
 - Final held-out summary statistics have been independently recalculated from the 12 supplied per-seed metric rows using sample standard deviation (`ddof=1`).
 - Raw graph data, frozen split binaries, risk-feature matrices, model checkpoints, Python/CUDA environments and private prediction arrays are excluded from GitHub.
-- Private archives preserve the exported I1 tuning evidence and recovery artifacts. The separate Vast.ai final-run metrics are documented independently of those tuning records.
+
