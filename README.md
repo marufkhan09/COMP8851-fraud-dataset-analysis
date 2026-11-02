@@ -7,20 +7,23 @@ Team: Md Maruf Khan, Pathik Ahmed, Ishraq Ahmed ("Raiyan"), Akib Hasan Maruf.
 
 Published fraud-detection GNNs are reported on different datasets, splits and
 metrics, so their results cannot be compared directly. This repository holds the
-code, configurations, logs and result tables for a controlled comparison of 12
+code, configurations, logs and result tables for a evidence-based comparison of 21
 fraud-specific or fraud-adapted GNNs on six public fraud-graph datasets. It is
 meant to let a reader see what was run, check it, and regenerate it.
 
-Research questions (integrated in the report, not a separate section):
-1. How do the models compare in predictive performance?
-2. How do class imbalance and label scarcity affect them?
-3. How do they compare in computational efficiency and scalability?
-4. How do graph characteristics (heterophily, structure) relate to model behaviour?
+Research questions:
+1. RQ1 — Predictive performance across fraud-specific GNNs.
+2. RQ2 — Effects of label scarcity and class imbalance.
+3. RQ3 — Relationships between dataset characteristics and model performance.
+4. RQ4 — Stability, computational efficiency, scalability and reliability.
 
 ## Models and datasets
 
-Models (12): CARE-GNN, PC-GNN, FRAUDRE, BWGNN, GHRN, GAGA, SplitGNN, PMP,
-DGA-GNN, GAAP, LEX-GNN, ConsisGAD.
+Models (21):
+- CARE-GNN, PC-GNN, FRAUDRE, BWGNN, GHRN
+- GAGA, SplitGNN, PMP, DGA-GNN, GAAP
+- LEX-GNN, ConsisGAD, AMNet, GDN, H2-FDetector
+- EOGFD, RGTAN, SAWGAD, SAGAD, SpaceGNN, CRoC.
 
 Datasets (6):
 
@@ -120,3 +123,18 @@ The following outcomes were recorded in the October 2026 benchmark:
 
 These qualifications must be retained when comparing results or
 reporting the number of successful experiments.
+
+
+## Expanded 21-model evidence
+
+This study consolidates 21 fraud-specific or fraud-adapted models across six
+datasets. Results are not a uniform leaderboard: some models use author-native
+settings, alternative splits, graph subsampling or reduced training budgets.
+
+The SAGAD, SpaceGNN and CRoC adapters, configurations, tests and execution
+scripts are in `phase2/source_code/`. Their results are in `phase2/results/`.
+The official upstream implementations are fetched at pinned commits and
+verified against the SHA-256 manifest. The full GPU reproduction pipeline
+has not yet been independently rerun.
+
+See `phase2/source_code/REPOSITORY_INTEGRATION.md` for the layout.
