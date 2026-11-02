@@ -1,0 +1,78 @@
+# SpaceGNN (Dong et al., ICLR 2025) - official repo xydong127/SpaceGNN @ 921c03ff879b
+# Per-dataset values come from name.py PARAMETERS (= paper Table 4):
+#   [lr, layer_num, drop_rate, alpha, beta, stdneg, stdpos]
+# stdneg/stdpos are drawn in name.py with random.uniform(0.01, 0.02) after
+# random.seed(1) at import time; "official" below means the adapter imports
+# the authors' name.py and uses those exact draws.
+# Elliptic and FDCompCN are not in PARAMETERS. The official script would then
+# keep the argparse defaults (lr 0.001, layer_num 3, drop_rate 0.05,
+# alpha 0.5, beta 0.5) and crash on the undefined stdneg/stdpos; we use the
+# argparse defaults and the midpoint 0.015 of the authors' sampling range.
+model: SpaceGNN
+official_defaults:
+  default:
+    _source: "main.py argparse defaults; stdneg/stdpos = 0.015 (midpoint of name.py's uniform(0.01, 0.02))"
+    lr: 0.001
+    hid_dim: 128
+    layer_num: 3
+    drop_rate: 0.05
+    batch_size: 50
+    alpha: 0.5
+    beta: 0.5
+    stdneg: 0.015
+    stdpos: 0.015
+  amazon:
+    _source: "name.py PARAMETERS[amazon] / paper Table 4"
+    lr: 0.001
+    layer_num: 3
+    drop_rate: 0.05
+    alpha: 0.0
+    beta: 0.0
+    stdneg: official
+    stdpos: official
+  yelpchi:
+    _source: "name.py PARAMETERS[yelp] / paper Table 4"
+    lr: 0.0001
+    layer_num: 1
+    drop_rate: 0.1
+    alpha: 0.0
+    beta: 0.0
+    stdneg: official
+    stdpos: official
+  tfinance:
+    _source: "name.py PARAMETERS[tfinance] / paper Table 4"
+    lr: 0.001
+    layer_num: 3
+    drop_rate: 0.1
+    alpha: 1.0
+    beta: 1.0
+    stdneg: official
+    stdpos: official
+  tsocial:
+    _source: "name.py PARAMETERS[tsocial] / paper Table 4"
+    lr: 0.001
+    layer_num: 6
+    drop_rate: 0.05
+    alpha: 0.5
+    beta: 1.0
+    stdneg: official
+    stdpos: official
+  elliptic:
+    _source: "not in name.py: argparse defaults + stdneg/stdpos 0.015"
+  fdcompcn:
+    _source: "not in name.py: argparse defaults + stdneg/stdpos 0.015"
+
+budget:
+  official:
+    # main.py: nepoch 25, test_epoch 25 -> a single evaluation after epoch 25.
+    default: {epochs: 25, patience: 0, valid_every: 25, _source: "main.py nepoch=25, test_epoch=25"}
+
+# Paper Appendix (arXiv:2502.03201v1): lr {1e-3, 1e-4}, hidden {32, 64, 128, 256},
+# layers 1-6, dropout {0, 0.05, 0.1}, alpha and beta in {0, 0.5, 1}.
+search_space:
+  lr: [0.001, 0.0001]
+  hid_dim: [32, 64, 128, 256]
+  layer_num: [1, 2, 3, 4, 5, 6]
+  drop_rate: [0.0, 0.05, 0.1]
+  alpha: [0.0, 0.5, 1.0]
+  beta: [0.0, 0.5, 1.0]

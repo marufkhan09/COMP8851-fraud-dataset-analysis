@@ -1,0 +1,34 @@
+# Execution policy for scripts/run_matrix.py. None of these values changes a
+# model or the protocol; they bound wall-clock time and resources.
+#
+# max_minutes: training wall-clock cap per run (reaching it -> INCOMPLETE, which
+# is reported, never silently accepted). Tuning trials get tuning_max_minutes.
+# Values are initial guards for an RTX A6000 and should be revised from the
+# production pilot (scripts/run_matrix.py pilot) before the full matrix.
+defaults:
+  max_minutes: 240
+  tuning_max_minutes: 120
+  extra_args: []
+per_dataset:
+  tsocial:
+    max_minutes: 720
+    tuning_max_minutes: 240
+per_model_dataset:
+  spacegnn:
+    tsocial:
+      # batch size 50 over 2.3M training nodes = ~46k optimiser steps per epoch
+      max_minutes: 1440
+      tuning_max_minutes: 360
+# OPT-IN DEVIATION (empty = protocol: 12 trials for every pair). Example, if the
+# SpaceGNN/T-Social pilot shows the 12-trial search is unaffordable:
+#   tuning_trials_override: {spacegnn: {tsocial: 1}}   # trial 0 = official config only
+# Any override is written into that pair's tuning_record.json as a deviation.
+tuning_trials_override: {}
+smoke:
+  epochs: 2
+  subset_nodes:
+    tsocial: 300000     # documented subset for platforms that cannot hold the full graph
+models: [sagad, spacegnn, croc]
+datasets: [yelpchi, amazon, tfinance, elliptic, fdcompcn, tsocial]
+final_seeds: [2, 42, 72]
+final_ratios: [TR40]

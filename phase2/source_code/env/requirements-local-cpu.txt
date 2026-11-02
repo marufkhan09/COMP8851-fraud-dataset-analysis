@@ -1,0 +1,17 @@
+# Environment in which the local CPU test evidence (results/smoke, tests) was produced
+# on 2026-10-11: Windows 11, CPython 3.11.17 (uv-managed venv).
+# torch 2.3.0+cpu from https://download.pytorch.org/whl/cpu ; dgl 2.2.1 from PyPI
+# (the newest DGL with Windows wheels).
+torch==2.3.0
+dgl==2.2.1
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.2
+pandas==2.2.3
+pyyaml==6.0.2
+tqdm
+psutil
+pytest==8.3.3
+torchdata==0.7.1
+pydantic>=2
+gdown==5.2.0

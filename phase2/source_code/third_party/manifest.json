@@ -1,0 +1,58 @@
+{
+  "note": "Official implementations are fetched at a pinned commit and verified file-by-file. They are NOT redistributed in this bundle: GitHub reports no license for any of the three repositories (checked 2026-10-11), so their code is obtained from the authors' repositories at setup time. Attribution: SAGAD (Liu et al., WWW 2026), SpaceGNN (Dong et al., ICLR 2025), CRoC (Xie, Tam and Lau, ECAI 2025).",
+  "repositories": {
+    "sagad": {
+      "url": "https://github.com/Cloudy1225/SAGAD",
+      "commit": "faddcbca117b475c8468e87a65c8428b616b694b",
+      "commit_date": "2025-07-20T06:28:17Z",
+      "commits_in_history": 1,
+      "license_detected_by_github": null,
+      "paper": "arXiv:2603.08137v1; WWW '26, DOI 10.1145/3774904.3792454",
+      "files": {
+        "chebnet.py": "35956a210da10abb92cb125fd8b8de3d0afa1cb8f8e9dc5a6c40cdef555711a3",
+        "dataloader.py": "4b7f16fcf622c6a4b3004b79af0b2b3fc4fbd0d1bf9ac0fec94e3289142e03bd",
+        "main.py": "2d349e4ca2b423b7c1b9e747ca64a250c8a9b3bdd850453ff49eb0e14d9c4cb1",
+        "model.py": "299b8505c0d7f4f30bfc7fb63856ae50ef871dccc3d0382784ca47e23c9345c3",
+        "mrqsampler.py": "e787196839bdb6f19ca70c173ec45a36d8a91d871de5df45b99fcd16bb66f438",
+        "README.md": "b5a38d9709ff5c1d08a0fc83793bc59b1a362b98541d452bf35e753672db5b9f",
+        "semi_train.conf.yaml": "5bfe949c8005243ddaf62486b2ea238f922118b8de08fff229d6c4d0f02bff39",
+        "utils.py": "f031d280b12435c11bd5a5c86911257559e6c7789e34f4645f6faf808e520eaa"
+      }
+    },
+    "spacegnn": {
+      "url": "https://github.com/xydong127/SpaceGNN",
+      "commit": "921c03ff879b239dab9b319b296fef3bc3bda2d2",
+      "commit_date": "2025-02-05T08:54:51Z",
+      "commits_in_history": 1,
+      "license_detected_by_github": null,
+      "paper": "arXiv:2502.03201v1; ICLR 2025",
+      "files": {
+        "datasets/main.py": "ab9445b19169f71fb1c69c33bc2bd6eeba921c1ab136b520c9176e146c93d983",
+        "datasets/name.py": "62861b43bcf22f912194138e00e34b46330854596a7eea6f29ee426d89598755",
+        "datasets/utils.py": "281c1aeac835b8c43bd584d3ee9220ccc2a05e373a2be5c7ef87335de9141f97",
+        "main.py": "ec7da1238714560194aa398eeab58649bc8e5d1ee5b63ebbf468cdcbe07e7aae",
+        "model.py": "0496be2676e1e9e76231536e7ccbad4d5fa403f048825a0c5c033d2f75ccec2b",
+        "name.py": "2aa9f38c50c34f14cfa24c19a93369b4c257bafb252522374d83f30f952dd2a7",
+        "README.md": "5d4d4ac73374c1a92f75618fe9deede2ce17f42abdb6f41b6efa222e89b55186",
+        "utils.py": "469c7516121067bec6836fdde604a17b02220a2a23cd5cebfe43b3243d25f501"
+      }
+    },
+    "croc": {
+      "url": "https://github.com/XsLangley/CRoC_ECAI2025",
+      "commit": "70cb7c6c654f2e8a517d226be5235e700953a37d",
+      "commit_date": "2025-10-13T14:09:19Z",
+      "commits_in_history": 4,
+      "license_detected_by_github": null,
+      "paper": "arXiv:2508.12278v2 (Table 10 exists only in v2); ECAI 2025",
+      "files": {
+        "dataloading.py": "748b50830c106aab00b59252ee390385756d4348b85f45adcdc30b000a39fff7",
+        "main.py": "36981d7a4084106ea8d92e93e68591102008ee37dec6aa672ca09e0c92e2e516",
+        "models.py": "5c0f8454690429b59e72ed990740630b873cd94928826c9d64e6ec78a8849391",
+        "preprocess.py": "e7a20a2a82f16f0eb1561e25867872df9ddc26f57b2bb3771754d3137ecf138c",
+        "README.md": "64d8c89493cba2d179f5191610b4dca87db9f66a40cb8bb260a9552a7fa4fabf",
+        "trainers.py": "6b431633b6c18efa2979119ae8b70d8fdbd8d004710b63bb7bf4e4a465f7a9de",
+        "utils.py": "e9e977db12d847523298b209e47264c404020780380cd7d3d12f388316ecc4a5"
+      }
+    }
+  }
+}

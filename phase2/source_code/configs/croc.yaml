@@ -1,0 +1,74 @@
+# CRoC (Xie, Tam and Lau, ECAI 2025) - official repo XsLangley/CRoC_ECAI2025 @ 70cb7c6c654f
+# alpha / gamma / eta / hid_dim / n_epoch: arXiv:2508.12278v2 Table 10 (verbatim).
+# lr 0.003, 2 layers, 64 hidden, fanouts 10,5, k=10 negatives, tau=2: paper text.
+# bs 1024, q 10240, dropout 0, bn False, wd 0: main.py argparse defaults.
+# Backbone per dataset is NOT stated in Table 10:
+#   amazon CRoCSAGE  - README reproduction command
+#   yelpchi CRoCGIN  - README "python main.py" quick start (default model)
+#   tfinance CRoCSAGE, tsocial CRoCGIN - inferred by matching main results to the
+#                      per-backbone table (paper_facts.md); tuning may revise.
+# Elliptic and FDCompCN are not supported by the official preprocess.py; they use
+# main.py's argparse defaults (CRoCGIN, alpha 0, gamma 1, eta 0.5, n_epoch 300).
+model: CRoC
+official_defaults:
+  default:
+    _source: "main.py argparse defaults"
+    backbone: CRoCGIN
+    n_layer: 2
+    n_neb: [10, 5]
+    hid_dim: 64
+    bn: false
+    dropout: 0.0
+    lr: 0.003
+    wd: 0.0
+    bs: 1024
+    alpha: 0.0
+    gamma: 1.0
+    eta: 0.5
+    q: 10240
+    k: 10
+  yelpchi:
+    _source: "Table 10 (Yelp) + README quick start backbone"
+    backbone: CRoCGIN
+    alpha: 0.0
+    gamma: 0.2
+    eta: 0.5
+  amazon:
+    _source: "Table 10 (Amazon) + README command (CRoCSAGE)"
+    backbone: CRoCSAGE
+    alpha: 0.5
+    gamma: 0.2
+    eta: 0.5
+  tfinance:
+    _source: "Table 10 (T-Fin); backbone inferred (SAGE)"
+    backbone: CRoCSAGE
+    alpha: 0.5
+    gamma: 0.2
+    eta: 0.2
+  tsocial:
+    _source: "Table 10 (T-Soc); backbone inferred (GIN)"
+    backbone: CRoCGIN
+    alpha: 0.0
+    gamma: 1.0
+    eta: 0.5
+  elliptic:
+    _source: "not supported upstream: main.py argparse defaults"
+  fdcompcn:
+    _source: "not supported upstream: main.py argparse defaults"
+
+budget:
+  official:
+    # trainers.py: no early stopping; validation every epoch; best val AUC kept.
+    default: {epochs: 300, patience: 0, _source: "main.py n_epoch default 300"}
+    yelpchi: {epochs: 300, patience: 0, _source: "Table 10 #epoch (Yelp) 300"}
+    amazon: {epochs: 200, patience: 0, _source: "Table 10 #epoch (Amazon) 200"}
+    tfinance: {epochs: 200, patience: 0, _source: "Table 10 #epoch (T-Fin) 200"}
+    tsocial: {epochs: 200, patience: 0, _source: "Table 10 #epoch (T-Soc) 200"}
+
+# Paper Sec. 5 search ranges: alpha {0, 0.2, 0.25, 0.5, 0.75, 0.9},
+# gamma and eta {0.2, 0.4, 0.5, 0.6, 0.8, 1}; backbones GIN and SAGE.
+search_space:
+  backbone: [CRoCGIN, CRoCSAGE]
+  alpha: [0.0, 0.2, 0.25, 0.5, 0.75, 0.9]
+  gamma: [0.2, 0.4, 0.5, 0.6, 0.8, 1.0]
+  eta: [0.2, 0.4, 0.5, 0.6, 0.8, 1.0]

@@ -1,0 +1,103 @@
+# SAGAD (Liu et al., WWW 2026) - official repo Cloudy1225/SAGAD @ faddcbca117b
+# Trial-0 values are copied verbatim from the repository's semi_train.conf.yaml,
+# the only configuration the authors released (full_train.conf.yaml, used when
+# --semi is False, is not in the repository; and `--semi type=bool` makes the
+# flag always True). Dataset keys map: yelp->yelpchi. FDCompCN is not in the
+# file, so the file's own `default` block (which the official code merges under
+# every dataset) is its official fallback.
+model: SAGAD
+official_defaults:
+  default:
+    _source: "semi_train.conf.yaml: default block"
+    lr: 0.01
+    wd: 0.0
+    dropout: 0.0
+    hid_dims: [32, 32]
+    conv_norm: none
+    mlp_norm: none
+    feat_trans: "no"        # YAML 1.1 parses the file's `no` as False; both mean no transform
+    activation: ReLU
+    num_gate_layers: 2
+    K: 5
+    p: [0.5, 0.5]           # [p_a, p_n]: regulariser targets for anomalous / normal nodes
+    fusion: NodeDimGated    # argparse default in main.py
+  yelpchi:
+    _source: "semi_train.conf.yaml: yelp"
+    lr: 0.01
+    wd: 0.0001
+    dropout: 0.1
+    hid_dims: [32]
+    mlp_norm: none
+    feat_trans: "no"
+    activation: ReLU
+    num_gate_layers: 2
+    K: 5
+    p: [0.4, 1.0]
+  amazon:
+    _source: "semi_train.conf.yaml: amazon"
+    lr: 0.01
+    wd: 0.0
+    dropout: 0.0
+    hid_dims: [32]
+    conv_norm: none
+    mlp_norm: none
+    feat_trans: "no"
+    activation: Identity
+    num_gate_layers: 1
+    K: 5
+    p: [0.1, 0.8]
+  tfinance:
+    _source: "semi_train.conf.yaml: tfinance"
+    lr: 0.01
+    wd: 0.0001
+    dropout: 0.0
+    hid_dims: [32]
+    mlp_norm: none
+    feat_trans: l1
+    activation: ReLU
+    num_gate_layers: 2
+    K: 5
+    p: [0.8, 1.0]
+  elliptic:
+    _source: "semi_train.conf.yaml: elliptic"
+    lr: 0.01
+    wd: 0.0
+    dropout: 0.0
+    hid_dims: [128, 128]
+    mlp_norm: none
+    feat_trans: "no"
+    activation: ReLU
+    num_gate_layers: 1
+    K: 5
+    p: [0.5, 0.5]
+  tsocial:
+    _source: "semi_train.conf.yaml: tsocial"
+    lr: 0.01
+    wd: 0.0
+    dropout: 0.0
+    hid_dims: [128, 128]
+    conv_norm: batch
+    mlp_norm: none
+    feat_trans: l1
+    activation: ReLU
+    num_gate_layers: 2
+    K: 3
+    p: [0.0, 1.0]
+  fdcompcn:
+    _source: "semi_train.conf.yaml: default block (FDCompCN not in the file)"
+
+budget:
+  official:
+    default: {epochs: 500, patience: 50, _source: "semi_train.conf.yaml default: epochs 500, patience 50"}
+    tsocial: {epochs: 1000, patience: 50, _source: "semi_train.conf.yaml tsocial: epochs 1000, patience 50"}
+
+# Paper Sec. 'Implementation details' (arXiv:2603.08137v1): K in {2..5},
+# lr in {0.1, 0.01, 0.001}, weight decay in {0, 0.01, 1e-4}, hidden in
+# {32, 64, 128}, dropout 0-0.5, MLP depth 1-3, p_a and p_n in [0, 1].
+search_space:
+  K: [2, 3, 4, 5]
+  lr: [0.1, 0.01, 0.001]
+  wd: [0.0, 0.01, 0.0001]
+  hid_dims: [[32], [64], [128], [32, 32], [64, 64], [128, 128], [32, 32, 32], [64, 64, 64], [128, 128, 128]]
+  dropout: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+  p: [[0.0, 1.0], [0.25, 1.0], [0.5, 1.0], [0.75, 1.0], [1.0, 1.0], [0.5, 0.5], [0.1, 0.8], [0.4, 1.0], [0.8, 1.0], [0.5, 0.75]]

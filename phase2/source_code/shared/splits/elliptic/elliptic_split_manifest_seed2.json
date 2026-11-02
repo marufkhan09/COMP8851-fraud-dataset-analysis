@@ -1,0 +1,119 @@
+{
+  "convention": "40/20/40 base partition over eligible nodes with nested stratified TR30/TR20/TR10 training subsets; validation and test IDs fixed",
+  "dataset": "elliptic",
+  "provenance": "regenerated with shared/comp8851/splits.py (unchanged) because the frozen arrays are absent from the workspace; TR40 sizes and fraud counts verified equal to the previous benchmark's split_summary.json for CARE-GNN and GHRN",
+  "source_sha256": {
+    "classes": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "edges": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "features": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "split_seed": 2,
+  "splits": {
+    "TR10": {
+      "file": "elliptic_TR10_seed2.npz",
+      "file_sha256": "59b02aa472b76e6ba43c43ae52bb396c07e653204e2802cd4bfe25d4e41de5e4",
+      "test": {
+        "fraud_nodes": 1417,
+        "fraud_percentage": 7.608053691275168,
+        "nodes": 18625,
+        "normal_nodes": 17208
+      },
+      "train": {
+        "fraud_nodes": 907,
+        "fraud_percentage": 19.480240549828178,
+        "nodes": 4656,
+        "normal_nodes": 3749
+      },
+      "unused_nodes": 13970,
+      "validation": {
+        "fraud_nodes": 1459,
+        "fraud_percentage": 15.666272951787823,
+        "nodes": 9313,
+        "normal_nodes": 7854
+      }
+    },
+    "TR20": {
+      "file": "elliptic_TR20_seed2.npz",
+      "file_sha256": "9c1640830c273524222d7d9e6a17311fed7870a8ad9848884dd3e3e30ba3e828",
+      "test": {
+        "fraud_nodes": 1417,
+        "fraud_percentage": 7.608053691275168,
+        "nodes": 18625,
+        "normal_nodes": 17208
+      },
+      "train": {
+        "fraud_nodes": 1505,
+        "fraud_percentage": 16.160206163427468,
+        "nodes": 9313,
+        "normal_nodes": 7808
+      },
+      "unused_nodes": 9313,
+      "validation": {
+        "fraud_nodes": 1459,
+        "fraud_percentage": 15.666272951787823,
+        "nodes": 9313,
+        "normal_nodes": 7854
+      }
+    },
+    "TR30": {
+      "file": "elliptic_TR30_seed2.npz",
+      "file_sha256": "a62d1485a56a30f73d0b4216b556e78d602301f760bca0e2ba98755dd8a87e4d",
+      "test": {
+        "fraud_nodes": 1417,
+        "fraud_percentage": 7.608053691275168,
+        "nodes": 18625,
+        "normal_nodes": 17208
+      },
+      "train": {
+        "fraud_nodes": 1622,
+        "fraud_percentage": 11.611425298876084,
+        "nodes": 13969,
+        "normal_nodes": 12347
+      },
+      "unused_nodes": 4657,
+      "validation": {
+        "fraud_nodes": 1459,
+        "fraud_percentage": 15.666272951787823,
+        "nodes": 9313,
+        "normal_nodes": 7854
+      }
+    },
+    "TR40": {
+      "file": "elliptic_TR40_seed2.npz",
+      "file_sha256": "3ab3eb3d35495cfc73de8878a7c15d75f5c5e5f140cfc6621b0ae311ab968a3c",
+      "test": {
+        "fraud_nodes": 1417,
+        "fraud_percentage": 7.608053691275168,
+        "nodes": 18625,
+        "normal_nodes": 17208
+      },
+      "train": {
+        "fraud_nodes": 1669,
+        "fraud_percentage": 8.960592719853967,
+        "nodes": 18626,
+        "normal_nodes": 16957
+      },
+      "unused_nodes": 0,
+      "validation": {
+        "fraud_nodes": 1459,
+        "fraud_percentage": 15.666272951787823,
+        "nodes": 9313,
+        "normal_nodes": 7854
+      }
+    }
+  },
+  "verified_against": {
+    "test": [
+      18625,
+      1417
+    ],
+    "train": [
+      18626,
+      1669
+    ],
+    "validation": [
+      9313,
+      1459
+    ]
+  }
+}
