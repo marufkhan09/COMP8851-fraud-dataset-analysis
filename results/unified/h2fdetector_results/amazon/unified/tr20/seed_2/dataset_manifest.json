@@ -1,0 +1,25 @@
+{
+  "dataset": "amazon",
+  "dgl_path": "/workspace/h2fd_vast/views/amazon_tr20.dgl",
+  "dgl_sha256": "4aa1857a8e66d16cc44f5ec04104a0ae2e191eb445380a5b889beb6b75821e2a",
+  "native_dgl_path": "/workspace/H2-FDetector/data/amazon.dgl",
+  "native_dgl_sha256": "95290bbb2b029684a4dd90db39b6edd6d4814821b74424492b9129c635d9df15",
+  "source_mat_path": "/workspace/data/Amazon.mat",
+  "source_mat_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "n_nodes": 11944,
+  "n_edges": {
+    "homo": 8796784,
+    "p": 351216,
+    "s": 7132958,
+    "v": 2073474
+  },
+  "edge_label_verification": {
+    "method": "recompute native edge labels/train mask from native node train mask",
+    "n_edges_homo": 8796784,
+    "edge_labels_identical": true,
+    "edge_train_mask_identical": true,
+    "n_label_mismatch": 0,
+    "n_mask_mismatch": 0,
+    "seconds": 0.849
+  }
+}

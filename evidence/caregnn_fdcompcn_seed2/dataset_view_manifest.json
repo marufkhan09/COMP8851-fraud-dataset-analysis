@@ -1,0 +1,22 @@
+{
+  "builder": "shared/comp8851/datasets.py",
+  "builder_version": "1.0.0",
+  "dataset_view_id": "fdcompcn_relation_v1",
+  "edge_convention": "symmetric, binarised, duplicates collapsed",
+  "feature_dimension": 57,
+  "nodes": 5317,
+  "relation_edges": {
+    "homo": 7268,
+    "invest_bc2bc": 5548,
+    "provide_bc2bc": 760,
+    "sale_bc2bc": 1042
+  },
+  "relations": [
+    "cic",
+    "cpc",
+    "csc"
+  ],
+  "self_loop_policy": "added",
+  "view": "relation",
+  "view_sha256": "438889170ee3e9f809c4142f1f242ce50b77117914101e2ef88fd18345004a64"
+}

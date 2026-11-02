@@ -1,0 +1,65 @@
+{
+  "budget": 2,
+  "dataset": "tfinance",
+  "model": "GHRN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "del_ratio": 0.015,
+    "dropout": 0.0,
+    "hid_dim": 64,
+    "lr": 0.01,
+    "order": 2,
+    "weight_decay": 0.0
+  },
+  "selected_trial": 0,
+  "selected_validation_auprc": 0.47810931069806906,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "tfinance",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.0,
+        "hid_dim": 64,
+        "lr": 0.01,
+        "order": 2,
+        "weight_decay": 0.0
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_tfinance/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 56.08590364456177,
+      "trial": 0,
+      "validation_auprc": 0.47810931069806906
+    },
+    {
+      "dataset": "tfinance",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.0,
+        "hid_dim": 32,
+        "lr": 0.0005,
+        "order": 2,
+        "weight_decay": 0.0
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_tfinance/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 55.167255878448486,
+      "trial": 1,
+      "validation_auprc": 0.049959624744729036
+    }
+  ],
+  "trials_attempted": 2,
+  "trials_successful": 2,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

@@ -1,0 +1,33 @@
+Run: h2fdetector_yelp_unified_tr40_seed42_a6000_20261018T010816Z
+Model commit: 10710d08a8461f418da2db8625a6f23199051785  local changes: ['M config/amazon.yaml', ' M config/yelp.yaml', ' M src/data_preprocess.py']
+Config SHA256: f9a3c972d21b648a97edc7bbdf49294fe973c685ef797f9d6ce847c6ac571a0d
+Split SHA256: b4aadacdc0b1e6036dc8c00858d254d76bc9a5411991bf7d3cdbe88a555245a7
+train=18382 valid=9190 test=18382  dataset_load=0.48s
+0: loss=5.8528 val_auprc=0.2177 val_auc=0.6832 val_f1@0.5=0.4783 val_recall@0.5=0.8622 train=5.08s valid=0.72s peak=24.14GiB best=0.2177@0 *
+1: loss=6.5442 val_auprc=0.0961 val_auc=0.2904 val_f1@0.5=0.1325 val_recall@0.5=0.9933 train=2.77s valid=0.71s peak=24.15GiB best=0.2177@0
+2: loss=7.8301 val_auprc=0.2568 val_auc=0.7186 val_f1@0.5=0.4608 val_recall@0.5=0.0000 train=2.77s valid=0.70s peak=24.15GiB best=0.2568@2 *
+3: loss=6.4241 val_auprc=0.2020 val_auc=0.6337 val_f1@0.5=0.5565 val_recall@0.5=0.3423 train=2.77s valid=0.71s peak=24.15GiB best=0.2568@2
+4: loss=5.6003 val_auprc=0.1179 val_auc=0.4245 val_f1@0.5=0.1505 val_recall@0.5=0.9678 train=2.78s valid=0.71s peak=24.15GiB best=0.2568@2
+5: loss=10.0798 val_auprc=0.2290 val_auc=0.6734 val_f1@0.5=0.4652 val_recall@0.5=0.8315 train=2.77s valid=0.70s peak=24.15GiB best=0.2568@2
+6: loss=5.5417 val_auprc=0.1098 val_auc=0.3904 val_f1@0.5=0.2690 val_recall@0.5=0.9393 train=2.77s valid=0.72s peak=24.15GiB best=0.2568@2
+7: loss=7.4626 val_auprc=0.1304 val_auc=0.4962 val_f1@0.5=0.4392 val_recall@0.5=0.2345 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+8: loss=7.2830 val_auprc=0.1190 val_auc=0.4449 val_f1@0.5=0.4306 val_recall@0.5=0.0225 train=2.76s valid=0.75s peak=24.15GiB best=0.2568@2
+9: loss=6.3798 val_auprc=0.1058 val_auc=0.3514 val_f1@0.5=0.4641 val_recall@0.5=0.0142 train=2.81s valid=0.71s peak=24.15GiB best=0.2568@2
+10: loss=5.7470 val_auprc=0.1284 val_auc=0.4670 val_f1@0.5=0.4614 val_recall@0.5=0.0007 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+11: loss=6.3638 val_auprc=0.0980 val_auc=0.3076 val_f1@0.5=0.3887 val_recall@0.5=0.0464 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+12: loss=5.9352 val_auprc=0.0977 val_auc=0.2952 val_f1@0.5=0.3315 val_recall@0.5=0.1236 train=2.77s valid=0.71s peak=24.15GiB best=0.2568@2
+13: loss=5.7172 val_auprc=0.1036 val_auc=0.3435 val_f1@0.5=0.4251 val_recall@0.5=0.0427 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+14: loss=5.9185 val_auprc=0.0999 val_auc=0.3166 val_f1@0.5=0.3286 val_recall@0.5=0.1858 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+15: loss=5.5692 val_auprc=0.0948 val_auc=0.2700 val_f1@0.5=0.1326 val_recall@0.5=0.9933 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+16: loss=5.5426 val_auprc=0.0947 val_auc=0.2832 val_f1@0.5=0.1326 val_recall@0.5=0.9933 train=2.76s valid=0.72s peak=24.15GiB best=0.2568@2
+17: loss=5.6224 val_auprc=0.0971 val_auc=0.3038 val_f1@0.5=0.1331 val_recall@0.5=0.9925 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+18: loss=5.5636 val_auprc=0.1060 val_auc=0.3619 val_f1@0.5=0.1365 val_recall@0.5=0.9910 train=2.77s valid=0.71s peak=24.15GiB best=0.2568@2
+19: loss=5.6359 val_auprc=0.1948 val_auc=0.6449 val_f1@0.5=0.3545 val_recall@0.5=0.9528 train=2.77s valid=0.71s peak=24.15GiB best=0.2568@2
+20: loss=5.4554 val_auprc=0.2359 val_auc=0.7115 val_f1@0.5=0.5657 val_recall@0.5=0.4487 train=2.76s valid=0.71s peak=24.15GiB best=0.2568@2
+21: loss=5.3532 val_auprc=0.2442 val_auc=0.7216 val_f1@0.5=0.5605 val_recall@0.5=0.2532 train=2.77s valid=0.73s peak=24.15GiB best=0.2568@2
+22: loss=5.2217 val_auprc=0.2535 val_auc=0.7289 val_f1@0.5=0.5693 val_recall@0.5=0.2667 train=2.81s valid=0.73s peak=24.15GiB best=0.2568@2
+Early stopping at epoch 22 (best epoch 2)
+Selected threshold (best val macro-F1): 0.05 (val F1=0.5481)
+Reload check: val AUPRC at best epoch 0.256815, after reload 0.256815
+TEST: auprc=0.2481 auc=0.7123 f1_macro=0.5483 fraud_precision=0.2474 fraud_recall=0.8222 fraud_f1=0.3803 g_mean=0.6874 threshold_used=0.0500
+Done: /workspace/h2fd_vast/results/h2fdetector_results/yelp/unified/tr40/seed_42

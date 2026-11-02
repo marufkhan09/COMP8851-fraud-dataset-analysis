@@ -1,0 +1,33 @@
+{
+  "run_name": "gdn_tsocial_unified_tr40_seed72_a6000_20261018T072957Z",
+  "model": "gdn",
+  "dataset": "tsocial",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 72,
+  "n_completed_epochs": 32,
+  "best_epoch": 11,
+  "best_val_auprc": 0.27044215343152517,
+  "reloaded_val_auprc": 0.27044215343152517,
+  "dataset_load_seconds": 2.6441315137781203,
+  "train_only_total_seconds": 5159.588876828784,
+  "train_plus_valid_total_seconds": 5418.10288722557,
+  "inference_seconds": 16.312025414779782,
+  "peak_memory_bytes": 318667264,
+  "peak_rss_bytes": 2091143168,
+  "test_metrics": {
+    "auprc": 0.28216045485854935,
+    "auc": 0.8854747609549682,
+    "f1_macro": 0.6623649814125533,
+    "precision_fraud": 0.398125870583766,
+    "recall_fraud": 0.30065984507985083,
+    "f1_fraud": 0.3425956194834913,
+    "g_mean": 0.5444372384303586,
+    "tp": 3144,
+    "fp": 4753,
+    "tn": 331654,
+    "fn": 7313,
+    "threshold_used": 0.15,
+    "best_epoch": 11
+  }
+}

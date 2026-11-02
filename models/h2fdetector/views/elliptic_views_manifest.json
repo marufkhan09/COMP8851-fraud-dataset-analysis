@@ -1,0 +1,169 @@
+{
+  "dataset": "elliptic",
+  "builder_version": "h2fd_view_builder_ext_v1",
+  "builder_sha256": "d205836c8573d3691e6184cda2e58492ef58427dc35526011f2045531dda6744",
+  "native_dgl_path": "/workspace/h2fd_vast/native/elliptic.dgl",
+  "native_dgl_sha256": "8f925d0afdfab83c5aa4700cef9025377c269cfa7773421819b00d32c5e3e3f1",
+  "source_mat_path": "/workspace/data/elliptic_bitcoin_dataset",
+  "source_mat_sha256": "3bc863da6548ad23241390328d58c5c534741f162c7a51835ff39d3b4385412f",
+  "adapter": {
+    "source_path": "/workspace/data/elliptic_bitcoin_dataset",
+    "source_sha256": "3bc863da6548ad23241390328d58c5c534741f162c7a51835ff39d3b4385412f",
+    "source_file_sha256": {
+      "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+      "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+      "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+    },
+    "n_edges_in_csv": 234355,
+    "n_edges_dropped_unmapped": 0,
+    "label_counts": {
+      "-1": 157205,
+      "0": 42019,
+      "1": 4545
+    },
+    "transform": "same as splitgnn elliptic_adapter.py: features cols 2+, class '1'->1, '2'->0, unknown->-1; homo = e = csv edges"
+  },
+  "node_type": "r",
+  "n_nodes": 203769,
+  "n_labeled_nodes": 46564,
+  "n_edges": {
+    "e": 234355,
+    "homo": 234355
+  },
+  "homo_edge_stats": {
+    "n_edges": 234355,
+    "n_self_loops": 0,
+    "n_duplicate_edges": 0,
+    "n_edges_without_reverse": 234355
+  },
+  "split_seed": 2,
+  "split_registry_version": "own_generate_splits_v1_seed2",
+  "split_procedure": "labeled_subset",
+  "split_candidates_vs_splitgnn_tr40": {
+    "labeled_subset": {
+      "train_mask": true,
+      "valid_mask": true,
+      "test_mask": true
+    },
+    "full_then_drop_unlabeled": {
+      "train_mask": false,
+      "valid_mask": false,
+      "test_mask": false
+    }
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  },
+  "config": {
+    "path": "/workspace/H2-FDetector/config/elliptic.yaml",
+    "sha256": "8f79e412816cbc11fa5b0c94b935b5b25d87ef3f10665f99bbcc985d3cc37f4e",
+    "template": "/workspace/H2-FDetector/config/yelp.yaml",
+    "note": "no author config exists for this dataset; author template used unchanged apart from dataset name and device; no tuning"
+  },
+  "views": {
+    "tr40": {
+      "view_path": "/workspace/h2fd_vast/views/elliptic_tr40.dgl",
+      "view_sha256": "7b1687687f5b837b2705951bd49f481bcc3da8528fbe7e845b7a287f2aedf05a",
+      "split_path": "/workspace/h2fd_vast/views/elliptic_tr40_split.npz",
+      "split_file_sha256": "9b4f6216171f4e75c6d37e0ac3065daea5379269ab17f34f9e19f99f549f4d6a",
+      "split_content_sha256": "ea4e68f7bc43e0fe1729cb5b30b16b7a46c02553d592b9e86ad495ba30f1b065",
+      "n_train": 18625,
+      "n_valid": 9313,
+      "n_test": 18626,
+      "n_train_fraud": 1818,
+      "n_edge_train": 6076,
+      "n_edge_train_same_label": 5798,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/elliptic/unified/tr40/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr30": {
+      "view_path": "/workspace/h2fd_vast/views/elliptic_tr30.dgl",
+      "view_sha256": "d340c22c987523ccf74472b0f20cefaa79d3dbe1b9ea1cec4d3ba3335f995a82",
+      "split_path": "/workspace/h2fd_vast/views/elliptic_tr30_split.npz",
+      "split_file_sha256": "e63f43dabc49866f1f335e4aeccf49c386dae29c0b24d0e3a6872bbf87c2bf4c",
+      "split_content_sha256": "b10836f99f4d71d41dc77f5a2f40bc7c4e22e1ba14133a3721653978aa886588",
+      "n_train": 13969,
+      "n_valid": 9313,
+      "n_test": 18626,
+      "n_train_fraud": 1364,
+      "n_edge_train": 3493,
+      "n_edge_train_same_label": 3340,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/elliptic/unified/tr30/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr20": {
+      "view_path": "/workspace/h2fd_vast/views/elliptic_tr20.dgl",
+      "view_sha256": "e7221e2d92b36817254ec204eaa3b13275a6b9c1a9bb56a694ec0eb96854f2ad",
+      "split_path": "/workspace/h2fd_vast/views/elliptic_tr20_split.npz",
+      "split_file_sha256": "7d4fc96b05af59cc4e2f69c35f2a5ce3d9ff988541e1397e5ba54382f46c8814",
+      "split_content_sha256": "0d206b91bacde7dfb5f80d3b76fb8c81b96db4e585541975e20b744c419b0f9b",
+      "n_train": 9313,
+      "n_valid": 9313,
+      "n_test": 18626,
+      "n_train_fraud": 909,
+      "n_edge_train": 1547,
+      "n_edge_train_same_label": 1476,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/elliptic/unified/tr20/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr10": {
+      "view_path": "/workspace/h2fd_vast/views/elliptic_tr10.dgl",
+      "view_sha256": "2f69426f1ef597d292e4e232039bab40403a346d5b64d759f21475853ed5fc0a",
+      "split_path": "/workspace/h2fd_vast/views/elliptic_tr10_split.npz",
+      "split_file_sha256": "98b33a6b904f1a319cab1ea6194808031229cec8262ce333603669dfbf9b8a3b",
+      "split_content_sha256": "69f546ab9395d9f2ebb849b22c73723fb7187dac004558ebb9ef4e2259d613ac",
+      "n_train": 4656,
+      "n_valid": 9313,
+      "n_test": 18626,
+      "n_train_fraud": 454,
+      "n_edge_train": 333,
+      "n_edge_train_same_label": 315,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/elliptic/unified/tr10/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    }
+  }
+}

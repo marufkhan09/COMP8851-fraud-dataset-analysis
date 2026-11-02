@@ -1,0 +1,170 @@
+{
+  "dataset": "tsocial",
+  "builder_version": "h2fd_view_builder_ext_v1",
+  "builder_sha256": "d205836c8573d3691e6184cda2e58492ef58427dc35526011f2045531dda6744",
+  "native_dgl_path": "/workspace/h2fd_vast/native/tsocial.dgl",
+  "native_dgl_sha256": "a1339648982b8b9c2c89ed21e93f0436d39e8d8220353a67c7169b84ea4fd673",
+  "source_mat_path": "/workspace/data/bwgnn/dataset/tsocial",
+  "source_mat_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "adapter": {
+    "source_path": "/workspace/data/bwgnn/dataset/tsocial",
+    "source_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+    "full_graph": {
+      "n_nodes": 5781065,
+      "n_edges": 146211016
+    },
+    "subsample": {
+      "fraction": 0.15,
+      "rng": "RandomState(2)",
+      "stratified_by": "label",
+      "n_nodes": 867160,
+      "n_edges": 3297570,
+      "fraud_rate": 0.030146686360239983,
+      "expected_from_splitgnn": {
+        "nodes": 867160,
+        "edges": 3297570
+      },
+      "counts_match": true
+    },
+    "subsample_node_ids_sha256": "e69b0b8e10cdbad458633faad177fb50c522031fb3be5a5a80d20276312fe733",
+    "transform": "same 15% stratified induced subgraph as splitgnn tsocial_adapter.py; homo = e = subgraph edges"
+  },
+  "node_type": "r",
+  "n_nodes": 867160,
+  "n_labeled_nodes": 867160,
+  "n_edges": {
+    "e": 3297570,
+    "homo": 3297570
+  },
+  "homo_edge_stats": {
+    "n_edges": 3297570,
+    "n_self_loops": 0,
+    "n_duplicate_edges": 0,
+    "n_edges_without_reverse": 0
+  },
+  "split_seed": 2,
+  "split_registry_version": "own_generate_splits_v1_seed2",
+  "split_procedure": "all_nodes",
+  "split_candidates_vs_splitgnn_tr40": {
+    "all_nodes": {
+      "train_mask": true,
+      "valid_mask": true,
+      "test_mask": true
+    }
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  },
+  "config": {
+    "path": "/workspace/H2-FDetector/config/tsocial.yaml",
+    "sha256": "9f27ae673f7f7ed66c1e9164caa739c82ef7af22c3a2bce5c2730e6b83653dfe",
+    "template": "/workspace/H2-FDetector/config/yelp.yaml",
+    "note": "no author config exists for this dataset; author template used unchanged apart from dataset name and device; no tuning"
+  },
+  "views": {
+    "tr40": {
+      "view_path": "/workspace/h2fd_vast/views/tsocial_tr40.dgl",
+      "view_sha256": "bf683123c479531cc7cbb4d85c8ef69f050690bd880883f8cd42cc4f4395bf1b",
+      "split_path": "/workspace/h2fd_vast/views/tsocial_tr40_split.npz",
+      "split_file_sha256": "a9218971b53f781a9727c630b3aeb969d00afb96739cbecb27f9ab1a91ba7ed4",
+      "split_content_sha256": "66b09da89611bafe58f294550c6b329788e8b970d3b91b5a328055afec207075",
+      "n_train": 346864,
+      "n_valid": 173432,
+      "n_test": 346864,
+      "n_train_fraud": 10457,
+      "n_edge_train": 528910,
+      "n_edge_train_same_label": 329106,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tsocial/unified/tr40/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr30": {
+      "view_path": "/workspace/h2fd_vast/views/tsocial_tr30.dgl",
+      "view_sha256": "339f827cf3c673829c4058c3642987d4a1385c5a91f607b6222562a058361474",
+      "split_path": "/workspace/h2fd_vast/views/tsocial_tr30_split.npz",
+      "split_file_sha256": "f8c07c9b9eecbdc5d7843531573f9b40ee1fb4261fc4a2fa624ce1b118e14114",
+      "split_content_sha256": "31e30f69ef709d2725d66bb7995d90f4313948606f5ef0cbb9ea2feb7b5a2480",
+      "n_train": 260148,
+      "n_valid": 173432,
+      "n_test": 346864,
+      "n_train_fraud": 7843,
+      "n_edge_train": 297396,
+      "n_edge_train_same_label": 184594,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tsocial/unified/tr30/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr20": {
+      "view_path": "/workspace/h2fd_vast/views/tsocial_tr20.dgl",
+      "view_sha256": "6dc1bb423f6ee15a63dede6fe9cfea4ef3514d9bf083b8375ff335b75a410db0",
+      "split_path": "/workspace/h2fd_vast/views/tsocial_tr20_split.npz",
+      "split_file_sha256": "78b5fb36d52cc1cb59329bd281a9133c3e4cc3b7cf20839f0874a60553a17eb6",
+      "split_content_sha256": "53990c1f7d53391189fcd029cdab882d5f247b49323491f846c7f79e53c49fe1",
+      "n_train": 173432,
+      "n_valid": 173432,
+      "n_test": 346864,
+      "n_train_fraud": 5228,
+      "n_edge_train": 131582,
+      "n_edge_train_same_label": 81852,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tsocial/unified/tr20/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    },
+    "tr10": {
+      "view_path": "/workspace/h2fd_vast/views/tsocial_tr10.dgl",
+      "view_sha256": "f262ce5caaf251d9620533ac2e127a92f38b21cdeb8ff54782e7cdfe3a32dfe3",
+      "split_path": "/workspace/h2fd_vast/views/tsocial_tr10_split.npz",
+      "split_file_sha256": "7f41c5c622cc686fbceda7e814386ff42050d12ece400e90a7e5184ba7b858ee",
+      "split_content_sha256": "d7f7fdc3ff2ff4a2afedf2d4dbf462b47175e50d474a44e9d73ab837ace46e2d",
+      "n_train": 86716,
+      "n_valid": 173432,
+      "n_test": 346864,
+      "n_train_fraud": 2614,
+      "n_edge_train": 32214,
+      "n_edge_train_same_label": 20340,
+      "splitgnn_crosscheck": {
+        "ref_path": "/workspace/COMP8851-fraud-dataset-analysis/results/unified/splitgnn_results/tsocial/unified/tr10/seed_2/split_indices.npz",
+        "ref_keys": [
+          "train_mask",
+          "valid_mask",
+          "test_mask"
+        ],
+        "identical": {
+          "train_mask": true,
+          "valid_mask": true,
+          "test_mask": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": null,
+  "adapter_version": "relation-view-v1",
+  "config_sha256": "69a9b6cba938a196b057b68f72b80167af6bdff5f5eedf67a46f8ee496c17da4",
+  "container_digest": null,
+  "dataset_manifest_version": "comp8851-canonical-v1",
+  "dataset_view_id": "yelpchi_relation_v1",
+  "early_stopping_patience": 20,
+  "evaluator_commit": "shared.comp8851==1.0.0",
+  "hardware_profile_id": "a6000",
+  "max_epochs": 100,
+  "model_source_commit": null,
+  "notes": {},
+  "protocol_version": "vast-v4.4",
+  "selection_metric": "auprc",
+  "source_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "split_registry_version": "seed2",
+  "split_seed": 2,
+  "split_sha256": "e9fe555fa0e4f7e22e0bab846ff77d8fa6ac08eac2f753d41dcc866091dd8c96",
+  "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+  "view_sha256": "403ea176ea709f68aab34f1f36799527962dffcdbb6df39acc6a9fc000079b89"
+}

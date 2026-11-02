@@ -1,0 +1,131 @@
+{
+  "budget": 6,
+  "dataset": "fdcompcn",
+  "model": "CARE-GNN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "emb_size": 64,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "step_size": 0.02
+  },
+  "selected_trial": 0,
+  "selected_validation_auprc": 0.20595359257583318,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.01,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 73.13776230812073,
+      "trial": 0,
+      "validation_auprc": 0.20595359257583318
+    },
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.0,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 78.03750514984131,
+      "trial": 1,
+      "validation_auprc": 0.1404509967100479
+    },
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_02",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 71.47281646728516,
+      "trial": 2,
+      "validation_auprc": 0.20252225451980882
+    },
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 1e-05,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_03",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 77.53065037727356,
+      "trial": 3,
+      "validation_auprc": 0.18564016821912835
+    },
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 128,
+        "lambda_2": 0.0001,
+        "lr": 0.001,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_04",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 34.65988278388977,
+      "trial": 4,
+      "validation_auprc": 0.1701788909418936
+    },
+    {
+      "dataset": "fdcompcn",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.001,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_fdcompcn/trial_05",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 78.4563136100769,
+      "trial": 5,
+      "validation_auprc": 0.13984284317217727
+    }
+  ],
+  "trials_attempted": 6,
+  "trials_successful": 6,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

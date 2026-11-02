@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": null,
+  "adapter_version": "relation-view-v1",
+  "config_sha256": "9a9fdd27db16db2f96d1fcea5891b28ccb2aff5792293d96c42ea4358784ae55",
+  "container_digest": null,
+  "dataset_manifest_version": "comp8851-canonical-v1",
+  "dataset_view_id": "fdcompcn_relation_v1",
+  "early_stopping_patience": 20,
+  "evaluator_commit": "shared.comp8851==1.0.0",
+  "hardware_profile_id": "a6000",
+  "max_epochs": 100,
+  "model_source_commit": null,
+  "notes": {},
+  "protocol_version": "vast-v4.4",
+  "selection_metric": "auprc",
+  "source_sha256": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa",
+  "split_registry_version": "seed2",
+  "split_seed": 2,
+  "split_sha256": "9b2d2a8c6c27fa01848461def4988d1c4da30911b62318b9e1ef413459f19166",
+  "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+  "view_sha256": "438889170ee3e9f809c4142f1f242ce50b77117914101e2ef88fd18345004a64"
+}

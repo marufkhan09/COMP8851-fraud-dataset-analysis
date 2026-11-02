@@ -1,0 +1,22 @@
+{
+  "dataset": "yelp",
+  "adapter_version": "mat_homo_undirected_v1",
+  "n_nodes": 45954,
+  "n_features": 32,
+  "n_fraud": 6677,
+  "n_normal": 39277,
+  "n_unlabelled": 0,
+  "feature_min": 0.0,
+  "feature_max": 1.0,
+  "any_negative_features": false,
+  "feature_transform": "none",
+  "edges": {
+    "raw_edges": 7693958,
+    "raw_self_loops": 0,
+    "undirected_edges_both_directions": 7693958
+  },
+  "source_sha256": {
+    "YelpChi.mat": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42"
+  },
+  "source_path": "/workspace/gdn/data/YelpChi.mat"
+}

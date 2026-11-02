@@ -1,0 +1,39 @@
+=== Run: gdn_comp_unified_tr10_seed72_a6000_20261018T065108Z ===
+Result dir: /workspace/gdn_vast/results/gdn/comp/unified/tr10/seed_72
+Loaded comp: nodes=5317 features=57 fraud=559 adapter=comp_native_relations_v1 (0.0s)
+Split overlap checks: PASSED
+Split identical to SplitGNN reference: True
+train=532 (fraud 56) valid=1064 test=2127
+Model source commit: 0383e0d94519dcf45142538f1118b3b440198c1a
+Config SHA256: ff842197a8a6bfd48a47e0fdcd563f62e58463191994db353d5ba4852ee5dcf8
+Split SHA256: 193f52954bc953878d02f1334a94c4137fb8c2a7e3d37d0aaff51b9f11f1ae02
+epoch 0: loss=0.7375 train=0.5s valid=0.0s val_auprc=0.1063 val_auc=0.4486 val_f1_macro@0.5=0.4808 (best_epoch=0, best_auprc=0.1063)
+epoch 1: loss=0.6780 train=0.1s valid=0.0s val_auprc=0.1241 val_auc=0.4817 val_f1_macro@0.5=0.4894 (best_epoch=1, best_auprc=0.1241)
+epoch 2: loss=0.6244 train=0.1s valid=0.0s val_auprc=0.1254 val_auc=0.4983 val_f1_macro@0.5=0.4902 (best_epoch=2, best_auprc=0.1254)
+epoch 3: loss=0.5754 train=0.1s valid=0.0s val_auprc=0.1286 val_auc=0.5132 val_f1_macro@0.5=0.4813 (best_epoch=3, best_auprc=0.1286)
+epoch 4: loss=0.5319 train=0.1s valid=0.0s val_auprc=0.1300 val_auc=0.5187 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 5: loss=0.4943 train=0.1s valid=0.0s val_auprc=0.1244 val_auc=0.5252 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 6: loss=0.4626 train=0.1s valid=0.0s val_auprc=0.1180 val_auc=0.5287 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 7: loss=0.4365 train=0.1s valid=0.0s val_auprc=0.1173 val_auc=0.5313 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 8: loss=0.4151 train=0.2s valid=0.1s val_auprc=0.1173 val_auc=0.5322 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 9: loss=0.3981 train=0.1s valid=0.0s val_auprc=0.1175 val_auc=0.5339 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 10: loss=0.3850 train=0.1s valid=0.0s val_auprc=0.1184 val_auc=0.5368 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 11: loss=0.3759 train=0.1s valid=0.0s val_auprc=0.1189 val_auc=0.5397 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 12: loss=0.3703 train=0.1s valid=0.0s val_auprc=0.1194 val_auc=0.5422 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 13: loss=0.3676 train=0.1s valid=0.0s val_auprc=0.1201 val_auc=0.5435 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 14: loss=0.3672 train=0.1s valid=0.0s val_auprc=0.1211 val_auc=0.5450 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 15: loss=0.3685 train=0.1s valid=0.0s val_auprc=0.1240 val_auc=0.5461 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 16: loss=0.3707 train=0.1s valid=0.0s val_auprc=0.1240 val_auc=0.5470 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 17: loss=0.3729 train=0.1s valid=0.0s val_auprc=0.1243 val_auc=0.5479 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 18: loss=0.3748 train=0.1s valid=0.0s val_auprc=0.1246 val_auc=0.5489 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 19: loss=0.3762 train=0.1s valid=0.0s val_auprc=0.1248 val_auc=0.5495 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 20: loss=0.3769 train=0.1s valid=0.0s val_auprc=0.1249 val_auc=0.5501 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 21: loss=0.3769 train=0.1s valid=0.0s val_auprc=0.1249 val_auc=0.5504 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 22: loss=0.3763 train=0.1s valid=0.0s val_auprc=0.1252 val_auc=0.5512 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 23: loss=0.3752 train=0.1s valid=0.0s val_auprc=0.1255 val_auc=0.5524 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+epoch 24: loss=0.3737 train=0.1s valid=0.0s val_auprc=0.1257 val_auc=0.5532 val_f1_macro@0.5=0.4722 (best_epoch=4, best_auprc=0.1300)
+Early stopping at epoch 24 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.35 (val F1=0.5190)
+Reloaded checkpoint val AUPRC 0.129955 vs logged 0.129955
+TEST metrics: {"auprc": 0.12199711828465565, "auc": 0.5286507206666167, "f1_macro": 0.5345572506868703, "precision_fraud": 0.1646090534979424, "recall_fraud": 0.17857142857142858, "f1_fraud": 0.17130620985010706, "g_mean": 0.39940275207675896, "tp": 40, "fp": 203, "tn": 1700, "fn": 184, "threshold_used": 0.35, "best_epoch": 4}
+=== Run complete: gdn_comp_unified_tr10_seed72_a6000_20261018T065108Z ===

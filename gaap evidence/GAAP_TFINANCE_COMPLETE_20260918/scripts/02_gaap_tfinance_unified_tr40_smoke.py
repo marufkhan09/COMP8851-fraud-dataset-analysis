@@ -1,0 +1,380 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import os, sys, json, time, hashlib, subprocess, importlib.util, shutil
+
+ROOT=Path("/workspace/gaap_vast")
+REPO=ROOT/"repo/GAAP"
+DATA=ROOT/"shared/tfinance/tfinance"
+SPLIT=ROOT/"shared/tfinance/tfinance_seed2_nested_splits.npz"
+CFG=REPO/"config/SAGE_MiniF_DyPLE_MHA/tfinance.yaml"
+TMP=ROOT/"tmp/tfinance_smoke_data"
+EVD=ROOT/"evidence/gaap_tfinance_smoke"
+OUT=EVD/"smoke_result.json"
+
+EXPECTED_COMMIT="6a7dbb0447c4897504525de49e41a0526ee777f8"
+EXPECTED_DATA_SHA="b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700"
+EXPECTED_SPLIT_SHA="de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1"
+
+def sha256(p):
+    h=hashlib.sha256()
+    with open(p,"rb") as f:
+        for b in iter(lambda:f.read(8*1024*1024),b""): h.update(b)
+    return h.hexdigest()
+
+def git(*a):
+    return subprocess.check_output(["git","-C",str(REPO),*a],text=True).strip()
+
+for p in (DATA,SPLIT,CFG): assert p.exists(),p
+assert git("rev-parse","HEAD")==EXPECTED_COMMIT
+assert git("status","--porcelain","--untracked-files=no")==""
+assert sha256(DATA)==EXPECTED_DATA_SHA
+assert sha256(SPLIT)==EXPECTED_SPLIT_SHA
+
+import numpy as np
+import torch, dgl, yaml
+from sklearn.metrics import average_precision_score, roc_auc_score
+
+assert torch.cuda.is_available()
+gpu=torch.cuda.get_device_name(0)
+assert "A6000" in gpu.upper(),gpu
+
+s=np.load(SPLIT,allow_pickle=False)
+sizes={"TR40":15742,"TR30":11806,"TR20":7870,"TR10":3935,"val":7872,"test":15743}
+for k,n in sizes.items(): assert k in s.files and len(s[k])==n,(k,len(s[k]),n)
+assert int(s["seed"][0])==2 and int(s["source_nodes"][0])==39357
+S={k:set(map(int,s[k])) for k in sizes}
+assert S["TR10"]<=S["TR20"]<=S["TR30"]<=S["TR40"]
+for r in ("TR40","TR30","TR20","TR10"):
+    assert S[r].isdisjoint(S["val"]) and S[r].isdisjoint(S["test"])
+assert S["val"].isdisjoint(S["test"])
+print("EXACT_FROZEN_SPLIT_GATE=PASS",flush=True)
+
+cfg=yaml.safe_load(CFG.read_text())
+native={
+ "model_name":"SAGE","loader_type":"MiniF","data_name":"tfinance",
+ "norm_type":"norm01","preprocess":"None","n_bins":40,"d_hidden":128,
+ "use_dyple":True,"d_feat_emb":32,"gnn_n_layers":3,"gnn_dropout":0,
+ "gnn_use_bn":True,"gnn_use_res":True,"gnn_agg":"max_pool",
+ "use_mha":True,"mha_n_layers":1,"mha_n_heads":4,"mha_alpha":0.1,
+ "bs":64,"val_bs":1280,"lr":0.001,"weight_decay":0,
+}
+for k,v in native.items(): assert cfg.get(k)==v,(k,cfg.get(k),v)
+print("GAAP_NATIVE_CONFIG_GATE=PASS",flush=True)
+print("GAAP_NATIVE_CONFIG="+json.dumps({k:cfg[k] for k in native},sort_keys=True),flush=True)
+
+# Build an external, temporary controlled view. The canonical file is not modified.
+if TMP.exists(): shutil.rmtree(TMP)
+TMP.mkdir(parents=True)
+g=dgl.load_graphs(str(DATA))[0][0]
+assert g.num_nodes()==39357 and g.ndata["feature"].shape[1]==10
+y_true=g.ndata["label"].clone().long()
+if y_true.ndim==2:
+    y_true=y_true.argmax(1)
+assert int((y_true==1).sum())==1804 and int((y_true==0).sum())==37553
+
+N=g.num_nodes()
+def mask(idx):
+    x=torch.zeros(N,dtype=torch.bool); x[torch.as_tensor(idx,dtype=torch.long)]=True; return x
+g.ndata["train_mask"]=mask(s["TR40"])
+g.ndata["val_mask"]=mask(s["val"])
+g.ndata["test_mask"]=mask(s["test"])
+
+# Hide test labels from the fit graph. They are not needed by training/validation.
+fit_y=y_true.clone()
+fit_y[torch.as_tensor(s["test"],dtype=torch.long)]=0
+g.ndata["label"]=fit_y.contiguous()
+dgl.save_graphs(str(TMP/"tfinance"),[g])
+del g, fit_y, y_true
+print("TEST_LABELS_HIDDEN_DURING_FIT=PASS",flush=True)
+
+# Import through the author's normal ENV path, avoiding the direct-dataloader circular import.
+sys.path.insert(0,str(REPO/"mycode"))
+entry=REPO/"mycode/exp/101_retrain.py"
+spec=importlib.util.spec_from_file_location("gaap101_controlled_tfinance",entry)
+A=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(A)
+
+# Redirect only the author loader's dataset root to the temporary controlled graph.
+import utils.dataloader as DL
+DL.DIR_FRAUD_DATASET=str(TMP)
+
+cfg=dict(cfg)
+cfg.update(seed=2,max_epochs=2,patience=20,nowandb=True,device="cuda",device_id=0)
+A.fix_seed(2)
+# GAAP_TFINANCE_ADAPTER_REINSTALL_BEFORE_LOADER
+_adapter_src="/workspace/gaap_vast/shared/tfinance/tfinance_gaap_input_adapter"
+_adapter_dst="/workspace/gaap_vast/repo/GAAP/datasets/tfinance"
+with open(_adapter_src,"rb") as _f:
+    _adapter_bytes=_f.read()
+with open(_adapter_dst,"wb") as _f:
+    _f.write(_adapter_bytes)
+print("MODEL_INPUT_ADAPTER_REINSTALLED=PASS",flush=True)
+
+# GAAP_TFINANCE_RUNTIME_DATA_PATH_FIX
+import os as _gaap_os
+import shutil as _gaap_shutil
+import hashlib as _gaap_hashlib
+import dgl as _gaap_dgl
+
+_loader_cls = A.tag_dm_map[cfg["loader_type"]]
+
+# Resolve DIR_FRAUD_DATASET from the exact dataloader module
+# used by MiniFDataModule. No separate/circular dataloader import.
+_loader_globals = _loader_cls.__init__.__globals__
+
+assert "DIR_FRAUD_DATASET" in _loader_globals, \
+    "DIR_FRAUD_DATASET missing from MiniFDataModule globals"
+
+_runtime_data_dir = str(
+    _loader_globals["DIR_FRAUD_DATASET"]
+)
+
+_runtime_data_path = _gaap_os.path.join(
+    _runtime_data_dir,
+    cfg["data_name"]
+)
+
+_adapter_src = (
+    "/workspace/gaap_vast/shared/tfinance/"
+    "tfinance_gaap_input_adapter"
+)
+
+_gaap_os.makedirs(
+    _runtime_data_dir,
+    exist_ok=True
+)
+
+_gaap_shutil.copyfile(
+    _adapter_src,
+    _runtime_data_path
+)
+
+def _sha256(_p):
+    _h=_gaap_hashlib.sha256()
+    with open(_p,"rb") as _f:
+        for _b in iter(
+            lambda:_f.read(8*1024*1024),
+            b""
+        ):
+            _h.update(_b)
+    return _h.hexdigest()
+
+assert _sha256(_adapter_src) == \
+    "7db7e48617038b35dbac041a6b90426f25237886e157d2f54776bbbd756d69ae"
+
+assert _sha256(_runtime_data_path) == \
+    "7db7e48617038b35dbac041a6b90426f25237886e157d2f54776bbbd756d69ae"
+
+_runtime_graph = _gaap_dgl.load_graphs(
+    _runtime_data_path
+)[0][0]
+
+for _k in [
+    "train_masks",
+    "val_masks",
+    "test_masks",
+    "feature",
+    "label",
+]:
+    assert _k in _runtime_graph.ndata, _k
+
+assert int(
+    _runtime_graph.ndata[
+        "train_masks"
+    ][:,0].sum()
+) == 15742
+
+assert int(
+    _runtime_graph.ndata[
+        "val_masks"
+    ][:,0].sum()
+) == 7872
+
+assert int(
+    _runtime_graph.ndata[
+        "test_masks"
+    ][:,0].sum()
+) == 15743
+
+print(
+    "GAAP_RUNTIME_DATA_DIR="
+    + _runtime_data_dir,
+    flush=True
+)
+
+print(
+    "GAAP_RUNTIME_DATA_PATH="
+    + _runtime_data_path,
+    flush=True
+)
+
+print(
+    "RUNTIME_MODEL_INPUT_SHA="
+    + _sha256(_runtime_data_path),
+    flush=True
+)
+
+print(
+    "RUNTIME_MASK_SCHEMA_GATE=PASS",
+    flush=True
+)
+
+del _runtime_graph
+
+dm = _loader_cls(**cfg)
+
+# GAAP_TFINANCE_RUNTIME_FLOAT32_FIX
+_runtime_casted = []
+
+for _k in list(dm.g.ndata.keys()):
+    _v = dm.g.ndata[_k]
+
+    if torch.is_tensor(_v) and torch.is_floating_point(_v):
+        if _v.dtype != torch.float32:
+            dm.g.ndata[_k] = _v.float().contiguous()
+            _runtime_casted.append(
+                f"g.ndata[{_k}]"
+            )
+
+# Cover any feature tensors cached directly by the DataModule.
+for _attr in [
+    "feature",
+    "features",
+    "feat",
+    "x",
+    "bin_feat",
+    "bin_feature",
+    "feat_bin",
+    "feature_bin",
+]:
+    if hasattr(dm, _attr):
+        _v = getattr(dm, _attr)
+
+        if torch.is_tensor(_v) and torch.is_floating_point(_v):
+            if _v.dtype != torch.float32:
+                setattr(
+                    dm,
+                    _attr,
+                    _v.float().contiguous()
+                )
+                _runtime_casted.append(
+                    f"dm.{_attr}"
+                )
+
+print(
+    "RUNTIME_FLOAT32_CAST_FIELDS="
+    + repr(_runtime_casted),
+    flush=True
+)
+
+for _k in dm.g.ndata.keys():
+    _v = dm.g.ndata[_k]
+    if torch.is_tensor(_v) and torch.is_floating_point(_v):
+        assert _v.dtype == torch.float32, (
+            _k,
+            _v.dtype
+        )
+
+print(
+    "GAAP_RUNTIME_FLOAT32_GATE=PASS",
+    flush=True
+)
+
+
+assert dm.g.num_nodes()==39357 and dm.d_in==10 and dm.n_classes==2
+assert len(dm.trn_idx)==15742 and len(dm.val_idx)==7872 and len(dm.tst_idx)==15743
+_test_idx = torch.as_tensor(s["test"], dtype=torch.long)
+_runtime_labels = dm.g.ndata["label"].clone()
+_runtime_labels[_test_idx] = 0
+dm.g.ndata["label"] = _runtime_labels
+
+assert torch.all(dm.g.ndata["label"][_test_idx] == 0)
+assert not torch.any(dm.g.ndata["train_mask"][_test_idx])
+assert not torch.any(dm.g.ndata["val_mask"][_test_idx])
+
+print("TEST_LABELS_HIDDEN_IN_RUNTIME_GRAPH=PASS", flush=True)
+print("GAAP_AUTHOR_DATALOADER_GATE=PASS",flush=True)
+
+cfg["d_in"]=dm.d_in
+cfg["n_classes"]=dm.n_classes
+cfg["n_nodes"]=dm.g.num_nodes()
+model=A.LitSAGE(**cfg)
+# Explicit indices for the author's validation logic.
+model.trn_idx=dm.trn_idx
+model.val_idx=dm.val_idx
+model.tst_idx=dm.tst_idx
+
+# Replace only the evaluation helper during fit: validation metrics may use VAL only.
+# No model layer, forward pass, optimizer, sampler, or feature transform is changed.
+def val_only_metrics(y,prob,trn_idx,val_idx,tst_idx):
+    yy=np.asarray(y); pp=np.asarray(prob); vi=np.asarray(val_idx,dtype=np.int64)
+    vy=yy[vi]; vp=pp[vi]
+    return {
+        "val_auc":float(roc_auc_score(vy,vp)),
+        "val_aps":float(average_precision_score(vy,vp)),
+        "tst_auc":0.0,
+        "tst_aps":0.0,
+    }
+A.cal_binary_metrics=val_only_metrics
+
+from lightning.pytorch.callbacks import Callback
+class Live(Callback):
+    def __init__(self):
+        self.best=-1.0; self.best_epoch=-1; self.rows=[]
+    def on_validation_end(self,trainer,pl_module):
+        if trainer.sanity_checking: return
+        m=trainer.callback_metrics
+        ap=float(m["val_aps"].detach().cpu())
+        auc=float(m["val_auc"].detach().cpu())
+        loss=float(m.get("trloss_epoch",m.get("trloss",torch.tensor(float("nan")))).detach().cpu())
+        ep=trainer.current_epoch+1
+        if ap>self.best: self.best,self.best_epoch=ap,ep
+        self.rows.append({"epoch":ep,"loss":loss,"val_auprc":ap,"val_auroc":auc})
+        print(f"epoch={ep:03d} | loss={loss:.6f} | valAUPRC={ap:.6f} | valAUROC={auc:.6f} | best={self.best:.6f}@{self.best_epoch}",flush=True)
+
+live=Live()
+torch.cuda.empty_cache()
+torch.cuda.reset_peak_memory_stats()
+t0=time.perf_counter()
+trainer=A.Trainer(
+    accelerator="cuda",
+    devices=1,
+    max_epochs=2,
+    logger=False,
+    enable_checkpointing=False,
+    enable_progress_bar=False,
+    callbacks=[live],
+    gradient_clip_val=10,
+    num_sanity_val_steps=0,
+)
+trainer.fit(model,dm)
+wall=time.perf_counter()-t0
+peak=torch.cuda.max_memory_allocated()/1024**2
+
+assert len(live.rows)==2
+assert live.best>=0
+assert git("status","--porcelain","--untracked-files=no")==""
+
+EVD.mkdir(parents=True,exist_ok=True)
+result={
+ "status":"PASS","model":"GAAP","dataset":"T-Finance","smoke_epochs":2,
+ "split":"TR40","train_seed":2,"gpu":gpu,
+ "repository_commit":EXPECTED_COMMIT,
+ "dataset_sha256":EXPECTED_DATA_SHA,"split_sha256":EXPECTED_SPLIT_SHA,
+ "native_config":{k:cfg[k] for k in native},
+ "rows":live.rows,"best_val_auprc":live.best,"best_epoch":live.best_epoch,
+ "wall_seconds":wall,"peak_gpu_mb":peak,
+ "test_evaluated":False,"test_labels_hidden_during_fit":True,
+ "author_architecture_changed":False,"shared_input_adapter":True,
+}
+OUT.write_text(json.dumps(result,indent=2))
+
+print(f"BEST_VAL_AUPRC={live.best:.6f}@{live.best_epoch}",flush=True)
+print(f"WALL_SECONDS={wall:.3f}",flush=True)
+print(f"PEAK_GPU_MB={peak:.2f}",flush=True)
+print("TEST_EVALUATED=NO",flush=True)
+print("TEST_LABEL_ISOLATION=PASS",flush=True)
+print("GAAP_AUTHOR_ARCHITECTURE_CHANGED=NO",flush=True)
+print("GAAP_TFINANCE_UNIFIED_2EPOCH_SMOKE=PASS",flush=True)
+print("GAAP_AUTHOR_REPO_CLEAN=PASS",flush=True)
+print("EVIDENCE="+str(OUT),flush=True)

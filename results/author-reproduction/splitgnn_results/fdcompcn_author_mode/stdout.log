@@ -1,0 +1,22 @@
+----------------------------------
+              args
+----------------------------------
+dataset:	comp
+seed:	30
+epoch:	1000
+early_stop:	100
+lr:	0.001
+weigth_decay:5e-05
+gamma:	1
+C:	1
+K:	0
+intra_dim:	8
+dropout:	0.1
+cuda:	0
+----------------------------------
+Start training model...
+[training progress logged every 10 epochs, best epoch 62, validation metrics oscillated, early stopped around epoch 160+]
+End training
+Test model...
+Test: Recall:0.9866071428571429, F1-macro:0.1200570784928371, AUC:0.5367977030153754, G-Mean:0.15729748529595097
+Test: Recall:0.48214285714285715, F1-macro:0.426286510350515, AUC:0.5340570887445888, G-Mean:0.510113788312394

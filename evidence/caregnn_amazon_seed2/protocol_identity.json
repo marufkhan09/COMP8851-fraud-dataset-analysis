@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": null,
+  "adapter_version": "relation-view-v1",
+  "config_sha256": "ae1ad13448971cb718527701158e03251c8cc33773ecc0f23edf234adf35e046",
+  "container_digest": null,
+  "dataset_manifest_version": "comp8851-canonical-v1",
+  "dataset_view_id": "amazon_relation_v1",
+  "early_stopping_patience": 20,
+  "evaluator_commit": "shared.comp8851==1.0.0",
+  "hardware_profile_id": "a6000",
+  "max_epochs": 100,
+  "model_source_commit": null,
+  "notes": {},
+  "protocol_version": "vast-v4.4",
+  "selection_metric": "auprc",
+  "source_sha256": "4b7e3f9cccc62b736792707393ccd74332a1a0592dba128ac6b2989bf1ee9d63",
+  "split_registry_version": "seed2",
+  "split_seed": 2,
+  "split_sha256": "2aa40cd079e0d7fea5154229f32992716a737be0b361edf11ff3746cbfc3b509",
+  "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+  "view_sha256": "1bcfdb9592d2788b5644f7fddc922fd75ea6159db85ef80b10f373cbcb7b920f"
+}

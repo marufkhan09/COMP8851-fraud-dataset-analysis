@@ -1,0 +1,26 @@
+{
+  "view_file": "/workspace/amnet_vast/views/elliptic_view.npz",
+  "view_sha256": "b7c6d758ae5f0e9d41099c70a33ddc2b9e4753876cf91bc509f1d463f8dc19ac",
+  "dataset": "elliptic",
+  "adapter_version": "homo_undirected_v1",
+  "n_nodes": 203769,
+  "n_features": 165,
+  "n_fraud": 4545,
+  "n_normal": 42019,
+  "n_unlabelled": 157205,
+  "feature_min": -13.093358039855957,
+  "feature_max": 289.2043762207031,
+  "any_negative_features": true,
+  "feature_transform": "none",
+  "edges": {
+    "raw_edges": 234355,
+    "raw_self_loops": 0,
+    "undirected_edges_both_directions": 468710
+  },
+  "source_sha256": {
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493"
+  },
+  "source_path": "/workspace/raw/elliptic"
+}

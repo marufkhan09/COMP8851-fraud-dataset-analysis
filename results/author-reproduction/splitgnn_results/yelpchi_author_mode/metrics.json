@@ -1,0 +1,20 @@
+{
+  "dataset": "yelp",
+  "model": "SplitGNN",
+  "mode": "author-reproduction",
+  "epochs_run": 1000,
+  "early_stop_triggered": false,
+  "total_training_time_seconds": 1589.97,
+  "test_best_auc_model": {
+    "recall": 0.8621460506706409,
+    "f1_macro": 0.7410015325367649,
+    "auc": 0.9188747452829567,
+    "g_mean": 0.8413997239361735
+  },
+  "test_best_gmean_model": {
+    "recall": 0.8446348733233979,
+    "f1_macro": 0.7330423648273034,
+    "auc": 0.9126063818240336,
+    "g_mean": 0.8311071428611487
+  }
+}

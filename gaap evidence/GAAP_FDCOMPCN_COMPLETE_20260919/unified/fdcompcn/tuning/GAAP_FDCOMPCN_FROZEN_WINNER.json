@@ -1,0 +1,16 @@
+{
+  "dataset": "FDCompCN",
+  "model": "GAAP",
+  "winner_trial": 6,
+  "winner_config": {
+    "d_hidden": 64,
+    "gnn_dropout": 0.2,
+    "lr": 0.0005
+  },
+  "winner_val_auprc": 0.3970550000667572,
+  "winner_checkpoint": "/workspace/gaap_vast/unified/fdcompcn/tuning/trials/trial_06/checkpoints/best.ckpt",
+  "configuration_frozen": true,
+  "homo_as_fourth_relation": false,
+  "test_evaluated": false,
+  "test_predictions_generated": false
+}

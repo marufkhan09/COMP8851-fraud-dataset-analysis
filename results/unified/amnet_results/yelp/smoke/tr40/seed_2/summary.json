@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_yelp_smoke_tr40_seed2_a6000_20261018T150232Z",
+  "model": "amnet",
+  "dataset": "yelp",
+  "track": "smoke",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 2,
+  "best_epoch": 1,
+  "best_val_auprc": 0.16455784560300363,
+  "reloaded_val_auprc": 0.1645578456030036,
+  "dataset_load_seconds": 5.648815267952159,
+  "train_only_total_seconds": 0.7000059452839196,
+  "train_plus_valid_total_seconds": 1.0435821330174804,
+  "inference_seconds": 0.1713235229253769,
+  "peak_memory_bytes": 4570557952,
+  "peak_rss_bytes": 5514731520,
+  "test_metrics": {
+    "auprc": 0.1670368143657532,
+    "auc": 0.5496705027330397,
+    "f1_macro": 0.4608277358988649,
+    "precision_fraud": 0.0,
+    "recall_fraud": 0.0,
+    "f1_fraud": 0.0,
+    "g_mean": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "tn": 15711,
+    "fn": 2671,
+    "threshold_used": 0.55,
+    "best_epoch": 1
+  }
+}

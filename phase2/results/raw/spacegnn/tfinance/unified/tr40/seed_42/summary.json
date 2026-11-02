@@ -1,0 +1,70 @@
+{
+  "schema_version": "2.0",
+  "model": "SpaceGNN",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": "TR40",
+  "train_seed": 42,
+  "status": "COMPLETE",
+  "failure_reason": "",
+  "stop_reason": "early stopping: no validation improvement for 20 epochs",
+  "run_mode": "controlled-tuned",
+  "best_validation_epoch": 47,
+  "selected_threshold": 0.55,
+  "selection_metric": "auprc",
+  "best_selection_value": 0.9243260426111424,
+  "best_validation_metrics": {
+    "auprc": 0.9243260426111424,
+    "threshold": 0.55
+  },
+  "test_metrics": {
+    "auroc": 0.9747670308208876,
+    "auprc": 0.909504238206316,
+    "macro_f1": 0.9321429472761469,
+    "fraud_f1": 0.8700225394440271,
+    "fraud_precision": 0.9491803278688524,
+    "fraud_recall": 0.8030513176144244,
+    "gmean": 0.8952062438952617,
+    "accuracy": 0.9890116869918699,
+    "test_prevalence": 0.04579522357723577,
+    "auprc_lift_over_prevalence": 19.860242338863024,
+    "threshold": 0.55
+  },
+  "timing": {
+    "training_epochs_completed": 68,
+    "total_train_epoch_seconds": 4041.6541623026133,
+    "total_validation_seconds": 259.74461323209107,
+    "setup_seconds": 4.5905707366764545,
+    "total_wall_seconds": 4428.490357549861,
+    "peak_gpu_memory_mb": 18101.7685546875,
+    "peak_rss_mb": 3110.73828125
+  },
+  "configuration": {
+    "resolved_device": "cuda:0",
+    "hyperparameter_source": "name.py PARAMETERS[tfinance] / paper Table 4 + overrides {\"alpha\": 1.0, \"batch_size\": 50, \"beta\": 1.0, \"drop_rate\": 0.1, \"hid_dim\": 128, \"layer_num\": 3, \"lr\": 0.001, \"stdneg\": \"official\", \"stdpos\": \"official\"}",
+    "hyperparameters": {
+      "alpha": 1.0,
+      "batch_size": 50,
+      "beta": 1.0,
+      "drop_rate": 0.1,
+      "hid_dim": 128,
+      "layer_num": 3,
+      "lr": 0.001,
+      "stdneg": "official",
+      "stdpos": "official"
+    }
+  },
+  "protocol_identity": {
+    "config_sha256": "2b8a5908035e89acd385645d091ace0c44dd41431d602f167a7dbbb7bba9c59e",
+    "split_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa",
+    "model_source_commit": "921c03ff879b239dab9b319b296fef3bc3bda2d2"
+  },
+  "predictions_file": "predictions.npz",
+  "predictions_sha256": "8a4f17d7a0dd861d8225f425e0f20278cb004215adb077da7847309882d38983",
+  "checkpoint_reload_check": {
+    "passed": true
+  },
+  "artifact_verification": {
+    "complete": true
+  }
+}

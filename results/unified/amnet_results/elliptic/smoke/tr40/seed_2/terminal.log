@@ -1,0 +1,18 @@
+=== Run: amnet_elliptic_smoke_tr40_seed2_a6000_20261018T144247Z ===
+Result dir: /workspace/amnet_vast/results/amnet/elliptic/smoke/tr40/seed_2
+Loaded elliptic: nodes=203769 features=165 edges(both dirs)=468710 fraud=4545 unlabelled=157205 adapter=homo_undirected_v1
+Splits: shared canonical file /workspace/gdn_vast/splits/elliptic_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=18625 (fraud 1818) valid=9313 (fraud 909) test=18626 (fraud 1818)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author config.py['elliptic'] {'K': 2, 'M': 4, 'hidden_channels': 128, 'lr_f': 0.05, 'lr': 0.0001, 'weight_decay': 1e-05, 'beta': 0.5}
+Config SHA256: a92f13036195058d0e14e2f5ab49fbbbb1c9abb80d3221da24c1b9e094ee3bbf
+Split SHA256: 77008be57543be620a444bf233a229fe6f09d3d5b4fcf427a8481f7972e5ebf5
+epoch 0: loss=0.6729 train=0.19s valid=0.08s val_auprc=0.1062 val_auc=0.5931 val_f1_macro@0.5=0.4640 (best_epoch=0, best_auprc=0.1062)
+epoch 1: loss=0.6657 train=0.17s valid=0.08s val_auprc=0.1182 val_auc=0.6356 val_f1_macro@0.5=0.4642 (best_epoch=1, best_auprc=0.1182)
+Selected threshold (best val macro-F1): 0.60 (val F1=0.4743)
+Reloaded checkpoint val AUPRC 0.118161 vs logged 0.118161
+TEST metrics: {"auprc": 0.12087276548349558, "auc": 0.6441617492901124, "f1_macro": 0.47434667268724956, "precision_fraud": 0.0, "recall_fraud": 0.0, "f1_fraud": 0.0, "g_mean": 0.0, "tp": 0, "fp": 0, "tn": 16808, "fn": 1818, "threshold_used": 0.6, "best_epoch": 1}
+WARNING: model predicted no fraud on the test set at the selected threshold
+=== Run complete: amnet_elliptic_smoke_tr40_seed2_a6000_20261018T144247Z ===

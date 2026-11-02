@@ -1,0 +1,24 @@
+{
+  "dataset": "comp",
+  "dgl_path": "/workspace/h2fd_vast/views/comp_tr40.dgl",
+  "dgl_sha256": "19e600c11228a5ca55630db260560007cd6a99e026dcac51c2c6e9e814767cc5",
+  "native_dgl_path": "/workspace/h2fd_vast/native/comp.dgl",
+  "native_dgl_sha256": "5ed597bbd2d0a96b0ee706a8fab5febc8e9e1776aab151e2fd9bb123d72d653b",
+  "source_mat_path": "/workspace/data/FDCompCN.zip",
+  "source_mat_sha256": "8cf86d2f733a9283dd706a5919cb3637270f21b761158cc7f31950b616b302ce",
+  "n_nodes": 5317,
+  "n_edges": {
+    "homo": 10059,
+    "invest_bc2bc": 8505,
+    "provide_bc2bc": 5944,
+    "sale_bc2bc": 6244
+  },
+  "edge_label_verification": {
+    "method": "dataset-shipped homo edge labels/train mask vs the authors' rule applied to the dataset-shipped node train mask (informational)",
+    "edge_labels_identical": true,
+    "edge_train_mask_identical": true,
+    "n_label_mismatch": 0,
+    "n_mask_mismatch": 0,
+    "note": "these shipped labels are replaced by the authors' rule for every view"
+  }
+}

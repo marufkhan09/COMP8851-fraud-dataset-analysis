@@ -1,0 +1,131 @@
+{
+  "budget": 6,
+  "dataset": "yelpchi",
+  "model": "CARE-GNN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "emb_size": 32,
+    "lambda_2": 1e-05,
+    "lr": 0.005,
+    "step_size": 0.02
+  },
+  "selected_trial": 3,
+  "selected_validation_auprc": 0.4538745481243034,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.01,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 623.2723712921143,
+      "trial": 0,
+      "validation_auprc": 0.4140289743186689
+    },
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.0,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 720.3971862792969,
+      "trial": 1,
+      "validation_auprc": 0.33367645367916954
+    },
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_02",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 627.9403560161591,
+      "trial": 2,
+      "validation_auprc": 0.44824636951848795
+    },
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 1e-05,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_03",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 609.7266399860382,
+      "trial": 3,
+      "validation_auprc": 0.4538745481243034
+    },
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 128,
+        "lambda_2": 0.0001,
+        "lr": 0.001,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_04",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 649.2018911838531,
+      "trial": 4,
+      "validation_auprc": 0.42519204215485806
+    },
+    {
+      "dataset": "yelpchi",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.001,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_yelpchi/trial_05",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 617.7876772880554,
+      "trial": 5,
+      "validation_auprc": 0.3322659049166473
+    }
+  ],
+  "trials_attempted": 6,
+  "trials_successful": 6,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

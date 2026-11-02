@@ -1,0 +1,17 @@
+{
+  "dataset": "tfinance",
+  "dgl_path": "/workspace/h2fd_vast/views/tfinance_tr40.dgl",
+  "dgl_sha256": "6b7ffedcf80704b4c451d87fae422bfe40f7f312d77f0d00ccc150bab0a1f377",
+  "native_dgl_path": "/workspace/h2fd_vast/native/tfinance.dgl",
+  "native_dgl_sha256": "f63f5bbf73b50bdf2d1d0ba1b2b86888592091e5271fd949810ee3c704705a75",
+  "source_mat_path": "/workspace/data/bwgnn/dataset/tfinance",
+  "source_mat_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "n_nodes": 39357,
+  "n_edges": {
+    "e": 42445086,
+    "homo": 42445086
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  }
+}

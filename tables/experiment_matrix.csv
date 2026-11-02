@@ -1,0 +1,13 @@
+model,dataset,ratio,status,n_seeds,seeds,detail
+CARE-GNN,YelpChi,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+CARE-GNN,Amazon,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+CARE-GNN,T-Finance,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on Tesla T4."
+CARE-GNN,T-Social,TR40,FAILED,0,,"Attempted repeatedly and never reached a test evaluation. Hyperparameter tuning completed two full trials (roughly 71 minutes each, best validation AUPRC 0.0859). The final run then trained for 16 epochs over 1 h 55 m on a Tesla T4 and was learning — validation AUPRC climbed to 0.1006 at epoch 14 — before it hit the 180-minute session cap and was interrupted inside layers.py during validation prediction. The cost is structural: validation took about 336 s per epoch against 62 s of training, because CARE-GNN filters neighbours per node in Python across all 1,156,213 validation nodes."
+CARE-GNN,Elliptic,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+CARE-GNN,FDCompCN,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+GHRN,YelpChi,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+GHRN,Amazon,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+GHRN,T-Finance,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on Tesla T4."
+GHRN,T-Social,TR40,FAILED,0,,"Attempted repeatedly across a five-rung escalation ladder that varied width, filter order and device (hid_dim 32/64, order 1/2, both cuda:0 and CPU). Every rung failed. The recorded error is a DGL index-dtype mismatch — 'Expect argument ""u"" to have data type torch.int32. But got torch.int64' — raised because T-Social is large enough that its graph carries int32 indices while torch.arange and torch.argsort produce int64. Tuning trial 0 failed after 7.2 minutes with no validation AUPRC recorded."
+GHRN,Elliptic,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."
+GHRN,FDCompCN,TR40,COMPLETED,3,2 42 72,"3 final run(s), each with exactly one test evaluation, on NVIDIA RTX A6000."

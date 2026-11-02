@@ -1,0 +1,46 @@
+{
+  "dataset_id": "yelpchi",
+  "notes": {
+    "dgl_masks": "not used; the unified track applies COMP8851 split IDs",
+    "loaded_from_cache": "data/yelpchi/yelpchi_canonical.npz",
+    "provenance": "official release https://data.dgl.ai/dataset/FraudYelp.zip -> YelpChi.mat",
+    "relations": [
+      "rur",
+      "rtr",
+      "rsr"
+    ]
+  },
+  "source_files": {
+    "mat": "data/yelpchi/YelpChi.mat"
+  },
+  "source_sha256": {
+    "mat": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42"
+  },
+  "statistics": {
+    "dataset": "yelpchi",
+    "eligible_nodes": 45954,
+    "feature_dimension": 32,
+    "fraud_nodes": 6677,
+    "fraud_percentage": 14.52974713844279,
+    "imbalance_ratio_normal_to_fraud": 5.882432230043433,
+    "ineligible_nodes": 0,
+    "nodes": 45954,
+    "normal_nodes": 39277,
+    "relations": {
+      "rsr": {
+        "stored_directed_edges": 6805486,
+        "undirected_edges": 3402743
+      },
+      "rtr": {
+        "stored_directed_edges": 1147232,
+        "undirected_edges": 573616
+      },
+      "rur": {
+        "stored_directed_edges": 98630,
+        "undirected_edges": 49315
+      }
+    },
+    "union_stored_directed_edges": 7693958,
+    "union_undirected_edges": 3846979
+  }
+}

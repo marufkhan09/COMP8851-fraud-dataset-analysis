@@ -1,0 +1,44 @@
+{
+  "dataset_id": "elliptic",
+  "notes": {
+    "feature_convention": "transaction ID dropped; time step retained among the 166 features",
+    "label_convention": "raw class 1 (illicit) -> 1, class 2 (licit) -> 0, unknown excluded",
+    "loaded_from_cache": "data/elliptic/elliptic_canonical.npz",
+    "provenance": "EllipticCo Kaggle release, GADBench-compatible 166-feature view",
+    "split_convention": "chronological; see splits.build_chronological_splits"
+  },
+  "source_files": {
+    "classes": "data/elliptic/elliptic_txs_classes.csv",
+    "edges": "data/elliptic/elliptic_txs_edgelist.csv",
+    "features": "data/elliptic/elliptic_txs_features.csv"
+  },
+  "source_sha256": {
+    "classes": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+    "edges": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "features": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0"
+  },
+  "statistics": {
+    "dataset": "elliptic",
+    "eligible_nodes": 46564,
+    "feature_dimension": 166,
+    "fraud_nodes": 4545,
+    "fraud_percentage": 9.760759384932566,
+    "imbalance_ratio_normal_to_fraud": 9.245104510451045,
+    "ineligible_nodes": 157205,
+    "nodes": 203769,
+    "normal_nodes": 42019,
+    "relations": {
+      "txn": {
+        "stored_directed_edges": 468710,
+        "undirected_edges": 234355
+      }
+    },
+    "time_steps": {
+      "distinct": 49,
+      "max": 49,
+      "min": 1
+    },
+    "union_stored_directed_edges": 468710,
+    "union_undirected_edges": 234355
+  }
+}

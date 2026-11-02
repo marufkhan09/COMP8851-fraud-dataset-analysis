@@ -1,0 +1,24 @@
+{
+  "run_name": "splitgnn_amazon_unified_tr10_seed42_a6000_20260918T002505Z",
+  "model": "splitgnn",
+  "dataset": "amazon",
+  "track": "unified",
+  "ratio": 10,
+  "seed": 42,
+  "n_completed_epochs": 82,
+  "best_epoch": 61,
+  "best_val_auprc": 0.4694832894166823,
+  "dataset_load_seconds": 2.1047890186309814e-07,
+  "train_only_total_seconds": 295.07703506667167,
+  "train_plus_valid_total_seconds": 585.1155927246436,
+  "inference_seconds": 3.4359043976292014,
+  "peak_memory_bytes": 4049550848,
+  "test_metrics": {
+    "auprc": 0.5382003661568799,
+    "auc": 0.9092369345810788,
+    "f1_macro": 0.7651001500555656,
+    "recall": 0.5579268292682927,
+    "threshold_used": 0.8500000000000001,
+    "best_epoch": 61
+  }
+}

@@ -30,9 +30,6 @@ models/*/references/*.pdf
 models/dga-gnn/dga_gnn_upstream/
 
 # Python cache and logs
-__pycache__/
-*.pyc
-*.pth
 *.tfevents*
 
 # Heavy datasets and generated matrices
@@ -42,3 +39,6 @@ __pycache__/
 **/mp_output/
 **/seq_data/
 **/seq_data_test/
+__MACOSX/
+**/__pycache__/
+**/.DS_Store
