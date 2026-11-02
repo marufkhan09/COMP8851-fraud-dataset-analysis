@@ -1,0 +1,17 @@
+{
+  "dataset": "tsocial",
+  "dgl_path": "/workspace/h2fd_vast/views/tsocial_tr30.dgl",
+  "dgl_sha256": "339f827cf3c673829c4058c3642987d4a1385c5a91f607b6222562a058361474",
+  "native_dgl_path": "/workspace/h2fd_vast/native/tsocial.dgl",
+  "native_dgl_sha256": "a1339648982b8b9c2c89ed21e93f0436d39e8d8220353a67c7169b84ea4fd673",
+  "source_mat_path": "/workspace/data/bwgnn/dataset/tsocial",
+  "source_mat_sha256": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0",
+  "n_nodes": 867160,
+  "n_edges": {
+    "e": 3297570,
+    "homo": 3297570
+  },
+  "edge_label_verification": {
+    "method": "not applicable (no H2-FDetector-native edge labels exist for this dataset); exact equivalence of the vectorised rule with the authors' generate_edges_labels() was proven on the full YelpChi and Amazon graphs"
+  }
+}

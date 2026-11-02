@@ -1,0 +1,17 @@
+=== Run: amnet_tsocial_smoke_tr40_seed2_a6000_20261018T151239Z ===
+Result dir: /workspace/amnet_vast/results/amnet/tsocial/smoke/tr40/seed_2
+Loaded tsocial: nodes=867160 features=10 edges(both dirs)=3297570 fraud=26142 unlabelled=0 adapter=homo_undirected_tsocial15pct_v1
+Splits: shared canonical file /workspace/gdn_vast/splits/tsocial_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=346864 (fraud 10457) valid=173432 (fraud 5228) test=346864 (fraud 10457)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author README custom-dataset default profile {'K': 2, 'M': 5, 'hidden_channels': 64, 'lr_f': 0.05, 'lr': 0.0005, 'weight_decay': 1e-05, 'beta': 1.0}
+Config SHA256: e74cefc6f43d3f49b61d8a9d6bf2a92a5064c6231e2f294bbc7c8447e8bf10a5
+Split SHA256: 197cd8a496ca269cfa2affeea08837bb97bc55181f878b36cc724036ba6d001b
+epoch 0: loss=60.2965 train=0.54s valid=0.24s val_auprc=0.0273 val_auc=0.4775 val_f1_macro@0.5=0.2745 (best_epoch=0, best_auprc=0.0273)
+epoch 1: loss=43.0930 train=0.53s valid=0.24s val_auprc=0.0283 val_auc=0.5115 val_f1_macro@0.5=0.4658 (best_epoch=1, best_auprc=0.0283)
+Selected threshold (best val macro-F1): 0.95 (val F1=0.4706)
+Reloaded checkpoint val AUPRC 0.028345 vs logged 0.028345
+TEST metrics: {"auprc": 0.02861861652944042, "auc": 0.5162087945152802, "f1_macro": 0.46971046414775897, "precision_fraud": 0.013330556134138721, "recall_fraud": 0.055082719709285646, "f1_fraud": 0.02146610516900831, "g_mean": 0.21932182648207826, "tp": 576, "fp": 42633, "tn": 293774, "fn": 9881, "threshold_used": 0.95, "best_epoch": 1}
+=== Run complete: amnet_tsocial_smoke_tr40_seed2_a6000_20261018T151239Z ===

@@ -1,0 +1,24 @@
+{
+  "run_name": "splitgnn_comp_unified_tr30_seed72_a6000_20260918T004742Z",
+  "model": "splitgnn",
+  "dataset": "comp",
+  "track": "unified",
+  "ratio": 30,
+  "seed": 72,
+  "n_completed_epochs": 23,
+  "best_epoch": 2,
+  "best_val_auprc": 0.11644255887294405,
+  "dataset_load_seconds": 2.905726432800293e-07,
+  "train_only_total_seconds": 1.9509649500250816,
+  "train_plus_valid_total_seconds": 3.0280149653553963,
+  "inference_seconds": 0.04582401178777218,
+  "peak_memory_bytes": 29369344,
+  "test_metrics": {
+    "auprc": 0.14340229369998148,
+    "auc": 0.5620120486449967,
+    "f1_macro": 0.47220843672456575,
+    "recall": 0.0,
+    "threshold_used": 0.45,
+    "best_epoch": 2
+  }
+}

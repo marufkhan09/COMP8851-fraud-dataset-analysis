@@ -1,0 +1,51 @@
+=== Run: gdn_tsocial_unified_tr30_seed72_a6000_20261018T090056Z ===
+Result dir: /workspace/gdn_vast/results/gdn/tsocial/unified/tr30/seed_72
+Loaded tsocial: nodes=867160 features=10 fraud=26142 adapter=homo_replicated_tsocial15pct_v1 feature_transform=gdn_row_normalize (2.8s)
+Split overlap checks: PASSED
+Split identical to SplitGNN reference: True
+train=260148 (fraud 7843) valid=173432 test=346864
+Model source commit: 0383e0d94519dcf45142538f1118b3b440198c1a
+Config SHA256: b87d4f57d97018e927d1ba1ac8115a4c67e44508edaed14b63bb46ded6375e59
+Split SHA256: 197cd8a496ca269cfa2affeea08837bb97bc55181f878b36cc724036ba6d001b
+epoch 0: loss=0.1489 train=189.7s valid=7.3s val_auprc=0.1066 val_auc=0.7763 val_f1_macro@0.5=0.4923 (best_epoch=0, best_auprc=0.1066)
+epoch 1: loss=0.1216 train=190.3s valid=7.3s val_auprc=0.1624 val_auc=0.8335 val_f1_macro@0.5=0.4923 (best_epoch=1, best_auprc=0.1624)
+epoch 2: loss=0.1128 train=192.4s valid=7.2s val_auprc=0.2004 val_auc=0.8583 val_f1_macro@0.5=0.4923 (best_epoch=2, best_auprc=0.2004)
+epoch 3: loss=0.1075 train=192.2s valid=7.2s val_auprc=0.2211 val_auc=0.8680 val_f1_macro@0.5=0.4923 (best_epoch=3, best_auprc=0.2211)
+epoch 4: loss=0.1050 train=190.7s valid=7.2s val_auprc=0.2327 val_auc=0.8728 val_f1_macro@0.5=0.4923 (best_epoch=4, best_auprc=0.2327)
+epoch 5: loss=0.1036 train=176.2s valid=7.2s val_auprc=0.2398 val_auc=0.8757 val_f1_macro@0.5=0.4923 (best_epoch=5, best_auprc=0.2398)
+epoch 6: loss=0.1027 train=187.0s valid=6.9s val_auprc=0.2450 val_auc=0.8775 val_f1_macro@0.5=0.4923 (best_epoch=6, best_auprc=0.2450)
+epoch 7: loss=0.1022 train=189.7s valid=7.2s val_auprc=0.2487 val_auc=0.8786 val_f1_macro@0.5=0.4923 (best_epoch=7, best_auprc=0.2487)
+epoch 8: loss=0.1018 train=188.7s valid=7.1s val_auprc=0.2513 val_auc=0.8793 val_f1_macro@0.5=0.4923 (best_epoch=8, best_auprc=0.2513)
+epoch 9: loss=0.1016 train=188.7s valid=7.3s val_auprc=0.2535 val_auc=0.8799 val_f1_macro@0.5=0.4923 (best_epoch=9, best_auprc=0.2535)
+epoch 10: loss=0.1014 train=189.9s valid=7.2s val_auprc=0.2550 val_auc=0.8801 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2550)
+epoch 11: loss=0.1014 train=188.6s valid=7.0s val_auprc=0.2558 val_auc=0.8801 val_f1_macro@0.5=0.4923 (best_epoch=11, best_auprc=0.2558)
+epoch 12: loss=0.1013 train=187.3s valid=7.0s val_auprc=0.2566 val_auc=0.8800 val_f1_macro@0.5=0.4923 (best_epoch=12, best_auprc=0.2566)
+epoch 13: loss=0.1013 train=189.3s valid=7.5s val_auprc=0.2572 val_auc=0.8799 val_f1_macro@0.5=0.4923 (best_epoch=13, best_auprc=0.2572)
+epoch 14: loss=0.1013 train=189.0s valid=6.9s val_auprc=0.2577 val_auc=0.8797 val_f1_macro@0.5=0.4923 (best_epoch=14, best_auprc=0.2577)
+epoch 15: loss=0.1014 train=188.3s valid=7.8s val_auprc=0.2578 val_auc=0.8794 val_f1_macro@0.5=0.4923 (best_epoch=15, best_auprc=0.2578)
+epoch 16: loss=0.1014 train=190.6s valid=7.2s val_auprc=0.2579 val_auc=0.8791 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 17: loss=0.1015 train=190.5s valid=7.4s val_auprc=0.2578 val_auc=0.8787 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 18: loss=0.1016 train=189.4s valid=7.0s val_auprc=0.2576 val_auc=0.8783 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 19: loss=0.1018 train=188.2s valid=7.3s val_auprc=0.2573 val_auc=0.8778 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 20: loss=0.1019 train=189.9s valid=7.1s val_auprc=0.2567 val_auc=0.8774 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 21: loss=0.1020 train=189.3s valid=7.1s val_auprc=0.2555 val_auc=0.8766 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 22: loss=0.1022 train=187.6s valid=7.2s val_auprc=0.2546 val_auc=0.8759 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 23: loss=0.1023 train=184.2s valid=7.3s val_auprc=0.2535 val_auc=0.8751 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 24: loss=0.1025 train=187.2s valid=7.2s val_auprc=0.2526 val_auc=0.8745 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 25: loss=0.1027 train=189.2s valid=7.7s val_auprc=0.2513 val_auc=0.8738 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 26: loss=0.1029 train=193.6s valid=7.1s val_auprc=0.2499 val_auc=0.8728 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 27: loss=0.1031 train=190.1s valid=7.4s val_auprc=0.2481 val_auc=0.8719 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 28: loss=0.1033 train=188.6s valid=7.1s val_auprc=0.2463 val_auc=0.8708 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 29: loss=0.1036 train=189.4s valid=7.1s val_auprc=0.2445 val_auc=0.8696 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 30: loss=0.1038 train=188.5s valid=7.2s val_auprc=0.2424 val_auc=0.8685 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 31: loss=0.1041 train=191.5s valid=7.3s val_auprc=0.2402 val_auc=0.8673 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 32: loss=0.1043 train=190.1s valid=7.2s val_auprc=0.2379 val_auc=0.8661 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 33: loss=0.1046 train=189.8s valid=6.9s val_auprc=0.2357 val_auc=0.8649 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 34: loss=0.1049 train=186.5s valid=7.3s val_auprc=0.2331 val_auc=0.8635 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 35: loss=0.1052 train=183.7s valid=7.2s val_auprc=0.2303 val_auc=0.8619 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+epoch 36: loss=0.1055 train=182.6s valid=7.1s val_auprc=0.2278 val_auc=0.8606 val_f1_macro@0.5=0.4923 (best_epoch=16, best_auprc=0.2579)
+Early stopping at epoch 36 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.10 (val F1=0.6536)
+Reloaded checkpoint val AUPRC 0.257936 vs logged 0.257936
+TEST metrics: {"auprc": 0.26812148176553535, "auc": 0.8828256821812975, "f1_macro": 0.6589927264367434, "precision_fraud": 0.3138362242839855, "recall_fraud": 0.37199961748111315, "f1_fraud": 0.3404516016103623, "g_mean": 0.6021584254544138, "tp": 3890, "fp": 8505, "tn": 327902, "fn": 6567, "threshold_used": 0.1, "best_epoch": 16}
+=== Run complete: gdn_tsocial_unified_tr30_seed72_a6000_20261018T090056Z ===

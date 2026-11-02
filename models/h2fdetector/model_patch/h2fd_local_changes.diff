@@ -1,0 +1,48 @@
+diff --git a/config/amazon.yaml b/config/amazon.yaml
+index dddb136..d385f52 100644
+--- a/config/amazon.yaml
++++ b/config/amazon.yaml
+@@ -5,7 +5,7 @@ epoch: 1000
+ early_stop: 200
+ lr: 0.1
+ weight_decay: 0.00005
+-cuda: 2
++cuda: 0
+ log: True
+ data_path: '../data/'
+ result_path: '../result/'
+diff --git a/config/yelp.yaml b/config/yelp.yaml
+index 9b0ab95..b1f009b 100644
+--- a/config/yelp.yaml
++++ b/config/yelp.yaml
+@@ -5,7 +5,7 @@ epoch: 1000
+ early_stop: 50
+ lr: 0.1
+ weight_decay: 0.00005
+-cuda: 1
++cuda: 0
+ log: True
+ data_path: '../data/'
+ result_path: '../result/'
+diff --git a/src/data_preprocess.py b/src/data_preprocess.py
+index a2ad245..da3e261 100644
+--- a/src/data_preprocess.py
++++ b/src/data_preprocess.py
+@@ -72,7 +72,7 @@ if __name__ == '__main__':
+         yelp_graph = dgl.heterograph(yelp_graph_structure)
+         for t in yelp_graph.etypes:
+             yelp_graph.remove_self_loop(t)
+-            yelp_graph.add_self_loop(t)
++            yelp_graph.add_self_loop(etype=t)
+         yelp_graph.nodes['r'].data['feature'] = features
+         yelp_graph.nodes['r'].data['label'] = labels
+         print('Generate dataset partition.')
+@@ -142,7 +142,7 @@ if __name__ == '__main__':
+         amazon_graph = dgl.heterograph(amazon_graph_structure)
+         for t in amazon_graph.etypes:
+             amazon_graph.remove_self_loop(t)
+-            amazon_graph.add_self_loop(t)
++            amazon_graph.add_self_loop(etype=t)
+         amazon_graph.nodes['r'].data['feature'] = features
+         amazon_graph.nodes['r'].data['label'] = labels
+         print('Generate dataset partition.')

@@ -1,0 +1,25 @@
+{
+  "dataset": "yelp",
+  "dgl_path": "/workspace/h2fd_vast/views/yelp_tr30.dgl",
+  "dgl_sha256": "9d65437db08cd68d9e2db608a1a89e4a4f44531c66c823d52f0ff2fb25482bcf",
+  "native_dgl_path": "/workspace/H2-FDetector/data/yelp.dgl",
+  "native_dgl_sha256": "5ad19af45658269f57f4c30c3fec21568230276b1c8ca17577b6ddf1520854cc",
+  "source_mat_path": "/workspace/data/YelpChi.mat",
+  "source_mat_sha256": "fedb35a8fa539b27866244d3515a47a76b20080cdacb33112da3458fd2487b42",
+  "n_nodes": 45954,
+  "n_edges": {
+    "homo": 7693958,
+    "s": 6805486,
+    "t": 1147232,
+    "u": 98630
+  },
+  "edge_label_verification": {
+    "method": "recompute native edge labels/train mask from native node train mask",
+    "n_edges_homo": 7693958,
+    "edge_labels_identical": true,
+    "edge_train_mask_identical": true,
+    "n_label_mismatch": 0,
+    "n_mask_mismatch": 0,
+    "seconds": 0.837
+  }
+}

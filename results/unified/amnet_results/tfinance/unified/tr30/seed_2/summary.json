@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_tfinance_unified_tr30_seed2_a6000_20261018T154535Z",
+  "model": "amnet",
+  "dataset": "tfinance",
+  "track": "unified",
+  "ratio": 30,
+  "seed": 2,
+  "n_completed_epochs": 61,
+  "best_epoch": 40,
+  "best_val_auprc": 0.8079472307668606,
+  "reloaded_val_auprc": 0.8079472307668605,
+  "dataset_load_seconds": 6.549734605010599,
+  "train_only_total_seconds": 127.60240766755305,
+  "train_plus_valid_total_seconds": 192.1078728782013,
+  "inference_seconds": 1.058438820997253,
+  "peak_memory_bytes": 24275438080,
+  "peak_rss_bytes": 6073618432,
+  "test_metrics": {
+    "auprc": 0.7632711838093603,
+    "auc": 0.916072484671045,
+    "f1_macro": 0.8662980797812259,
+    "precision_fraud": 0.8835877862595419,
+    "recall_fraud": 0.6412742382271468,
+    "f1_fraud": 0.7431781701444623,
+    "g_mean": 0.7991683399272743,
+    "tp": 463,
+    "fp": 61,
+    "tn": 14960,
+    "fn": 259,
+    "threshold_used": 0.25,
+    "best_epoch": 40
+  }
+}

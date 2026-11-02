@@ -1,0 +1,54 @@
+=== Run: amnet_comp_unified_tr30_seed42_a6000_20261018T144114Z ===
+Result dir: /workspace/amnet_vast/results/amnet/comp/unified/tr30/seed_42
+Loaded comp: nodes=5317 features=57 edges(both dirs)=7268 fraud=559 unlabelled=0 adapter=comp_homo_etype_undirected_v1(homo_equals_union=True)
+Splits: shared canonical file /workspace/gdn_vast/splits/comp_seed2_nested_splits.npz (SHA256 verified)
+Split overlap and label checks: PASSED
+Split identical to SplitGNN reference: True
+train=1594 (fraud 167) valid=1064 (fraud 112) test=2127 (fraud 224)
+Model source commit: 74f6a826ddb56dc73f82aa523bf350a1e28b8f03
+Hyperparameters: author README custom-dataset default profile {'K': 2, 'M': 5, 'hidden_channels': 64, 'lr_f': 0.05, 'lr': 0.0005, 'weight_decay': 1e-05, 'beta': 1.0}
+Config SHA256: dc5ccf2ac5c00f331d5d58a0db471f18b71689fd9793ed95f4ff7fc907a4ccb3
+Split SHA256: 193f52954bc953878d02f1334a94c4137fb8c2a7e3d37d0aaff51b9f11f1ae02
+epoch 0: loss=0.7243 train=0.04s valid=0.01s val_auprc=0.1179 val_auc=0.5142 val_f1_macro@0.5=0.0952 (best_epoch=0, best_auprc=0.1179)
+epoch 1: loss=0.7203 train=0.03s valid=0.01s val_auprc=0.1197 val_auc=0.5148 val_f1_macro@0.5=0.0952 (best_epoch=1, best_auprc=0.1197)
+epoch 2: loss=0.7167 train=0.02s valid=0.01s val_auprc=0.1218 val_auc=0.5161 val_f1_macro@0.5=0.0952 (best_epoch=2, best_auprc=0.1218)
+epoch 3: loss=0.7137 train=0.02s valid=0.01s val_auprc=0.1225 val_auc=0.5181 val_f1_macro@0.5=0.0952 (best_epoch=3, best_auprc=0.1225)
+epoch 4: loss=0.7095 train=0.03s valid=0.01s val_auprc=0.1230 val_auc=0.5199 val_f1_macro@0.5=0.0952 (best_epoch=4, best_auprc=0.1230)
+epoch 5: loss=0.7050 train=0.03s valid=0.01s val_auprc=0.1282 val_auc=0.5215 val_f1_macro@0.5=0.1289 (best_epoch=5, best_auprc=0.1282)
+epoch 6: loss=0.7002 train=0.02s valid=0.01s val_auprc=0.1282 val_auc=0.5232 val_f1_macro@0.5=0.2350 (best_epoch=5, best_auprc=0.1282)
+epoch 7: loss=0.6962 train=0.03s valid=0.01s val_auprc=0.1286 val_auc=0.5244 val_f1_macro@0.5=0.4972 (best_epoch=7, best_auprc=0.1286)
+epoch 8: loss=0.6917 train=0.03s valid=0.01s val_auprc=0.1286 val_auc=0.5241 val_f1_macro@0.5=0.5204 (best_epoch=8, best_auprc=0.1286)
+epoch 9: loss=0.6862 train=0.03s valid=0.01s val_auprc=0.1285 val_auc=0.5228 val_f1_macro@0.5=0.4722 (best_epoch=8, best_auprc=0.1286)
+epoch 10: loss=0.6819 train=0.03s valid=0.01s val_auprc=0.1290 val_auc=0.5228 val_f1_macro@0.5=0.4722 (best_epoch=10, best_auprc=0.1290)
+epoch 11: loss=0.6770 train=0.02s valid=0.01s val_auprc=0.1292 val_auc=0.5228 val_f1_macro@0.5=0.4722 (best_epoch=11, best_auprc=0.1292)
+epoch 12: loss=0.6724 train=0.02s valid=0.01s val_auprc=0.1294 val_auc=0.5226 val_f1_macro@0.5=0.4722 (best_epoch=12, best_auprc=0.1294)
+epoch 13: loss=0.6657 train=0.02s valid=0.01s val_auprc=0.1316 val_auc=0.5230 val_f1_macro@0.5=0.4722 (best_epoch=13, best_auprc=0.1316)
+epoch 14: loss=0.6609 train=0.02s valid=0.01s val_auprc=0.1316 val_auc=0.5233 val_f1_macro@0.5=0.4722 (best_epoch=13, best_auprc=0.1316)
+epoch 15: loss=0.6548 train=0.02s valid=0.01s val_auprc=0.1322 val_auc=0.5233 val_f1_macro@0.5=0.4722 (best_epoch=15, best_auprc=0.1322)
+epoch 16: loss=0.6495 train=0.02s valid=0.01s val_auprc=0.1327 val_auc=0.5237 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 17: loss=0.6427 train=0.02s valid=0.01s val_auprc=0.1324 val_auc=0.5237 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 18: loss=0.6369 train=0.03s valid=0.01s val_auprc=0.1318 val_auc=0.5238 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 19: loss=0.6304 train=0.02s valid=0.01s val_auprc=0.1312 val_auc=0.5238 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 20: loss=0.6234 train=0.03s valid=0.01s val_auprc=0.1307 val_auc=0.5238 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 21: loss=0.6181 train=0.03s valid=0.01s val_auprc=0.1302 val_auc=0.5237 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 22: loss=0.6107 train=0.03s valid=0.01s val_auprc=0.1300 val_auc=0.5236 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 23: loss=0.6036 train=0.03s valid=0.01s val_auprc=0.1298 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 24: loss=0.5964 train=0.02s valid=0.01s val_auprc=0.1297 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 25: loss=0.5899 train=0.03s valid=0.01s val_auprc=0.1296 val_auc=0.5234 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 26: loss=0.5813 train=0.02s valid=0.01s val_auprc=0.1294 val_auc=0.5234 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 27: loss=0.5743 train=0.03s valid=0.01s val_auprc=0.1294 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 28: loss=0.5672 train=0.03s valid=0.01s val_auprc=0.1293 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 29: loss=0.5593 train=0.03s valid=0.01s val_auprc=0.1293 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 30: loss=0.5526 train=0.02s valid=0.01s val_auprc=0.1293 val_auc=0.5235 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 31: loss=0.5432 train=0.03s valid=0.01s val_auprc=0.1292 val_auc=0.5233 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 32: loss=0.5357 train=0.03s valid=0.01s val_auprc=0.1289 val_auc=0.5232 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 33: loss=0.5283 train=0.03s valid=0.01s val_auprc=0.1288 val_auc=0.5229 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 34: loss=0.5198 train=0.03s valid=0.01s val_auprc=0.1286 val_auc=0.5226 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 35: loss=0.5104 train=0.03s valid=0.01s val_auprc=0.1285 val_auc=0.5225 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+epoch 36: loss=0.5032 train=0.03s valid=0.01s val_auprc=0.1240 val_auc=0.5225 val_f1_macro@0.5=0.4722 (best_epoch=16, best_auprc=0.1327)
+Early stopping at epoch 36 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.50 (val F1=0.4722)
+Reloaded checkpoint val AUPRC 0.132682 vs logged 0.132682
+TEST metrics: {"auprc": 0.14591242524219192, "auc": 0.48460255423766985, "f1_macro": 0.47220843672456575, "precision_fraud": 0.0, "recall_fraud": 0.0, "f1_fraud": 0.0, "g_mean": 0.0, "tp": 0, "fp": 0, "tn": 1903, "fn": 224, "threshold_used": 0.5, "best_epoch": 16}
+WARNING: model predicted no fraud on the test set at the selected threshold
+=== Run complete: amnet_comp_unified_tr30_seed42_a6000_20261018T144114Z ===

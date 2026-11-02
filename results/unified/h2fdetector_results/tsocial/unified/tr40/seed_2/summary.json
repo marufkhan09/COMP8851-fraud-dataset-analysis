@@ -1,0 +1,27 @@
+{
+  "run_name": "h2fdetector_tsocial_unified_tr40_seed2_a6000_20261018T074510Z",
+  "model": "h2fdetector",
+  "dataset": "tsocial",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 100,
+  "best_epoch": 95,
+  "best_val_auprc": 0.6492360907647693,
+  "reload_val_auprc": 0.6492360907647693,
+  "stop_reason": "max_epoch",
+  "dataset_load_seconds": 0.5149586040060967,
+  "train_only_total_seconds": 129.61418989754748,
+  "train_plus_valid_total_seconds": 171.1442151144147,
+  "inference_seconds": 0.41027053899597377,
+  "peak_memory_bytes": 10110853120,
+  "gpu": "NVIDIA RTX A6000",
+  "test_metrics": {
+    "auprc": 0.6575179689283792,
+    "auc": 0.9381639078762013,
+    "f1_macro": 0.8213423489759715,
+    "recall": 0.658793152911925,
+    "threshold_used": 0.8,
+    "best_epoch": 95
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "run_name": "h2fdetector_yelp_unified_tr40_seed2_a6000_20261018T005935Z",
+  "model": "h2fdetector",
+  "dataset": "yelp",
+  "track": "unified",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 99,
+  "best_epoch": 78,
+  "best_val_auprc": 0.45610846212380035,
+  "reload_val_auprc": 0.45610846212380035,
+  "stop_reason": "early_stop_patience_20",
+  "dataset_load_seconds": 1.8048894520616159,
+  "train_only_total_seconds": 274.32231941318605,
+  "train_plus_valid_total_seconds": 344.33695725514553,
+  "inference_seconds": 0.7099248889135197,
+  "peak_memory_bytes": 25929503744,
+  "gpu": "NVIDIA RTX A6000",
+  "test_metrics": {
+    "auprc": 0.44474915019164074,
+    "auc": 0.8249578609859227,
+    "f1_macro": 0.6748205571926318,
+    "recall": 0.5073006364657432,
+    "threshold_used": 0.6500000000000001,
+    "best_epoch": 78
+  }
+}

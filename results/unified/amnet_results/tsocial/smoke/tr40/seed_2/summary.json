@@ -1,0 +1,33 @@
+{
+  "run_name": "amnet_tsocial_smoke_tr40_seed2_a6000_20261018T151239Z",
+  "model": "amnet",
+  "dataset": "tsocial",
+  "track": "smoke",
+  "ratio": 40,
+  "seed": 2,
+  "n_completed_epochs": 2,
+  "best_epoch": 1,
+  "best_val_auprc": 0.028345367780769983,
+  "reloaded_val_auprc": 0.028345366906019725,
+  "dataset_load_seconds": 5.624515873845667,
+  "train_only_total_seconds": 1.0671453750692308,
+  "train_plus_valid_total_seconds": 1.5485372911207378,
+  "inference_seconds": 0.24001516099087894,
+  "peak_memory_bytes": 6285067264,
+  "peak_rss_bytes": 5568716800,
+  "test_metrics": {
+    "auprc": 0.02861861652944042,
+    "auc": 0.5162087945152802,
+    "f1_macro": 0.46971046414775897,
+    "precision_fraud": 0.013330556134138721,
+    "recall_fraud": 0.055082719709285646,
+    "f1_fraud": 0.02146610516900831,
+    "g_mean": 0.21932182648207826,
+    "tp": 576,
+    "fp": 42633,
+    "tn": 293774,
+    "fn": 9881,
+    "threshold_used": 0.95,
+    "best_epoch": 1
+  }
+}

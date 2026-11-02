@@ -1,0 +1,23 @@
+{
+  "protocol_version": "vast-v4.4",
+  "hardware_profile_id": "PENDING_TEAM_MANIFEST",
+  "container_digest": "PENDING_TEAM_MANIFEST",
+  "model_source_commit": "74f6a826ddb56dc73f82aa523bf350a1e28b8f03",
+  "model_source_repo": "https://github.com/zjunet/AMNet",
+  "dataset_manifest_version": "PENDING_TEAM_MANIFEST",
+  "source_sha256": {
+    "elliptic_txs_features.csv": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+    "elliptic_txs_edgelist.csv": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+    "elliptic_txs_classes.csv": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493"
+  },
+  "dataset_view_id": "elliptic_amnet_homo_undirected_v1",
+  "dataset_view_sha256": "b7c6d758ae5f0e9d41099c70a33ddc2b9e4753876cf91bc509f1d463f8dc19ac",
+  "split_registry_version": "team_generate_splits_seed2",
+  "split_sha256": "77008be57543be620a444bf233a229fe6f09d3d5b4fcf427a8481f7972e5ebf5",
+  "split_source": "shared_canonical_file_sha_verified",
+  "split_identical_to_splitgnn": true,
+  "evaluator": "run_amnet_unified.py",
+  "evaluator_sha256": "9289c6ae4b5183e915916cb0acd1415e0ab909500a45d84368bfc77fd25011c1",
+  "adapter_version": "homo_undirected_v1",
+  "config_sha256": "e6646690765ceafe5bd3a6d19024e57ef230d74804a7dcddda08a012c556de94"
+}

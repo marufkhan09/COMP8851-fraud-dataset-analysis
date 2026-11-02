@@ -1,0 +1,41 @@
+[2026-10-18 14:40:19] === AMNet queue started; waiting for GDN processes to exit ===
+[2026-10-18 14:40:19] No GDN processes running. GPU state:
+NVIDIA RTX A6000, 1 MiB, 49140 MiB, 0 %
+[2026-10-18 14:40:19] comp: building view
+[2026-10-18 14:40:21] comp: view built
+[2026-10-18 14:40:21] comp: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 14:40:30] comp: smoke PASSED, starting 12 runs
+[2026-10-18 14:42:36] comp: all 12 runs DONE
+[2026-10-18 14:42:36] elliptic: building view
+[2026-10-18 14:42:46] elliptic: view built
+[2026-10-18 14:42:46] elliptic: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 14:42:56] elliptic: smoke PASSED, starting 12 runs
+[2026-10-18 14:49:59] elliptic: all 12 runs DONE
+[2026-10-18 14:49:59] amazon: building view
+[2026-10-18 14:50:02] amazon: view built
+[2026-10-18 14:50:02] amazon: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 14:50:12] amazon: smoke PASSED, starting 12 runs
+[2026-10-18 15:02:27] amazon: all 12 runs DONE
+[2026-10-18 15:02:27] yelp: building view
+[2026-10-18 15:02:30] yelp: view built
+[2026-10-18 15:02:30] yelp: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 15:02:40] yelp: smoke PASSED, starting 12 runs
+[2026-10-18 15:12:23] yelp: all 12 runs DONE
+[2026-10-18 15:12:23] tsocial: building view
+[2026-10-18 15:12:38] tsocial: view built
+[2026-10-18 15:12:38] tsocial: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 15:12:49] tsocial: smoke PASSED, starting 12 runs
+[2026-10-18 15:30:44] tsocial: all 12 runs DONE
+[2026-10-18 15:30:44] tfinance: building view
+[2026-10-18 15:30:53] tfinance: view built
+[2026-10-18 15:30:53] tfinance: smoke test (TR40, seed 2, 2 epochs)
+[2026-10-18 15:31:12] tfinance: smoke PASSED, starting 12 runs
+[2026-10-18 16:28:07] tfinance: all 12 runs DONE
+[2026-10-18 16:28:07] === AMNet queue finished ===
+--- queue run started 2026-10-18 14:40:19 ---
+comp DONE
+elliptic DONE
+amazon DONE
+yelp DONE
+tsocial DONE
+tfinance DONE

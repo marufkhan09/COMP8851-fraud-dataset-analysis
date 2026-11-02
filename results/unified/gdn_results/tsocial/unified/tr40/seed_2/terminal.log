@@ -1,0 +1,45 @@
+=== Run: gdn_tsocial_unified_tr40_seed2_a6000_20261018T072957Z ===
+Result dir: /workspace/gdn_vast/results/gdn/tsocial/unified/tr40/seed_2
+Loaded tsocial: nodes=867160 features=10 fraud=26142 adapter=homo_replicated_tsocial15pct_v1 feature_transform=gdn_row_normalize (2.7s)
+Split overlap checks: PASSED
+Split identical to SplitGNN reference: True
+train=346864 (fraud 10457) valid=173432 test=346864
+Model source commit: 0383e0d94519dcf45142538f1118b3b440198c1a
+Config SHA256: 92652dcb4285169f89fdea101b867da1a421b317cc4d312bfb0f5255478503a1
+Split SHA256: 197cd8a496ca269cfa2affeea08837bb97bc55181f878b36cc724036ba6d001b
+epoch 0: loss=0.1477 train=87.2s valid=5.9s val_auprc=0.1427 val_auc=0.8032 val_f1_macro@0.5=0.4923 (best_epoch=0, best_auprc=0.1427)
+epoch 1: loss=0.1174 train=89.9s valid=5.5s val_auprc=0.2085 val_auc=0.8522 val_f1_macro@0.5=0.4923 (best_epoch=1, best_auprc=0.2085)
+epoch 2: loss=0.1088 train=84.4s valid=5.9s val_auprc=0.2373 val_auc=0.8678 val_f1_macro@0.5=0.4923 (best_epoch=2, best_auprc=0.2373)
+epoch 3: loss=0.1052 train=84.9s valid=6.6s val_auprc=0.2497 val_auc=0.8742 val_f1_macro@0.5=0.4923 (best_epoch=3, best_auprc=0.2497)
+epoch 4: loss=0.1034 train=82.2s valid=6.3s val_auprc=0.2571 val_auc=0.8774 val_f1_macro@0.5=0.4923 (best_epoch=4, best_auprc=0.2571)
+epoch 5: loss=0.1026 train=81.7s valid=6.5s val_auprc=0.2617 val_auc=0.8793 val_f1_macro@0.5=0.4923 (best_epoch=5, best_auprc=0.2617)
+epoch 6: loss=0.1020 train=80.4s valid=6.4s val_auprc=0.2650 val_auc=0.8805 val_f1_macro@0.5=0.4923 (best_epoch=6, best_auprc=0.2650)
+epoch 7: loss=0.1017 train=82.2s valid=6.6s val_auprc=0.2672 val_auc=0.8811 val_f1_macro@0.5=0.4923 (best_epoch=7, best_auprc=0.2672)
+epoch 8: loss=0.1015 train=81.1s valid=6.3s val_auprc=0.2686 val_auc=0.8813 val_f1_macro@0.5=0.4923 (best_epoch=8, best_auprc=0.2686)
+epoch 9: loss=0.1015 train=82.8s valid=6.8s val_auprc=0.2698 val_auc=0.8814 val_f1_macro@0.5=0.4923 (best_epoch=9, best_auprc=0.2698)
+epoch 10: loss=0.1014 train=80.4s valid=6.4s val_auprc=0.2705 val_auc=0.8813 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 11: loss=0.1015 train=81.3s valid=6.6s val_auprc=0.2705 val_auc=0.8809 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 12: loss=0.1016 train=85.9s valid=7.5s val_auprc=0.2704 val_auc=0.8805 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 13: loss=0.1017 train=85.9s valid=6.9s val_auprc=0.2698 val_auc=0.8800 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 14: loss=0.1018 train=101.3s valid=6.1s val_auprc=0.2690 val_auc=0.8793 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 15: loss=0.1020 train=83.0s valid=6.6s val_auprc=0.2679 val_auc=0.8786 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 16: loss=0.1022 train=79.7s valid=6.2s val_auprc=0.2667 val_auc=0.8778 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 17: loss=0.1024 train=81.4s valid=6.6s val_auprc=0.2655 val_auc=0.8770 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 18: loss=0.1026 train=129.2s valid=8.5s val_auprc=0.2634 val_auc=0.8758 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 19: loss=0.1029 train=253.4s valid=9.2s val_auprc=0.2615 val_auc=0.8748 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 20: loss=0.1031 train=252.2s valid=8.8s val_auprc=0.2592 val_auc=0.8736 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 21: loss=0.1034 train=255.5s valid=9.1s val_auprc=0.2567 val_auc=0.8723 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 22: loss=0.1037 train=252.6s valid=8.9s val_auprc=0.2540 val_auc=0.8709 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 23: loss=0.1040 train=254.8s valid=9.2s val_auprc=0.2511 val_auc=0.8694 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 24: loss=0.1044 train=254.6s valid=8.9s val_auprc=0.2483 val_auc=0.8679 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 25: loss=0.1048 train=256.0s valid=9.2s val_auprc=0.2452 val_auc=0.8663 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 26: loss=0.1051 train=256.8s valid=8.9s val_auprc=0.2418 val_auc=0.8645 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 27: loss=0.1055 train=256.5s valid=9.3s val_auprc=0.2382 val_auc=0.8626 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 28: loss=0.1059 train=255.3s valid=8.7s val_auprc=0.2342 val_auc=0.8605 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 29: loss=0.1064 train=254.5s valid=9.1s val_auprc=0.2303 val_auc=0.8583 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+epoch 30: loss=0.1068 train=254.6s valid=8.8s val_auprc=0.2264 val_auc=0.8562 val_f1_macro@0.5=0.4923 (best_epoch=10, best_auprc=0.2705)
+Early stopping at epoch 30 (no improvement for 20 epochs)
+Selected threshold (best val macro-F1): 0.15 (val F1=0.6584)
+Reloaded checkpoint val AUPRC 0.270500 vs logged 0.270500
+TEST metrics: {"auprc": 0.28220842778106725, "auc": 0.8854065075141697, "f1_macro": 0.6638462738575153, "precision_fraud": 0.3986748343542943, "recall_fraud": 0.3049631825571388, "f1_fraud": 0.3455786736020806, "g_mean": 0.548272533678363, "tp": 3189, "fp": 4810, "tn": 331597, "fn": 7268, "threshold_used": 0.15, "best_epoch": 10}
+=== Run complete: gdn_tsocial_unified_tr40_seed2_a6000_20261018T072957Z ===

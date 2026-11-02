@@ -1,0 +1,22 @@
+{
+  "dataset": "tfinance",
+  "adapter_version": "homo_undirected_v1",
+  "n_nodes": 39357,
+  "n_features": 10,
+  "n_fraud": 1804,
+  "n_normal": 37553,
+  "n_unlabelled": 0,
+  "feature_min": 0.0,
+  "feature_max": 508174.0,
+  "any_negative_features": false,
+  "feature_transform": "none",
+  "edges": {
+    "raw_edges": 42445086,
+    "raw_self_loops": 0,
+    "undirected_edges_both_directions": 42445086
+  },
+  "source_sha256": {
+    "tfinance": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700"
+  },
+  "source_path": "/workspace/raw/tfinance"
+}
