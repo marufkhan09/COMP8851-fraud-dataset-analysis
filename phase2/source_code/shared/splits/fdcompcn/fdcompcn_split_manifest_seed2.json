@@ -1,0 +1,117 @@
+{
+  "convention": "40/20/40 base partition over eligible nodes with nested stratified TR30/TR20/TR10 training subsets; validation and test IDs fixed",
+  "dataset": "fdcompcn",
+  "provenance": "regenerated with shared/comp8851/splits.py (unchanged) because the frozen arrays are absent from the workspace; TR40 sizes and fraud counts verified equal to the previous benchmark's split_summary.json for CARE-GNN and GHRN",
+  "source_sha256": {
+    "graph": "e252b9a6b619b28a7bf6d9f5b16aacc232d43207d87ac26cd5160fb0d8a98baa"
+  },
+  "split_seed": 2,
+  "splits": {
+    "TR10": {
+      "file": "fdcompcn_TR10_seed2.npz",
+      "file_sha256": "13ea27fcd2030168b3e341e7f1444a61bf0d59a9883172fb812eabc188dc9b60",
+      "test": {
+        "fraud_nodes": 223,
+        "fraud_percentage": 10.479323308270677,
+        "nodes": 2128,
+        "normal_nodes": 1905
+      },
+      "train": {
+        "fraud_nodes": 56,
+        "fraud_percentage": 10.546139359698682,
+        "nodes": 531,
+        "normal_nodes": 475
+      },
+      "unused_nodes": 1595,
+      "validation": {
+        "fraud_nodes": 112,
+        "fraud_percentage": 10.536218250235184,
+        "nodes": 1063,
+        "normal_nodes": 951
+      }
+    },
+    "TR20": {
+      "file": "fdcompcn_TR20_seed2.npz",
+      "file_sha256": "daeacc40c2c62340dfbe96ade124a033f0f32bcbb076bf27250784048f74e0a1",
+      "test": {
+        "fraud_nodes": 223,
+        "fraud_percentage": 10.479323308270677,
+        "nodes": 2128,
+        "normal_nodes": 1905
+      },
+      "train": {
+        "fraud_nodes": 112,
+        "fraud_percentage": 10.546139359698682,
+        "nodes": 1062,
+        "normal_nodes": 950
+      },
+      "unused_nodes": 1064,
+      "validation": {
+        "fraud_nodes": 112,
+        "fraud_percentage": 10.536218250235184,
+        "nodes": 1063,
+        "normal_nodes": 951
+      }
+    },
+    "TR30": {
+      "file": "fdcompcn_TR30_seed2.npz",
+      "file_sha256": "94a4beed6cabf4076a3fb3cc6b7f75899490d2e470edcc92a9b5108dca592735",
+      "test": {
+        "fraud_nodes": 223,
+        "fraud_percentage": 10.479323308270677,
+        "nodes": 2128,
+        "normal_nodes": 1905
+      },
+      "train": {
+        "fraud_nodes": 168,
+        "fraud_percentage": 10.53952321204517,
+        "nodes": 1594,
+        "normal_nodes": 1426
+      },
+      "unused_nodes": 532,
+      "validation": {
+        "fraud_nodes": 112,
+        "fraud_percentage": 10.536218250235184,
+        "nodes": 1063,
+        "normal_nodes": 951
+      }
+    },
+    "TR40": {
+      "file": "fdcompcn_TR40_seed2.npz",
+      "file_sha256": "3b0bbd04965265effbf3a44511591e5966766ef91a75afc2afe86f35315e613b",
+      "test": {
+        "fraud_nodes": 223,
+        "fraud_percentage": 10.479323308270677,
+        "nodes": 2128,
+        "normal_nodes": 1905
+      },
+      "train": {
+        "fraud_nodes": 224,
+        "fraud_percentage": 10.536218250235184,
+        "nodes": 2126,
+        "normal_nodes": 1902
+      },
+      "unused_nodes": 0,
+      "validation": {
+        "fraud_nodes": 112,
+        "fraud_percentage": 10.536218250235184,
+        "nodes": 1063,
+        "normal_nodes": 951
+      }
+    }
+  },
+  "verified_against": {
+    "test": [
+      2128,
+      223
+    ],
+    "train": [
+      2126,
+      224
+    ],
+    "validation": [
+      1063,
+      112
+    ]
+  }
+}

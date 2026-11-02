@@ -1,0 +1,15 @@
+# Installed on top of torch 2.4.0 + dgl 2.4.0 (see scripts/vastai_setup.sh).
+# DGL wheels are compiled against one exact torch build; do not upgrade torch.
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.2
+pandas==2.2.3
+pyyaml==6.0.2
+tqdm==4.66.5
+psutil==6.0.0
+pytest==8.3.3
+gdown==5.2.0
+torchdata==0.8.0
+pydantic==2.9.2
+requests==2.32.3
+networkx==3.3

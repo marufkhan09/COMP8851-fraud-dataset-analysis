@@ -1,0 +1,104 @@
+{
+  "dataset": "T-Finance",
+  "source_path": "/kaggle/input/datasets/marufdkhan/tfinance/tfinance",
+  "source_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_seed": 2,
+  "convention": "Exact 40/20/40 base split with nested stratified TR30/TR20/TR10 subsets; fixed validation and test IDs",
+  "total_nodes": 39357,
+  "fraud_nodes": 1804,
+  "normal_nodes": 37553,
+  "splits": {
+    "TR40": {
+      "file": "tfinance_tr40_split_seed2.npz",
+      "train": {
+        "nodes": 15742,
+        "fraud_nodes": 722,
+        "normal_nodes": 15020,
+        "fraud_percentage": 4.586456612882734
+      },
+      "validation": {
+        "nodes": 7871,
+        "fraud_nodes": 361,
+        "normal_nodes": 7510,
+        "fraud_percentage": 4.586456612882734
+      },
+      "test": {
+        "nodes": 15744,
+        "fraud_nodes": 721,
+        "normal_nodes": 15023,
+        "fraud_percentage": 4.579522357723577
+      },
+      "unused_nodes": 0,
+      "file_sha256": "2230756fcb8ac8bfd5acf2f131fd5dfa793299b12c29e6a520a9a9024269f4fa"
+    },
+    "TR30": {
+      "file": "tfinance_tr30_split_seed2.npz",
+      "train": {
+        "nodes": 11806,
+        "fraud_nodes": 541,
+        "normal_nodes": 11265,
+        "fraud_percentage": 4.582415720819922
+      },
+      "validation": {
+        "nodes": 7871,
+        "fraud_nodes": 361,
+        "normal_nodes": 7510,
+        "fraud_percentage": 4.586456612882734
+      },
+      "test": {
+        "nodes": 15744,
+        "fraud_nodes": 721,
+        "normal_nodes": 15023,
+        "fraud_percentage": 4.579522357723577
+      },
+      "unused_nodes": 3936,
+      "file_sha256": "304db3208b7b7ca019bb98a38011c4a42cf9853bf8fc1a4aef59904c901dffd5"
+    },
+    "TR20": {
+      "file": "tfinance_tr20_split_seed2.npz",
+      "train": {
+        "nodes": 7870,
+        "fraud_nodes": 361,
+        "normal_nodes": 7509,
+        "fraud_percentage": 4.587039390088945
+      },
+      "validation": {
+        "nodes": 7871,
+        "fraud_nodes": 361,
+        "normal_nodes": 7510,
+        "fraud_percentage": 4.586456612882734
+      },
+      "test": {
+        "nodes": 15744,
+        "fraud_nodes": 721,
+        "normal_nodes": 15023,
+        "fraud_percentage": 4.579522357723577
+      },
+      "unused_nodes": 7872,
+      "file_sha256": "1d6e63eade42cf38f6c1ee4d19e95a7145379cc74c1dbeecb6298e7c329ebc4e"
+    },
+    "TR10": {
+      "file": "tfinance_tr10_split_seed2.npz",
+      "train": {
+        "nodes": 3935,
+        "fraud_nodes": 181,
+        "normal_nodes": 3754,
+        "fraud_percentage": 4.5997458703939005
+      },
+      "validation": {
+        "nodes": 7871,
+        "fraud_nodes": 361,
+        "normal_nodes": 7510,
+        "fraud_percentage": 4.586456612882734
+      },
+      "test": {
+        "nodes": 15744,
+        "fraud_nodes": 721,
+        "normal_nodes": 15023,
+        "fraud_percentage": 4.579522357723577
+      },
+      "unused_nodes": 11807,
+      "file_sha256": "15d1124203dde917305cfefe89594cf8d8cfa1ca2f082b2b5c92c4d1c2673efd"
+    }
+  }
+}
