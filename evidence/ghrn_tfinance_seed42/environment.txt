@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES: 0
+MKL_NUM_THREADS: 8
+OMP_NUM_THREADS: 8
+cuda_available: True
+cuda_version: 12.1
+cudnn_version: 90100
+dgl_version: 2.4.0+cu121
+machine: x86_64
+numpy_version: 2.0.2
+platform: Linux-6.12.90+-x86_64-with-glibc2.35
+processor: x86_64
+python_executable: /usr/bin/python3
+python_implementation: CPython
+python_version: 3.12.13
+sklearn_version: 1.6.1
+torch_version: 2.4.0+cu121

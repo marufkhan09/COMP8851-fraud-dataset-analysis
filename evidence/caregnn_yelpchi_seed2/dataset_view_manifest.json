@@ -1,0 +1,21 @@
+{
+  "builder": "shared/comp8851/datasets.py",
+  "builder_version": "1.0.0",
+  "dataset_view_id": "yelpchi_relation_v1",
+  "edge_convention": "symmetric, binarised, duplicates collapsed",
+  "feature_dimension": 32,
+  "nodes": 45954,
+  "relation_edges": {
+    "rsr": 6805486,
+    "rtr": 1147232,
+    "rur": 98630
+  },
+  "relations": [
+    "rur",
+    "rtr",
+    "rsr"
+  ],
+  "self_loop_policy": "added",
+  "view": "relation",
+  "view_sha256": "403ea176ea709f68aab34f1f36799527962dffcdbb6df39acc6a9fc000079b89"
+}

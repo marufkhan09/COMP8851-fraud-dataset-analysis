@@ -1,0 +1,131 @@
+{
+  "budget": 6,
+  "dataset": "amazon",
+  "model": "CARE-GNN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "emb_size": 64,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "step_size": 0.02
+  },
+  "selected_trial": 0,
+  "selected_validation_auprc": 0.7813946266382041,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.01,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 167.3347725868225,
+      "trial": 0,
+      "validation_auprc": 0.7813946266382041
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.0,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 86.69198536872864,
+      "trial": 1,
+      "validation_auprc": 0.07010103014576827
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_02",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 180.44952750205994,
+      "trial": 2,
+      "validation_auprc": 0.7180649644405361
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 1e-05,
+        "lr": 0.005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_03",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 178.64514923095703,
+      "trial": 3,
+      "validation_auprc": 0.40682267712749104
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 128,
+        "lambda_2": 0.0001,
+        "lr": 0.001,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_04",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 166.77979183197021,
+      "trial": 4,
+      "validation_auprc": 0.729096715488362
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.001,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_amazon/trial_05",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 86.57038855552673,
+      "trial": 5,
+      "validation_auprc": 0.07010103014576827
+    }
+  ],
+  "trials_attempted": 6,
+  "trials_successful": 6,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

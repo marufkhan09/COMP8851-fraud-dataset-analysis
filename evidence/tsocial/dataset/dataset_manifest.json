@@ -1,0 +1,41 @@
+[
+  {
+    "canonical_cache": "data/tsocial/tsocial_canonical.npz",
+    "canonical_cache_sha256": "a30fb6a0561ed20c999d4feab6d23d7c3dd566e16d853d7dd79fed98cec527d5",
+    "dataset_id": "tsocial",
+    "heterophily": {
+      "fraud_local_heterophily_mean": 0.8259855627536059,
+      "fraud_local_heterophily_median": 0.9204545454545454,
+      "fraud_local_heterophily_std": 0.24395468231524903,
+      "fraud_nodes_with_labelled_neighbours": 174280,
+      "global_heterophily": 0.376095095324418,
+      "labelled_edges_considered": 146211016
+    },
+    "report": "data/tsocial/tsocial_dataset_report.json",
+    "source_files": {
+      "graph": "data/tsocial/tsocial"
+    },
+    "source_sha256": {
+      "graph": "8d577114cff12f7de35eda2974f17825ef9febe20c661e95e8d21072a6dfc8d0"
+    },
+    "statistics": {
+      "dataset": "tsocial",
+      "eligible_nodes": 5781065,
+      "feature_dimension": 10,
+      "fraud_nodes": 174280,
+      "fraud_percentage": 3.0146694423951295,
+      "imbalance_ratio_normal_to_fraud": 32.17113266008722,
+      "ineligible_nodes": 0,
+      "nodes": 5781065,
+      "normal_nodes": 5606785,
+      "relations": {
+        "homo": {
+          "stored_directed_edges": 146211016,
+          "undirected_edges": 73105508
+        }
+      },
+      "union_stored_directed_edges": 146211016,
+      "union_undirected_edges": 73105508
+    }
+  }
+]

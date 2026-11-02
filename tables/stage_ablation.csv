@@ -1,0 +1,16 @@
+dataset,seed,stage1_val_auprc,stage2_val_auprc,delta_stage2_minus_stage1,refinement_helped,selected_stage,stage1_epochs,stage2_epochs
+YelpChi,2,0.504996,0.516662,0.011666,True,stage2_refined,100,100
+YelpChi,42,0.517454,0.520023,0.00257,True,stage2_refined,100,100
+YelpChi,72,0.514127,0.536968,0.02284,True,stage2_refined,100,100
+Amazon,2,0.880684,0.854513,-0.026171,False,stage2_refined,79,100
+Amazon,42,0.888502,0.839921,-0.048581,False,stage2_refined,100,75
+Amazon,72,0.86144,0.826801,-0.03464,False,stage2_refined,100,80
+T-Finance,2,0.878234,0.444097,-0.434137,False,stage2_refined,100,30
+T-Finance,42,0.838594,0.858637,0.020044,True,stage2_refined,100,100
+T-Finance,72,0.845341,0.760312,-0.085029,False,stage2_refined,100,60
+Elliptic,2,0.7191,0.717312,-0.001788,False,stage2_refined,78,85
+Elliptic,42,0.685681,0.71716,0.031479,True,stage2_refined,42,100
+Elliptic,72,0.691805,0.710086,0.018281,True,stage2_refined,78,100
+FDCompCN,2,0.181684,0.208116,0.026431,True,stage2_refined,100,46
+FDCompCN,42,0.163192,0.205758,0.042565,True,stage2_refined,53,52
+FDCompCN,72,0.173771,0.223899,0.050128,True,stage2_refined,44,47

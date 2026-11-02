@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": null,
+  "adapter_version": "phase2-sagad-1.0.0",
+  "config_sha256": "e5290bce033364ef60d3cc225d156174534b110cb378963a2b99c5a71d62a563",
+  "container_digest": null,
+  "dataset_manifest_version": "comp8851-canonical-v1",
+  "dataset_view_id": "elliptic_homogeneous_v1",
+  "early_stopping_patience": 20,
+  "evaluator_commit": "shared.comp8851==1.0.0",
+  "hardware_profile_id": "a6000",
+  "max_epochs": 100,
+  "model_source_commit": "faddcbca117b475c8468e87a65c8428b616b694b",
+  "notes": {},
+  "protocol_version": "vast-v4.4",
+  "selection_metric": "auprc",
+  "source_sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+  "split_registry_version": "seed2",
+  "split_seed": 2,
+  "split_sha256": "3ab3eb3d35495cfc73de8878a7c15d75f5c5e5f140cfc6621b0ae311ab968a3c",
+  "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+  "view_sha256": "a7eb1286ce4bd93fcbd7707e5092d26796eea402185ccd908fe9c1d09a4798e9"
+}

@@ -1,0 +1,59 @@
+{
+  "budget": 2,
+  "dataset": "tfinance",
+  "model": "CARE-GNN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "emb_size": 64,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "step_size": 0.02
+  },
+  "selected_trial": 0,
+  "selected_validation_auprc": 0.4591735768659295,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "tfinance",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.01,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_tfinance/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 169.39221906661987,
+      "trial": 0,
+      "validation_auprc": 0.4591735768659295
+    },
+    {
+      "dataset": "tfinance",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.0,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_tfinance/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 129.57081842422485,
+      "trial": 1,
+      "validation_auprc": 0.2325600093956469
+    }
+  ],
+  "trials_attempted": 2,
+  "trials_successful": 2,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

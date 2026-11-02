@@ -1,0 +1,22 @@
+{
+  "adapter_sha256": null,
+  "adapter_version": "homogeneous-union-view-v1",
+  "config_sha256": "822d56e84ae4b08c625e2691fbbcfb31bcf9143137c6fd2957a06be39022471c",
+  "container_digest": null,
+  "dataset_manifest_version": "comp8851-canonical-v1",
+  "dataset_view_id": "elliptic_homogeneous_v1",
+  "early_stopping_patience": 20,
+  "evaluator_commit": "shared.comp8851==1.0.0",
+  "hardware_profile_id": "a6000",
+  "max_epochs": 100,
+  "model_source_commit": null,
+  "notes": {},
+  "protocol_version": "vast-v4.4",
+  "selection_metric": "auprc",
+  "source_sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+  "split_registry_version": "seed2",
+  "split_seed": 2,
+  "split_sha256": "97e3765dd9ecda5d22d77392b05946c46891cdb3f69cf1d9531486a200c56fc1",
+  "threshold_rule": "validation macro_f1 swept 0.01-0.99 step 0.01; tie-break fraud recall then closeness to 0.5",
+  "view_sha256": "a7eb1286ce4bd93fcbd7707e5092d26796eea402185ccd908fe9c1d09a4798e9"
+}

@@ -1,0 +1,159 @@
+==============================================================================
+CARE-GNN | fdcompcn | unified | TR40 | seed 72
+==============================================================================
+Run ID: care-gnn_fdcompcn_unified_tr40_seed72_a6000_20260913T233508Z
+Device: cuda:0
+Protocol: vast-v4.4  selection=auprc
+/venv/main/lib/python3.12/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Loaded fdcompcn: 5,317 nodes, 57 features, 4 relation(s)
+Split: train 2,126 | valid 1,063 | test 2,128
+Training fraud nodes: 224
+Building per-relation adjacency lists (5,317 nodes x 4 relations)...
+  built in 0.1s
+Parameters: 4,276 trainable
+[protocol] WARNING unset identity fields: model_source_commit
+Epoch   1/100 | loss 2.114747 | train 1.014s | val AUPRC 0.132489 | val AUROC 0.556238 | thr 0.51 | best epoch 1
+Epoch   2/100 | loss 2.091623 | train 0.838s | val AUPRC 0.148457 | val AUROC 0.586018 | thr 0.52 | best epoch 2
+  [RL] epoch distances: [0.034397, 0.032707, 0.01012, 0.008598]
+  [RL] rewards: [1, 1, 1, -1]
+  [RL] thresholds: [0.52, 0.52, 0.52, 0.48]
+Epoch   3/100 | loss 2.091048 | train 0.857s | val AUPRC 0.173463 | val AUROC 0.595923 | thr 0.53 | best epoch 3
+  [RL] epoch distances: [0.028396, 0.025285, 0.009603, 0.008603]
+  [RL] rewards: [1, 1, 1, -1]
+  [RL] thresholds: [0.54, 0.54, 0.54, 0.46]
+Epoch   4/100 | loss 2.074987 | train 0.843s | val AUPRC 0.174596 | val AUROC 0.596947 | thr 0.58 | best epoch 4
+  [RL] epoch distances: [0.028324, 0.020424, 0.00985, 0.008622]
+  [RL] rewards: [1, 1, -1, -1]
+  [RL] thresholds: [0.56, 0.56, 0.52, 0.44]
+Epoch   5/100 | loss 2.068918 | train 0.841s | val AUPRC 0.180831 | val AUROC 0.602176 | thr 0.59 | best epoch 5
+  [RL] epoch distances: [0.026916, 0.018785, 0.009416, 0.008784]
+  [RL] rewards: [1, 1, 1, -1]
+  [RL] thresholds: [0.58, 0.58, 0.54, 0.42]
+Epoch   6/100 | loss 2.069293 | train 0.839s | val AUPRC 0.181872 | val AUROC 0.597557 | thr 0.56 | best epoch 6
+  [RL] epoch distances: [0.027001, 0.018915, 0.008955, 0.008979]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.56, 0.56, 0.56, 0.4]
+Epoch   7/100 | loss 2.072863 | train 0.839s | val AUPRC 0.191462 | val AUROC 0.588591 | thr 0.55 | best epoch 7
+  [RL] epoch distances: [0.027582, 0.019856, 0.008439, 0.009081]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.54, 0.54, 0.58, 0.38]
+Epoch   8/100 | loss 2.065005 | train 0.841s | val AUPRC 0.171591 | val AUROC 0.573109 | thr 0.51 | best epoch 7
+  [RL] epoch distances: [0.029691, 0.022481, 0.00799, 0.009234]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.52, 0.52, 0.6, 0.36]
+Epoch   9/100 | loss 2.065413 | train 0.643s | val AUPRC 0.166070 | val AUROC 0.556782 | thr 0.51 | best epoch 7
+  [RL] epoch distances: [0.031706, 0.025127, 0.007556, 0.009399]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.5, 0.5, 0.62, 0.34]
+Epoch  10/100 | loss 2.065617 | train 0.654s | val AUPRC 0.169749 | val AUROC 0.566011 | thr 0.52 | best epoch 7
+  [RL] epoch distances: [0.035969, 0.030266, 0.007211, 0.009607]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.48, 0.48, 0.64, 0.32]
+Epoch  11/100 | loss 2.064157 | train 0.632s | val AUPRC 0.174616 | val AUROC 0.574226 | thr 0.50 | best epoch 7
+  [RL] epoch distances: [0.036871, 0.035166, 0.006902, 0.009805]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.46, 0.46, 0.66, 0.3]
+Epoch  12/100 | loss 2.060751 | train 0.644s | val AUPRC 0.183912 | val AUROC 0.579587 | thr 0.52 | best epoch 7
+  [RL] epoch distances: [0.040926, 0.040325, 0.006582, 0.007843]
+  [RL] rewards: [-1, -1, 1, 1]
+  [RL] thresholds: [0.44, 0.44, 0.68, 0.32]
+Epoch  13/100 | loss 2.056069 | train 0.628s | val AUPRC 0.196983 | val AUROC 0.592206 | thr 0.56 | best epoch 13
+  [RL] epoch distances: [0.045406, 0.045887, 0.006356, 0.008049]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.42, 0.42, 0.7, 0.3]
+Epoch  14/100 | loss 2.060721 | train 0.630s | val AUPRC 0.191033 | val AUROC 0.589934 | thr 0.59 | best epoch 13
+  [RL] epoch distances: [0.049937, 0.051548, 0.00609, 0.008234]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.4, 0.4, 0.72, 0.28]
+Epoch  15/100 | loss 2.050373 | train 0.633s | val AUPRC 0.187936 | val AUROC 0.587173 | thr 0.60 | best epoch 13
+  [RL] epoch distances: [0.054193, 0.056879, 0.005821, 0.008399]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.38, 0.38, 0.74, 0.26]
+Epoch  16/100 | loss 2.049100 | train 0.633s | val AUPRC 0.189253 | val AUROC 0.590816 | thr 0.59 | best epoch 13
+  [RL] epoch distances: [0.05784, 0.061525, 0.005588, 0.00857]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.36, 0.36, 0.76, 0.24]
+Epoch  17/100 | loss 2.038828 | train 0.635s | val AUPRC 0.194321 | val AUROC 0.592337 | thr 0.58 | best epoch 13
+  [RL] epoch distances: [0.061039, 0.065503, 0.005435, 0.008761]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.34, 0.34, 0.78, 0.22]
+Epoch  18/100 | loss 2.045547 | train 0.631s | val AUPRC 0.195946 | val AUROC 0.590534 | thr 0.57 | best epoch 13
+  [RL] epoch distances: [0.064202, 0.069347, 0.005332, 0.009044]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.32, 0.32, 0.8, 0.2]
+Epoch  19/100 | loss 2.038027 | train 0.630s | val AUPRC 0.192209 | val AUROC 0.580827 | thr 0.58 | best epoch 13
+  [RL] epoch distances: [0.066695, 0.072466, 0.005163, 0.009267]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.3, 0.3, 0.82, 0.18]
+Epoch  20/100 | loss 2.051348 | train 0.687s | val AUPRC 0.183263 | val AUROC 0.577972 | thr 0.59 | best epoch 13
+  [RL] epoch distances: [0.048061, 0.059315, 0.005004, 0.009596]
+  [RL] rewards: [1, 1, 1, -1]
+  [RL] thresholds: [0.32, 0.32, 0.84, 0.16]
+Epoch  21/100 | loss 2.042160 | train 0.633s | val AUPRC 0.183576 | val AUROC 0.578667 | thr 0.59 | best epoch 13
+  [RL] epoch distances: [0.049344, 0.06117, 0.004962, 0.009896]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.3, 0.3, 0.86, 0.14]
+Epoch  22/100 | loss 2.044132 | train 0.779s | val AUPRC 0.188563 | val AUROC 0.575118 | thr 0.59 | best epoch 13
+  [RL] epoch distances: [0.05161, 0.063951, 0.004922, 0.010266]
+  [RL] rewards: [-1, -1, 1, -1]
+  [RL] thresholds: [0.28, 0.28, 0.88, 0.12]
+Epoch  23/100 | loss 2.036728 | train 0.648s | val AUPRC 0.181202 | val AUROC 0.570790 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.052872, 0.065767, 0.004934, 0.010576]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.26, 0.26, 0.86, 0.1]
+Epoch  24/100 | loss 2.038620 | train 0.630s | val AUPRC 0.182650 | val AUROC 0.569128 | thr 0.60 | best epoch 13
+  [RL] epoch distances: [0.054785, 0.068386, 0.005003, 0.010837]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.24, 0.24, 0.84, 0.08]
+Epoch  25/100 | loss 2.048239 | train 0.601s | val AUPRC 0.162706 | val AUROC 0.565307 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.057293, 0.071653, 0.005123, 0.011127]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.22, 0.22, 0.82, 0.06]
+Epoch  26/100 | loss 2.031137 | train 0.684s | val AUPRC 0.164170 | val AUROC 0.567147 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.060279, 0.074389, 0.005268, 0.011425]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.2, 0.2, 0.8, 0.04]
+Epoch  27/100 | loss 2.038872 | train 0.604s | val AUPRC 0.161520 | val AUROC 0.565570 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.062245, 0.076875, 0.005436, 0.011749]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.18, 0.18, 0.78, 0.02]
+Epoch  28/100 | loss 2.036854 | train 0.644s | val AUPRC 0.161089 | val AUROC 0.564993 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.064558, 0.079976, 0.005581, 0.012071]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.16, 0.16, 0.76, 0.001]
+Epoch  29/100 | loss 2.038262 | train 0.660s | val AUPRC 0.161641 | val AUROC 0.566490 | thr 0.60 | best epoch 13
+  [RL] epoch distances: [0.067115, 0.083195, 0.005724, 0.012375]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.14, 0.14, 0.74, 0.001]
+Epoch  30/100 | loss 2.043269 | train 0.617s | val AUPRC 0.160354 | val AUROC 0.568725 | thr 0.61 | best epoch 13
+  [RL] epoch distances: [0.070416, 0.08668, 0.00586, 0.012668]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.12, 0.12, 0.72, 0.001]
+Epoch  31/100 | loss 2.045925 | train 0.682s | val AUPRC 0.158322 | val AUROC 0.564913 | thr 0.55 | best epoch 13
+  [RL] epoch distances: [0.0735, 0.090532, 0.005993, 0.012959]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.1, 0.1, 0.7, 0.001]
+Epoch  32/100 | loss 2.050289 | train 0.603s | val AUPRC 0.156890 | val AUROC 0.564044 | thr 0.60 | best epoch 13
+  [RL] epoch distances: [0.076, 0.093595, 0.00618, 0.013269]
+  [RL] rewards: [-1, -1, -1, -1]
+  [RL] thresholds: [0.08, 0.08, 0.68, 0.001]
+Epoch  33/100 | loss 2.050455 | train 0.606s | val AUPRC 0.155782 | val AUROC 0.565448 | thr 0.60 | best epoch 13
+early stopping: no improvement for 20 epochs
+/workspace/COMP8851-fraud-dataset-analysis-main/models/care-gnn/scripts/run_one.py:424: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(recorder.checkpoint_path, map_location=device))
+------------------------------------------------------------------------------
+test auroc: 0.572113
+test auprc: 0.148767
+test macro_f1: 0.524343
+test fraud_f1: 0.140777
+test fraud_precision: 0.153439
+test fraud_recall: 0.130045
+test gmean: 0.345141
+test accuracy: 0.833647
+threshold: 0.56 (chosen on validation Macro-F1)
+best validation epoch: 13
+------------------------------------------------------------------------------
+Artefacts: results/results_care-gnn/raw/care-gnn/fdcompcn/unified/tr40/seed_72
+Artefact bundle complete: True
+RUN STATUS: COMPLETE

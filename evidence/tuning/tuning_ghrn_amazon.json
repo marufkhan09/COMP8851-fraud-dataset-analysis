@@ -1,0 +1,145 @@
+{
+  "budget": 6,
+  "dataset": "amazon",
+  "model": "GHRN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "del_ratio": 0.015,
+    "dropout": 0.0,
+    "hid_dim": 64,
+    "lr": 0.01,
+    "order": 2,
+    "weight_decay": 1e-05
+  },
+  "selected_trial": 4,
+  "selected_validation_auprc": 0.8150845038520331,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.0,
+        "hid_dim": 64,
+        "lr": 0.01,
+        "order": 2,
+        "weight_decay": 0.0
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 42.98514795303345,
+      "trial": 0,
+      "validation_auprc": 0.8091307915645568
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.0,
+        "hid_dim": 32,
+        "lr": 0.0005,
+        "order": 2,
+        "weight_decay": 0.0
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 34.65556979179382,
+      "trial": 1,
+      "validation_auprc": 0.09291013200604993
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.3,
+        "hid_dim": 64,
+        "lr": 0.0005,
+        "order": 2,
+        "weight_decay": 0.0
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_02",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 42.60617160797119,
+      "trial": 2,
+      "validation_auprc": 0.638973742950443
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.03,
+        "dropout": 0.0,
+        "hid_dim": 128,
+        "lr": 0.0005,
+        "order": 2,
+        "weight_decay": 0.001
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_03",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 42.06992435455322,
+      "trial": 3,
+      "validation_auprc": 0.7390158610706858
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.015,
+        "dropout": 0.0,
+        "hid_dim": 64,
+        "lr": 0.01,
+        "order": 2,
+        "weight_decay": 1e-05
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_04",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 42.96075749397278,
+      "trial": 4,
+      "validation_auprc": 0.8150845038520331
+    },
+    {
+      "dataset": "amazon",
+      "error": "",
+      "hyperparameters": {
+        "del_ratio": 0.03,
+        "dropout": 0.0,
+        "hid_dim": 64,
+        "lr": 0.005,
+        "order": 2,
+        "weight_decay": 1e-05
+      },
+      "model": "GHRN",
+      "ratio": "TR40",
+      "results_path": "results/results_ghrn/tuning/ghrn_amazon/trial_05",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 40.75702667236328,
+      "trial": 5,
+      "validation_auprc": 0.7901527613598797
+    }
+  ],
+  "trials_attempted": 6,
+  "trials_successful": 6,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}

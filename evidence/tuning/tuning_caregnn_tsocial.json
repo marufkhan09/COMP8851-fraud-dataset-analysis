@@ -1,0 +1,59 @@
+{
+  "budget": 2,
+  "dataset": "tsocial",
+  "model": "CARE-GNN",
+  "protocol_max_trials": 12,
+  "selected_hyperparameters": {
+    "emb_size": 64,
+    "lambda_2": 0.001,
+    "lr": 0.01,
+    "step_size": 0.02
+  },
+  "selected_trial": 0,
+  "selected_validation_auprc": 0.08592878522475503,
+  "selection_metric": "validation AUPRC",
+  "selection_reason": "highest validation AUPRC",
+  "test_used_during_tuning": false,
+  "trials": [
+    {
+      "dataset": "tsocial",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 64,
+        "lambda_2": 0.001,
+        "lr": 0.01,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_tsocial/trial_00",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 4258.586622476578,
+      "trial": 0,
+      "validation_auprc": 0.08592878522475503
+    },
+    {
+      "dataset": "tsocial",
+      "error": "",
+      "hyperparameters": {
+        "emb_size": 32,
+        "lambda_2": 0.0,
+        "lr": 0.0005,
+        "step_size": 0.02
+      },
+      "model": "CARE-GNN",
+      "ratio": "TR40",
+      "results_path": "results/results_care-gnn/tuning/care-gnn_tsocial/trial_01",
+      "seed": 2,
+      "status": "COMPLETE",
+      "training_duration_seconds": 4272.575133800507,
+      "trial": 1,
+      "validation_auprc": 0.05197708652394932
+    }
+  ],
+  "trials_attempted": 2,
+  "trials_successful": 2,
+  "tuning_ratio": "TR40",
+  "tuning_seed": 2
+}
