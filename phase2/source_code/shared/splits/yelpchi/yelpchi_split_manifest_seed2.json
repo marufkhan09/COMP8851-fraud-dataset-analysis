@@ -1,0 +1,102 @@
+{
+  "convention": "40/20/40 base partition over eligible nodes with nested stratified TR30/TR20/TR10 training subsets; validation and test IDs fixed",
+  "dataset": "yelpchi",
+  "source_files": {
+    "mat": "C:\\c8851\\data\\FraudYelp\\YelpChi.mat"
+  },
+  "split_seed": 2,
+  "splits": {
+    "TR10": {
+      "file": "yelpchi_TR10_seed2.npz",
+      "file_sha256": "83908796a714cfa5dfdd9643e45a31bf7a6da25e03e2d79e1f50b35f4e661443",
+      "test": {
+        "fraud_nodes": 2671,
+        "fraud_percentage": 14.53051898596453,
+        "nodes": 18382,
+        "normal_nodes": 15711
+      },
+      "train": {
+        "fraud_nodes": 668,
+        "fraud_percentage": 14.537540805223069,
+        "nodes": 4595,
+        "normal_nodes": 3927
+      },
+      "unused_nodes": 13786,
+      "validation": {
+        "fraud_nodes": 1335,
+        "fraud_percentage": 14.525078881514524,
+        "nodes": 9191,
+        "normal_nodes": 7856
+      }
+    },
+    "TR20": {
+      "file": "yelpchi_TR20_seed2.npz",
+      "file_sha256": "0434a79c56e53ca2c418466ccebc64bad567ca752a3c2c6f327f607250336c59",
+      "test": {
+        "fraud_nodes": 2671,
+        "fraud_percentage": 14.53051898596453,
+        "nodes": 18382,
+        "normal_nodes": 15711
+      },
+      "train": {
+        "fraud_nodes": 1335,
+        "fraud_percentage": 14.526659412404788,
+        "nodes": 9190,
+        "normal_nodes": 7855
+      },
+      "unused_nodes": 9191,
+      "validation": {
+        "fraud_nodes": 1335,
+        "fraud_percentage": 14.525078881514524,
+        "nodes": 9191,
+        "normal_nodes": 7856
+      }
+    },
+    "TR30": {
+      "file": "yelpchi_TR30_seed2.npz",
+      "file_sha256": "d0a175cfbf62e861f9767f1642c8c91c8ad29e972154aa75eb61373cfcd0e93b",
+      "test": {
+        "fraud_nodes": 2671,
+        "fraud_percentage": 14.53051898596453,
+        "nodes": 18382,
+        "normal_nodes": 15711
+      },
+      "train": {
+        "fraud_nodes": 2003,
+        "fraud_percentage": 14.530286543344214,
+        "nodes": 13785,
+        "normal_nodes": 11782
+      },
+      "unused_nodes": 4596,
+      "validation": {
+        "fraud_nodes": 1335,
+        "fraud_percentage": 14.525078881514524,
+        "nodes": 9191,
+        "normal_nodes": 7856
+      }
+    },
+    "TR40": {
+      "file": "yelpchi_TR40_seed2.npz",
+      "file_sha256": "e9fe555fa0e4f7e22e0bab846ff77d8fa6ac08eac2f753d41dcc866091dd8c96",
+      "test": {
+        "fraud_nodes": 2671,
+        "fraud_percentage": 14.53051898596453,
+        "nodes": 18382,
+        "normal_nodes": 15711
+      },
+      "train": {
+        "fraud_nodes": 2671,
+        "fraud_percentage": 14.531309504379522,
+        "nodes": 18381,
+        "normal_nodes": 15710
+      },
+      "unused_nodes": 0,
+      "validation": {
+        "fraud_nodes": 1335,
+        "fraud_percentage": 14.525078881514524,
+        "nodes": 9191,
+        "normal_nodes": 7856
+      }
+    }
+  }
+}
