@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "trial": 6,
+  "hyperparams": {
+    "d_hidden": 128,
+    "n_bins": 16,
+    "lr": 0.002
+  },
+  "seed": 2,
+  "ratio": "TR40",
+  "max_epochs": 100,
+  "patience": 20,
+  "selection": "val_AUPRC",
+  "best_val_auprc": 0.8716330528259277,
+  "best_epoch": 19,
+  "epochs_ran": 40,
+  "wall_seconds": 2682.485388685018,
+  "peak_gpu_mb": 14374.4697265625,
+  "checkpoint": "/workspace/gaap_vast/unified/tfinance/tuning/trial_06/checkpoints/best-epoch=018-val_aps=0.871633.ckpt",
+  "test_evaluated": false,
+  "test_label_isolation": true,
+  "adapter_sha256": "7db7e48617038b35dbac041a6b90426f25237886e157d2f54776bbbd756d69ae",
+  "canonical_sha256": "b7d853ec4079e9f7137c03f78a044b1c33d0ff5ed6caa297b895542a7c8e3700",
+  "split_sha256": "de18651a281c3f7d098a89987b05313bbbd2386556a97c61344a6280d9426ff1",
+  "repo_commit": "6a7dbb0447c4897504525de49e41a0526ee777f8",
+  "native_architecture_changed": false,
+  "compatibility": "INPUT_ADAPTER"
+}

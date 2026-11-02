@@ -1,0 +1,12 @@
+{
+  "trial": 1,
+  "d_hidden": 64,
+  "gnn_dropout": 0.1,
+  "lr": 0.001,
+  "ratio": "TR40",
+  "train_seed": 2,
+  "max_epochs": 100,
+  "patience": 20,
+  "selection": "validation AUPRC only",
+  "test_evaluated": false
+}

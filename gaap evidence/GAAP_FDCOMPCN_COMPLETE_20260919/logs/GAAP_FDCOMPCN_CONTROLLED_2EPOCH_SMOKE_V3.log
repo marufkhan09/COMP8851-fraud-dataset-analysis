@@ -1,0 +1,62 @@
+The shape of bin-encoded feature is torch.Size([5317, 57])
+Processing dataset done!
+
+GAAP_FDCOMPCN_MODEL=ControlledFDCompCNLitSAGE
+AUTHOR_UNIFY_BATCH_SLICE_SUPPORTED=YES
+HOMO_AS_FOURTH_RELATION=NO
+TEST_LABELS_HIDDEN_DURING_FIT=PASS
+TEST_EVALUATED=NO
+GAAP_AUTHOR_ARCHITECTURE_CHANGED=NO
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name  | Type | Params | Mode 
+---------------------------------------
+0 | model | SAGE | 497 K  | train
+---------------------------------------
+497 K     Trainable params
+0         Non-trainable params
+497 K     Total params
+1.989     Total estimated model params size (MB)
+Training: |          | 0/? [00:00<?, ?it/s]Training:   0%|          | 0/16 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/16 [00:00<?, ?it/s] Epoch 0:   6%|▋         | 1/16 [00:00<00:06,  2.20it/s]Epoch 0:   6%|▋         | 1/16 [00:00<00:06,  2.20it/s, trloss_step=0.749]Epoch 0:  12%|█▎        | 2/16 [00:00<00:03,  4.17it/s, trloss_step=0.749]Epoch 0:  12%|█▎        | 2/16 [00:00<00:03,  4.17it/s, trloss_step=0.634]Epoch 0:  19%|█▉        | 3/16 [00:00<00:02,  5.97it/s, trloss_step=0.634]Epoch 0:  19%|█▉        | 3/16 [00:00<00:02,  5.97it/s, trloss_step=0.606]Epoch 0:  25%|██▌       | 4/16 [00:00<00:01,  7.63it/s, trloss_step=0.606]Epoch 0:  25%|██▌       | 4/16 [00:00<00:01,  7.62it/s, trloss_step=0.502]Epoch 0:  31%|███▏      | 5/16 [00:00<00:01,  9.13it/s, trloss_step=0.502]Epoch 0:  31%|███▏      | 5/16 [00:00<00:01,  9.13it/s, trloss_step=0.470]Epoch 0:  38%|███▊      | 6/16 [00:00<00:00, 10.55it/s, trloss_step=0.470]Epoch 0:  38%|███▊      | 6/16 [00:00<00:00, 10.54it/s, trloss_step=0.363]Epoch 0:  44%|████▍     | 7/16 [00:00<00:00, 11.87it/s, trloss_step=0.363]Epoch 0:  44%|████▍     | 7/16 [00:00<00:00, 11.87it/s, trloss_step=0.365]Epoch 0:  50%|█████     | 8/16 [00:00<00:00, 13.12it/s, trloss_step=0.365]Epoch 0:  50%|█████     | 8/16 [00:00<00:00, 13.12it/s, trloss_step=0.407]Epoch 0:  56%|█████▋    | 9/16 [00:00<00:00, 14.27it/s, trloss_step=0.407]Epoch 0:  56%|█████▋    | 9/16 [00:00<00:00, 14.26it/s, trloss_step=0.352]Epoch 0:  62%|██████▎   | 10/16 [00:00<00:00, 15.36it/s, trloss_step=0.352]Epoch 0:  62%|██████▎   | 10/16 [00:00<00:00, 15.36it/s, trloss_step=0.492]Epoch 0:  69%|██████▉   | 11/16 [00:00<00:00, 16.34it/s, trloss_step=0.492]Epoch 0:  69%|██████▉   | 11/16 [00:00<00:00, 16.33it/s, trloss_step=0.386]Epoch 0:  75%|███████▌  | 12/16 [00:00<00:00, 17.28it/s, trloss_step=0.386]Epoch 0:  75%|███████▌  | 12/16 [00:00<00:00, 17.28it/s, trloss_step=0.358]Epoch 0:  81%|████████▏ | 13/16 [00:00<00:00, 18.14it/s, trloss_step=0.358]Epoch 0:  81%|████████▏ | 13/16 [00:00<00:00, 18.13it/s, trloss_step=0.349]Epoch 0:  88%|████████▊ | 14/16 [00:00<00:00, 18.97it/s, trloss_step=0.349]Epoch 0:  88%|████████▊ | 14/16 [00:00<00:00, 18.97it/s, trloss_step=0.260]Epoch 0:  94%|█████████▍| 15/16 [00:00<00:00, 19.77it/s, trloss_step=0.260]Epoch 0:  94%|█████████▍| 15/16 [00:00<00:00, 19.76it/s, trloss_step=0.445]Epoch 0: 100%|██████████| 16/16 [00:00<00:00, 20.53it/s, trloss_step=0.445]Epoch 0: 100%|██████████| 16/16 [00:00<00:00, 20.52it/s, trloss_step=0.324]
+Validation: |          | 0/? [00:00<?, ?it/s][A
+Validation:   0%|          | 0/5 [00:00<?, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/5 [00:00<?, ?it/s][A
+Validation DataLoader 0:  20%|██        | 1/5 [00:00<00:00, 31.73it/s][A
+Validation DataLoader 0:  40%|████      | 2/5 [00:00<00:00, 42.48it/s][A
+Validation DataLoader 0:  60%|██████    | 3/5 [00:00<00:00, 48.72it/s][A
+Validation DataLoader 0:  80%|████████  | 4/5 [00:00<00:00, 53.09it/s][A
+Validation DataLoader 0: 100%|██████████| 5/5 [00:00<00:00, 57.48it/s][ATraceback (most recent call last):
+  File "<string>", line 310, in <module>
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 543, in fit
+    call._call_and_handle_interrupt(
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 579, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 986, in _run
+    results = self._run_stage()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1030, in _run_stage
+    self.fit_loop.run()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 205, in run
+    self.advance()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 363, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 141, in run
+    self.on_advance_end(data_fetcher)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 295, in on_advance_end
+    self.val_loop.run()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 142, in run
+    return self.on_run_end()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 254, in on_run_end
+    self._on_evaluation_epoch_end()
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/loops/evaluation_loop.py", line 334, in _on_evaluation_epoch_end
+    call._call_lightning_module_hook(trainer, hook_name)
+  File "/workspace/gaap_vast/envs/gaap-author/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 159, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "<string>", line 232, in on_validation_epoch_end
+AssertionError: 5317
