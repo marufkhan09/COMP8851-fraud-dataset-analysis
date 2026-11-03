@@ -7,7 +7,7 @@ Team: Md Maruf Khan, Pathik Ahmed, Ishraq Ahmed ("Raiyan"), Akib Hasan Maruf.
 
 Published fraud-detection GNNs are reported on different datasets, splits and
 metrics, so their results cannot be compared directly. This repository holds the
-code, configurations, logs and result tables for a evidence-based comparison of 21
+code, configurations, logs and result tables for an evidence-based comparison of 21
 fraud-specific or fraud-adapted GNNs on six public fraud-graph datasets. It is
 meant to let a reader see what was run, check it, and regenerate it.
 
@@ -75,9 +75,9 @@ docs/planning, docs/run-guides, docs/references   plans, guides, paper links
 ```
 
 Layout of the model folders is not yet identical for every model. The models with
-full per-dataset folders are PC-GNN, DGA-GNN, GAGA, LEX-GNN and ConsisGAD. Where a
-model's folder holds only a README and `references/`, its evidence has not been
-added to this repository yet.
+full per-dataset folders are PC-GNN, DGA-GNN, GAGA, LEX-GNN and ConsisGAD. Some model folders are index entries rather than complete execution bundles;
+for SAGAD, SpaceGNN and CRoC, consult `phase2/source_code/` and
+`phase2/results/`. Evidence availability should be checked model by model.
 
 ## Reproducing a result
 
