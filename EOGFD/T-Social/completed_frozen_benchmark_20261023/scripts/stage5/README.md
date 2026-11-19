@@ -2,7 +2,7 @@
 
 Target Vast instance: **57231045**, hostname **a92ee6fa0813**.
 
-This kit consumes the exact frozen outputs of Stage 4 v3 (`EOGFD_TSOCIAL_STAGE4_I2_20261023`) and the original pinned Stage 3 v3 optimization source. It does **not** retrain, retune, modify the original EOGFD repository, or repeat validation selection. It remains the documented *unified frozen-split adapted benchmark*, not an author-identical reproduction; Venus methodological approval is not claimed.
+This kit consumes the exact frozen outputs of Stage 4 v3 (`EOGFD_TSOCIAL_STAGE4_I2_20261023`) and the original pinned Stage 3 v3 optimization source. It does **not** retrain, retune, modify the original EOGFD repository, or repeat validation selection. It remains the documented *unified frozen-split adapted benchmark*, not an author-identical reproduction.
 
 ## Commands (I2 terminal, after uploading ZIP to `/workspace`)
 

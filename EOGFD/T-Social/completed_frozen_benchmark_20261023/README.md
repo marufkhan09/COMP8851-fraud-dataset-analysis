@@ -1,6 +1,6 @@
 # EOGFD × T-Social — Completed frozen-split assessment benchmark
 
-**Complete:** 12/12 TR40 validation-only tuning trials, 12/12 frozen final trainings (TR40/TR30/TR20/TR10 × seeds 2, 42, 72), and exactly **12/12 once-only held-out test evaluations**. The independently audited test records were created before publication. **Not an author-identical reproduction:** the original author network source was not modified, but process-local memory optimizations, streamed evaluation and a unified assessment protocol were used; supervisor approval has not been recorded.
+**Complete:** 12/12 TR40 validation-only tuning trials, 12/12 frozen final trainings (TR40/TR30/TR20/TR10 × seeds 2, 42, 72), and exactly **12/12 once-only held-out test evaluations**. The independently audited test records were created before publication. **Not an author-identical reproduction:** the original author network source was not modified, but process-local memory optimizations, streamed evaluation and a unified assessment protocol were used.
 
 ## Provenance
 

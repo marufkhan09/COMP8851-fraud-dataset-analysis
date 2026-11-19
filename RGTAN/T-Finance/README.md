@@ -14,7 +14,7 @@
 
 - TR40 12-trial validation AUPRC grid; frozen winner **trial 7**, configuration `hidden_dim=64, drop=[0.2,0.1], base_lr=0.001`; validation chose checkpoints and macro-F1 thresholds. No test-set model selection or retuning.
 
-- **Important adaptation:** the author full-neighbour two-layer propagation produced impractical dense expansion (an individual seed can exceed 33 million two-hop edges). This run uses `MultiLayerNeighborSampler([10,10])`, batch 1024, for both training and inference. **This is a computationally complete adapted RGTAN experiment, not an exact full-neighbour reproduction.** No supervisor approval for an author-identical comparison is claimed.
+- **Important adaptation:** the author full-neighbour two-layer propagation produced impractical dense expansion (an individual seed can exceed 33 million two-hop edges). This run uses `MultiLayerNeighborSampler([10,10])`, batch 1024, for both training and inference. **This is a completed adapted RGTAN experiment, not an exact full-neighbour reproduction.**
 
 ## Completed adapted held-out test performance
 
@@ -53,4 +53,4 @@ Mean ± **sample standard deviation** (`ddof=1`) across seeds 2, 42, 72. The val
 - The **original Stage 5 candidate audit and its publication file manifest** are historical records of the snapshot *before* Stage 6 test scoring. They are intentionally preserved, including their original “test not scored” assertions; these refer to that earlier stage, not the completed benchmark. The newer Stage 7 manifest covers the incremental final-publication files.
 - Checkpoint SHA-256 hashes are documented, but checkpoint weights (`.pt`), source graph, split NPZ, crossfit NPZ and Python environment are **not** committed to this public repo. Keep the private I2 files if future inference/reproduction is needed.
 
-**Interpretation:** The benchmark is computationally complete with an explicit sampling adaptation. Direct comparison with author-identical full-neighbour results requires methodological consideration and, if relevant to the assessment, supervisor sign-off.
+**Interpretation:** The benchmark runs are complete and use neighbour sampling. Comparisons with full-neighbour author reproductions must account for the sampling adaptation.
