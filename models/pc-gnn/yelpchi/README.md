@@ -44,4 +44,4 @@ Adam, learning rate 0.01, weight decay 0.001, batch size 1024, embedding dimensi
 
 ## Repository size policy
 
-Raw YelpChi data and model checkpoints are excluded because of size and redistribution concerns. Keep the original downloaded result ZIPs outside Git or use an approved large-file store. Their complete SHA-256 hashes are in `results/aggregate/pcgnn_archive_checksums.csv`.
+Raw YelpChi data and model checkpoints are excluded because of size and redistribution concerns. Keep the original downloaded result ZIPs outside Git or use an external artifact store. Their complete SHA-256 hashes are in `results/aggregate/pcgnn_archive_checksums.csv`.
