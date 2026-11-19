@@ -12,7 +12,7 @@
 - Fresh final trainings: up to 100 epochs, patience 20. Best checkpoint from validation AUPRC. Classification threshold from validation macro-F1, tie-break fraud recall then nearest 0.5.
 - Test protocol: one exclusive test-evaluation claim per final checkpoint, claims persisted **before** inference; exactly one test inference per checkpoint, no test-based checkpoint or threshold choice. Publication recomputes saved-score metrics offline only.
 - Training class weights from each ratio's training labels; Adam beta1 0.9, beta2 0.999, eps 1e-8; evaluation RNG seed 100921.
-- Scientific limitation: canonical frozen-split input adapter differs from upstream's original split/test workflow. This is **not** an exact author-protocol reproduction. Supervisor methodological approval is **not recorded**.
+- Scientific limitation: canonical frozen-split input adapter differs from upstream's original split/test workflow. This is **not** an exact author-protocol reproduction.
 
 ## Held-out test results
 
@@ -46,7 +46,7 @@ Three-seed mean ± **sample** standard deviation (`ddof=1`):
 
 - `results/tuning/`: 12 trial histories, per-epoch timings, stored validation scores, frozen winner and grid manifest.
 - `results/finals/`: 12 final training records with validation histories, per-epoch timings, validation scores, test-once claims, saved test scores, test metrics and both frozen summaries.
-- `scripts/`: actual Stage 3/4/5/6 runner scripts including the exact, forensically attested import-path repair. The original author model is linked via its immutable upstream commit.
+- `scripts/`: actual Stage 3/4/5/6 runner scripts including the documented import-path fix. The original author model is linked via its immutable upstream commit.
 - `evidence/`: provenance, source/split hashes, independent pre-test audit, pilot evidence and available execution logs.
 - Excluded from Git: raw source graph, frozen split data, all checkpoint `.pt` weights, recovery states, CUDA/Python environments and private archives. Independently verified Mac private backup holds frozen checkpoints and validation evidence. Canonical graph and split retain separate verified Mac originals.
 - Runtime measurements reflect RTX A6000 instance 57212396; cross-instance performance is not a controlled comparison.

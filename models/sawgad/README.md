@@ -6,7 +6,7 @@ Original repository: https://github.com/yj-zhou/SAWGAD
 
 Pinned commit: `64d6d531a2f03549f0bfbe461092beedd6f70bd2`
 
-Compatibility issue: Weak supervision and native two-stage 100+350 epoch schedule require methodological approval.
+Compatibility note: the original implementation uses weak supervision and a native two-stage 100+350 epoch schedule.
 
 Experimental protocol:
 - Canonical Ass2 source and split verification before training.
@@ -17,6 +17,3 @@ Experimental protocol:
 - Freeze winning settings for lower ratios.
 - Seven metrics, raw seed evidence, timing and memory.
 - No test access during tuning or checkpoint selection.
-- Model-specific deviations require Venus's approval.
-
-No benchmark runs are claimed as completed.

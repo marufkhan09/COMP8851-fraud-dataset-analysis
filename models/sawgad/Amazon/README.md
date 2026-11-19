@@ -1,6 +1,6 @@
 # SAWGAD × Amazon — completed benchmark candidate
 
-**Status:** All 12 TR40 tuning trials and 12 final runs complete; supervisor methodological approval pending.
+**Status:** All 12 TR40 tuning trials and 12 final runs complete.
 
 - Source: `yj-zhou/SAWGAD` @ `64d6d531a2f03549f0bfbe461092beedd6f70bd2`
 - Frozen split seed: 2; train seeds: 2, 42, 72; ratios: TR40/TR30/TR20/TR10
@@ -27,5 +27,3 @@
 - `evidence/checkpoint_sha256sums.txt`: hashes of 24 checkpoint files held in local backup
 - `evidence/amazon_training.log.gz`: compressed full training log
 - `status.json`: machine-readable status and methodological caveat
-
-

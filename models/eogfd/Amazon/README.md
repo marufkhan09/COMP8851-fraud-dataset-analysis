@@ -1,6 +1,6 @@
 # EOGFD × Amazon — completed frozen-split benchmark
 
-**Status: COMPLETE.** TR40 validation-only tuning **12/12**, frozen final training **12/12**, one-time held-out test evaluation **12/12**. This is the experimentally complete benchmark using the original EOGFD heterograph model with the Assessment 2 fixed nested-split protocol—not an exact reproduction of the authors' original train/test workflow.
+**Status: COMPLETE.** TR40 validation-only tuning **12/12**, frozen final training **12/12**, one-time held-out test evaluation **12/12**. This is the completed benchmark using the original EOGFD heterograph model with the Assessment 2 fixed nested-split protocol—not an exact reproduction of the authors' original train/test workflow.
 
 ## Data, source and experimental protocol
 
@@ -10,7 +10,7 @@
 - TR40 grid has 12 validation-AUPRC configurations. Selected **trial 7** with validation AUPRC **0.922895**, parameters `{"beta": 0.9, "beta_p": 1, "hidden_dim": 64, "lamb": 0.0, "lr": 0.003, "mutation_rate": 0.05, "order": 4, "population_size": 20}`. Frozen configuration reused for each of the 12 final runs.
 - Maximum **100 epochs**, **patience 20**, checkpoints chosen by **validation AUPRC**, decision thresholds by **validation macro-F1**. Test labels and scores were never used for training, hyperparameter search, checkpoint selection or threshold selection.
 - During EOGFD evaluation the evolutionary proposal is stochastic; validation and final held-out inference use the same fixed RNG seed **100921**, with separate, one-time test scoring per frozen model.
-- **Methodological distinction:** The unmodified upstream `run_eogfd.py` uses its own split and scores the test set each epoch. The published scripts instead enforce Assessment 2 frozen nested splits and prohibit test access until all selections are frozen. No claim of author-identical reproduction or supervisor methodological sign-off is made.
+- **Methodological distinction:** The unmodified upstream `run_eogfd.py` uses its own split and scores the test set each epoch. The published scripts instead enforce Assessment 2 frozen nested splits and prohibit test access until all selections are frozen. This is not an author-identical reproduction.
 
 ## Held-out test results
 
