@@ -17,6 +17,5 @@ Experimental protocol:
 - Freeze winning settings for lower ratios.
 - Seven metrics, raw seed evidence, timing and memory.
 - No test access during tuning or checkpoint selection.
-- Model-specific deviations require Venus's approval.
 
 

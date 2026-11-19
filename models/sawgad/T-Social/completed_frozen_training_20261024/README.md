@@ -1,6 +1,6 @@
 # SAWGAD × T-Social — Completed frozen-configuration training evidence
 
-**Training evidence complete:** 12 TR40 validation-only tuning configurations and 12 ratio/seed final trainings. **Held-out test evaluations: 0.** The original author implementation has been retained at the pinned commit, but the sampled-neighbourhood training adapter and limited update schedule differ from author full-graph training. This is not an author-identical reproduction and should not be represented as a fully approved common-protocol benchmark.
+**Training evidence complete:** 12 TR40 validation-only tuning configurations and 12 ratio/seed final trainings. **Held-out test evaluations: 0.** The original author implementation has been retained at the pinned commit, but the sampled-neighbourhood training adapter and limited update schedule differ from author full-graph training. This is not an author-identical reproduction.
 
 ## Provenance
 

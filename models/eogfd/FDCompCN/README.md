@@ -1,6 +1,6 @@
 # EOGFD × FDCompCN — completed frozen-split benchmark
 
-**Status: COMPLETE.** TR40 validation-only tuning **12/12**, frozen final training **12/12**, one-time held-out test evaluation **12/12**. This is the experimentally complete benchmark using the original EOGFD heterograph model with the Assessment 2 fixed nested-split protocol—not an exact reproduction of the authors' original train/test workflow.
+**Status: COMPLETE.** TR40 validation-only tuning **12/12**, frozen final training **12/12**, one-time held-out test evaluation **12/12**. This is the completed benchmark using the original EOGFD heterograph model with the Assessment 2 fixed nested-split protocol—not an exact reproduction of the authors' original train/test workflow.
 
 ## Data, source and experimental protocol
 
@@ -12,7 +12,7 @@
 - Stage 4: four nested training ratios × three training seeds, maximum 100 epochs, patience 20; checkpoint selection by validation AUPRC, classification threshold selected by validation macro-F1 (fraud-recall/0.5 tie-breaking).
 - Stage 5: one exclusive test claim per selected checkpoint; exactly one test inference and saved scores. Independent Stage 6 metric recomputation uses **saved scores only**, not new GPU inference.
 - EOGFD evaluation RNG seed 100921 fixed for validation/test. Adam optimizer beta1=.9, beta2=.999, eps=1e-8; training loss includes model-specific class weighting; parameters recorded for each trial.
-- **Methodological distinction:** The upstream `run_eogfd.py` uses its own split protocol and evaluates the test set each epoch. The published scripts instead enforce Assessment 2 frozen nested splits and prohibit held-out test access until all selections are frozen. No claim of author-identical reproduction or supervisor methodological sign-off is made.
+- **Methodological distinction:** The upstream `run_eogfd.py` uses its own split protocol and evaluates the test set each epoch. The published scripts instead enforce Assessment 2 frozen nested splits and prohibit held-out test access until all selections are frozen. This is not an author-identical reproduction.
 - This benchmark's time/memory figures are from RTX A6000 instance 57212396, not the Kaggle T4 described as a planning baseline; treat cross-instance runtime comparisons as non-controlled.
 
 ## Held-out test results

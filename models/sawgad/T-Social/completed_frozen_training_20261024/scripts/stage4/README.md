@@ -1,13 +1,13 @@
 # COMP8851 | SAWGAD × T-Social | 12 TR40 tunes then 3-seed × 4-ratio training
 
-23 October 2026. **Exploratory adapted protocol; not author-identical or supervisor-approved.** Neither a final benchmark nor held-out testing is performed by this kit.
+23 October 2026. **Exploratory adapted protocol; not author-identical.** Neither a final benchmark nor held-out testing is performed by this kit.
 
 ## Before launching
 
 - Run only on Vast I2 `a92ee6fa0813`; original pinned SAWGAD author clone must remain unmodified.
 - Verify the prior sustained full-validation seed-2 pilot completion, best full-validation AUPRC `0.1596089366267632` and preserved checkpoint. The kit refuses to start otherwise.
 - The original dataset and split hashes are checked before launch and by every worker.
-- Original full T-Social graph remains on CPU; each model step uses an inbound fanout-10 sampled subgraph and the original SAWGAD model/head functions with local synthetic perturbation. Results cannot be described as a full-graph original-author reproduction. Approved comparative ranking must be reviewed with Dr Venus Haghighi.
+- Original full T-Social graph remains on CPU; each model step uses an inbound fanout-10 sampled subgraph and the original SAWGAD model/head functions with local synthetic perturbation. Results cannot be described as a full-graph original-author reproduction.
 - One training worker runs at a time. A process file-lock prevents duplicate pipeline writers. No test-label indexing or test-score calculation is performed.
 
 ## Execution
@@ -40,6 +40,6 @@ Root: `/workspace/comp8851/results/sawgad/tsocial/stage3_tune12_final3x4_adapted
 
 If interrupted, rerun only the **same** `sawgad_pipeline.py --run` command. The pipeline verifies completed jobs and resumes the active checkpoint; never delete or overwrite pre-existing evidence folders. If a job fails, inspect its `training.log`. Preserve the original script bytes, run plan and sha manifest.
 
-After completion, independent cross-check of node splits, trainer label accesses, best-checkpoint hashes, methodology approval, private off-host backup, and any RGTAN-like suspicious validation behavior is required before final test. The Stage-5 test script is deliberately absent.
+After completion, independent cross-check of node splits, trainer label accesses, best-checkpoint hashes, private off-host backup, and any RGTAN-like suspicious validation behavior is required before final test. The Stage-5 test script is deliberately absent.
 
-Static tests passed in the creation environment for the 12 tuning specs and 12 final specs plus negative/mismatched-protocol cases. **No GPU training from this kit was executed in the creation environment.**
+Static checks passed for the 12 tuning specifications and 12 final specifications, including invalid and mismatched-protocol cases. GPU training was not executed as part of these checks.

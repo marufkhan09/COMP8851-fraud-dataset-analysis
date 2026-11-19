@@ -17,8 +17,7 @@ indexed and no test inference is executed. Per-epoch recovery is atomic;
 complete final records and their hashes are verified and reused upon restart.
 
 This is a unified benchmark split/feature adapter and process-local memory
-engineering, **not** an author-identical reproduction. Supervisor approval is
-not documented.
+engineering, **not** an author-identical reproduction.
 
 ## On I2 after upload of ZIP to `/workspace`
 

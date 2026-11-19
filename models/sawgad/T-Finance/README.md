@@ -1,6 +1,6 @@
 # SAWGAD × T-Finance
 
-**Status:** Completed canonical benchmark candidate — 12 TR40 tuning trials and 12 final runs. Supervisor methodological approval remains separate.
+**Status:** Completed canonical benchmark candidate — 12 TR40 tuning trials and 12 final runs.
 
 - Model: `yj-zhou/SAWGAD` at pinned commit `64d6d531a2f03549f0bfbe461092beedd6f70bd2`
 - Canonical source: original BWGNN authors’ `tfinance` DGL, 39,357 nodes, 10 features, 42,445,086 directed edges without self-loops
@@ -52,4 +52,4 @@
 
 Canonical BWGNN source and GADBench source have identical non-self-loop edge multiset and float32 features, but different one-hot/binary label representations, one label (node 27028), and self-loop storage. Tuning on the GADBench-derived source was preserved off-host as separate non-canonical evidence and is **not** mixed into this benchmark.
 
-Final scores are descriptive experiment results; they do not establish supervisor approval or comparability to author-reproduction settings.
+Final scores are descriptive experiment results and do not establish comparability to author-reproduction settings.

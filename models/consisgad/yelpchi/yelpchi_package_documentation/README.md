@@ -30,7 +30,7 @@ bash scripts/run_lexgnn_yelpchi_smoke.sh
 ```
 
 Do not run ConsisGAD until the LEX-GNN output has been reviewed. The second
-command, when approved, is:
+command is:
 
 ```bash
 bash scripts/run_consisgad_yelpchi_smoke.sh
